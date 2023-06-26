@@ -1,8 +1,8 @@
 <img align="right" width="200" height="37" src="Gematik_Logo_Flag.png"/> <br/>
   
-# E-Rechnung FHIR-Profiles
+# E-Rechnung FHIR Conformance Artifacts 
 
- ${fhir_profiles_description}
+The following FHIR conformance resources support the exchange of FHIR-based representations of invoices between practitioners, patients, and private insurances within the Telematik infrastructure based on the "E-Rechnung" workflow.
  
 <details>
   <summary>Table of Contents</summary>
@@ -29,7 +29,7 @@
 
 
 ## About The Project  
-This Repo contains the fsh files to the published \E-Rechnung files on <https://simplifier.net/${simplifier_repo}> and a script to validate them.
+This Repo contains the fsh files to the published \E-Rechnung files on <[https://simplifier.net/e-rechnung](https://simplifier.net/e-rechnung)> and a script to validate them.
  
 ### Release Notes
 See [ReleaseNotes.md](./ReleaseNotes.md) for all information regarding the (newest) releases.
@@ -62,11 +62,12 @@ If you want to contribute, please check our [CONTRIBUTING.md](./CONTRIBUTING.md)
  
 ## License
  
-Copyright [yyyy] gematik GmbH
+Copyright [2023] gematik GmbH
  
 Licensed under the **Apache License, Version 2.0** (the "License"); you may not use this file except in compliance with the License.
  
 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the [LICENSE](./LICENSE) for the specific language governing permissions and limitations under the License.
  
 ## Contact
-<!-- add your own text here -->
+Techical lead: Peter Tabeling
+Project lead: Klaus Jäde, Andrea Schminck 
