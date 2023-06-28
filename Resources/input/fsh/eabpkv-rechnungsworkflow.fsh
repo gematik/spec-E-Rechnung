@@ -5,7 +5,7 @@ Id: eabpkv-rechnungsworkflow
 * extension contains http://hl7.org/fhir/5.0/StructureDefinition/extension-Task.requestedPerformer named requestedPerformer 1..1 MS
 * status MS 
 * status from https://gematik.de/fhir/ValueSet/eabpkv-rechnungsworkflow-status-vs (required)
-* identifier 1.. MS // token
+* identifier 1.. MS
 * identifier ^slicing.discriminator.type = #pattern
 * identifier ^slicing.discriminator.path = "type"
 * identifier ^slicing.rules = #open

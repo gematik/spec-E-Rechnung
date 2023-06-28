@@ -1,0 +1,231 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "eabpkv-rechnung",
+  "url": "https://gematik.de/fhir/eabpkv/StructureDefinition/eabpkv-rechnung",
+  "name": "EABPKVRechnung",
+  "title": "EABPKV Rechnung",
+  "status": "draft",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2 Mapping"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    },
+    {
+      "identity": "workflow",
+      "uri": "http://hl7.org/fhir/workflow",
+      "name": "Workflow Pattern"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "Invoice",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Invoice",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Invoice.identifier",
+        "path": "Invoice.identifier",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "type"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.identifier:rechnungsnummer",
+        "path": "Invoice.identifier",
+        "sliceName": "rechnungsnummer",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Invoice.identifier:rechnungsnummer.type",
+        "path": "Invoice.identifier.type",
+        "min": 1,
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "invoice",
+              "system": "http://fhir.de/CodeSystem/identifier-type-de-basis"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.identifier:rechnungsnummer.system",
+        "path": "Invoice.identifier.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.identifier:rechnungsnummer.value",
+        "path": "Invoice.identifier.value",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.status",
+        "path": "Invoice.status",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://gematik.de/fhir/ValueSet/eabpkv-rechnung-status-vs"
+        }
+      },
+      {
+        "id": "Invoice.type",
+        "path": "Invoice.type",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.recipient",
+        "path": "Invoice.recipient",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Patient",
+              "http://hl7.org/fhir/StructureDefinition/RelatedPerson"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.recipient.identifier",
+        "path": "Invoice.recipient.identifier",
+        "min": 1,
+        "type": [
+          {
+            "code": "Identifier",
+            "profile": [
+              "http://fhir.de/StructureDefinition/identifier-kvid-10",
+              "http://fhir.de/StructureDefinition/identifier-pkv-kvid-10"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.date",
+        "path": "Invoice.date",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.issuer",
+        "path": "Invoice.issuer",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.issuer.identifier",
+        "path": "Invoice.issuer.identifier",
+        "min": 1,
+        "type": [
+          {
+            "code": "Identifier",
+            "profile": [
+              "http://fhir.de/StructureDefinition/identifier-telematik-id"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.lineItem",
+        "path": "Invoice.lineItem",
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.lineItem.chargeItem[x]",
+        "path": "Invoice.lineItem.chargeItem[x]",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/ChargeItem"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.lineItem.priceComponent",
+        "path": "Invoice.lineItem.priceComponent",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "code"
+            }
+          ],
+          "rules": "open"
+        }
+      },
+      {
+        "id": "Invoice.lineItem.priceComponent:tax",
+        "path": "Invoice.lineItem.priceComponent",
+        "sliceName": "tax",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.lineItem.priceComponent:tax.code",
+        "path": "Invoice.lineItem.priceComponent.code",
+        "min": 1,
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "tax"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Invoice.lineItem.priceComponent:tax.factor",
+        "path": "Invoice.lineItem.priceComponent.factor",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.lineItem.priceComponent:tax.amount",
+        "path": "Invoice.lineItem.priceComponent.amount",
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.totalNet",
+        "path": "Invoice.totalNet",
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.totalGross",
+        "path": "Invoice.totalGross",
+        "mustSupport": true
+      }
+    ]
+  }
+}
