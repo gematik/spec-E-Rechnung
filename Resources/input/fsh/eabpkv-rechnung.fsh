@@ -11,7 +11,8 @@ Id: eabpkv-rechnung
 * identifier[rechnungsnummer].type = http://fhir.de/CodeSystem/identifier-type-de-basis#invoice
 * identifier[rechnungsnummer].system 1.. MS
 * identifier[rechnungsnummer].value 1.. MS
-* type 1.. MS // ToDo: Create binding
+* type 1.. MS
+* type from https://gematik.de/fhir/ValueSet/eabpkv-rechnung-type-vs (required)
 * status MS 
 * status from https://gematik.de/fhir/ValueSet/eabpkv-rechnung-status-vs (required)
 * recipient 1.. MS 

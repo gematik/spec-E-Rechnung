@@ -1,0 +1,25 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "draft",
+  "content": "complete",
+  "name": "EABPKVRechnungTypeCS",
+  "id": "eabpkv-rechnung-type-cs",
+  "title": "EABPKV Rechnung Type CS",
+  "description": "CodeSystem für die Differenzierung von verschiedenen Typen einer E-Rechnnung",
+  "url": "https://gematik.de/fhir/eabpkv/CodeSystem/eabpkv-rechnung-type-cs",
+  "concept": [
+    {
+      "code": "goä",
+      "display": "GOÄ"
+    },
+    {
+      "code": "goz",
+      "display": "GOZ"
+    },
+    {
+      "code": "ustg",
+      "display": "UStG"
+    }
+  ],
+  "count": 3
+}
