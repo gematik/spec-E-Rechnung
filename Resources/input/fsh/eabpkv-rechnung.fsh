@@ -13,7 +13,7 @@ Id: eabpkv-rechnung
 * identifier[rechnungsnummer].value 1.. MS
 * type 1.. MS
 * type from https://gematik.de/fhir/ValueSet/eabpkv-rechnung-type-vs (required)
-* status MS 
+* status MS
 * status from https://gematik.de/fhir/ValueSet/eabpkv-rechnung-status-vs (required)
 * recipient 1.. MS 
 * recipient only Reference(Patient or RelatedPerson)
@@ -26,12 +26,13 @@ Id: eabpkv-rechnung
 * lineItem MS
 * lineItem.chargeItem[x] only Reference
 * lineItem.chargeItemReference MS
-* lineItem.priceComponent ^slicing.discriminator.type = #pattern
-* lineItem.priceComponent ^slicing.discriminator.path = "code"
-* lineItem.priceComponent ^slicing.rules = #open
-* lineItem.priceComponent contains tax 0..1 MS // ToDo: Constraint for priceComponent dependant on .type?
-* lineItem.priceComponent[tax].code = #tax
-* lineItem.priceComponent[tax].factor 1..1 MS
-* lineItem.priceComponent[tax].amount 0..1 MS // ToDo: 1..1 or 0..1?
+* totalPriceComponent MS
+* totalPriceComponent ^slicing.discriminator.type = #pattern
+* totalPriceComponent ^slicing.discriminator.path = "code"
+* totalPriceComponent ^slicing.rules = #open
+* totalPriceComponent contains tax 0..1 MS // ToDo: Constraint for totalPriceComponent dependant on .type?
+* totalPriceComponent[tax].code = #tax
+* totalPriceComponent[tax].factor 1..1 MS // Constraint 19% or 7%
+* totalPriceComponent[tax].amount 0..1 MS // ToDo: 1..1 or 0..1?
 * totalNet MS
 * totalGross MS
