@@ -13,9 +13,9 @@ Id: eabpkv-rechnung
 * identifier[rechnungsnummer].system 1.. MS
 * identifier[rechnungsnummer].value 1.. MS
 * type 1.. MS
-* type from https://gematik.de/fhir/ValueSet/eabpkv-rechnung-type-vs (required)
+* type from https://gematik.de/fhir/eabpkv/ValueSet/eabpkv-rechnung-type-vs (required)
 * status MS
-* status from https://gematik.de/fhir/ValueSet/eabpkv-rechnung-status-vs (required)
+* status from https://gematik.de/fhir/eabpkv/ValueSet/eabpkv-rechnung-status-vs (required)
 * recipient 1.. MS 
 * recipient only Reference(Patient or RelatedPerson)
   * identifier 1.. MS
