@@ -9,7 +9,7 @@
   "compose": {
     "include": [
       {
-        "system": "https://gematik.de/fhir/erechnung/CodeSystem/eabpkv-rechnungsworkflow-businessStatus-cs"
+        "system": "https://gematik.de/fhir/eabpkv/CodeSystem/eabpkv-rechnungsworkflow-businessStatus-cs"
       }
     ]
   }
