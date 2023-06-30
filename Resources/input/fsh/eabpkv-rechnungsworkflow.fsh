@@ -4,7 +4,7 @@ Parent: Task
 Id: eabpkv-rechnungsworkflow
 * extension contains http://hl7.org/fhir/5.0/StructureDefinition/extension-Task.requestedPerformer named requestedPerformer 1..1 MS
 * status MS 
-* status from https://gematik.de/fhir/ValueSet/eabpkv-rechnungsworkflow-status-vs (required)
+* status from https://gematik.de/fhir/eabpkv/ValueSet/eabpkv-rechnungsworkflow-status-vs (required)
 * identifier 1.. MS // token
 * identifier ^slicing.discriminator.type = #pattern
 * identifier ^slicing.discriminator.path = "type"
@@ -16,7 +16,7 @@ Id: eabpkv-rechnungsworkflow
 * identifier[token].system = "https://gematik.de/fhir/sid/eabpkv-token"
 * identifier[token].value 1.. MS
 * businessStatus 1.. MS
-* businessStatus from https://gematik.de/fhir/ValueSet/eabpkv-rechnungsworkflow-businessStatus-vs (required)
+* businessStatus from https://gematik.de/fhir/eabpkv/ValueSet/eabpkv-rechnungsworkflow-businessStatus-vs (required)
 * intent MS
 * intent = http://hl7.org/fhir/request-intent#order
 * code 1.. MS
