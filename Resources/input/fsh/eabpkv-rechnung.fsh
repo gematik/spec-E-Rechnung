@@ -2,6 +2,7 @@ Profile: EABPKVRechnung
 Title: "EABPKV Rechnung"
 Parent: Invoice
 Id: eabpkv-rechnung
+* extension contains https://gematik.de/fhir/eabpkv/StructureDefinition/eabpkv-ergaenzendesDokument named ergaenzendesDokument 0..1 MS
 * identifier 1.. MS
 * identifier ^slicing.discriminator.type = #pattern
 * identifier ^slicing.discriminator.path = "type"
@@ -36,3 +37,8 @@ Id: eabpkv-rechnung
 * totalPriceComponent[tax].amount 0..1 MS // ToDo: 1..1 or 0..1?
 * totalNet MS
 * totalGross MS
+
+Extension: EABPKVErgaenzendesDokument
+Id: eabpkv-ergaenzendesDokument
+Title: "EABPKV Ergänzendes Dokument"
+* value[x] only Reference(Binary)
