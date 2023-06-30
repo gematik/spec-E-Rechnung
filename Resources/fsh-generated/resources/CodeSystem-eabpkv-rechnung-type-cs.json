@@ -9,17 +9,9 @@
   "url": "https://gematik.de/fhir/eabpkv/CodeSystem/eabpkv-rechnung-type-cs",
   "concept": [
     {
-      "code": "goä",
-      "display": "GOÄ"
-    },
-    {
-      "code": "goz",
-      "display": "GOZ"
-    },
-    {
-      "code": "ustg",
-      "display": "UStG"
+      "code": "eprivatrechnung",
+      "display": "E-Privatrechnung"
     }
   ],
-  "count": 3
+  "count": 1
 }
