@@ -23,6 +23,7 @@
       {
         "id": "Binary.contentType",
         "path": "Binary.contentType",
+        "patternCode": "application/pdf",
         "mustSupport": true
       },
       {
