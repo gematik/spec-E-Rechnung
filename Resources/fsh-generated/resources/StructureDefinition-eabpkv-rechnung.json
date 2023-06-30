@@ -105,7 +105,7 @@
         "mustSupport": true,
         "binding": {
           "strength": "required",
-          "valueSet": "https://gematik.de/fhir/ValueSet/eabpkv-rechnung-status-vs"
+          "valueSet": "https://gematik.de/fhir/eabpkv/ValueSet/eabpkv-rechnung-status-vs"
         }
       },
       {
@@ -115,7 +115,7 @@
         "mustSupport": true,
         "binding": {
           "strength": "required",
-          "valueSet": "https://gematik.de/fhir/ValueSet/eabpkv-rechnung-type-vs"
+          "valueSet": "https://gematik.de/fhir/eabpkv/ValueSet/eabpkv-rechnung-type-vs"
         }
       },
       {
