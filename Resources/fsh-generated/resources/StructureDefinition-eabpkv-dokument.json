@@ -1,0 +1,36 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "eabpkv-dokument",
+  "url": "https://gematik.de/fhir/eabpkv/StructureDefinition/eabpkv-dokument",
+  "name": "EABPKVDokument",
+  "title": "EABPKV Dokument",
+  "status": "draft",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "Binary",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Binary",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Binary.contentType",
+        "path": "Binary.contentType",
+        "mustSupport": true
+      },
+      {
+        "id": "Binary.data",
+        "path": "Binary.data",
+        "min": 1,
+        "mustSupport": true
+      }
+    ]
+  }
+}

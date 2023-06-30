@@ -36,6 +36,22 @@
   "differential": {
     "element": [
       {
+        "id": "Invoice.extension:ergaenzendesDokument",
+        "path": "Invoice.extension",
+        "sliceName": "ergaenzendesDokument",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://gematik.de/fhir/eabpkv/StructureDefinition/eabpkv-ergaenzendesDokument"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
         "id": "Invoice.identifier",
         "path": "Invoice.identifier",
         "slicing": {
@@ -177,8 +193,8 @@
         "mustSupport": true
       },
       {
-        "id": "Invoice.lineItem.priceComponent",
-        "path": "Invoice.lineItem.priceComponent",
+        "id": "Invoice.totalPriceComponent",
+        "path": "Invoice.totalPriceComponent",
         "slicing": {
           "discriminator": [
             {
@@ -187,19 +203,25 @@
             }
           ],
           "rules": "open"
-        }
-      },
-      {
-        "id": "Invoice.lineItem.priceComponent:tax",
-        "path": "Invoice.lineItem.priceComponent",
-        "sliceName": "tax",
-        "min": 0,
-        "max": "1",
+        },
         "mustSupport": true
       },
       {
-        "id": "Invoice.lineItem.priceComponent:tax.code",
-        "path": "Invoice.lineItem.priceComponent.code",
+        "id": "Invoice.totalPriceComponent:tax",
+        "path": "Invoice.totalPriceComponent",
+        "sliceName": "tax",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.totalPriceComponent:tax.code",
+        "path": "Invoice.totalPriceComponent.code",
         "min": 1,
         "patternCodeableConcept": {
           "coding": [
@@ -210,14 +232,14 @@
         }
       },
       {
-        "id": "Invoice.lineItem.priceComponent:tax.factor",
-        "path": "Invoice.lineItem.priceComponent.factor",
+        "id": "Invoice.totalPriceComponent:tax.factor",
+        "path": "Invoice.totalPriceComponent.factor",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "Invoice.lineItem.priceComponent:tax.amount",
-        "path": "Invoice.lineItem.priceComponent.amount",
+        "id": "Invoice.totalPriceComponent:tax.amount",
+        "path": "Invoice.totalPriceComponent.amount",
         "mustSupport": true
       },
       {
