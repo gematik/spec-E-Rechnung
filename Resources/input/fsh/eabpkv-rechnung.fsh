@@ -2,7 +2,7 @@ Profile: EABPKVRechnung
 Title: "EABPKV Rechnung"
 Parent: Invoice
 Id: eabpkv-rechnung
-* extension contains https://gematik.de/fhir/eabpkv/StructureDefinition/eabpkv-ergaenzendesDokument named ergaenzendesDokument 0..1 MS
+* extension contains https://gematik.de/fhir/eabpkv/StructureDefinition/eabpkv-pdf-repraesentation-rechnung named pdf-repraesentation-rechnung 0..1 MS
 * identifier 1.. MS
 * identifier ^slicing.discriminator.type = #pattern
 * identifier ^slicing.discriminator.path = "type"
@@ -13,10 +13,10 @@ Id: eabpkv-rechnung
 * identifier[rechnungsnummer].system 1.. MS
 * identifier[rechnungsnummer].value 1.. MS
 * type 1.. MS
-* type from https://gematik.de/fhir/eabpkv/ValueSet/eabpkv-rechnung-type-vs (required)
+* type = https://gematik.de/fhir/eabpkv/CodeSystem/eabpkv-rechnung-type-cs#erechnung
 * status MS
-* status from https://gematik.de/fhir/eabpkv/ValueSet/eabpkv-rechnung-status-vs (required)
-* recipient 1.. MS 
+* status = http://hl7.org/fhir/invoice-status#issued
+* recipient 1.. MS
 * recipient only Reference(Patient or RelatedPerson)
   * identifier 1.. MS
   * identifier only IdentifierKvid10 or IdentifierPkvVersichertenId10
@@ -38,7 +38,7 @@ Id: eabpkv-rechnung
 * totalNet MS
 * totalGross MS
 
-Extension: EABPKVErgaenzendesDokument
-Id: eabpkv-ergaenzendesDokument
-Title: "EABPKV Ergänzendes Dokument"
+Extension: EABPKVPDFRepraesentationRechnung
+Id: eabpkv-pdf-repraesentation-rechnung
+Title: "EABPKV PDF Repräsentation Rechnung"
 * value[x] only Reference(Binary)
