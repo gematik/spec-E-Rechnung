@@ -1,0 +1,26 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "EABPKVRechnungStatusVS",
+  "id": "eabpkv-rechnung-status-vs",
+  "title": "EABPKV Rechnung Status VS",
+  "description": "ValueSet für die Abbildung des Status einer E-Rechnnung innerhalb des Rechnungsworkflows",
+  "url": "https://gematik.de/fhir/eabpkv/ValueSet/eabpkv-rechnung-status-vs",
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/invoice-status",
+        "concept": [
+          {
+            "code": "draft",
+            "display": "draft"
+          },
+          {
+            "code": "issued",
+            "display": "issued"
+          }
+        ]
+      }
+    ]
+  }
+}

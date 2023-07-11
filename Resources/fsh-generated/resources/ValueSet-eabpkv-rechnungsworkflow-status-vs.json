@@ -4,7 +4,7 @@
   "name": "EABPKVRechnungsworkflowStatusVS",
   "id": "eabpkv-rechnungsworkflow-status-vs",
   "title": "EABPKV Rechnungsworkflow Status VS",
-  "description": "ValueSet für die Abbildung des Status einer E-Rechnnung innerhalb des Rechnungsworkflows",
+  "description": "ValueSet für die Abbildung des Status des Rechnungsworkflows für eine E-Rechnnung",
   "url": "https://gematik.de/fhir/eabpkv/ValueSet/eabpkv-rechnungsworkflow-status-vs",
   "compose": {
     "include": [
