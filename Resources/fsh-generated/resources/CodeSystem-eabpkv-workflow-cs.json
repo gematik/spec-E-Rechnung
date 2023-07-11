@@ -1,0 +1,18 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "draft",
+  "content": "complete",
+  "name": "EABPKVWorkflowTaskCS",
+  "id": "eabpkv-workflow-cs",
+  "title": "EABPKV Workflow CS",
+  "description": "CodeSystem zur Identifitikation von Task-Ressourcen die im Workflow der E-Rechnung erzeugt werden",
+  "url": "https://gematik.de/fhir/eabpkv/CodeSystem/eabpkv-workflow-cs",
+  "concept": [
+    {
+      "code": "rechnungsworkflow",
+      "display": "Rechnungsworkflow",
+      "definition": "Task-Ressource zum Tracking des Status einer E-Rechnung"
+    }
+  ],
+  "count": 1
+}

@@ -1,0 +1,16 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "EABPKVRechnungsworkflowBusinessStatusVS",
+  "id": "eabpkv-rechnungsworkflow-businessStatus-vs",
+  "title": "EABPKV Rechnungsworkflow BusinessStatus VS",
+  "description": "ValueSet für die Abbildung des Buisness-Status einer E-Rechnnung innerhalb des Rechnungsworkflows",
+  "url": "https://gematik.de/fhir/eabpkv/ValueSet/eabpkv-rechnungsworkflow-businessStatus-vs",
+  "compose": {
+    "include": [
+      {
+        "system": "https://gematik.de/fhir/eabpkv/CodeSystem/eabpkv-rechnungsworkflow-businessStatus-cs"
+      }
+    ]
+  }
+}
