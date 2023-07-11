@@ -1,0 +1,143 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "eabpkv-rechnungsposition",
+  "url": "https://gematik.de/fhir/eabpkv/StructureDefinition/eabpkv-rechnungsposition",
+  "name": "EABPKVRechnungsposition",
+  "title": "EABPKV Rechnungsposition",
+  "status": "draft",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "workflow",
+      "uri": "http://hl7.org/fhir/workflow",
+      "name": "Workflow Pattern"
+    },
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2 Mapping"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "ChargeItem",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/ChargeItem",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "ChargeItem.status",
+        "path": "ChargeItem.status",
+        "mustSupport": true
+      },
+      {
+        "id": "ChargeItem.code",
+        "path": "ChargeItem.code",
+        "mustSupport": true
+      },
+      {
+        "id": "ChargeItem.code.coding",
+        "path": "ChargeItem.code.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "ChargeItem.code.coding:GOÄ",
+        "path": "ChargeItem.code.coding",
+        "sliceName": "GOÄ",
+        "min": 0,
+        "max": "1",
+        "patternCoding": {
+          "system": "http://fhir.de/CodeSystem/bäk/goä"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "ChargeItem.code.coding:GOZ",
+        "path": "ChargeItem.code.coding",
+        "sliceName": "GOZ",
+        "min": 0,
+        "max": "1",
+        "patternCoding": {
+          "system": "http://fhir.de/CodeSystem/bzäk/goz"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "ChargeItem.code.text",
+        "path": "ChargeItem.code.text",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "ChargeItem.subject",
+        "path": "ChargeItem.subject",
+        "mustSupport": true
+      },
+      {
+        "id": "ChargeItem.occurrence[x]",
+        "path": "ChargeItem.occurrence[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "ChargeItem.occurrence[x]:occurrencePeriod",
+        "path": "ChargeItem.occurrence[x]",
+        "sliceName": "occurrencePeriod",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Period"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "ChargeItem.quantity",
+        "path": "ChargeItem.quantity",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "ChargeItem.factorOverride",
+        "path": "ChargeItem.factorOverride",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "ChargeItem.priceOverride",
+        "path": "ChargeItem.priceOverride",
+        "min": 1,
+        "mustSupport": true
+      }
+    ]
+  }
+}
