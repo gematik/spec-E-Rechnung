@@ -102,11 +102,8 @@
       {
         "id": "Invoice.status",
         "path": "Invoice.status",
-        "mustSupport": true,
-        "binding": {
-          "strength": "required",
-          "valueSet": "https://gematik.de/fhir/eabpkv/ValueSet/eabpkv-rechnung-status-vs"
-        }
+        "patternCode": "issued",
+        "mustSupport": true
       },
       {
         "id": "Invoice.type",
@@ -115,7 +112,7 @@
         "patternCodeableConcept": {
           "coding": [
             {
-              "code": "eprivatrechnung",
+              "code": "erechnung",
               "system": "https://gematik.de/fhir/eabpkv/CodeSystem/eabpkv-rechnung-type-cs"
             }
           ]
@@ -153,6 +150,12 @@
         "mustSupport": true
       },
       {
+        "id": "Invoice.recipient.display",
+        "path": "Invoice.recipient.display",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
         "id": "Invoice.date",
         "path": "Invoice.date",
         "min": 1,
@@ -176,6 +179,12 @@
             ]
           }
         ],
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.issuer.display",
+        "path": "Invoice.issuer.display",
+        "min": 1,
         "mustSupport": true
       },
       {
