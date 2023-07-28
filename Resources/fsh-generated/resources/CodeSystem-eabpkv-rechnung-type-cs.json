@@ -9,8 +9,8 @@
   "url": "https://gematik.de/fhir/eabpkv/CodeSystem/eabpkv-rechnung-type-cs",
   "concept": [
     {
-      "code": "eprivatrechnung",
-      "display": "E-Privatrechnung"
+      "code": "erechnung",
+      "display": "E-Rechnung"
     }
   ],
   "count": 1
