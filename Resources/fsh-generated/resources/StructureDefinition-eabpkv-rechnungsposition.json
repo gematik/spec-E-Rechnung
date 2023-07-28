@@ -36,6 +36,22 @@
   "differential": {
     "element": [
       {
+        "id": "ChargeItem.extension:unitPriceComponent",
+        "path": "ChargeItem.extension",
+        "sliceName": "unitPriceComponent",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://gematik.de/fhir/eabpkv/StructureDefinition/eabpkv-preisdetails-rechnungsposition"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
         "id": "ChargeItem.status",
         "path": "ChargeItem.status",
         "mustSupport": true
