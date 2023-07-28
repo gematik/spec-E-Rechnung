@@ -20,10 +20,12 @@ Id: eabpkv-rechnung
 * recipient only Reference(Patient or RelatedPerson)
   * identifier 1.. MS
   * identifier only IdentifierKvid10 or IdentifierPkvVersichertenId10
+  * display 1.. MS
 * date 1.. MS
 * issuer 1.. MS
   * identifier 1.. MS 
   * identifier only IdentifierTelematikId
+  * display 1.. MS
 * lineItem MS
 * lineItem.chargeItem[x] only Reference
 * lineItem.chargeItemReference MS
