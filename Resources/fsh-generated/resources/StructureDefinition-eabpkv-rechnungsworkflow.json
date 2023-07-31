@@ -57,6 +57,22 @@
         "mustSupport": true
       },
       {
+        "id": "Task.extension:sonstigesDokument",
+        "path": "Task.extension",
+        "sliceName": "sonstigesDokument",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://gematik.de/fhir/eabpkv/StructureDefinition/eabpkv-rechnungsworkflow-sonstigesDokument"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
         "id": "Task.identifier",
         "path": "Task.identifier",
         "slicing": {

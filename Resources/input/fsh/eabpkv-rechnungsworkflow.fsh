@@ -3,6 +3,7 @@ Title: "EABPKV Rechnungsworkflow"
 Parent: Task
 Id: eabpkv-rechnungsworkflow
 * extension contains http://hl7.org/fhir/5.0/StructureDefinition/extension-Task.requestedPerformer named requestedPerformer 1..1 MS
+* extension contains https://gematik.de/fhir/eabpkv/StructureDefinition/eabpkv-rechnungsworkflow-sonstigesDokument named sonstigesDokument 0..* MS
 * status MS 
 * status from https://gematik.de/fhir/eabpkv/ValueSet/eabpkv-rechnungsworkflow-status-vs (required)
 * identifier 1.. MS
@@ -36,3 +37,10 @@ Title: "EABPKV Rechnungsworkflow RequestedPerformer"
 * valueReference 1.. MS
   * identifier 1.. MS
   * identifier only IdentifierKvid10 or IdentifierPkvVersichertenId10
+
+Extension: EABPKVRechnungsworkflowSonstigesDokument
+Id: eabpkv-rechnungsworkflow-sonstigesDokument
+Title: "EABPKV Rechnungsworkflow SonstigesDokument"
+* value[x] only Reference(DocumentReference)
+* valueReference 1.. MS
+  * reference 1.. MS
