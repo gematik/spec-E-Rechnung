@@ -5,6 +5,7 @@
     "4.0.1"
   ],
   "dependencies": {
-    "de.basisprofil.r4": "1.4.0"
+    "de.basisprofil.r4": "1.4.0",
+    "dvmd.kdl.r4": "2023.0.1"
   }
 }
