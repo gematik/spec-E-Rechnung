@@ -21,7 +21,7 @@ Id: eabpkv-rechnungsworkflow
 * intent MS
 * intent = http://hl7.org/fhir/request-intent#order
 * code 1.. MS
-* code = https://gematik.de/fhir/CodeSystem/eabpkv-workflow-cs#rechnungsworkflow
+* code = https://gematik.de/fhir/eabpkv/CodeSystem/eabpkv-workflow-cs#rechnungsworkflow
 * focus 1.. MS
 * focus only Reference(Invoice)
 * requester only Reference(Organization or Practitioner)

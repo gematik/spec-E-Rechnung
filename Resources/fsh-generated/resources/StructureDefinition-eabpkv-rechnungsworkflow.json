@@ -154,7 +154,7 @@
           "coding": [
             {
               "code": "rechnungsworkflow",
-              "system": "https://gematik.de/fhir/CodeSystem/eabpkv-workflow-cs"
+              "system": "https://gematik.de/fhir/eabpkv/CodeSystem/eabpkv-workflow-cs"
             }
           ]
         },
