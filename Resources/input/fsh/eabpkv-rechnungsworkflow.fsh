@@ -33,7 +33,7 @@ Extension: EABPKVRechnungsworkflowRequestedPerformer
 Id: eabpkv-rechnungsworkflow-requestedPerformer
 Title: "EABPKV Rechnungsworkflow RequestedPerformer"
 * ^url = "http://hl7.org/fhir/5.0/StructureDefinition/extension-Task.requestedPerformer"
-* value[x] only Reference(Patient or RelatedPerson)
+* value[x] only Reference(Patient)
 * valueReference 1.. MS
   * identifier 1.. MS
   * identifier only IdentifierKvid10 or IdentifierPkvVersichertenId10

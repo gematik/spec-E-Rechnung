@@ -17,7 +17,7 @@ Id: eabpkv-rechnung
 * status MS
 * status = http://hl7.org/fhir/invoice-status#issued
 * recipient 1.. MS
-* recipient only Reference(Patient or RelatedPerson)
+* recipient only Reference(Patient)
   * identifier 1.. MS
   * identifier only IdentifierKvid10 or IdentifierPkvVersichertenId10
   * display 1.. MS
