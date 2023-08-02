@@ -61,10 +61,24 @@
         "min": 1,
         "type": [
           {
-            "code": "Identifier"
+            "code": "Identifier",
+            "profile": [
+              "http://fhir.de/StructureDefinition/identifier-kvid-10",
+              "http://fhir.de/StructureDefinition/identifier-pkv-kvid-10"
+            ]
           }
         ],
         "mustSupport": true
+      },
+      {
+        "id": "Parameters.parameter:iknr.resource",
+        "path": "Parameters.parameter.resource",
+        "max": "0"
+      },
+      {
+        "id": "Parameters.parameter:iknr.part",
+        "path": "Parameters.parameter.part",
+        "max": "1"
       },
       {
         "id": "Parameters.parameter:displayname",
@@ -90,6 +104,16 @@
           }
         ],
         "mustSupport": true
+      },
+      {
+        "id": "Parameters.parameter:displayname.resource",
+        "path": "Parameters.parameter.resource",
+        "max": "0"
+      },
+      {
+        "id": "Parameters.parameter:displayname.part",
+        "path": "Parameters.parameter.part",
+        "max": "1"
       }
     ]
   }

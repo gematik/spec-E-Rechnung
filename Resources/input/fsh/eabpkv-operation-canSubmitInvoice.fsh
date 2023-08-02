@@ -45,8 +45,13 @@ Description: "Profil zur Validierung der Input-Parameter für $erechnung-canSubm
   * name = "iknr"
   * value[x] only Identifier
   * valueIdentifier 1..1 MS
+  * valueIdentifier only IdentifierKvid10 or IdentifierPkvVersichertenId10
+  * resource 0..0
+  * part 0..1
 * parameter[displayname]
   * name MS
   * name = "displayname"
   * value[x] only string
   * valueString 1..1 MS
+  * resource 0..0
+  * part 0..1
