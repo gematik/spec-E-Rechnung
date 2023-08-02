@@ -12,6 +12,7 @@
   "system": false,
   "type": true,
   "instance": false,
+  "affectsState": false,
   "parameter": [
     {
       "name": "kvnr",
