@@ -1,0 +1,96 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "eabpkv-cansubmitinvoiceinput-parameter",
+  "url": "https://gematik.de/fhir/eabpkv/StructureDefinition/eabpkv-cansubmitinvoiceinput-parameter",
+  "name": "CanSubmitInvoiceInput",
+  "title": "CanSubmitInvoiceInput",
+  "status": "draft",
+  "description": "Profil zur Validierung der Input-Parameter für $erechnung-canSubmitInvoice",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2 Mapping"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "Parameters",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Parameters",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Parameters.parameter",
+        "path": "Parameters.parameter",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "name"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 2,
+        "mustSupport": true
+      },
+      {
+        "id": "Parameters.parameter:iknr",
+        "path": "Parameters.parameter",
+        "sliceName": "iknr",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Parameters.parameter:iknr.name",
+        "path": "Parameters.parameter.name",
+        "patternString": "iknr",
+        "mustSupport": true
+      },
+      {
+        "id": "Parameters.parameter:iknr.value[x]",
+        "path": "Parameters.parameter.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Parameters.parameter:displayname",
+        "path": "Parameters.parameter",
+        "sliceName": "displayname",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Parameters.parameter:displayname.name",
+        "path": "Parameters.parameter.name",
+        "patternString": "displayname",
+        "mustSupport": true
+      },
+      {
+        "id": "Parameters.parameter:displayname.value[x]",
+        "path": "Parameters.parameter.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true
+      }
+    ]
+  }
+}

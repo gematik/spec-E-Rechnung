@@ -28,3 +28,25 @@ Description: "Abfrage der Einwilligung der Rechnungsempfänger:in für die Zuste
   * max = "1"
   * documentation = "Vollständiger Displayname der Rechnungsempfänger:in"
   * type = #string
+
+Profile: CanSubmitInvoiceInput
+Parent: Parameters
+Id: eabpkv-cansubmitinvoiceinput-parameter
+Title: "CanSubmitInvoiceInput"
+Description: "Profil zur Validierung der Input-Parameter für $erechnung-canSubmitInvoice"
+* parameter 2..* MS
+  * ^slicing.discriminator.type = #value
+  * ^slicing.discriminator.path = "name"
+  * ^slicing.rules = #open
+* parameter contains iknr 1..1 MS 
+    and displayname 1..1 MS
+* parameter[iknr]
+  * name MS
+  * name = "iknr"
+  * value[x] only Identifier
+  * valueIdentifier 1..1 MS
+* parameter[displayname]
+  * name MS
+  * name = "displayname"
+  * value[x] only string
+  * valueString 1..1 MS
