@@ -19,3 +19,10 @@ Description: "Abfrage der Einwilligung der Rechnungsempfänger:in für die Zuste
   * max = "1"
   * documentation = "KVNR der Rechnungsempfänger:in"
   * type = #Identifier
+* parameter[+]
+  * name = #name
+  * use = #in
+  * min = 1
+  * max = "1"
+  * documentation = "Vollständiger Displayname der Rechnungsempfänger:in"
+  * type = #string
