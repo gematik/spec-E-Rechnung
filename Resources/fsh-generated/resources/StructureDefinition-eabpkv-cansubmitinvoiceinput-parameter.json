@@ -78,7 +78,7 @@
       {
         "id": "Parameters.parameter:iknr.part",
         "path": "Parameters.parameter.part",
-        "max": "1"
+        "max": "0"
       },
       {
         "id": "Parameters.parameter:displayname",
@@ -113,7 +113,7 @@
       {
         "id": "Parameters.parameter:displayname.part",
         "path": "Parameters.parameter.part",
-        "max": "1"
+        "max": "0"
       }
     ]
   }
