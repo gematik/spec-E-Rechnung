@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "eabpkv-cansubmitinvoiceinput-parameter",
   "url": "https://gematik.de/fhir/eabpkv/StructureDefinition/eabpkv-cansubmitinvoiceinput-parameter",
-  "name": "CanSubmitInvoiceInput",
+  "name": "EABPKVRParametersCanSubmitInvoiceInput",
   "title": "CanSubmitInvoiceInput",
   "status": "draft",
   "description": "Profil zur Validierung der Input-Parameter für $erechnung-canSubmitInvoice",

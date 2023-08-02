@@ -30,7 +30,7 @@ Description: "Abfrage der Einwilligung der Rechnungsempfänger:in für die Zuste
   * documentation = "Vollständiger Displayname der Rechnungsempfänger:in"
   * type = #string
 
-Profile: CanSubmitInvoiceInput
+Profile: EABPKVRParametersCanSubmitInvoiceInput
 Parent: Parameters
 Id: eabpkv-cansubmitinvoiceinput-parameter
 Title: "CanSubmitInvoiceInput"
@@ -56,3 +56,14 @@ Description: "Profil zur Validierung der Input-Parameter für $erechnung-canSubm
   * valueString 1..1 MS
   * resource 0..0
   * part 0..0
+
+Instance: EABPKVInvokeCanSubmitInvoice
+InstanceOf: EABPKVRParametersCanSubmitInvoiceInput
+Usage: #example
+* parameter[iknr]
+  * valueIdentifier
+    * type = http://fhir.de/CodeSystem/identifier-type-de-basis#GKV
+    * system = "http://fhir.de/sid/gkv/kvid-10"
+    * value = "G995030567"
+* parameter[displayname]
+  * valueString = "Erika Mustermann"  
