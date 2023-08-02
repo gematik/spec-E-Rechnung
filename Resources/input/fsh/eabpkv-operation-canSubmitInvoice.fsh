@@ -14,6 +14,7 @@ Description: "Abfrage der Einwilligung der Rechnungsempfänger:in für die Zuste
 * instance = false
 * affectsState = false
 * comment = "Test Comment"
+* inputProfile = Canonical(https://gematik.de/fhir/eabpkv/StructureDefinition/eabpkv-cansubmitinvoiceinput-parameter)
 * parameter[+]
   * name = #kvnr
   * use = #in
