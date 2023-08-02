@@ -13,6 +13,7 @@ Description: "Abfrage der Einwilligung der Rechnungsempfänger:in für die Zuste
 * type = true
 * instance = false
 * affectsState = false
+* comment = "Test Comment"
 * parameter[+]
   * name = #kvnr
   * use = #in
