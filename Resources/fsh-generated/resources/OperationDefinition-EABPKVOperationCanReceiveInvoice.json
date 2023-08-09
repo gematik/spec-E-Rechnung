@@ -1,11 +1,11 @@
 {
   "resourceType": "OperationDefinition",
-  "id": "EABPKVOperationCanSubmitInvoice",
-  "url": "https://gematik.de/fhir/eabpkv/OperationDefinition/CanSubmitInvoice",
+  "id": "EABPKVOperationCanReceiveInvoice",
+  "url": "https://gematik.de/fhir/eabpkv/OperationDefinition/CanReceiveInvoice",
   "status": "draft",
   "kind": "operation",
-  "name": "ERechnung_CanSubmitInvoice",
-  "code": "erechnung-canSubmitInvoice",
+  "name": "ERechnung_CanReceiveInvoice",
+  "code": "erechnung-canReceiveInvoice",
   "resource": [
     "Patient"
   ],
@@ -14,7 +14,7 @@
   "instance": false,
   "affectsState": false,
   "comment": "Test Comment",
-  "inputProfile": "https://gematik.de/fhir/eabpkv/StructureDefinition/eabpkv-cansubmitinvoiceinput-parameter",
+  "inputProfile": "https://gematik.de/fhir/eabpkv/StructureDefinition/eabpkv-canreceiveinvoiceinput-parameter",
   "parameter": [
     {
       "name": "kvnr",
@@ -29,7 +29,7 @@
       "use": "in",
       "min": 1,
       "max": "1",
-      "documentation": "Vollständiger Displayname der Rechnungsempfänger:in",
+      "documentation": "Vollständiger Displayname der Rechnungsempfänger:in. Zur Plausibilitätsprüfung.",
       "type": "string"
     }
   ]

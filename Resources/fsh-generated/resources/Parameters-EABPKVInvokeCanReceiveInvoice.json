@@ -1,9 +1,9 @@
 {
   "resourceType": "Parameters",
-  "id": "EABPKVInvokeCanSubmitInvoice",
+  "id": "EABPKVInvokeCanReceiveInvoice",
   "meta": {
     "profile": [
-      "https://gematik.de/fhir/eabpkv/StructureDefinition/eabpkv-cansubmitinvoiceinput-parameter"
+      "https://gematik.de/fhir/eabpkv/StructureDefinition/eabpkv-canreceiveinvoiceinput-parameter"
     ]
   },
   "parameter": [

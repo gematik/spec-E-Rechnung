@@ -1,11 +1,11 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "eabpkv-cansubmitinvoiceinput-parameter",
-  "url": "https://gematik.de/fhir/eabpkv/StructureDefinition/eabpkv-cansubmitinvoiceinput-parameter",
-  "name": "EABPKVRParametersCanSubmitInvoiceInput",
-  "title": "CanSubmitInvoiceInput",
+  "id": "eabpkv-canreceiveinvoiceinput-parameter",
+  "url": "https://gematik.de/fhir/eabpkv/StructureDefinition/eabpkv-canreceiveinvoiceinput-parameter",
+  "name": "EABPKVRParametersCanReceiveInvoiceInput",
+  "title": "CanReceiveInvoiceInput",
   "status": "draft",
-  "description": "Profil zur Validierung der Input-Parameter für $erechnung-canSubmitInvoice",
+  "description": "Profil zur Validierung der Input-Parameter für $erechnung-canReceiveInvoice",
   "fhirVersion": "4.0.1",
   "mapping": [
     {

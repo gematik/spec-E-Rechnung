@@ -1,20 +1,20 @@
-Instance: EABPKVOperationCanSubmitInvoice
+Instance: EABPKVOperationCanReceiveInvoice
 InstanceOf: OperationDefinition
 Usage: #example
-Title: "erechnung-canSubmitInvoice"
+Title: "erechnung-canReceiveInvoice"
 Description: "Abfrage der Einwilligung der Rechnungsempfänger:in für die Zustellung einer E-Rechnung"
-* url = "https://gematik.de/fhir/eabpkv/OperationDefinition/CanSubmitInvoice"
+* url = "https://gematik.de/fhir/eabpkv/OperationDefinition/CanReceiveInvoice"
 * status = #draft
 * kind = #operation
-* name = "ERechnung_CanSubmitInvoice"
-* code = #erechnung-canSubmitInvoice
+* name = "ERechnung_CanReceiveInvoice"
+* code = #erechnung-canReceiveInvoice
 * resource = #Patient
 * system = false
 * type = true
 * instance = false
 * affectsState = false
 * comment = "Test Comment"
-* inputProfile = Canonical(https://gematik.de/fhir/eabpkv/StructureDefinition/eabpkv-cansubmitinvoiceinput-parameter)
+* inputProfile = Canonical(https://gematik.de/fhir/eabpkv/StructureDefinition/eabpkv-canreceiveinvoiceinput-parameter)
 * parameter[+]
   * name = #kvnr
   * use = #in
@@ -27,14 +27,14 @@ Description: "Abfrage der Einwilligung der Rechnungsempfänger:in für die Zuste
   * use = #in
   * min = 1
   * max = "1"
-  * documentation = "Vollständiger Displayname der Rechnungsempfänger:in"
+  * documentation = "Vollständiger Displayname der Rechnungsempfänger:in. Zur Plausibilitätsprüfung."
   * type = #string
 
-Profile: EABPKVRParametersCanSubmitInvoiceInput
+Profile: EABPKVRParametersCanReceiveInvoiceInput
 Parent: Parameters
-Id: eabpkv-cansubmitinvoiceinput-parameter
-Title: "CanSubmitInvoiceInput"
-Description: "Profil zur Validierung der Input-Parameter für $erechnung-canSubmitInvoice"
+Id: eabpkv-canreceiveinvoiceinput-parameter
+Title: "CanReceiveInvoiceInput"
+Description: "Profil zur Validierung der Input-Parameter für $erechnung-canReceiveInvoice"
 * parameter 2..* MS
   * ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = "name"
@@ -57,8 +57,8 @@ Description: "Profil zur Validierung der Input-Parameter für $erechnung-canSubm
   * resource 0..0
   * part 0..0
 
-Instance: EABPKVInvokeCanSubmitInvoice
-InstanceOf: EABPKVRParametersCanSubmitInvoiceInput
+Instance: EABPKVInvokeCanReceiveInvoice
+InstanceOf: EABPKVRParametersCanReceiveInvoiceInput
 Usage: #example
 * parameter[iknr]
   * valueIdentifier
