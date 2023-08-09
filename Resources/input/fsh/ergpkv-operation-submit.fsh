@@ -2,7 +2,7 @@ Instance: ERGPKVOperationSubmit
 InstanceOf: OperationDefinition
 Usage: #example
 Title: "erechnung-submit"
-Description: "Finalisierung der E-Rechnungen zur Weiterleitung an die Empfänger:in"
+Description: "Finalisierung der E-Rechnungen zum Abruf an die Empfänger:in"
 * url = "https://gematik.de/fhir/ergpkv/OperationDefinition/Submit"
 * status = #draft
 * kind = #operation
