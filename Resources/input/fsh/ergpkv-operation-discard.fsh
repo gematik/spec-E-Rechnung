@@ -27,12 +27,11 @@ Parent: Parameters
 Id: ergpkv-discardinput-parameter
 Title: "DiscardInput"
 Description: "Profil zur Validierung der Input-Parameter für $erechnung-discard"
-* parameter 2..* MS
+* parameter 1..1 MS
   * ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = "name"
-  * ^slicing.rules = #open
-* parameter contains token 1..1 MS 
-    and displayname 1..1 MS
+  * ^slicing.rules = #closed
+* parameter contains token 1..1 MS
 * parameter[token]
   * name MS
   * name = "token"
@@ -45,3 +44,11 @@ Description: "Profil zur Validierung der Input-Parameter für $erechnung-discard
     * value 1.. MS
   * resource 0..0
   * part 0..0
+
+Instance: ERGPKVDiscardInvoice
+InstanceOf: ERGPKVRParametersDiscardInput
+Usage: #example
+* parameter[token]
+  * valueIdentifier
+    * system = "https://gematik.de/fhir/sid/ergpkv-token"
+    * value = "<rechnungstoken>"

@@ -35,10 +35,10 @@ Parent: Parameters
 Id: ergpkv-canreceiveinvoiceinput-parameter
 Title: "CanReceiveInvoiceInput"
 Description: "Profil zur Validierung der Input-Parameter für $erechnung-canReceiveInvoice"
-* parameter 2..* MS
+* parameter 2..2 MS
   * ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = "name"
-  * ^slicing.rules = #open
+  * ^slicing.rules = #closed
 * parameter contains iknr 1..1 MS 
     and displayname 1..1 MS
 * parameter[iknr]

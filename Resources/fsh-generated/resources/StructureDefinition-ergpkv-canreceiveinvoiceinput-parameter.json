@@ -36,9 +36,10 @@
               "path": "name"
             }
           ],
-          "rules": "open"
+          "rules": "closed"
         },
         "min": 2,
+        "max": "2",
         "mustSupport": true
       },
       {
