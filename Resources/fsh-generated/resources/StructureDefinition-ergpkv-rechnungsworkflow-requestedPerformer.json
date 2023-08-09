@@ -1,9 +1,9 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "eabpkv-rechnungsworkflow-requestedPerformer",
+  "id": "ergpkv-rechnungsworkflow-requestedPerformer",
   "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Task.requestedPerformer",
-  "name": "EABPKVRechnungsworkflowRequestedPerformer",
-  "title": "EABPKV Rechnungsworkflow RequestedPerformer",
+  "name": "ERGPKVRechnungsworkflowRequestedPerformer",
+  "title": "ERGPKV Rechnungsworkflow RequestedPerformer",
   "status": "draft",
   "fhirVersion": "4.0.1",
   "mapping": [

@@ -1,8 +1,8 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "eabpkv-canreceiveinvoiceinput-parameter",
-  "url": "https://gematik.de/fhir/eabpkv/StructureDefinition/eabpkv-canreceiveinvoiceinput-parameter",
-  "name": "EABPKVRParametersCanReceiveInvoiceInput",
+  "id": "ergpkv-canreceiveinvoiceinput-parameter",
+  "url": "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-canreceiveinvoiceinput-parameter",
+  "name": "ERGPKVRParametersCanReceiveInvoiceInput",
   "title": "CanReceiveInvoiceInput",
   "status": "draft",
   "description": "Profil zur Validierung der Input-Parameter für $erechnung-canReceiveInvoice",

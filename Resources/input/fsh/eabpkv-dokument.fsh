@@ -1,7 +1,7 @@
-Profile: EABPKVDokument
-Title: "EABPKV Dokument"
+Profile: ERGPKVDokument
+Title: "ERGPKV Dokument"
 Parent: Binary
-Id: eabpkv-dokument
+Id: ergpkv-dokument
 * contentType MS
 * contentType = #application/pdf
 * data 1..1 MS

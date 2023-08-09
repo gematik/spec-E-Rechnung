@@ -1,11 +1,11 @@
 {
   "resourceType": "ValueSet",
   "status": "draft",
-  "name": "EABPKVRechnungsworkflowStatusVS",
-  "id": "eabpkv-rechnungsworkflow-status-vs",
-  "title": "EABPKV Rechnungsworkflow Status VS",
+  "name": "ERGPKVRechnungsworkflowStatusVS",
+  "id": "ergpkv-rechnungsworkflow-status-vs",
+  "title": "ERGPKV Rechnungsworkflow Status VS",
   "description": "ValueSet für die Abbildung des Status des Rechnungsworkflows für eine E-Rechnnung",
-  "url": "https://gematik.de/fhir/eabpkv/ValueSet/eabpkv-rechnungsworkflow-status-vs",
+  "url": "https://gematik.de/fhir/ergpkv/ValueSet/ergpkv-rechnungsworkflow-status-vs",
   "compose": {
     "include": [
       {

@@ -1,9 +1,9 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "eabpkv-sonstiges-dokument",
-  "url": "https://gematik.de/fhir/eabpkv/StructureDefinition/eabpkv-sonstiges-dokument",
-  "name": "EABPKVSonstigesDokument",
-  "title": "EABPKV Sonstiges Dokument",
+  "id": "ergpkv-sonstiges-dokument",
+  "url": "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-sonstiges-dokument",
+  "name": "ERGPKVSonstigesDokument",
+  "title": "ERGPKV Sonstiges Dokument",
   "status": "draft",
   "fhirVersion": "4.0.1",
   "mapping": [

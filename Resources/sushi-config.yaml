@@ -1,4 +1,4 @@
-canonical: https://gematik.de/fhir/eabpkv
+canonical: https://gematik.de/fhir/ergpkv
 fhirVersion: 4.0.1
 FSHOnly: true
 applyExtensionMetadataToRoot: false

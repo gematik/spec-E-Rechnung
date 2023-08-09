@@ -1,9 +1,9 @@
-Instance: EABPKVOperationCanReceiveInvoice
+Instance: ERGPKVOperationCanReceiveInvoice
 InstanceOf: OperationDefinition
 Usage: #example
 Title: "erechnung-canReceiveInvoice"
 Description: "Abfrage der Einwilligung der Rechnungsempfänger:in für die Zustellung einer E-Rechnung"
-* url = "https://gematik.de/fhir/eabpkv/OperationDefinition/CanReceiveInvoice"
+* url = "https://gematik.de/fhir/ergpkv/OperationDefinition/CanReceiveInvoice"
 * status = #draft
 * kind = #operation
 * name = "ERechnung_CanReceiveInvoice"
@@ -14,7 +14,7 @@ Description: "Abfrage der Einwilligung der Rechnungsempfänger:in für die Zuste
 * instance = false
 * affectsState = false
 * comment = "Test Comment"
-* inputProfile = Canonical(https://gematik.de/fhir/eabpkv/StructureDefinition/eabpkv-canreceiveinvoiceinput-parameter)
+* inputProfile = Canonical(https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-canreceiveinvoiceinput-parameter)
 * parameter[+]
   * name = #kvnr
   * use = #in
@@ -30,9 +30,9 @@ Description: "Abfrage der Einwilligung der Rechnungsempfänger:in für die Zuste
   * documentation = "Vollständiger Displayname der Rechnungsempfänger:in. Zur Plausibilitätsprüfung."
   * type = #string
 
-Profile: EABPKVRParametersCanReceiveInvoiceInput
+Profile: ERGPKVRParametersCanReceiveInvoiceInput
 Parent: Parameters
-Id: eabpkv-canreceiveinvoiceinput-parameter
+Id: ergpkv-canreceiveinvoiceinput-parameter
 Title: "CanReceiveInvoiceInput"
 Description: "Profil zur Validierung der Input-Parameter für $erechnung-canReceiveInvoice"
 * parameter 2..* MS
@@ -57,8 +57,8 @@ Description: "Profil zur Validierung der Input-Parameter für $erechnung-canRece
   * resource 0..0
   * part 0..0
 
-Instance: EABPKVInvokeCanReceiveInvoice
-InstanceOf: EABPKVRParametersCanReceiveInvoiceInput
+Instance: ERGPKVInvokeCanReceiveInvoice
+InstanceOf: ERGPKVRParametersCanReceiveInvoiceInput
 Usage: #example
 * parameter[iknr]
   * valueIdentifier

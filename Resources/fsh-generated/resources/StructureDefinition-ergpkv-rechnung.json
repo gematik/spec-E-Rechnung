@@ -1,9 +1,9 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "eabpkv-rechnung",
-  "url": "https://gematik.de/fhir/eabpkv/StructureDefinition/eabpkv-rechnung",
-  "name": "EABPKVRechnung",
-  "title": "EABPKV Rechnung",
+  "id": "ergpkv-rechnung",
+  "url": "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-rechnung",
+  "name": "ERGPKVRechnung",
+  "title": "ERGPKV Rechnung",
   "status": "draft",
   "fhirVersion": "4.0.1",
   "mapping": [
@@ -45,7 +45,7 @@
           {
             "code": "Extension",
             "profile": [
-              "https://gematik.de/fhir/eabpkv/StructureDefinition/eabpkv-pdf-repraesentation-rechnung"
+              "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-pdf-repraesentation-rechnung"
             ]
           }
         ],
@@ -113,7 +113,7 @@
           "coding": [
             {
               "code": "erechnung",
-              "system": "https://gematik.de/fhir/eabpkv/CodeSystem/eabpkv-rechnung-type-cs"
+              "system": "https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnung-type-cs"
             }
           ]
         },

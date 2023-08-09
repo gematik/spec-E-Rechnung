@@ -1,9 +1,9 @@
 {
   "resourceType": "Parameters",
-  "id": "EABPKVInvokeCanReceiveInvoice",
+  "id": "ERGPKVInvokeCanReceiveInvoice",
   "meta": {
     "profile": [
-      "https://gematik.de/fhir/eabpkv/StructureDefinition/eabpkv-canreceiveinvoiceinput-parameter"
+      "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-canreceiveinvoiceinput-parameter"
     ]
   },
   "parameter": [

@@ -1,9 +1,9 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "eabpkv-rechnungsworkflow-sonstigesDokument",
-  "url": "https://gematik.de/fhir/eabpkv/StructureDefinition/eabpkv-rechnungsworkflow-sonstigesDokument",
-  "name": "EABPKVRechnungsworkflowSonstigesDokument",
-  "title": "EABPKV Rechnungsworkflow SonstigesDokument",
+  "id": "ergpkv-rechnungsworkflow-sonstigesDokument",
+  "url": "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-rechnungsworkflow-sonstigesDokument",
+  "name": "ERGPKVRechnungsworkflowSonstigesDokument",
+  "title": "ERGPKV Rechnungsworkflow SonstigesDokument",
   "status": "draft",
   "fhirVersion": "4.0.1",
   "mapping": [
@@ -34,7 +34,7 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "https://gematik.de/fhir/eabpkv/StructureDefinition/eabpkv-rechnungsworkflow-sonstigesDokument"
+        "fixedUri": "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-rechnungsworkflow-sonstigesDokument"
       },
       {
         "id": "Extension.value[x]",

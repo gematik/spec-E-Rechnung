@@ -2,11 +2,11 @@
   "resourceType": "CodeSystem",
   "status": "draft",
   "content": "complete",
-  "name": "EABPKVRechnungTypeCS",
-  "id": "eabpkv-rechnung-type-cs",
-  "title": "EABPKV Rechnung Type CS",
+  "name": "ERGPKVRechnungTypeCS",
+  "id": "ergpkv-rechnung-type-cs",
+  "title": "ERGPKV Rechnung Type CS",
   "description": "CodeSystem für die Differenzierung von verschiedenen Typen einer E-Rechnnung",
-  "url": "https://gematik.de/fhir/eabpkv/CodeSystem/eabpkv-rechnung-type-cs",
+  "url": "https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnung-type-cs",
   "concept": [
     {
       "code": "erechnung",

@@ -1,9 +1,9 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "eabpkv-pdf-repraesentation-rechnung",
-  "url": "https://gematik.de/fhir/eabpkv/StructureDefinition/eabpkv-pdf-repraesentation-rechnung",
-  "name": "EABPKVPDFRepraesentationRechnung",
-  "title": "EABPKV PDF Repräsentation Rechnung",
+  "id": "ergpkv-pdf-repraesentation-rechnung",
+  "url": "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-pdf-repraesentation-rechnung",
+  "name": "ERGPKVPDFRepraesentationRechnung",
+  "title": "ERGPKV PDF Repräsentation Rechnung",
   "status": "draft",
   "fhirVersion": "4.0.1",
   "mapping": [
@@ -34,7 +34,7 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "https://gematik.de/fhir/eabpkv/StructureDefinition/eabpkv-pdf-repraesentation-rechnung"
+        "fixedUri": "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-pdf-repraesentation-rechnung"
       },
       {
         "id": "Extension.value[x]",

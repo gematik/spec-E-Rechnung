@@ -2,11 +2,11 @@
   "resourceType": "CodeSystem",
   "status": "draft",
   "content": "complete",
-  "name": "EABPKVRechnungsworkflowBusinessStatusCS",
-  "id": "eabpkv-rechnungsworkflow-businessStatus-cs",
-  "title": "EABPKV Rechnungsworkflow BusinessStatus CS",
+  "name": "ERGPKVRechnungsworkflowBusinessStatusCS",
+  "id": "ergpkv-rechnungsworkflow-businessStatus-cs",
+  "title": "ERGPKV Rechnungsworkflow BusinessStatus CS",
   "description": "CodeSystem für die Abbildung des Buisness-Status einer E-Rechnnung innerhalb des Rechnungsworkflows",
-  "url": "https://gematik.de/fhir/eabpkv/CodeSystem/eabpkv-rechnungsworkflow-businessStatus-cs",
+  "url": "https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsworkflow-businessStatus-cs",
   "concept": [
     {
       "code": "neu",

@@ -1,9 +1,9 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "eabpkv-rechnungsposition",
-  "url": "https://gematik.de/fhir/eabpkv/StructureDefinition/eabpkv-rechnungsposition",
-  "name": "EABPKVRechnungsposition",
-  "title": "EABPKV Rechnungsposition",
+  "id": "ergpkv-rechnungsposition",
+  "url": "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-rechnungsposition",
+  "name": "ERGPKVRechnungsposition",
+  "title": "ERGPKV Rechnungsposition",
   "status": "draft",
   "fhirVersion": "4.0.1",
   "mapping": [
@@ -45,7 +45,7 @@
           {
             "code": "Extension",
             "profile": [
-              "https://gematik.de/fhir/eabpkv/StructureDefinition/eabpkv-preisdetails-rechnungsposition"
+              "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-preisdetails-rechnungsposition"
             ]
           }
         ],

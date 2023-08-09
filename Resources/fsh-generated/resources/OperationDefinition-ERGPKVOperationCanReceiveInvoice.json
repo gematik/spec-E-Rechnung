@@ -1,7 +1,7 @@
 {
   "resourceType": "OperationDefinition",
-  "id": "EABPKVOperationCanReceiveInvoice",
-  "url": "https://gematik.de/fhir/eabpkv/OperationDefinition/CanReceiveInvoice",
+  "id": "ERGPKVOperationCanReceiveInvoice",
+  "url": "https://gematik.de/fhir/ergpkv/OperationDefinition/CanReceiveInvoice",
   "status": "draft",
   "kind": "operation",
   "name": "ERechnung_CanReceiveInvoice",
@@ -14,7 +14,7 @@
   "instance": false,
   "affectsState": false,
   "comment": "Test Comment",
-  "inputProfile": "https://gematik.de/fhir/eabpkv/StructureDefinition/eabpkv-canreceiveinvoiceinput-parameter",
+  "inputProfile": "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-canreceiveinvoiceinput-parameter",
   "parameter": [
     {
       "name": "kvnr",

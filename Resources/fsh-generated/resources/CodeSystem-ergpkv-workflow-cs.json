@@ -2,11 +2,11 @@
   "resourceType": "CodeSystem",
   "status": "draft",
   "content": "complete",
-  "name": "EABPKVWorkflowTaskCS",
-  "id": "eabpkv-workflow-cs",
-  "title": "EABPKV Workflow CS",
+  "name": "ERGPKVWorkflowTaskCS",
+  "id": "ergpkv-workflow-cs",
+  "title": "ERGPKV Workflow CS",
   "description": "CodeSystem zur Identifitikation von Task-Ressourcen die im Workflow der E-Rechnung erzeugt werden",
-  "url": "https://gematik.de/fhir/eabpkv/CodeSystem/eabpkv-workflow-cs",
+  "url": "https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-workflow-cs",
   "concept": [
     {
       "code": "rechnungsworkflow",

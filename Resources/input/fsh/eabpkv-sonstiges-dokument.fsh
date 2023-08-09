@@ -1,7 +1,7 @@
-Profile: EABPKVSonstigesDokument
-Title: "EABPKV Sonstiges Dokument"
+Profile: ERGPKVSonstigesDokument
+Title: "ERGPKV Sonstiges Dokument"
 Parent: DocumentReference
-Id: eabpkv-sonstiges-dokument
+Id: ergpkv-sonstiges-dokument
 * status MS
 * type 1.. MS
 * type.coding 1.. 
