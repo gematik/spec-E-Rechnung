@@ -1,0 +1,27 @@
+{
+  "resourceType": "OperationDefinition",
+  "id": "ERGPKVOperationSubmit",
+  "url": "https://gematik.de/fhir/ergpkv/OperationDefinition/Submit",
+  "status": "draft",
+  "kind": "operation",
+  "name": "ERechnung_Submit",
+  "code": "erechnung-submit",
+  "resource": [
+    "Invoice"
+  ],
+  "system": false,
+  "type": true,
+  "instance": false,
+  "affectsState": true,
+  "comment": "Test Comment",
+  "parameter": [
+    {
+      "name": "rechnungstoken",
+      "use": "in",
+      "min": 1,
+      "max": "1",
+      "documentation": "Rechnungstoken zur eindeutigen Identifizierung der Rechnung",
+      "type": "Identifier"
+    }
+  ]
+}

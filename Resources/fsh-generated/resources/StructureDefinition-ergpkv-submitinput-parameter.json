@@ -1,0 +1,109 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ergpkv-submitinput-parameter",
+  "url": "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-submitinput-parameter",
+  "name": "ERGPKVRParametersSubmitInput",
+  "title": "DiscardInput",
+  "status": "draft",
+  "description": "Profil zur Validierung der Input-Parameter für $erechnung-submit",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2 Mapping"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "Parameters",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Parameters",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Parameters.parameter",
+        "path": "Parameters.parameter",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "name"
+            }
+          ],
+          "rules": "closed"
+        },
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Parameters.parameter:token",
+        "path": "Parameters.parameter",
+        "sliceName": "token",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Parameters.parameter:token.name",
+        "path": "Parameters.parameter.name",
+        "patternString": "token",
+        "mustSupport": true
+      },
+      {
+        "id": "Parameters.parameter:token.value[x]",
+        "path": "Parameters.parameter.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Parameters.parameter:token.value[x].type",
+        "path": "Parameters.parameter.value[x].type",
+        "min": 1,
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "RI",
+              "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Parameters.parameter:token.value[x].system",
+        "path": "Parameters.parameter.value[x].system",
+        "min": 1,
+        "patternUri": "https://gematik.de/fhir/sid/ergpkv-token",
+        "mustSupport": true
+      },
+      {
+        "id": "Parameters.parameter:token.value[x].value",
+        "path": "Parameters.parameter.value[x].value",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Parameters.parameter:token.resource",
+        "path": "Parameters.parameter.resource",
+        "max": "0"
+      },
+      {
+        "id": "Parameters.parameter:token.part",
+        "path": "Parameters.parameter.part",
+        "max": "0"
+      }
+    ]
+  }
+}
