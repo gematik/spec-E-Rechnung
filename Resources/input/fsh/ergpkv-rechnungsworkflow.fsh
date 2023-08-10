@@ -10,7 +10,7 @@ Id: ergpkv-rechnungsworkflow
 * identifier ^slicing.discriminator.type = #pattern
 * identifier ^slicing.discriminator.path = "type"
 * identifier ^slicing.rules = #open
-* identifier contains token 1..1
+* identifier contains token 1..1 MS
 * identifier[token].type 1.. MS
 * identifier[token].type = http://terminology.hl7.org/CodeSystem/v2-0203#RI
 * identifier[token].system 1.. MS
