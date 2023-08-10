@@ -25,7 +25,7 @@ Description: "Finalisierung der E-Rechnungen zum Abruf an die Empfänger:in"
 Profile: ERGPKVRParametersSubmitInput
 Parent: Parameters
 Id: ergpkv-submitinput-parameter
-Title: "DiscardInput"
+Title: "SubmitInput"
 Description: "Profil zur Validierung der Input-Parameter für $erechnung-submit"
 * parameter 1..1 MS
   * ^slicing.discriminator.type = #value
