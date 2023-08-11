@@ -1,9 +1,9 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "ergpkv-rechnungsworkflow-requestedPerformer",
+  "id": "ergpkv-task-requestedPerformer",
   "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Task.requestedPerformer",
-  "name": "ERGPKVRechnungsworkflowRequestedPerformer",
-  "title": "ERGPKV Rechnungsworkflow RequestedPerformer",
+  "name": "ERGPKVTaskRequestedPerformer",
+  "title": "ERGPKV Task RequestedPerformer",
   "status": "draft",
   "fhirVersion": "4.0.1",
   "mapping": [
@@ -44,7 +44,8 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Patient"
+              "http://hl7.org/fhir/StructureDefinition/Patient",
+              "http://hl7.org/fhir/StructureDefinition/Organization"
             ]
           }
         ],

@@ -1,0 +1,16 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "ERGPKVEinreichungsworkflowBusinessStatusVS",
+  "id": "ergpkv-einreichungsworkflow-businessStatus-vs",
+  "title": "ERGPKV Einreichungsworkflow BusinessStatus VS",
+  "description": "ValueSet für die Abbildung des Buisness-Status der Bearbeitung einer E-Rechnnung eines Kostenträgers innerhalb des Einreichungsworkflows",
+  "url": "https://gematik.de/fhir/ergpkv/ValueSet/ergpkv-einreichungsworkflow-businessStatus-vs",
+  "compose": {
+    "include": [
+      {
+        "system": "https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-einreichungsworkflow-businessStatus-cs"
+      }
+    ]
+  }
+}

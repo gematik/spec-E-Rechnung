@@ -12,7 +12,12 @@
       "code": "rechnungsworkflow",
       "display": "Rechnungsworkflow",
       "definition": "Task-Ressource zum Tracking des Status einer E-Rechnung"
+    },
+    {
+      "code": "einreichungsworkflow",
+      "display": "Einreichungsworkflow",
+      "definition": "Task-Ressource zum Tracking des Status der Einreichung einer E-Rechnung bei einem Kostenträger"
     }
   ],
-  "count": 1
+  "count": 2
 }
