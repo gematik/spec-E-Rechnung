@@ -8,7 +8,7 @@
   },
   "parameter": [
     {
-      "name": "iknr",
+      "name": "kvnr",
       "valueIdentifier": {
         "type": {
           "coding": [

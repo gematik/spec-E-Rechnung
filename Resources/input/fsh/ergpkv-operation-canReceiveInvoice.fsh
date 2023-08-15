@@ -39,11 +39,11 @@ Description: "Profil zur Validierung der Input-Parameter für $erechnung-canRece
   * ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = "name"
   * ^slicing.rules = #closed
-* parameter contains iknr 1..1 MS 
+* parameter contains kvnr 1..1 MS 
     and displayname 1..1 MS
-* parameter[iknr]
+* parameter[kvnr]
   * name MS
-  * name = "iknr"
+  * name = "kvnr"
   * value[x] only Identifier
   * valueIdentifier 1..1 MS
   * valueIdentifier only IdentifierKvid10 or IdentifierPkvVersichertenId10
@@ -60,7 +60,7 @@ Description: "Profil zur Validierung der Input-Parameter für $erechnung-canRece
 Instance: ERGPKVInvokeCanReceiveInvoice
 InstanceOf: ERGPKVRParametersCanReceiveInvoiceInput
 Usage: #example
-* parameter[iknr]
+* parameter[kvnr]
   * valueIdentifier
     * type = http://fhir.de/CodeSystem/identifier-type-de-basis#GKV
     * system = "http://fhir.de/sid/gkv/kvid-10"

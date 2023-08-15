@@ -43,21 +43,21 @@
         "mustSupport": true
       },
       {
-        "id": "Parameters.parameter:iknr",
+        "id": "Parameters.parameter:kvnr",
         "path": "Parameters.parameter",
-        "sliceName": "iknr",
+        "sliceName": "kvnr",
         "min": 1,
         "max": "1",
         "mustSupport": true
       },
       {
-        "id": "Parameters.parameter:iknr.name",
+        "id": "Parameters.parameter:kvnr.name",
         "path": "Parameters.parameter.name",
-        "patternString": "iknr",
+        "patternString": "kvnr",
         "mustSupport": true
       },
       {
-        "id": "Parameters.parameter:iknr.value[x]",
+        "id": "Parameters.parameter:kvnr.value[x]",
         "path": "Parameters.parameter.value[x]",
         "min": 1,
         "type": [
@@ -72,12 +72,12 @@
         "mustSupport": true
       },
       {
-        "id": "Parameters.parameter:iknr.resource",
+        "id": "Parameters.parameter:kvnr.resource",
         "path": "Parameters.parameter.resource",
         "max": "0"
       },
       {
-        "id": "Parameters.parameter:iknr.part",
+        "id": "Parameters.parameter:kvnr.part",
         "path": "Parameters.parameter.part",
         "max": "0"
       },
