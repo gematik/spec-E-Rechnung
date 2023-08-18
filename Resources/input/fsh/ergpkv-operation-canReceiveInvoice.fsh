@@ -87,7 +87,7 @@ Title: "ERGPKV CanReceiveInvoice Response Patient"
 Parent: Patient
 Id: ergpkv-canreceiveinvoiceresponsepatient
 * obeys isik-pat-1
-* ^constraint[1].source = Canonical(ERGPKVCanReceiveInvoiceResponsePatient)
+// ToDo: * ^constraint[0].source = Canonical(ERGPKVCanReceiveInvoiceResponsePatient)
 * id 1..1 MS
 * identifier MS
   * ^slicing.discriminator.type = #pattern
@@ -111,6 +111,7 @@ Id: ergpkv-canreceiveinvoiceresponsepatient
     Postfach 0..* MS
 * address[Postfach] only AddressDeBasis
   * ^patternAddress.type = #postal
+  * extension[Stadtteil] MS
   * type 1.. MS
   * line 1.. MS
     * extension[Strasse] 0..0 

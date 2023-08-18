@@ -241,6 +241,12 @@
         "mustSupport": true
       },
       {
+        "id": "Patient.address:Postfach.extension:Stadtteil",
+        "path": "Patient.address.extension",
+        "sliceName": "Stadtteil",
+        "mustSupport": true
+      },
+      {
         "id": "Patient.address:Postfach.type",
         "path": "Patient.address.type",
         "min": 1,
