@@ -31,6 +31,10 @@
         "id": "ERGPKVRechnungsworkflowCanReceiveInvoiceResponsePatient",
         "name": [
           {
+            "given": [
+              "Erika"
+            ],
+            "family": "Musterfrau",
             "text": "Erika Musterfrau"
           }
         ],

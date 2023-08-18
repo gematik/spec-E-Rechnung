@@ -89,6 +89,8 @@ Instance: ERGPKVRechnungsworkflowCanReceiveInvoiceResponsePatient
 InstanceOf: Patient
 Usage: #example
 * name
+  * given = "Erika"
+  * family = "Musterfrau"
   * text = "Erika Musterfrau"
 * identifier
   * type = http://fhir.de/CodeSystem/identifier-type-de-basis#gkv
