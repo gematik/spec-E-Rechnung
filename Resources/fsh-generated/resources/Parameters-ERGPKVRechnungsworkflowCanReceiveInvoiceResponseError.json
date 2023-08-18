@@ -1,12 +1,12 @@
 {
   "resourceType": "Parameters",
-  "id": "ERGPKVRechnungsworkflowGenerateDraftResponseError",
+  "id": "ERGPKVRechnungsworkflowCanReceiveInvoiceResponseError",
   "parameter": [
     {
       "name": "outcome",
       "resource": {
         "resourceType": "OperationOutcome",
-        "id": "ERGPKVRechnungsworkflowGenerateDraftResponseOutcomeError",
+        "id": "ERGPKVRechnungsworkflowCanReceiveInvoiceResponseOutcomeError",
         "issue": [
           {
             "severity": "information",

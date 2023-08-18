@@ -1,12 +1,12 @@
 {
   "resourceType": "Parameters",
-  "id": "ERGPKVRechnungsworkflowGenerateDraftResponse",
+  "id": "ERGPKVRechnungsworkflowCanReceiveInvoiceResponse",
   "parameter": [
     {
       "name": "outcome",
       "resource": {
         "resourceType": "OperationOutcome",
-        "id": "ERGPKVRechnungsworkflowGenerateDraftResponseOutcome",
+        "id": "ERGPKVRechnungsworkflowCanReceiveInvoiceResponseOutcome",
         "issue": [
           {
             "severity": "information",
@@ -27,7 +27,7 @@
       "name": "patient",
       "resource": {
         "resourceType": "Patient",
-        "id": "ERGPKVRechnungsworkflowGenerateDraftResponsePatient",
+        "id": "ERGPKVRechnungsworkflowCanReceiveInvoiceResponsePatient",
         "name": [
           {
             "text": "Erika Musterfrau"

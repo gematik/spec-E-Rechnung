@@ -66,4 +66,46 @@ Usage: #example
     * system = "http://fhir.de/sid/gkv/kvid-10"
     * value = "G995030567"
 * parameter[displayname]
-  * valueString = "Erika Mustermann"  
+  * valueString = "Erika Mustermann"
+
+ Instance: ERGPKVRechnungsworkflowCanReceiveInvoiceResponse
+InstanceOf: Parameters
+Usage: #example
+* parameter[0].name = "outcome"
+* parameter[=].resource = ERGPKVRechnungsworkflowCanReceiveInvoiceResponseOutcome
+* parameter[+].name = "patient"
+* parameter[=].resource = ERGPKVRechnungsworkflowCanReceiveInvoiceResponsePatient
+
+Instance: ERGPKVRechnungsworkflowCanReceiveInvoiceResponseOutcome
+InstanceOf: OperationOutcome
+Usage: #example
+* issue
+  * severity = #information
+  * code = #informational
+  * details = http://hl7.org/fhir/issue-type#success
+
+Instance: ERGPKVRechnungsworkflowCanReceiveInvoiceResponsePatient
+InstanceOf: Patient
+Usage: #example
+* name
+  * text = "Erika Musterfrau"
+* identifier
+  * type = http://fhir.de/CodeSystem/identifier-type-de-basis#gkv
+  * system = "http://fhir.de/sid/gkv/kvid-10"
+  * value = "<KVNR>"
+* address
+  * text = "Musterweg 2, 3. Etage, 98764 Musterhausen, DE"
+
+Instance: ERGPKVRechnungsworkflowCanReceiveInvoiceResponseError
+InstanceOf: Parameters
+Usage: #example
+* parameter[0].name = "outcome"
+* parameter[=].resource = ERGPKVRechnungsworkflowCanReceiveInvoiceResponseOutcomeError
+
+Instance: ERGPKVRechnungsworkflowCanReceiveInvoiceResponseOutcomeError
+InstanceOf: OperationOutcome
+Usage: #example
+* issue
+  * severity = #information
+  * code = #informational
+  * diagnostics = "Für die Benutzer:in mit der KV-Nummer <KNVR> liegt keine Einwilligung für die Verwendung von E-Rechnungen vor oder ein dazugehöriger Account konnte nicht gefunden werden."   

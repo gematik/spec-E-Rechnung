@@ -1,6 +1,6 @@
 {
   "resourceType": "Patient",
-  "id": "ERGPKVRechnungsworkflowGenerateDraftResponsePatient",
+  "id": "ERGPKVRechnungsworkflowCanReceiveInvoiceResponsePatient",
   "name": [
     {
       "text": "Erika Musterfrau"

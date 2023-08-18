@@ -1,6 +1,6 @@
 {
   "resourceType": "OperationOutcome",
-  "id": "ERGPKVRechnungsworkflowGenerateDraftResponseOutcome",
+  "id": "ERGPKVRechnungsworkflowCanReceiveInvoiceResponseOutcome",
   "issue": [
     {
       "severity": "information",
