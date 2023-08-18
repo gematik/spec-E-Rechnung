@@ -1,0 +1,28 @@
+{
+  "resourceType": "Patient",
+  "id": "ERGPKVRechnungsworkflowGenerateDraftResponsePatient",
+  "name": [
+    {
+      "text": "Erika Musterfrau"
+    }
+  ],
+  "identifier": [
+    {
+      "type": {
+        "coding": [
+          {
+            "code": "gkv",
+            "system": "http://fhir.de/CodeSystem/identifier-type-de-basis"
+          }
+        ]
+      },
+      "system": "http://fhir.de/sid/gkv/kvid-10",
+      "value": "<KVNR>"
+    }
+  ],
+  "address": [
+    {
+      "text": "Musterweg 2, 3. Etage, 98764 Musterhausen, DE"
+    }
+  ]
+}

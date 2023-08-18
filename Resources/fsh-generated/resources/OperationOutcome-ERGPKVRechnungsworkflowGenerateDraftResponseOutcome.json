@@ -1,0 +1,18 @@
+{
+  "resourceType": "OperationOutcome",
+  "id": "ERGPKVRechnungsworkflowGenerateDraftResponseOutcome",
+  "issue": [
+    {
+      "severity": "information",
+      "code": "informational",
+      "details": {
+        "coding": [
+          {
+            "code": "success",
+            "system": "http://hl7.org/fhir/issue-type"
+          }
+        ]
+      }
+    }
+  ]
+}

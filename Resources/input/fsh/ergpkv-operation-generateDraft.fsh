@@ -29,3 +29,31 @@ Usage: #example
   * extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
   * extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unknown
 * requester.identifier.value = "<Telematik-ID>"
+
+Instance: ERGPKVRechnungsworkflowGenerateDraftResponse
+InstanceOf: Parameters
+Usage: #example
+* parameter[0].name = "outcome"
+* parameter[=].resource = ERGPKVRechnungsworkflowGenerateDraftResponseOutcome
+* parameter[+].name = "patient"
+* parameter[=].resource = ERGPKVRechnungsworkflowGenerateDraftResponsePatient
+
+Instance: ERGPKVRechnungsworkflowGenerateDraftResponseOutcome
+InstanceOf: OperationOutcome
+Usage: #example
+* issue
+  * severity = #information
+  * code = #informational
+  * details = http://hl7.org/fhir/issue-type#success
+
+Instance: ERGPKVRechnungsworkflowGenerateDraftResponsePatient
+InstanceOf: Patient
+Usage: #example
+* name
+  * text = "Erika Musterfrau"
+* identifier
+  * type = http://fhir.de/CodeSystem/identifier-type-de-basis#gkv
+  * system = "http://fhir.de/sid/gkv/kvid-10"
+  * value = "<KVNR>"
+* address
+  * text = "Musterweg 2, 3. Etage, 98764 Musterhausen, DE"

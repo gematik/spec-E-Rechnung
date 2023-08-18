@@ -1,0 +1,58 @@
+{
+  "resourceType": "Parameters",
+  "id": "ERGPKVRechnungsworkflowGenerateDraftResponse",
+  "parameter": [
+    {
+      "name": "outcome",
+      "resource": {
+        "resourceType": "OperationOutcome",
+        "id": "ERGPKVRechnungsworkflowGenerateDraftResponseOutcome",
+        "issue": [
+          {
+            "severity": "information",
+            "code": "informational",
+            "details": {
+              "coding": [
+                {
+                  "code": "success",
+                  "system": "http://hl7.org/fhir/issue-type"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "patient",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "ERGPKVRechnungsworkflowGenerateDraftResponsePatient",
+        "name": [
+          {
+            "text": "Erika Musterfrau"
+          }
+        ],
+        "identifier": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "code": "gkv",
+                  "system": "http://fhir.de/CodeSystem/identifier-type-de-basis"
+                }
+              ]
+            },
+            "system": "http://fhir.de/sid/gkv/kvid-10",
+            "value": "<KVNR>"
+          }
+        ],
+        "address": [
+          {
+            "text": "Musterweg 2, 3. Etage, 98764 Musterhausen, DE"
+          }
+        ]
+      }
+    }
+  ]
+}
