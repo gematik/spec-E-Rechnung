@@ -68,7 +68,7 @@ Usage: #example
 * parameter[displayname]
   * valueString = "Erika Mustermann"
 
- Instance: ERGPKVRechnungsworkflowCanReceiveInvoiceResponse
+Instance: ERGPKVRechnungsworkflowCanReceiveInvoiceResponse
 InstanceOf: Parameters
 Usage: #example
 * parameter[0].name = "outcome"

@@ -29,3 +29,12 @@ Usage: #example
   * extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
   * extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unknown
 * requester.identifier.value = "<Telematik-ID>"
+
+Instance: ERGPKVRechnungsworkflowGenerateDraftResponse
+InstanceOf: Parameters
+Usage: #example
+* parameter[0].name = "token"
+* parameter.valueIdentifier
+  * type = http://terminology.hl7.org/CodeSystem/v2-0203#RI
+  * system = "https://gematik.de/fhir/sid/ergpkv-token"
+  * value = "<token>"
