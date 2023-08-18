@@ -21,15 +21,11 @@ Usage: #example
 * extension.url = "http://hl7.org/fhir/5.0/StructureDefinition/extension-Task.requestedPerformer"
 * extension[0].valueIdentifier.type = http://fhir.de/CodeSystem/identifier-type-de-basis#gkv
 * extension[0].valueIdentifier.system = "http://fhir.de/sid/gkv/kvid-10"
-* extension[0].valueIdentifier.value
-  * extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
-  * extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unknown
+* extension[0].valueIdentifier.value = "<KVNR>"
 * identifier[token].value = "<token>"
 * status = http://hl7.org/fhir/task-status#draft
 * businessStatus = https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsworkflow-businessStatus-cs#neu
 * focus
   * extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
   * extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unknown
-* requester.identifier.value
-  * extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
-  * extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unknown
+* requester.identifier.value = "<Telematik-ID>"

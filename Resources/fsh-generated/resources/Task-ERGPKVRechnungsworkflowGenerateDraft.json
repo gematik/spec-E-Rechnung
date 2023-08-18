@@ -32,14 +32,7 @@
   "requester": {
     "identifier": {
       "system": "https://gematik.de/fhir/sid/telematik-id",
-      "_value": {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
-            "valueCode": "unknown"
-          }
-        ]
-      }
+      "value": "<Telematik-ID>"
     }
   },
   "extension": [
@@ -55,14 +48,7 @@
           ]
         },
         "system": "http://fhir.de/sid/gkv/kvid-10",
-        "_value": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
-              "valueCode": "unknown"
-            }
-          ]
-        }
+        "value": "<KVNR>"
       }
     }
   ],
