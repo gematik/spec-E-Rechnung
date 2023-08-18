@@ -15,7 +15,8 @@
               "coding": [
                 {
                   "code": "success",
-                  "system": "http://hl7.org/fhir/issue-type"
+                  "system": "http://hl7.org/fhir/issue-type",
+                  "version": "5.0.0"
                 }
               ]
             }

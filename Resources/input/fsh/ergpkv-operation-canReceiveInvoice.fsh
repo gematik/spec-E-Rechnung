@@ -83,6 +83,7 @@ Usage: #example
   * severity = #information
   * code = #informational
   * details = http://hl7.org/fhir/issue-type#success
+    * coding[0].version = "5.0.0"
 
 Instance: ERGPKVRechnungsworkflowCanReceiveInvoiceResponsePatient
 InstanceOf: Patient
