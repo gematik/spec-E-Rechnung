@@ -57,3 +57,17 @@ Usage: #example
   * value = "<KVNR>"
 * address
   * text = "Musterweg 2, 3. Etage, 98764 Musterhausen, DE"
+
+Instance: ERGPKVRechnungsworkflowGenerateDraftResponseError
+InstanceOf: Parameters
+Usage: #example
+* parameter[0].name = "outcome"
+* parameter[=].resource = ERGPKVRechnungsworkflowGenerateDraftResponseOutcomeError
+
+Instance: ERGPKVRechnungsworkflowGenerateDraftResponseOutcomeError
+InstanceOf: OperationOutcome
+Usage: #example
+* issue
+  * severity = #information
+  * code = #informational
+  * diagnostics = "Für die Benutzer:in mit der KV-Nummer <KNVR> liegt keine Einwilligung für die Verwendung von E-Rechnungen vor oder ein dazugehöriger Account konnte nicht gefunden werden."
