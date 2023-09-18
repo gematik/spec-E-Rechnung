@@ -1,0 +1,184 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ergpkv-submit-inputparameter",
+  "url": "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-submit-inputparameter",
+  "name": "ERGPKVRParametersSubmitInput",
+  "title": "SubmitInput",
+  "status": "draft",
+  "description": "Profil zur Validierung der Input-Parameter für $erechnung-submit",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2 Mapping"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "Parameters",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Parameters",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Parameters.parameter",
+        "path": "Parameters.parameter",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "name"
+            }
+          ],
+          "rules": "closed"
+        },
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Parameters.parameter:returnTokenPdf",
+        "path": "Parameters.parameter",
+        "sliceName": "returnTokenPdf",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Parameters.parameter:returnTokenPdf.name",
+        "path": "Parameters.parameter.name",
+        "patternString": "returnTokenPdf",
+        "mustSupport": true
+      },
+      {
+        "id": "Parameters.parameter:returnTokenPdf.value[x]",
+        "path": "Parameters.parameter.value[x]",
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Parameters.parameter:returnTokenPdf.resource",
+        "path": "Parameters.parameter.resource",
+        "max": "0"
+      },
+      {
+        "id": "Parameters.parameter:returnTokenPdf.part",
+        "path": "Parameters.parameter.part",
+        "max": "0"
+      },
+      {
+        "id": "Parameters.parameter:anhaenge",
+        "path": "Parameters.parameter",
+        "sliceName": "anhaenge",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Parameters.parameter:anhaenge.name",
+        "path": "Parameters.parameter.name",
+        "patternString": "anhaenge",
+        "mustSupport": true
+      },
+      {
+        "id": "Parameters.parameter:anhaenge.value[x]",
+        "path": "Parameters.parameter.value[x]",
+        "max": "0"
+      },
+      {
+        "id": "Parameters.parameter:anhaenge.resource",
+        "path": "Parameters.parameter.resource",
+        "type": [
+          {
+            "code": "DocumentReference",
+            "profile": [
+              "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-sonstiges-dokument"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Parameters.parameter:anhaenge.part",
+        "path": "Parameters.parameter.part",
+        "max": "0"
+      },
+      {
+        "id": "Parameters.parameter:modus",
+        "path": "Parameters.parameter",
+        "sliceName": "modus",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Parameters.parameter:modus.name",
+        "path": "Parameters.parameter.name",
+        "patternString": "modus",
+        "mustSupport": true
+      },
+      {
+        "id": "Parameters.parameter:modus.value[x]",
+        "path": "Parameters.parameter.value[x]",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://gematik.de/fhir/ergpkv/ValueSet/ergpkv-rechnung-submit-modus-vs"
+        }
+      },
+      {
+        "id": "Parameters.parameter:modus.resource",
+        "path": "Parameters.parameter.resource",
+        "max": "0"
+      },
+      {
+        "id": "Parameters.parameter:modus.part",
+        "path": "Parameters.parameter.part",
+        "max": "0"
+      },
+      {
+        "id": "Parameters.parameter:rechnung",
+        "path": "Parameters.parameter",
+        "sliceName": "rechnung",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Parameters.parameter:rechnung.name",
+        "path": "Parameters.parameter.name",
+        "patternString": "modus",
+        "mustSupport": true
+      },
+      {
+        "id": "Parameters.parameter:rechnung.value[x]",
+        "path": "Parameters.parameter.value[x]",
+        "max": "0"
+      },
+      {
+        "id": "Parameters.parameter:rechnung.resource",
+        "path": "Parameters.parameter.resource",
+        "max": "0"
+      },
+      {
+        "id": "Parameters.parameter:rechnung.part",
+        "path": "Parameters.parameter.part",
+        "max": "0"
+      }
+    ]
+  }
+}

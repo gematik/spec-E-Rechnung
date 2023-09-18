@@ -1,0 +1,25 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "draft",
+  "content": "complete",
+  "name": "ERGPKVRechnungSubmitModusCS",
+  "id": "ergpkv-rechnung-submit-modus-cs",
+  "title": "ERGPKV Rechnung Submit Modus CS",
+  "description": "CodeSystem für die Differenzierung von der Verarbeitungsmodi für $erchnung-submit",
+  "url": "https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnung-submit-modus-cs",
+  "concept": [
+    {
+      "code": "test",
+      "display": "Test"
+    },
+    {
+      "code": "normal",
+      "display": "Normal"
+    },
+    {
+      "code": "force",
+      "display": "Force"
+    }
+  ],
+  "count": 3
+}

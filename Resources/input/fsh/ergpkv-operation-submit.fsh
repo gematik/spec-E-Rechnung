@@ -2,53 +2,96 @@ Instance: ERGPKVOperationSubmit
 InstanceOf: OperationDefinition
 Usage: #example
 Title: "erechnung-submit"
-Description: "Finalisierung der E-Rechnungen zum Abruf an die Empfänger:in"
+Description: "Rechnung einreichen durch die Leistungserbringer:in"
 * url = "https://gematik.de/fhir/ergpkv/OperationDefinition/Submit"
 * status = #draft
 * kind = #operation
 * name = "ERechnung_Submit"
 * code = #erechnung-submit
-* resource = #Invoice
+* resource = #Patient
 * system = false
-* type = true
-* instance = false
+* type = false
+* instance = true
 * affectsState = true
-* comment = "Test Comment"
+* inputProfile = Canonical(https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-submit-inputparameter)
 * parameter[+]
-  * name = #rechnungstoken
+  * name = #rechnung
   * use = #in
   * min = 1
   * max = "1"
-  * documentation = "Rechnungstoken zur eindeutigen Identifizierung der Rechnung"
-  * type = #Identifier
+  * documentation = "Vollständige E-Rechnung inkl. Signatur"
+  * type = #Bundle
+* parameter[+]
+  * name = #modus
+  * use = #in
+  * min = 0
+  * max = "1"
+  * documentation = "Verarbeitungshinweis für die E-Rechnung"
+  * type = #code
+* parameter[+]
+  * name = #anhaenge
+  * use = #in
+  * min = 0
+  * max = "1"
+  * documentation = "Weitere Anhänge zur E-Rechnung"
+  * type = #DocumentReference
+* parameter[+]
+  * name = #returnTokenPDF
+  * use = #in
+  * min = 0
+  * max = "1"
+  * documentation = "Indikation ob QR-Code-Token in das signierte PDF eingefügt werden soll"
+  * type = #boolean
 
 Profile: ERGPKVRParametersSubmitInput
 Parent: Parameters
-Id: ergpkv-submitinput-parameter
+Id: ergpkv-submit-inputparameter
 Title: "SubmitInput"
 Description: "Profil zur Validierung der Input-Parameter für $erechnung-submit"
-* parameter 1..1 MS
+* parameter 0.. MS
   * ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = "name"
   * ^slicing.rules = #closed
-* parameter contains token 1..1 MS
-* parameter[token]
+* parameter contains returnTokenPdf 0..1 MS and anhaenge 0..1 MS and modus 0..1 MS and rechnung 1..1 MS
+* parameter[rechnung]
   * name MS
-  * name = "token"
-  * value[x] only Identifier
-  * valueIdentifier 1..1 MS
-    * type 1.. MS
-    * type = http://terminology.hl7.org/CodeSystem/v2-0203#RI
-    * system 1.. MS
-    * system = #https://gematik.de/fhir/sid/ergpkv-token
-    * value 1.. MS
+  * name = "modus"
+  * value[x] 0..0
+  * resource 0..0
+  * part 0..0
+* parameter[modus]
+  * name MS
+  * name = "modus"
+  * value[x] MS
+  * value[x] only code
+  * valueCode from ERGPKVRechnungSubmitModusVS (required)
+  * resource 0..0
+  * part 0..0
+* parameter[anhaenge]
+  * name MS
+  * name = "anhaenge"
+  * value[x] 0..0
+  * resource 0..1 MS
+  * resource only ERGPKVSonstigesDokument
+  * part 0..0
+* parameter[returnTokenPdf]
+  * name MS
+  * name = "returnTokenPdf"
+  * value[x] MS
+  * value[x] only boolean
   * resource 0..0
   * part 0..0
 
-Instance: ERGPKVSubmitInvoice
-InstanceOf: ERGPKVRParametersSubmitInput
-Usage: #example
-* parameter[token]
-  * valueIdentifier
-    * system = "https://gematik.de/fhir/sid/ergpkv-token"
-    * value = "<rechnungstoken>"
+CodeSystem:  ERGPKVRechnungSubmitModusCS
+Id: ergpkv-rechnung-submit-modus-cs
+Title: "ERGPKV Rechnung Submit Modus CS"
+Description:  "CodeSystem für die Differenzierung von der Verarbeitungsmodi für $erchnung-submit"
+* #test "Test"
+* #normal "Normal"
+* #force "Force"
+
+ValueSet:  ERGPKVRechnungSubmitModusVS
+Id: ergpkv-rechnung-submit-modus-vs
+Title: "ERGPKV Rechnung Type VS"
+Description:  "ValueSet für die Differenzierung von der Verarbeitungsmodi für $erchnung-submit"
+* include codes from system https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnung-submit-modus-vs
