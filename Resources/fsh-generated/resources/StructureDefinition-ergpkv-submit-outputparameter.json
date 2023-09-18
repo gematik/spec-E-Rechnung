@@ -152,7 +152,7 @@
           {
             "code": "Identifier",
             "profile": [
-              "https://gematik.de/fhir/ergpkv/StructureDefinition/identifier-erechnung-token"
+              "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-identifier-erechnungstoken"
             ]
           }
         ]

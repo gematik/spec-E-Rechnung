@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "identifier-erechnung-token",
-  "url": "https://gematik.de/fhir/ergpkv/StructureDefinition/identifier-erechnung-token",
+  "id": "ergpkv-identifier-erechnungstoken",
+  "url": "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-identifier-erechnungstoken",
   "name": "IdentifierERechnungToken",
   "title": "ERGPKV Identifier E-Rechnungstoken",
   "status": "draft",

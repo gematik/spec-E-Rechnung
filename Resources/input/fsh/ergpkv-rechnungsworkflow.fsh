@@ -28,21 +28,3 @@ Id: ergpkv-rechnungsworkflow
 * requester 1.. MS
   * identifier 1.. MS 
   * identifier only IdentifierTelematikId
-
-Profile: IdentifierERechnungToken
-Parent: Identifier
-Id: identifier-erechnung-token
-Title: "ERGPKV Identifier E-Rechnungstoken"
-Description: "Identifier-Profil für die Abbildung eines E-Rechnungstokens"
-* type 1..
-* type = http://terminology.hl7.org/CodeSystem/v2-0203#RI
-* system 1..
-* system = "https://gematik.de/fhir/sid/ergpkv-token"
-* value 1..
-
-Extension: ERGPKVRechnungsworkflowSonstigesDokument
-Id: ergpkv-rechnungsworkflow-sonstigesDokument
-Title: "ERGPKV Rechnungsworkflow SonstigesDokument"
-* value[x] only Reference(DocumentReference)
-* valueReference 1.. MS
-  * reference 1.. MS
