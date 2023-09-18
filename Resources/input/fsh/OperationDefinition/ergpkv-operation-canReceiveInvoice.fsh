@@ -68,7 +68,7 @@ Usage: #example
 * parameter[displayname]
   * valueString = "Leon Mustermann"
 
-// ------------- Output Parameter -------------#
+// ------------- Output Parameter -------------
 
 Profile: ERGPKVRParametersCanReceiveInvoiceOutput
 Parent: Parameters

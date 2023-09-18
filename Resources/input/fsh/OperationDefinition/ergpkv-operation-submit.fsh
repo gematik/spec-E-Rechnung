@@ -1,3 +1,5 @@
+// ------------- OperationDefinition -------------
+
 Instance: ERGPKVOperationSubmit
 InstanceOf: OperationDefinition
 Usage: #example
@@ -65,6 +67,8 @@ Description: "Rechnung einreichen durch die Leistungserbringer:in"
   * documentation = "PDF mit eingebetteten Rechnungstoken, in Abhängigkeit vom returnTokenPDF-Parameter"
   * type = #Binary
 
+// ------------- Input Parameter -------------
+
 Profile: ERGPKVRParametersSubmitInput
 Parent: Parameters
 Id: ergpkv-submit-inputparameter
@@ -105,6 +109,29 @@ Description: "Profil zur Validierung der Input-Parameter für $erechnung-submit"
   * resource 0..0
   * part 0..0
 
+Profile: ERGPKVRechungscontainer
+Title: "ERGPKV Rechnungscontainer"
+Parent: Bundle
+Id: ergpkv-rechnungscontainer
+* type = #collection
+* entry 3.. MS
+  * ^slicing.discriminator.type = #type
+  * ^slicing.discriminator.path = "resource"
+  * ^slicing.rules = #closed
+* entry contains invoice 1..1 MS and chargeItem 1.. MS and binary 1.. MS
+* entry[invoice]
+  * resource 1.. MS
+  * resource only Invoice
+* entry[chargeItem]
+  * resource 1.. MS
+  * resource only ChargeItem
+* entry[binary]
+  * resource 1.. MS
+  * resource only Binary
+* signature 1.. MS
+
+// ------------- Output Parameter -------------
+
 Profile: ERGPKVRParametersSubmitOutput
 Parent: Parameters
 Id: ergpkv-submit-outputparameter
@@ -136,6 +163,8 @@ Description: "Profil zur Validierung der Output-Parameter für $erechnung-submit
   * resource 0..1 MS
   * resource only ERGPKVSonstigesDokument
   * part 0..0
+
+// ------------- Terminology -------------
 
 CodeSystem:  ERGPKVRechnungSubmitModusCS
 Id: ergpkv-rechnung-submit-modus-cs
