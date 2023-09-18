@@ -29,7 +29,6 @@
       {
         "id": "Binary.securityContext",
         "path": "Binary.securityContext",
-        "min": 1,
         "mustSupport": true
       },
       {
