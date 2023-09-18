@@ -73,7 +73,7 @@ Usage: #example
 Profile: ERGPKVRParametersCanReceiveInvoiceOutput
 Parent: Parameters
 Id: ergpkv-canreceiveinvoice-outputparameter
-Title: "CanReceiveInvoiceInput"
+Title: "CanReceiveInvoiceOutput"
 Description: "Profil zur Validierung der Output-Parameter für $erechnung-canReceiveInvoice"
 * parameter 2..2 MS
   * ^slicing.discriminator.type = #value

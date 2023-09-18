@@ -3,7 +3,7 @@
   "id": "ergpkv-canreceiveinvoice-outputparameter",
   "url": "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-canreceiveinvoice-outputparameter",
   "name": "ERGPKVRParametersCanReceiveInvoiceOutput",
-  "title": "CanReceiveInvoiceInput",
+  "title": "CanReceiveInvoiceOutput",
   "status": "draft",
   "description": "Profil zur Validierung der Output-Parameter für $erechnung-canReceiveInvoice",
   "fhirVersion": "4.0.1",
