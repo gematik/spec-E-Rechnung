@@ -13,7 +13,6 @@ Description: "Abfrage der Einwilligung der Rechnungsempfänger:in für die Zuste
 * type = true
 * instance = false
 * affectsState = false
-* comment = "Test Comment"
 * inputProfile = Canonical(https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-canreceiveinvoiceinput-parameter)
 * parameter[+]
   * name = #kvnr
@@ -122,7 +121,6 @@ Id: ergpkv-canreceiveinvoiceresponsepatient
   * postalCode 1.. MS
   * country 1.. MS
     * obeys address-cnt-2or3-char
-    * ^constraint[1].source = Canonical(ERGPKVCanReceiveInvoiceResponsePatient)
 * address[Strassenanschrift] only AddressDeBasis
   * extension[Stadtteil] MS
   * ^patternAddress.type = #both
@@ -136,7 +134,6 @@ Id: ergpkv-canreceiveinvoiceresponsepatient
   * postalCode 1.. MS
   * country 1.. MS
     * obeys address-cnt-2or3-char
-    * ^constraint[1].source = Canonical(ERGPKVCanReceiveInvoiceResponsePatient)
 
 Invariant: isik-pat-1
 Description: "Falls die Geschlechtsangabe 'other' gewählt wird, muss die amtliche Differenzierung per Extension angegeben werden"
