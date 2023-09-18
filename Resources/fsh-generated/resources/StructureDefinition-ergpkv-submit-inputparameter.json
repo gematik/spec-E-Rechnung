@@ -3,7 +3,7 @@
   "id": "ergpkv-submit-inputparameter",
   "url": "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-submit-inputparameter",
   "name": "ERGPKVRParametersSubmitInput",
-  "title": "SubmitInput",
+  "title": "E-Rechnung Submit Input-Parameter",
   "status": "draft",
   "description": "Profil zur Validierung der Input-Parameter für $erechnung-submit",
   "fhirVersion": "4.0.1",
@@ -129,6 +129,7 @@
       {
         "id": "Parameters.parameter:modus.value[x]",
         "path": "Parameters.parameter.value[x]",
+        "min": 1,
         "type": [
           {
             "code": "code"
@@ -161,7 +162,7 @@
       {
         "id": "Parameters.parameter:rechnung.name",
         "path": "Parameters.parameter.name",
-        "patternString": "modus",
+        "patternString": "rechnung",
         "mustSupport": true
       },
       {
@@ -172,7 +173,13 @@
       {
         "id": "Parameters.parameter:rechnung.resource",
         "path": "Parameters.parameter.resource",
-        "max": "0"
+        "min": 1,
+        "type": [
+          {
+            "code": "Bundle"
+          }
+        ],
+        "mustSupport": true
       },
       {
         "id": "Parameters.parameter:rechnung.part",

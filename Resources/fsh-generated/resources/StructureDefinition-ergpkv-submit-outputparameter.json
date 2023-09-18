@@ -3,7 +3,7 @@
   "id": "ergpkv-submit-outputparameter",
   "url": "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-submit-outputparameter",
   "name": "ERGPKVRParametersSubmitOutput",
-  "title": "SubmitInput",
+  "title": "ERechnugn Submit Output-Parameter",
   "status": "draft",
   "description": "Profil zur Validierung der Output-Parameter für $erechnung-submit",
   "fhirVersion": "4.0.1",

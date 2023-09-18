@@ -37,7 +37,7 @@ Description: "Abfrage der Einwilligung der Rechnungsempfänger:in für die Zuste
 Profile: ERGPKVRParametersCanReceiveInvoiceInput
 Parent: Parameters
 Id: ergpkv-canreceiveinvoice-inputparameter
-Title: "CanReceiveInvoiceInput"
+Title: "E-Rechnung CanReceiveInvoice Input-Parameter"
 Description: "Profil zur Validierung der Input-Parameter für $erechnung-canReceiveInvoice"
 * parameter 2..2 MS
   * ^slicing.discriminator.type = #value
@@ -73,7 +73,7 @@ Usage: #example
 Profile: ERGPKVRParametersCanReceiveInvoiceOutput
 Parent: Parameters
 Id: ergpkv-canreceiveinvoice-outputparameter
-Title: "CanReceiveInvoiceOutput"
+Title: "E-Rechnung CanReceiveInvoice Output-Parameter"
 Description: "Profil zur Validierung der Output-Parameter für $erechnung-canReceiveInvoice"
 * parameter 2..2 MS
   * ^slicing.discriminator.type = #value

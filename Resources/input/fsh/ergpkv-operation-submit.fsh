@@ -68,7 +68,7 @@ Description: "Rechnung einreichen durch die Leistungserbringer:in"
 Profile: ERGPKVRParametersSubmitInput
 Parent: Parameters
 Id: ergpkv-submit-inputparameter
-Title: "SubmitInput"
+Title: "E-Rechnung Submit Input-Parameter"
 Description: "Profil zur Validierung der Input-Parameter für $erechnung-submit"
 * parameter 0.. MS
   * ^slicing.discriminator.type = #value
@@ -77,14 +77,15 @@ Description: "Profil zur Validierung der Input-Parameter für $erechnung-submit"
 * parameter contains returnTokenPdf 0..1 MS and anhaenge 0..1 MS and modus 0..1 MS and rechnung 1..1 MS
 * parameter[rechnung]
   * name MS
-  * name = "modus"
+  * name = "rechnung"
   * value[x] 0..0
-  * resource 0..0
+  * resource 1.. MS
+  * resource only Bundle // ToDo: Profil erstellen um zu überprüfen, dass das Bundle self-contained ist (bis auf Reference auf Patient)
   * part 0..0
 * parameter[modus]
   * name MS
   * name = "modus"
-  * value[x] MS
+  * value[x] 1.. MS
   * value[x] only code
   * valueCode from ERGPKVRechnungSubmitModusVS (required)
   * resource 0..0
@@ -107,7 +108,7 @@ Description: "Profil zur Validierung der Input-Parameter für $erechnung-submit"
 Profile: ERGPKVRParametersSubmitOutput
 Parent: Parameters
 Id: ergpkv-submit-outputparameter
-Title: "SubmitInput"
+Title: "ERechnugn Submit Output-Parameter"
 Description: "Profil zur Validierung der Output-Parameter für $erechnung-submit"
 * parameter 0.. MS
   * ^slicing.discriminator.type = #value
