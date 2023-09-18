@@ -32,17 +32,9 @@
         "mustSupport": true
       },
       {
-        "id": "Binary.securityContext.identifier",
-        "path": "Binary.securityContext.identifier",
+        "id": "Binary.securityContext.reference",
+        "path": "Binary.securityContext.reference",
         "min": 1,
-        "type": [
-          {
-            "code": "Identifier",
-            "profile": [
-              "http://fhir.de/StructureDefinition/identifier-kvid-10"
-            ]
-          }
-        ],
         "mustSupport": true
       },
       {

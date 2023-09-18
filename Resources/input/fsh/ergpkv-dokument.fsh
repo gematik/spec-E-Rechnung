@@ -6,5 +6,4 @@ Id: ergpkv-dokument
 * contentType = #application/pdf
 * data 1..1 MS
 * securityContext 0.. MS
-  * identifier 1.. MS
-  * identifier only IdentifierKvid10
+  * reference 1.. MS
