@@ -1,6 +1,6 @@
 {
   "resourceType": "Patient",
-  "id": "ERGPKVRechnungsworkflowCanReceiveInvoiceResponsePatient",
+  "id": "ERGPKVRechnungsworkflowCanReceiveInvoiceResponseRgEmpfaenger",
   "meta": {
     "profile": [
       "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-canreceiveinvoiceresponsepatient"
@@ -8,10 +8,10 @@
   },
   "name": [
     {
-      "text": "Leon Musterfrau"
+      "text": "Erika Musterfrau"
     }
   ],
-  "gender": "male",
+  "gender": "female",
   "identifier": [
     {
       "type": {

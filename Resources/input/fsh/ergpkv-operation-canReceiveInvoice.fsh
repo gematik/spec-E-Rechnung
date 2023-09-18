@@ -1,3 +1,5 @@
+// ------------- OperationDefinition -------------
+
 Instance: ERGPKVOperationCanReceiveInvoice
 InstanceOf: OperationDefinition
 Usage: #example
@@ -29,6 +31,8 @@ Description: "Abfrage der Einwilligung der Rechnungsempfänger:in für die Zuste
   * documentation = "Vollständiger Displayname der Rechnungsempfänger:in. Zur Plausibilitätsprüfung."
   * type = #string
 
+// ------------- Input Parameter -------------
+
 Profile: ERGPKVRParametersCanReceiveInvoiceInput
 Parent: Parameters
 Id: ergpkv-canreceiveinvoice-inputparameter
@@ -59,17 +63,65 @@ Instance: ERGPKVInvokeCanReceiveInvoice
 InstanceOf: ERGPKVRParametersCanReceiveInvoiceInput
 Usage: #example
 * parameter[kvnr]
-  * valueString = "G995030567"
+  * valueString = "<KVNR>"
 * parameter[displayname]
-  * valueString = "Erika Mustermann"
+  * valueString = "Leon Mustermann"
+
+// ------------- Output Parameter -------------#
+
+Profile: ERGPKVRParametersCanReceiveInvoiceOutput
+Parent: Parameters
+Id: ergpkv-canreceiveinvoice-outputparameter
+Title: "CanReceiveInvoiceInput"
+Description: "Profil zur Validierung der Output-Parameter für $erechnung-canReceiveInvoice"
+* parameter 2..2 MS
+  * ^slicing.discriminator.type = #value
+  * ^slicing.discriminator.path = "name"
+  * ^slicing.rules = #closed
+* parameter contains rechnungsempfaenger 1..1 MS 
+    and patient 1..1 MS
+* parameter[rechnungsempfaenger]
+  * name MS
+  * name = "rechnungsempfaenger"
+  * value[x] 0..0
+  * resource 1..1 MS 
+  * resource only ERGPKVCanReceiveInvoiceResponsePatient
+  * part 0..0
+* parameter[patient]
+  * name MS
+  * name = "patient"
+  * value[x] 0..0
+  * resource 1..1 MS 
+  * resource only ERGPKVCanReceiveInvoiceResponsePatient
+  * part 0..0
+
+Instance: ERGPKVCanReceiveInvoiceResponse
+InstanceOf: ERGPKVRParametersCanReceiveInvoiceOutput
+Usage: #example
+* parameter[rechnungsempfaenger]
+  * resource = ERGPKVRechnungsworkflowCanReceiveInvoiceResponseRgEmpfaenger
+* parameter[patient]
+  * resource = ERGPKVRechnungsworkflowCanReceiveInvoiceResponsePatient
 
 Instance: ERGPKVRechnungsworkflowCanReceiveInvoiceResponsePatient
-InstanceOf: Patient
+InstanceOf: ERGPKVCanReceiveInvoiceResponsePatient
 Usage: #example
 * name
-  * given = "Erika"
-  * family = "Musterfrau"
+  * text = "Leon Musterfrau"
+* gender = #male
+* identifier
+  * type = http://fhir.de/CodeSystem/identifier-type-de-basis#gkv
+  * system = "http://fhir.de/sid/gkv/kvid-10"
+  * value = "<KVNR>"
+* address
+  * text = "Musterweg 2, 3. Etage, 98764 Musterhausen, DE"
+
+Instance: ERGPKVRechnungsworkflowCanReceiveInvoiceResponseRgEmpfaenger
+InstanceOf: ERGPKVCanReceiveInvoiceResponsePatient
+Usage: #example
+* name
   * text = "Erika Musterfrau"
+* gender = #female
 * identifier
   * type = http://fhir.de/CodeSystem/identifier-type-de-basis#gkv
   * system = "http://fhir.de/sid/gkv/kvid-10"
@@ -97,6 +149,7 @@ Id: ergpkv-canreceiveinvoiceresponsepatient
 * name.text 1.. MS
 * address.text 1.. MS
 
+// ------------- Output Parameter (Error) -------------
 
 Instance: ERGPKVRechnungsworkflowCanReceiveInvoiceResponseError
 InstanceOf: Parameters

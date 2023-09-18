@@ -9,11 +9,11 @@
   "parameter": [
     {
       "name": "kvnr",
-      "valueString": "G995030567"
+      "valueString": "<KVNR>"
     },
     {
       "name": "displayname",
-      "valueString": "Erika Mustermann"
+      "valueString": "Leon Mustermann"
     }
   ]
 }
