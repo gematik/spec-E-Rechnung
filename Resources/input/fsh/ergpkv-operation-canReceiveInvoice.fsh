@@ -77,6 +77,27 @@ Usage: #example
 * address
   * text = "Musterweg 2, 3. Etage, 98764 Musterhausen, DE"
 
+Profile: ERGPKVCanReceiveInvoiceResponsePatient
+Title: "ERGPKV CanReceiveInvoice Response Patient"
+Parent: Patient
+Id: ergpkv-canreceiveinvoiceresponsepatient
+* id 1..1 MS
+* gender 1.. MS
+* identifier MS
+  * ^slicing.discriminator.type = #pattern
+  * ^slicing.discriminator.path = "$this"
+  * ^slicing.rules = #open
+* identifier contains
+    VersichertenId-GKV 0..1 MS
+* identifier[VersichertenId-GKV] only IdentifierKvid10
+  * ^patternIdentifier.type = http://fhir.de/CodeSystem/identifier-type-de-basis#GKV
+  * type 1.. MS
+  * system MS
+  * value MS
+* name.text 1.. MS
+* address.text 1.. MS
+
+
 Instance: ERGPKVRechnungsworkflowCanReceiveInvoiceResponseError
 InstanceOf: Parameters
 Usage: #example
