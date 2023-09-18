@@ -9,10 +9,6 @@
   "url": "https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsworkflow-businessStatus-cs",
   "concept": [
     {
-      "code": "entwurf",
-      "display": "Entwurf"
-    },
-    {
       "code": "neu",
       "display": "Neu"
     },
@@ -29,5 +25,5 @@
       "display": "Erledigt"
     }
   ],
-  "count": 5
+  "count": 4
 }
