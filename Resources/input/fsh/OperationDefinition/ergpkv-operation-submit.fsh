@@ -109,6 +109,7 @@ Description: "Profil zur Validierung der Input-Parameter für $erechnung-submit"
   * resource 0..0
   * part 0..0
 
+// ToDo: IG sollte beschreiben, dass das Profil keinen Constraint enthält zur Validierung ob was Bundle vollständig ist. Dies muss aufgrund der teilweise vorhandenen logischen Referenzen per Businesslogik im Fachdienst implementiert werden.
 Profile: ERGPKVRechungscontainer
 Title: "ERGPKV Rechnungscontainer"
 Parent: Bundle
