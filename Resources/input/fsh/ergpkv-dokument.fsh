@@ -7,4 +7,4 @@ Id: ergpkv-dokument
 * data 1..1 MS
 * securityContext 0.. MS
   * identifier 1.. MS
-  * identifier only IdentifierKvid10 or IdentifierPkvVersichertenId10
+  * identifier only IdentifierKvid10
