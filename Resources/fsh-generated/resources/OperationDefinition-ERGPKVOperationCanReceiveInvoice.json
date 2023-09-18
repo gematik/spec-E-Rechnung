@@ -13,7 +13,6 @@
   "type": true,
   "instance": false,
   "affectsState": false,
-  "comment": "Test Comment",
   "inputProfile": "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-canreceiveinvoiceinput-parameter",
   "parameter": [
     {
