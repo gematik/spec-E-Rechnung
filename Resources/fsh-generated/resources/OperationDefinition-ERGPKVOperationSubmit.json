@@ -46,6 +46,30 @@
       "max": "1",
       "documentation": "Indikation ob QR-Code-Token in das signierte PDF eingefügt werden soll",
       "type": "boolean"
+    },
+    {
+      "name": "token",
+      "use": "out",
+      "min": 1,
+      "max": "1",
+      "documentation": "Token zur eineindeutigen Identifizierung der E-Rechnung (unabhängig von returnTokenPDF)",
+      "type": "Identifier"
+    },
+    {
+      "name": "warnungen",
+      "use": "out",
+      "min": 0,
+      "max": "1",
+      "documentation": "Warnhinweise zur Validierung der E-Rechnung. Werden nur im Modus \"Test\" und \"Force\" ausgegeben.",
+      "type": "OperationOutcome"
+    },
+    {
+      "name": "warnungen",
+      "use": "out",
+      "min": 0,
+      "max": "1",
+      "documentation": "PDF mit eingebetteten Rechnungstoken, in Abhängigkeit vom returnTokenPDF-Parameter",
+      "type": "Binary"
     }
   ]
 }

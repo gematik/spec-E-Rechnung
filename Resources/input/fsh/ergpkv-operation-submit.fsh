@@ -42,6 +42,27 @@ Description: "Rechnung einreichen durch die Leistungserbringer:in"
   * max = "1"
   * documentation = "Indikation ob QR-Code-Token in das signierte PDF eingefügt werden soll"
   * type = #boolean
+* parameter[+]
+  * name = #token
+  * use = #out
+  * min = 1
+  * max = "1"
+  * documentation = "Token zur eineindeutigen Identifizierung der E-Rechnung (unabhängig von returnTokenPDF)"
+  * type = #Identifier
+* parameter[+]
+  * name = #warnungen
+  * use = #out
+  * min = 0
+  * max = "1"
+  * documentation = "Warnhinweise zur Validierung der E-Rechnung. Werden nur im Modus \"Test\" und \"Force\" ausgegeben."
+  * type = #OperationOutcome
+* parameter[+]
+  * name = #warnungen
+  * use = #out
+  * min = 0
+  * max = "1"
+  * documentation = "PDF mit eingebetteten Rechnungstoken, in Abhängigkeit vom returnTokenPDF-Parameter"
+  * type = #Binary
 
 Profile: ERGPKVRParametersSubmitInput
 Parent: Parameters
@@ -86,9 +107,9 @@ CodeSystem:  ERGPKVRechnungSubmitModusCS
 Id: ergpkv-rechnung-submit-modus-cs
 Title: "ERGPKV Rechnung Submit Modus CS"
 Description:  "CodeSystem für die Differenzierung von der Verarbeitungsmodi für $erchnung-submit"
-* #test "Test"
-* #normal "Normal"
-* #force "Force"
+* #test "Test" "E-Rechnung wird als Test eingereicht. Der Fachdienst validiert nur die E-Rechnung und speichert diese nicht."
+* #normal "Normal" "E-Rechnung wird durch den Fachdienst gespeichert falls keine semantischen Validierungsfehler vorhanden sind."
+* #force "Force" "E-Rechnung wird durch den Fachdienst gespeichert auch falls nicht-kritische semantische Validierungsfehler vorhaden sind."
 
 ValueSet:  ERGPKVRechnungSubmitModusVS
 Id: ergpkv-rechnung-submit-modus-vs

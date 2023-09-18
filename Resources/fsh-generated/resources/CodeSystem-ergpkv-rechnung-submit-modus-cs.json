@@ -10,15 +10,18 @@
   "concept": [
     {
       "code": "test",
-      "display": "Test"
+      "display": "Test",
+      "definition": "E-Rechnung wird als Test eingereicht. Der Fachdienst validiert nur die E-Rechnung und speichert diese nicht."
     },
     {
       "code": "normal",
-      "display": "Normal"
+      "display": "Normal",
+      "definition": "E-Rechnung wird durch den Fachdienst gespeichert falls keine semantischen Validierungsfehler vorhanden sind."
     },
     {
       "code": "force",
-      "display": "Force"
+      "display": "Force",
+      "definition": "E-Rechnung wird durch den Fachdienst gespeichert auch falls nicht-kritische semantische Validierungsfehler vorhaden sind."
     }
   ],
   "count": 3
