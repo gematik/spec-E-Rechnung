@@ -14,6 +14,7 @@
   "instance": false,
   "affectsState": false,
   "inputProfile": "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-canreceiveinvoice-inputparameter",
+  "outputProfile": "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-canreceiveinvoice-outputparameter",
   "parameter": [
     {
       "name": "kvnr",

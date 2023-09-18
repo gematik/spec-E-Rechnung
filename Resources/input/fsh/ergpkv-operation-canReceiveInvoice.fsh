@@ -16,6 +16,7 @@ Description: "Abfrage der Einwilligung der Rechnungsempfänger:in für die Zuste
 * instance = false
 * affectsState = false
 * inputProfile = Canonical(https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-canreceiveinvoice-inputparameter)
+* outputProfile = Canonical(https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-canreceiveinvoice-outputparameter)
 * parameter[+]
   * name = #kvnr
   * use = #in

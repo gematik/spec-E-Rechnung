@@ -14,6 +14,7 @@ Description: "Rechnung einreichen durch die Leistungserbringer:in"
 * instance = true
 * affectsState = true
 * inputProfile = Canonical(https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-submit-inputparameter)
+* outputProfile = Canonical(https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-submit-outputparameter)
 * parameter[+]
   * name = #rechnung
   * use = #in

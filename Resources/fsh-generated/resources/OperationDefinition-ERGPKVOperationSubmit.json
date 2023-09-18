@@ -14,6 +14,7 @@
   "instance": true,
   "affectsState": true,
   "inputProfile": "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-submit-inputparameter",
+  "outputProfile": "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-submit-outputparameter",
   "parameter": [
     {
       "name": "rechnung",
