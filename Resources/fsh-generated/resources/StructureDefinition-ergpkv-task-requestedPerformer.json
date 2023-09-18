@@ -51,6 +51,11 @@
         "mustSupport": true
       },
       {
+        "id": "Extension.value[x].reference",
+        "path": "Extension.value[x].reference",
+        "mustSupport": true
+      },
+      {
         "id": "Extension.value[x].identifier",
         "path": "Extension.value[x].identifier",
         "min": 1,
