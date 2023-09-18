@@ -32,7 +32,7 @@ Id: ergpkv-rechnungsworkflow
 Profile: IdentifierERechnungToken
 Parent: Identifier
 Id: identifier-erechnung-token
-Title: "Identifier E-Rechnungstoken"
+Title: "ERGPKV Identifier E-Rechnungstoken"
 Description: "Identifier-Profil für die Abbildung eines E-Rechnungstokens"
 * type 1..
 * type = http://terminology.hl7.org/CodeSystem/v2-0203#RI

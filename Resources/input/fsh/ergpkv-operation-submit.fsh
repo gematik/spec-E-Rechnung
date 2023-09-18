@@ -1,7 +1,7 @@
 Instance: ERGPKVOperationSubmit
 InstanceOf: OperationDefinition
 Usage: #example
-Title: "erechnung-submit"
+Title: "ERGPKV Operationerechnung-submit"
 Description: "Rechnung einreichen durch die Leistungserbringer:in"
 * url = "https://gematik.de/fhir/ergpkv/OperationDefinition/Submit"
 * status = #draft

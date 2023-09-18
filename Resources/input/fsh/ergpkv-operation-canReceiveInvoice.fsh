@@ -3,7 +3,7 @@
 Instance: ERGPKVOperationCanReceiveInvoice
 InstanceOf: OperationDefinition
 Usage: #example
-Title: "ERechnung-canReceiveInvoice"
+Title: "ERGPKV Operation erechnung-canReceiveInvoice"
 Description: "Abfrage der Einwilligung der Rechnungsempfänger:in für die Zustellung einer E-Rechnung"
 * url = "https://gematik.de/fhir/ergpkv/OperationDefinition/CanReceiveInvoice"
 * status = #draft
@@ -37,7 +37,7 @@ Description: "Abfrage der Einwilligung der Rechnungsempfänger:in für die Zuste
 Profile: ERGPKVRParametersCanReceiveInvoiceInput
 Parent: Parameters
 Id: ergpkv-canreceiveinvoice-inputparameter
-Title: "E-Rechnung CanReceiveInvoice Input-Parameter"
+Title: "ERGPKV CanReceiveInvoice Input-Parameter"
 Description: "Profil zur Validierung der Input-Parameter für $erechnung-canReceiveInvoice"
 * parameter 2..2 MS
   * ^slicing.discriminator.type = #value
@@ -73,7 +73,7 @@ Usage: #example
 Profile: ERGPKVRParametersCanReceiveInvoiceOutput
 Parent: Parameters
 Id: ergpkv-canreceiveinvoice-outputparameter
-Title: "E-Rechnung CanReceiveInvoice Output-Parameter"
+Title: "ERGPKV CanReceiveInvoice Output-Parameter"
 Description: "Profil zur Validierung der Output-Parameter für $erechnung-canReceiveInvoice"
 * parameter 2..2 MS
   * ^slicing.discriminator.type = #value

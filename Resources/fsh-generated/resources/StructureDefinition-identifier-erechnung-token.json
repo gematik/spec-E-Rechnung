@@ -3,7 +3,7 @@
   "id": "identifier-erechnung-token",
   "url": "https://gematik.de/fhir/ergpkv/StructureDefinition/identifier-erechnung-token",
   "name": "IdentifierERechnungToken",
-  "title": "Identifier E-Rechnungstoken",
+  "title": "ERGPKV Identifier E-Rechnungstoken",
   "status": "draft",
   "description": "Identifier-Profil für die Abbildung eines E-Rechnungstokens",
   "fhirVersion": "4.0.1",
