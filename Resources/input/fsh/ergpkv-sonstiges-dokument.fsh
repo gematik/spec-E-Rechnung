@@ -3,6 +3,7 @@ Title: "ERGPKV Sonstiges Dokument"
 Parent: DocumentReference
 Id: ergpkv-sonstiges-dokument
 * status MS
+* status = #current
 * type 1.. MS
 * type.coding 1.. 
   * ^slicing.discriminator.type = #pattern

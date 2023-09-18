@@ -53,6 +53,7 @@
       {
         "id": "DocumentReference.status",
         "path": "DocumentReference.status",
+        "patternCode": "current",
         "mustSupport": true
       },
       {
