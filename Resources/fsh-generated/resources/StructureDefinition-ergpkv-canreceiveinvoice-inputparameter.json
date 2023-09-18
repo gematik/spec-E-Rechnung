@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "ergpkv-canreceiveinvoiceinput-parameter",
-  "url": "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-canreceiveinvoiceinput-parameter",
+  "id": "ergpkv-canreceiveinvoice-inputparameter",
+  "url": "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-canreceiveinvoice-inputparameter",
   "name": "ERGPKVRParametersCanReceiveInvoiceInput",
   "title": "CanReceiveInvoiceInput",
   "status": "draft",
@@ -62,11 +62,7 @@
         "min": 1,
         "type": [
           {
-            "code": "Identifier",
-            "profile": [
-              "http://fhir.de/StructureDefinition/identifier-kvid-10",
-              "http://fhir.de/StructureDefinition/identifier-pkv-kvid-10"
-            ]
+            "code": "string"
           }
         ],
         "mustSupport": true

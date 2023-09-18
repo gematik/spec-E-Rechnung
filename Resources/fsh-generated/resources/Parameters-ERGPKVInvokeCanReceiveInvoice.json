@@ -3,24 +3,13 @@
   "id": "ERGPKVInvokeCanReceiveInvoice",
   "meta": {
     "profile": [
-      "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-canreceiveinvoiceinput-parameter"
+      "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-canreceiveinvoice-inputparameter"
     ]
   },
   "parameter": [
     {
       "name": "kvnr",
-      "valueIdentifier": {
-        "type": {
-          "coding": [
-            {
-              "code": "GKV",
-              "system": "http://fhir.de/CodeSystem/identifier-type-de-basis"
-            }
-          ]
-        },
-        "system": "http://fhir.de/sid/gkv/kvid-10",
-        "value": "G995030567"
-      }
+      "valueString": "G995030567"
     },
     {
       "name": "displayname",
