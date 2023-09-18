@@ -57,7 +57,7 @@ Description: "Rechnung einreichen durch die Leistungserbringer:in"
   * documentation = "Warnhinweise zur Validierung der E-Rechnung. Werden nur im Modus \"Test\" und \"Force\" ausgegeben."
   * type = #OperationOutcome
 * parameter[+]
-  * name = #warnungen
+  * name = #tokenPdf
   * use = #out
   * min = 0
   * max = "1"
@@ -101,6 +101,38 @@ Description: "Profil zur Validierung der Input-Parameter für $erechnung-submit"
   * value[x] MS
   * value[x] only boolean
   * resource 0..0
+  * part 0..0
+
+Profile: ERGPKVRParametersSubmitOutput
+Parent: Parameters
+Id: ergpkv-submit-outputparameter
+Title: "SubmitInput"
+Description: "Profil zur Validierung der Output-Parameter für $erechnung-submit"
+* parameter 0.. MS
+  * ^slicing.discriminator.type = #value
+  * ^slicing.discriminator.path = "name"
+  * ^slicing.rules = #closed
+* parameter contains tokenPdf 0..1 MS and warnungen 0..1 MS and token 1..1 MS
+* parameter[token]
+  * name MS
+  * name = "token"
+  * value[x] 1..1 MS
+  * valueIdentifier only IdentifierERechnungToken
+  * resource 0..0
+  * part 0..0
+* parameter[warnungen]
+  * name MS
+  * name = "warnungen"
+  * value[x] 0..0
+  * resource 0..1 MS 
+  * resource only OperationOutcome // ToDo: Dokumentation im IG wie diese OperationOutcome aufgebaut ist, da kein seperates Profil existiert
+  * part 0..0
+* parameter[tokenPdf]
+  * name MS
+  * name = "modus"
+  * value[x] 0..0
+  * resource 0..1 MS
+  * resource only ERGPKVSonstigesDokument
   * part 0..0
 
 CodeSystem:  ERGPKVRechnungSubmitModusCS

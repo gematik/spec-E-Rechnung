@@ -64,7 +64,7 @@
       "type": "OperationOutcome"
     },
     {
-      "name": "warnungen",
+      "name": "tokenPdf",
       "use": "out",
       "min": 0,
       "max": "1",

@@ -1,0 +1,172 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ergpkv-submit-outputparameter",
+  "url": "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-submit-outputparameter",
+  "name": "ERGPKVRParametersSubmitOutput",
+  "title": "SubmitInput",
+  "status": "draft",
+  "description": "Profil zur Validierung der Output-Parameter für $erechnung-submit",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2 Mapping"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "Parameters",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Parameters",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Parameters.parameter",
+        "path": "Parameters.parameter",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "name"
+            }
+          ],
+          "rules": "closed"
+        },
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Parameters.parameter:tokenPdf",
+        "path": "Parameters.parameter",
+        "sliceName": "tokenPdf",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Parameters.parameter:tokenPdf.name",
+        "path": "Parameters.parameter.name",
+        "patternString": "modus",
+        "mustSupport": true
+      },
+      {
+        "id": "Parameters.parameter:tokenPdf.value[x]",
+        "path": "Parameters.parameter.value[x]",
+        "max": "0"
+      },
+      {
+        "id": "Parameters.parameter:tokenPdf.resource",
+        "path": "Parameters.parameter.resource",
+        "type": [
+          {
+            "code": "DocumentReference",
+            "profile": [
+              "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-sonstiges-dokument"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Parameters.parameter:tokenPdf.part",
+        "path": "Parameters.parameter.part",
+        "max": "0"
+      },
+      {
+        "id": "Parameters.parameter:warnungen",
+        "path": "Parameters.parameter",
+        "sliceName": "warnungen",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Parameters.parameter:warnungen.name",
+        "path": "Parameters.parameter.name",
+        "patternString": "warnungen",
+        "mustSupport": true
+      },
+      {
+        "id": "Parameters.parameter:warnungen.value[x]",
+        "path": "Parameters.parameter.value[x]",
+        "max": "0"
+      },
+      {
+        "id": "Parameters.parameter:warnungen.resource",
+        "path": "Parameters.parameter.resource",
+        "type": [
+          {
+            "code": "OperationOutcome"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Parameters.parameter:warnungen.part",
+        "path": "Parameters.parameter.part",
+        "max": "0"
+      },
+      {
+        "id": "Parameters.parameter:token",
+        "path": "Parameters.parameter",
+        "sliceName": "token",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Parameters.parameter:token.name",
+        "path": "Parameters.parameter.name",
+        "patternString": "token",
+        "mustSupport": true
+      },
+      {
+        "id": "Parameters.parameter:token.value[x]",
+        "path": "Parameters.parameter.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Parameters.parameter:token.value[x]:valueIdentifier",
+        "path": "Parameters.parameter.value[x]",
+        "sliceName": "valueIdentifier",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Identifier",
+            "profile": [
+              "https://gematik.de/fhir/ergpkv/StructureDefinition/identifier-erechnung-token"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Parameters.parameter:token.resource",
+        "path": "Parameters.parameter.resource",
+        "max": "0"
+      },
+      {
+        "id": "Parameters.parameter:token.part",
+        "path": "Parameters.parameter.part",
+        "max": "0"
+      }
+    ]
+  }
+}

@@ -129,6 +129,7 @@ Usage: #example
 * address
   * text = "Musterweg 2, 3. Etage, 98764 Musterhausen, DE"
 
+// ToDo: .text für .name und. .address ausreichend?
 Profile: ERGPKVCanReceiveInvoiceResponsePatient
 Title: "ERGPKV CanReceiveInvoice Response Patient"
 Parent: Patient
