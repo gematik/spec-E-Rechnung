@@ -68,7 +68,7 @@ Description: "Rechnung einreichen durch die Leistungserbringer:in"
 Profile: ERGPKVRParametersSubmitInput
 Parent: Parameters
 Id: ergpkv-submit-inputparameter
-Title: "E-Rechnung Submit Input-Parameter"
+Title: "ERGPKV Submit Input-Parameter"
 Description: "Profil zur Validierung der Input-Parameter für $erechnung-submit"
 * parameter 0.. MS
   * ^slicing.discriminator.type = #value
@@ -108,7 +108,7 @@ Description: "Profil zur Validierung der Input-Parameter für $erechnung-submit"
 Profile: ERGPKVRParametersSubmitOutput
 Parent: Parameters
 Id: ergpkv-submit-outputparameter
-Title: "ERechnugn Submit Output-Parameter"
+Title: "ERGPKV Submit Output-Parameter"
 Description: "Profil zur Validierung der Output-Parameter für $erechnung-submit"
 * parameter 0.. MS
   * ^slicing.discriminator.type = #value

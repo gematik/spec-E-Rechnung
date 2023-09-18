@@ -3,7 +3,7 @@
   "id": "ergpkv-submit-inputparameter",
   "url": "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-submit-inputparameter",
   "name": "ERGPKVRParametersSubmitInput",
-  "title": "E-Rechnung Submit Input-Parameter",
+  "title": "ERGPKV Submit Input-Parameter",
   "status": "draft",
   "description": "Profil zur Validierung der Input-Parameter für $erechnung-submit",
   "fhirVersion": "4.0.1",
