@@ -1,7 +1,7 @@
-Profile: ERGPKVDokument
-Title: "ERGPKV Dokument"
+Profile: ERGPKVRechnungsdokument
+Title: "ERGPKV Rechnungsdokument"
 Parent: Binary
-Id: ergpkv-dokument
+Id: ergpkv-rechnungsdokument
 * contentType MS
 * contentType = #application/pdf
   * ^comment = "Zum Zeitpunkt der Veröffentlichung werden nur PDF-Dokumente als Anhang seitens der Leistungserbringer:in und der Patient:in unterstüzt."

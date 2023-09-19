@@ -1,9 +1,9 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "ergpkv-dokument",
-  "url": "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-dokument",
-  "name": "ERGPKVDokument",
-  "title": "ERGPKV Dokument",
+  "id": "ergpkv-rechnungsdokument",
+  "url": "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-rechnungsdokument",
+  "name": "ERGPKVRechnungsdokument",
+  "title": "ERGPKV Rechnungsdokument",
   "status": "draft",
   "fhirVersion": "4.0.1",
   "mapping": [
