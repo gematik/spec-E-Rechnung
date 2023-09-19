@@ -15,7 +15,19 @@
     {
       "code": "originalRechnung",
       "display": "Originale Rechnung"
+    },
+    {
+      "code": "rechnung",
+      "display": "Rechnung"
+    },
+    {
+      "code": "rechnungsposition",
+      "display": "Rechnungsposition"
+    },
+    {
+      "code": "rechnungsdokument",
+      "display": "Rechnungsdokument"
     }
   ],
-  "count": 2
+  "count": 5
 }
