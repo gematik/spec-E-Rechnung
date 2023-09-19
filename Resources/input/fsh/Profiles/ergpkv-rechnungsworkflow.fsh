@@ -33,7 +33,7 @@ Id: ergpkv-rechnungsworkflow
   * ^slicing.discriminator.type = #pattern
   * ^slicing.discriminator.path = "type"
   * ^slicing.rules = #open
-* input contains sonstigeDokumente 1..1 MS and originalRechnung 0..1 MS and rechnung 0..1 MS and rechnungsposition MS and rechnungsdokument 0..1 MS
+* input contains sonstigeDokumente 1..1 MS and originalRechnung 0..1 MS and rechnung 0..1 MS and rechnungsposition 0..* MS and rechnungsdokument 0..1 MS
 * input[sonstigeDokumente]
   * type MS
   * type from https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsworkflow-inputtype-cs (required)
