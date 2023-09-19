@@ -19,7 +19,7 @@ Id: ergpkv-rechnung
 * recipient 1.. MS
 * recipient only Reference(Patient)
   * identifier 1.. MS
-  * identifier only IdentifierKvid10 or IdentifierPkvVersichertenId10
+  * identifier only IdentifierKvid10
   * display 1.. MS
 * date 1.. MS
 * issuer 1.. MS

@@ -91,6 +91,18 @@
         }
       },
       {
+        "id": "DocumentReference.subject",
+        "path": "DocumentReference.subject",
+        "comment": "Der Fachdienst verknüpft alle Dokumente mit der Rechnungsempfänger:in oder der Patient:in",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.subject.reference",
+        "path": "DocumentReference.subject.reference",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
         "id": "DocumentReference.content",
         "path": "DocumentReference.content",
         "mustSupport": true

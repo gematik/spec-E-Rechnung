@@ -13,6 +13,9 @@ Id: ergpkv-sonstiges-dokument
 * type.coding contains KDL 0..1 MS
 * type.coding[KDL] from https://gematik.de/fhir/ergpkv/ValueSet/ergpkv-sonstigesdokument-type-vs (extensible)
   * ^comment = "Top-Level Kodes der KDL sollten angboten werden um der Benutzer:in eine verständliche Auswahl zu präsentieren."
+* subject MS
+  * reference 1..1 MS
+  * ^comment = "Der Fachdienst verknüpft alle Dokumente mit der Rechnungsempfänger:in oder der Patient:in"
 * content MS
   * attachment MS
     * contentType 1.. MS
