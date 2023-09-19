@@ -33,11 +33,18 @@ Id: ergpkv-rechnungsworkflow
   * ^slicing.discriminator.type = #pattern
   * ^slicing.discriminator.path = "type"
   * ^slicing.rules = #open
-* input contains sonstigeDokumente 1..1 MS
+* input contains sonstigeDokumente 1..1 MS and originalRechnung 0..1 MS
 * input[sonstigeDokumente]
   * type MS
   * type from https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsworkflow-inputtype-cs (required)
   * type = https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsworkflow-inputtype-cs#sonstigeDokumente
   * value[x] only Reference(DocumentReference)
   * valueReference 1..1 MS
-    * reference 1..1 MS 
+    * reference 1..1 MS
+* input[originalRechnung]
+  * type MS
+  * type from https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsworkflow-inputtype-cs (required)
+  * type = https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsworkflow-inputtype-cs#originalRechnung
+  * value[x] only Reference(Bundle)
+  * valueReference 1..1 MS
+    * reference 1..1 MS

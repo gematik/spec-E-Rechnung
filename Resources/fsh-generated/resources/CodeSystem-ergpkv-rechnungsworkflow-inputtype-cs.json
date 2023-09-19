@@ -11,7 +11,11 @@
     {
       "code": "sonstigeDokumente",
       "display": "Sonstige Dokumente"
+    },
+    {
+      "code": "originalRechnung",
+      "display": "Originale Rechnung"
     }
   ],
-  "count": 1
+  "count": 2
 }
