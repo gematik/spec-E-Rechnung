@@ -3,7 +3,6 @@ Title: "ERGPKV Einreichungsworkflow"
 Parent: Task
 Id: ergpkv-einreichungsworkflow
 * extension contains http://hl7.org/fhir/5.0/StructureDefinition/extension-Task.requestedPerformer named requestedPerformer 1..1 MS
-* extension contains https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-rechnungsworkflow-sonstigesDokument named sonstigesDokument 0..* MS
 * status MS 
 * status from https://gematik.de/fhir/ergpkv/ValueSet/ergpkv-rechnungsworkflow-status-vs (required)
 * identifier 1.. MS

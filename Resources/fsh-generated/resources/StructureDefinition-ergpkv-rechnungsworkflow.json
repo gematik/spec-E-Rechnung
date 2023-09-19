@@ -57,22 +57,6 @@
         "mustSupport": true
       },
       {
-        "id": "Task.extension:sonstigesDokument",
-        "path": "Task.extension",
-        "sliceName": "sonstigesDokument",
-        "min": 0,
-        "max": "*",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-rechnungsworkflow-sonstigesDokument"
-            ]
-          }
-        ],
-        "mustSupport": true
-      },
-      {
         "id": "Task.identifier",
         "path": "Task.identifier",
         "slicing": {
@@ -202,6 +186,65 @@
             ]
           }
         ],
+        "mustSupport": true
+      },
+      {
+        "id": "Task.input",
+        "path": "Task.input",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "type"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Task.input:sonstigeDokumente",
+        "path": "Task.input",
+        "sliceName": "sonstigeDokumente",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Task.input:sonstigeDokumente.type",
+        "path": "Task.input.type",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "sonstigeDokumente",
+              "system": "https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsworkflow-inputtype-cs"
+            }
+          ]
+        },
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsworkflow-inputtype-cs"
+        }
+      },
+      {
+        "id": "Task.input:sonstigeDokumente.value[x]",
+        "path": "Task.input.value[x]",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/DocumentReference"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Task.input:sonstigeDokumente.value[x].reference",
+        "path": "Task.input.value[x].reference",
+        "min": 1,
         "mustSupport": true
       }
     ]

@@ -1,0 +1,16 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "ERGPKVRechnungsworkflowInputTypeVS",
+  "id": "ergpkv-rechnungsworkflow-inputtype-vs",
+  "title": "ERGPKV Rechnungsworkflow InputType VS",
+  "description": "ValueSet zur Identifitikation weiteren Artefakten die für den Rechnungsworkflow relevant sind",
+  "url": "https://gematik.de/fhir/ergpkv/ValueSet/ergpkv-rechnungsworkflow-inputtype-vs",
+  "compose": {
+    "include": [
+      {
+        "system": "https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsworkflow-inputtype-cs"
+      }
+    ]
+  }
+}
