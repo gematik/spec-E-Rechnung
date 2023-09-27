@@ -21,6 +21,8 @@ Id: ergpkv-sonstiges-dokument
     * contentType 1.. MS
     * contentType = #application/pdf
       * ^comment = "Zum Zeitpunkt der Veröffentlichung werden nur PDF-Dokumente als Anhang seitens der Leistungserbringer:in und der Patient:in unterstüzt."
+    * title 1.. MS
+      * ^comment = "Menschenlesbarer Titel des Dokuments"
     * url 0.. MS
       * ^comment = "Der Fachdienst extrahiert das base64-kodierte PDF und verlinkt eine Binary-Repräsentation nach Entgegennahme der Rechnung."
     * data 0.. MS
