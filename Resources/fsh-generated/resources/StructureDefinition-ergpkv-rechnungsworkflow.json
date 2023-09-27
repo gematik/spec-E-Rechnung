@@ -38,6 +38,7 @@
       {
         "id": "Task.extension",
         "path": "Task.extension",
+        "comment": "Rechnungsempfänger:in oder Patient:in. Diese Person ist die Rechnungsempfänger:in und damit für die Handhanbung der Rechnung zuständig.",
         "min": 1
       },
       {
@@ -75,6 +76,7 @@
         "id": "Task.identifier:token",
         "path": "Task.identifier",
         "sliceName": "token",
+        "comment": "Zufällig durch den Fachdienst generiertes Token zu eindeutigen Identifizierung einer E-Rechnung.",
         "min": 1,
         "max": "1",
         "mustSupport": true
@@ -109,6 +111,7 @@
       {
         "id": "Task.status",
         "path": "Task.status",
+        "comment": "Sobald eine Rechnung versendet wird durch die Leistungserbringer:in wird ein neuer Rechnungsworkflow angelegt. Vorläufige Rechnungen können nicht angelegt werden. Sobald die Rechnung durch die Rechnungsempfänger:in in die EPA oder die persönliche Ablagee verschoben wird, kann der Task als abgeschlossen gekennzeichnet werden.",
         "mustSupport": true,
         "binding": {
           "strength": "required",
@@ -118,6 +121,7 @@
       {
         "id": "Task.businessStatus",
         "path": "Task.businessStatus",
+        "comment": "Eine Rechnung kann zunächst durch das PVS der Leistungserbringer:in geprüft werden. Sobald eine Rechnung final übermittel wurde, erhält der Rechnungsworkflow den Status \"Neu\". Nach dem ersten Abruf einer Rechnung durch den Rechnungsempfänger wechselt der Status auf \"Offen\". Zudem wird der Status durch den Fachdienst erneut angepasst sobald die Rechnung oder ein Teil der Rechnung bei einem Kostenträger eingereicht wurde. Eine Rechnung kann manuell durch die Rechnungsempfänger:in als \"Erledigt\" gekennzeichnet werden (vgl. Task.status).",
         "min": 1,
         "mustSupport": true,
         "binding": {
@@ -128,12 +132,14 @@
       {
         "id": "Task.intent",
         "path": "Task.intent",
+        "comment": "Der Rechnungsworkflow wird als \"Order\" gekennzeichnet, da die Leistungserbinger die Begleichung der Rechnung erwartet.",
         "patternCode": "order",
         "mustSupport": true
       },
       {
         "id": "Task.code",
         "path": "Task.code",
+        "comment": "Der Fachdienst muss zwischen einem Rechnungsworkflow und einem Einreichungsworkflow unterscheiden.",
         "min": 1,
         "patternCodeableConcept": {
           "coding": [
@@ -146,22 +152,9 @@
         "mustSupport": true
       },
       {
-        "id": "Task.focus",
-        "path": "Task.focus",
-        "min": 1,
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Invoice"
-            ]
-          }
-        ],
-        "mustSupport": true
-      },
-      {
         "id": "Task.requester",
         "path": "Task.requester",
+        "comment": "Die Leistungserbringer:in wird eindeutig identifiziert durch eine Telematik-ID, diese kann entweder eine persönliche Telematik-ID sein (per HBA) oder für die geamte Organisation gelten (per SMC-B).",
         "min": 1,
         "type": [
           {
@@ -200,15 +193,16 @@
           ],
           "rules": "open"
         },
-        "min": 1,
+        "min": 4,
         "mustSupport": true
       },
       {
         "id": "Task.input:sonstigeDokumente",
         "path": "Task.input",
         "sliceName": "sonstigeDokumente",
-        "min": 1,
-        "max": "1",
+        "comment": "Der Fachdienst extrahiert die Rechnungsanhänge der Rechnung um diese einzeln auffindbar zu machen.",
+        "min": 0,
+        "max": "*",
         "mustSupport": true
       },
       {
@@ -251,7 +245,8 @@
         "id": "Task.input:originalRechnung",
         "path": "Task.input",
         "sliceName": "originalRechnung",
-        "min": 0,
+        "comment": "Enthält die signierte Rechnung inkl. Rechnungsdetails, Rechnungspositionen, sowie PDF-Repräsentation. Der Fachdienst übernimmt die Rechnung ohne Veränderung aus dem System der Leistungserbringer:in.",
+        "min": 1,
         "max": "1",
         "mustSupport": true
       },
@@ -295,7 +290,8 @@
         "id": "Task.input:rechnung",
         "path": "Task.input",
         "sliceName": "rechnung",
-        "min": 0,
+        "comment": "Der Fachdienst extrahiert die Rechnung um diese einzeln auffindbar zu machen.",
+        "min": 1,
         "max": "1",
         "mustSupport": true
       },
@@ -339,7 +335,8 @@
         "id": "Task.input:rechnungsposition",
         "path": "Task.input",
         "sliceName": "rechnungsposition",
-        "min": 0,
+        "comment": "Der Fachdienst extrahiert die Rechnungspositionen um diese einzeln auffindbar zu machen.",
+        "min": 1,
         "max": "*",
         "mustSupport": true
       },
@@ -383,7 +380,8 @@
         "id": "Task.input:rechnungsdokument",
         "path": "Task.input",
         "sliceName": "rechnungsdokument",
-        "min": 0,
+        "comment": "Der Fachdienst extrahiert die PDF-Repräsentation der Rechnung um diese einzeln auffindbar zu machen.",
+        "min": 1,
         "max": "1",
         "mustSupport": true
       },
@@ -411,7 +409,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Bundle"
+              "http://hl7.org/fhir/StructureDefinition/Binary"
             ]
           }
         ],
@@ -420,6 +418,64 @@
       {
         "id": "Task.input:rechnungsdokument.value[x].reference",
         "path": "Task.input.value[x].reference",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Task.output",
+        "path": "Task.output",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "type"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Task.output:tokenPdf",
+        "path": "Task.output",
+        "sliceName": "tokenPdf",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Task.output:tokenPdf.type",
+        "path": "Task.output.type",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "tokenPdf",
+              "system": "https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsworkflow-outputtype-cs"
+            }
+          ]
+        },
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsworkflow-outputtype-cs"
+        }
+      },
+      {
+        "id": "Task.output:tokenPdf.value[x]",
+        "path": "Task.output.value[x]",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Binary"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Task.output:tokenPdf.value[x].reference",
+        "path": "Task.output.value[x].reference",
         "min": 1,
         "mustSupport": true
       }
