@@ -12,10 +12,6 @@
         "system": "http://hl7.org/fhir/task-status",
         "concept": [
           {
-            "code": "draft",
-            "display": "Draft"
-          },
-          {
             "code": "ready",
             "display": "Ready"
           },
