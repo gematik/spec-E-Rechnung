@@ -1,0 +1,17 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "draft",
+  "content": "complete",
+  "name": "ERGPKVRechnungsworkflowOutputTypeCS",
+  "id": "ergpkv-rechnungsworkflow-outputtype-cs",
+  "title": "ERGPKV Rechnungsworkflow OutputType CS",
+  "description": "CodeSystem zur Identifitikation weiteren Artefakten die durch einen Rechnungsworkflow produziert werden",
+  "url": "https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsworkflow-outputtype-cs",
+  "concept": [
+    {
+      "code": "tokenPdf",
+      "display": "Token PDF"
+    }
+  ],
+  "count": 1
+}
