@@ -135,7 +135,7 @@
       {
         "id": "DocumentReference.content.attachment.title",
         "path": "DocumentReference.content.attachment.title",
-        "comment": "Menschenlesbarer Titel des Dokuments",
+        "comment": "Menschenlesbarer Titel des Dokuments, sollte dazu dienen der Rechnungsempfänger:in anzuzeigen um welches Dokument es sich handelt. Der Titel kann manuell erfasst werden oder durch den Dateinamen abgeleitet werden.",
         "min": 1,
         "mustSupport": true
       }
