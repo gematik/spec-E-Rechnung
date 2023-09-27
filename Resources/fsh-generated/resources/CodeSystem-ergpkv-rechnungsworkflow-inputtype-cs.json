@@ -5,7 +5,7 @@
   "name": "ERGPKVRechnungsworkflowInputTypeCS",
   "id": "ergpkv-rechnungsworkflow-inputtype-cs",
   "title": "ERGPKV Rechnungsworkflow InputType CS",
-  "description": "CodeSystem zur Identifitikation weiteren Artefakten die für den Rechnungsworkflow relevant sind",
+  "description": "CodeSystem zur Identifitikation von weiteren Artefakten die für die Durchführung des Rechnungsworkflows relevant sind",
   "url": "https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsworkflow-inputtype-cs",
   "concept": [
     {
