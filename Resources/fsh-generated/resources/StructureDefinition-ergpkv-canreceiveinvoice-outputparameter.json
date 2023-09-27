@@ -81,26 +81,26 @@
         "max": "0"
       },
       {
-        "id": "Parameters.parameter:patient",
+        "id": "Parameters.parameter:versichertePerson",
         "path": "Parameters.parameter",
-        "sliceName": "patient",
+        "sliceName": "versichertePerson",
         "min": 1,
         "max": "1",
         "mustSupport": true
       },
       {
-        "id": "Parameters.parameter:patient.name",
+        "id": "Parameters.parameter:versichertePerson.name",
         "path": "Parameters.parameter.name",
-        "patternString": "patient",
+        "patternString": "versichertePerson",
         "mustSupport": true
       },
       {
-        "id": "Parameters.parameter:patient.value[x]",
+        "id": "Parameters.parameter:versichertePerson.value[x]",
         "path": "Parameters.parameter.value[x]",
         "max": "0"
       },
       {
-        "id": "Parameters.parameter:patient.resource",
+        "id": "Parameters.parameter:versichertePerson.resource",
         "path": "Parameters.parameter.resource",
         "min": 1,
         "type": [
@@ -114,7 +114,7 @@
         "mustSupport": true
       },
       {
-        "id": "Parameters.parameter:patient.part",
+        "id": "Parameters.parameter:versichertePerson.part",
         "path": "Parameters.parameter.part",
         "max": "0"
       }

@@ -45,7 +45,7 @@
       }
     },
     {
-      "name": "patient",
+      "name": "versichertePerson",
       "resource": {
         "resourceType": "Patient",
         "id": "ERGPKVRechnungsworkflowCanReceiveInvoiceResponsePatient",

@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "ergpkv-canreceiveinvoiceresponsepatient",
   "url": "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-canreceiveinvoiceresponsepatient",
-  "name": "ERGPKVCanReceiveInvoiceResponsePatient",
+  "name": "ERGPKVersichertePerson",
   "title": "ERGPKV CanReceiveInvoice Response Patient",
   "status": "draft",
   "fhirVersion": "4.0.1",
