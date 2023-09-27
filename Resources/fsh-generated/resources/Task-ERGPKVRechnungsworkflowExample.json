@@ -94,6 +94,12 @@
       }
     }
   ],
+  "requester": {
+    "identifier": {
+      "system": "https://gematik.de/fhir/sid/telematik-id",
+      "value": "<telematik id>"
+    }
+  },
   "output": [
     {
       "type": {
@@ -109,12 +115,6 @@
       }
     }
   ],
-  "requester": {
-    "identifier": {
-      "system": "https://gematik.de/fhir/sid/telematik-id",
-      "value": "<telematik id>"
-    }
-  },
   "status": "ready",
   "businessStatus": {
     "coding": [
