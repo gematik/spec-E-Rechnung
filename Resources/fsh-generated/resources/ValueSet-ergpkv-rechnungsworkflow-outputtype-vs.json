@@ -1,0 +1,16 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "ERGPKVRechnungsworkflowOutputTypeVS",
+  "id": "ergpkv-rechnungsworkflow-outputtype-vs",
+  "title": "ERGPKV Rechnungsworkflow OutputType VS",
+  "description": "ValueSet zur Identifitikation weiteren Artefakten die durch einen Rechnungsworkflow produziert werden",
+  "url": "https://gematik.de/fhir/ergpkv/ValueSet/ergpkv-rechnungsworkflow-outputtype-vs",
+  "compose": {
+    "include": [
+      {
+        "system": "https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsworkflow-outputtype-cs"
+      }
+    ]
+  }
+}
