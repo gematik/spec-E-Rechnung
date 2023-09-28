@@ -84,8 +84,9 @@ Id: ergpkv-rechnungsworkflow
   * ^slicing.discriminator.type = #pattern
   * ^slicing.discriminator.path = "type"
   * ^slicing.rules = #open
-* output contains tokenPdf 0..1
+* output contains tokenPdf 1..1
 * output[tokenPdf]
+  * ^comment = "Eine PDF-Version der Rechnung inkl. aufgedrucktem Rechnungstoken muss immer durch den Fachdienst erstell werden und sollte als präferierte Variante an die Rehnungsempfänger:in, die Leistungserbringer:in oder den Kostenträger herausgegeben werden."
   * type MS
   * type from https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsworkflow-outputtype-cs (required)
   * type = https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsworkflow-outputtype-cs#tokenPdf
