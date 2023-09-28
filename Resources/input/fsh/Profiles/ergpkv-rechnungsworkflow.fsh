@@ -40,11 +40,11 @@ Id: ergpkv-rechnungsworkflow
   * ^comment = "Die Leistungserbringer:in wird eindeutig identifiziert durch eine Telematik-ID, diese kann entweder eine persönliche Telematik-ID sein (per HBA) oder für die geamte Organisation gelten (per SMC-B)."
 * requester 1.. MS
   * identifier 1.. MS  
-    *  short = "Telematik-ID des Leistungserbringers"
+    * ^short = "Telematik-ID des Leistungserbringers"
   * identifier only IdentifierTelematikId
   // No focus element, all inputs are equally important 
 * input MS
-  *  short = "Eingereichte Rechnung/Dokumente"
+  * ^short = "Eingereichte Rechnung/Dokumente"
   * ^slicing.discriminator.type = #pattern
   * ^slicing.discriminator.path = "type"
   * ^slicing.rules = #open
