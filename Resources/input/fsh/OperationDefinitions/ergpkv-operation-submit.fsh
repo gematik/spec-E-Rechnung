@@ -142,7 +142,7 @@ Description: "Profil zur Validierung der Output-Parameter für $erechnung-submit
   * ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = "name"
   * ^slicing.rules = #closed
-* parameter contains tokenPdf 0..1 MS and warnungen 0..1 MS and token 1..1 MS
+* parameter contains tokenPdf 0..1 MS and warnung 0..* MS and token 0..1 MS
 * parameter[token]
   * name MS
   * name = "token"
@@ -151,9 +151,9 @@ Description: "Profil zur Validierung der Output-Parameter für $erechnung-submit
   * valueIdentifier only IdentifierERechnungToken
   * resource 0..0
   * part 0..0
-* parameter[warnungen]
+* parameter[warnung]
   * name MS
-  * name = "warnungen"
+  * name = "warnung"
   * value[x] 0..0
   * resource 0..1 MS 
   * resource only OperationOutcome // ToDo: Dokumentation im IG wie diese OperationOutcome aufgebaut ist, da kein seperates Profil existiert
@@ -189,3 +189,16 @@ InstanceOf: ERGPKVRParametersSubmitOutput
 Usage: #example
 * parameter[token].valueIdentifier.value = "<token>"
 * parameter[tokenPdf].valueReference.reference = "Binary/tokenPdf"
+
+Instance: ERGPKVRParametersSubmitOutputWarnung
+InstanceOf: ERGPKVRParametersSubmitOutput
+Usage: #example
+* parameter[warnung].resource = ERGPKVRParametersSubmitOutputWarnungOO
+
+Instance: ERGPKVRParametersSubmitOutputWarnungOO
+InstanceOf: OperationOutcome
+Usage: #example
+* issue
+  * severity = #warning
+  * code = #business-rule
+  * diagnostics = "<Textueller Beschreibung als Hinweis für die Benutzer:in>"   

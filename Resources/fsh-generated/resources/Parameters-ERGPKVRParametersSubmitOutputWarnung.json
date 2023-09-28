@@ -1,0 +1,25 @@
+{
+  "resourceType": "Parameters",
+  "id": "ERGPKVRParametersSubmitOutputWarnung",
+  "meta": {
+    "profile": [
+      "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-submit-outputparameter"
+    ]
+  },
+  "parameter": [
+    {
+      "name": "warnung",
+      "resource": {
+        "resourceType": "OperationOutcome",
+        "id": "ERGPKVRParametersSubmitOutputWarnungOO",
+        "issue": [
+          {
+            "severity": "warning",
+            "code": "business-rule",
+            "diagnostics": "<Textueller Beschreibung als Hinweis für die Benutzer:in>"
+          }
+        ]
+      }
+    }
+  ]
+}

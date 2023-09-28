@@ -1,0 +1,11 @@
+{
+  "resourceType": "OperationOutcome",
+  "id": "ERGPKVRParametersSubmitOutputWarnungOO",
+  "issue": [
+    {
+      "severity": "warning",
+      "code": "business-rule",
+      "diagnostics": "<Textueller Beschreibung als Hinweis für die Benutzer:in>"
+    }
+  ]
+}

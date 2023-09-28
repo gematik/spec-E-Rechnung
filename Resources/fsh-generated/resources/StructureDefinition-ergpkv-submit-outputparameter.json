@@ -38,7 +38,6 @@
           ],
           "rules": "closed"
         },
-        "min": 1,
         "mustSupport": true
       },
       {
@@ -79,26 +78,26 @@
         "max": "0"
       },
       {
-        "id": "Parameters.parameter:warnungen",
+        "id": "Parameters.parameter:warnung",
         "path": "Parameters.parameter",
-        "sliceName": "warnungen",
+        "sliceName": "warnung",
         "min": 0,
-        "max": "1",
+        "max": "*",
         "mustSupport": true
       },
       {
-        "id": "Parameters.parameter:warnungen.name",
+        "id": "Parameters.parameter:warnung.name",
         "path": "Parameters.parameter.name",
-        "patternString": "warnungen",
+        "patternString": "warnung",
         "mustSupport": true
       },
       {
-        "id": "Parameters.parameter:warnungen.value[x]",
+        "id": "Parameters.parameter:warnung.value[x]",
         "path": "Parameters.parameter.value[x]",
         "max": "0"
       },
       {
-        "id": "Parameters.parameter:warnungen.resource",
+        "id": "Parameters.parameter:warnung.resource",
         "path": "Parameters.parameter.resource",
         "type": [
           {
@@ -108,7 +107,7 @@
         "mustSupport": true
       },
       {
-        "id": "Parameters.parameter:warnungen.part",
+        "id": "Parameters.parameter:warnung.part",
         "path": "Parameters.parameter.part",
         "max": "0"
       },
@@ -116,7 +115,7 @@
         "id": "Parameters.parameter:token",
         "path": "Parameters.parameter",
         "sliceName": "token",
-        "min": 1,
+        "min": 0,
         "max": "1",
         "mustSupport": true
       },
