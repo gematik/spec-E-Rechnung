@@ -5,8 +5,8 @@ Id: ergpkv-einreichungsworkflow
 * extension contains http://hl7.org/fhir/5.0/StructureDefinition/extension-Task.requestedPerformer named requestedPerformer 1..1 MS
 * status MS 
 * status from https://gematik.de/fhir/ergpkv/ValueSet/ergpkv-rechnungsworkflow-status-vs (required)
-  * ^short = "Taskstatus"
-  * ^comment = "ready | completed"
+  * ^short = "Taskstatus ( ready | completed )"
+  //* ^comment = "ready | completed"
 * identifier 1.. MS
 * identifier ^slicing.discriminator.type = #pattern
 * identifier ^slicing.discriminator.path = "type"
