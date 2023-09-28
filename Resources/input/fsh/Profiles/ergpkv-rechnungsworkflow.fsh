@@ -2,7 +2,7 @@ Profile: ERGPKVRechnungsworkflow
 Title: "ERGPKV Rechnungsworkflow"
 Parent: Task
 Id: ergpkv-rechnungsworkflow
-* extension contains http://hl7.org/fhir/5.0/StructureDefinition/extension-Task.requestedPerformer named requestedPerformer 1..1 MS
+* extension contains http://hl7.org/fhir/5.0/StructureDefinition/extension-Task.requestedPerformer named rechnungsempfaenger 1..1 MS
   * ^comment = "Rechnungsempfänger:in oder Patient:in. Diese Person ist die Rechnungsempfänger:in und damit für die Handhanbung der Rechnung zuständig."
 * status MS
   * ^comment = "Sobald eine Rechnung versendet wird durch die Leistungserbringer:in wird ein neuer Rechnungsworkflow angelegt. Vorläufige Rechnungen können nicht angelegt werden. Sobald die Rechnung durch die Rechnungsempfänger:in in die EPA oder die persönliche Ablagee verschoben wird, kann der Task als abgeschlossen gekennzeichnet werden."
@@ -84,7 +84,7 @@ Id: ergpkv-rechnungsworkflow
   * ^slicing.discriminator.type = #pattern
   * ^slicing.discriminator.path = "type"
   * ^slicing.rules = #open
-* output contains tokenPdf 1..1
+* output contains tokenPdf 0..1
 * output[tokenPdf]
   * type MS
   * type from https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsworkflow-outputtype-cs (required)
@@ -96,7 +96,7 @@ Id: ergpkv-rechnungsworkflow
 Instance: ERGPKVRechnungsworkflowExample
 InstanceOf: ERGPKVRechnungsworkflow
 Usage: #example
-* extension[requestedPerformer]
+* extension[rechnungsempfaenger]
   * valueReference
     * identifier.value = "<kvid>"
 * status = #ready
