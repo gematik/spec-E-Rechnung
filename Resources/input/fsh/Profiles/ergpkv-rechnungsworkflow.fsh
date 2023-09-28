@@ -119,7 +119,7 @@ Usage: #example
 * businessStatus = https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsworkflow-businessStatus-cs#neu
 * requester.identifier.value = "<telematik id>"
 * input[originalRechnung].valueReference.reference = "Bundle/originalRechnung"
-* input[rechnung].valueReference.reference = "Invoice/rechnung"
-* input[rechnungsposition].valueReference.reference = "ChargeItem/rechnungsposition"
-* input[rechnungsdokument].valueReference.reference = "Binary/rechnungsdokument"
+* output[rechnung].valueReference.reference = "Invoice/rechnung"
+* output[rechnungsposition].valueReference.reference = "ChargeItem/rechnungsposition"
+* output[rechnungsdokument].valueReference.reference = "Binary/rechnungsdokument"
 * output[tokenPdf].valueReference.reference = "Binary/tokenPdf"
