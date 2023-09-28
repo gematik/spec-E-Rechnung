@@ -9,25 +9,9 @@
   "url": "https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsworkflow-inputtype-cs",
   "concept": [
     {
-      "code": "sonstigeDokumente",
-      "display": "Sonstige Dokumente"
-    },
-    {
       "code": "originalRechnung",
       "display": "Originale Rechnung"
-    },
-    {
-      "code": "rechnung",
-      "display": "Rechnung"
-    },
-    {
-      "code": "rechnungsposition",
-      "display": "Rechnungsposition"
-    },
-    {
-      "code": "rechnungsdokument",
-      "display": "Rechnungsdokument"
     }
   ],
-  "count": 5
+  "count": 1
 }
