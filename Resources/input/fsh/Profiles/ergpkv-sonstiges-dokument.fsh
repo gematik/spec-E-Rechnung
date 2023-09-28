@@ -28,7 +28,7 @@ Id: ergpkv-sonstiges-dokument
     * ^short = "Anhang"
     * contentType 1.. MS
     * contentType = #application/pdf
-      * ^short= "MIME-Type des Dokumentes"
+      * ^short = "MIME-Type des Dokumentes"
       * ^comment = "Zum Zeitpunkt der Veröffentlichung werden nur PDF-Dokumente als Anhang seitens der Leistungserbringer:in und der Patient:in unterstüzt."
     * url 0.. MS
       * ^short = "Dokumenten-Link"
