@@ -111,7 +111,7 @@
       {
         "id": "Task.status",
         "path": "Task.status",
-        "comment": "Sobald eine Rechnung versendet wird durch die Leistungserbringer:in wird ein neuer Rechnungsworkflow angelegt. Vorläufige Rechnungen können nicht angelegt werden. Sobald die Rechnung durch die Rechnungsempfänger:in in die EPA oder die persönliche Ablagee verschoben wird, kann der Task als abgeschlossen gekennzeichnet werden.",
+        "comment": "Sobald eine Rechnung versendet wird durch die Leistungserbringer:in wird ein neuer Rechnungsworkflow angelegt. Vorläufige Rechnungen können nicht angelegt werden. Sobald die Rechnung durch die Rechnungsempfänger:in in die EPA oder die persönliche Ablage verschoben wird, kann der Task als abgeschlossen gekennzeichnet werden.",
         "mustSupport": true,
         "binding": {
           "strength": "required",

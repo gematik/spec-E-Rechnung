@@ -5,7 +5,7 @@ Id: ergpkv-rechnungsworkflow
 * extension contains http://hl7.org/fhir/5.0/StructureDefinition/extension-Task.requestedPerformer named rechnungsempfaenger 1..1 MS
   * ^comment = "Rechnungsempfänger:in oder Patient:in. Diese Person ist die Rechnungsempfänger:in und damit für die Handhanbung der Rechnung zuständig."
 * status MS
-  * ^comment = "Sobald eine Rechnung versendet wird durch die Leistungserbringer:in wird ein neuer Rechnungsworkflow angelegt. Vorläufige Rechnungen können nicht angelegt werden. Sobald die Rechnung durch die Rechnungsempfänger:in in die EPA oder die persönliche Ablagee verschoben wird, kann der Task als abgeschlossen gekennzeichnet werden."
+  * ^comment = "Sobald eine Rechnung versendet wird durch die Leistungserbringer:in wird ein neuer Rechnungsworkflow angelegt. Vorläufige Rechnungen können nicht angelegt werden. Sobald die Rechnung durch die Rechnungsempfänger:in in die EPA oder die persönliche Ablage verschoben wird, kann der Task als abgeschlossen gekennzeichnet werden."
 * status from https://gematik.de/fhir/ergpkv/ValueSet/ergpkv-rechnungsworkflow-status-vs (required)
 * identifier 1.. MS
 * identifier 
