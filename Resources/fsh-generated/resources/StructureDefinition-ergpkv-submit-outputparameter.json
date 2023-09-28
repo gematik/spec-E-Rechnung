@@ -58,20 +58,20 @@
       {
         "id": "Parameters.parameter:tokenPdf.value[x]",
         "path": "Parameters.parameter.value[x]",
-        "max": "0"
-      },
-      {
-        "id": "Parameters.parameter:tokenPdf.resource",
-        "path": "Parameters.parameter.resource",
         "type": [
           {
-            "code": "DocumentReference",
-            "profile": [
-              "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-sonstiges-dokument"
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Binary"
             ]
           }
         ],
         "mustSupport": true
+      },
+      {
+        "id": "Parameters.parameter:tokenPdf.resource",
+        "path": "Parameters.parameter.resource",
+        "max": "0"
       },
       {
         "id": "Parameters.parameter:tokenPdf.part",
@@ -129,25 +129,7 @@
       {
         "id": "Parameters.parameter:token.value[x]",
         "path": "Parameters.parameter.value[x]",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "type",
-              "path": "$this"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        },
         "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Parameters.parameter:token.value[x]:valueIdentifier",
-        "path": "Parameters.parameter.value[x]",
-        "sliceName": "valueIdentifier",
-        "min": 0,
-        "max": "1",
         "type": [
           {
             "code": "Identifier",
@@ -155,7 +137,8 @@
               "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-identifier-erechnungstoken"
             ]
           }
-        ]
+        ],
+        "mustSupport": true
       },
       {
         "id": "Parameters.parameter:token.resource",

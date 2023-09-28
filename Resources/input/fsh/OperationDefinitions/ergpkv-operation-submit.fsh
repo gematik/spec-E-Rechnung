@@ -147,6 +147,7 @@ Description: "Profil zur Validierung der Output-Parameter für $erechnung-submit
   * name MS
   * name = "token"
   * value[x] 1..1 MS
+  * value[x] only Identifier
   * valueIdentifier only IdentifierERechnungToken
   * resource 0..0
   * part 0..0
@@ -160,9 +161,9 @@ Description: "Profil zur Validierung der Output-Parameter für $erechnung-submit
 * parameter[tokenPdf]
   * name MS
   * name = "modus"
-  * value[x] 0..0
-  * resource 0..1 MS
-  * resource only ERGPKVSonstigesDokument
+  * value[x] 0..1 MS
+  * value[x] only Reference(Binary)
+  * resource 0..0
   * part 0..0
 
 // ------------- Terminology -------------
@@ -180,3 +181,11 @@ Id: ergpkv-rechnung-submit-modus-vs
 Title: "ERGPKV Rechnung Type VS"
 Description:  "ValueSet für die Differenzierung von der Verarbeitungsmodi für $erchnung-submit"
 * include codes from system https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnung-submit-modus-vs
+
+// ------------- Output Paramater -------------
+
+Instance: ERGPKVRParametersSubmitOutput
+InstanceOf: ERGPKVRParametersSubmitOutput
+Usage: #example
+* parameter[token].valueIdentifier.value = "<token>"
+* parameter[tokenPdf].valueReference.reference = "Binary/tokenPdf"
