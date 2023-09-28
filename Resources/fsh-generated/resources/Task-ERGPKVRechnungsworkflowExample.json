@@ -53,45 +53,6 @@
       "valueReference": {
         "reference": "Bundle/originalRechnung"
       }
-    },
-    {
-      "type": {
-        "coding": [
-          {
-            "code": "rechnung",
-            "system": "https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsworkflow-inputtype-cs"
-          }
-        ]
-      },
-      "valueReference": {
-        "reference": "Invoice/rechnung"
-      }
-    },
-    {
-      "type": {
-        "coding": [
-          {
-            "code": "rechnungsposition",
-            "system": "https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsworkflow-inputtype-cs"
-          }
-        ]
-      },
-      "valueReference": {
-        "reference": "ChargeItem/rechnungsposition"
-      }
-    },
-    {
-      "type": {
-        "coding": [
-          {
-            "code": "rechnungsposition",
-            "system": "https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsworkflow-inputtype-cs"
-          }
-        ]
-      },
-      "valueReference": {
-        "reference": "Binary/rechnungsdokument"
-      }
     }
   ],
   "output": [
@@ -106,6 +67,36 @@
       },
       "valueReference": {
         "reference": "Binary/tokenPdf"
+      }
+    },
+    {
+      "type": {
+        "coding": [
+          {
+            "code": "rechnung",
+            "system": "https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsworkflow-outputtype-cs"
+          }
+        ]
+      }
+    },
+    {
+      "type": {
+        "coding": [
+          {
+            "code": "rechnungsposition",
+            "system": "https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsworkflow-outputtype-cs"
+          }
+        ]
+      }
+    },
+    {
+      "type": {
+        "coding": [
+          {
+            "code": "rechnungsposition",
+            "system": "https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsworkflow-outputtype-cs"
+          }
+        ]
       }
     }
   ],

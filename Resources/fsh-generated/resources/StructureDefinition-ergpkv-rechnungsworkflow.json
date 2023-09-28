@@ -38,7 +38,8 @@
       {
         "id": "Task.extension",
         "path": "Task.extension",
-        "comment": "Rechnungsempfänger:in oder Patient:in. Diese Person ist die Rechnungsempfänger:in und damit für die Handhanbung der Rechnung zuständig.",
+        "short": "Rechnungsempfänger:in",
+        "comment": "Rechnungsempfänger:in oder Patient:in. Diese Person ist die Rechnungsempfänger:in und damit für die Handhabung der Rechnung zuständig.",
         "min": 1
       },
       {
@@ -76,6 +77,7 @@
         "id": "Task.identifier:token",
         "path": "Task.identifier",
         "sliceName": "token",
+        "short": "Zugriffstoken",
         "comment": "Zufällig durch den Fachdienst generiertes Token zu eindeutigen Identifizierung einer E-Rechnung.",
         "min": 1,
         "max": "1",
@@ -111,6 +113,7 @@
       {
         "id": "Task.status",
         "path": "Task.status",
+        "short": "Taskstatus ( ready | completed )",
         "comment": "Sobald eine Rechnung versendet wird durch die Leistungserbringer:in wird ein neuer Rechnungsworkflow angelegt. Vorläufige Rechnungen können nicht angelegt werden. Sobald die Rechnung durch die Rechnungsempfänger:in in die EPA oder die persönliche Ablage verschoben wird, kann der Task als abgeschlossen gekennzeichnet werden.",
         "mustSupport": true,
         "binding": {
@@ -121,6 +124,7 @@
       {
         "id": "Task.businessStatus",
         "path": "Task.businessStatus",
+        "short": "Workflowstatus",
         "comment": "Eine Rechnung kann zunächst durch das PVS der Leistungserbringer:in geprüft werden. Sobald eine Rechnung final übermittel wurde, erhält der Rechnungsworkflow den Status \"Neu\". Nach dem ersten Abruf einer Rechnung durch den Rechnungsempfänger wechselt der Status auf \"Offen\". Zudem wird der Status durch den Fachdienst erneut angepasst sobald die Rechnung oder ein Teil der Rechnung bei einem Kostenträger eingereicht wurde. Eine Rechnung kann manuell durch die Rechnungsempfänger:in als \"Erledigt\" gekennzeichnet werden (vgl. Task.status).",
         "min": 1,
         "mustSupport": true,
@@ -132,13 +136,15 @@
       {
         "id": "Task.intent",
         "path": "Task.intent",
-        "comment": "Der Rechnungsworkflow wird als \"Order\" gekennzeichnet, da die Leistungserbinger die Begleichung der Rechnung erwartet.",
+        "short": "fix: order",
+        "comment": "Der Rechnungsworkflow wird als \"order\" gekennzeichnet, da die Leistungserbinger die Begleichung der Rechnung erwartet.",
         "patternCode": "order",
         "mustSupport": true
       },
       {
         "id": "Task.code",
         "path": "Task.code",
+        "short": "fix: rechnungsworkflow",
         "comment": "Der Fachdienst muss zwischen einem Rechnungsworkflow und einem Einreichungsworkflow unterscheiden.",
         "min": 1,
         "patternCodeableConcept": {
@@ -154,6 +160,7 @@
       {
         "id": "Task.requester",
         "path": "Task.requester",
+        "short": "Leistungserbringer",
         "comment": "Die Leistungserbringer:in wird eindeutig identifiziert durch eine Telematik-ID, diese kann entweder eine persönliche Telematik-ID sein (per HBA) oder für die geamte Organisation gelten (per SMC-B).",
         "min": 1,
         "type": [
@@ -170,6 +177,7 @@
       {
         "id": "Task.requester.identifier",
         "path": "Task.requester.identifier",
+        "short": "Telematik-ID des Leistungserbringers",
         "min": 1,
         "type": [
           {
@@ -193,51 +201,7 @@
           ],
           "rules": "open"
         },
-        "min": 4,
-        "mustSupport": true
-      },
-      {
-        "id": "Task.input:sonstigeDokumente",
-        "path": "Task.input",
-        "sliceName": "sonstigeDokumente",
-        "comment": "Der Fachdienst extrahiert die Rechnungsanhänge der Rechnung um diese einzeln auffindbar zu machen.",
-        "min": 0,
-        "max": "*",
-        "mustSupport": true
-      },
-      {
-        "id": "Task.input:sonstigeDokumente.type",
-        "path": "Task.input.type",
-        "patternCodeableConcept": {
-          "coding": [
-            {
-              "code": "sonstigeDokumente",
-              "system": "https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsworkflow-inputtype-cs"
-            }
-          ]
-        },
-        "mustSupport": true,
-        "binding": {
-          "strength": "required",
-          "valueSet": "https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsworkflow-inputtype-cs"
-        }
-      },
-      {
-        "id": "Task.input:sonstigeDokumente.value[x]",
-        "path": "Task.input.value[x]",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/DocumentReference"
-            ]
-          }
-        ],
-        "mustSupport": true
-      },
-      {
-        "id": "Task.input:sonstigeDokumente.value[x].reference",
-        "path": "Task.input.value[x].reference",
+        "short": "Eingereichte Rechnung/Dokumente",
         "min": 1,
         "mustSupport": true
       },
@@ -245,6 +209,7 @@
         "id": "Task.input:originalRechnung",
         "path": "Task.input",
         "sliceName": "originalRechnung",
+        "short": "Original-Rechnung",
         "comment": "Enthält die signierte Rechnung inkl. Rechnungsdetails, Rechnungspositionen, sowie PDF-Repräsentation. Der Fachdienst übernimmt die Rechnung ohne Veränderung aus dem System der Leistungserbringer:in.",
         "min": 1,
         "max": "1",
@@ -287,141 +252,6 @@
         "mustSupport": true
       },
       {
-        "id": "Task.input:rechnung",
-        "path": "Task.input",
-        "sliceName": "rechnung",
-        "comment": "Der Fachdienst extrahiert die Rechnung um diese einzeln auffindbar zu machen.",
-        "min": 1,
-        "max": "1",
-        "mustSupport": true
-      },
-      {
-        "id": "Task.input:rechnung.type",
-        "path": "Task.input.type",
-        "patternCodeableConcept": {
-          "coding": [
-            {
-              "code": "rechnung",
-              "system": "https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsworkflow-inputtype-cs"
-            }
-          ]
-        },
-        "mustSupport": true,
-        "binding": {
-          "strength": "required",
-          "valueSet": "https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsworkflow-inputtype-cs"
-        }
-      },
-      {
-        "id": "Task.input:rechnung.value[x]",
-        "path": "Task.input.value[x]",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Bundle"
-            ]
-          }
-        ],
-        "mustSupport": true
-      },
-      {
-        "id": "Task.input:rechnung.value[x].reference",
-        "path": "Task.input.value[x].reference",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Task.input:rechnungsposition",
-        "path": "Task.input",
-        "sliceName": "rechnungsposition",
-        "comment": "Der Fachdienst extrahiert die Rechnungspositionen um diese einzeln auffindbar zu machen.",
-        "min": 1,
-        "max": "*",
-        "mustSupport": true
-      },
-      {
-        "id": "Task.input:rechnungsposition.type",
-        "path": "Task.input.type",
-        "patternCodeableConcept": {
-          "coding": [
-            {
-              "code": "rechnungsposition",
-              "system": "https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsworkflow-inputtype-cs"
-            }
-          ]
-        },
-        "mustSupport": true,
-        "binding": {
-          "strength": "required",
-          "valueSet": "https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsworkflow-inputtype-cs"
-        }
-      },
-      {
-        "id": "Task.input:rechnungsposition.value[x]",
-        "path": "Task.input.value[x]",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Bundle"
-            ]
-          }
-        ],
-        "mustSupport": true
-      },
-      {
-        "id": "Task.input:rechnungsposition.value[x].reference",
-        "path": "Task.input.value[x].reference",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Task.input:rechnungsdokument",
-        "path": "Task.input",
-        "sliceName": "rechnungsdokument",
-        "comment": "Der Fachdienst extrahiert die PDF-Repräsentation der Rechnung um diese einzeln auffindbar zu machen.",
-        "min": 1,
-        "max": "1",
-        "mustSupport": true
-      },
-      {
-        "id": "Task.input:rechnungsdokument.type",
-        "path": "Task.input.type",
-        "patternCodeableConcept": {
-          "coding": [
-            {
-              "code": "rechnungsposition",
-              "system": "https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsworkflow-inputtype-cs"
-            }
-          ]
-        },
-        "mustSupport": true,
-        "binding": {
-          "strength": "required",
-          "valueSet": "https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsworkflow-inputtype-cs"
-        }
-      },
-      {
-        "id": "Task.input:rechnungsdokument.value[x]",
-        "path": "Task.input.value[x]",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Binary"
-            ]
-          }
-        ],
-        "mustSupport": true
-      },
-      {
-        "id": "Task.input:rechnungsdokument.value[x].reference",
-        "path": "Task.input.value[x].reference",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
         "id": "Task.output",
         "path": "Task.output",
         "slicing": {
@@ -433,13 +263,14 @@
           ],
           "rules": "open"
         },
-        "min": 1,
+        "min": 4,
         "mustSupport": true
       },
       {
         "id": "Task.output:tokenPdf",
         "path": "Task.output",
         "sliceName": "tokenPdf",
+        "short": "Mit Token-Barcode versehenes PDF der Rechnung",
         "comment": "Eine PDF-Version der Rechnung inkl. aufgedrucktem Rechnungstoken muss immer durch den Fachdienst erstell werden und sollte als präferierte Variante an die Rehnungsempfänger:in, die Leistungserbringer:in oder den Kostenträger herausgegeben werden.",
         "min": 1,
         "max": "1"
@@ -476,6 +307,189 @@
       },
       {
         "id": "Task.output:tokenPdf.value[x].reference",
+        "path": "Task.output.value[x].reference",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Task.output:sonstigeDokumente",
+        "path": "Task.output",
+        "sliceName": "sonstigeDokumente",
+        "short": "Sonstige Dokumente",
+        "comment": "Der Fachdienst extrahiert die Rechnungsanhänge der Rechnung um diese einzeln auffindbar zu machen.",
+        "min": 0,
+        "max": "*",
+        "mustSupport": true
+      },
+      {
+        "id": "Task.output:sonstigeDokumente.type",
+        "path": "Task.output.type",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "sonstigeDokumente",
+              "system": "https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsworkflow-outputtype-cs"
+            }
+          ]
+        },
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsworkflow-outputtype-cs"
+        }
+      },
+      {
+        "id": "Task.output:sonstigeDokumente.value[x]",
+        "path": "Task.output.value[x]",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/DocumentReference"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Task.output:sonstigeDokumente.value[x].reference",
+        "path": "Task.output.value[x].reference",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Task.output:rechnung",
+        "path": "Task.output",
+        "sliceName": "rechnung",
+        "comment": "Der Fachdienst extrahiert die Rechnung um diese einzeln auffindbar zu machen.",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Task.output:rechnung.type",
+        "path": "Task.output.type",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "rechnung",
+              "system": "https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsworkflow-outputtype-cs"
+            }
+          ]
+        },
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsworkflow-outputtype-cs"
+        }
+      },
+      {
+        "id": "Task.output:rechnung.value[x]",
+        "path": "Task.output.value[x]",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Invoice"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Task.output:rechnung.value[x].reference",
+        "path": "Task.output.value[x].reference",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Task.output:rechnungsposition",
+        "path": "Task.output",
+        "sliceName": "rechnungsposition",
+        "short": "Einzelpositionen der Rechnung",
+        "comment": "Der Fachdienst extrahiert die Rechnungspositionen um diese einzeln auffindbar zu machen.",
+        "min": 1,
+        "max": "*",
+        "mustSupport": true
+      },
+      {
+        "id": "Task.output:rechnungsposition.type",
+        "path": "Task.output.type",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "rechnungsposition",
+              "system": "https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsworkflow-outputtype-cs"
+            }
+          ]
+        },
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsworkflow-outputtype-cs"
+        }
+      },
+      {
+        "id": "Task.output:rechnungsposition.value[x]",
+        "path": "Task.output.value[x]",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/ChargeItem"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Task.output:rechnungsposition.value[x].reference",
+        "path": "Task.output.value[x].reference",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Task.output:rechnungsdokument",
+        "path": "Task.output",
+        "sliceName": "rechnungsdokument",
+        "short": "Rechnungsdokument (PDF)",
+        "comment": "Der Fachdienst extrahiert die PDF-Repräsentation der Rechnung um diese einzeln auffindbar zu machen.",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Task.output:rechnungsdokument.type",
+        "path": "Task.output.type",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "rechnungsposition",
+              "system": "https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsworkflow-outputtype-cs"
+            }
+          ]
+        },
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsworkflow-outputtype-cs"
+        }
+      },
+      {
+        "id": "Task.output:rechnungsdokument.value[x]",
+        "path": "Task.output.value[x]",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Binary"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Task.output:rechnungsdokument.value[x].reference",
         "path": "Task.output.value[x].reference",
         "min": 1,
         "mustSupport": true

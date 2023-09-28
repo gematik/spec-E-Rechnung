@@ -48,7 +48,7 @@ Id: ergpkv-rechnungsworkflow
   * ^slicing.discriminator.type = #pattern
   * ^slicing.discriminator.path = "type"
   * ^slicing.rules = #open
-* input contains sonstigeDokumente 0..* MS and originalRechnung 1..1 MS and rechnung 1..1 MS and rechnungsposition 1..* MS and rechnungsdokument 1..1 MS
+* input contains originalRechnung 1..1 MS
 * input[originalRechnung]
   * ^short = "Original-Rechnung"
   * ^comment = "Enthält die signierte Rechnung inkl. Rechnungsdetails, Rechnungspositionen, sowie PDF-Repräsentation. Der Fachdienst übernimmt die Rechnung ohne Veränderung aus dem System der Leistungserbringer:in."
@@ -58,46 +58,11 @@ Id: ergpkv-rechnungsworkflow
   * value[x] only Reference(Bundle)
   * valueReference 1..1 MS
     * reference 1..1 MS
-* input[rechnung]
-  *  ^comment = "Der Fachdienst extrahiert die Rechnung um diese einzeln auffindbar zu machen."
-  * type MS
-  * type from https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsworkflow-inputtype-cs (required)
-  * type = https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsworkflow-inputtype-cs#rechnung
-  * value[x] only Reference(Invoice)
-  * valueReference 1..1 MS
-    * reference 1..1 MS
-* input[rechnungsposition]
-  * ^short = "Einzelpositionen der Rechnung"
-  * ^comment = "Der Fachdienst extrahiert die Rechnungspositionen um diese einzeln auffindbar zu machen."
-  * type MS
-  * type from https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsworkflow-inputtype-cs (required)
-  * type = https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsworkflow-inputtype-cs#rechnungsposition
-  * value[x] only Reference(ChargeItem)
-  * valueReference 1..1 MS
-    * reference 1..1 MS
-* input[rechnungsdokument]
-  * ^short = "Rechnungsdokument (PDF)"
-  * ^comment = "Der Fachdienst extrahiert die PDF-Repräsentation der Rechnung um diese einzeln auffindbar zu machen."
-  * type MS
-  * type from https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsworkflow-inputtype-cs (required)
-  * type = https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsworkflow-inputtype-cs#rechnungsposition
-  * value[x] only Reference(Binary)
-  * valueReference 1..1 MS
-    * reference 1..1 MS
-* input[sonstigeDokumente]
-  * ^short = "Sonstige Dokumente"
-  * ^comment = "Der Fachdienst extrahiert die Rechnungsanhänge der Rechnung um diese einzeln auffindbar zu machen."
-  * type MS
-  * type from https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsworkflow-inputtype-cs (required)
-  * type = https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsworkflow-inputtype-cs#sonstigeDokumente
-  * value[x] only Reference(DocumentReference)
-  * valueReference 1..1 MS
-    * reference 1..1 MS
 * output MS
   * ^slicing.discriminator.type = #pattern
   * ^slicing.discriminator.path = "type"
   * ^slicing.rules = #open
-* output contains tokenPdf 1..1
+* output contains tokenPdf 1..1 and sonstigeDokumente 0..* MS and rechnung 1..1 MS and rechnungsposition 1..* MS and rechnungsdokument 1..1 MS
 * output[tokenPdf]
   * ^short = "Mit Token-Barcode versehenes PDF der Rechnung"
   * ^comment = "Eine PDF-Version der Rechnung inkl. aufgedrucktem Rechnungstoken muss immer durch den Fachdienst erstell werden und sollte als präferierte Variante an die Rehnungsempfänger:in, die Leistungserbringer:in oder den Kostenträger herausgegeben werden."
@@ -105,6 +70,41 @@ Id: ergpkv-rechnungsworkflow
   * type from https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsworkflow-outputtype-cs (required)
   * type = https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsworkflow-outputtype-cs#tokenPdf
   * value[x] only Reference(Binary)
+  * valueReference 1..1 MS
+    * reference 1..1 MS
+* output[rechnung]
+  *  ^comment = "Der Fachdienst extrahiert die Rechnung um diese einzeln auffindbar zu machen."
+  * type MS
+  * type from https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsworkflow-outputtype-cs (required)
+  * type = https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsworkflow-outputtype-cs#rechnung
+  * value[x] only Reference(Invoice)
+  * valueReference 1..1 MS
+    * reference 1..1 MS
+* output[rechnungsposition]
+  * ^short = "Einzelpositionen der Rechnung"
+  * ^comment = "Der Fachdienst extrahiert die Rechnungspositionen um diese einzeln auffindbar zu machen."
+  * type MS
+  * type from https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsworkflow-outputtype-cs (required)
+  * type = https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsworkflow-outputtype-cs#rechnungsposition
+  * value[x] only Reference(ChargeItem)
+  * valueReference 1..1 MS
+    * reference 1..1 MS
+* output[rechnungsdokument]
+  * ^short = "Rechnungsdokument (PDF)"
+  * ^comment = "Der Fachdienst extrahiert die PDF-Repräsentation der Rechnung um diese einzeln auffindbar zu machen."
+  * type MS
+  * type from https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsworkflow-outputtype-cs (required)
+  * type = https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsworkflow-outputtype-cs#rechnungsposition
+  * value[x] only Reference(Binary)
+  * valueReference 1..1 MS
+    * reference 1..1 MS
+* output[sonstigeDokumente]
+  * ^short = "Sonstige Dokumente"
+  * ^comment = "Der Fachdienst extrahiert die Rechnungsanhänge der Rechnung um diese einzeln auffindbar zu machen."
+  * type MS
+  * type from https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsworkflow-outputtype-cs (required)
+  * type = https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsworkflow-outputtype-cs#sonstigeDokumente
+  * value[x] only Reference(DocumentReference)
   * valueReference 1..1 MS
     * reference 1..1 MS
 

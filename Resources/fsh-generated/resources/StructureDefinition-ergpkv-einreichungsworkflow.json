@@ -75,6 +75,7 @@
         "id": "Task.identifier:token",
         "path": "Task.identifier",
         "sliceName": "token",
+        "short": "Zugriffstoken",
         "min": 1,
         "max": "1",
         "mustSupport": true
@@ -109,6 +110,7 @@
       {
         "id": "Task.status",
         "path": "Task.status",
+        "short": "Taskstatus ( ready | completed )",
         "mustSupport": true,
         "binding": {
           "strength": "required",
@@ -118,6 +120,8 @@
       {
         "id": "Task.businessStatus",
         "path": "Task.businessStatus",
+        "short": "Workflowstatus",
+        "comment": "neu | offen | eingereicht | erledigt",
         "min": 1,
         "mustSupport": true,
         "binding": {
@@ -128,12 +132,14 @@
       {
         "id": "Task.intent",
         "path": "Task.intent",
+        "short": "fix: proposal",
         "patternCode": "proposal",
         "mustSupport": true
       },
       {
         "id": "Task.code",
         "path": "Task.code",
+        "short": "fix: einreichungsworkflow",
         "min": 1,
         "patternCodeableConcept": {
           "coding": [
@@ -148,6 +154,7 @@
       {
         "id": "Task.focus",
         "path": "Task.focus",
+        "short": "Rechnungsbezug",
         "min": 1,
         "type": [
           {
@@ -162,6 +169,7 @@
       {
         "id": "Task.requester",
         "path": "Task.requester",
+        "short": "Rechnungsempfänger",
         "min": 1,
         "type": [
           {
@@ -176,13 +184,13 @@
       {
         "id": "Task.requester.identifier",
         "path": "Task.requester.identifier",
+        "short": "Krankenversichertennummer (KVID)",
         "min": 1,
         "type": [
           {
             "code": "Identifier",
             "profile": [
-              "http://fhir.de/StructureDefinition/identifier-kvid-10",
-              "http://fhir.de/StructureDefinition/identifier-pkv-kvid-10"
+              "http://fhir.de/StructureDefinition/identifier-kvid-10"
             ]
           }
         ],
