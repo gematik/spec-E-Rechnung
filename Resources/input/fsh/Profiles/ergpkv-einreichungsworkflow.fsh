@@ -25,7 +25,7 @@ Id: ergpkv-einreichungsworkflow
 * businessStatus from https://gematik.de/fhir/ergpkv/ValueSet/ergpkv-einreichungsworkflow-businessStatus-vs (required)
 * intent MS
   * ^short = "fix: proposal"
-* intent = http://hl7.org/fhir/request-intent#proposal (exactly)
+* intent = http://hl7.org/fhir/request-intent#proposal
 * code 1.. MS
   * ^short = "fix: einreichungsworkflow"
 * code = https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-workflow-cs#einreichungsworkflow
