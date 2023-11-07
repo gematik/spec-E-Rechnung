@@ -1,0 +1,85 @@
+{
+  "resourceType": "Parameters",
+  "id": "BeispielParameterCanReceiveInvoiceOutput1-LE",
+  "meta": {
+    "profile": [
+      "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-canreceiveinvoice-outputparameter"
+    ]
+  },
+  "parameter": [
+    {
+      "name": "rechnungsempfaenger",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "BeispielPatientManfredMustervater1-FD",
+        "meta": {
+          "profile": [
+            "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-canreceiveinvoiceresponsepatient"
+          ]
+        },
+        "name": [
+          {
+            "text": "Manfred Mustervater"
+          }
+        ],
+        "gender": "male",
+        "identifier": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "code": "gkv",
+                  "system": "http://fhir.de/CodeSystem/identifier-type-de-basis"
+                }
+              ]
+            },
+            "system": "http://fhir.de/sid/gkv/kvid-10",
+            "value": "A123456789"
+          }
+        ],
+        "address": [
+          {
+            "text": "Musterweg 2, 3. Etage, 98764 Musterhausen, DE"
+          }
+        ]
+      }
+    },
+    {
+      "name": "versichertePerson",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "BeispielPatientManfredMustervater1-FD",
+        "meta": {
+          "profile": [
+            "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-canreceiveinvoiceresponsepatient"
+          ]
+        },
+        "name": [
+          {
+            "text": "Manfred Mustervater"
+          }
+        ],
+        "gender": "male",
+        "identifier": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "code": "gkv",
+                  "system": "http://fhir.de/CodeSystem/identifier-type-de-basis"
+                }
+              ]
+            },
+            "system": "http://fhir.de/sid/gkv/kvid-10",
+            "value": "A123456789"
+          }
+        ],
+        "address": [
+          {
+            "text": "Musterweg 2, 3. Etage, 98764 Musterhausen, DE"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 {
   "resourceType": "Binary",
-  "id": "BeispielRechnungsPDF1",
+  "id": "BeispielRechnungsPDF1-LE",
   "meta": {
     "profile": [
       "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-rechnungsdokument"

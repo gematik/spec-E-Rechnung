@@ -1,6 +1,6 @@
 {
   "resourceType": "DocumentReference",
-  "id": "BeispielSonstigesDokument1",
+  "id": "BeispielSonstigesDokument1-LE",
   "meta": {
     "profile": [
       "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-sonstiges-dokument"

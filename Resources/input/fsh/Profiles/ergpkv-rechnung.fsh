@@ -72,31 +72,3 @@ Id: ergpkv-pdf-repraesentation-rechnung
 Title: "ERGPKV PDF Repräsentation Rechnung"
 * value[x] only Reference(Binary)
 
-Instance: BeispielRechnung1
-InstanceOf: ERGPKVRechnung
-* extension[pdf-repraesentation-rechnung]
-  * valueReference = Reference(BeispielRechnungsPDF1)
-* identifier[rechnungsnummer]
-  * system = "http://irgendein-leistungserbinger.de/fhir/sid/rechnungen"
-  * value = "2023-01"
-* recipient 
-  * reference = "Patient/irgendein-lokaler-link-der-vom-fachdienst-ignoriert-wird"
-  * identifier.value = "A123456789"
-  * display = "Mustervater, Manfred"
-* subject
-  * display = "Musterkind, Max"
-* date = 2023-11-07
-* issuer  
-  * identifier.value = "123456789"
-  * display = "Musterärztin, Dr. Mathilde"
-* totalPriceComponent[tax]
-  * factor = 0.19
-  * amount
-    * value = 19
-    * currency = #EUR
-* totalNet 
-  * value = 100
-  * currency = #EUR
-* totalGross
-  * value = 119
-  * currency = #EUR
