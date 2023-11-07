@@ -1,6 +1,12 @@
 Profile: ERGPKVRechnungsworkflow
 Title: "ERGPKV Rechnungsworkflow"
 Parent: Task
+Description: "Diese Task-Ressource wird vom Fachdienst angelegt 
+und beschreibt den Vorgang des Einstellens 
+einer Rechnung in das Postfach eines Patienten bzw. Rechnungsempfängers.
+Sie kann als &quot;Kuvert&quot; interpretiert werden, in dem ein 
+Leistungserbringer Rechnungen und assoziierte Dokumente aggregiert 
+und im Postfach eines Patienten bzw. Rechnungsempfängers bereitstellt."
 Id: ergpkv-rechnungsworkflow
 * extension contains http://hl7.org/fhir/5.0/StructureDefinition/extension-Task.requestedPerformer named rechnungsempfaenger 1..1 MS
   * ^short = "Rechnungsempfänger:in"
@@ -51,7 +57,9 @@ Id: ergpkv-rechnungsworkflow
 * input contains originalRechnung 1..1 MS
 * input[originalRechnung]
   * ^short = "Original-Rechnung"
-  * ^comment = "Enthält die signierte Rechnung inkl. Rechnungsdetails, Rechnungspositionen, sowie PDF-Repräsentation. Der Fachdienst übernimmt die Rechnung ohne Veränderung aus dem System der Leistungserbringer:in."
+  * ^comment = "Das Bundle enthält die signierte Rechnung inkl. Rechnungsdetails (Invoice), 
+  Rechnungspositionen(ChargeItems), sowie PDF-Repräsentation (Binary/PDF). 
+  Der Fachdienst persistiert dieses Bundle unverändert."
   * type MS
   * type from https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsworkflow-inputtype-cs (required)
   * type = https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsworkflow-inputtype-cs#originalRechnung
@@ -62,10 +70,20 @@ Id: ergpkv-rechnungsworkflow
   * ^slicing.discriminator.type = #pattern
   * ^slicing.discriminator.path = "type"
   * ^slicing.rules = #open
-* output contains tokenPdf 1..1 and sonstigeDokumente 0..* MS and rechnung 1..1 MS and rechnungsposition 1..* MS and rechnungsdokument 1..1 MS
+* output contains tokenPdf 1..1 
+    and sonstigeDokumente 0..* MS 
+    and rechnung 1..1 MS 
+    and rechnungsposition 1..* MS 
+    //and rechnungsdokument 1..1 MS
 * output[tokenPdf]
-  * ^short = "Mit Token-Barcode versehenes PDF der Rechnung"
-  * ^comment = "Eine PDF-Version der Rechnung inkl. aufgedrucktem Rechnungstoken muss immer durch den Fachdienst erstell werden und sollte als präferierte Variante an die Rehnungsempfänger:in, die Leistungserbringer:in oder den Kostenträger herausgegeben werden."
+  * ^short = "Vom Fachdienst mit Token-Barcode versehenes PDF der Rechnung"
+  * ^comment = "Wenn das Rechnungs-PDF beim Leistungserbringer ausgedruckt 
+  oder auf andere Art und Weise weitergegeben wird, so muss sichergestellt sein, dass 
+  die mit dem Token-Barcode versehene Version des PDFs verwendet wird. Dadurch ist sichergestellt,
+  dass das Dokument stets der im Postfach eingestellen Rechnung zugeordnet werden kann 
+  und Doppelerfassungen/-einrichungen vermieden werden. Der Fachdienst übernimmt die Aufgabe, 
+  das vom Leistungserbringer eingereichte PDF mit dem Token-Barcode zu versehen und gibt das 
+  entsprechend markierte Dokument an das System des Leistungserbringers zurück."
   * type MS
   * type from https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsworkflow-outputtype-cs (required)
   * type = https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsworkflow-outputtype-cs#tokenPdf
@@ -89,18 +107,20 @@ Id: ergpkv-rechnungsworkflow
   * value[x] only Reference(ChargeItem)
   * valueReference 1..1 MS
     * reference 1..1 MS
-* output[rechnungsdokument]
-  * ^short = "Rechnungsdokument (PDF)"
-  * ^comment = "Der Fachdienst extrahiert die PDF-Repräsentation der Rechnung um diese einzeln auffindbar zu machen."
-  * type MS
-  * type from https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsworkflow-outputtype-cs (required)
-  * type = https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsworkflow-outputtype-cs#rechnungsposition
-  * value[x] only Reference(Binary)
-  * valueReference 1..1 MS
-    * reference 1..1 MS
+// Auskommentiert, da redundant. Für den Zugriff durch den Versicherten brauchen wir nur das Token-PDF
+// das unveränderte Original wird innerhalb des signierten Bundles persisitiert. Extraktion ist unnötig.
+//* output[rechnungsdokument]
+//  * ^short = "Rechnungsdokument (PDF)"
+//  * ^comment = "Der Fachdienst extrahiert die PDF-Repräsentation der Rechnung um diese einzeln auffindbar zu machen."
+//  * type MS
+//  * type from https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsworkflow-outputtype-cs (required)
+//  * type = https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsworkflow-outputtype-cs#rechnungsposition
+//  * value[x] only Reference(Binary)
+//  * valueReference 1..1 MS
+//    * reference 1..1 MS
 * output[sonstigeDokumente]
   * ^short = "Sonstige Dokumente"
-  * ^comment = "Der Fachdienst extrahiert die Rechnungsanhänge der Rechnung um diese einzeln auffindbar zu machen."
+  * ^comment = "Der Fachdienst extrahiert die zusammen mit der Rechnung eingereichten Dokumente um diese einzeln auffindbar zu machen."
   * type MS
   * type from https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsworkflow-outputtype-cs (required)
   * type = https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsworkflow-outputtype-cs#sonstigeDokumente
@@ -121,5 +141,5 @@ Usage: #example
 * input[originalRechnung].valueReference.reference = "Bundle/originalRechnung"
 * output[rechnung].valueReference.reference = "Invoice/rechnung"
 * output[rechnungsposition].valueReference.reference = "ChargeItem/rechnungsposition"
-* output[rechnungsdokument].valueReference.reference = "Binary/rechnungsdokument"
+//* output[rechnungsdokument].valueReference.reference = "Binary/rechnungsdokument"
 * output[tokenPdf].valueReference.reference = "Binary/tokenPdf"

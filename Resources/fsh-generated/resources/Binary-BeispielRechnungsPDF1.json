@@ -1,0 +1,11 @@
+{
+  "resourceType": "Binary",
+  "id": "BeispielRechnungsPDF1",
+  "meta": {
+    "profile": [
+      "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-rechnungsdokument"
+    ]
+  },
+  "contentType": "application/pdf",
+  "data": "JVBERi0xLjUNJeLjz9MNCjEwIDAgb2JqDTw8L0xpbmVhcml6ZWQgMS9MIDEzMDA2OC9PIDEyL0Ug\r\nMTI1NzM1L04gMS9UIDEyOTc2NC9IIFsgNTQ2IDIwNF0+Pg1lbmRvYmoNICAgICAgICAgICAgICAg\r\nDQo0MSAwIG9iag08PC9EZWNvZGVQYXJtczw8L0NvbHVtbnMgNS9QcmVkaWN0b3IgMTI+Pi9GaWx0\r\nZXIvRmxhdGVEZWNvZGUvSURbPDRDRDkwQkY3MkI2NjU5NkVCMEJDQzlBN0ZGNzIwMjE3PjwyOTkw\r\nODAzRkY2QTc0OTQ4OEEwNTdBREQzRDdFQTM0Nj5dL0luZGV4WzEwIDU4XS9JbmZvIDkgMCBSL0xl\r\nbmd0aCAxMzcvUHJldiAxMjk3NjUvUm9vdCAxMSAwIFIvU2l6ZSA2OC9UeXBlL1hSZWYvV1sxIDMg\r\nMV0+PnN0cmVhbQ0KaN5iYmRgEGBgYmBgugciGf1AJMNmEMn2H0RyxIJI9slg9k4wuQNMHgCLZ4DJ\r\nNLBIJIjkagGbA2abeIDZmiAyvhFsMkic0fApWFwDRPoWgNmhIFIzHMyWBZFWWWD1YSCS/yhYXAFs\r\nyxUQyXoQSP6XmsbABHT/TLBKBsZBRAKDTvQFQIABAIHlFZoNCmVuZHN0cmVhbQ1lbmRvYmoNc3Rh"
+}

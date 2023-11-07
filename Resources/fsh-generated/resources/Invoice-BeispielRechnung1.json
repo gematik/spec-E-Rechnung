@@ -1,0 +1,77 @@
+{
+  "resourceType": "Invoice",
+  "id": "BeispielRechnung1",
+  "meta": {
+    "profile": [
+      "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-rechnung"
+    ]
+  },
+  "status": "issued",
+  "type": {
+    "coding": [
+      {
+        "code": "erechnung",
+        "system": "https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnung-type-cs"
+      }
+    ]
+  },
+  "identifier": [
+    {
+      "type": {
+        "coding": [
+          {
+            "code": "invoice",
+            "system": "http://fhir.de/CodeSystem/identifier-type-de-basis"
+          }
+        ]
+      },
+      "system": "http://irgendein-leistungserbinger.de/fhir/sid/rechnungen",
+      "value": "2023-01"
+    }
+  ],
+  "recipient": {
+    "identifier": {
+      "system": "http://fhir.de/sid/gkv/kvid-10",
+      "value": "A123456789"
+    },
+    "reference": "Patient/irgendein-lokaler-link-der-vom-fachdienst-ignoriert-wird",
+    "display": "Mustervater, Manfred"
+  },
+  "issuer": {
+    "identifier": {
+      "system": "https://gematik.de/fhir/sid/telematik-id",
+      "value": "123456789"
+    },
+    "display": "Musterärztin, Dr. Mathilde"
+  },
+  "extension": [
+    {
+      "url": "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-pdf-repraesentation-rechnung",
+      "valueReference": {
+        "reference": "Binary/BeispielRechnungsPDF1"
+      }
+    }
+  ],
+  "totalPriceComponent": [
+    {
+      "type": "tax",
+      "factor": 0.19,
+      "amount": {
+        "value": 19,
+        "currency": "EUR"
+      }
+    }
+  ],
+  "subject": {
+    "display": "Musterkind, Max"
+  },
+  "date": "2023-11-07",
+  "totalNet": {
+    "value": 100,
+    "currency": "EUR"
+  },
+  "totalGross": {
+    "value": 119,
+    "currency": "EUR"
+  }
+}

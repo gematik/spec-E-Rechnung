@@ -117,6 +117,7 @@
         "id": "DocumentReference.content",
         "path": "DocumentReference.content",
         "short": "Angehängtes Dokument",
+        "max": "1",
         "mustSupport": true
       },
       {
