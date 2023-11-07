@@ -1,0 +1,28 @@
+{
+  "resourceType": "DocumentReference",
+  "id": "BeispielSonstigesDokument1",
+  "meta": {
+    "profile": [
+      "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-sonstiges-dokument"
+    ]
+  },
+  "status": "current",
+  "content": [
+    {
+      "attachment": {
+        "contentType": "application/pdf",
+        "data": "JVBERi0xLjUNJeLjz9MNCjEwIDAgb2JqDTw8L0xpbmVhcml6ZWQgMS9MIDEzMDA2OC9PIDEyL0Ug"
+      }
+    }
+  ],
+  "type": {
+    "coding": [
+      {
+        "code": "PT130102",
+        "system": "http://dvmd.de/fhir/CodeSystem/kdl",
+        "display": "Molekularpathologiebefund"
+      }
+    ]
+  },
+  "description": "Molekularpathologiebefund vom 31.12.21"
+}

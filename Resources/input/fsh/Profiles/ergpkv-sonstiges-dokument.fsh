@@ -1,3 +1,6 @@
+Alias: $kdl = http://dvmd.de/fhir/CodeSystem/kdl
+
+
 Profile: ERGPKVSonstigesDokument
 Title: "ERGPKV Sonstiges Dokument"
 Parent: DocumentReference
@@ -22,9 +25,9 @@ Id: ergpkv-sonstiges-dokument
 * subject MS
   * reference 1..1 MS
   * ^comment = "Der Fachdienst verknüpft alle Dokumente mit der Rechnungsempfänger:in oder der Patient:in"
-* content MS
+* content 1..1 MS
   * ^short = "Angehängtes Dokument"
-  * attachment MS
+  * attachment 1..1 MS
     * ^short = "Anhang"
     * contentType 1.. MS
     * contentType = #application/pdf
@@ -36,3 +39,10 @@ Id: ergpkv-sonstiges-dokument
     * data 0.. MS
       * ^short = "eingebettetes Dokument"
       * ^comment = "Der Fachdienst extrahiert das base64-kodierte PDF und verlinkt eine Binary-Repräsentation nach Entgegennahme der Rechnung. Dieses Feld muss durch die Applikation der Leistungserbringer:in oder der Patient:in gefüllt werden."
+
+
+Instance: BeispielSonstigesDokument1
+InstanceOf: ERGPKVSonstigesDokument
+* type = $kdl#PT130102 "Molekularpathologiebefund"
+* description = "Molekularpathologiebefund vom 31.12.21"
+* content.attachment.data = "JVBERi0xLjUNJeLjz9MNCjEwIDAgb2JqDTw8L0xpbmVhcml6ZWQgMS9MIDEzMDA2OC9PIDEyL0Ug"

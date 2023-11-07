@@ -94,19 +94,6 @@
       "valueReference": {
         "reference": "ChargeItem/rechnungsposition"
       }
-    },
-    {
-      "type": {
-        "coding": [
-          {
-            "code": "rechnungsposition",
-            "system": "https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsworkflow-outputtype-cs"
-          }
-        ]
-      },
-      "valueReference": {
-        "reference": "Binary/rechnungsdokument"
-      }
     }
   ],
   "requester": {
