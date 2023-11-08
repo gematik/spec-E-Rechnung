@@ -1,6 +1,6 @@
 {
   "resourceType": "Invoice",
-  "id": "BeispielRechnung1",
+  "id": "BeispielRechnung1-LE",
   "meta": {
     "profile": [
       "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-rechnung"
@@ -35,20 +35,20 @@
       "value": "A123456789"
     },
     "reference": "Patient/irgendein-lokaler-link-der-vom-fachdienst-ignoriert-wird",
-    "display": "Mustervater, Manfred"
+    "display": "Manfred Mustervater"
   },
   "issuer": {
     "identifier": {
       "system": "https://gematik.de/fhir/sid/telematik-id",
       "value": "123456789"
     },
-    "display": "Musterärztin, Dr. Mathilde"
+    "display": "Dr. Mathilde Musterärztin"
   },
   "extension": [
     {
       "url": "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-pdf-repraesentation-rechnung",
       "valueReference": {
-        "reference": "Binary/BeispielRechnungsPDF1"
+        "reference": "Binary/BeispielRechnungsPDF1-LE"
       }
     }
   ],
@@ -63,7 +63,7 @@
     }
   ],
   "subject": {
-    "display": "Musterkind, Max"
+    "display": "Max Musterkind"
   },
   "date": "2023-11-07",
   "totalNet": {

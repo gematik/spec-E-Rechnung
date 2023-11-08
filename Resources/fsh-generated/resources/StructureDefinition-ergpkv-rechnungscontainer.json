@@ -5,6 +5,7 @@
   "name": "ERGPKVRechungscontainer",
   "title": "ERGPKV Rechnungscontainer",
   "status": "draft",
+  "description": "Signiertes Bundle, das die strukturierten Rechnungsdaten (Invoice + ChargeItems), sowie das Rechnungsdokument(Binary) enthält",
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -115,7 +116,7 @@
       {
         "id": "Bundle.signature",
         "path": "Bundle.signature",
-        "min": 1,
+        "short": "elektronische Signatur des Leistungserbringers",
         "mustSupport": true
       }
     ]

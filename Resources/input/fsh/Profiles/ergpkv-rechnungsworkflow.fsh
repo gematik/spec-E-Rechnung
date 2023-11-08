@@ -143,3 +143,5 @@ Usage: #example
 * output[rechnungsposition].valueReference.reference = "ChargeItem/rechnungsposition"
 //* output[rechnungsdokument].valueReference.reference = "Binary/rechnungsdokument"
 * output[tokenPdf].valueReference.reference = "Binary/tokenPdf"
+
+
