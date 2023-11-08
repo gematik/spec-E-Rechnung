@@ -139,7 +139,7 @@ Description: "Profil zur Validierung der Output-Parameter für $erechnung-submit
   * part 0..0
 * parameter[tokenPdf]
   * name MS
-  * name = "modus"
+  * name = "tokenPdf"
   * value[x] 0..1 MS
   * value[x] only Reference(Binary)
   * resource 0..0

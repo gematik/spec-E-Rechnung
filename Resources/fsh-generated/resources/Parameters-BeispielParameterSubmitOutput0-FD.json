@@ -23,7 +23,7 @@
       "name": "token"
     },
     {
-      "name": "modus",
+      "name": "tokenPdf",
       "valueReference": {
         "reference": "Binary/BeispielBinaryRechnungsPDF0-FD"
       }
