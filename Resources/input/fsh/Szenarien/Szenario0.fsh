@@ -49,7 +49,7 @@ InstanceOf: ERGPKVRechnung
 
 Instance: BeispielRechnungsPDF0-LE
 InstanceOf: ERGPKVRechnungsdokument
-* data = "DIESISTNUREINBEISPIELDIESISTKEINVALIDESPDF"
+* data = "DIESISTNUREINBEISPIELDIESISTKEINVALIDESPDF00"
 
 
 // **************************************************
@@ -160,5 +160,5 @@ InstanceOf: ERGPKVRechnung
 Instance: BeispielBinaryRechnungsPDF0-FD
 InstanceOf: ERGPKVRechnungsdokument
 //PDF mit aufgedrucktem Token-Code
-* data = "DIESISTNUREINBEISPIELDIESISTKEINVALIDESPDF"
+* data = "DIESISTNUREINBEISPIELDIESISTKEINVALIDESPDF00"
 

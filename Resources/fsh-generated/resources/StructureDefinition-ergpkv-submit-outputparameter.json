@@ -51,7 +51,7 @@
       {
         "id": "Parameters.parameter:tokenPdf.name",
         "path": "Parameters.parameter.name",
-        "patternString": "modus",
+        "patternString": "tokenPdf",
         "mustSupport": true
       },
       {

@@ -49,14 +49,14 @@ InstanceOf: ERGPKVRechnung
 
 Instance: BeispielRechnungsPDF1-LE
 InstanceOf: ERGPKVRechnungsdokument
-* data = "DIESISTNUREINBEISPIELDIESISTKEINVALIDESPDF"
+* data = "DIESISTNUREINBEISPIELDIESISTKEINVALIDESPDF00"
 
 
 Instance: BeispielSonstigesDokument1-LE
 InstanceOf: ERGPKVSonstigesDokument
 * type = $kdl#PT130102 "Molekularpathologiebefund"
 * description = "Molekularpathologiebefund vom 31.12.21"
-* content.attachment.data = "DIESISTNUREINBEISPIELDIESISTKEINVALIDESPDF"
+* content.attachment.data = "DIESISTNUREINBEISPIELDIESISTKEINVALIDESPDF00"
 
 // **************************************************
 // Operations zwischen LE und FD
@@ -177,12 +177,12 @@ InstanceOf: ERGPKVSonstigesDokument
 
 Instance: BeispielBinarySonstigesDokument1-FD
 InstanceOf: ERGPKVRechnungsdokument
-* data = "DIESISTNUREINBEISPIELDIESISTKEINVALIDESPDF"
+* data = "DIESISTNUREINBEISPIELDIESISTKEINVALIDESPDF00"
 * securityContext = Reference(BeispielDocumentReferenceSonstigesDokument1-FD)
 
 Instance: BeispielBinaryRechnungsPDF1-FD
 InstanceOf: ERGPKVRechnungsdokument
 //PDF mit aufgedrucktem Token-Code
-* data = "DIESISTNUREINBEISPIELDIESISTKEINVALIDESPDF"
+* data = "DIESISTNUREINBEISPIELDIESISTKEINVALIDESPDF00"
 
 
