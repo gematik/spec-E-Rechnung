@@ -120,6 +120,7 @@ InstanceOf: ERGPKVRechnungsworkflow
 Usage: #example
 * extension[rechnungsempfaenger]
   * valueReference
+    * reference = "Patient/rechnungsempfaenger"
     * identifier.value = "<kvid>"
 * status = #ready
 * identifier[token].value = "<token>"

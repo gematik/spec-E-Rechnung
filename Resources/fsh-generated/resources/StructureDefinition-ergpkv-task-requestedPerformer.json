@@ -53,6 +53,7 @@
       {
         "id": "Extension.value[x].reference",
         "path": "Extension.value[x].reference",
+        "min": 1,
         "mustSupport": true
       },
       {

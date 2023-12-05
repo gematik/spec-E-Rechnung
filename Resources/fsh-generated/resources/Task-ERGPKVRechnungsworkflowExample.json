@@ -22,7 +22,8 @@
         "identifier": {
           "system": "http://fhir.de/sid/gkv/kvid-10",
           "value": "<kvid>"
-        }
+        },
+        "reference": "Patient/rechnungsempfaenger"
       }
     }
   ],
