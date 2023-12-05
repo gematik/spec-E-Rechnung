@@ -140,9 +140,8 @@ Description: "Profil zur Validierung der Output-Parameter für $erechnung-submit
 * parameter[tokenPdf]
   * name MS
   * name = "tokenPdf"
-  * value[x] 0..1 MS
-  * value[x] only Reference(Binary)
-  * resource 0..0
+  * value[x] 0..0
+  * resource MS
   * part 0..0
 
 // ------------- Terminology -------------
@@ -167,7 +166,7 @@ Instance: ERGPKVRParametersSubmitOutput
 InstanceOf: ERGPKVRParametersSubmitOutput
 Usage: #example
 * parameter[token].valueIdentifier.value = "<token>"
-* parameter[tokenPdf].valueReference.reference = "Binary/tokenPdf"
+* parameter[tokenPdf].resource = BeispielBinaryRechnungsPDF0-FD
 
 Instance: ERGPKVRParametersSubmitOutputWarnung
 InstanceOf: ERGPKVRParametersSubmitOutput

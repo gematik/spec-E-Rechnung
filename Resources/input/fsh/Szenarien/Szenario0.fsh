@@ -89,7 +89,7 @@ InstanceOf: ERGPKVRParametersSubmitInput
 Instance: BeispielParameterSubmitOutput0-FD
 InstanceOf: ERGPKVRParametersSubmitOutput
 * parameter[token].valueIdentifier.value = "123-456-789"
-* parameter[tokenPdf].valueReference = Reference(BeispielBinaryRechnungsPDF0-FD) 
+* parameter[tokenPdf].resource = BeispielBinaryRechnungsPDF0-FD
 
 
 // **************************************************

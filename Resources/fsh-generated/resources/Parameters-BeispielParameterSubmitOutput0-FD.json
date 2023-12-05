@@ -24,8 +24,16 @@
     },
     {
       "name": "tokenPdf",
-      "valueReference": {
-        "reference": "Binary/BeispielBinaryRechnungsPDF0-FD"
+      "resource": {
+        "resourceType": "Binary",
+        "id": "BeispielBinaryRechnungsPDF0-FD",
+        "meta": {
+          "profile": [
+            "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-rechnungsdokument"
+          ]
+        },
+        "contentType": "application/pdf",
+        "data": "DIESISTNUREINBEISPIELDIESISTKEINVALIDESPDF00"
       }
     }
   ]

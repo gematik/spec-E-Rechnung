@@ -57,20 +57,12 @@
       {
         "id": "Parameters.parameter:tokenPdf.value[x]",
         "path": "Parameters.parameter.value[x]",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Binary"
-            ]
-          }
-        ],
-        "mustSupport": true
+        "max": "0"
       },
       {
         "id": "Parameters.parameter:tokenPdf.resource",
         "path": "Parameters.parameter.resource",
-        "max": "0"
+        "mustSupport": true
       },
       {
         "id": "Parameters.parameter:tokenPdf.part",
