@@ -1,6 +1,5 @@
-// ToDo: .text für .name und. .address ausreichend?
 Profile: ERGPKVersichertePerson
-Title: "ERGPKV CanReceiveInvoice Response Patient"
+Title: "ERGPKVersichertePerson"
 Parent: Patient
 Id: ergpkv-canreceiveinvoiceresponsepatient
 * id 1..1 MS
@@ -16,8 +15,10 @@ Id: ergpkv-canreceiveinvoiceresponsepatient
   * type 1.. MS
   * system MS
   * value MS
-* name.text 1.. MS
-* address.text 1.. MS
+* name 1.. MS
+  * text 1.. MS
+* address 1.. MS
+  * text 1.. MS
 
 Instance: ERGPKVRechnungsworkflowCanReceiveInvoiceResponsePatient
 InstanceOf: ERGPKVersichertePerson
