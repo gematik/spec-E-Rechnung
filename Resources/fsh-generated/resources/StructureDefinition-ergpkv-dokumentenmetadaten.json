@@ -1,9 +1,9 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "ergpkv-sonstiges-dokument",
-  "url": "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-sonstiges-dokument",
-  "name": "ERGPKVSonstigesDokument",
-  "title": "ERGPKV Sonstiges Dokument",
+  "id": "ergpkv-dokumentenmetadaten",
+  "url": "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-dokumentenmetadaten",
+  "name": "ERGPKVDokumentenmetadaten",
+  "title": "ERGPKV Dokumentenmetadaten",
   "status": "draft",
   "fhirVersion": "4.0.1",
   "mapping": [

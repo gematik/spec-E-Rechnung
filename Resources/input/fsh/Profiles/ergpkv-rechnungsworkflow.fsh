@@ -81,11 +81,11 @@ Id: ergpkv-rechnungsworkflow
   dass das Dokument stets der im Postfach eingestellen Rechnung zugeordnet werden kann 
   und Doppelerfassungen/-einrichungen vermieden werden. Der Fachdienst übernimmt die Aufgabe, 
   das vom Leistungserbringer eingereichte PDF mit dem Token-Barcode zu versehen und gibt das 
-  entsprechend markierte Dokument an das System des Leistungserbringers zurück."
+  entsprechend markierte Dokument an das System des Leistungserbringers zurück. Dies erfolgt über eine DocumentReference-Ressource die auf das Binary mit dem PDF referenziert."
   * type MS
   * type from https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsworkflow-outputtype-cs (required)
   * type = https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsworkflow-outputtype-cs#tokenPdf
-  * value[x] only Reference(Binary)
+  * value[x] only Reference(DocumentReference)
   * valueReference 1..1 MS
     * reference 1..1 MS
 * output[rechnung]

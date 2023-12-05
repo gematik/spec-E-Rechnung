@@ -53,7 +53,7 @@ InstanceOf: ERGPKVRechnungsdokument
 
 
 Instance: BeispielSonstigesDokument1-LE
-InstanceOf: ERGPKVSonstigesDokument
+InstanceOf: ERGPKVDokumentenmetadaten
 * type = $kdl#PT130102 "Molekularpathologiebefund"
 * description = "Molekularpathologiebefund vom 31.12.21"
 * content.attachment.data = "DIESISTNUREINBEISPIELDIESISTKEINVALIDESPDF00"
@@ -167,7 +167,7 @@ InstanceOf: ERGPKVRechnung
   * currency = #EUR
 
 Instance: BeispielDocumentReferenceSonstigesDokument1-FD
-InstanceOf: ERGPKVSonstigesDokument
+InstanceOf: ERGPKVDokumentenmetadaten
 * type = $kdl#PT130102 "Molekularpathologiebefund"
 * description = "Molekularpathologiebefund vom 31.12.21"
 //TODO: Der Vater/Rechnungsempfänger ist in diesem Szenario NICHT das Subject des Dokumentes!!!

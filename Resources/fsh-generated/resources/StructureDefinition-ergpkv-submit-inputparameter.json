@@ -101,7 +101,7 @@
           {
             "code": "DocumentReference",
             "profile": [
-              "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-sonstiges-dokument"
+              "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-dokumentenmetadaten"
             ]
           }
         ],

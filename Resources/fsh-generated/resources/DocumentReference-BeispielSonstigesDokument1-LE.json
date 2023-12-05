@@ -3,7 +3,7 @@
   "id": "BeispielSonstigesDokument1-LE",
   "meta": {
     "profile": [
-      "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-sonstiges-dokument"
+      "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-dokumentenmetadaten"
     ]
   },
   "status": "current",

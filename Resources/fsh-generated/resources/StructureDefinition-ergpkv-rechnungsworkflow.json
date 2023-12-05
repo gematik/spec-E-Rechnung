@@ -272,7 +272,7 @@
         "path": "Task.output",
         "sliceName": "tokenPdf",
         "short": "Vom Fachdienst mit Token-Barcode versehenes PDF der Rechnung",
-        "comment": "Wenn das Rechnungs-PDF beim Leistungserbringer ausgedruckt \n  oder auf andere Art und Weise weitergegeben wird, so muss sichergestellt sein, dass \n  die mit dem Token-Barcode versehene Version des PDFs verwendet wird. Dadurch ist sichergestellt,\n  dass das Dokument stets der im Postfach eingestellen Rechnung zugeordnet werden kann \n  und Doppelerfassungen/-einrichungen vermieden werden. Der Fachdienst übernimmt die Aufgabe, \n  das vom Leistungserbringer eingereichte PDF mit dem Token-Barcode zu versehen und gibt das \n  entsprechend markierte Dokument an das System des Leistungserbringers zurück.",
+        "comment": "Wenn das Rechnungs-PDF beim Leistungserbringer ausgedruckt \n  oder auf andere Art und Weise weitergegeben wird, so muss sichergestellt sein, dass \n  die mit dem Token-Barcode versehene Version des PDFs verwendet wird. Dadurch ist sichergestellt,\n  dass das Dokument stets der im Postfach eingestellen Rechnung zugeordnet werden kann \n  und Doppelerfassungen/-einrichungen vermieden werden. Der Fachdienst übernimmt die Aufgabe, \n  das vom Leistungserbringer eingereichte PDF mit dem Token-Barcode zu versehen und gibt das \n  entsprechend markierte Dokument an das System des Leistungserbringers zurück. Dies erfolgt über eine DocumentReference-Ressource die auf das Binary mit dem PDF referenziert.",
         "min": 1,
         "max": "1"
       },
@@ -300,7 +300,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Binary"
+              "http://hl7.org/fhir/StructureDefinition/DocumentReference"
             ]
           }
         ],

@@ -99,7 +99,7 @@ Description: "Profil zur Validierung der Input-Parameter für $erechnung-submit"
   * name = "anhaenge"
   * value[x] 0..0
   * resource 0..1 MS
-  * resource only ERGPKVSonstigesDokument
+  * resource only ERGPKVDokumentenmetadaten
   * part 0..0
 * parameter[returnTokenPdf]
   * name MS

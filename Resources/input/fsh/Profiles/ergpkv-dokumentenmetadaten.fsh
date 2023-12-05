@@ -1,10 +1,9 @@
 Alias: $kdl = http://dvmd.de/fhir/CodeSystem/kdl
 
-
-Profile: ERGPKVSonstigesDokument
-Title: "ERGPKV Sonstiges Dokument"
+Profile: ERGPKVDokumentenmetadaten
+Title: "ERGPKV Dokumentenmetadaten"
 Parent: DocumentReference
-Id: ergpkv-sonstiges-dokument
+Id: ergpkv-dokumentenmetadaten
 * status MS
 * status = #current
   * ^short = "Dokumentenstatus"
