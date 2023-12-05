@@ -133,7 +133,7 @@ InstanceOf: ERGPKVRechnungsworkflow
 * input[originalRechnung].valueReference = Reference(BeispielRechnungsBundle1-LE)
 * output[rechnung].valueReference = Reference(BeispielRechnung1-FD)
 * output[tokenPdf].valueReference = Reference(BeispielRechnungsPDF1-FD)
-* output[sonstigeDokumente].valueReference = Reference(BeispielSonstigesDokument1-FD)
+* output[sonstigesDokument].valueReference = Reference(BeispielSonstigesDokument1-FD)
 * output[rechnungsposition].valueReference = Reference(DummyChargeItem)
 
 
