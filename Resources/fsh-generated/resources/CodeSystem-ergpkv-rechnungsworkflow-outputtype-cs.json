@@ -21,13 +21,9 @@
       "display": "Rechnungsposition"
     },
     {
-      "code": "rechnungsdokument",
-      "display": "Rechnungsdokument"
-    },
-    {
       "code": "sonstigeDokumente",
       "display": "Sonstige Dokumente"
     }
   ],
-  "count": 5
+  "count": 4
 }

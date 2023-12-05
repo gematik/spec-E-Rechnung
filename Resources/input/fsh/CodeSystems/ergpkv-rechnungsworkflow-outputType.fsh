@@ -5,5 +5,4 @@ Description:  "CodeSystem zur Identifitikation weiteren Artefakten die durch ein
 * #tokenPdf "Token PDF"
 * #rechnung "Rechnung"
 * #rechnungsposition "Rechnungsposition"
-* #rechnungsdokument "Rechnungsdokument"
 * #sonstigeDokumente "Sonstige Dokumente"
