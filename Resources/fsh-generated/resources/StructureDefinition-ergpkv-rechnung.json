@@ -36,20 +36,6 @@
   "differential": {
     "element": [
       {
-        "id": "Invoice.extension",
-        "path": "Invoice.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
-      },
-      {
         "id": "Invoice.extension:pdf-repraesentation-rechnung",
         "path": "Invoice.extension",
         "sliceName": "pdf-repraesentation-rechnung",
@@ -147,7 +133,7 @@
         "id": "Invoice.subject.display",
         "path": "Invoice.subject.display",
         "short": "Name des Leistungsemfängers",
-        "comment": "Der Name des Leistungeempfängers (behandelter Patient) muss angegeben werden \r\n    und kann vom Namen des Rechnungsempfängers abweichen, \r\n    z.B. wenn Eltern Rechnungen für ihre Kinder erhalten.",
+        "comment": "Der Name des Leistungeempfängers (behandelter Patient) muss angegeben werden \n    und kann vom Namen des Rechnungsempfängers abweichen, \n    z.B. wenn Eltern Rechnungen für ihre Kinder erhalten.",
         "min": 1,
         "mustSupport": true
       },
@@ -155,7 +141,7 @@
         "id": "Invoice.recipient",
         "path": "Invoice.recipient",
         "short": "Rechnungsempfänger",
-        "comment": "Das System des Leistungserbringers referenziert hier üblicherweise \r\n  auf die lokale Instanz des Patienten um die Rechnung einer Patientenakte zuzuordnen. \r\n  Der Fachdienst substitutiert den Link mit der Referenz auf das Postfach des Patienten \r\n  bei der Extraktion der Invoice aus dem Bundle. Die Angabe der Versichertennummer dient \r\n  der Plausibilisierung. Die KV-Nummer in der Instanz des Bundles muss daher mit der \r\n  KV-Nummer übereinstimmen, die im Fachdienst für das Postfach des Rechnungsempfängers hinterlegt ist. ",
+        "comment": "Das System des Leistungserbringers referenziert hier üblicherweise \n  auf die lokale Instanz des Patienten um die Rechnung einer Patientenakte zuzuordnen. \n  Der Fachdienst substitutiert den Link mit der Referenz auf das Postfach des Patienten \n  bei der Extraktion der Invoice aus dem Bundle. Die Angabe der Versichertennummer dient \n  der Plausibilisierung. Die KV-Nummer in der Instanz des Bundles muss daher mit der \n  KV-Nummer übereinstimmen, die im Fachdienst für das Postfach des Rechnungsempfängers hinterlegt ist. ",
         "min": 1,
         "type": [
           {

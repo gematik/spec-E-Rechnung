@@ -5,7 +5,7 @@
   "name": "ERGPKVRechnungsworkflow",
   "title": "ERGPKV Rechnungsworkflow",
   "status": "draft",
-  "description": "Diese Task-Ressource wird vom Fachdienst angelegt \r\nund beschreibt den Vorgang des Einstellens \r\neiner Rechnung in das Postfach eines Patienten bzw. Rechnungsempfängers.\r\nSie kann als &quot;Kuvert&quot; interpretiert werden, in dem ein \r\nLeistungserbringer Rechnungen und assoziierte Dokumente aggregiert \r\nund im Postfach eines Patienten bzw. Rechnungsempfängers bereitstellt.",
+  "description": "Diese Task-Ressource wird vom Fachdienst angelegt \nund beschreibt den Vorgang des Einstellens \neiner Rechnung in das Postfach eines Patienten bzw. Rechnungsempfängers.\nSie kann als &quot;Kuvert&quot; interpretiert werden, in dem ein \nLeistungserbringer Rechnungen und assoziierte Dokumente aggregiert \nund im Postfach eines Patienten bzw. Rechnungsempfängers bereitstellt.",
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -39,16 +39,6 @@
       {
         "id": "Task.extension",
         "path": "Task.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        },
         "short": "Rechnungsempfänger:in",
         "comment": "Rechnungsempfänger:in oder Patient:in. Diese Person ist die Rechnungsempfänger:in und damit für die Handhabung der Rechnung zuständig.",
         "min": 1
@@ -221,7 +211,7 @@
         "path": "Task.input",
         "sliceName": "originalRechnung",
         "short": "Original-Rechnung",
-        "comment": "Das Bundle enthält die signierte Rechnung inkl. Rechnungsdetails (Invoice), \r\n  Rechnungspositionen(ChargeItems), sowie PDF-Repräsentation (Binary/PDF). \r\n  Der Fachdienst persistiert dieses Bundle unverändert.",
+        "comment": "Das Bundle enthält die signierte Rechnung inkl. Rechnungsdetails (Invoice), \n  Rechnungspositionen(ChargeItems), sowie PDF-Repräsentation (Binary/PDF). \n  Der Fachdienst persistiert dieses Bundle unverändert.",
         "min": 1,
         "max": "1",
         "mustSupport": true
@@ -282,7 +272,7 @@
         "path": "Task.output",
         "sliceName": "tokenPdf",
         "short": "Vom Fachdienst mit Token-Barcode versehenes PDF der Rechnung",
-        "comment": "Wenn das Rechnungs-PDF beim Leistungserbringer ausgedruckt \r\n  oder auf andere Art und Weise weitergegeben wird, so muss sichergestellt sein, dass \r\n  die mit dem Token-Barcode versehene Version des PDFs verwendet wird. Dadurch ist sichergestellt,\r\n  dass das Dokument stets der im Postfach eingestellen Rechnung zugeordnet werden kann \r\n  und Doppelerfassungen/-einrichungen vermieden werden. Der Fachdienst übernimmt die Aufgabe, \r\n  das vom Leistungserbringer eingereichte PDF mit dem Token-Barcode zu versehen und gibt das \r\n  entsprechend markierte Dokument an das System des Leistungserbringers zurück.",
+        "comment": "Wenn das Rechnungs-PDF beim Leistungserbringer ausgedruckt \n  oder auf andere Art und Weise weitergegeben wird, so muss sichergestellt sein, dass \n  die mit dem Token-Barcode versehene Version des PDFs verwendet wird. Dadurch ist sichergestellt,\n  dass das Dokument stets der im Postfach eingestellen Rechnung zugeordnet werden kann \n  und Doppelerfassungen/-einrichungen vermieden werden. Der Fachdienst übernimmt die Aufgabe, \n  das vom Leistungserbringer eingereichte PDF mit dem Token-Barcode zu versehen und gibt das \n  entsprechend markierte Dokument an das System des Leistungserbringers zurück.",
         "min": 1,
         "max": "1"
       },
