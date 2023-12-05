@@ -25,14 +25,14 @@ Description: "Abfrage der Einwilligung der Rechnungsempfänger:in für die Zuste
   * documentation = "KVNR der Rechnungsempfänger:in"
   * type = #string
 * parameter[+]
-  * name = #name
+  * name = #displayname
   * use = #in
   * min = 1
   * max = "1"
   * documentation = "Vollständiger Displayname der Rechnungsempfänger:in. Zur Plausibilitätsprüfung."
   * type = #string
 * parameter[+]
-  * name = #name
+  * name = #rechnungsempfaenger
   * use = #out
   * min = 0
   * max = "1"
@@ -40,7 +40,7 @@ Description: "Abfrage der Einwilligung der Rechnungsempfänger:in für die Zuste
   * type = #Reference
   * targetProfile = Canonical(Patient)
 * parameter[+]
-  * name = #name
+  * name = #rechnungsempfaenger
   * use = #out
   * min = 0
   * max = "*"
