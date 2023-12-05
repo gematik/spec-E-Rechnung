@@ -31,6 +31,22 @@ Description: "Abfrage der Einwilligung der Rechnungsempfänger:in für die Zuste
   * max = "1"
   * documentation = "Vollständiger Displayname der Rechnungsempfänger:in. Zur Plausibilitätsprüfung."
   * type = #string
+* parameter[+]
+  * name = #name
+  * use = #out
+  * min = 0
+  * max = "1"
+  * documentation = "Referenz auf die Patient-Instanz im Fachdienst welche die versichterten Person repräsentiert."
+  * type = #Reference
+  * targetProfile = Canonical(Patient)
+* parameter[+]
+  * name = #name
+  * use = #out
+  * min = 0
+  * max = "*"
+  * documentation = "Referenz auf die Patient-Instanz im Fachdienst welche die Rechnungsempfänger:in repräsentiert."
+  * type = #Reference
+  * targetProfile = Canonical(Patient)
 
 // ------------- Input Parameter -------------
 
@@ -75,11 +91,11 @@ Parent: Parameters
 Id: ergpkv-canreceiveinvoice-outputparameter
 Title: "ERGPKV CanReceiveInvoice Output-Parameter"
 Description: "Profil zur Validierung der Output-Parameter für $erechnung-canReceiveInvoice"
-* parameter 2..2 MS
+* parameter 1..* MS
   * ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = "name"
   * ^slicing.rules = #closed
-* parameter contains rechnungsempfaenger 1..1 MS 
+* parameter contains rechnungsempfaenger 1..* MS 
     and versichertePerson 1..1 MS
 * parameter[rechnungsempfaenger]
   * name MS
