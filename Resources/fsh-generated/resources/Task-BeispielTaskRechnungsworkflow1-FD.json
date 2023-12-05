@@ -95,19 +95,6 @@
       "valueReference": {
         "reference": "ChargeItem/DummyChargeItem"
       }
-    },
-    {
-      "type": {
-        "coding": [
-          {
-            "code": "sonstigeDokumente",
-            "system": "https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsworkflow-outputtype-cs"
-          }
-        ]
-      },
-      "valueReference": {
-        "reference": "BeispielSonstigesDokument1-FD"
-      }
     }
   ],
   "requester": {

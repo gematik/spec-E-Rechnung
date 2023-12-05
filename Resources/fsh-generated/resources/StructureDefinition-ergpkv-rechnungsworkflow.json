@@ -313,17 +313,17 @@
         "mustSupport": true
       },
       {
-        "id": "Task.output:sonstigeDokumente",
+        "id": "Task.output:sonstigesDokument",
         "path": "Task.output",
-        "sliceName": "sonstigeDokumente",
-        "short": "Sonstige Dokumente",
+        "sliceName": "sonstigesDokument",
+        "short": "Sonstiges Dokument",
         "comment": "Der Fachdienst extrahiert die zusammen mit der Rechnung eingereichten Dokumente um diese einzeln auffindbar zu machen.",
         "min": 0,
         "max": "*",
         "mustSupport": true
       },
       {
-        "id": "Task.output:sonstigeDokumente.type",
+        "id": "Task.output:sonstigesDokument.type",
         "path": "Task.output.type",
         "patternCodeableConcept": {
           "coding": [
@@ -340,7 +340,7 @@
         }
       },
       {
-        "id": "Task.output:sonstigeDokumente.value[x]",
+        "id": "Task.output:sonstigesDokument.value[x]",
         "path": "Task.output.value[x]",
         "type": [
           {
@@ -353,7 +353,7 @@
         "mustSupport": true
       },
       {
-        "id": "Task.output:sonstigeDokumente.value[x].reference",
+        "id": "Task.output:sonstigesDokument.value[x].reference",
         "path": "Task.output.value[x].reference",
         "min": 1,
         "mustSupport": true

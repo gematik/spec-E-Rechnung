@@ -48,7 +48,6 @@ Id: ergpkv-rechnungsworkflow
   * identifier 1.. MS  
     * ^short = "Telematik-ID des Leistungserbringers"
   * identifier only IdentifierTelematikId
-  // No focus element, all inputs are equally important 
 * input MS
   * ^short = "Eingereichte Rechnung/Dokumente"
   * ^slicing.discriminator.type = #pattern
@@ -71,10 +70,9 @@ Id: ergpkv-rechnungsworkflow
   * ^slicing.discriminator.path = "type"
   * ^slicing.rules = #open
 * output contains tokenPdf 1..1 
-    and sonstigeDokumente 0..* MS 
+    and sonstigesDokument 0..* MS 
     and rechnung 1..1 MS 
-    and rechnungsposition 1..* MS 
-    //and rechnungsdokument 1..1 MS
+    and rechnungsposition 1..* MS
 * output[tokenPdf]
   * ^short = "Vom Fachdienst mit Token-Barcode versehenes PDF der Rechnung"
   * ^comment = "Wenn das Rechnungs-PDF beim Leistungserbringer ausgedruckt 
@@ -107,19 +105,8 @@ Id: ergpkv-rechnungsworkflow
   * value[x] only Reference(ChargeItem)
   * valueReference 1..1 MS
     * reference 1..1 MS
-// Auskommentiert, da redundant. Für den Zugriff durch den Versicherten brauchen wir nur das Token-PDF
-// das unveränderte Original wird innerhalb des signierten Bundles persisitiert. Extraktion ist unnötig.
-//* output[rechnungsdokument]
-//  * ^short = "Rechnungsdokument (PDF)"
-//  * ^comment = "Der Fachdienst extrahiert die PDF-Repräsentation der Rechnung um diese einzeln auffindbar zu machen."
-//  * type MS
-//  * type from https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsworkflow-outputtype-cs (required)
-//  * type = https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsworkflow-outputtype-cs#rechnungsposition
-//  * value[x] only Reference(Binary)
-//  * valueReference 1..1 MS
-//    * reference 1..1 MS
-* output[sonstigeDokumente]
-  * ^short = "Sonstige Dokumente"
+* output[sonstigesDokument]
+  * ^short = "Sonstiges Dokument"
   * ^comment = "Der Fachdienst extrahiert die zusammen mit der Rechnung eingereichten Dokumente um diese einzeln auffindbar zu machen."
   * type MS
   * type from https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsworkflow-outputtype-cs (required)
@@ -141,7 +128,6 @@ Usage: #example
 * input[originalRechnung].valueReference.reference = "Bundle/originalRechnung"
 * output[rechnung].valueReference.reference = "Invoice/rechnung"
 * output[rechnungsposition].valueReference.reference = "ChargeItem/rechnungsposition"
-//* output[rechnungsdokument].valueReference.reference = "Binary/rechnungsdokument"
 * output[tokenPdf].valueReference.reference = "Binary/tokenPdf"
 
 
