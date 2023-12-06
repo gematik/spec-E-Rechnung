@@ -65,10 +65,16 @@ Id: ergpkv-rechnung
   * ^short = "Nettobetrag der Rechnungssumme"
 * totalGross MS
   * ^short = "Bruttobetrag der Rechnungssumme"
+* paymentTerms.extension contains ERGPKVZahlungsziel named zahlungsziel 1..1 MS
 
 
 Extension: ERGPKVPDFRepraesentationRechnung
 Id: ergpkv-pdf-repraesentation-rechnung
 Title: "ERGPKV PDF Repräsentation Rechnung"
 * value[x] only Reference(Binary)
+
+Extension: ERGPKVZahlungsziel
+Id: ergpkv-zahlungsziel
+Title: "ERGPKV Zahlungsziel"
+* value[x] only date
 
