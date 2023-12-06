@@ -22,7 +22,7 @@ Id: ergpkv-rechnungsworkflow
   * ^slicing.rules = #open
 * identifier contains token 1..1 MS
 * identifier[token]
-  * ^short = "Zugriffstoken"
+  * ^short = "Rechnungstoken"
   * ^comment = "Zufällig durch den Fachdienst generiertes Token zu eindeutigen Identifizierung einer E-Rechnung."
   * type 1.. MS
   * type = http://terminology.hl7.org/CodeSystem/v2-0203#RI
