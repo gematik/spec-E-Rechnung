@@ -43,10 +43,10 @@ Id: ergpkv-rechnungsworkflow
 * code = https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-workflow-cs#rechnungsworkflow
 * requester only Reference(Organization or Practitioner)
   * ^short = "Leistungserbringer"
-  * ^comment = "Die Leistungserbringer:in wird eindeutig identifiziert durch eine Telematik-ID, diese kann entweder eine persönliche Telematik-ID sein (per HBA) oder für die geamte Organisation gelten (per SMC-B)."
+  * ^comment = "Die Leistungserbringer:in wird eindeutig identifiziert durch eine Telematik-ID, diese kann entweder eine persönliche Telematik-ID sein (per HBA) oder für die geamte Organisation gelten (per SMC-B). Es kann zudem der Fall eintreten, dass die Rechnung durch einen Abrechnungsdienstleister versendet wird. Hierbei zeigt die Telematik-ID auf die einreichende Organisation und nicht auf die Leistungserbringer:in."
 * requester 1.. MS
   * identifier 1.. MS  
-    * ^short = "Telematik-ID des Leistungserbringers"
+    * ^short = "Telematik-ID des Leistungserbringers bzw. der einreichenden Organisation"
   * identifier only IdentifierTelematikId
 * input MS
   * ^short = "Eingereichte Rechnung/Dokumente"
