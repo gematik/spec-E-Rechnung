@@ -4,6 +4,7 @@ Parent: Patient
 Id: ergpkv-canreceiveinvoiceresponsepatient
 * id 1..1 MS
 * gender 1.. MS
+* birthDate MS
 * identifier MS
   * ^slicing.discriminator.type = #pattern
   * ^slicing.discriminator.path = "$this"

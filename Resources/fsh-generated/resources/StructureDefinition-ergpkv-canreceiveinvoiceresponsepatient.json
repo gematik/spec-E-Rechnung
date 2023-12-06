@@ -121,6 +121,11 @@
         "mustSupport": true
       },
       {
+        "id": "Patient.birthDate",
+        "path": "Patient.birthDate",
+        "mustSupport": true
+      },
+      {
         "id": "Patient.address",
         "path": "Patient.address",
         "min": 1,
