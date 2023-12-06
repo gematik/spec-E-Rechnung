@@ -2,7 +2,8 @@ Profile: ERGPKVRechnung
 Title: "ERGPKV Rechnung"
 Parent: Invoice
 Id: ergpkv-rechnung
-* extension contains ERGPKVPDFRepraesentationRechnung named pdf-repraesentation-rechnung 0..1 MS
+* extension contains ERGPKVPDFRepraesentationRechnung named pdf-repraesentation-rechnung 0..1 MS and
+  ERGPKVInvoicePeriod named period 0..1 MS
 * identifier 1.. MS
 * identifier ^slicing.discriminator.type = #pattern
 * identifier ^slicing.discriminator.path = "type"

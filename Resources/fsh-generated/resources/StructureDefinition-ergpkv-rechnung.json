@@ -52,6 +52,22 @@
         "mustSupport": true
       },
       {
+        "id": "Invoice.extension:period",
+        "path": "Invoice.extension",
+        "sliceName": "period",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Invoice.period"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
         "id": "Invoice.identifier",
         "path": "Invoice.identifier",
         "slicing": {
