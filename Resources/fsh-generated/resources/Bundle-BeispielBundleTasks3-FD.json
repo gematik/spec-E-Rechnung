@@ -1,0 +1,117 @@
+{
+  "resourceType": "Bundle",
+  "id": "BeispielBundleTasks3-FD",
+  "type": "searchset",
+  "total": 1,
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Task",
+        "id": "BeispielTaskRechnungsworkflow3-FD",
+        "owner": {
+          "reference": "Patient/BeispielPatient3-FD"
+        },
+        "for": {
+          "reference": "Patient/BeispielPatient3-FD"
+        },
+        "status": "ready",
+        "intent": "proposal",
+        "businessStatus": {
+          "coding": [
+            {
+              "code": "neu",
+              "system": "https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsworkflow-businessStatus-cs"
+            }
+          ]
+        },
+        "identifier": [
+          {
+            "system": "https://gematik.de/fhir/sid/ergpkv-token",
+            "value": "123-456-789"
+          }
+        ],
+        "requester": {
+          "identifier": {
+            "value": "<telematik id>"
+          }
+        },
+        "input": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "display": "rechnung"
+                }
+              ]
+            },
+            "valueReference": {
+              "reference": "DocumentReference/BeispielDocumentReferenceRechnung3-LE"
+            }
+          },
+          {
+            "type": {
+              "coding": [
+                {
+                  "display": "signatur"
+                }
+              ]
+            },
+            "valueReference": {
+              "reference": "Provenance/BeispielProvenanceMitSignatur3-LE"
+            }
+          },
+          {
+            "type": {
+              "coding": [
+                {
+                  "display": "anhang"
+                }
+              ]
+            },
+            "valueReference": {
+              "reference": "DocumentReference/BeispielDocumentReferenceSonstigesDokument3-LE"
+            }
+          }
+        ],
+        "output": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "display": "tokenpdf"
+                }
+              ]
+            },
+            "valueReference": {
+              "reference": "BeispielRechnungsPDF3-FD"
+            }
+          },
+          {
+            "type": {
+              "coding": [
+                {
+                  "display": "metadaten"
+                }
+              ]
+            },
+            "valueReference": {
+              "reference": "BeispielRechnungsPDF3-FD"
+            }
+          },
+          {
+            "type": {
+              "coding": [
+                {
+                  "display": "binaerdaten"
+                }
+              ]
+            },
+            "valueReference": {
+              "reference": "BeispielRechnungsPDF3-FD"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
