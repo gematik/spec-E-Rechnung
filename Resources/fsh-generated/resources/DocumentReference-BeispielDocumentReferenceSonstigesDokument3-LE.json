@@ -1,0 +1,26 @@
+{
+  "resourceType": "DocumentReference",
+  "id": "BeispielDocumentReferenceSonstigesDokument3-LE",
+  "status": "current",
+  "type": {
+    "coding": [
+      {
+        "code": "PT130102",
+        "system": "http://dvmd.de/fhir/CodeSystem/kdl",
+        "display": "Molekularpathologiebefund"
+      }
+    ]
+  },
+  "description": "Molekularpathologiebefund vom 31.12.21",
+  "subject": {
+    "reference": "Patient/BeispielPatient3-FD"
+  },
+  "content": [
+    {
+      "attachment": {
+        "contentType": "application/pdf",
+        "data": "DIESISTNUREINBEISPIELDIESISTKEINVALIDESPDF00"
+      }
+    }
+  ]
+}

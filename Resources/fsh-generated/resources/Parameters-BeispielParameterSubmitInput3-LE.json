@@ -1,0 +1,127 @@
+{
+  "resourceType": "Parameters",
+  "id": "BeispielParameterSubmitInput3-LE",
+  "parameter": [
+    {
+      "name": "rechnung",
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "BeispielDocumentReferenceRechnung3-LE",
+        "status": "current",
+        "type": {
+          "coding": [
+            {
+              "code": "AM010106",
+              "system": "http://dvmd.de/fhir/CodeSystem/kdl",
+              "display": "Rechnung ambulante/stationäre Behandlung"
+            }
+          ]
+        },
+        "description": "Rechnung Reiseimpfung vom 10.01.2024",
+        "subject": {
+          "reference": "Patient/BeispielPatient3-FD"
+        },
+        "content": [
+          {
+            "attachment": {
+              "contentType": "application/pdf",
+              "data": "DIESISTNUREINBEISPIELDIESISTKEINVALIDESPDF00"
+            }
+          },
+          {
+            "format": {
+              "code": "xrechnung"
+            },
+            "attachment": {
+              "contentType": "application/xml",
+              "data": "DIESISTNUREINBEISPIELDIESISTKEINVALIDESXML00"
+            }
+          },
+          {
+            "format": {
+              "code": "gematik-erechnung"
+            },
+            "attachment": {
+              "contentType": "application/fhir+xml",
+              "data": "DIESISTNUREINBEISPIELDIESISTKEINVALIDESXML00"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "signatur",
+      "resource": {
+        "resourceType": "Provenance",
+        "id": "BeispielProvenanceMitSignatur3-LE",
+        "target": [
+          {
+            "reference": "DocumentReference/BeispielDocumentReferenceRechnung3-LE"
+          }
+        ],
+        "recorded": "2024-01-10T08:39:24+02:00",
+        "agent": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "code": "attester",
+                  "system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type"
+                }
+              ]
+            },
+            "who": {
+              "identifier": {
+                "value": "<telematik id>"
+              }
+            }
+          }
+        ],
+        "signature": [
+          {
+            "type": [
+              {
+                "code": "1.2.840.10065.1.12.1.1",
+                "system": "urn:iso-astm:E1762-95:2013",
+                "display": "Author's Signature"
+              }
+            ],
+            "when": "2015-02-07T13:28:17.239+02:00",
+            "who": {
+              "display": "weiß nicht"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "anhang",
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "BeispielDocumentReferenceSonstigesDokument3-LE",
+        "status": "current",
+        "type": {
+          "coding": [
+            {
+              "code": "PT130102",
+              "system": "http://dvmd.de/fhir/CodeSystem/kdl",
+              "display": "Molekularpathologiebefund"
+            }
+          ]
+        },
+        "description": "Molekularpathologiebefund vom 31.12.21",
+        "subject": {
+          "reference": "Patient/BeispielPatient3-FD"
+        },
+        "content": [
+          {
+            "attachment": {
+              "contentType": "application/pdf",
+              "data": "DIESISTNUREINBEISPIELDIESISTKEINVALIDESPDF00"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

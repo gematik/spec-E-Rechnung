@@ -43,6 +43,8 @@ Id: ergpkv-rechnung
 * date 1.. MS
 * issuer 1.. MS
   * ^short = "Leistungserbringer"
+  * ^comment = "Der Leistungserbringer kann vom einreichenden Benutzer 
+      der Rechnung (z.B. Abrechnungsdiesntleister) abweichen"
   * identifier 1.. MS
     * ^short =  "Telematik-ID des Leistungserbrigners"
   * identifier only IdentifierTelematikId
@@ -71,7 +73,7 @@ Id: ergpkv-rechnung
 
 Extension: ERGPKVPDFRepraesentationRechnung
 Id: ergpkv-pdf-repraesentation-rechnung
-Title: "ERGPKV PDF Repräsentation Rechnung"
+Title: "ERGPKV PDF-Repräsentation Rechnung"
 * value[x] only Reference(Binary)
 
 Extension: ERGPKVZahlungsziel
