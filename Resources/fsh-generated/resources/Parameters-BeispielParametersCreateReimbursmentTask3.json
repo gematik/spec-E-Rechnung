@@ -1,0 +1,24 @@
+{
+  "resourceType": "Parameters",
+  "id": "BeispielParametersCreateReimbursmentTask3",
+  "parameter": [
+    {
+      "name": "rechnung",
+      "valueReference": {
+        "reference": "DocumentReference/BeispielDocumentReferenceRechnung3-LE"
+      }
+    },
+    {
+      "name": "anhang",
+      "valueReference": {
+        "reference": "DocumentReference/BeispielDocumentReferenceSonstigesDokument3-LE"
+      }
+    },
+    {
+      "name": "kostentraeger",
+      "valueReference": {
+        "reference": "Organization/BeispielOrganizationKostentraeger3"
+      }
+    }
+  ]
+}

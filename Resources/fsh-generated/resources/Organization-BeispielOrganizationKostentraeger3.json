@@ -1,0 +1,11 @@
+{
+  "resourceType": "Organization",
+  "id": "BeispielOrganizationKostentraeger3",
+  "identifier": [
+    {
+      "system": "https://gematik.de/fhir/sid/telematik-id",
+      "value": "1234567890"
+    }
+  ],
+  "name": "Kaiser Permanente"
+}
