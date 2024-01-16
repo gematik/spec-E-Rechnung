@@ -43,3 +43,9 @@ InstanceOf: Task
 * input
   * type.text = "Anhang"
   * valueReference = Reference(BeispielDocumentReferenceSonstigesDokument3-LE)
+
+Instance: BeispielParametersAddNote
+InstanceOf: Parameters
+* parameter[+]
+  * name = "notiz"
+  * valueString = "Bitte Arztbrief nachreichen."

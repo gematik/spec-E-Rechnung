@@ -1,0 +1,10 @@
+{
+  "resourceType": "Parameters",
+  "id": "BeispielParametersAddNote",
+  "parameter": [
+    {
+      "name": "notiz",
+      "valueString": "Bitte Arztbrief nachreichen."
+    }
+  ]
+}
