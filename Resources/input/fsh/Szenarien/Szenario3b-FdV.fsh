@@ -8,10 +8,10 @@ Instance: BeispielParametersCreateReimbursmentTask3
 InstanceOf: Parameters
 * parameter[+]
   * name = "rechnung"
-  * valueReference = Reference(BeispielDocumentReferenceRechnung3-LE)
+  * valueReference = Reference(BeispielDocumentReferenceRechnung3-FD)
 * parameter[+]
   * name = "anhang"
-  * valueReference = Reference(BeispielDocumentReferenceSonstigesDokument3-LE)
+  * valueReference = Reference(BeispielDocumentReferenceSonstigesDokument3-FD)
 * parameter[+]
   * name = "kostentraeger"
   * valueReference = Reference(BeispielOrganizationKostentraeger3)
@@ -26,6 +26,7 @@ InstanceOf: Organization
 Instance: BeispielTaskReimbursment3
 InstanceOf: Task 
 * owner = Reference(BeispielOrganizationKostentraeger3)
+* for = Reference(BeispielPatient3-FD)
 * status = #ready
 * identifier[+]
   * system = $token
@@ -39,9 +40,15 @@ InstanceOf: Task
   * value = "A000000000"
 * input
   * type.text = "Rechnung"
-  * valueReference = Reference(BeispielDocumentReferenceRechnung3-LE)
+  * valueReference = Reference(BeispielDocumentReferenceRechnung3-FD)
 * input
   * type.text = "Anhang"
+  * valueReference = Reference(BeispielDocumentReferenceSonstigesDokument3-FD)
+* output
+  * type.text = "Original-Rechnung"
+  * valueReference = Reference(BeispielDocumentReferenceRechnung3-LE)
+* output
+  * type.text = "Original-Anhang"
   * valueReference = Reference(BeispielDocumentReferenceSonstigesDokument3-LE)
 
 Instance: BeispielParametersAddNote

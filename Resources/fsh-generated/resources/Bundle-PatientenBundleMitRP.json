@@ -1,0 +1,54 @@
+{
+  "resourceType": "Bundle",
+  "id": "PatientenBundleMitRP",
+  "type": "searchset",
+  "total": 1,
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "id": "PatientVater",
+        "active": true,
+        "name": [
+          {
+            "given": [
+              "Manfred"
+            ],
+            "family": "Mustermann"
+          }
+        ],
+        "gender": "male",
+        "identifier": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "code": "gkv",
+                  "system": "http://fhir.de/CodeSystem/identifier-type-de-basis"
+                }
+              ]
+            },
+            "system": "http://fhir.de/sid/gkv/kvid-10",
+            "value": "A000000000"
+          }
+        ],
+        "address": [
+          {
+            "text": "Musterweg 2, 3. Etage, 98764 Musterhausen, DE"
+          }
+        ],
+        "link": [
+          {
+            "type": "see-also",
+            "other": {
+              "reference": "RelatedPerson/RPVater"
+            }
+          }
+        ]
+      },
+      "search": {
+        "mode": "include"
+      }
+    }
+  ]
+}

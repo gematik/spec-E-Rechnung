@@ -1,39 +1,112 @@
 {
   "resourceType": "Parameters",
   "id": "BeispielParameterSubmitOutput3-FD",
-  "meta": {
-    "profile": [
-      "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-submit-outputparameter"
-    ]
-  },
   "parameter": [
     {
-      "valueIdentifier": {
+      "name": "rechnung",
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "BeispielDocumentReferenceRechnung3-FD",
+        "identifier": [
+          {
+            "system": "https://gematik.de/fhir/sid/ergpkv-token",
+            "value": "123-456-789"
+          }
+        ],
+        "status": "current",
         "type": {
           "coding": [
             {
-              "code": "RI",
-              "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+              "code": "AM010106",
+              "system": "http://dvmd.de/fhir/CodeSystem/kdl",
+              "display": "Rechnung ambulante/stationäre Behandlung"
             }
           ]
         },
-        "system": "https://gematik.de/fhir/sid/ergpkv-token",
-        "value": "123-456-789"
-      },
-      "name": "token"
+        "description": "Rechnung Reiseimpfung vom 10.01.2024",
+        "subject": {
+          "identifier": {
+            "system": "http://fhir.de/sid/gkv/kvid-10",
+            "value": "A000000000"
+          }
+        },
+        "content": [
+          {
+            "attachment": {
+              "contentType": "application/pdf",
+              "url": "[FD-endpunkt]/Binary/pdf-mit-token-barcode"
+            }
+          },
+          {
+            "format": {
+              "code": "xrechnung"
+            },
+            "attachment": {
+              "contentType": "application/xml",
+              "url": "[FD-endpunkt]/Binary/xrechnung"
+            }
+          },
+          {
+            "format": {
+              "code": "gematik-erechnung"
+            },
+            "attachment": {
+              "contentType": "application/fhir+xml",
+              "url": "[FD-endpunkt]/Binary/invoice"
+            }
+          }
+        ],
+        "relatesTo": [
+          {
+            "code": "transforms",
+            "target": {
+              "reference": "DocumentReference/BeispielDocumentReferenceRechnung3-LE"
+            }
+          }
+        ]
+      }
     },
     {
-      "name": "tokenPdf",
+      "name": "anhang",
       "resource": {
-        "resourceType": "Binary",
-        "id": "BeispielBinaryRechnungsPDF0-FD",
-        "meta": {
-          "profile": [
-            "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-rechnungsdokument"
+        "resourceType": "DocumentReference",
+        "id": "BeispielDocumentReferenceSonstigesDokument3-FD",
+        "identifier": [
+          {
+            "system": "https://gematik.de/fhir/sid/ergpkv-token",
+            "value": "987-654-321"
+          }
+        ],
+        "status": "current",
+        "type": {
+          "coding": [
+            {
+              "code": "PT130102",
+              "system": "http://dvmd.de/fhir/CodeSystem/kdl",
+              "display": "Molekularpathologiebefund"
+            }
           ]
         },
-        "contentType": "application/pdf",
-        "data": "DIESISTNUREINBEISPIELDIESISTKEINVALIDESPDF00"
+        "description": "Molekularpathologiebefund vom 31.12.21",
+        "subject": {
+          "reference": "Patient/BeispielPatient3-FD"
+        },
+        "content": [
+          {
+            "attachment": {
+              "contentType": "application/pdf",
+              "url": "[FD-endpunkt]/Binary/patho-mit-token-barcode"
+            }
+          }
+        ],
+        "relatesTo": [
+          {
+            "code": "transforms",
+            "target": {
+              "reference": "DocumentReference/BeispielDocumentReferenceSonstigesDokument3-LE"
+            }
+          }
+        ]
       }
     }
   ]

@@ -1,11 +1,6 @@
 {
   "resourceType": "Patient",
   "id": "BeispielPatient3-FD",
-  "meta": {
-    "profile": [
-      "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-canreceiveinvoiceresponsepatient"
-    ]
-  },
   "name": [
     {
       "text": "Manfred Mustermann"
@@ -14,14 +9,6 @@
   "gender": "male",
   "identifier": [
     {
-      "type": {
-        "coding": [
-          {
-            "code": "gkv",
-            "system": "http://fhir.de/CodeSystem/identifier-type-de-basis"
-          }
-        ]
-      },
       "system": "http://fhir.de/sid/gkv/kvid-10",
       "value": "A000000000"
     }

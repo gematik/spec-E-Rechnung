@@ -24,12 +24,6 @@
             }
           ]
         },
-        "identifier": [
-          {
-            "system": "https://gematik.de/fhir/sid/ergpkv-token",
-            "value": "123-456-789"
-          }
-        ],
         "requester": {
           "identifier": {
             "value": "<telematik id>"
@@ -40,7 +34,7 @@
             "type": {
               "coding": [
                 {
-                  "display": "rechnung"
+                  "display": "rechnung-original"
                 }
               ]
             },
@@ -52,19 +46,7 @@
             "type": {
               "coding": [
                 {
-                  "display": "signatur"
-                }
-              ]
-            },
-            "valueReference": {
-              "reference": "Provenance/BeispielProvenanceMitSignatur3-LE"
-            }
-          },
-          {
-            "type": {
-              "coding": [
-                {
-                  "display": "anhang"
+                  "display": "anhang-original"
                 }
               ]
             },
@@ -78,36 +60,48 @@
             "type": {
               "coding": [
                 {
-                  "display": "tokenpdf"
+                  "display": "rechnung-meta"
                 }
               ]
             },
             "valueReference": {
-              "reference": "BeispielRechnungsPDF3-FD"
+              "reference": "DocumentReference/BeispielDocumentReferenceRechnung3-FD"
             }
           },
           {
             "type": {
               "coding": [
                 {
-                  "display": "metadaten"
+                  "display": "rechnung-pdf"
                 }
               ]
             },
             "valueReference": {
-              "reference": "BeispielRechnungsPDF3-FD"
+              "reference": "Binary/BeispielBinaryRechnungsPDF3-FD"
             }
           },
           {
             "type": {
               "coding": [
                 {
-                  "display": "binaerdaten"
+                  "display": "anhang-meta"
                 }
               ]
             },
             "valueReference": {
-              "reference": "BeispielRechnungsPDF3-FD"
+              "reference": "DocumentReference/BeispielDocumentReferenceSonstigesDokument3-FD"
+            }
+          },
+          {
+            "type": {
+              "coding": [
+                {
+                  "display": "anhang-pdf"
+                }
+              ]
+            },
+            "valueReference": {
+              "reference": "Binary/BeispielBinaryRechnungsPDF3-FD"
             }
           }
         ]

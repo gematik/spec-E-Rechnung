@@ -1,6 +1,12 @@
 {
   "resourceType": "DocumentReference",
-  "id": "BeispielDocumentReferenceRechnung3-LE",
+  "id": "BeispielDocumentReferenceRechnung3-FD",
+  "identifier": [
+    {
+      "system": "https://gematik.de/fhir/sid/ergpkv-token",
+      "value": "123-456-789"
+    }
+  ],
   "status": "current",
   "type": {
     "coding": [
@@ -22,7 +28,7 @@
     {
       "attachment": {
         "contentType": "application/pdf",
-        "data": "DIESISTNUREINBEISPIELDIESISTKEINVALIDESPDF00"
+        "url": "[FD-endpunkt]/Binary/pdf-mit-token-barcode"
       }
     },
     {
@@ -31,7 +37,7 @@
       },
       "attachment": {
         "contentType": "application/xml",
-        "data": "DIESISTNUREINBEISPIELDIESISTKEINVALIDESXML00"
+        "url": "[FD-endpunkt]/Binary/xrechnung"
       }
     },
     {
@@ -40,25 +46,15 @@
       },
       "attachment": {
         "contentType": "application/fhir+xml",
-        "data": "DIESISTNUREINBEISPIELDIESISTKEINVALIDESXML00"
+        "url": "[FD-endpunkt]/Binary/invoice"
       }
     }
   ],
-  "extension": [
+  "relatesTo": [
     {
-      "url": "http://example.org/StructureDefinition/signatur",
-      "valueSignature": {
-        "type": [
-          {
-            "code": "1.2.840.10065.1.12.1.1",
-            "system": "urn:iso-astm:E1762-95:2013",
-            "display": "Author's Signature"
-          }
-        ],
-        "when": "2015-02-07T13:28:17.239+02:00",
-        "who": {
-          "display": "Arzt"
-        }
+      "code": "transforms",
+      "target": {
+        "reference": "DocumentReference/BeispielDocumentReferenceRechnung3-LE"
       }
     }
   ]

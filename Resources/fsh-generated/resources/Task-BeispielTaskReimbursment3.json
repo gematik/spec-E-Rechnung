@@ -4,6 +4,9 @@
   "owner": {
     "reference": "Organization/BeispielOrganizationKostentraeger3"
   },
+  "for": {
+    "reference": "Patient/BeispielPatient3-FD"
+  },
   "status": "ready",
   "identifier": [
     {
@@ -38,6 +41,16 @@
     {
       "type": {
         "text": "Anhang"
+      },
+      "valueReference": {
+        "reference": "DocumentReference/BeispielDocumentReferenceSonstigesDokument3-FD"
+      }
+    }
+  ],
+  "output": [
+    {
+      "type": {
+        "text": "Original-Anhang"
       },
       "valueReference": {
         "reference": "DocumentReference/BeispielDocumentReferenceSonstigesDokument3-LE"
