@@ -5,13 +5,13 @@
     {
       "name": "rechnung",
       "valueReference": {
-        "reference": "DocumentReference/BeispielDocumentReferenceRechnung3-LE"
+        "reference": "DocumentReference/BeispielDocumentReferenceRechnung3-FD"
       }
     },
     {
       "name": "anhang",
       "valueReference": {
-        "reference": "DocumentReference/BeispielDocumentReferenceSonstigesDokument3-LE"
+        "reference": "DocumentReference/BeispielDocumentReferenceSonstigesDokument3-FD"
       }
     },
     {

@@ -15,9 +15,13 @@ InstanceOf: DocumentReference
 * status = #current
 * type = $kdl#AM010106 "Rechnung ambulante/stationäre Behandlung"
 * description = "Rechnung Reiseimpfung vom 10.01.2024"
-//TODO: Der Vater/Rechnungsempfänger ist in diesem Szenario NICHT das Subject des Dokumentes!!!
-* subject = Reference(BeispielPatient3-FD)
-//* subject.display = "Max Musterkind"
+//Referenz auf Patient hier nicht relevant (kann nicht auflösbarer Link auf Instanz des LE-PVS sein)
+//Patientenkontext ergibt sich aus Task.for Referenz, die vom Fachdienst gesetzt wird
+//Versichertennummer kann zum Abgleich verwendet werden
+* subject
+  * identifier
+    * system = "http://fhir.de/sid/gkv/kvid-10"
+    * value = "A000000000"
 * content[+]
   * attachment
     * contentType = #application/pdf
@@ -32,6 +36,46 @@ InstanceOf: DocumentReference
   * attachment
     * contentType = #application/fhir+xml
     * data = "DIESISTNUREINBEISPIELDIESISTKEINVALIDESXML00"
+* extension
+  * url = "http://example.org/StructureDefinition/signatur"
+  * valueSignature
+    * type = urn:iso-astm:E1762-95:2013#1.2.840.10065.1.12.1.1 "Author's Signature"
+    * when = 2015-02-07T13:28:17.239+02:00
+    * who.display = "Arzt"
+
+Instance: BeispielDocumentReferenceRechnung3-FD
+InstanceOf: DocumentReference
+//FD fügt Token hinzu
+* identifier
+  * system = "https://gematik.de/fhir/sid/ergpkv-token"
+  * value = "123-456-789"
+* status = #current
+* type = $kdl#AM010106 "Rechnung ambulante/stationäre Behandlung"
+* description = "Rechnung Reiseimpfung vom 10.01.2024"
+* subject
+  * identifier
+    * system = "http://fhir.de/sid/gkv/kvid-10"
+    * value = "A000000000"
+* content[+]
+  * attachment
+    * contentType = #application/pdf
+    //data wird in Binary separiert
+    * url = "[FD-endpunkt]/Binary/pdf-mit-token-barcode"
+* content[+]
+  * format = #xrechnung
+  * attachment
+    * contentType = #application/xml
+    * url = "[FD-endpunkt]/Binary/xrechnung"
+* content[+]
+  * format = #gematik-erechnung
+  * attachment
+    * contentType = #application/fhir+xml
+    * url = "[FD-endpunkt]/Binary/invoice"
+//signatur wird entfernt, da nach Änderung des PDFs nicht mehr gültig
+//Verknüpfung zum Original 
+* relatesTo
+  * code = #transforms
+  * target = Reference (BeispielDocumentReferenceRechnung3-LE)
 
 Instance: BeispielDocumentReferenceSonstigesDokument3-LE
 InstanceOf: DocumentReference
@@ -41,18 +85,31 @@ InstanceOf: DocumentReference
 * subject = Reference(BeispielPatient3-FD)
 //* subject.display = "Max Musterkind"
 * content[+]
-  * attachment.
+  * attachment
     * contentType = #application/pdf
     * data = "DIESISTNUREINBEISPIELDIESISTKEINVALIDESPDF00"
 
-Instance: BeispielProvenanceMitSignatur3-LE
-InstanceOf: Provenance
-* target[+] = Reference(BeispielDocumentReferenceRechnung3-LE)
-* recorded = 2024-01-10T08:39:24+02:00
-* agent.type = http://terminology.hl7.org/CodeSystem/provenance-participant-type#attester
-* agent.who.identifier.value = "<telematik id>"
-* insert signatureDummy
 
+Instance: BeispielDocumentReferenceSonstigesDokument3-FD
+InstanceOf: DocumentReference
+//FD fügt Token hinzu
+* identifier
+  * system = "https://gematik.de/fhir/sid/ergpkv-token"
+  * value = "987-654-321"
+* status = #current
+* type = $kdl#PT130102 "Molekularpathologiebefund"
+* description = "Molekularpathologiebefund vom 31.12.21"
+* subject = Reference(BeispielPatient3-FD)
+//* subject.display = "Max Musterkind"
+* content[+]
+  * attachment
+    * contentType = #application/pdf
+    //data wird in Binary separiert
+    * url = "[FD-endpunkt]/Binary/patho-mit-token-barcode"
+//Verknüpfung zum Original 
+* relatesTo
+  * code = #transforms
+  * target = Reference (BeispielDocumentReferenceSonstigesDokument3-LE)
 
 // **************************************************
 // Operations zwischen LE und FD
@@ -83,9 +140,6 @@ InstanceOf: Parameters
   * name = "rechnung"
   * resource = BeispielDocumentReferenceRechnung3-LE
 * parameter[+]
-  * name = "signatur"
-  * resource = BeispielProvenanceMitSignatur3-LE
-* parameter[+]
   * name = "anhang"
   * resource = BeispielDocumentReferenceSonstigesDokument3-LE
 // nicht erforderlich, da default
@@ -96,9 +150,13 @@ InstanceOf: Parameters
 
 //Output zur $submit-Operation
 Instance: BeispielParameterSubmitOutput3-FD
-InstanceOf: ERGPKVRParametersSubmitOutput
-* parameter[token].valueIdentifier.value = "123-456-789"
-* parameter[tokenPdf].resource = BeispielBinaryRechnungsPDF0-FD
+InstanceOf: Parameters
+* parameter[+]
+  * name = "rechnung"
+  * resource = BeispielDocumentReferenceRechnung3-FD
+* parameter[+]
+  * name = "anhang"
+  * resource = BeispielDocumentReferenceSonstigesDokument3-FD
 
 
 // **************************************************
@@ -106,13 +164,12 @@ InstanceOf: ERGPKVRParametersSubmitOutput
 // **************************************************  
 
 Instance: BeispielPatient3-FD
-InstanceOf: ERGPKVersichertePerson
+InstanceOf: Patient
 Usage: #example
 * name
   * text = "Manfred Mustermann"
 * gender = #male
 * identifier
-  * type = http://fhir.de/CodeSystem/identifier-type-de-basis#gkv
   * system = "http://fhir.de/sid/gkv/kvid-10"
   * value = "A000000000"
 * address
@@ -126,29 +183,26 @@ InstanceOf: Task
 * status = #ready
 * intent = http://hl7.org/fhir/request-intent#proposal
 * businessStatus = https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsworkflow-businessStatus-cs#neu
-* identifier
-  * system = "https://gematik.de/fhir/sid/ergpkv-token"
-  * value = "123-456-789"
 //TODO: Würde der Fachdienst hier nicht die Telematik-ID substituieren und auf einen Benutzer-Account vom Typ "Practitioner/-Role" verweisen???
 * requester.identifier.value = "<telematik id>"
 * input[+]
-  * type.coding.display = "rechnung"
+  * type.coding.display = "rechnung-original"
   * valueReference = Reference(BeispielDocumentReferenceRechnung3-LE)
 * input[+]
-  * type.coding.display = "signatur"
-  * valueReference = Reference(BeispielProvenanceMitSignatur3-LE)
-* input[+]
-  * type.coding.display = "anhang"
+  * type.coding.display = "anhang-original"
   * valueReference = Reference(BeispielDocumentReferenceSonstigesDokument3-LE)
 * output[+]
-  * type.coding.display = "tokenpdf"
-  * valueReference = Reference(BeispielRechnungsPDF3-FD)
+  * type.coding.display = "rechnung-meta"
+  * valueReference = Reference(BeispielDocumentReferenceRechnung3-FD)
 * output[+]
-  * type.coding.display = "metadaten"
-  * valueReference = Reference(BeispielRechnungsPDF3-FD)
+  * type.coding.display = "rechnung-pdf"
+  * valueReference = Reference(BeispielBinaryRechnungsPDF3-FD) 
 * output[+]
-  * type.coding.display = "binaerdaten"
-  * valueReference = Reference(BeispielRechnungsPDF3-FD)
+  * type.coding.display = "anhang-meta"
+  * valueReference = Reference(BeispielDocumentReferenceSonstigesDokument3-FD)
+* output[+]
+  * type.coding.display = "anhang-pdf"
+  * valueReference = Reference(BeispielBinaryRechnungsPDF3-FD) 
 
 
 Instance: BeispielBinaryRechnungsPDF3-FD

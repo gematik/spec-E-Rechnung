@@ -1,11 +1,11 @@
 {
   "resourceType": "Task",
-  "id": "BeispielTaskRechnungsworkflow3-FD",
+  "id": "BeispielTaskRechnungsworkflowMitAbwRechnEmpf",
   "owner": {
-    "reference": "Patient/BeispielPatient3-FD"
+    "reference": "RelatedPerson/RPVater"
   },
   "for": {
-    "reference": "Patient/BeispielPatient3-FD"
+    "reference": "Patient/PatientKind"
   },
   "status": "ready",
   "intent": "proposal",
@@ -27,7 +27,7 @@
       "type": {
         "coding": [
           {
-            "display": "rechnung-original"
+            "display": "rechnung"
           }
         ]
       },
@@ -39,7 +39,7 @@
       "type": {
         "coding": [
           {
-            "display": "anhang-original"
+            "display": "anhang"
           }
         ]
       },
@@ -65,36 +65,12 @@
       "type": {
         "coding": [
           {
-            "display": "rechnung-pdf"
-          }
-        ]
-      },
-      "valueReference": {
-        "reference": "Binary/BeispielBinaryRechnungsPDF3-FD"
-      }
-    },
-    {
-      "type": {
-        "coding": [
-          {
             "display": "anhang-meta"
           }
         ]
       },
       "valueReference": {
         "reference": "DocumentReference/BeispielDocumentReferenceSonstigesDokument3-FD"
-      }
-    },
-    {
-      "type": {
-        "coding": [
-          {
-            "display": "anhang-pdf"
-          }
-        ]
-      },
-      "valueReference": {
-        "reference": "Binary/BeispielBinaryRechnungsPDF3-FD"
       }
     }
   ]
