@@ -10,6 +10,13 @@ RuleSet: addRItem(linkId, type, text)
 * insert addItem({linkId}, {type}, {text})
 * required = true
 
+RuleSet: debug(variable)
+* item[+]
+  * linkId = {variable}
+  * type = #string
+  * text = {variable}
+  * readOnly = true
+  * insert calculatedExpression("debug", {variable})
 
 RuleSet: minMaxInteger(min, max)
 * extension[+] 
@@ -29,7 +36,7 @@ RuleSet: minMaxDecimal(min, max)
 
 //name = patient | encounter | location | user | study
 RuleSet: launchContext(name, type, description)
-* extension
+* extension[+]
   * url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext"
   * extension[+]
     * url = "name"
@@ -42,7 +49,7 @@ RuleSet: launchContext(name, type, description)
     * valueString = {description}
 
 RuleSet: initialExpression(expression)
-* extension
+* extension[+]
   * url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression"
   * valueExpression
     //* description = {description}
@@ -73,6 +80,14 @@ RuleSet: variable(name, expression)
     * language = #text/fhirpath
     * expression = {expression}
 
+RuleSet: query(name, query)
+* extension[+]
+  * url = "http://hl7.org/fhir/StructureDefinition/variable"
+  * valueExpression
+    * name = {name}
+    * language = #application/x-fhir-query
+    * expression = {query}
+
 RuleSet: uunit(code)
 * extension[+]
   * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-unit"
@@ -91,6 +106,14 @@ RuleSet: calculatedExpression(name, expression)
     * name = {name}
     * language = #text/fhirpath
     * expression = {expression}
+
+RuleSet: calculatedQuery(name, query)
+* extension[+]
+  * url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression"
+  * valueExpression
+    * name = {name}
+    * language = #application/x-fhir-query
+    * expression = {query}    
 
 RuleSet: entryFormat(string)
 * extension[+]
@@ -111,3 +134,12 @@ RuleSet: regEx(expression)
 * extension[+]
   * url = "http://hl7.org/fhir/StructureDefinition/regex"
   * valueString = {expression}
+
+
+RuleSet: prepopContext(name, query)
+* extension[+]
+  * url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-itemPopulationContext"
+  * valueExpression
+    * name = {name}
+    * language = application/x-fhir-query
+    * expression = {query}

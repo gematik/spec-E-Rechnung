@@ -18,9 +18,33 @@
         },
         {
           "url": "description",
-          "valueString": "Patientenkontext"
+          "valueString": "BehandeltePerson"
         }
       ]
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/variable",
+      "valueExpression": {
+        "name": "behandlersuchstring",
+        "language": "text/fhirpath",
+        "expression": "%resource.repeat(item).where(linkId='suche-behandler').answer.value"
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/variable",
+      "valueExpression": {
+        "name": "behandlersuche",
+        "language": "application/x-fhir-query",
+        "expression": "Practitioner?name={{%behandlersuchstring}}"
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/variable",
+      "valueExpression": {
+        "name": "behandler",
+        "language": "text/fhirpath",
+        "expression": "%behandlersuche.entry[0].resource"
+      }
     }
   ],
   "status": "draft",
@@ -123,6 +147,18 @@
       ]
     },
     {
+      "linkId": "behandler-kontext",
+      "type": "group",
+      "text": "Behandler-Kontext herstellen",
+      "item": [
+        {
+          "linkId": "suche-behandler",
+          "type": "string",
+          "text": "Suche Behandler nach Name"
+        }
+      ]
+    },
+    {
       "linkId": "behandler",
       "type": "group",
       "text": "Behandler",
@@ -149,31 +185,81 @@
         {
           "linkId": "behandler-titel",
           "type": "string",
-          "text": "Titel"
+          "text": "Titel",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression",
+              "valueExpression": {
+                "name": "behandler-titel",
+                "language": "text/fhirpath",
+                "expression": "%behandler.name[0].prefix"
+              }
+            }
+          ]
         },
         {
           "linkId": "BT-41",
           "type": "string",
           "text": "Name",
-          "required": true
+          "required": true,
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression",
+              "valueExpression": {
+                "name": "behandler-name",
+                "language": "text/fhirpath",
+                "expression": "%behandler.name[0].select(given+' '+family)"
+              }
+            }
+          ]
         },
         {
           "linkId": "BT-35",
           "type": "string",
           "text": "Straße und Hausnummer",
-          "required": true
+          "required": true,
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression",
+              "valueExpression": {
+                "name": "behandler-line",
+                "language": "text/fhirpath",
+                "expression": "%behandler.address[0].line[0]"
+              }
+            }
+          ]
         },
         {
           "linkId": "BT-38",
           "type": "string",
           "text": "PLZ",
-          "required": true
+          "required": true,
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression",
+              "valueExpression": {
+                "name": "behandler-line",
+                "language": "text/fhirpath",
+                "expression": "%behandler.address[0].postalCode"
+              }
+            }
+          ]
         },
         {
           "linkId": "BT-37",
           "type": "string",
           "text": "Ort",
-          "required": true
+          "required": true,
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression",
+              "valueExpression": {
+                "name": "behandler-line",
+                "language": "text/fhirpath",
+                "expression": "%behandler.address[0].city"
+              }
+            }
+          ]
         }
       ]
     },
@@ -192,7 +278,7 @@
               "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
               "valueExpression": {
                 "language": "text/fhirpath",
-                "expression": "%patient.identifier.where(system = 'http://fhir.de/sid/gkv/kvid-10').value"
+                "expression": "%patient.identifier.where(system='http://fhir.de/sid/gkv/kvid-10').value"
               }
             }
           ]
@@ -207,7 +293,7 @@
               "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
               "valueExpression": {
                 "language": "text/fhirpath",
-                "expression": "%patient.name.where(use = 'official').select(given[0]+' '+family)"
+                "expression": "(%patient.name.where(use = 'official').select(given[0]+' '+family) | %patient.name[0].select(given[0]+' '+family)).first()"
               }
             }
           ]
@@ -239,7 +325,16 @@
           "linkId": "BT-2",
           "type": "date",
           "text": "Rechnungsdatum",
-          "required": true
+          "required": true,
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+              "valueExpression": {
+                "language": "text/fhirpath",
+                "expression": "today()"
+              }
+            }
+          ]
         },
         {
           "linkId": "BT-1",

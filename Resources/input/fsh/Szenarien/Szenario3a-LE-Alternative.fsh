@@ -16,7 +16,7 @@ Usage: #example
 * link
   * type = #see-also
   * other = Reference(RPVater)
-
+/*
 Instance: RPVater
 InstanceOf: RelatedPerson
 Usage: #example
@@ -31,7 +31,7 @@ Usage: #example
 * address
   * text = "Musterweg 2, 3. Etage, 98764 Musterhausen, DE"
 * patient = Reference (PatientKind)
-
+*/
 
 Instance: PatientKind
 InstanceOf: Patient
@@ -47,6 +47,10 @@ Usage: #example
   * value = "A111111111"
 * address
   * text = "Musterweg 2, 3. Etage, 98764 Musterhausen, DE"
+* extension[+]
+  * url = "http://foo.bar/Extension/abweichenderRechnungsempfaenger"
+  * valueReference = Reference(PatientVater)
+    * display = "Manfred Mustermann"
 
 Instance: PatientenBundle
 InstanceOf: Bundle
@@ -63,21 +67,14 @@ InstanceOf: Bundle
 * entry
   * resource = PatientKind
   * search.mode = #match
-
-Instance: PatientenBundleMitRP
-InstanceOf: Bundle
-* type = #searchset
-* total = 1
-* entry
-  * resource = PatientKind
-  * search.mode = #match
 * entry
   * resource = PatientVater
   * search.mode = #include
 
+
 Instance: BeispielTaskRechnungsworkflowMitAbwRechnEmpf
 InstanceOf: Task
-* owner = Reference(RPVater)
+* owner = Reference(PatientVater)
 * for = Reference(PatientKind)
 * status = #ready
 * intent = http://hl7.org/fhir/request-intent#proposal
