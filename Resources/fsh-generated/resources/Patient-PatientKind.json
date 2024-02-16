@@ -29,5 +29,14 @@
     {
       "text": "Musterweg 2, 3. Etage, 98764 Musterhausen, DE"
     }
+  ],
+  "extension": [
+    {
+      "url": "http://foo.bar/Extension/abweichenderRechnungsempfaenger",
+      "valueReference": {
+        "reference": "Patient/PatientVater",
+        "display": "Manfred Mustermann"
+      }
+    }
   ]
 }

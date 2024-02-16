@@ -7,12 +7,12 @@
     {
       "resource": {
         "resourceType": "Patient",
-        "id": "PatientKind",
-        "active": false,
+        "id": "PatientVater",
+        "active": true,
         "name": [
           {
             "given": [
-              "Moritz"
+              "Manfred"
             ],
             "family": "Mustermann"
           }
@@ -29,17 +29,25 @@
               ]
             },
             "system": "http://fhir.de/sid/gkv/kvid-10",
-            "value": "A111111111"
+            "value": "A000000000"
           }
         ],
         "address": [
           {
             "text": "Musterweg 2, 3. Etage, 98764 Musterhausen, DE"
           }
+        ],
+        "link": [
+          {
+            "type": "see-also",
+            "other": {
+              "reference": "RPVater"
+            }
+          }
         ]
       },
       "search": {
-        "mode": "match"
+        "mode": "include"
       }
     }
   ]

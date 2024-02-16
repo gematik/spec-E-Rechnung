@@ -2,7 +2,7 @@
   "resourceType": "Task",
   "id": "BeispielTaskRechnungsworkflowMitAbwRechnEmpf",
   "owner": {
-    "reference": "RelatedPerson/RPVater"
+    "reference": "Patient/PatientVater"
   },
   "for": {
     "reference": "Patient/PatientKind"

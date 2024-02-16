@@ -2,7 +2,10 @@ Instance: QuestionnaireInvoice
 InstanceOf: Questionnaire
 
 //Etablieren des Patientenkontextes aus SMART-Launch
-* insert launchContext("patient", #Patient, "Patientenkontext")
+* insert launchContext("patient", #Patient, "BehandeltePerson")
+//* insert launchContext("user", #Practitioner, "Leistungserbringer/Behandler")
+//* insert launchContext("behandler", #Practitioner, "Leistungserbringer/Behandler")
+//* extension[=].extension[0].valueCoding.system = "foo"
 * status = #draft
 * title = "eRechnung"
 * url = "http://gefyra.de/fhir/sdc/Questionnaire/Invoice"
@@ -45,8 +48,17 @@ InstanceOf: Questionnaire
   * item[+] 
     * insert addItem ("BT-29", #string, "Telematik-ID")
 
+* insert variable("behandlersuchstring", [["%resource.repeat(item).where(linkId='suche-behandler').answer.value"]])
+* insert query("behandlersuche",[["Practitioner?name={{%behandlersuchstring}}"]])
+* insert variable("behandler", [["%behandlersuche.entry[0].resource"]])
 
 //       Behandler       //
+* item[+] insert addItem("behandler-kontext", #group, "Behandler-Kontext herstellen")
+  * item[+] insert addItem("suche-behandler", #string, "Suche Behandler nach Name")
+  //* insert debug("%behandlersuchstring")
+  //* insert debug("%behandlersuche.total")
+  //* insert debug("%behandler.name.given[0]")
+
 * item[+]
   * insert addRItem("behandler", #group, "Behandler")
   * item[+]
@@ -57,24 +69,26 @@ InstanceOf: Questionnaire
     * answerOption[+].valueString = "Frau"
   * item[+]
     * insert addItem("behandler-titel", #string, "Titel")
+      * insert calculatedExpression("behandler-titel",[["%behandler.name[0].prefix"]])
   * item[+]
     * insert addRItem("BT-41", #string, "Name")
-  * item[+]
-    * insert addRItem("BT-35", #string, "Straße und Hausnummer")
-  * item[+]
-    * insert addRItem("BT-38", #string, "PLZ")
-  * item[+]
-    * insert addRItem("BT-37", #string, "Ort")   
+      * insert calculatedExpression("behandler-name",[["%behandler.name[0].select(given+' '+family)"]])
+  * item[+] insert addRItem("BT-35", #string, "Straße und Hausnummer")
+    * insert calculatedExpression("behandler-line",[["%behandler.address[0].line[0]"]])
+  * item[+] insert addRItem("BT-38", #string, "PLZ")
+    * insert calculatedExpression("behandler-line",[["%behandler.address[0].postalCode"]])
+  * item[+] insert addRItem("BT-37", #string, "Ort")   
+    * insert calculatedExpression("behandler-line",[["%behandler.address[0].city"]])
 
 //        Behandelte Person       //
 * item[+]
   * insert addRItem("behandelteperson", #group, "Behandelte Person")
   * item[+]
     * insert addItem("BT-71", #string, "Versicherten-Nummer")
-    * insert initialExpression([["%patient.identifier.where(system = 'http://fhir.de/sid/gkv/kvid-10').value"]]) 
+    * insert initialExpression([["%patient.identifier.where(system='http://fhir.de/sid/gkv/kvid-10').value"]]) 
   * item[+]
     * insert addRItem("BT-70", #string, "Name") 
-    * insert initialExpression([["%patient.name.where(use = 'official').select(given[0]+' '+family)"]])  
+    * insert initialExpression([["(%patient.name.where(use = 'official').select(given[0]+' '+family) | %patient.name[0].select(given[0]+' '+family)).first()"]])  
   * item[+]
     * insert addRItem("behandelteperson-geburtsdatum", #date, "Geburtsdatum")
     * insert initialExpression([["%patient.birthDate"]])
@@ -84,6 +98,7 @@ InstanceOf: Questionnaire
   * insert addRItem("rechnungsdaten", #group, "Rechnungsdaten")
   * item[+]
     * insert addRItem("BT-2", #date, "Rechnungsdatum")
+    * insert initialExpression([["today()"]])
   * item[+]
     * insert addRItem("BT-1", #string, "Rechnungsnummer") 
   * item[+]
