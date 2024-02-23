@@ -7,6 +7,53 @@
     {
       "resource": {
         "resourceType": "Patient",
+        "id": "PatientKind",
+        "active": false,
+        "name": [
+          {
+            "given": [
+              "Moritz"
+            ],
+            "family": "Mustermann"
+          }
+        ],
+        "gender": "male",
+        "identifier": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "code": "gkv",
+                  "system": "http://fhir.de/CodeSystem/identifier-type-de-basis"
+                }
+              ]
+            },
+            "system": "http://fhir.de/sid/gkv/kvid-10",
+            "value": "A111111111"
+          }
+        ],
+        "address": [
+          {
+            "text": "Musterweg 2, 3. Etage, 98764 Musterhausen, DE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://foo.bar/Extension/abweichenderRechnungsempfaenger",
+            "valueReference": {
+              "reference": "Patient/PatientVater",
+              "display": "Manfred Mustermann"
+            }
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Patient",
         "id": "PatientVater",
         "active": true,
         "name": [
@@ -35,14 +82,6 @@
         "address": [
           {
             "text": "Musterweg 2, 3. Etage, 98764 Musterhausen, DE"
-          }
-        ],
-        "link": [
-          {
-            "type": "see-also",
-            "other": {
-              "reference": "RPVater"
-            }
           }
         ]
       },

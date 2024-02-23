@@ -13,9 +13,7 @@ Usage: #example
   * value = "A000000000"
 * address
   * text = "Musterweg 2, 3. Etage, 98764 Musterhausen, DE"
-* link
-  * type = #see-also
-  * other = Reference(RPVater)
+
 /*
 Instance: RPVater
 InstanceOf: RelatedPerson
@@ -56,7 +54,7 @@ Instance: PatientenBundle
 InstanceOf: Bundle
 * type = #searchset
 * total = 1
-* entry
+* entry[+]
   * resource = PatientVater
   * search.mode = #match
 
@@ -64,10 +62,10 @@ Instance: KindBundle
 InstanceOf: Bundle
 * type = #searchset
 * total = 1
-* entry
+* entry[+]
   * resource = PatientKind
   * search.mode = #match
-* entry
+* entry[+]
   * resource = PatientVater
   * search.mode = #include
 
