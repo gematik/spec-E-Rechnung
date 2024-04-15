@@ -10,13 +10,12 @@
       "family": "Mustermann"
     }
   ],
-  "gender": "male",
   "identifier": [
     {
       "type": {
         "coding": [
           {
-            "code": "gkv",
+            "code": "KVZ10",
             "system": "http://fhir.de/CodeSystem/identifier-type-de-basis"
           }
         ]
@@ -25,14 +24,9 @@
       "value": "A111111111"
     }
   ],
-  "address": [
-    {
-      "text": "Musterweg 2, 3. Etage, 98764 Musterhausen, DE"
-    }
-  ],
   "extension": [
     {
-      "url": "http://foo.bar/Extension/abweichenderRechnungsempfaenger",
+      "url": "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-abweichender-rechnungsempfaenger",
       "valueReference": {
         "reference": "Patient/PatientVater",
         "display": "Manfred Mustermann"

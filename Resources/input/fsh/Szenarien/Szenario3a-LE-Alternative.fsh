@@ -7,7 +7,7 @@ Usage: #example
   * given = "Manfred"
   * family = "Mustermann"
 * identifier
-  * type = http://fhir.de/CodeSystem/identifier-type-de-basis#gkv
+  * type = http://fhir.de/CodeSystem/identifier-type-de-basis#KVZ10
   * system = "http://fhir.de/sid/gkv/kvid-10"
   * value = "A000000000"
 
@@ -35,15 +35,12 @@ Usage: #example
 * name
   * given = "Moritz"
   * family = "Mustermann"
-* gender = #male
 * identifier
-  * type = http://fhir.de/CodeSystem/identifier-type-de-basis#gkv
+  * type = http://fhir.de/CodeSystem/identifier-type-de-basis#KVZ10
   * system = "http://fhir.de/sid/gkv/kvid-10"
   * value = "A111111111"
-* address
-  * text = "Musterweg 2, 3. Etage, 98764 Musterhausen, DE"
 * extension[+]
-  * url = "http://foo.bar/Extension/abweichenderRechnungsempfaenger"
+  * url = "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-abweichender-rechnungsempfaenger"
   * valueReference = Reference(PatientVater)
     * display = "Manfred Mustermann"
 
