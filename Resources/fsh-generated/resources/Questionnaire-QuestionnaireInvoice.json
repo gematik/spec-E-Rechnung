@@ -1,0 +1,600 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "QuestionnaireInvoice",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext",
+      "extension": [
+        {
+          "url": "name",
+          "valueCoding": {
+            "code": "patient",
+            "system": "http://hl7.org/fhir/uv/sdc/CodeSystem/launchContext"
+          }
+        },
+        {
+          "url": "type",
+          "valueCode": "Patient"
+        },
+        {
+          "url": "description",
+          "valueString": "BehandeltePerson"
+        }
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/variable",
+      "valueExpression": {
+        "name": "behandlersuchstring",
+        "language": "text/fhirpath",
+        "expression": "%resource.repeat(item).where(linkId='suche-behandler').answer.value"
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/variable",
+      "valueExpression": {
+        "name": "behandlersuche",
+        "language": "application/x-fhir-query",
+        "expression": "Practitioner?name={{%behandlersuchstring}}"
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/variable",
+      "valueExpression": {
+        "name": "behandler",
+        "language": "text/fhirpath",
+        "expression": "%behandlersuche.entry[0].resource"
+      }
+    }
+  ],
+  "status": "draft",
+  "title": "eRechnung",
+  "url": "http://gefyra.de/fhir/sdc/Questionnaire/Invoice",
+  "item": [
+    {
+      "linkId": "behandlungsdaten",
+      "type": "group",
+      "text": "Behandlungsdaten",
+      "required": true,
+      "item": [
+        {
+          "linkId": "behandlungsart",
+          "type": "choice",
+          "text": "Behandlungsart",
+          "required": true,
+          "answerOption": [
+            {
+              "valueString": "ambulante Behandlung"
+            },
+            {
+              "valueString": "stationäre Behandlung"
+            },
+            {
+              "valueString": "vorstationäre Behandlung"
+            },
+            {
+              "valueString": "stationäre Mitbehandlung"
+            },
+            {
+              "valueString": "nachstationäre Behandlung"
+            },
+            {
+              "valueString": "Konsil"
+            }
+          ]
+        },
+        {
+          "linkId": "behandlungszeitraum",
+          "type": "group",
+          "text": "Behandlungszeitraum",
+          "item": [
+            {
+              "linkId": "BT-73",
+              "type": "date",
+              "text": "Startdatum"
+            },
+            {
+              "linkId": "BT-74",
+              "type": "date",
+              "text": "Enddatum"
+            }
+          ]
+        },
+        {
+          "linkId": "diagnose",
+          "type": "group",
+          "text": "Diagnose",
+          "item": [
+            {
+              "linkId": "diagnose-code",
+              "type": "choice",
+              "text": "ICD-10-Diagnose",
+              "answerValueSet": "#TESTICD10GM",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "code": "autocomplete",
+                        "system": "http://hl7.org/fhir/questionnaire-item-control"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "linkId": "diagnose-text",
+              "type": "string",
+              "text": "Freitext-Diagnose"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "rechnungsersteller",
+      "type": "group",
+      "text": "Rechnungsersteller",
+      "required": true,
+      "item": [
+        {
+          "linkId": "BT-29",
+          "type": "string",
+          "text": "Telematik-ID"
+        }
+      ]
+    },
+    {
+      "linkId": "behandler-kontext",
+      "type": "group",
+      "text": "Behandler-Kontext herstellen",
+      "item": [
+        {
+          "linkId": "suche-behandler",
+          "type": "string",
+          "text": "Suche Behandler nach Name"
+        }
+      ]
+    },
+    {
+      "linkId": "behandler",
+      "type": "group",
+      "text": "Behandler",
+      "required": true,
+      "item": [
+        {
+          "linkId": "behandler-iknummer",
+          "type": "string",
+          "text": "IK-Nummer"
+        },
+        {
+          "linkId": "behandler-anrede",
+          "type": "choice",
+          "text": "Anrede",
+          "answerOption": [
+            {
+              "valueString": "Herr"
+            },
+            {
+              "valueString": "Frau"
+            }
+          ]
+        },
+        {
+          "linkId": "behandler-titel",
+          "type": "string",
+          "text": "Titel",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression",
+              "valueExpression": {
+                "name": "behandler-titel",
+                "language": "text/fhirpath",
+                "expression": "%behandler.name[0].prefix"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "BT-41",
+          "type": "string",
+          "text": "Name",
+          "required": true,
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression",
+              "valueExpression": {
+                "name": "behandler-name",
+                "language": "text/fhirpath",
+                "expression": "%behandler.name[0].select(given+' '+family)"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "BT-35",
+          "type": "string",
+          "text": "Straße und Hausnummer",
+          "required": true,
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression",
+              "valueExpression": {
+                "name": "behandler-line",
+                "language": "text/fhirpath",
+                "expression": "%behandler.address[0].line[0]"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "BT-38",
+          "type": "string",
+          "text": "PLZ",
+          "required": true,
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression",
+              "valueExpression": {
+                "name": "behandler-line",
+                "language": "text/fhirpath",
+                "expression": "%behandler.address[0].postalCode"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "BT-37",
+          "type": "string",
+          "text": "Ort",
+          "required": true,
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression",
+              "valueExpression": {
+                "name": "behandler-line",
+                "language": "text/fhirpath",
+                "expression": "%behandler.address[0].city"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "behandelteperson",
+      "type": "group",
+      "text": "Behandelte Person",
+      "required": true,
+      "item": [
+        {
+          "linkId": "BT-71",
+          "type": "string",
+          "text": "Versicherten-Nummer",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+              "valueExpression": {
+                "language": "text/fhirpath",
+                "expression": "%patient.identifier.where(system='http://fhir.de/sid/gkv/kvid-10').value"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "BT-70",
+          "type": "string",
+          "text": "Name",
+          "required": true,
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+              "valueExpression": {
+                "language": "text/fhirpath",
+                "expression": "(%patient.name.where(use = 'official').select(given[0]+' '+family) | %patient.name[0].select(given[0]+' '+family)).first()"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "behandelteperson-geburtsdatum",
+          "type": "date",
+          "text": "Geburtsdatum",
+          "required": true,
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+              "valueExpression": {
+                "language": "text/fhirpath",
+                "expression": "%patient.birthDate"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "rechnungsdaten",
+      "type": "group",
+      "text": "Rechnungsdaten",
+      "required": true,
+      "item": [
+        {
+          "linkId": "BT-2",
+          "type": "date",
+          "text": "Rechnungsdatum",
+          "required": true,
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+              "valueExpression": {
+                "language": "text/fhirpath",
+                "expression": "today()"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "BT-1",
+          "type": "string",
+          "text": "Rechnungsnummer",
+          "required": true
+        },
+        {
+          "linkId": "BT-106",
+          "type": "decimal",
+          "text": "Gesamtsumme",
+          "required": true,
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+              "valueCoding": {
+                "code": "EUR",
+                "system": "urn:iso:std:iso:4217"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "rechnungsposition",
+          "type": "group",
+          "text": "Rechnungspositionen",
+          "required": true,
+          "repeats": true,
+          "item": [
+            {
+              "linkId": "rechnungsposition-datum",
+              "type": "date",
+              "text": "Datum",
+              "required": true
+            },
+            {
+              "linkId": "gebuehrenordnung",
+              "type": "choice",
+              "text": "Gebührenordnung",
+              "required": true,
+              "answerOption": [
+                {
+                  "valueString": "GOÄ"
+                },
+                {
+                  "valueString": "GOZ"
+                }
+              ]
+            },
+            {
+              "linkId": "BT-155",
+              "type": "string",
+              "text": "Ziffer",
+              "required": true
+            },
+            {
+              "linkId": "BT-153",
+              "type": "string",
+              "text": "Leistungsbezeichnung",
+              "required": true
+            },
+            {
+              "linkId": "rechnungsposition-begruendung",
+              "type": "string",
+              "text": "Begründung",
+              "required": true
+            },
+            {
+              "linkId": "rechnungsposition-mindestdauer",
+              "type": "string",
+              "text": "Mindestdauer",
+              "required": true
+            },
+            {
+              "linkId": "rechnungsposition-zahnregion",
+              "type": "string",
+              "text": "Zahnregion"
+            },
+            {
+              "linkId": "wegegeld",
+              "type": "group",
+              "text": "Wegegeld",
+              "required": true,
+              "item": [
+                {
+                  "linkId": "BT-130",
+                  "type": "decimal",
+                  "text": "Entfernung",
+                  "required": true,
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                      "valueCoding": {
+                        "code": "km",
+                        "system": "http://unitsofmeasure.org"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "linkId": "gebuehrenordnung",
+                  "type": "choice",
+                  "text": "Gebührenordnung",
+                  "required": true,
+                  "answerOption": [
+                    {
+                      "valueString": "Tag"
+                    },
+                    {
+                      "valueString": "Nacht"
+                    }
+                  ]
+                },
+                {
+                  "linkId": "BT-129",
+                  "type": "decimal",
+                  "text": "Anzahl",
+                  "required": true
+                }
+              ]
+            },
+            {
+              "linkId": "BT-131",
+              "type": "decimal",
+              "text": "Gesamtpreis",
+              "required": true,
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "code": "EUR",
+                    "system": "urn:iso:std:iso:4217"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "linkId": "BT-144",
+          "type": "string",
+          "text": "Begründung für Überschreitung der Regelsätze",
+          "required": true
+        },
+        {
+          "linkId": "BT-9",
+          "type": "date",
+          "text": "Zahlungsziel",
+          "required": true
+        },
+        {
+          "linkId": "zahlungsdaten",
+          "type": "group",
+          "text": "Zahlungsdaten",
+          "required": true,
+          "item": [
+            {
+              "linkId": "BT-85",
+              "type": "string",
+              "text": "Kontoinhaber",
+              "required": true
+            },
+            {
+              "linkId": "BT-84",
+              "type": "string",
+              "text": "IBAN",
+              "required": true
+            },
+            {
+              "linkId": "BT-86",
+              "type": "string",
+              "text": "BIC"
+            },
+            {
+              "linkId": "zahlungsdaten-bank",
+              "type": "string",
+              "text": "Name der Bank"
+            },
+            {
+              "linkId": "BT-83",
+              "type": "string",
+              "text": "Verwendungszweck",
+              "required": true
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "contained": [
+    {
+      "resourceType": "ValueSet",
+      "id": "TESTICD10GM",
+      "meta": {
+        "profile": [
+          "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
+        ]
+      },
+      "status": "draft",
+      "name": "TESTICD10GM",
+      "title": "Testdatensatz zur Simulation einer ICD-10-Validierung für Beispieldatensätze",
+      "description": "NUR ZUR VALIDIERUNG VON BEISPIELDATENSÄTZEN!!! NICHT ZUR VALIDIERUNG VON ICD-10-DIAGNOSEN GEEIGENT!!!! Die Validierung von ICD 10 Diagnosen muss durch einen geeigneten Terminologie-Server erfolgen. Eine Expansion von ICD-10(-GM) ist aufgrund der Menge an Codes und der Postkoordination nicht ausreichend, um ICD-10-Codes zu validieren! Enthält sowohl einzelne als auch postkoordinierte Codes, um das Vorhandensein einer Post-Koordinationsgrammatik zu simulieren!",
+      "url": "http://fhir.de/ValueSet/dimdi/icd-10-gm",
+      "experimental": true,
+      "expansion": {
+        "identifier": "440c50b5-7272-4184-9ddd-95a75d8207f8",
+        "timestamp": "2019-07-06",
+        "total": 2,
+        "contains": [
+          {
+            "system": "http://fhir.de/CodeSystem/dimdi/icd-10-gm",
+            "version": "2019",
+            "code": "F71",
+            "display": "Mittalgradige Intelligenzminderung"
+          },
+          {
+            "system": "http://fhir.de/CodeSystem/dimdi/icd-10-gm",
+            "version": "2019",
+            "code": "F16.1",
+            "display": "Psychische Verhaltensstörung durch Halluzinogene (Akute Intoxikation)"
+          },
+          {
+            "system": "http://fhir.de/CodeSystem/dimdi/icd-10-gm",
+            "version": "2019",
+            "code": "U69.32",
+            "display": "Intravenöser Konsum sonstiger psychotroper Substanzen"
+          },
+          {
+            "system": "http://fhir.de/CodeSystem/dimdi/icd-10-gm",
+            "version": "2019",
+            "code": "F16.1 U69.32!",
+            "display": "Psychische Verhaltensstörung durch Halluzinogene (Akute Intoxikation) bei intravenösem Konsum"
+          },
+          {
+            "system": "http://fhir.de/CodeSystem/dimdi/icd-10-gm",
+            "version": "2019",
+            "code": "E10.30† H36.0*",
+            "display": "Diabetische Retinopathie"
+          },
+          {
+            "system": "http://fhir.de/CodeSystem/dimdi/icd-10-gm",
+            "version": "2019",
+            "code": "E10.30",
+            "display": "Diabetes mellitus, Typ 1 : Mit Augenkomplikationen : Nicht als entgleist bezeichnet"
+          },
+          {
+            "system": "http://fhir.de/CodeSystem/dimdi/icd-10-gm",
+            "version": "2019",
+            "code": "H36.0",
+            "display": "Affektionen der Netzhaut bei anderenorts klassifizierten Krankheiten"
+          }
+        ]
+      },
+      "compose": {
+        "include": [
+          {
+            "system": "http://fhir.de/CodeSystem/dimdi/icd-10-gm"
+          }
+        ]
+      }
+    }
+  ]
+}

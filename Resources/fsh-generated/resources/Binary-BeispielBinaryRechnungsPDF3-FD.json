@@ -1,0 +1,11 @@
+{
+  "resourceType": "Binary",
+  "id": "BeispielBinaryRechnungsPDF3-FD",
+  "meta": {
+    "profile": [
+      "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-rechnungsdokument"
+    ]
+  },
+  "contentType": "application/pdf",
+  "data": "DIESISTNUREINBEISPIELDIESISTKEINVALIDESPDF00"
+}

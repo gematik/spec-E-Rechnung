@@ -1,0 +1,77 @@
+{
+  "resourceType": "Task",
+  "id": "BeispielTaskRechnungsworkflowMitAbwRechnEmpf",
+  "owner": {
+    "reference": "Patient/PatientVater"
+  },
+  "for": {
+    "reference": "Patient/PatientKind"
+  },
+  "status": "ready",
+  "intent": "proposal",
+  "businessStatus": {
+    "coding": [
+      {
+        "code": "neu",
+        "system": "https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsworkflow-businessStatus-cs"
+      }
+    ]
+  },
+  "requester": {
+    "identifier": {
+      "value": "<telematik id>"
+    }
+  },
+  "input": [
+    {
+      "type": {
+        "coding": [
+          {
+            "display": "rechnung"
+          }
+        ]
+      },
+      "valueReference": {
+        "reference": "DocumentReference/BeispielDocumentReferenceRechnung3-LE"
+      }
+    },
+    {
+      "type": {
+        "coding": [
+          {
+            "display": "anhang"
+          }
+        ]
+      },
+      "valueReference": {
+        "reference": "DocumentReference/BeispielDocumentReferenceSonstigesDokument3-LE"
+      }
+    }
+  ],
+  "output": [
+    {
+      "type": {
+        "coding": [
+          {
+            "display": "rechnung-meta"
+          }
+        ]
+      },
+      "valueReference": {
+        "reference": "DocumentReference/BeispielDocumentReferenceRechnung3-FD"
+      }
+    },
+    {
+      "type": {
+        "coding": [
+          {
+            "display": "anhang-meta"
+          }
+        ]
+      },
+      "valueReference": {
+        "reference": "DocumentReference/BeispielDocumentReferenceSonstigesDokument3-FD"
+      }
+    }
+  ]
+}

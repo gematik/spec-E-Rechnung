@@ -3,7 +3,7 @@
   "id": "ergpkv-pdf-repraesentation-rechnung",
   "url": "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-pdf-repraesentation-rechnung",
   "name": "ERGPKVPDFRepraesentationRechnung",
-  "title": "ERGPKV PDF Repräsentation Rechnung",
+  "title": "ERGPKV PDF-Repräsentation Rechnung",
   "status": "draft",
   "fhirVersion": "4.0.1",
   "mapping": [
