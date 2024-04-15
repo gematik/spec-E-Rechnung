@@ -54,6 +54,9 @@ InstanceOf: ERGPKVRechnungsdokument
 
 Instance: BeispielSonstigesDokument1-LE
 InstanceOf: ERGPKVDokumentenmetadaten
+* identifier
+  * system = "https://example.org/fhir/sid/dokumentennr"
+  * value = "1234567890"
 * type = $kdl#PT130102 "Molekularpathologiebefund"
 * description = "Molekularpathologiebefund vom 31.12.21"
 * content.attachment.data = "DIESISTNUREINBEISPIELDIESISTKEINVALIDESPDF00"
@@ -169,6 +172,9 @@ InstanceOf: ERGPKVRechnung
 
 Instance: BeispielDocumentReferenceSonstigesDokument1-FD
 InstanceOf: ERGPKVDokumentenmetadaten
+* identifier
+  * system = "https://example.org/fhir/sid/dokumentennr"
+  * value = "1234567890"
 * type = $kdl#PT130102 "Molekularpathologiebefund"
 * description = "Molekularpathologiebefund vom 31.12.21"
 //TODO: Der Vater/Rechnungsempfänger ist in diesem Szenario NICHT das Subject des Dokumentes!!!

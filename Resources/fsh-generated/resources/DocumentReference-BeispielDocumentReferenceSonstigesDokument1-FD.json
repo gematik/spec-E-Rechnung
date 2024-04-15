@@ -15,6 +15,12 @@
       }
     }
   ],
+  "identifier": [
+    {
+      "system": "https://example.org/fhir/sid/dokumentennr",
+      "value": "1234567890"
+    }
+  ],
   "type": {
     "coding": [
       {
