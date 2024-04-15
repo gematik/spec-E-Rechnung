@@ -196,6 +196,69 @@
         "mustSupport": true
       },
       {
+        "id": "Invoice.participant",
+        "path": "Invoice.participant",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "role"
+            }
+          ],
+          "rules": "open"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.participant:leistungserbringer",
+        "path": "Invoice.participant",
+        "sliceName": "leistungserbringer",
+        "min": 0,
+        "max": "*",
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.participant:leistungserbringer.role",
+        "path": "Invoice.participant.role",
+        "min": 1,
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "39607008",
+              "system": "http://snomed.info/sct"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.participant:leistungserbringer.actor",
+        "path": "Invoice.participant.actor",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Practitioner",
+              "http://hl7.org/fhir/StructureDefinition/Organization"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Invoice.participant:leistungserbringer.actor.identifier",
+        "path": "Invoice.participant.actor.identifier",
+        "type": [
+          {
+            "code": "Identifier",
+            "profile": [
+              "http://fhir.de/StructureDefinition/identifier-iknr",
+              "http://fhir.de/StructureDefinition/identifier-telematik-id"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
         "id": "Invoice.issuer",
         "path": "Invoice.issuer",
         "short": "Leistungserbringer",

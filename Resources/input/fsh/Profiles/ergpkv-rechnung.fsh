@@ -21,6 +21,17 @@ Id: ergpkv-rechnung
 * type = https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnung-type-cs#erechnung
 * status MS
 * status = http://hl7.org/fhir/invoice-status#issued
+* participant 0.. MS
+* participant ^slicing.discriminator.type = #pattern
+* participant ^slicing.discriminator.path = "role"
+* participant ^slicing.rules = #open
+* participant contains leistungserbringer 0..* MS
+* participant[leistungserbringer]
+  * role MS
+  * role = http://snomed.info/sct#39607008
+  * actor only Reference(Practitioner or Organization)
+    * identifier MS
+    * identifier only IdentifierIknr or IdentifierTelematikId
 * recipient 1.. MS
   * ^short = "Rechnungsempfänger"
   * ^comment = "Das System des Leistungserbringers referenziert hier üblicherweise 
