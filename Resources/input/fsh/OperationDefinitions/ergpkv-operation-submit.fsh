@@ -20,21 +20,21 @@ Description: "Rechnung einreichen durch die Leistungserbringer:in"
   * use = #in
   * min = 1
   * max = "1"
-  * documentation = "Vollständige E-Rechnung inkl. Signatur"
+  * documentation = "Vollständige E-Rechnung als PDF inkl. strukturierten Daten und Signatur"
   * type = #DocumentReference
 * parameter[+]
   * name = #anhaenge
   * use = #in
   * min = 0
   * max = "*"
-  * documentation = "Weitere Anhänge zur E-Rechnung"
+  * documentation = "Weitere Anhänge zur E-Rechnung als PDF"
   * type = #DocumentReference
 * parameter[+]
   * name = #modus
   * use = #in
   * min = 0
   * max = "1"
-  * documentation = "Verarbeitungshinweis für die E-Rechnung"
+  * documentation = "Verarbeitungshinweis für die E-Rechnung. Default: normal."
   * type = #code
   * binding
     * strength = #required
@@ -44,21 +44,34 @@ Description: "Rechnung einreichen durch die Leistungserbringer:in"
   * use = #in
   * min = 0
   * max = "1"
-  * documentation = "Indikation ob QR-Code-Token in das signierte PDF eingefügt werden soll"
+  * documentation = "Indikation ob nur das durch den FD erstellte Rechnungstoken zurückgegeben werden soll oder das gesamte PDF inkl. QR-Code-Token. Default: false."
   * type = #boolean
 * parameter[+]
   * name = #token
   * use = #out
   * min = 1
-  * max = "1"
-  * documentation = "Token zur eineindeutigen Identifizierung der E-Rechnung (unabhängig von returnTokenPDF)"
-  * type = #Identifier
+  * max = "*"
+  * documentation = "Token(s) zur eineindeutigen Identifizierung der Rechnungsdokumente/-anhänge (unabhängig von returnTokenPDF)"
+  * part[+]
+    * name = #id
+    * use = #out
+    * min = 1
+    * max = "*"
+    * type = #id
+    * documentation = "Randomisiertes Token zur Identifikation eines Dokumentes"
+  * part[+]
+    * name = #id
+    * use = #out
+    * min = 1
+    * max = "*"
+    * documentation = "Referenz auf die DocumentReference die durch das Token identifiziert wird"
+    * type = #Reference
 * parameter[+]
   * name = #warnungen
   * use = #out
   * min = 0
   * max = "1"
-  * documentation = "Warnhinweise zur Validierung der E-Rechnung. Werden nur im Modus \"Test\" und \"Force\" ausgegeben."
+  * documentation = "Warnhinweise und Fehlern zur Validierung der E-Rechnung. Diese MÜSSEN in jedem Verarbeitungsmodus ausgegeben werden."
   * type = #OperationOutcome
 * parameter[+]
   * name = #tokenPdf
@@ -75,7 +88,7 @@ Id: ergpkv-rechnung-submit-modus-cs
 Title: "ERGPKV Rechnung Submit Modus CS"
 Description:  "CodeSystem für die Differenzierung von der Verarbeitungsmodi für $erchnung-submit"
 * #test "Test" "E-Rechnung wird als Test eingereicht. Der Fachdienst validiert nur die E-Rechnung und speichert diese nicht."
-* #normal "Normal" "E-Rechnung wird durch den Fachdienst gespeichert falls keine synataktischen und semantische Validierungsfehler vorhanden sind."
+* #normal "Normal" "E-Rechnung wird durch den Fachdienst gespeichert falls keine gravierenden Validierungsfehler vorhanden sind."
 
 ValueSet:  ERGPKVRechnungSubmitModusVS
 Id: ergpkv-rechnung-submit-modus-vs

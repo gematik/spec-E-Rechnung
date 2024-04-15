@@ -16,7 +16,7 @@
     {
       "code": "normal",
       "display": "Normal",
-      "definition": "E-Rechnung wird durch den Fachdienst gespeichert falls keine synataktischen und semantische Validierungsfehler vorhanden sind."
+      "definition": "E-Rechnung wird durch den Fachdienst gespeichert falls keine gravierenden Validierungsfehler vorhanden sind."
     }
   ],
   "count": 2
