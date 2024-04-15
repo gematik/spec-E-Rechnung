@@ -56,7 +56,7 @@ Description: "Rechnung einreichen durch die Leistungserbringer:in"
     * name = #id
     * use = #out
     * min = 1
-    * max = "*"
+    * max = "1"
     * type = #id
     * documentation = "Randomisiertes Token zur Identifikation eines Dokumentes."
   * part[+]
@@ -65,7 +65,14 @@ Description: "Rechnung einreichen durch die Leistungserbringer:in"
     * min = 1
     * max = "*"
     * documentation = "Referenz auf die DocumentReference die durch das Token identifiziert wird."
-    * type = #Reference
+    * type = #Identifier
+  * part[+]
+    * name = #tokenPdf
+    * use = #out
+    * min = 0
+    * max = "*"
+    * documentation = "PDF mit eingebetteten Token, in Abhängigkeit vom returnTokenPDF-Parameter. Vgl. 4.1 Einreichung per Post des Feature-Dokumentes E-Rechnung."
+    * type = #Binary
 * parameter[+]
   * name = #warnungen
   * use = #out
@@ -73,13 +80,6 @@ Description: "Rechnung einreichen durch die Leistungserbringer:in"
   * max = "1"
   * documentation = "Warnhinweise und Fehlern zur Validierung der E-Rechnung. Diese MÜSSEN in jedem Verarbeitungsmodus ausgegeben werden."
   * type = #OperationOutcome
-* parameter[+]
-  * name = #tokenPdf
-  * use = #out
-  * min = 0
-  * max = "1"
-  * documentation = "PDF mit eingebetteten Rechnungstoken, in Abhängigkeit vom returnTokenPDF-Parameter. Vgl. 4.1 Einreichung per Post des Feature-Dokumentes E-Rechnung."
-  * type = #Binary
 
 // ------------- Terminology -------------
 
