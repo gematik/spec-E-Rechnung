@@ -40,7 +40,7 @@ Description: "Rechnung einreichen durch die Leistungserbringer:in"
     * strength = #required
     * valueSet = "https://gematik.de/fhir/ergpkv/ValueSet/ergpkv-rechnung-submit-modus-vs"
 * parameter[+]
-  * name = #returnTokenPDF
+  * name = #tokenPDF
   * use = #in
   * min = 0
   * max = "1"
@@ -64,14 +64,14 @@ Description: "Rechnung einreichen durch die Leistungserbringer:in"
     * use = #out
     * min = 1
     * max = "*"
-    * documentation = "Referenz auf die DocumentReference die durch das Token identifiziert wird."
+    * documentation = "Eindeutiger Identifikatior der Rechnung und Anhänge auf welche sich das Token bezieht."
     * type = #Identifier
   * part[+]
     * name = #tokenPdf
     * use = #out
     * min = 0
     * max = "*"
-    * documentation = "PDF mit eingebetteten Token, in Abhängigkeit vom returnTokenPDF-Parameter. Vgl. 4.1 Einreichung per Post des Feature-Dokumentes E-Rechnung."
+    * documentation = "PDF mit eingebetteten Token, in Abhängigkeit vom tokenPDF-Parameter. Vgl. 4.1 Einreichung per Post des Feature-Dokumentes E-Rechnung."
     * type = #Binary
 * parameter[+]
   * name = #warnungen

@@ -43,7 +43,7 @@
       }
     },
     {
-      "name": "returnTokenPDF",
+      "name": "tokenPDF",
       "use": "in",
       "min": 0,
       "max": "1",
@@ -70,7 +70,7 @@
           "use": "out",
           "min": 1,
           "max": "*",
-          "documentation": "Referenz auf die DocumentReference die durch das Token identifiziert wird.",
+          "documentation": "Eindeutiger Identifikatior der Rechnung und Anhänge auf welche sich das Token bezieht.",
           "type": "Identifier"
         },
         {
@@ -78,7 +78,7 @@
           "use": "out",
           "min": 0,
           "max": "*",
-          "documentation": "PDF mit eingebetteten Token, in Abhängigkeit vom returnTokenPDF-Parameter. Vgl. 4.1 Einreichung per Post des Feature-Dokumentes E-Rechnung.",
+          "documentation": "PDF mit eingebetteten Token, in Abhängigkeit vom tokenPDF-Parameter. Vgl. 4.1 Einreichung per Post des Feature-Dokumentes E-Rechnung.",
           "type": "Binary"
         }
       ]
