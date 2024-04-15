@@ -44,7 +44,7 @@ Description: "Rechnung einreichen durch die Leistungserbringer:in"
   * use = #in
   * min = 0
   * max = "1"
-  * documentation = "Indikation ob nur das durch den FD erstellte Rechnungstoken zurückgegeben werden soll oder das gesamte PDF inkl. QR-Code-Token. Default: false."
+  * documentation = "Indikation ob nur das durch den FD erstellte Rechnungstoken zurückgegeben werden soll oder das gesamte PDF inkl. Rechnungstoken. Default: false."
   * type = #boolean
 * parameter[+]
   * name = #token
@@ -78,7 +78,7 @@ Description: "Rechnung einreichen durch die Leistungserbringer:in"
   * use = #out
   * min = 0
   * max = "1"
-  * documentation = "PDF mit eingebetteten Rechnungstoken als QR-Code, in Abhängigkeit vom returnTokenPDF-Parameter. Vgl. 4.1 Einreichung per Post des Feature-Dokumentes E-Rechnung."
+  * documentation = "PDF mit eingebetteten Rechnungstoken, in Abhängigkeit vom returnTokenPDF-Parameter. Vgl. 4.1 Einreichung per Post des Feature-Dokumentes E-Rechnung."
   * type = #Binary
 
 // ------------- Terminology -------------
