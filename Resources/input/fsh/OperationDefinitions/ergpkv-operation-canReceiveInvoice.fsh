@@ -112,14 +112,6 @@ Description: "Profil zur Validierung der Output-Parameter für $erechnung-canRec
   * resource only ERGPKVersichertePerson
   * part 0..0
 
-Instance: ERGPKVCanReceiveInvoiceResponse
-InstanceOf: ERGPKVRParametersCanReceiveInvoiceOutput
-Usage: #example
-* parameter[rechnungsempfaenger]
-  * resource = ERGPKVRechnungsworkflowCanReceiveInvoiceResponseRgEmpfaenger
-* parameter[versichertePerson]
-  * resource = ERGPKVRechnungsworkflowCanReceiveInvoiceResponsePatient
-
 // ------------- Output Parameter (Error) -------------
 
 Instance: ERGPKVRechnungsworkflowCanReceiveInvoiceResponseError

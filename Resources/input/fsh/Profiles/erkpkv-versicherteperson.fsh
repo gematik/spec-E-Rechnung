@@ -1,9 +1,9 @@
 Profile: ERGPKVersichertePerson
 Title: "ERGPKVersichertePerson"
 Parent: Patient
-Id: ergpkv-canreceiveinvoiceresponsepatient
+Id: ergpkv-versicherteperson
 * id 1..1 MS
-* gender 1.. MS
+* active 1.. MS
 * birthDate MS
 * identifier MS
   * ^slicing.discriminator.type = #pattern
@@ -18,32 +18,3 @@ Id: ergpkv-canreceiveinvoiceresponsepatient
   * value MS
 * name 1.. MS
   * text 1.. MS
-* address 1.. MS
-  * text 1.. MS
-
-Instance: ERGPKVRechnungsworkflowCanReceiveInvoiceResponsePatient
-InstanceOf: ERGPKVersichertePerson
-Usage: #example
-* name
-  * text = "Leon Musterfrau"
-* gender = #male
-* identifier
-  * type = http://fhir.de/CodeSystem/identifier-type-de-basis#gkv
-  * system = "http://fhir.de/sid/gkv/kvid-10"
-  * value = "<KVNR>"
-* address
-  * text = "Musterweg 2, 3. Etage, 98764 Musterhausen, DE"
-
-Instance: ERGPKVRechnungsworkflowCanReceiveInvoiceResponseRgEmpfaenger
-InstanceOf: ERGPKVersichertePerson
-Usage: #example
-* name
-  * text = "Erika Musterfrau"
-* gender = #female
-* identifier
-  * type = http://fhir.de/CodeSystem/identifier-type-de-basis#gkv
-  * system = "http://fhir.de/sid/gkv/kvid-10"
-  * value = "<KVNR>"
-* address
-  * text = "Musterweg 2, 3. Etage, 98764 Musterhausen, DE"
-

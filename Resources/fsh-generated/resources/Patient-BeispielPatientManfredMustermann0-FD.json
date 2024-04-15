@@ -3,9 +3,10 @@
   "id": "BeispielPatientManfredMustermann0-FD",
   "meta": {
     "profile": [
-      "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-canreceiveinvoiceresponsepatient"
+      "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-versicherteperson"
     ]
   },
+  "active": true,
   "name": [
     {
       "text": "Manfred Mustermann"

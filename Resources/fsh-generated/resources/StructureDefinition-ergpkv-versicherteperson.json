@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "ergpkv-canreceiveinvoiceresponsepatient",
-  "url": "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-canreceiveinvoiceresponsepatient",
+  "id": "ergpkv-versicherteperson",
+  "url": "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-versicherteperson",
   "name": "ERGPKVersichertePerson",
   "title": "ERGPKVersichertePerson",
   "status": "draft",
@@ -76,6 +76,12 @@
         "mustSupport": true
       },
       {
+        "id": "Patient.active",
+        "path": "Patient.active",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
         "id": "Patient.name",
         "path": "Patient.name",
         "min": 1,
@@ -88,26 +94,8 @@
         "mustSupport": true
       },
       {
-        "id": "Patient.gender",
-        "path": "Patient.gender",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
         "id": "Patient.birthDate",
         "path": "Patient.birthDate",
-        "mustSupport": true
-      },
-      {
-        "id": "Patient.address",
-        "path": "Patient.address",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Patient.address.text",
-        "path": "Patient.address.text",
-        "min": 1,
         "mustSupport": true
       }
     ]

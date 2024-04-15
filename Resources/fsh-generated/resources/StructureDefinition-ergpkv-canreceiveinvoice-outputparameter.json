@@ -56,7 +56,7 @@
           {
             "code": "Patient",
             "profile": [
-              "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-canreceiveinvoiceresponsepatient"
+              "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-versicherteperson"
             ]
           }
         ],
@@ -94,7 +94,7 @@
           {
             "code": "Patient",
             "profile": [
-              "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-canreceiveinvoiceresponsepatient"
+              "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-versicherteperson"
             ]
           }
         ],

@@ -106,6 +106,7 @@ InstanceOf: ERGPKVRParametersSubmitOutput
 Instance: BeispielPatientManfredMustervater1-FD
 InstanceOf: ERGPKVersichertePerson
 Usage: #example
+* active = true
 * name
   * text = "Manfred Mustervater"
 * gender = #male
