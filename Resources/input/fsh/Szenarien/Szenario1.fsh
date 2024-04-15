@@ -81,11 +81,11 @@ Usage: #example
 
 //Input für Aufruf der $submit-Operation
 Instance: BeispielParameterSubmitInput1-LE
-InstanceOf: ERGPKVRParametersSubmitInput
-* parameter[rechnung]
-  * resource = BeispielRechnungsBundle1-LE
-* parameter[anhaenge]
-  * resource = BeispielSonstigesDokument1-LE
+InstanceOf: Parameters
+//* parameter[rechnung]
+//  * resource = BeispielRechnungsBundle1-LE
+//* parameter[anhaenge]
+//  * resource = BeispielSonstigesDokument1-LE
 // nicht erforderlich, da default
 //* parameter[modus]
 //  * valueCode = #normal
@@ -93,10 +93,10 @@ InstanceOf: ERGPKVRParametersSubmitInput
 //  * valueBoolean = #true
 
 //Output zur $submit-Operation
-Instance: BeispielParameterSubmitOutput1-FD
-InstanceOf: ERGPKVRParametersSubmitOutput
-* parameter[token].valueIdentifier.value = "111-456-789"
-* parameter[tokenPdf].resource = BeispielBinaryRechnungsPDF1-FD
+//Instance: BeispielParameterSubmitOutput1-FD
+//InstanceOf: Parameters
+//* parameter[token].valueIdentifier.value = "111-456-789"
+//* parameter[tokenPdf].resource = BeispielBinaryRechnungsPDF1-FD
 
 
 // **************************************************

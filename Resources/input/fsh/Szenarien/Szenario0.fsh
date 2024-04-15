@@ -75,10 +75,10 @@ Usage: #example
   * resource = BeispielPatientManfredMustermann0-FD
 
 //Input für Aufruf der $submit-Operation
-Instance: BeispielParameterSubmitInput0-LE
-InstanceOf: ERGPKVRParametersSubmitInput
-* parameter[rechnung]
-  * resource = BeispielRechnungsBundle0-LE
+//Instance: BeispielParameterSubmitInput0-LE
+//InstanceOf: Parameters
+//* parameter[rechnung]
+//  * resource = BeispielRechnungsBundle0-LE
 // nicht erforderlich, da default
 //* parameter[modus]
 //  * valueCode = #normal
@@ -86,10 +86,10 @@ InstanceOf: ERGPKVRParametersSubmitInput
 //  * valueBoolean = #true
 
 //Output zur $submit-Operation
-Instance: BeispielParameterSubmitOutput0-FD
-InstanceOf: ERGPKVRParametersSubmitOutput
-* parameter[token].valueIdentifier.value = "123-456-789"
-* parameter[tokenPdf].resource = BeispielBinaryRechnungsPDF0-FD
+//Instance: BeispielParameterSubmitOutput0-FD
+//InstanceOf: Parameters
+//* parameter[token].valueIdentifier.value = "123-456-789"
+//* parameter[tokenPdf].resource = BeispielBinaryRechnungsPDF0-FD
 
 
 // **************************************************

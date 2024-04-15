@@ -13,8 +13,6 @@
   "type": false,
   "instance": true,
   "affectsState": true,
-  "inputProfile": "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-submit-inputparameter",
-  "outputProfile": "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-submit-outputparameter",
   "parameter": [
     {
       "name": "rechnung",
@@ -22,7 +20,15 @@
       "min": 1,
       "max": "1",
       "documentation": "Vollständige E-Rechnung inkl. Signatur",
-      "type": "Bundle"
+      "type": "DocumentReference"
+    },
+    {
+      "name": "anhaenge",
+      "use": "in",
+      "min": 0,
+      "max": "*",
+      "documentation": "Weitere Anhänge zur E-Rechnung",
+      "type": "DocumentReference"
     },
     {
       "name": "modus",
@@ -30,15 +36,11 @@
       "min": 0,
       "max": "1",
       "documentation": "Verarbeitungshinweis für die E-Rechnung",
-      "type": "code"
-    },
-    {
-      "name": "anhaenge",
-      "use": "in",
-      "min": 0,
-      "max": "1",
-      "documentation": "Weitere Anhänge zur E-Rechnung",
-      "type": "DocumentReference"
+      "type": "code",
+      "binding": {
+        "strength": "required",
+        "valueSet": "https://gematik.de/fhir/ergpkv/ValueSet/ergpkv-rechnung-submit-modus-vs"
+      }
     },
     {
       "name": "returnTokenPDF",
