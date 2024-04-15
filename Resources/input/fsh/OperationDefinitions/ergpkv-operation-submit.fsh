@@ -60,7 +60,7 @@ Description: "Rechnung einreichen durch die Leistungserbringer:in"
     * type = #id
     * documentation = "Randomisiertes Token zur Identifikation eines Dokumentes"
   * part[+]
-    * name = #id
+    * name = #docRef
     * use = #out
     * min = 1
     * max = "*"
