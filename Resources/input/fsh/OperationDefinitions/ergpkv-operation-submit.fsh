@@ -20,14 +20,14 @@ Description: "Rechnung einreichen durch die Leistungserbringer:in"
   * use = #in
   * min = 1
   * max = "1"
-  * documentation = "Vollständige E-Rechnung als PDF inkl. strukturierten Daten und Signatur"
+  * documentation = "Vollständige E-Rechnung mit verschiedenen Attachments: 1) PDF 2) Strukturierte Daten und 3) Signatur."
   * type = #DocumentReference
 * parameter[+]
   * name = #anhaenge
   * use = #in
   * min = 0
   * max = "*"
-  * documentation = "Weitere Anhänge zur E-Rechnung als PDF"
+  * documentation = "Weitere Anhänge zur E-Rechnung als PDF."
   * type = #DocumentReference
 * parameter[+]
   * name = #modus
@@ -51,20 +51,20 @@ Description: "Rechnung einreichen durch die Leistungserbringer:in"
   * use = #out
   * min = 1
   * max = "*"
-  * documentation = "Token(s) zur eineindeutigen Identifizierung der Rechnungsdokumente/-anhänge (unabhängig von returnTokenPDF)"
+  * documentation = "Token(s) zur eineindeutigen Identifizierung der Rechnungsdokumente/-anhänge (unabhängig von returnTokenPDF)."
   * part[+]
     * name = #id
     * use = #out
     * min = 1
     * max = "*"
     * type = #id
-    * documentation = "Randomisiertes Token zur Identifikation eines Dokumentes"
+    * documentation = "Randomisiertes Token zur Identifikation eines Dokumentes."
   * part[+]
     * name = #docRef
     * use = #out
     * min = 1
     * max = "*"
-    * documentation = "Referenz auf die DocumentReference die durch das Token identifiziert wird"
+    * documentation = "Referenz auf die DocumentReference die durch das Token identifiziert wird."
     * type = #Reference
 * parameter[+]
   * name = #warnungen
@@ -78,7 +78,7 @@ Description: "Rechnung einreichen durch die Leistungserbringer:in"
   * use = #out
   * min = 0
   * max = "1"
-  * documentation = "PDF mit eingebetteten Rechnungstoken, in Abhängigkeit vom returnTokenPDF-Parameter"
+  * documentation = "PDF mit eingebetteten Rechnungstoken als QR-Code, in Abhängigkeit vom returnTokenPDF-Parameter. Vgl. 4.1 Einreichung per Post des Feature-Dokumentes E-Rechnung."
   * type = #Binary
 
 // ------------- Terminology -------------
