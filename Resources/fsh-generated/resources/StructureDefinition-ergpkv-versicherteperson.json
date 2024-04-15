@@ -20,6 +20,22 @@
         "mustSupport": true
       },
       {
+        "id": "Patient.extension:abweichender-rechnungsempfaenger",
+        "path": "Patient.extension",
+        "sliceName": "abweichender-rechnungsempfaenger",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-abweichender-rechnungsempfaenger"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
         "id": "Patient.identifier",
         "path": "Patient.identifier",
         "slicing": {
@@ -86,6 +102,7 @@
       {
         "id": "Patient.name",
         "path": "Patient.name",
+        "comment": "vgl. Abschnitt 5.4.2.3 Bereitgestellte Claims und Scopes, Feature-Dokument E-Rechnung",
         "min": 1,
         "mustSupport": true
       },
