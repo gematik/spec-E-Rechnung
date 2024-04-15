@@ -66,7 +66,7 @@
         "path": "DocumentReference.type.coding",
         "sliceName": "KDL",
         "short": "Dokumenttyp gemäß Klinischer Dokumentenliste (KDL)",
-        "comment": "Top-Level Kodes der KDL sollten angboten werden um der Benutzer:in eine verständliche Auswahl zu präsentieren. KDL#AM010106 muss verwendet werden, wenn es sich bei dem Dokument um eine Rechnung handelt.",
+        "comment": "Top-Level Kodes der KDL sollten angboten werden um der Benutzer:in eine verständliche Auswahl zu präsentieren. Hinweis: Zur Kodierung einer Rechnung, in Abgrenzung zu Anhängen, MUSS der KDL-Code 'AM010106' verwendet werden.",
         "min": 0,
         "max": "1",
         "mustSupport": true,
@@ -104,37 +104,124 @@
       {
         "id": "DocumentReference.content",
         "path": "DocumentReference.content",
-        "short": "Angehängtes Dokument",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "format"
+            }
+          ],
+          "rules": "open"
+        },
         "mustSupport": true
       },
       {
-        "id": "DocumentReference.content.attachment",
+        "id": "DocumentReference.content:rechnungspdf",
+        "path": "DocumentReference.content",
+        "sliceName": "rechnungspdf",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.content:rechnungspdf.attachment",
         "path": "DocumentReference.content.attachment",
-        "short": "Anhang",
         "mustSupport": true
       },
       {
-        "id": "DocumentReference.content.attachment.contentType",
+        "id": "DocumentReference.content:rechnungspdf.attachment.contentType",
         "path": "DocumentReference.content.attachment.contentType",
-        "short": "MIME-Type des Dokumentes",
-        "comment": "Zum Zeitpunkt der Veröffentlichung werden nur PDF-Dokumente als Anhang seitens der Leistungserbringer:in und der Patient:in unterstützt.",
+        "comment": "Zum Zeitpunkt der Veröffentlichung werden nur PDF-Dokumente als Rechnung seitens der Leistungserbringer:in unterstützt.",
         "min": 1,
         "patternCode": "application/pdf",
         "mustSupport": true
       },
       {
-        "id": "DocumentReference.content.attachment.data",
+        "id": "DocumentReference.content:rechnungspdf.attachment.data",
         "path": "DocumentReference.content.attachment.data",
-        "short": "eingebettetes Dokument",
-        "comment": "Der Fachdienst extrahiert das base64-kodierte PDF und verlinkt eine Binary-Repräsentation nach Entgegennahme der Rechnung. Dieses Feld muss durch die Applikation der Leistungserbringer:in oder der Patient:in gefüllt werden.",
+        "comment": "Base64-kodiertes PDF. Dieses Feld muss durch die Applikation der Leistungserbringer:in gefüllt werden.",
+        "min": 1,
         "mustSupport": true
       },
       {
-        "id": "DocumentReference.content.attachment.url",
-        "path": "DocumentReference.content.attachment.url",
-        "short": "Dokumenten-Link",
-        "comment": "Der Fachdienst extrahiert das base64-kodierte PDF und verlinkt eine Binary-Repräsentation nach Entgegennahme der Rechnung.",
+        "id": "DocumentReference.content:rechnungspdf.format",
+        "path": "DocumentReference.content.format",
+        "min": 1,
+        "patternCoding": {
+          "code": "erechnung",
+          "system": "https://gematik.de/fhir/ergpkv/CodeSystem/attachmentFormat"
+        }
+      },
+      {
+        "id": "DocumentReference.content:strukturierterRechnungsinhalt",
+        "path": "DocumentReference.content",
+        "sliceName": "strukturierterRechnungsinhalt",
+        "min": 0,
+        "max": "1",
         "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.content:strukturierterRechnungsinhalt.attachment",
+        "path": "DocumentReference.content.attachment",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.content:strukturierterRechnungsinhalt.attachment.contentType",
+        "path": "DocumentReference.content.attachment.contentType",
+        "comment": "Strukturierte Rechnungsinhalte können seitens der Leistungserbringer:in sowohl als JSON als auch XML übergeben werden.",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.content:strukturierterRechnungsinhalt.attachment.data",
+        "path": "DocumentReference.content.attachment.data",
+        "comment": "Base64-kodierte Repräsentation der Rechnungsinhalte. Dieses Feld muss durch die Applikation der Leistungserbringer:in gefüllt werden.",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.content:strukturierterRechnungsinhalt.format",
+        "path": "DocumentReference.content.format",
+        "min": 1,
+        "patternCoding": {
+          "code": "rechnungsinhalt",
+          "system": "https://gematik.de/fhir/ergpkv/CodeSystem/attachmentFormat"
+        }
+      },
+      {
+        "id": "DocumentReference.content:anhang",
+        "path": "DocumentReference.content",
+        "sliceName": "anhang",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.content:anhang.attachment",
+        "path": "DocumentReference.content.attachment",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.content:anhang.attachment.contentType",
+        "path": "DocumentReference.content.attachment.contentType",
+        "comment": "Zum Zeitpunkt der Veröffentlichung werden nur PDF-Dokumente als Rechnungsanhänge seitens der Leistungserbringer:in unterstützt.",
+        "patternCode": "application/pdf"
+      },
+      {
+        "id": "DocumentReference.content:anhang.attachment.data",
+        "path": "DocumentReference.content.attachment.data",
+        "comment": "Base64-kodiertes PDF. Dieses Feld muss durch die Applikation der Leistungserbringer:in gefüllt werden.",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.content:anhang.format",
+        "path": "DocumentReference.content.format",
+        "min": 1,
+        "patternCoding": {
+          "code": "rechnungsanhang",
+          "system": "https://gematik.de/fhir/ergpkv/CodeSystem/attachmentFormat"
+        }
       }
     ]
   }

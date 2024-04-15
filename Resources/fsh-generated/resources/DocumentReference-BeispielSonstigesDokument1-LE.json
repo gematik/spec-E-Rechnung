@@ -7,14 +7,6 @@
     ]
   },
   "status": "current",
-  "content": [
-    {
-      "attachment": {
-        "contentType": "application/pdf",
-        "data": "DIESISTNUREINBEISPIELDIESISTKEINVALIDESPDF00"
-      }
-    }
-  ],
   "identifier": [
     {
       "system": "https://example.org/fhir/sid/dokumentennr",
@@ -30,5 +22,12 @@
       }
     ]
   },
-  "description": "Molekularpathologiebefund vom 31.12.21"
+  "description": "Molekularpathologiebefund vom 31.12.21",
+  "content": [
+    {
+      "attachment": {
+        "data": "DIESISTNUREINBEISPIELDIESISTKEINVALIDESPDF00"
+      }
+    }
+  ]
 }

@@ -21,7 +21,7 @@ Id: ergpkv-dokumentenmetadaten
 * type.coding contains KDL 0..1 MS
 * type.coding[KDL] from https://gematik.de/fhir/ergpkv/ValueSet/ergpkv-sonstigesdokument-type-vs (extensible)
   * ^short = "Dokumenttyp gemäß Klinischer Dokumentenliste (KDL)"
-  * ^comment = "Top-Level Kodes der KDL sollten angboten werden um der Benutzer:in eine verständliche Auswahl zu präsentieren. KDL#AM010106 muss verwendet werden, wenn es sich bei dem Dokument um eine Rechnung handelt."
+  * ^comment = "Top-Level Kodes der KDL sollten angboten werden um der Benutzer:in eine verständliche Auswahl zu präsentieren. Hinweis: Zur Kodierung einer Rechnung, in Abgrenzung zu Anhängen, MUSS der KDL-Code 'AM010106' verwendet werden."
 * description 1..1 MS
   * ^short = "Dokumententitel"
   * ^comment = "menschenlesbarer Titel des Dokumentes, der dem Versicherten in der UI angezeigt wird. Der Titel kann manuell erfasst oder vom Dateinamen/Metadaten abgeleitet werden. z.B. &quot;Laborbefund vom 28.9.2023&quot;."
@@ -30,19 +30,32 @@ Id: ergpkv-dokumentenmetadaten
   * display 1..1 MS
   * ^comment = "Der Fachdienst verknüpft alle Dokumente mit der Rechnungsempfänger:in"
 * content 1.. MS
-  * ^short = "Angehängtes Dokument"
+  * ^slicing.discriminator.type = #pattern
+  * ^slicing.discriminator.path = "format"
+  * ^slicing.rules = #open
+* content contains rechnungspdf 0..1 MS and strukturierterRechnungsinhalt 0..1 MS and anhang 0..1 MS
+* content[rechnungspdf]
+  * format = https://gematik.de/fhir/ergpkv/CodeSystem/attachmentFormat#erechnung
   * attachment 1..1 MS
-    * ^short = "Anhang"
     * contentType 1.. MS
     * contentType = #application/pdf
-      * ^short = "MIME-Type des Dokumentes"
-      * ^comment = "Zum Zeitpunkt der Veröffentlichung werden nur PDF-Dokumente als Anhang seitens der Leistungserbringer:in und der Patient:in unterstützt."
-    * url 0.. MS
-      * ^short = "Dokumenten-Link"
-      * ^comment = "Der Fachdienst extrahiert das base64-kodierte PDF und verlinkt eine Binary-Repräsentation nach Entgegennahme der Rechnung."
-    * data 0.. MS
-      * ^short = "eingebettetes Dokument"
-      * ^comment = "Der Fachdienst extrahiert das base64-kodierte PDF und verlinkt eine Binary-Repräsentation nach Entgegennahme der Rechnung. Dieses Feld muss durch die Applikation der Leistungserbringer:in oder der Patient:in gefüllt werden."
+      * ^comment = "Zum Zeitpunkt der Veröffentlichung werden nur PDF-Dokumente als Rechnung seitens der Leistungserbringer:in unterstützt."
+    * data 1.. MS
+      * ^comment = "Base64-kodiertes PDF. Dieses Feld muss durch die Applikation der Leistungserbringer:in gefüllt werden."
+* content[strukturierterRechnungsinhalt]
+  * format = https://gematik.de/fhir/ergpkv/CodeSystem/attachmentFormat#rechnungsinhalt
+  * attachment 1..1 MS
+    * contentType 1.. MS
+      * ^comment = "Strukturierte Rechnungsinhalte können seitens der Leistungserbringer:in sowohl als JSON als auch XML übergeben werden."
+    * data 1.. MS
+      * ^comment = "Base64-kodierte Repräsentation der Rechnungsinhalte. Dieses Feld muss durch die Applikation der Leistungserbringer:in gefüllt werden."
+* content[anhang]
+  * format = https://gematik.de/fhir/ergpkv/CodeSystem/attachmentFormat#rechnungsanhang
+  * attachment 1..1 MS
+    * contentType = #application/pdf
+      * ^comment = "Zum Zeitpunkt der Veröffentlichung werden nur PDF-Dokumente als Rechnungsanhänge seitens der Leistungserbringer:in unterstützt."
+    * data 1.. MS
+      * ^comment = "Base64-kodiertes PDF. Dieses Feld muss durch die Applikation der Leistungserbringer:in gefüllt werden."
 
 
 

@@ -7,14 +7,6 @@
     ]
   },
   "status": "current",
-  "content": [
-    {
-      "attachment": {
-        "contentType": "application/pdf",
-        "url": "Binary/BeispielBinarySonstigesDokument1-FD"
-      }
-    }
-  ],
   "identifier": [
     {
       "system": "https://example.org/fhir/sid/dokumentennr",
@@ -34,5 +26,12 @@
   "subject": {
     "reference": "Patient/BeispielPatientManfredMustervater1-FD",
     "display": "Max Musterkind"
-  }
+  },
+  "content": [
+    {
+      "attachment": {
+        "url": "Binary/BeispielBinarySonstigesDokument1-FD"
+      }
+    }
+  ]
 }
