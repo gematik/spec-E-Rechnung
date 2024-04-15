@@ -23,7 +23,7 @@
       "type": "DocumentReference"
     },
     {
-      "name": "anhaenge",
+      "name": "anhang",
       "use": "in",
       "min": 0,
       "max": "*",
