@@ -6,13 +6,10 @@ Usage: #example
 * name
   * given = "Manfred"
   * family = "Mustermann"
-* gender = #male
 * identifier
   * type = http://fhir.de/CodeSystem/identifier-type-de-basis#gkv
   * system = "http://fhir.de/sid/gkv/kvid-10"
   * value = "A000000000"
-* address
-  * text = "Musterweg 2, 3. Etage, 98764 Musterhausen, DE"
 
 /*
 Instance: RPVater

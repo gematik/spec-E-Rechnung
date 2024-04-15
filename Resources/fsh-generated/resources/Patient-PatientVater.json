@@ -10,7 +10,6 @@
       "family": "Mustermann"
     }
   ],
-  "gender": "male",
   "identifier": [
     {
       "type": {
@@ -23,11 +22,6 @@
       },
       "system": "http://fhir.de/sid/gkv/kvid-10",
       "value": "A000000000"
-    }
-  ],
-  "address": [
-    {
-      "text": "Musterweg 2, 3. Etage, 98764 Musterhausen, DE"
     }
   ]
 }
