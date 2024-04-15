@@ -63,14 +63,14 @@ Description: "Rechnung einreichen durch die Leistungserbringer:in"
     * name = #docRef
     * use = #out
     * min = 1
-    * max = "*"
+    * max = "1"
     * documentation = "Eindeutiger Identifikatior der Rechnung und Anhänge auf welche sich das Token bezieht."
     * type = #Identifier
   * part[+]
     * name = #tokenPdf
     * use = #out
     * min = 0
-    * max = "*"
+    * max = "1"
     * documentation = "PDF mit eingebetteten Token, in Abhängigkeit vom tokenPDF-Parameter. Vgl. 4.1 Einreichung per Post des Feature-Dokumentes E-Rechnung."
     * type = #Binary
 * parameter[+]
