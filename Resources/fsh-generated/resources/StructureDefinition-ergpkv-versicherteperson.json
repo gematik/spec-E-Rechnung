@@ -34,9 +34,10 @@
         "mustSupport": true
       },
       {
-        "id": "Patient.identifier:VersichertenId-GKV",
+        "id": "Patient.identifier:Krankenversicherten-ID",
         "path": "Patient.identifier",
-        "sliceName": "VersichertenId-GKV",
+        "sliceName": "Krankenversicherten-ID",
+        "comment": "vgl. Abschnitt 5.4.2.3 Bereitgestellte Claims und Scopes, Feature-Dokument E-Rechnung",
         "min": 0,
         "max": "1",
         "type": [
@@ -51,7 +52,7 @@
           "type": {
             "coding": [
               {
-                "code": "GKV",
+                "code": "KVZ10",
                 "system": "http://fhir.de/CodeSystem/identifier-type-de-basis"
               }
             ]
@@ -60,24 +61,25 @@
         "mustSupport": true
       },
       {
-        "id": "Patient.identifier:VersichertenId-GKV.type",
+        "id": "Patient.identifier:Krankenversicherten-ID.type",
         "path": "Patient.identifier.type",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "Patient.identifier:VersichertenId-GKV.system",
+        "id": "Patient.identifier:Krankenversicherten-ID.system",
         "path": "Patient.identifier.system",
         "mustSupport": true
       },
       {
-        "id": "Patient.identifier:VersichertenId-GKV.value",
+        "id": "Patient.identifier:Krankenversicherten-ID.value",
         "path": "Patient.identifier.value",
         "mustSupport": true
       },
       {
         "id": "Patient.active",
         "path": "Patient.active",
+        "comment": "Indikation für den Client, dass es sich um eine Person handelt die über ein aktives Postfach im Fachdienst verfügt.",
         "min": 1,
         "mustSupport": true
       },
@@ -96,6 +98,7 @@
       {
         "id": "Patient.birthDate",
         "path": "Patient.birthDate",
+        "comment": "vgl. Abschnitt 5.4.2.3 Bereitgestellte Claims und Scopes, Feature-Dokument E-Rechnung",
         "mustSupport": true
       }
     ]
