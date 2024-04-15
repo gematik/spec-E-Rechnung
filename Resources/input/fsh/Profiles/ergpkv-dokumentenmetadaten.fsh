@@ -8,6 +8,10 @@ Id: ergpkv-dokumentenmetadaten
 * status = #current
   * ^short = "Dokumentenstatus"
   * ^comment = "Versionierung von sonstigen Dokument ist nicht unterstüzt. Nur jeweils die aktuelle Version des Dokumentes wird akzeptiert."
+* identifier 1.. MS
+  * ^comment = "Eindeutiger Identifikator vergeben durch das RE-PS (z.B. Interne Dokumentennummer), das System MUSS eindeutig pro Leistungserbringer:in vergeben werden."
+  * system 1.. MS
+  * value 1.. MS
 * type 1.. MS
   * ^short = "Dokumenttyp"
 * type.coding 1.. 
@@ -17,21 +21,22 @@ Id: ergpkv-dokumentenmetadaten
 * type.coding contains KDL 0..1 MS
 * type.coding[KDL] from https://gematik.de/fhir/ergpkv/ValueSet/ergpkv-sonstigesdokument-type-vs (extensible)
   * ^short = "Dokumenttyp gemäß Klinischer Dokumentenliste (KDL)"
-  * ^comment = "Top-Level Kodes der KDL sollten angboten werden um der Benutzer:in eine verständliche Auswahl zu präsentieren."
+  * ^comment = "Top-Level Kodes der KDL sollten angboten werden um der Benutzer:in eine verständliche Auswahl zu präsentieren. KDL#AM010106 muss verwendet werden, wenn es sich bei dem Dokument um eine Rechnung handelt."
 * description 1..1 MS
   * ^short = "Dokumententitel"
   * ^comment = "menschenlesbarer Titel des Dokumentes, der dem Versicherten in der UI angezeigt wird. Der Titel kann manuell erfasst oder vom Dateinamen/Metadaten abgeleitet werden. z.B. &quot;Laborbefund vom 28.9.2023&quot;."
 * subject MS
   * reference 1..1 MS
-  * ^comment = "Der Fachdienst verknüpft alle Dokumente mit der Rechnungsempfänger:in oder der Patient:in"
-* content 1..1 MS
+  * display 1..1 MS
+  * ^comment = "Der Fachdienst verknüpft alle Dokumente mit der Rechnungsempfänger:in"
+* content 1.. MS
   * ^short = "Angehängtes Dokument"
   * attachment 1..1 MS
     * ^short = "Anhang"
     * contentType 1.. MS
     * contentType = #application/pdf
       * ^short = "MIME-Type des Dokumentes"
-      * ^comment = "Zum Zeitpunkt der Veröffentlichung werden nur PDF-Dokumente als Anhang seitens der Leistungserbringer:in und der Patient:in unterstüzt."
+      * ^comment = "Zum Zeitpunkt der Veröffentlichung werden nur PDF-Dokumente als Anhang seitens der Leistungserbringer:in und der Patient:in unterstützt."
     * url 0.. MS
       * ^short = "Dokumenten-Link"
       * ^comment = "Der Fachdienst extrahiert das base64-kodierte PDF und verlinkt eine Binary-Repräsentation nach Entgegennahme der Rechnung."
