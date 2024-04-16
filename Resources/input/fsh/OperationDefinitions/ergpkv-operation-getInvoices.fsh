@@ -1,48 +1,31 @@
 // ------------- OperationDefinition -------------
 
-Instance: ERGPKVOperationGetInvoices
+Instance: ERGPKVOperationRetrieve
 InstanceOf: OperationDefinition
 Usage: #example
-Title: "ERGPKV Operation erechnung-getInvoices"
-Description: "Abrufen von E-Rechnungen – Übersicht"
-* url = "https://gematik.de/fhir/ergpkv/OperationDefinition/GetInvoices"
+Title: "ERGPKV Operation Retrieve"
+Description: "Abrufen von E-Rechnungen, strukturierten Rechnungsinhalten und Dokumenten"
+* url = "https://gematik.de/fhir/ergpkv/OperationDefinition/Retrieve"
 * status = #draft
 * kind = #operation
-* name = "ERechnung_GetInvoices"
-* code = #erechnung-getInvoices
-* resource = #Patient
+* name = "ERechnung_Retrieve"
+* code = #retrieve
+* resource = #DocumentReference
 * system = false
-* type = false
-* instance = true
+* type = true
+* instance = false
 * affectsState = false
 * parameter[+]
-  * name = #start
+  * name = #token
   * use = #in
   * min = 0
   * max = "1"
-  * documentation = "Rechnungsdatums ab dem die Rechnungen abgerufen werden sollen."
-  * type = #date
+  * documentation = "Dokumentoken zur Identifikation des Dokuments, dass angerufen werden soll"
+  * type = #string
 * parameter[+]
-  * name = #end
+  * name = #strukturierterRechnungsinhalt
   * use = #in
   * min = 0
   * max = "1"
-  * documentation = "Rechnungsdatums bis zu dem die Rechnungen abgerufen werden sollen."
-  * type = #date
-* parameter[+]
-  * name = #readStatus
-  * use = #in
-  * min = 0
-  * max = "1"
-  * documentation = "Angabe des Status der Rechnungen die abgerufen werden sollen."
-  * type = #code
-  * binding
-    * strength = #required
-    * valueSet = Canonical(ERGPKVGetInvoicesReadStatusVS)
-* parameter[+]
-  * name = #_count
-  * use = #in
-  * min = 0
-  * max = "1"
-  * documentation = "Angabe der Größe der Bundle-Seite, zur Steuerung des Pagings."
-  * type = #integer
+  * documentation = "Angabe ob die strukturierten Rechnungsinhalte neben dem angereicherten Rechnungsdokument zurückgegeben werden sollen"
+  * type = #bool

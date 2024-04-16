@@ -112,7 +112,6 @@
       {
         "id": "DocumentReference.subject",
         "path": "DocumentReference.subject",
-        "comment": "Der Fachdienst verknüpft alle Dokumente mit der Rechnungsempfänger:in",
         "min": 1,
         "mustSupport": true
       },
@@ -130,6 +129,7 @@
       {
         "id": "DocumentReference.author.identifier",
         "path": "DocumentReference.author.identifier",
+        "comment": "Der Fachdienst verknüpft alle Rechnungsdokumente mit der Telematik-ID des einreichenden Akteurs.",
         "min": 1,
         "type": [
           {
@@ -343,8 +343,14 @@
         "mustSupport": true
       },
       {
+        "id": "DocumentReference.context",
+        "path": "DocumentReference.context",
+        "mustSupport": true
+      },
+      {
         "id": "DocumentReference.context.related",
         "path": "DocumentReference.context.related",
+        "comment": "Der Fachdienst verknüpft alle Rechnungsdokumente mit der Rechnungsempfänger:in.",
         "min": 1,
         "type": [
           {
