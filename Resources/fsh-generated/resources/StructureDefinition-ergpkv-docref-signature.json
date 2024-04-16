@@ -1,0 +1,49 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ergpkv-docref-signature",
+  "url": "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-docref-signature",
+  "name": "ERGPKVDocRefSignature",
+  "title": "ERGPKV DocRef Signature",
+  "status": "draft",
+  "description": "Extension zur Abbildung einer Digitalen Signatur über die Rechnungsrepräsentation, sowie den strukturierten Rechnungsinhalten",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "Element"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension.url",
+        "path": "Extension.extension.url",
+        "patternUri": "http://example.org/fhir/StructureDefinition/ergpkv-docref-signature"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-docref-signature"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "type": [
+          {
+            "code": "Signature"
+          }
+        ]
+      }
+    ]
+  }
+}

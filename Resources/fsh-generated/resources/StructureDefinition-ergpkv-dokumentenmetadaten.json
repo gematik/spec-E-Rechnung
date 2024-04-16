@@ -14,6 +14,34 @@
   "differential": {
     "element": [
       {
+        "id": "DocumentReference",
+        "path": "DocumentReference",
+        "constraint": [
+          {
+            "key": "SignaturVerpflichtendRechnung",
+            "severity": "error",
+            "human": "Eine Signature muss vorhanden sein, falls es sich bei der DocumentReference um eine Rechnung handelt.",
+            "expression": "type.coding.where(system = 'http://dvmd.de/fhir/CodeSystem/kdl' and code = 'AM010106').exists() implies extension.where(url = 'https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-docref-signature').exists()",
+            "source": "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-dokumentenmetadaten"
+          }
+        ]
+      },
+      {
+        "id": "DocumentReference.extension:docRef-signature",
+        "path": "DocumentReference.extension",
+        "sliceName": "docRef-signature",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-docref-signature"
+            ]
+          }
+        ]
+      },
+      {
         "id": "DocumentReference.identifier",
         "path": "DocumentReference.identifier",
         "comment": "Eindeutiger Identifikator vergeben durch das RE-PS (z.B. Interne Dokumentennummer), das System MUSS eindeutig pro Leistungserbringer:in vergeben werden.",
@@ -149,7 +177,7 @@
         "min": 1,
         "patternCoding": {
           "code": "erechnung",
-          "system": "https://gematik.de/fhir/ergpkv/CodeSystem/attachmentFormat"
+          "system": "https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-attachment-format-cs"
         }
       },
       {
@@ -170,7 +198,11 @@
         "path": "DocumentReference.content.attachment.contentType",
         "comment": "Strukturierte Rechnungsinhalte können seitens der Leistungserbringer:in sowohl als JSON als auch XML übergeben werden.",
         "min": 1,
-        "mustSupport": true
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://gematik.de/fhir/ergpkv/ValueSet/ergpkv-restricted-mime-types"
+        }
       },
       {
         "id": "DocumentReference.content:strukturierterRechnungsinhalt.attachment.data",
@@ -185,7 +217,7 @@
         "min": 1,
         "patternCoding": {
           "code": "rechnungsinhalt",
-          "system": "https://gematik.de/fhir/ergpkv/CodeSystem/attachmentFormat"
+          "system": "https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-attachment-format-cs"
         }
       },
       {
@@ -220,7 +252,7 @@
         "min": 1,
         "patternCoding": {
           "code": "rechnungsanhang",
-          "system": "https://gematik.de/fhir/ergpkv/CodeSystem/attachmentFormat"
+          "system": "https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-attachment-format-cs"
         }
       }
     ]

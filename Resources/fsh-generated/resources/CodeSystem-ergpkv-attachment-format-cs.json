@@ -1,0 +1,25 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "draft",
+  "content": "complete",
+  "name": "ERGPKVAttachmentFormatCS",
+  "id": "ergpkv-attachment-format-cs",
+  "title": "ERGPKV Attachment Format CS",
+  "description": "CodeSystem für die Abbildung von verschieden Formatinhalten eines Dokuments",
+  "url": "https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-attachment-format-cs",
+  "concept": [
+    {
+      "code": "erechnung",
+      "display": "E-Rechnungsdokument"
+    },
+    {
+      "code": "rechnungsinhalt",
+      "display": "Strukturierter Rechnungsinhalt"
+    },
+    {
+      "code": "rechnungsanhang",
+      "display": "Rechnungsanhang"
+    }
+  ],
+  "count": 3
+}
