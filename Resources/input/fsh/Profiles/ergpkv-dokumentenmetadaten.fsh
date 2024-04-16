@@ -5,6 +5,7 @@ Title: "ERGPKV Dokumentenmetadaten"
 Parent: DocumentReference
 Id: ergpkv-dokumentenmetadaten
 * obeys SignaturVerpflichtendRechnung
+* obeys RechnungOderAnhang
 * extension MS
 * extension contains ERGPKVDocRefSignature named docRef-signature 0..1 MS
 * status MS
@@ -114,6 +115,11 @@ Description: "Extension zur Abbildung einer Digitalen Signatur über die Rechnun
 Invariant: SignaturVerpflichtendRechnung
 Description: "Eine Signature muss vorhanden sein, falls es sich bei der DocumentReference um eine Rechnung handelt."
 Expression: "type.coding.where(system = 'http://dvmd.de/fhir/CodeSystem/kdl' and code = 'AM010106').exists() implies extension.where(url = 'https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-docref-signature').exists()"
+Severity: #error
+
+Invariant: RechnungOderAnhang
+Description: "Ein Dokument kann entweder ein Anhang enthalten oder ein Rechnungsdokument inkl. strukturierten Rechnungsinhalten."
+Expression: "content.format.where(system = 'https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-attachment-format-cs' and code = 'rechnungsanhang').exists() xor (content.format.where(system = 'https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-attachment-format-cs' and code = 'erechnung').exists() and  content.format.where(system = 'https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-attachment-format-cs' and code = 'rechnungsinhalt').exists())"
 Severity: #error
 
 

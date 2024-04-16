@@ -23,6 +23,13 @@
             "human": "Eine Signature muss vorhanden sein, falls es sich bei der DocumentReference um eine Rechnung handelt.",
             "expression": "type.coding.where(system = 'http://dvmd.de/fhir/CodeSystem/kdl' and code = 'AM010106').exists() implies extension.where(url = 'https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-docref-signature').exists()",
             "source": "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-dokumentenmetadaten"
+          },
+          {
+            "key": "RechnungOderAnhang",
+            "severity": "error",
+            "human": "Ein Dokument kann entweder ein Anhang enthalten oder ein Rechnungsdokument inkl. strukturierten Rechnungsinhalten.",
+            "expression": "content.format.where(system = 'https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-attachment-format-cs' and code = 'rechnungsanhang').exists() xor (content.format.where(system = 'https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-attachment-format-cs' and code = 'erechnung').exists() and  content.format.where(system = 'https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-attachment-format-cs' and code = 'rechnungsinhalt').exists())",
+            "source": "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-dokumentenmetadaten"
           }
         ]
       },

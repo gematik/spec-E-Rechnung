@@ -20,7 +20,7 @@ Description: "Rechnung einreichen durch die Leistungserbringer:in"
   * use = #in
   * min = 1
   * max = "1"
-  * documentation = "Vollständige E-Rechnung mit verschiedenen Attachments: 1) PDF 2) Strukturierte Daten inkl. Signatur."
+  * documentation = "Vollständige E-Rechnung mit verschiedenen Attachments: 1) Rechnungs-PDF 2) Strukturierte Daten inkl. Signatur."
   * type = #DocumentReference
 * parameter[+]
   * name = #anhang
@@ -44,7 +44,7 @@ Description: "Rechnung einreichen durch die Leistungserbringer:in"
   * use = #in
   * min = 0
   * max = "1"
-  * documentation = "Indikation ob nur das durch den FD erstellte Rechnungstoken zurückgegeben werden soll oder das gesamte PDF inkl. Rechnungstoken. Default: false."
+  * documentation = "Indikation ob nur das durch den FD erstellte Dokumententoken zurückgegeben werden soll oder das gesamte PDF inkl. Dokumententoken. Default: false."
   * type = #boolean
 * parameter[+]
   * name = #token
