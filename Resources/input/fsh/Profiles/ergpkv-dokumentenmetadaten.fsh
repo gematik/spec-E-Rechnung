@@ -28,9 +28,12 @@ Id: ergpkv-dokumentenmetadaten
 * description 1..1 MS
   * ^short = "Dokumententitel"
   * ^comment = "Menschenlesbarer Titel des Dokumentes, der dem Versicherten in der UI angezeigt wird. Der Titel kann manuell erfasst oder vom Dateinamen/Metadaten abgeleitet werden. z.B. &quot;Laborbefund vom 28.9.2023&quot;."
-* subject MS
+* subject 1.. MS
   * display 1..1 MS
   * ^comment = "Der Fachdienst verknüpft alle Dokumente mit der Rechnungsempfänger:in"
+* author 1.. MS
+  * identifier 1.. MS
+  * identifier only IdentifierTelematikId
 * content 1.. MS
   * ^slicing.discriminator.type = #pattern
   * ^slicing.discriminator.path = "format"
