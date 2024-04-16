@@ -28,4 +28,4 @@ Description: "Abrufen von E-Rechnungen, strukturierten Rechnungsinhalten und Dok
   * min = 0
   * max = "1"
   * documentation = "Angabe ob die strukturierten Rechnungsinhalte neben dem angereicherten Rechnungsdokument zurückgegeben werden sollen"
-  * type = #bool
+  * type = #token
