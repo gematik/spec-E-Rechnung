@@ -50,7 +50,7 @@
       {
         "id": "DocumentReference.identifier",
         "path": "DocumentReference.identifier",
-        "comment": "Eindeutiger Identifikator vergeben durch das RE-PS (z.B. Interne Dokumentennummer), das System MUSS eindeutig pro Leistungserbringer:in vergeben werden.",
+        "comment": "Eindeutiger Identifikator vergeben durch das RE-PS (z.B. Interne Dokumentennummer). Das System MUSS eindeutig pro Leistungserbringer:in vergeben werden.",
         "min": 1,
         "mustSupport": true
       },
@@ -70,7 +70,7 @@
         "id": "DocumentReference.status",
         "path": "DocumentReference.status",
         "short": "Dokumentenstatus",
-        "comment": "Versionierung von sonstigen Dokument ist nicht unterstüzt. Nur jeweils die aktuelle Version des Dokumentes wird akzeptiert.",
+        "comment": "Versionierung von Dokumenten ist nicht unterstützt. Nur jeweils die aktuelle Version des Dokumentes wird akzeptiert.",
         "patternCode": "current",
         "mustSupport": true
       },
@@ -116,12 +116,6 @@
         "mustSupport": true
       },
       {
-        "id": "DocumentReference.subject.reference",
-        "path": "DocumentReference.subject.reference",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
         "id": "DocumentReference.subject.display",
         "path": "DocumentReference.subject.display",
         "min": 1,
@@ -131,7 +125,7 @@
         "id": "DocumentReference.description",
         "path": "DocumentReference.description",
         "short": "Dokumententitel",
-        "comment": "menschenlesbarer Titel des Dokumentes, der dem Versicherten in der UI angezeigt wird. Der Titel kann manuell erfasst oder vom Dateinamen/Metadaten abgeleitet werden. z.B. &quot;Laborbefund vom 28.9.2023&quot;.",
+        "comment": "Menschenlesbarer Titel des Dokumentes, der dem Versicherten in der UI angezeigt wird. Der Titel kann manuell erfasst oder vom Dateinamen/Metadaten abgeleitet werden. z.B. &quot;Laborbefund vom 28.9.2023&quot;.",
         "min": 1,
         "mustSupport": true
       },
@@ -148,6 +142,11 @@
           "rules": "open"
         },
         "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.content.attachment.url",
+        "path": "DocumentReference.content.attachment.url",
+        "comment": "Der FD muss die Base64-kodierten Daten aus attachment.data extrahieren und in eine Binary-Ressource auslagern."
       },
       {
         "id": "DocumentReference.content:rechnungspdf",
@@ -178,13 +177,61 @@
         "mustSupport": true
       },
       {
+        "id": "DocumentReference.content:rechnungspdf.attachment.url",
+        "path": "DocumentReference.content.attachment.url",
+        "mustSupport": true
+      },
+      {
         "id": "DocumentReference.content:rechnungspdf.format",
         "path": "DocumentReference.content.format",
         "min": 1,
         "patternCoding": {
           "code": "erechnung",
           "system": "https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-attachment-format-cs"
-        }
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.content:angereicherteRechnung",
+        "path": "DocumentReference.content",
+        "sliceName": "angereicherteRechnung",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.content:angereicherteRechnung.attachment",
+        "path": "DocumentReference.content.attachment",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.content:angereicherteRechnung.attachment.contentType",
+        "path": "DocumentReference.content.attachment.contentType",
+        "comment": "Zum Zeitpunkt der Veröffentlichung werden nur PDF-Dokumente als Rechnung seitens der Leistungserbringer:in unterstützt.",
+        "min": 1,
+        "patternCode": "application/pdf",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.content:angereicherteRechnung.attachment.data",
+        "path": "DocumentReference.content.attachment.data",
+        "comment": "Die angereicherte Rechnung wird durch den FD direkt als Binary-Ressource unter attachment.url referenziert.",
+        "max": "0"
+      },
+      {
+        "id": "DocumentReference.content:angereicherteRechnung.attachment.url",
+        "path": "DocumentReference.content.attachment.url",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.content:angereicherteRechnung.format",
+        "path": "DocumentReference.content.format",
+        "min": 1,
+        "patternCoding": {
+          "code": "angereichertesPDF",
+          "system": "https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-attachment-format-cs"
+        },
+        "mustSupport": true
       },
       {
         "id": "DocumentReference.content:strukturierterRechnungsinhalt",
@@ -218,13 +265,19 @@
         "mustSupport": true
       },
       {
+        "id": "DocumentReference.content:strukturierterRechnungsinhalt.attachment.url",
+        "path": "DocumentReference.content.attachment.url",
+        "mustSupport": true
+      },
+      {
         "id": "DocumentReference.content:strukturierterRechnungsinhalt.format",
         "path": "DocumentReference.content.format",
         "min": 1,
         "patternCoding": {
           "code": "rechnungsinhalt",
           "system": "https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-attachment-format-cs"
-        }
+        },
+        "mustSupport": true
       },
       {
         "id": "DocumentReference.content:anhang",
@@ -243,7 +296,9 @@
         "id": "DocumentReference.content:anhang.attachment.contentType",
         "path": "DocumentReference.content.attachment.contentType",
         "comment": "Zum Zeitpunkt der Veröffentlichung werden nur PDF-Dokumente als Rechnungsanhänge seitens der Leistungserbringer:in unterstützt.",
-        "patternCode": "application/pdf"
+        "min": 1,
+        "patternCode": "application/pdf",
+        "mustSupport": true
       },
       {
         "id": "DocumentReference.content:anhang.attachment.data",
@@ -253,13 +308,33 @@
         "mustSupport": true
       },
       {
+        "id": "DocumentReference.content:anhang.attachment.url",
+        "path": "DocumentReference.content.attachment.url",
+        "mustSupport": true
+      },
+      {
         "id": "DocumentReference.content:anhang.format",
         "path": "DocumentReference.content.format",
         "min": 1,
         "patternCoding": {
           "code": "rechnungsanhang",
           "system": "https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-attachment-format-cs"
-        }
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.context.related",
+        "path": "DocumentReference.context.related",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Patient"
+            ]
+          }
+        ],
+        "mustSupport": true
       }
     ]
   }

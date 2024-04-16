@@ -13,6 +13,10 @@
       "display": "E-Rechnungsdokument"
     },
     {
+      "code": "angereichertesPDF",
+      "display": "E-Rechnungsdokument mit eingebetteten strukturierten Rechnungsinhalt"
+    },
+    {
       "code": "rechnungsinhalt",
       "display": "Strukturierter Rechnungsinhalt"
     },
@@ -21,5 +25,5 @@
       "display": "Rechnungsanhang"
     }
   ],
-  "count": 3
+  "count": 4
 }
