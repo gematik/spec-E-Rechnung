@@ -5,7 +5,8 @@ Title: "ERGPKV Dokumentenmetadaten"
 Parent: DocumentReference
 Id: ergpkv-dokumentenmetadaten
 * obeys SignaturVerpflichtendRechnung
-* extension contains ERGPKVDocRefSignature named docRef-signature 0..1
+* extension MS
+* extension contains ERGPKVDocRefSignature named docRef-signature 0..1 MS
 * status MS
 * status = #current
   * ^short = "Dokumentenstatus"

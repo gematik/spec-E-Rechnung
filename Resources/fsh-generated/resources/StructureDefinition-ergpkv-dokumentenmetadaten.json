@@ -27,6 +27,11 @@
         ]
       },
       {
+        "id": "DocumentReference.extension",
+        "path": "DocumentReference.extension",
+        "mustSupport": true
+      },
+      {
         "id": "DocumentReference.extension:docRef-signature",
         "path": "DocumentReference.extension",
         "sliceName": "docRef-signature",
@@ -39,7 +44,8 @@
               "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-docref-signature"
             ]
           }
-        ]
+        ],
+        "mustSupport": true
       },
       {
         "id": "DocumentReference.identifier",
