@@ -30,9 +30,9 @@ Id: ergpkv-dokumentenmetadaten
   * ^comment = "Menschenlesbarer Titel des Dokumentes, der dem Versicherten in der UI angezeigt wird. Der Titel kann manuell erfasst oder vom Dateinamen/Metadaten abgeleitet werden. z.B. &quot;Laborbefund vom 28.9.2023&quot;."
 * subject 1.. MS
   * display 1..1 MS
-  * ^comment = "Der Fachdienst verknüpft alle Dokumente mit der Rechnungsempfänger:in"
-* author 1.. MS
+* author MS
   * identifier 1.. MS
+    * ^comment = "Der Fachdienst verknüpft alle Rechnungsdokumente mit der Telematik-ID des einreichenden Akteurs."
   * identifier only IdentifierTelematikId
 * content 1.. MS
   * ^slicing.discriminator.type = #pattern
@@ -81,8 +81,9 @@ Id: ergpkv-dokumentenmetadaten
     * data 1.. MS
       * ^comment = "Base64-kodiertes PDF. Dieses Feld muss durch die Applikation der Leistungserbringer:in gefüllt werden."
     * url MS
-* context
+* context MS
   * related 1.. MS 
+    * ^comment = "Der Fachdienst verknüpft alle Rechnungsdokumente mit der Rechnungsempfänger:in."
   * related only Reference(Patient)
 
 ValueSet: ERGPKVRestrictedMimeTypes
