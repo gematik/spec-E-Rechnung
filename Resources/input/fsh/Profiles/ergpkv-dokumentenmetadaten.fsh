@@ -8,6 +8,10 @@ Id: ergpkv-dokumentenmetadaten
 * obeys RechnungOderAnhang
 * extension MS
 * extension contains ERGPKVDocRefSignature named docRef-signature 0..1 MS
+* meta.tag
+  * ^slicing.discriminator.type = #pattern
+  * ^slicing.discriminator.path = "$this"
+  * ^slicing.rules = #open
 * status MS
 * status = #current
   * ^short = "Dokumentenstatus"
@@ -26,6 +30,11 @@ Id: ergpkv-dokumentenmetadaten
 * type.coding[KDL] from https://gematik.de/fhir/ergpkv/ValueSet/ergpkv-sonstigesdokument-type-vs (extensible)
   * ^short = "Dokumenttyp gemäß Klinischer Dokumentenliste (KDL)"
   * ^comment = "Top-Level Kodes der KDL sollten angboten werden um der Benutzer:in eine verständliche Auswahl zu präsentieren. Hinweis: Zur Kodierung einer Rechnung, in Abgrenzung zu Anhängen, MUSS der KDL-Code 'AM010106' verwendet werden."
+  * ^patternCoding.system = "http://dvmd.de/fhir/CodeSystem/kdl"
+  * system 1.. MS
+  * version 1.. MS
+  * code 1.. MS
+  * display 1.. MS
 * description 1..1 MS
   * ^short = "Dokumententitel"
   * ^comment = "Menschenlesbarer Titel des Dokumentes, der dem Versicherten in der UI angezeigt wird. Der Titel kann manuell erfasst oder vom Dateinamen/Metadaten abgeleitet werden. z.B. &quot;Laborbefund vom 28.9.2023&quot;."
