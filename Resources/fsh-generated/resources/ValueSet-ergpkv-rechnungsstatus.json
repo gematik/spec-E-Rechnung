@@ -1,0 +1,15 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "ERGPKVRechnungsstatus",
+  "id": "ergpkv-rechnungsstatus",
+  "title": "ERGPKV Rechnungsstatus",
+  "url": "https://gematik.de/fhir/ergpkv/ValueSet/ergpkv-rechnungsstatus",
+  "compose": {
+    "include": [
+      {
+        "system": "https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsstatus-cs"
+      }
+    ]
+  }
+}

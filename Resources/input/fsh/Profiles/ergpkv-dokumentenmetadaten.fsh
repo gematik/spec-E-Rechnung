@@ -1,3 +1,4 @@
+// ------------- Profile -------------
 Alias: $kdl = http://dvmd.de/fhir/CodeSystem/kdl
 
 Profile: ERGPKVDokumentenmetadaten
@@ -8,10 +9,15 @@ Id: ergpkv-dokumentenmetadaten
 * obeys RechnungOderAnhang
 * extension MS
 * extension contains ERGPKVDocRefSignature named docRef-signature 0..1 MS
-* meta.tag
+* meta.tag MS
   * ^slicing.discriminator.type = #pattern
   * ^slicing.discriminator.path = "$this"
   * ^slicing.rules = #open
+* meta.tag contains ergpkv-status 0..1 MS
+* meta.tag[ergpkv-status]
+  * ^comment = "Vgl. Abschnitt 4.4.1 Workflow einer Rechnung des Feature-Dokuments E-Rechnung"
+  * system 1.. MS
+  * code 1.. MS
 * status MS
 * status = #current
   * ^short = "Dokumentenstatus"
@@ -32,7 +38,6 @@ Id: ergpkv-dokumentenmetadaten
   * ^comment = "Top-Level Kodes der KDL sollten angboten werden um der Benutzer:in eine verständliche Auswahl zu präsentieren. Hinweis: Zur Kodierung einer Rechnung, in Abgrenzung zu Anhängen, MUSS der KDL-Code 'AM010106' verwendet werden."
   * ^patternCoding.system = "http://dvmd.de/fhir/CodeSystem/kdl"
   * system 1.. MS
-  * version 1.. MS
   * code 1.. MS
   * display 1.. MS
 * description 1..1 MS
@@ -96,12 +101,22 @@ Id: ergpkv-dokumentenmetadaten
     * ^comment = "Der Fachdienst verknüpft alle Rechnungsdokumente mit der Rechnungsempfänger:in."
   * related only Reference(Patient)
 
+// ------------- ValueSets -------------
+
 ValueSet: ERGPKVRestrictedMimeTypes
 Id: ergpkv-restricted-mime-types
 Title: "ERGPKV Restricted Mime Types"
 
 * include http://terminology.hl7.org/CodeSystem/mimetypes#application/fhir+json
 * include http://terminology.hl7.org/CodeSystem/mimetypes#application/fhir+xml
+
+ValueSet: ERGPKVRechnungsstatus
+Id: ergpkv-rechnungsstatus
+Title: "ERGPKV Rechnungsstatus"
+
+* include codes from system https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsstatus-cs
+
+// ------------- CodeSystem -------------
 
 CodeSystem:  ERGPKVAttachmentFormatCS
 Id: ergpkv-attachment-format-cs
@@ -112,6 +127,16 @@ Description:  "CodeSystem für die Abbildung von verschieden Formatinhalten eine
 * #rechnungsinhalt "Strukturierter Rechnungsinhalt"
 * #rechnungsanhang "Rechnungsanhang"
 
+CodeSystem:  ERGPKVARechnungsstatus
+Id: ergpkv-rechnungsstatus-cs
+Title: "ERGPKV Rechnungsstatus CS"
+Description:  "CodeSystem für die Abbildung von verschieden Status eines Rechnungungsdokuments"
+* #offen "Offen"
+* #erledigt "Erledigt"
+* #papierkorb "Papierkorb"
+
+// ------------- Extensions -------------
+
 Extension: ERGPKVDocRefSignature
 Id: ergpkv-docref-signature
 Title: "ERGPKV DocRef Signature"
@@ -120,6 +145,8 @@ Description: "Extension zur Abbildung einer Digitalen Signatur über die Rechnun
 * extension.url = "http://example.org/fhir/StructureDefinition/ergpkv-docref-signature"
 * value[x] 1.. MS
 * value[x] only Signature
+
+// ------------- Constraints -------------
 
 Invariant: SignaturVerpflichtendRechnung
 Description: "Eine Signature muss vorhanden sein, falls es sich bei der DocumentReference um eine Rechnung handelt."

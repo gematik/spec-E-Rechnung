@@ -44,7 +44,29 @@
             }
           ],
           "rules": "open"
-        }
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.meta.tag:ergpkv-status",
+        "path": "DocumentReference.meta.tag",
+        "sliceName": "ergpkv-status",
+        "comment": "Vgl. Abschnitt 4.4.1 Workflow einer Rechnung des Feature-Dokuments E-Rechnung",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.meta.tag:ergpkv-status.system",
+        "path": "DocumentReference.meta.tag.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.meta.tag:ergpkv-status.code",
+        "path": "DocumentReference.meta.tag.code",
+        "min": 1,
+        "mustSupport": true
       },
       {
         "id": "DocumentReference.extension",
@@ -135,12 +157,6 @@
       {
         "id": "DocumentReference.type.coding:KDL.system",
         "path": "DocumentReference.type.coding.system",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "DocumentReference.type.coding:KDL.version",
-        "path": "DocumentReference.type.coding.version",
         "min": 1,
         "mustSupport": true
       },
