@@ -54,7 +54,11 @@
         "comment": "Vgl. Abschnitt 4.4.1 Workflow einer Rechnung des Feature-Dokuments E-Rechnung",
         "min": 0,
         "max": "1",
-        "mustSupport": true
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsstatus"
+        }
       },
       {
         "id": "DocumentReference.meta.tag:ergpkv-status.system",

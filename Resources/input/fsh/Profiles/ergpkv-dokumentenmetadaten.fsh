@@ -14,7 +14,7 @@ Id: ergpkv-dokumentenmetadaten
   * ^slicing.discriminator.path = "$this"
   * ^slicing.rules = #open
 * meta.tag contains ergpkv-status 0..1 MS
-* meta.tag[ergpkv-status]
+* meta.tag[ergpkv-status] from https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsstatus (required)
   * ^comment = "Vgl. Abschnitt 4.4.1 Workflow einer Rechnung des Feature-Dokuments E-Rechnung"
   * system 1.. MS
   * code 1.. MS
