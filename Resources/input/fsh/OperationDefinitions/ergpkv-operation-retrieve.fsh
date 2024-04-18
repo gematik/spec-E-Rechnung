@@ -30,9 +30,16 @@ Description: "Abrufen von E-Rechnungen, strukturierten Rechnungsinhalten und Dok
   * documentation = "Angabe ob die strukturierten Rechnungsinhalte neben dem angereicherten Rechnungsdokument zurückgegeben werden sollen als 'content'-Element. Default: false"
   * type = #boolean
 * parameter[+]
+  * name = #originaleRechnung
+  * use = #in
+  * min = 0
+  * max = "1"
+  * documentation = "Angabe ob die originale Rechnung inkl. Signatur neben dem angereicherten Rechnungsdokument zurückgegeben werden soll als 'content'-Element. Default: false. Dieser Parameter darf nur durch das PSK als Client verwendet werden."
+  * type = #boolean
+* parameter[+]
   * name = #erechnung
   * use = #out
   * min = 1
   * max = "1"
-  * documentation = "DocumentReference-Ressource die das angefragte Rechnungsdokument, sowie die strukturierten Rechnungsinhalte enthält (in Abhängigkeit vom strukturierterRechnungsinhalt-Parameter)."
+  * documentation = "DocumentReference-Ressource die das angefragte Rechnungsdokument, sowie die strukturierten Rechnungsinhalte enthält (in Abhängigkeit vom strukturierterRechnungsinhalt- und originaleRechnung-Parameter)."
   * type = #boolean
