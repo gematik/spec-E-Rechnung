@@ -18,7 +18,14 @@ Description: "Änderung des Bearbeitungsstatus eines Dokumentes"
 * parameter[+]
   * name = #tag
   * use = #in
-  * min = 0
+  * min = 1
   * max = "1"
   * documentation = "Valider Code aus CodeSystem ERGPKVARechnungsstatus"
   * type = #code
+* parameter[+]
+  * name = #meta
+  * use = #out
+  * min = 1
+  * max = "1"
+  * documentation = "Geänderte Meta-Element der geänderten DocumentReference"
+  * type = #Meta
