@@ -16,7 +16,7 @@ Description: "Änderung des Bearbeitungsstatus eines Dokumentes"
 * instance = true
 * affectsState = true
 * parameter[+]
-  * name = #meta
+  * name = #flag
   * use = #out
   * min = 1
   * max = "1"
