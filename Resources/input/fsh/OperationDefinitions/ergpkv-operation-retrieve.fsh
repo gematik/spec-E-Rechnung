@@ -18,7 +18,7 @@ Description: "Abrufen von E-Rechnungen, strukturierten Rechnungsinhalten und Dok
 * parameter[+]
   * name = #token
   * use = #in
-  * min = 0
+  * min = 1
   * max = "1"
   * documentation = "Dokumentoken zur Identifikation des Dokuments, dass angerufen werden soll"
   * type = #string
@@ -42,4 +42,4 @@ Description: "Abrufen von E-Rechnungen, strukturierten Rechnungsinhalten und Dok
   * min = 1
   * max = "1"
   * documentation = "DocumentReference-Ressource die das angefragte Rechnungsdokument, sowie die strukturierten Rechnungsinhalte enthält (in Abhängigkeit vom strukturierterRechnungsinhalt- und originaleRechnung-Parameter)."
-  * type = #boolean
+  * type = #DocumentReference
