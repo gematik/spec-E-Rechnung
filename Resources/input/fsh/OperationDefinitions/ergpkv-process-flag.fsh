@@ -17,6 +17,13 @@ Description: "Änderung des Bearbeitungsstatus eines Dokumentes"
 * affectsState = true
 * parameter[+]
   * name = #flag
+  * use = #in
+  * min = 1
+  * max = "1"
+  * documentation = "Coding-Element welches die Markierung repräsentiert inkl. Extensions zur Erfassung der Zusatzinformationen der Markierung"
+  * type = #Coding
+* parameter[+]
+  * name = #flag
   * use = #out
   * min = 1
   * max = "1"
