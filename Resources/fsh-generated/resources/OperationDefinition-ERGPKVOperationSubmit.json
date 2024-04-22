@@ -53,9 +53,9 @@
     {
       "name": "token",
       "use": "out",
-      "min": 1,
+      "min": 0,
       "max": "*",
-      "documentation": "Token(s) zur eineindeutigen Identifizierung der Rechnungsdokumente/-anhänge (unabhängig von returnTokenPDF).",
+      "documentation": "Token(s) zur eineindeutigen Identifizierung der Rechnungsdokumente/-anhänge (unabhängig von returnTokenPDF). Dieser Parameter ist NUR optional falls modus = 'test'.",
       "part": [
         {
           "name": "id",
