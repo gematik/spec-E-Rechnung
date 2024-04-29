@@ -20,14 +20,14 @@ Description: "Abrufen von E-Rechnungen, strukturierten Rechnungsinhalten und Dok
   * use = #in
   * min = 1
   * max = "1"
-  * documentation = "Dokumentoken zur Identifikation des Dokuments, dass angerufen werden soll"
+  * documentation = "Dokumentoken zur Identifikation des Dokuments, welches abgerufen werden soll"
   * type = #string
 * parameter[+]
   * name = #strukturierterRechnungsinhalt
   * use = #in
   * min = 0
   * max = "1"
-  * documentation = "Angabe ob die strukturierten Rechnungsinhalte neben dem angereicherten Rechnungsdokument zurückgegeben werden sollen als 'content'-Element. Default: false"
+  * documentation = "Angabe, ob die strukturierten Rechnungsinhalte neben dem angereicherten Rechnungsdokument zurückgegeben werden sollen als 'content'-Element. Default: false"
   * type = #boolean
 * parameter[+]
   * name = #originaleRechnung
