@@ -2,7 +2,7 @@ Profile: ERGPKVRechnungsposition
 Title: "ERGPKV Rechnungsposition"
 Parent: ChargeItem
 Id: ergpkv-rechnungsposition
-* status MS // ToDo: ValueSet einschränken
+* status MS // ToDo: ValueSet einschränken auf? nur billable?
 * code MS
   * coding MS
     * ^slicing.discriminator.type = #pattern
@@ -11,10 +11,8 @@ Id: ergpkv-rechnungsposition
   * coding contains
       GOÄ 0..1 MS and
       GOZ 0..1 MS
-  * coding[GOÄ]
-    * ^patternCoding.system = "http://fhir.de/CodeSystem/bäk/goä"
-  * coding[GOZ]
-    * ^patternCoding.system = "http://fhir.de/CodeSystem/bzäk/goz"
+  * coding[GOÄ] ^patternCoding.system = "http://fhir.de/CodeSystem/bäk/goä"
+  * coding[GOZ] ^patternCoding.system = "http://fhir.de/CodeSystem/bzäk/goz"
   * text 1.. MS
 * subject MS
 * occurrencePeriod 1.. MS
@@ -48,3 +46,4 @@ InstanceOf: ERGPKVRechnungsposition
 * priceOverride.value = 0
 * extension[unitPriceComponent]
   * extension[type].valueCode = #tax
+

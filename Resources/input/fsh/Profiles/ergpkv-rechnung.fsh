@@ -21,6 +21,8 @@ Id: ergpkv-rechnung
     * ^short = "Rechnungsnummer"
 * type 1.. MS
 * type = https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnung-type-cs#erechnung
+* type.extension contains
+    ERGPKVGebuehrenordnung named Gebührenordnung ..1 MS
 * status MS
 * status = http://hl7.org/fhir/invoice-status#issued
 * participant 0.. MS
@@ -95,19 +97,38 @@ Title: "ERGPKV Zahlungsziel"
 * value[x] only date
 
 Extension: ERGPKVBehandlungsart
-Id: ERGPKVBehandlungsart
+Id: ergpkv-behandlungsart
 Title: "Extension Behandlungsart"
-Context: "Invoice"
+Context: Invoice
 * value[x] only Coding
-* valueCoding from BehandlungsartVS
+* valueCoding from ERGPKVBehandlungsartVS
 
 CodeSystem: ERGPKVBehandlungsartCS
-Id: ERGPKVBehandlungsartCS
+Id: ergpkv-behandlungsartCS
 Title: "Behandlungsart"
 * #AMB "Ambulante Behandlung"
 
 ValueSet: ERGPKVBehandlungsartVS
-Id: ERGPKVBehandlungsartVS
+Id: ergpkv-behandlungsartVS
 Title: "Behandlungsart"
 Description: "Diese Codes enthalten Behandlungsarten der eRechnung PKV"
 * include codes from system ERGPKVBehandlungsartCS
+
+Extension: ERGPKVGebuehrenordnung
+Id: ergpkv-gebuehrenordnung
+Title: "Extension Gebührenordnung"
+Context: Invoice.type
+* value[x] only Coding
+* valueCoding from ERGPKVGebuehrenordnungenVS
+
+CodeSystem: ERGPKVGebuehrenordnungenCS
+Id: ergpkv-gebuehrenordnungenCS
+Title: "Gebührenordnungen"
+* #GOÄ "Gebührenordnung für Ärzte"
+* #GOZ "Gebührenordnung für Zahnärzte"
+
+ValueSet: ERGPKVGebuehrenordnungenVS
+Id: ergpkv-gebuehrenordnungenVS
+Title: "Gebührenordnungen"
+Description: "Diese Codes enthalten Gebührenordnungen"
+* include codes from system GebuehrenordnungenCS

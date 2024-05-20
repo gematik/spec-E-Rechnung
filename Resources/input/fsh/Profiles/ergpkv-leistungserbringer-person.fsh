@@ -33,4 +33,10 @@ Id: RGPKVLeistungserbringer
 * gender MS
 * gender.extension contains $gender-de named Geschlecht-Administrativ 0..1 MS
 * gender.extension[Geschlecht-Administrativ].value[x] MS
-* qualification.code MS //TODO VS Binding
+* qualification.code.coding
+  * ^slicing.discriminator.type = #pattern
+  * ^slicing.discriminator.path = "system"
+  * ^slicing.rules = #open
+* qualification.code.coding contains
+    KBV-Schlüsseltabelle ..1 MS //TODO "Auswahl aus Verzeichnis (z.B. Zahnarzt)" welches Verzeichnis?
+* qualification.code.coding[KBV-Schlüsseltabelle] from $kbv-fachrichtung-vs (required)
