@@ -7,3 +7,4 @@ Alias: $adresse-de = http://fhir.de/StructureDefinition/address-de-basis
 Alias: $name-de = http://fhir.de/StructureDefinition/humanname-de-basis
 Alias: $gender-de = http://fhir.de/StructureDefinition/gender-amtlich-de
 Alias: $identifier-tmid = http://fhir.de/StructureDefinition/identifier-telematik-id
+Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203

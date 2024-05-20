@@ -97,7 +97,7 @@ Title: "ERGPKV Zahlungsziel"
 Extension: ERGPKVBehandlungsart
 Id: ERGPKVBehandlungsart
 Title: "Extension Behandlungsart"
-* ^context = "Invoice"
+Context: "Invoice"
 * value[x] only Coding
 * valueCoding from BehandlungsartVS
 
