@@ -27,5 +27,3 @@ InstanceOf: DocumentReference
   * attachment
     * contentType = #application/xml
     * url = "[FD-endpunkt]/Binary/xrechnung"
-
-//TODO Kommentar im IG

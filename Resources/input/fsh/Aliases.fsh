@@ -3,3 +3,7 @@ Alias: $kvid = http://fhir.de/sid/gkv/kvid-10
 Alias: $lanr = http://fhir.de/NamingSystem/kbv/lanr
 Alias: $tmid = https://gematik.de/fhir/sid/telematik-id
 Alias: $token = https://gematik.de/fhir/sid/ergpkv-token
+Alias: $adresse-de = http://fhir.de/StructureDefinition/address-de-basis
+Alias: $name-de = http://fhir.de/StructureDefinition/humanname-de-basis
+Alias: $gender-de = http://fhir.de/StructureDefinition/gender-amtlich-de
+Alias: $identifier-tmid = http://fhir.de/StructureDefinition/identifier-telematik-id
