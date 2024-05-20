@@ -2,8 +2,10 @@ Profile: ERGPKVRechnung
 Title: "ERGPKV Rechnung"
 Parent: Invoice
 Id: ergpkv-rechnung
-* extension contains ERGPKVPDFRepraesentationRechnung named pdf-repraesentation-rechnung 0..1 MS and
-  ERGPKVInvoicePeriod named period 0..1 MS
+* extension contains 
+  ERGPKVPDFRepraesentationRechnung named pdf-repraesentation-rechnung 0..1 MS and
+  ERGPKVInvoicePeriod named period 0..1 MS and
+  ERGPKVBehandlungsart named Behandlungsart 0..1 MS
 * identifier 1.. MS
 * identifier ^slicing.discriminator.type = #pattern
 * identifier ^slicing.discriminator.path = "type"
@@ -92,3 +94,20 @@ Id: ergpkv-zahlungsziel
 Title: "ERGPKV Zahlungsziel"
 * value[x] only date
 
+Extension: ERGPKVBehandlungsart
+Id: ERGPKVBehandlungsart
+Title: "Extension Behandlungsart"
+* ^context = "Invoice"
+* value[x] only Coding
+* valueCoding from BehandlungsartVS
+
+CodeSystem: ERGPKVBehandlungsartCS
+Id: ERGPKVBehandlungsartCS
+Title: "Behandlungsart"
+* #AMB "Ambulante Behandlung"
+
+ValueSet: ERGPKVBehandlungsartVS
+Id: ERGPKVBehandlungsartVS
+Title: "Behandlungsart"
+Description: "Diese Codes enthalten Behandlungsarten der eRechnung PKV"
+* include codes from system ERGPKVBehandlungsartCS
