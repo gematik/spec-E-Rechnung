@@ -8,3 +8,6 @@ Alias: $name-de = http://fhir.de/StructureDefinition/humanname-de-basis
 Alias: $gender-de = http://fhir.de/StructureDefinition/gender-amtlich-de
 Alias: $identifier-tmid = http://fhir.de/StructureDefinition/identifier-telematik-id
 Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
+Alias: $identifier-iknr = http://fhir.de/StructureDefinition/identifier-iknr
+Alias: $kbv-fachrichtung-cs = https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_BAR2_ARZTNRFACHGRUPPE
+Alias: $kbv-fachrichtung-vs = https://fhir.kbv.de/ValueSet/KBV_VS_SFHIR_BAR2_ARZTNRFACHGRUPPE
