@@ -1,0 +1,18 @@
+{
+  "resourceType": "Parameters",
+  "id": "BeispielParameterRetrieveInput",
+  "parameter": [
+    {
+      "name": "token",
+      "valueString": "123-456-789"
+    },
+    {
+      "name": "strukturierterRechnungsinhalt",
+      "valueBoolean": false
+    },
+    {
+      "name": "originaleRechnung",
+      "valueBoolean": false
+    }
+  ]
+}

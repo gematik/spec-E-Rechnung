@@ -1,0 +1,270 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "RGPKVLeistungserbringer",
+  "url": "https://gematik.de/fhir/ergpkv/StructureDefinition/RGPKVLeistungserbringer",
+  "name": "RGPKVLeistungserbringer",
+  "status": "draft",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2 Mapping"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "servd",
+      "uri": "http://www.omg.org/spec/ServD/1.0/",
+      "name": "ServD"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "Practitioner",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Practitioner",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Practitioner.identifier",
+        "path": "Practitioner.identifier",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        }
+      },
+      {
+        "id": "Practitioner.identifier:TelematikId",
+        "path": "Practitioner.identifier",
+        "sliceName": "TelematikId",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Identifier",
+            "profile": [
+              "http://fhir.de/StructureDefinition/identifier-telematik-id"
+            ]
+          }
+        ],
+        "patternIdentifier": {
+          "type": {
+            "coding": [
+              {
+                "code": "PRN",
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+              }
+            ]
+          }
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Practitioner.identifier:TelematikId.type",
+        "path": "Practitioner.identifier.type",
+        "min": 1
+      },
+      {
+        "id": "Practitioner.name",
+        "path": "Practitioner.name",
+        "type": [
+          {
+            "code": "HumanName",
+            "profile": [
+              "http://fhir.de/StructureDefinition/humanname-de-basis"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Practitioner.name.use",
+        "path": "Practitioner.name.use",
+        "mustSupport": true
+      },
+      {
+        "id": "Practitioner.name.family",
+        "path": "Practitioner.name.family",
+        "mustSupport": true
+      },
+      {
+        "id": "Practitioner.name.family.extension:namenszusatz",
+        "path": "Practitioner.name.family.extension",
+        "sliceName": "namenszusatz",
+        "mustSupport": true
+      },
+      {
+        "id": "Practitioner.name.family.extension:nachname",
+        "path": "Practitioner.name.family.extension",
+        "sliceName": "nachname",
+        "mustSupport": true
+      },
+      {
+        "id": "Practitioner.name.family.extension:vorsatzwort",
+        "path": "Practitioner.name.family.extension",
+        "sliceName": "vorsatzwort",
+        "mustSupport": true
+      },
+      {
+        "id": "Practitioner.name.given",
+        "path": "Practitioner.name.given",
+        "mustSupport": true
+      },
+      {
+        "id": "Practitioner.name.prefix",
+        "path": "Practitioner.name.prefix",
+        "mustSupport": true
+      },
+      {
+        "id": "Practitioner.name.prefix.extension:prefix-qualifier",
+        "path": "Practitioner.name.prefix.extension",
+        "sliceName": "prefix-qualifier",
+        "mustSupport": true
+      },
+      {
+        "id": "Practitioner.address",
+        "path": "Practitioner.address",
+        "type": [
+          {
+            "code": "Address",
+            "profile": [
+              "http://fhir.de/StructureDefinition/address-de-basis"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Practitioner.address.extension:Stadtteil",
+        "path": "Practitioner.address.extension",
+        "sliceName": "Stadtteil",
+        "mustSupport": true
+      },
+      {
+        "id": "Practitioner.address.type",
+        "path": "Practitioner.address.type",
+        "mustSupport": true
+      },
+      {
+        "id": "Practitioner.address.line",
+        "path": "Practitioner.address.line",
+        "mustSupport": true
+      },
+      {
+        "id": "Practitioner.address.line.extension:Strasse",
+        "path": "Practitioner.address.line.extension",
+        "sliceName": "Strasse",
+        "mustSupport": true
+      },
+      {
+        "id": "Practitioner.address.line.extension:Hausnummer",
+        "path": "Practitioner.address.line.extension",
+        "sliceName": "Hausnummer",
+        "mustSupport": true
+      },
+      {
+        "id": "Practitioner.address.line.extension:Adresszusatz",
+        "path": "Practitioner.address.line.extension",
+        "sliceName": "Adresszusatz",
+        "mustSupport": true
+      },
+      {
+        "id": "Practitioner.address.city",
+        "path": "Practitioner.address.city",
+        "mustSupport": true
+      },
+      {
+        "id": "Practitioner.address.postalCode",
+        "path": "Practitioner.address.postalCode",
+        "mustSupport": true
+      },
+      {
+        "id": "Practitioner.address.country",
+        "path": "Practitioner.address.country",
+        "mustSupport": true
+      },
+      {
+        "id": "Practitioner.gender",
+        "path": "Practitioner.gender",
+        "mustSupport": true
+      },
+      {
+        "id": "Practitioner.gender.extension",
+        "path": "Practitioner.gender.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "id": "Practitioner.gender.extension:Geschlecht-Administrativ",
+        "path": "Practitioner.gender.extension",
+        "sliceName": "Geschlecht-Administrativ",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://fhir.de/StructureDefinition/gender-amtlich-de"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Practitioner.gender.extension:Geschlecht-Administrativ.extension",
+        "path": "Practitioner.gender.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Practitioner.gender.extension:Geschlecht-Administrativ.value[x]",
+        "path": "Practitioner.gender.extension.value[x]",
+        "mustSupport": true
+      },
+      {
+        "id": "Practitioner.qualification.code.coding",
+        "path": "Practitioner.qualification.code.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "system"
+            }
+          ],
+          "rules": "open"
+        }
+      },
+      {
+        "id": "Practitioner.qualification.code.coding:KBV-Schlüsseltabelle",
+        "path": "Practitioner.qualification.code.coding",
+        "sliceName": "KBV-Schlüsseltabelle",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://fhir.kbv.de/ValueSet/KBV_VS_SFHIR_BAR2_ARZTNRFACHGRUPPE"
+        }
+      }
+    ]
+  }
+}

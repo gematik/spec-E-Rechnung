@@ -1,9 +1,9 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "ergpkv-zahlungsziel",
-  "url": "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-zahlungsziel",
-  "name": "ERGPKVZahlungsziel",
-  "title": "ERGPKV Zahlungsziel",
+  "id": "ergpkv-gebuehrenordnung",
+  "url": "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-gebuehrenordnung",
+  "name": "ERGPKVGebuehrenordnung",
+  "title": "Extension Gebührenordnung",
   "status": "draft",
   "fhirVersion": "4.0.1",
   "mapping": [
@@ -18,7 +18,7 @@
   "context": [
     {
       "type": "element",
-      "expression": "Element"
+      "expression": "Invoice.type"
     }
   ],
   "type": "Extension",
@@ -34,16 +34,20 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-zahlungsziel"
+        "fixedUri": "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-gebuehrenordnung"
       },
       {
         "id": "Extension.value[x]",
         "path": "Extension.value[x]",
         "type": [
           {
-            "code": "date"
+            "code": "Coding"
           }
-        ]
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://gematik.de/fhir/ergpkv/ValueSet/ergpkv-gebuehrenordnungenVS"
+        }
       }
     ]
   }

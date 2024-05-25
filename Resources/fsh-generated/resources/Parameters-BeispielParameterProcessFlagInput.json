@@ -1,0 +1,9 @@
+{
+  "resourceType": "Parameters",
+  "id": "BeispielParameterProcessFlagInput",
+  "parameter": [
+    {
+      "name": "tag"
+    }
+  ]
+}

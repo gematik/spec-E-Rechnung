@@ -1,0 +1,103 @@
+{
+  "resourceType": "Parameters",
+  "id": "BeispielParameterSubmitInput3.1-LE",
+  "parameter": [
+    {
+      "name": "rechnung",
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "BeispielDocumentReferenceRechnung3.1-LE",
+        "status": "current",
+        "type": {
+          "coding": [
+            {
+              "code": "AM010106",
+              "system": "http://dvmd.de/fhir/CodeSystem/kdl",
+              "display": "Rechnung ambulante/stationäre Behandlung"
+            }
+          ]
+        },
+        "description": "Rechnung Reiseimpfung vom 10.01.2024",
+        "subject": {
+          "identifier": {
+            "system": "http://fhir.de/sid/gkv/kvid-10",
+            "value": "A000000000"
+          }
+        },
+        "content": [
+          {
+            "attachment": {
+              "contentType": "application/pdf",
+              "data": "DIESISTNUREINBEISPIELDIESISTKEINVALIDESPDF00"
+            }
+          },
+          {
+            "format": {
+              "code": "xrechnung"
+            },
+            "attachment": {
+              "contentType": "application/xml",
+              "data": "DIESISTNUREINBEISPIELDIESISTKEINVALIDESXML00"
+            }
+          },
+          {
+            "format": {
+              "code": "gematik-erechnung"
+            },
+            "attachment": {
+              "contentType": "application/fhir+xml",
+              "data": "DIESISTNUREINBEISPIELDIESISTKEINVALIDESXML00"
+            }
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://example.org/StructureDefinition/signatur",
+            "valueSignature": {
+              "type": [
+                {
+                  "code": "1.2.840.10065.1.12.1.1",
+                  "system": "urn:iso-astm:E1762-95:2013",
+                  "display": "Author's Signature"
+                }
+              ],
+              "when": "2015-02-07T13:29:17.239+02:00",
+              "who": {
+                "display": "Arzt"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "anhang",
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "BeispielDocumentReferenceSonstigesDokument3.1-LE",
+        "status": "current",
+        "type": {
+          "coding": [
+            {
+              "code": "PT130102",
+              "system": "http://dvmd.de/fhir/CodeSystem/kdl",
+              "display": "Molekularpathologiebefund"
+            }
+          ]
+        },
+        "description": "Molekularpathologiebefund vom 30.12.21",
+        "subject": {
+          "reference": "Patient/BeispielPatient3-FD"
+        },
+        "content": [
+          {
+            "attachment": {
+              "contentType": "application/pdf",
+              "data": "DIESISTNUREINBEISPIELDIESISTKEINVALIDESPDF00"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "ERGPKVBehandlungsartVS",
+  "id": "ergpkv-behandlungsartVS",
+  "title": "Behandlungsart",
+  "description": "Diese Codes enthalten Behandlungsarten der eRechnung PKV",
+  "url": "https://gematik.de/fhir/ergpkv/ValueSet/ergpkv-behandlungsartVS",
+  "compose": {
+    "include": [
+      {
+        "system": "https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-behandlungsartCS"
+      }
+    ]
+  }
+}

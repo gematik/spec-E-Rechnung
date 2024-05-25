@@ -1,0 +1,10 @@
+{
+  "resourceType": "Parameters",
+  "id": "BeispielParameterRetrieveInput2",
+  "parameter": [
+    {
+      "name": "token",
+      "valueString": "123-456-123"
+    }
+  ]
+}

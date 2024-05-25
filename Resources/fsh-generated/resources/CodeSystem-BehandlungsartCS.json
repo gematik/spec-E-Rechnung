@@ -1,0 +1,16 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "draft",
+  "content": "complete",
+  "name": "BehandlungsartCS",
+  "id": "BehandlungsartCS",
+  "title": "Behandlungsart",
+  "url": "https://gematik.de/fhir/ergpkv/CodeSystem/BehandlungsartCS",
+  "concept": [
+    {
+      "code": "AMB",
+      "display": "Ambulante Behandlung"
+    }
+  ],
+  "count": 1
+}

@@ -1,0 +1,18 @@
+{
+  "resourceType": "Condition",
+  "id": "R2444Diagnose",
+  "code": {
+    "coding": [
+      {
+        "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+        "code": "M54.5",
+        "version": "2024",
+        "display": "Verdacht auf Kreuzschmerz"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/R2444PKVersichertePerson"
+  },
+  "recordedDate": "2024-03-20"
+}

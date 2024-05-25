@@ -1,0 +1,47 @@
+{
+  "resourceType": "Bundle",
+  "id": "BulkRetrieveExampleInput",
+  "type": "transaction",
+  "entry": [
+    {
+      "request": {
+        "method": "POST",
+        "url": "$retrieve"
+      },
+      "resource": {
+        "resourceType": "Parameters",
+        "id": "BeispielParameterRetrieveInput",
+        "parameter": [
+          {
+            "name": "token",
+            "valueString": "123-456-789"
+          },
+          {
+            "name": "strukturierterRechnungsinhalt",
+            "valueBoolean": false
+          },
+          {
+            "name": "originaleRechnung",
+            "valueBoolean": false
+          }
+        ]
+      }
+    },
+    {
+      "request": {
+        "method": "POST",
+        "url": "$retrieve"
+      },
+      "resource": {
+        "resourceType": "Parameters",
+        "id": "BeispielParameterRetrieveInput2",
+        "parameter": [
+          {
+            "name": "token",
+            "valueString": "123-456-123"
+          }
+        ]
+      }
+    }
+  ]
+}

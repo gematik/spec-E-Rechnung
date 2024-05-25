@@ -1,0 +1,44 @@
+{
+  "resourceType": "ChargeItem",
+  "id": "R2444ChargeItem",
+  "meta": {
+    "profile": [
+      "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-rechnungsposition"
+    ]
+  },
+  "extension": [
+    {
+      "url": "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-preisdetails-rechnungsposition",
+      "extension": [
+        {
+          "url": "type",
+          "valueCode": "tax"
+        }
+      ]
+    }
+  ],
+  "status": "billable",
+  "code": {
+    "coding": [
+      {
+        "system": "http://fhir.de/CodeSystem/bäk/goä",
+        "code": "5"
+      }
+    ],
+    "text": "Symptombezogene Untersuchung"
+  },
+  "subject": {
+    "reference": "Patient/R2444PKVersichertePerson",
+    "display": "Emilia Schmitt"
+  },
+  "occurrencePeriod": {
+    "start": "2024-03-20"
+  },
+  "quantity": {
+    "value": 1
+  },
+  "factorOverride": 3.5,
+  "priceOverride": {
+    "value": 16.32
+  }
+}
