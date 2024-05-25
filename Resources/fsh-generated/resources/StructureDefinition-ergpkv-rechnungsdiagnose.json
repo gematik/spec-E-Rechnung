@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "ERGPKVRechnungsdiagnose",
-  "url": "https://gematik.de/fhir/ergpkv/StructureDefinition/ERGPKVRechnungsdiagnose",
+  "id": "ergpkv-rechnungsdiagnose",
+  "url": "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-rechnungsdiagnose",
   "name": "ERGPKVRechnungsdiagnose",
   "status": "draft",
   "fhirVersion": "4.0.1",

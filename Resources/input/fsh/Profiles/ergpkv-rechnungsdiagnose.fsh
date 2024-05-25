@@ -1,6 +1,6 @@
 Profile: ERGPKVRechnungsdiagnose
 Parent: Condition
-Id: ERGPKVRechnungsdiagnose
+Id: ergpkv-rechnungsdiagnose
 * code 1.. MS
 * code.coding MS
 * code.coding ^slicing.discriminator.type = #pattern

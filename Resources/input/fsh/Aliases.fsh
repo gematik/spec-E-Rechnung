@@ -11,3 +11,4 @@ Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
 Alias: $identifier-iknr = http://fhir.de/StructureDefinition/identifier-iknr
 Alias: $kbv-fachrichtung-cs = https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_BAR2_ARZTNRFACHGRUPPE
 Alias: $kbv-fachrichtung-vs = https://fhir.kbv.de/ValueSet/KBV_VS_SFHIR_BAR2_ARZTNRFACHGRUPPE
+Alias: $restful-interaction = http://hl7.org/fhir/restful-interaction

@@ -7,6 +7,28 @@
   "status": "draft",
   "description": "Diese Task-Ressource wird vom Fachdienst angelegt \nund beschreibt den Vorgang des Einstellens \neiner Rechnung in das Postfach eines Patienten bzw. Rechnungsempfängers.\nSie kann als &quot;Kuvert&quot; interpretiert werden, in dem ein \nLeistungserbringer Rechnungen und assoziierte Dokumente aggregiert \nund im Postfach eines Patienten bzw. Rechnungsempfängers bereitstellt.",
   "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "workflow",
+      "uri": "http://hl7.org/fhir/workflow",
+      "name": "Workflow Pattern"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    },
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2 Mapping"
+    }
+  ],
   "kind": "resource",
   "abstract": false,
   "type": "Task",
@@ -17,6 +39,16 @@
       {
         "id": "Task.extension",
         "path": "Task.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
         "short": "Rechnungsempfänger:in",
         "comment": "Rechnungsempfänger:in oder Patient:in. Diese Person ist die Rechnungsempfänger:in und damit für die Handhabung der Rechnung zuständig.",
         "min": 1
