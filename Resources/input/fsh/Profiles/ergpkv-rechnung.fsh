@@ -100,7 +100,7 @@ Extension: ERGPKVBehandlungsart
 Id: ergpkv-behandlungsart
 Title: "Extension Behandlungsart"
 * ^context.type = #element
-* ^context.expression = ""Invoice""
+* ^context.expression = "Invoice"
 * value[x] only Coding
 * valueCoding from ERGPKVBehandlungsartVS
 
