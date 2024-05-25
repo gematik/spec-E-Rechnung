@@ -99,7 +99,8 @@ Title: "ERGPKV Zahlungsziel"
 Extension: ERGPKVBehandlungsart
 Id: ergpkv-behandlungsart
 Title: "Extension Behandlungsart"
-Context: Invoice
+* ^context.type = #element
+* ^context.expression = "Invoice"
 * value[x] only Coding
 * valueCoding from ERGPKVBehandlungsartVS
 
@@ -117,7 +118,8 @@ Description: "Diese Codes enthalten Behandlungsarten der eRechnung PKV"
 Extension: ERGPKVGebuehrenordnung
 Id: ergpkv-gebuehrenordnung
 Title: "Extension Gebührenordnung"
-Context: Invoice.type
+* ^context.type = #element
+* ^context.expression = "Invoice.type"
 * value[x] only Coding
 * valueCoding from ERGPKVGebuehrenordnungenVS
 
