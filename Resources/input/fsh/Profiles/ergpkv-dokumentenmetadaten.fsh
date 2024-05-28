@@ -8,7 +8,12 @@ Id: ergpkv-dokumentenmetadaten
 * obeys SignaturVerpflichtendRechnung
 * obeys RechnungOderAnhang
 * extension MS
-* extension contains ERGPKVDocRefSignature named docRef-signature 0..1 MS and ERGPKVDocumentReferenceMarkierung named markierung 0..* MS
+* extension contains 
+  ERGPKVDocRefSignature named docRef-signature 0..1 MS and 
+  ERGPKVDocumentReferenceMarkierung named markierung 0..* MS and
+  ERGPKVDocumentReferenceRechnungsdatum named rechnungsdatum 0..1 MS and
+  ERGPKVDocumentReferenceZahlungszieldatum named zahlungszieldatum 0..1 MS and
+  ERGPKVDocumentReferenceGesamtbetrag named gesamtbetrag 0..1 MS
 * meta.tag MS
   * ^slicing.discriminator.type = #pattern
   * ^slicing.discriminator.path = "$this"

@@ -110,6 +110,54 @@
         "mustSupport": true
       },
       {
+        "id": "DocumentReference.extension:rechnungsdatum",
+        "path": "DocumentReference.extension",
+        "sliceName": "rechnungsdatum",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-documentreference-rechnungsdatum"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.extension:zahlungszieldatum",
+        "path": "DocumentReference.extension",
+        "sliceName": "zahlungszieldatum",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-documentreference-zahlungszieldatum"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.extension:gesamtbetrag",
+        "path": "DocumentReference.extension",
+        "sliceName": "gesamtbetrag",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-documentreference-gesamtbetrag"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
         "id": "DocumentReference.identifier",
         "path": "DocumentReference.identifier",
         "comment": "Eindeutiger Identifikator vergeben durch das RE-PS (z.B. Interne Dokumentennummer). Das System MUSS eindeutig pro Leistungserbringer:in vergeben werden.",
