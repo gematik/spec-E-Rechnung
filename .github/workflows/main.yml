@@ -29,7 +29,7 @@ jobs:
       # Java and .NET are already installed on ubuntu-latest
         
       - name: Firely.Terminal (GitHub Actions)
-        uses: FirelyTeam/firely-terminal-pipeline@v0.4.0
+        uses: FirelyTeam/firely-terminal-pipeline@v0.4.1
         with:
           PATH_TO_CONFORMANCE_RESOURCES: Resources/fsh-generated/resources/
           #PATH_TO_EXAMPLES: Examples
@@ -37,7 +37,7 @@ jobs:
           DOTNET_VALIDATION_ENABLED: true
           JAVA_VALIDATION_ENABLED: true
           OUTPUT_FORMAT: RAW
-          SUSHI_VERSION: 3.0.0
+          SUSHI_VERSION: 3.10.0
           JAVA_VALIDATION_OPTIONS: -allow-example-urls true
           JAVA_VALIDATOR_VERSION: 6.0.11
           SIMPLIFIER_USERNAME: ${{ secrets.SIMPLIFIER_USERNAME }}
