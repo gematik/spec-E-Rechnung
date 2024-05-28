@@ -6,43 +6,6 @@
   "title": "ERGPKV Dokumentenmetadaten",
   "status": "draft",
   "fhirVersion": "4.0.1",
-  "mapping": [
-    {
-      "identity": "workflow",
-      "uri": "http://hl7.org/fhir/workflow",
-      "name": "Workflow Pattern"
-    },
-    {
-      "identity": "fhircomposition",
-      "uri": "http://hl7.org/fhir/composition",
-      "name": "FHIR Composition"
-    },
-    {
-      "identity": "rim",
-      "uri": "http://hl7.org/v3",
-      "name": "RIM Mapping"
-    },
-    {
-      "identity": "cda",
-      "uri": "http://hl7.org/v3/cda",
-      "name": "CDA (R2)"
-    },
-    {
-      "identity": "w5",
-      "uri": "http://hl7.org/fhir/fivews",
-      "name": "FiveWs Pattern Mapping"
-    },
-    {
-      "identity": "v2",
-      "uri": "http://hl7.org/v2",
-      "name": "HL7 v2 Mapping"
-    },
-    {
-      "identity": "xds",
-      "uri": "http://ihe.net/xds",
-      "name": "XDS metadata equivalent"
-    }
-  ],
   "kind": "resource",
   "abstract": false,
   "type": "DocumentReference",
@@ -112,16 +75,6 @@
       {
         "id": "DocumentReference.extension",
         "path": "DocumentReference.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        },
         "mustSupport": true
       },
       {

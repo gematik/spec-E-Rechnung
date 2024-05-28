@@ -9,13 +9,6 @@
 // **************************************************
 //  Vom Leistungserbringer erzeugte Daten
 // **************************************************
-Instance: BeispielRechnungsBundle0-LE
-InstanceOf: ERGPKVRechungscontainer
-//* type = #collection
-* entry[invoice].resource = BeispielRechnung0-LE
-* entry[binary].resource = BeispielRechnungsPDF0-LE
-* entry[chargeItem].resource = DummyChargeItem
-* insert signatureDummy
 
 Instance: BeispielRechnung0-LE
 InstanceOf: ERGPKVRechnung
@@ -110,24 +103,6 @@ Usage: #example
 * address
   * text = "Musterweg 2, 3. Etage, 98764 Musterhausen, DE"
 
-  
-Instance: BeispielTaskRechnungsworkflow0-FD
-InstanceOf: ERGPKVRechnungsworkflow
-* extension[rechnungsempfaenger]
-  * valueReference = Reference(BeispielPatientManfredMustermann0-FD)
-    //macht keinen Sinn, dass man hier nochmal die KVNR angeben muss!!+
-    * identifier
-      * system = "http://fhir.de/sid/gkv/kvid-10"
-      * value = "A000000000"
-* status = #ready
-* businessStatus = https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsworkflow-businessStatus-cs#neu
-* identifier[token].value = "123-456-789"
-//TODO: Würde der Fachdienst hier nicht die Telematik-ID substituieren und auf einen Benutzer-Account vom Typ "Practitioner/-Role" verweisen???
-* requester.identifier.value = "<telematik id>"
-* input[originalRechnung].valueReference = Reference(BeispielRechnungsBundle0-LE)
-* output[rechnung].valueReference = Reference(BeispielRechnung0-FD)
-* output[tokenPdf].valueReference = Reference(BeispielRechnungsPDF0-FD)
-* output[rechnungsposition].valueReference = Reference(DummyChargeItem)
 
 Instance: BeispielRechnung0-FD
 InstanceOf: ERGPKVRechnung

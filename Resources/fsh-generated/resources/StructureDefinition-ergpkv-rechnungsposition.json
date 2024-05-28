@@ -6,28 +6,6 @@
   "title": "ERGPKV Rechnungsposition",
   "status": "draft",
   "fhirVersion": "4.0.1",
-  "mapping": [
-    {
-      "identity": "workflow",
-      "uri": "http://hl7.org/fhir/workflow",
-      "name": "Workflow Pattern"
-    },
-    {
-      "identity": "v2",
-      "uri": "http://hl7.org/v2",
-      "name": "HL7 v2 Mapping"
-    },
-    {
-      "identity": "rim",
-      "uri": "http://hl7.org/v3",
-      "name": "RIM Mapping"
-    },
-    {
-      "identity": "w5",
-      "uri": "http://hl7.org/fhir/fivews",
-      "name": "FiveWs Pattern Mapping"
-    }
-  ],
   "kind": "resource",
   "abstract": false,
   "type": "ChargeItem",
@@ -35,20 +13,6 @@
   "derivation": "constraint",
   "differential": {
     "element": [
-      {
-        "id": "ChargeItem.extension",
-        "path": "ChargeItem.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
-      },
       {
         "id": "ChargeItem.extension:unitPriceComponent",
         "path": "ChargeItem.extension",
