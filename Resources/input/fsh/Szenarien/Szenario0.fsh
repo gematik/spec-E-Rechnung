@@ -4,7 +4,7 @@
 // mit einfacher Rechnung (ohne separate Positionen)
 // ohne beigefügte Dokumente
 // **************************************************
-
+//TODO alle Szenarien raus und unter Examples
 
 // **************************************************
 //  Vom Leistungserbringer erzeugte Daten
