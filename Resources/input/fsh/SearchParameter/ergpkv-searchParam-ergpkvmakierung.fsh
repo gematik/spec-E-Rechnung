@@ -12,4 +12,4 @@ Description: "Ein SearchParameter auf der Ressource DocumentReference, der die S
 * code = #ergpkv-makierung
 * base = #DocumentReference
 * type = #token
-* expression = "DocumentReference.extension('TODO').value" //TODO Was stellt die Markierung dar?
+* expression = "DocumentReference.extension('https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-rechnungsstatus').value" //TODO Was stellt die Markierung dar?

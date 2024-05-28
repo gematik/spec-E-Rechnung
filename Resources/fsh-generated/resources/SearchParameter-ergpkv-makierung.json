@@ -11,5 +11,5 @@
     "DocumentReference"
   ],
   "type": "token",
-  "expression": "DocumentReference.extension('TODO').value"
+  "expression": "DocumentReference.extension('https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-rechnungsstatus').value"
 }

@@ -103,7 +103,7 @@
           {
             "code": "Extension",
             "profile": [
-              "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-invoice-markierung"
+              "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-documentreference-markierung"
             ]
           }
         ],
