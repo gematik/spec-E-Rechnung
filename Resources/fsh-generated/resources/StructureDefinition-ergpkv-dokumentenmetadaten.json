@@ -94,6 +94,22 @@
         "mustSupport": true
       },
       {
+        "id": "DocumentReference.extension:markierung",
+        "path": "DocumentReference.extension",
+        "sliceName": "markierung",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-invoice-markierung"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
         "id": "DocumentReference.identifier",
         "path": "DocumentReference.identifier",
         "comment": "Eindeutiger Identifikator vergeben durch das RE-PS (z.B. Interne Dokumentennummer). Das System MUSS eindeutig pro Leistungserbringer:in vergeben werden.",
