@@ -1,6 +1,6 @@
 {
   "resourceType": "Bundle",
-  "id": "ResultBundle",
+  "id": "BeispielNutzungsprotokollResultBundle",
   "type": "searchset",
   "total": 1,
   "entry": [

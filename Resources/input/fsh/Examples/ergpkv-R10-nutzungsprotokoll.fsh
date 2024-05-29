@@ -13,7 +13,7 @@ InstanceOf: ERGPKVNutzungsprotokoll
 * source.observer.display = "FdV"
 * entity.what = Reference(BeispielDocumentReferenceRechnungRetrieve)
 
-Instance: ResultBundle
+Instance: BeispielNutzungsprotokollResultBundle
 InstanceOf: Bundle
 * type = #searchset
 * total = 1

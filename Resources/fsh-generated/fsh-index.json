@@ -72,6 +72,14 @@
     "endLine": 5
   },
   {
+    "outputFile": "Bundle-BeispielNutzungsprotokollResultBundle.json",
+    "fshName": "BeispielNutzungsprotokollResultBundle",
+    "fshType": "Instance",
+    "fshFile": "Examples\\ergpkv-R10-nutzungsprotokoll.fsh",
+    "startLine": 16,
+    "endLine": 22
+  },
+  {
     "outputFile": "Bundle-BulkRetrieveExampleInput.json",
     "fshName": "BulkRetrieveExampleInput",
     "fshType": "Instance",
@@ -118,14 +126,6 @@
     "fshFile": "Examples\\BeispielRechnung.fsh",
     "startLine": 180,
     "endLine": 201
-  },
-  {
-    "outputFile": "Bundle-ResultBundle.json",
-    "fshName": "ResultBundle",
-    "fshType": "Instance",
-    "fshFile": "Examples\\ergpkv-R10-nutzungsprotokoll.fsh",
-    "startLine": 16,
-    "endLine": 22
   },
   {
     "outputFile": "ChargeItem-DummyChargeItem.json",
