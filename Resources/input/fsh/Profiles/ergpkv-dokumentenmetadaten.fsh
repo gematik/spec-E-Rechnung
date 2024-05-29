@@ -152,9 +152,6 @@ Description: "Extension zur Abbildung einer Digitalen Signatur über die Rechnun
 * value[x] 1.. MS
 * value[x] only Signature
 
-//TODO Extension mit Coding für Markierungen
-//TODO danach custom Search Param
-
 // ------------- Constraints -------------
 
 Invariant: SignaturVerpflichtendRechnung
