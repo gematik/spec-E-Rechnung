@@ -3,7 +3,26 @@
   "id": "BeispielParameterProcessFlagOutput",
   "parameter": [
     {
-      "name": "meta"
+      "name": "meta",
+      "valueMeta": {
+        "versionId": "1",
+        "lastUpdated": "2024-05-11T13:00:00.123+02:00",
+        "tag": [
+          {
+            "system": "https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsstatus-cs",
+            "code": "erledigt"
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-documentreference-markierung",
+            "valueCoding": {
+              "system": "https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnung-markierung-cs",
+              "code": "bezahlt"
+            }
+          }
+        ]
+      }
     }
   ]
 }

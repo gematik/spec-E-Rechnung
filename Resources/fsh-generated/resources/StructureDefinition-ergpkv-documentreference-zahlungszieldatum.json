@@ -2,9 +2,23 @@
   "resourceType": "StructureDefinition",
   "id": "ergpkv-documentreference-zahlungszieldatum",
   "url": "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-documentreference-zahlungszieldatum",
+  "version": "1.0.0-ballot",
   "name": "ERGPKVDocumentReferenceZahlungszieldatum",
   "title": "ERGPKV DocumentReference Zahlungszieldatum",
-  "status": "draft",
+  "status": "active",
+  "experimental": false,
+  "date": "2024-06-01",
+  "publisher": "gematik GmbH",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://gematik.de/"
+        }
+      ]
+    }
+  ],
   "fhirVersion": "4.0.1",
   "kind": "complex-type",
   "abstract": false,

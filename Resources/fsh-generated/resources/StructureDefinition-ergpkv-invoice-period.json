@@ -2,9 +2,23 @@
   "resourceType": "StructureDefinition",
   "id": "ergpkv-invoice-period",
   "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Invoice.period",
+  "version": "1.0.0-ballot",
   "name": "ERGPKVInvoicePeriod",
   "title": "ERGPKV Invoice Period",
-  "status": "draft",
+  "status": "active",
+  "experimental": false,
+  "date": "2024-06-01",
+  "publisher": "gematik GmbH",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://gematik.de/"
+        }
+      ]
+    }
+  ],
   "fhirVersion": "4.0.1",
   "kind": "complex-type",
   "abstract": false,

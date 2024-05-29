@@ -1,5 +1,13 @@
 [
   {
+    "outputFile": "AuditEvent-BeispielNutzungsprotokoll.json",
+    "fshName": "BeispielNutzungsprotokoll",
+    "fshType": "Instance",
+    "fshFile": "Examples\\ergpkv-R10-nutzungsprotokoll.fsh",
+    "startLine": 1,
+    "endLine": 14
+  },
+  {
     "outputFile": "Binary-BeispielBinaryRechnungsPDF0-FD.json",
     "fshName": "BeispielBinaryRechnungsPDF0-FD",
     "fshType": "Instance",
@@ -172,8 +180,8 @@
     "fshName": "ERGPKVOperationen",
     "fshType": "CodeSystem",
     "fshFile": "Profiles\\ergpkv-nutzungsprotokoll.fsh",
-    "startLine": 26,
-    "endLine": 33
+    "startLine": 28,
+    "endLine": 35
   },
   {
     "outputFile": "CodeSystem-ergpkv-rechnung-markierung-cs.json",
@@ -485,7 +493,7 @@
     "fshType": "Instance",
     "fshFile": "Examples\\ergpkv-R8-process-flag.fsh",
     "startLine": 9,
-    "endLine": 12
+    "endLine": 23
   },
   {
     "outputFile": "Parameters-BeispielParameterRetrieveInput.json",
@@ -717,7 +725,7 @@
     "fshType": "Extension",
     "fshFile": "Extensions\\ergpkv-documentreference-Gesamtbetrag.fsh",
     "startLine": 1,
-    "endLine": 5
+    "endLine": 6
   },
   {
     "outputFile": "StructureDefinition-ergpkv-documentreference-markierung.json",
@@ -725,7 +733,7 @@
     "fshType": "Extension",
     "fshFile": "Extensions\\ergpkv-documentreference-markierung.fsh",
     "startLine": 1,
-    "endLine": 6
+    "endLine": 7
   },
   {
     "outputFile": "StructureDefinition-ergpkv-documentreference-rechnungsdatum.json",
@@ -733,7 +741,7 @@
     "fshType": "Extension",
     "fshFile": "Extensions\\ergpkv-documentreference-rechnungsdatum.fsh",
     "startLine": 1,
-    "endLine": 5
+    "endLine": 6
   },
   {
     "outputFile": "StructureDefinition-ergpkv-documentreference-zahlungszieldatum.json",
@@ -741,7 +749,7 @@
     "fshType": "Extension",
     "fshFile": "Extensions\\ergpkv-documentreference-zahlungszieldatum.fsh",
     "startLine": 1,
-    "endLine": 5
+    "endLine": 6
   },
   {
     "outputFile": "StructureDefinition-ergpkv-dokumentenmetadaten.json",
@@ -765,7 +773,7 @@
     "fshType": "Extension",
     "fshFile": "Extensions\\ergpkv-invoice-period.fsh",
     "startLine": 1,
-    "endLine": 9
+    "endLine": 10
   },
   {
     "outputFile": "StructureDefinition-ergpkv-nutzungsprotokoll.json",
@@ -773,7 +781,7 @@
     "fshType": "Profile",
     "fshFile": "Profiles\\ergpkv-nutzungsprotokoll.fsh",
     "startLine": 1,
-    "endLine": 22
+    "endLine": 24
   },
   {
     "outputFile": "StructureDefinition-ergpkv-pdf-repraesentation-rechnung.json",
@@ -829,7 +837,7 @@
     "fshType": "Extension",
     "fshFile": "Extensions\\ergpkv-task-requestedPerformer.fsh",
     "startLine": 1,
-    "endLine": 9
+    "endLine": 10
   },
   {
     "outputFile": "StructureDefinition-ergpkv-versicherteperson.json",
@@ -900,8 +908,8 @@
     "fshName": "ERGPKVAuditEventSubType",
     "fshType": "ValueSet",
     "fshFile": "Profiles\\ergpkv-nutzungsprotokoll.fsh",
-    "startLine": 35,
-    "endLine": 62
+    "startLine": 37,
+    "endLine": 64
   },
   {
     "outputFile": "ValueSet-ergpkv-behandlungsartVS.json",

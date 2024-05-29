@@ -84,6 +84,12 @@
         "mustSupport": true
       },
       {
+        "id": "AuditEvent.source.observer.display",
+        "path": "AuditEvent.source.observer.display",
+        "comment": "Freitext-Rolle des Servers, auf das Event ausgelöst wurde",
+        "mustSupport": true
+      },
+      {
         "id": "AuditEvent.entity",
         "path": "AuditEvent.entity",
         "mustSupport": true
