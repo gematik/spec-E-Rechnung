@@ -2,9 +2,23 @@
   "resourceType": "StructureDefinition",
   "id": "ergpkv-nutzungsprotokoll",
   "url": "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-nutzungsprotokoll",
+  "version": "1.0.0-ballot",
   "name": "ERGPKVNutzungsprotokoll",
   "title": "ERGPKV Nutzungsprotokoll",
-  "status": "draft",
+  "status": "active",
+  "experimental": false,
+  "date": "2024-06-01",
+  "publisher": "gematik GmbH",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://gematik.de/"
+        }
+      ]
+    }
+  ],
   "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,

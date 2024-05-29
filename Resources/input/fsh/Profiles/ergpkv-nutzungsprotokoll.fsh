@@ -2,6 +2,7 @@ Profile: ERGPKVNutzungsprotokoll
 Parent: AuditEvent
 Id: ergpkv-nutzungsprotokoll
 Title: "ERGPKV Nutzungsprotokoll"
+* insert Meta
 * type MS
 * type = #rest
 * subtype MS

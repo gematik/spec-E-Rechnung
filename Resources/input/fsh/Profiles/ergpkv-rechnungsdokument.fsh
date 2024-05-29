@@ -2,6 +2,7 @@ Profile: ERGPKVRechnungsdokument
 Title: "ERGPKV Rechnungsdokument"
 Parent: Binary
 Id: ergpkv-rechnungsdokument
+* insert Meta
 * contentType MS
 * contentType = #application/pdf (exactly)
   * ^short = "MIME-Type des Dokumentes"

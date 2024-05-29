@@ -5,6 +5,7 @@ Profile: ERGPKVDokumentenmetadaten
 Title: "ERGPKV Dokumentenmetadaten"
 Parent: DocumentReference
 Id: ergpkv-dokumentenmetadaten
+* insert Meta
 * obeys SignaturVerpflichtendRechnung
 * obeys RechnungOderAnhang
 * extension MS

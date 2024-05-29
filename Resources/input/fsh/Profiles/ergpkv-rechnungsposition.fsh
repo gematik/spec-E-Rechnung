@@ -2,6 +2,7 @@ Profile: ERGPKVRechnungsposition
 Title: "ERGPKV Rechnungsposition"
 Parent: ChargeItem
 Id: ergpkv-rechnungsposition
+* insert Meta
 * status MS // ToDo: ValueSet einschränken auf? nur billable?
 * code MS
   * coding MS
