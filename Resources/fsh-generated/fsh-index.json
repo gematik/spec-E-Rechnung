@@ -128,14 +128,6 @@
     "endLine": 201
   },
   {
-    "outputFile": "ChargeItem-DummyChargeItem.json",
-    "fshName": "DummyChargeItem",
-    "fshType": "Instance",
-    "fshFile": "Profiles\\ergpkv-rechnungsposition.fsh",
-    "startLine": 35,
-    "endLine": 49
-  },
-  {
     "outputFile": "ChargeItem-R2444ChargeItem.json",
     "fshName": "R2444ChargeItem",
     "fshType": "Instance",

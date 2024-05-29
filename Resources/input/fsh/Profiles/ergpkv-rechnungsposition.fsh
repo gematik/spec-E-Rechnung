@@ -31,20 +31,3 @@ Title: "ERGPKV Preisdetails Rechnungsposition"
 * extension[code].value[x] only CodeableConcept // ToDo: Create VS
 * extension[factor].value[x] only decimal
 * extension[amount].value[x] only Money
-
-Instance: DummyChargeItem
-InstanceOf: ERGPKVRechnungsposition
-* status = #billable
-//* code = http://fhir.de/CodeSystem/bäk/goä#123 "keine Ahnung"
-* code.coding
-  * system = "http://fhir.de/CodeSystem/bäk/goä"
-  * code = #123
-* code.text = "weiß auch nicht"
-* subject.display = "irgendwer"
-* occurrencePeriod.start = 1970-01-01
-* quantity.value = 1
-* factorOverride = 0.0
-* priceOverride.value = 0
-* extension[unitPriceComponent]
-  * extension[type].valueCode = #tax
-
