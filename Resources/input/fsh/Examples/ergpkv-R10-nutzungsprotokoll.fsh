@@ -12,3 +12,11 @@ InstanceOf: ERGPKVNutzungsprotokoll
 * agent.requestor = true
 * source.observer.display = "FdV"
 * entity.what = Reference(BeispielDocumentReferenceRechnungRetrieve)
+
+Instance: ResultBundle
+InstanceOf: Bundle
+* type = #searchset
+* total = 1
+* entry[+].fullUrl = "[fachdienst-endpunkt]/AuditEvent/BeispielNutzungsprotokoll"
+* entry[=].resource = BeispielNutzungsprotokoll
+* entry[=].search.mode = #match

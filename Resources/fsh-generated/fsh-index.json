@@ -120,6 +120,14 @@
     "endLine": 201
   },
   {
+    "outputFile": "Bundle-ResultBundle.json",
+    "fshName": "ResultBundle",
+    "fshType": "Instance",
+    "fshFile": "Examples\\ergpkv-R10-nutzungsprotokoll.fsh",
+    "startLine": 16,
+    "endLine": 22
+  },
+  {
     "outputFile": "ChargeItem-DummyChargeItem.json",
     "fshName": "DummyChargeItem",
     "fshType": "Instance",
