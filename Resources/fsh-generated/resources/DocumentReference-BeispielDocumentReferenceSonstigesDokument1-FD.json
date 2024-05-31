@@ -12,7 +12,8 @@
       "identifier": {
         "system": "https://gematik.de/fhir/sid/telematik-id",
         "value": "123456789"
-      }
+      },
+      "display": "Beispiel Autor Display"
     }
   ],
   "identifier": [

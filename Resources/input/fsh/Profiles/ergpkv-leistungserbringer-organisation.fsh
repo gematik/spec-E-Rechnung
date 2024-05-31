@@ -2,6 +2,7 @@ Profile: RGPKVLeistungserbringerOrganisation
 Parent: Organization
 Id: RGPKVLeistungserbringerOrganisation
 * insert Meta
+* identifier MS
 * identifier ^slicing.discriminator.type = #pattern
 * identifier ^slicing.discriminator.path = "$this"
 * identifier ^slicing.rules = #open
@@ -18,6 +19,7 @@ Id: RGPKVLeistungserbringerOrganisation
     KBV-Schlüsseltabelle ..1 MS
 * type[KBV-Schlüsseltabelle] from $kbv-fachrichtung-vs (required)
 * address only $adresse-de
+* address MS
 * address
   * extension[Stadtteil] MS
   * type MS

@@ -55,6 +55,7 @@ Id: ergpkv-dokumentenmetadaten
   * identifier 1.. MS
     * ^comment = "Der Fachdienst verknüpft alle Rechnungsdokumente mit der Telematik-ID des einreichenden Akteurs."
   * identifier only IdentifierTelematikId
+  * display 1.. MS
 * content 1.. MS
   * ^slicing.discriminator.type = #pattern
   * ^slicing.discriminator.path = "format"

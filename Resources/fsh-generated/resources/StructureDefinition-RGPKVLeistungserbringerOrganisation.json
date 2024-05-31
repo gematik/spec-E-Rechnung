@@ -37,7 +37,8 @@
             }
           ],
           "rules": "open"
-        }
+        },
+        "mustSupport": true
       },
       {
         "id": "Organization.identifier:IKNR",
@@ -111,7 +112,8 @@
               "http://fhir.de/StructureDefinition/address-de-basis"
             ]
           }
-        ]
+        ],
+        "mustSupport": true
       },
       {
         "id": "Organization.address.extension:Stadtteil",

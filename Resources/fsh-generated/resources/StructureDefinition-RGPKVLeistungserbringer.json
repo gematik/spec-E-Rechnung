@@ -37,7 +37,8 @@
             }
           ],
           "rules": "open"
-        }
+        },
+        "mustSupport": true
       },
       {
         "id": "Practitioner.identifier:TelematikId",
@@ -80,7 +81,8 @@
               "http://fhir.de/StructureDefinition/humanname-de-basis"
             ]
           }
-        ]
+        ],
+        "mustSupport": true
       },
       {
         "id": "Practitioner.name.use",
@@ -136,7 +138,8 @@
               "http://fhir.de/StructureDefinition/address-de-basis"
             ]
           }
-        ]
+        ],
+        "mustSupport": true
       },
       {
         "id": "Practitioner.address.extension:Stadtteil",

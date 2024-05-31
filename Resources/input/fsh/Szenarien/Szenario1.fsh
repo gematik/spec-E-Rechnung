@@ -48,6 +48,7 @@ InstanceOf: ERGPKVDokumentenmetadaten
 * subject.display = "Max Musterkind"
 * author.identifier  
   * value = "123456789"
+* author.display = "Beispiel Autor Display"
 * type = $kdl#PT130102 "Molekularpathologiebefund"
 * description = "Molekularpathologiebefund vom 31.12.21"
 * content.attachment.data = "DIESISTNUREINBEISPIELDIESISTKEINVALIDESPDF00"
@@ -153,6 +154,7 @@ InstanceOf: ERGPKVDokumentenmetadaten
 //TODO: Der Vater/Rechnungsempfänger ist in diesem Szenario NICHT das Subject des Dokumentes!!!
 * subject = Reference(BeispielPatientManfredMustervater1-FD)
 * subject.display = "Max Musterkind"
+* author.display = "Beispiel Autor Display"
 * content.attachment.url = "Binary/BeispielBinarySonstigesDokument1-FD"
 
 Instance: BeispielBinarySonstigesDokument1-FD
