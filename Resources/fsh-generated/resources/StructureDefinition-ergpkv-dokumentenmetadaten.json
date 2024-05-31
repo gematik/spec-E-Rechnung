@@ -496,9 +496,6 @@
       {
         "id": "DocumentReference.context",
         "path": "DocumentReference.context",
-        "slicing": {
-          "rules": "open"
-        },
         "mustSupport": true
       },
       {
@@ -507,10 +504,11 @@
         "slicing": {
           "discriminator": [
             {
-              "type": "resolve",
+              "type": "type",
               "path": "$this.resolve()"
             }
-          ]
+          ],
+          "rules": "open"
         },
         "comment": "Der Fachdienst verknüpft alle Rechnungsdokumente mit der Rechnungsempfänger:in.",
         "min": 1,

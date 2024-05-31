@@ -94,4 +94,4 @@ ValueSet:  ERGPKVRechnungSubmitModusVS
 Id: ergpkv-rechnung-submit-modus-vs
 Title: "ERGPKV Rechnung Type VS"
 Description:  "ValueSet für die Differenzierung von der Verarbeitungsmodi für $erchnung-submit"
-* include codes from system https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnung-submit-modus-vs
+* include codes from system https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnung-submit-modus

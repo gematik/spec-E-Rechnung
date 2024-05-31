@@ -106,9 +106,9 @@ Id: ergpkv-dokumentenmetadaten
 * context MS
   * related 1.. MS 
     * ^comment = "Der Fachdienst verknüpft alle Rechnungsdokumente mit der Rechnungsempfänger:in."
-    * ^slicing.discriminator.type = #resolve
+    * ^slicing.discriminator.type = #type
     * ^slicing.discriminator.path = "$this.resolve()"
-  *  ^slicing.rules = #open
+    *  ^slicing.rules = #open
   * related contains patient 0..1 MS and anhaenge 0..* MS
   * related[patient] only Reference(Patient)
   * related[anhaenge] only Reference(DocumentReference)
