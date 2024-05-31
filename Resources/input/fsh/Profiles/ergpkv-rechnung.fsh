@@ -2,6 +2,7 @@ Profile: ERGPKVRechnung
 Title: "ERGPKV Rechnung"
 Parent: Invoice
 Id: ergpkv-rechnung
+* insert Meta
 * extension contains 
   ERGPKVPDFRepraesentationRechnung named pdf-repraesentation-rechnung 0..1 MS and
   ERGPKVInvoicePeriod named period 0..1 MS and

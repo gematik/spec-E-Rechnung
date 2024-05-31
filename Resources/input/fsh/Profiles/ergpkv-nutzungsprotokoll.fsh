@@ -2,6 +2,7 @@ Profile: ERGPKVNutzungsprotokoll
 Parent: AuditEvent
 Id: ergpkv-nutzungsprotokoll
 Title: "ERGPKV Nutzungsprotokoll"
+* insert Meta
 * type MS
 * type = #rest
 * subtype MS
@@ -16,11 +17,11 @@ Title: "ERGPKV Nutzungsprotokoll"
   * who.identifier 1.. MS
   * who.identifier ^comment = "Die KVNR ist aus dem Claim urn:telematik:claims:id des mitzusendenen Access-Token zu extrahieren."
   * requestor MS
+* source.observer.display MS
+* source.observer.display ^comment = "Freitext-Rolle des Servers, auf das Event ausgelöst wurde"
 * entity MS
 * entity.what MS
 * entity.what ^comment = "Referenzierung aller betroffenen Ressourcen"
-
-//R10 Beispiel TODO
 
 CodeSystem: ERGPKVOperationen
 Id: ergpkv-operationen

@@ -1,0 +1,51 @@
+{
+  "resourceType": "AuditEvent",
+  "id": "BeispielNutzungsprotokoll",
+  "meta": {
+    "profile": [
+      "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-nutzungsprotokoll"
+    ]
+  },
+  "type": {
+    "code": "rest"
+  },
+  "subtype": [
+    {
+      "code": "erechnung-submit"
+    }
+  ],
+  "action": "C",
+  "recorded": "2024-05-29T11:25:54.123456+00:02",
+  "outcome": "0",
+  "agent": [
+    {
+      "who": {
+        "identifier": {
+          "type": {
+            "coding": [
+              {
+                "code": "PRN",
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+              }
+            ]
+          },
+          "system": "https://gematik.de/fhir/sid/telematik-id",
+          "value": "11223344"
+        }
+      },
+      "requestor": true
+    }
+  ],
+  "source": {
+    "observer": {
+      "display": "FdV"
+    }
+  },
+  "entity": [
+    {
+      "what": {
+        "reference": "DocumentReference/BeispielDocumentReferenceRechnungRetrieve"
+      }
+    }
+  ]
+}

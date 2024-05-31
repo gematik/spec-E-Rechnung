@@ -1,0 +1,970 @@
+[
+  {
+    "outputFile": "AuditEvent-BeispielNutzungsprotokoll.json",
+    "fshName": "BeispielNutzungsprotokoll",
+    "fshType": "Instance",
+    "fshFile": "Examples\\ergpkv-R10-nutzungsprotokoll.fsh",
+    "startLine": 1,
+    "endLine": 14
+  },
+  {
+    "outputFile": "Binary-BeispielBinaryRechnungsPDF0-FD.json",
+    "fshName": "BeispielBinaryRechnungsPDF0-FD",
+    "fshType": "Instance",
+    "fshFile": "Szenarien\\Szenario0.fsh",
+    "startLine": 136,
+    "endLine": 139
+  },
+  {
+    "outputFile": "Binary-BeispielBinaryRechnungsPDF1-FD.json",
+    "fshName": "BeispielBinaryRechnungsPDF1-FD",
+    "fshType": "Instance",
+    "fshFile": "Szenarien\\Szenario1.fsh",
+    "startLine": 163,
+    "endLine": 166
+  },
+  {
+    "outputFile": "Binary-BeispielBinaryRechnungsPDF3-FD.json",
+    "fshName": "BeispielBinaryRechnungsPDF3-FD",
+    "fshType": "Instance",
+    "fshFile": "Szenarien\\Szenario3a-LE.fsh",
+    "startLine": 208,
+    "endLine": 211
+  },
+  {
+    "outputFile": "Binary-BeispielBinarySonstigesDokument1-FD.json",
+    "fshName": "BeispielBinarySonstigesDokument1-FD",
+    "fshType": "Instance",
+    "fshFile": "Szenarien\\Szenario1.fsh",
+    "startLine": 158,
+    "endLine": 161
+  },
+  {
+    "outputFile": "Binary-BeispielRechnungsPDF0-LE.json",
+    "fshName": "BeispielRechnungsPDF0-LE",
+    "fshType": "Instance",
+    "fshFile": "Szenarien\\Szenario0.fsh",
+    "startLine": 43,
+    "endLine": 45
+  },
+  {
+    "outputFile": "Binary-BeispielRechnungsPDF1-LE.json",
+    "fshName": "BeispielRechnungsPDF1-LE",
+    "fshType": "Instance",
+    "fshFile": "Szenarien\\Szenario1.fsh",
+    "startLine": 38,
+    "endLine": 40
+  },
+  {
+    "outputFile": "Bundle-BeispielBundleTasks3-FD.json",
+    "fshName": "BeispielBundleTasks3-FD",
+    "fshType": "Instance",
+    "fshFile": "Szenarien\\Szenario3b-FdV.fsh",
+    "startLine": 1,
+    "endLine": 5
+  },
+  {
+    "outputFile": "Bundle-BeispielBundleTasks3c.json",
+    "fshName": "BeispielBundleTasks3c",
+    "fshType": "Instance",
+    "fshFile": "Szenarien\\Szenario3c-KTR.fsh",
+    "startLine": 1,
+    "endLine": 5
+  },
+  {
+    "outputFile": "Bundle-BeispielNutzungsprotokollResultBundle.json",
+    "fshName": "BeispielNutzungsprotokollResultBundle",
+    "fshType": "Instance",
+    "fshFile": "Examples\\ergpkv-R10-nutzungsprotokoll.fsh",
+    "startLine": 16,
+    "endLine": 22
+  },
+  {
+    "outputFile": "Bundle-BulkRetrieveExampleInput.json",
+    "fshName": "BulkRetrieveExampleInput",
+    "fshType": "Instance",
+    "fshFile": "Examples\\ergpkv-R3-bulk-retrieve.fsh",
+    "startLine": 1,
+    "endLine": 10
+  },
+  {
+    "outputFile": "Bundle-BulkRetrieveExampleOutput.json",
+    "fshName": "BulkRetrieveExampleOutput",
+    "fshType": "Instance",
+    "fshFile": "Examples\\ergpkv-R3-bulk-retrieve.fsh",
+    "startLine": 12,
+    "endLine": 21
+  },
+  {
+    "outputFile": "Bundle-BulkSubmitExample.json",
+    "fshName": "BulkSubmitExample",
+    "fshType": "Instance",
+    "fshFile": "Examples\\ergpkv-R2-bulk-submit.fsh",
+    "startLine": 1,
+    "endLine": 10
+  },
+  {
+    "outputFile": "Bundle-KindBundle.json",
+    "fshName": "KindBundle",
+    "fshType": "Instance",
+    "fshFile": "Szenarien\\Szenario3a-LE-Alternative.fsh",
+    "startLine": 55,
+    "endLine": 64
+  },
+  {
+    "outputFile": "Bundle-PatientenBundle.json",
+    "fshName": "PatientenBundle",
+    "fshType": "Instance",
+    "fshFile": "Szenarien\\Szenario3a-LE-Alternative.fsh",
+    "startLine": 47,
+    "endLine": 53
+  },
+  {
+    "outputFile": "Bundle-R2444Bundle.json",
+    "fshName": "R2444Bundle",
+    "fshType": "Instance",
+    "fshFile": "Examples\\BeispielRechnung.fsh",
+    "startLine": 180,
+    "endLine": 201
+  },
+  {
+    "outputFile": "ChargeItem-R2444ChargeItem.json",
+    "fshName": "R2444ChargeItem",
+    "fshType": "Instance",
+    "fshFile": "Examples\\BeispielRechnung.fsh",
+    "startLine": 54,
+    "endLine": 69
+  },
+  {
+    "outputFile": "CodeSystem-BehandlungsartCS.json",
+    "fshName": "BehandlungsartCS",
+    "fshType": "CodeSystem",
+    "fshFile": "Examples\\BeispielRechnung.fsh",
+    "startLine": 133,
+    "endLine": 136
+  },
+  {
+    "outputFile": "CodeSystem-GebuehrenordnungenCS.json",
+    "fshName": "GebuehrenordnungenCS",
+    "fshType": "CodeSystem",
+    "fshFile": "Examples\\BeispielRechnung.fsh",
+    "startLine": 144,
+    "endLine": 148
+  },
+  {
+    "outputFile": "CodeSystem-ergpkv-attachment-format-cs.json",
+    "fshName": "ERGPKVAttachmentFormatCS",
+    "fshType": "CodeSystem",
+    "fshFile": "Profiles\\ergpkv-dokumentenmetadaten.fsh",
+    "startLine": 127,
+    "endLine": 134
+  },
+  {
+    "outputFile": "CodeSystem-ergpkv-behandlungsartCS.json",
+    "fshName": "ERGPKVBehandlungsartCS",
+    "fshType": "CodeSystem",
+    "fshFile": "Profiles\\ergpkv-rechnung.fsh",
+    "startLine": 108,
+    "endLine": 111
+  },
+  {
+    "outputFile": "CodeSystem-ergpkv-gebuehrenordnungenCS.json",
+    "fshName": "ERGPKVGebuehrenordnungenCS",
+    "fshType": "CodeSystem",
+    "fshFile": "Profiles\\ergpkv-rechnung.fsh",
+    "startLine": 127,
+    "endLine": 131
+  },
+  {
+    "outputFile": "CodeSystem-ergpkv-operationen.json",
+    "fshName": "ERGPKVOperationen",
+    "fshType": "CodeSystem",
+    "fshFile": "Profiles\\ergpkv-nutzungsprotokoll.fsh",
+    "startLine": 28,
+    "endLine": 35
+  },
+  {
+    "outputFile": "CodeSystem-ergpkv-rechnung-markierung-cs.json",
+    "fshName": "ERGPKVRechnungMarkierungCS",
+    "fshType": "CodeSystem",
+    "fshFile": "CodeSystems\\ergpkv-rechnung-markierung.fsh",
+    "startLine": 1,
+    "endLine": 12
+  },
+  {
+    "outputFile": "CodeSystem-ergpkv-rechnung-submit-modus-cs.json",
+    "fshName": "ERGPKVRechnungSubmitModusCS",
+    "fshType": "CodeSystem",
+    "fshFile": "OperationDefinitions\\ergpkv-operation-submit.fsh",
+    "startLine": 86,
+    "endLine": 91
+  },
+  {
+    "outputFile": "CodeSystem-ergpkv-rechnung-type-cs.json",
+    "fshName": "ERGPKVRechnungTypeCS",
+    "fshType": "CodeSystem",
+    "fshFile": "CodeSystems\\ergpkv-rechnung-type-cs.fsh",
+    "startLine": 1,
+    "endLine": 5
+  },
+  {
+    "outputFile": "CodeSystem-ergpkv-rechnungsstatus-cs.json",
+    "fshName": "ERGPKVARechnungsstatus",
+    "fshType": "CodeSystem",
+    "fshFile": "Profiles\\ergpkv-dokumentenmetadaten.fsh",
+    "startLine": 136,
+    "endLine": 142
+  },
+  {
+    "outputFile": "Composition-R2444Document.json",
+    "fshName": "R2444Document",
+    "fshType": "Instance",
+    "fshFile": "Examples\\BeispielRechnung.fsh",
+    "startLine": 156,
+    "endLine": 178
+  },
+  {
+    "outputFile": "Condition-R2444Diagnose.json",
+    "fshName": "R2444Diagnose",
+    "fshType": "Instance",
+    "fshFile": "Examples\\BeispielRechnung.fsh",
+    "startLine": 85,
+    "endLine": 94
+  },
+  {
+    "outputFile": "DocumentReference-BeispielDocumentReferenceRechnung3-FD.json",
+    "fshName": "BeispielDocumentReferenceRechnung3-FD",
+    "fshType": "Instance",
+    "fshFile": "Szenarien\\Szenario3a-LE.fsh",
+    "startLine": 46,
+    "endLine": 78
+  },
+  {
+    "outputFile": "DocumentReference-BeispielDocumentReferenceRechnung3-LE.json",
+    "fshName": "BeispielDocumentReferenceRechnung3-LE",
+    "fshType": "Instance",
+    "fshFile": "Szenarien\\Szenario3a-LE.fsh",
+    "startLine": 13,
+    "endLine": 44
+  },
+  {
+    "outputFile": "DocumentReference-BeispielDocumentReferenceRechnung3.1-LE.json",
+    "fshName": "BeispielDocumentReferenceRechnung3.1-LE",
+    "fshType": "Instance",
+    "fshFile": "Examples\\ergpkv-R2-bulk-submit.fsh",
+    "startLine": 22,
+    "endLine": 53
+  },
+  {
+    "outputFile": "DocumentReference-BeispielDocumentReferenceRechnungRetrieve.json",
+    "fshName": "BeispielDocumentReferenceRechnungRetrieve",
+    "fshType": "Instance",
+    "fshFile": "Examples\\ergpkv-R3R6-retrieve.fsh",
+    "startLine": 13,
+    "endLine": 29
+  },
+  {
+    "outputFile": "DocumentReference-BeispielDocumentReferenceRechnungRetrieve2.json",
+    "fshName": "BeispielDocumentReferenceRechnungRetrieve2",
+    "fshType": "Instance",
+    "fshFile": "Examples\\ergpkv-R3-bulk-retrieve.fsh",
+    "startLine": 29,
+    "endLine": 45
+  },
+  {
+    "outputFile": "DocumentReference-BeispielDocumentReferenceSonstigesDokument1-FD.json",
+    "fshName": "BeispielDocumentReferenceSonstigesDokument1-FD",
+    "fshType": "Instance",
+    "fshFile": "Szenarien\\Szenario1.fsh",
+    "startLine": 143,
+    "endLine": 156
+  },
+  {
+    "outputFile": "DocumentReference-BeispielDocumentReferenceSonstigesDokument3-FD.json",
+    "fshName": "BeispielDocumentReferenceSonstigesDokument3-FD",
+    "fshType": "Instance",
+    "fshFile": "Szenarien\\Szenario3a-LE.fsh",
+    "startLine": 93,
+    "endLine": 112
+  },
+  {
+    "outputFile": "DocumentReference-BeispielDocumentReferenceSonstigesDokument3-LE.json",
+    "fshName": "BeispielDocumentReferenceSonstigesDokument3-LE",
+    "fshType": "Instance",
+    "fshFile": "Szenarien\\Szenario3a-LE.fsh",
+    "startLine": 80,
+    "endLine": 90
+  },
+  {
+    "outputFile": "DocumentReference-BeispielDocumentReferenceSonstigesDokument3.1-LE.json",
+    "fshName": "BeispielDocumentReferenceSonstigesDokument3.1-LE",
+    "fshType": "Instance",
+    "fshFile": "Examples\\ergpkv-R2-bulk-submit.fsh",
+    "startLine": 55,
+    "endLine": 65
+  },
+  {
+    "outputFile": "DocumentReference-BeispielSonstigesDokument1-LE.json",
+    "fshName": "BeispielSonstigesDokument1-LE",
+    "fshType": "Instance",
+    "fshFile": "Szenarien\\Szenario1.fsh",
+    "startLine": 43,
+    "endLine": 53
+  },
+  {
+    "outputFile": "Invoice-BeispielRechnung0-FD.json",
+    "fshName": "BeispielRechnung0-FD",
+    "fshType": "Instance",
+    "fshFile": "Szenarien\\Szenario0.fsh",
+    "startLine": 107,
+    "endLine": 134
+  },
+  {
+    "outputFile": "Invoice-BeispielRechnung0-LE.json",
+    "fshName": "BeispielRechnung0-LE",
+    "fshType": "Instance",
+    "fshFile": "Szenarien\\Szenario0.fsh",
+    "startLine": 13,
+    "endLine": 40
+  },
+  {
+    "outputFile": "Invoice-BeispielRechnung1-FD.json",
+    "fshName": "BeispielRechnung1-FD",
+    "fshType": "Instance",
+    "fshFile": "Szenarien\\Szenario1.fsh",
+    "startLine": 114,
+    "endLine": 141
+  },
+  {
+    "outputFile": "Invoice-BeispielRechnung1-LE.json",
+    "fshName": "BeispielRechnung1-LE",
+    "fshType": "Instance",
+    "fshFile": "Szenarien\\Szenario1.fsh",
+    "startLine": 9,
+    "endLine": 36
+  },
+  {
+    "outputFile": "Invoice-R2444Rechnung.json",
+    "fshName": "R2444Rechnung",
+    "fshType": "Instance",
+    "fshFile": "Examples\\BeispielRechnung.fsh",
+    "startLine": 1,
+    "endLine": 52
+  },
+  {
+    "outputFile": "OperationDefinition-ERGPKVOperationCanReceiveInvoice.json",
+    "fshName": "ERGPKVOperationCanReceiveInvoice",
+    "fshType": "Instance",
+    "fshFile": "OperationDefinitions\\ergpkv-operation-canReceiveInvoice.fsh",
+    "startLine": 3,
+    "endLine": 49
+  },
+  {
+    "outputFile": "OperationDefinition-ERGPKVOperationChangeStatus.json",
+    "fshName": "ERGPKVOperationChangeStatus",
+    "fshType": "Instance",
+    "fshFile": "OperationDefinitions\\ergpkv-change-status.fsh",
+    "startLine": 3,
+    "endLine": 31
+  },
+  {
+    "outputFile": "OperationDefinition-ERGPKVOperationErase.json",
+    "fshName": "ERGPKVOperationErase",
+    "fshType": "Instance",
+    "fshFile": "OperationDefinitions\\ergpkv-operation-erase.fsh",
+    "startLine": 3,
+    "endLine": 17
+  },
+  {
+    "outputFile": "OperationDefinition-ERGPKVOperationProcessFlag.json",
+    "fshName": "ERGPKVOperationProcessFlag",
+    "fshType": "Instance",
+    "fshFile": "OperationDefinitions\\ergpkv-process-flag.fsh",
+    "startLine": 3,
+    "endLine": 31
+  },
+  {
+    "outputFile": "OperationDefinition-ERGPKVOperationRetrieve.json",
+    "fshName": "ERGPKVOperationRetrieve",
+    "fshType": "Instance",
+    "fshFile": "OperationDefinitions\\ergpkv-operation-retrieve.fsh",
+    "startLine": 3,
+    "endLine": 45
+  },
+  {
+    "outputFile": "OperationDefinition-ERGPKVOperationSubmit.json",
+    "fshName": "ERGPKVOperationSubmit",
+    "fshType": "Instance",
+    "fshFile": "OperationDefinitions\\ergpkv-operation-submit.fsh",
+    "startLine": 3,
+    "endLine": 82
+  },
+  {
+    "outputFile": "OperationOutcome-ERGPKVRechnungsworkflowCanReceiveInvoiceResponseOutcomeError.json",
+    "fshName": "ERGPKVRechnungsworkflowCanReceiveInvoiceResponseOutcomeError",
+    "fshType": "Instance",
+    "fshFile": "OperationDefinitions\\ergpkv-operation-canReceiveInvoice.fsh",
+    "startLine": 123,
+    "endLine": 129
+  },
+  {
+    "outputFile": "Organization-BeispielOrganizationKostentraeger3.json",
+    "fshName": "BeispielOrganizationKostentraeger3",
+    "fshType": "Instance",
+    "fshFile": "Szenarien\\Szenario3b-FdV.fsh",
+    "startLine": 19,
+    "endLine": 24
+  },
+  {
+    "outputFile": "Parameters-BeispielParameterCanReceiveInvoiceInput0-LE.json",
+    "fshName": "BeispielParameterCanReceiveInvoiceInput0-LE",
+    "fshType": "Instance",
+    "fshFile": "Szenarien\\Szenario0.fsh",
+    "startLine": 54,
+    "endLine": 59
+  },
+  {
+    "outputFile": "Parameters-BeispielParameterCanReceiveInvoiceInput1-LE.json",
+    "fshName": "BeispielParameterCanReceiveInvoiceInput1-LE",
+    "fshType": "Instance",
+    "fshFile": "Szenarien\\Szenario1.fsh",
+    "startLine": 60,
+    "endLine": 65
+  },
+  {
+    "outputFile": "Parameters-BeispielParameterCanReceiveInvoiceInput3-LE.json",
+    "fshName": "BeispielParameterCanReceiveInvoiceInput3-LE",
+    "fshType": "Instance",
+    "fshFile": "Szenarien\\Szenario3a-LE.fsh",
+    "startLine": 120,
+    "endLine": 125
+  },
+  {
+    "outputFile": "Parameters-BeispielParameterCanReceiveInvoiceOutput0-LE.json",
+    "fshName": "BeispielParameterCanReceiveInvoiceOutput0-LE",
+    "fshType": "Instance",
+    "fshFile": "Szenarien\\Szenario0.fsh",
+    "startLine": 62,
+    "endLine": 68
+  },
+  {
+    "outputFile": "Parameters-BeispielParameterCanReceiveInvoiceOutput1-LE.json",
+    "fshName": "BeispielParameterCanReceiveInvoiceOutput1-LE",
+    "fshType": "Instance",
+    "fshFile": "Szenarien\\Szenario1.fsh",
+    "startLine": 68,
+    "endLine": 74
+  },
+  {
+    "outputFile": "Parameters-BeispielParameterCanReceiveInvoiceOutput3-LE.json",
+    "fshName": "BeispielParameterCanReceiveInvoiceOutput3-LE",
+    "fshType": "Instance",
+    "fshFile": "Szenarien\\Szenario3a-LE.fsh",
+    "startLine": 128,
+    "endLine": 134
+  },
+  {
+    "outputFile": "Parameters-BeispielParameterChangeStatusInput.json",
+    "fshName": "BeispielParameterChangeStatusInput",
+    "fshType": "Instance",
+    "fshFile": "Examples\\ergpkv-R7-change-status.fsh",
+    "startLine": 1,
+    "endLine": 5
+  },
+  {
+    "outputFile": "Parameters-BeispielParameterChangeStatusOutput.json",
+    "fshName": "BeispielParameterChangeStatusOutput",
+    "fshType": "Instance",
+    "fshFile": "Examples\\ergpkv-R7-change-status.fsh",
+    "startLine": 7,
+    "endLine": 11
+  },
+  {
+    "outputFile": "Parameters-BeispielParameterProcessFlagInput.json",
+    "fshName": "BeispielParameterProcessFlagInput",
+    "fshType": "Instance",
+    "fshFile": "Examples\\ergpkv-R8-process-flag.fsh",
+    "startLine": 1,
+    "endLine": 7
+  },
+  {
+    "outputFile": "Parameters-BeispielParameterProcessFlagOutput.json",
+    "fshName": "BeispielParameterProcessFlagOutput",
+    "fshType": "Instance",
+    "fshFile": "Examples\\ergpkv-R8-process-flag.fsh",
+    "startLine": 9,
+    "endLine": 23
+  },
+  {
+    "outputFile": "Parameters-BeispielParameterRetrieveInput.json",
+    "fshName": "BeispielParameterRetrieveInput",
+    "fshType": "Instance",
+    "fshFile": "Examples\\ergpkv-R3R6-retrieve.fsh",
+    "startLine": 1,
+    "endLine": 11
+  },
+  {
+    "outputFile": "Parameters-BeispielParameterRetrieveInput2.json",
+    "fshName": "BeispielParameterRetrieveInput2",
+    "fshType": "Instance",
+    "fshFile": "Examples\\ergpkv-R3-bulk-retrieve.fsh",
+    "startLine": 23,
+    "endLine": 27
+  },
+  {
+    "outputFile": "Parameters-BeispielParameterSubmitInput1-LE.json",
+    "fshName": "BeispielParameterSubmitInput1-LE",
+    "fshType": "Instance",
+    "fshFile": "Szenarien\\Szenario1.fsh",
+    "startLine": 77,
+    "endLine": 78
+  },
+  {
+    "outputFile": "Parameters-BeispielParameterSubmitInput3-LE.json",
+    "fshName": "BeispielParameterSubmitInput3-LE",
+    "fshType": "Instance",
+    "fshFile": "Szenarien\\Szenario3a-LE.fsh",
+    "startLine": 137,
+    "endLine": 144
+  },
+  {
+    "outputFile": "Parameters-BeispielParameterSubmitInput3.1-LE.json",
+    "fshName": "BeispielParameterSubmitInput3.1-LE",
+    "fshType": "Instance",
+    "fshFile": "Examples\\ergpkv-R2-bulk-submit.fsh",
+    "startLine": 13,
+    "endLine": 20
+  },
+  {
+    "outputFile": "Parameters-BeispielParameterSubmitOutput3-FD.json",
+    "fshName": "BeispielParameterSubmitOutput3-FD",
+    "fshType": "Instance",
+    "fshFile": "Szenarien\\Szenario3a-LE.fsh",
+    "startLine": 152,
+    "endLine": 159
+  },
+  {
+    "outputFile": "Parameters-BeispielParametersAddNote.json",
+    "fshName": "BeispielParametersAddNote",
+    "fshType": "Instance",
+    "fshFile": "Szenarien\\Szenario3b-FdV.fsh",
+    "startLine": 54,
+    "endLine": 58
+  },
+  {
+    "outputFile": "Parameters-BeispielParametersCreateReimbursmentTask3.json",
+    "fshName": "BeispielParametersCreateReimbursmentTask3",
+    "fshType": "Instance",
+    "fshFile": "Szenarien\\Szenario3b-FdV.fsh",
+    "startLine": 7,
+    "endLine": 17
+  },
+  {
+    "outputFile": "Parameters-ERGPKVInvokeCanReceiveInvoice.json",
+    "fshName": "ERGPKVInvokeCanReceiveInvoice",
+    "fshType": "Instance",
+    "fshFile": "OperationDefinitions\\ergpkv-operation-canReceiveInvoice.fsh",
+    "startLine": 79,
+    "endLine": 85
+  },
+  {
+    "outputFile": "Parameters-ERGPKVRechnungsworkflowCanReceiveInvoiceResponseError.json",
+    "fshName": "ERGPKVRechnungsworkflowCanReceiveInvoiceResponseError",
+    "fshType": "Instance",
+    "fshFile": "OperationDefinitions\\ergpkv-operation-canReceiveInvoice.fsh",
+    "startLine": 117,
+    "endLine": 121
+  },
+  {
+    "outputFile": "Patient-BeispielPatient3-FD.json",
+    "fshName": "BeispielPatient3-FD",
+    "fshType": "Instance",
+    "fshFile": "Szenarien\\Szenario3a-LE.fsh",
+    "startLine": 166,
+    "endLine": 176
+  },
+  {
+    "outputFile": "Patient-BeispielPatientManfredMustermann0-FD.json",
+    "fshName": "BeispielPatientManfredMustermann0-FD",
+    "fshType": "Instance",
+    "fshFile": "Szenarien\\Szenario0.fsh",
+    "startLine": 92,
+    "endLine": 104
+  },
+  {
+    "outputFile": "Patient-BeispielPatientManfredMustervater1-FD.json",
+    "fshName": "BeispielPatientManfredMustervater1-FD",
+    "fshType": "Instance",
+    "fshFile": "Szenarien\\Szenario1.fsh",
+    "startLine": 100,
+    "endLine": 112
+  },
+  {
+    "outputFile": "Patient-PatientKind.json",
+    "fshName": "PatientKind",
+    "fshType": "Instance",
+    "fshFile": "Szenarien\\Szenario3a-LE-Alternative.fsh",
+    "startLine": 31,
+    "endLine": 45
+  },
+  {
+    "outputFile": "Patient-PatientVater.json",
+    "fshName": "PatientVater",
+    "fshType": "Instance",
+    "fshFile": "Szenarien\\Szenario3a-LE-Alternative.fsh",
+    "startLine": 2,
+    "endLine": 12
+  },
+  {
+    "outputFile": "Patient-R2444PKVersichertePerson.json",
+    "fshName": "R2444PKVersichertePerson",
+    "fshType": "Instance",
+    "fshFile": "Examples\\BeispielRechnung.fsh",
+    "startLine": 71,
+    "endLine": 83
+  },
+  {
+    "outputFile": "Practitioner-R2444Practitioner.json",
+    "fshName": "R2444Practitioner",
+    "fshType": "Instance",
+    "fshFile": "Examples\\BeispielRechnung.fsh",
+    "startLine": 96,
+    "endLine": 125
+  },
+  {
+    "outputFile": "Questionnaire-QuestionnaireInvoice.json",
+    "fshName": "QuestionnaireInvoice",
+    "fshType": "Instance",
+    "fshFile": "Questionnaire\\Invoice.fsh",
+    "startLine": 1,
+    "endLine": 163
+  },
+  {
+    "outputFile": "QuestionnaireResponse-undefined.json",
+    "fshName": "undefined",
+    "fshType": "Instance",
+    "fshFile": "Questionnaire\\InvoiceResponse.fsh",
+    "startLine": 23,
+    "endLine": 58
+  },
+  {
+    "outputFile": "SearchParameter-ergpkv-makierung.json",
+    "fshName": "ergpkv-makierung",
+    "fshType": "Instance",
+    "fshFile": "SearchParameter\\ergpkv-searchParam-ergpkvmakierung.fsh",
+    "startLine": 1,
+    "endLine": 14
+  },
+  {
+    "outputFile": "StructureDefinition-ExtensionBehandlungsart.json",
+    "fshName": "ExtensionBehandlungsart",
+    "fshType": "Extension",
+    "fshFile": "Examples\\BeispielRechnung.fsh",
+    "startLine": 127,
+    "endLine": 131
+  },
+  {
+    "outputFile": "StructureDefinition-RGPKVLeistungserbringer.json",
+    "fshName": "RGPKVLeistungserbringer",
+    "fshType": "Profile",
+    "fshFile": "Profiles\\ergpkv-leistungserbringer-person.fsh",
+    "startLine": 1,
+    "endLine": 43
+  },
+  {
+    "outputFile": "StructureDefinition-RGPKVLeistungserbringerOrganisation.json",
+    "fshName": "RGPKVLeistungserbringerOrganisation",
+    "fshType": "Profile",
+    "fshFile": "Profiles\\ergpkv-leistungserbringer-organisation.fsh",
+    "startLine": 1,
+    "endLine": 31
+  },
+  {
+    "outputFile": "StructureDefinition-ergpkv-abweichender-rechnungsempfaenger.json",
+    "fshName": "ERGPKVAbweichenderRechnungsempfaenger",
+    "fshType": "Extension",
+    "fshFile": "Profiles\\ergpkv-versicherteperson.fsh",
+    "startLine": 28,
+    "endLine": 34
+  },
+  {
+    "outputFile": "StructureDefinition-ergpkv-behandlungsart.json",
+    "fshName": "ERGPKVBehandlungsart",
+    "fshType": "Extension",
+    "fshFile": "Profiles\\ergpkv-rechnung.fsh",
+    "startLine": 100,
+    "endLine": 106
+  },
+  {
+    "outputFile": "StructureDefinition-ergpkv-canreceiveinvoice-inputparameter.json",
+    "fshName": "ERGPKVRParametersCanReceiveInvoiceInput",
+    "fshType": "Profile",
+    "fshFile": "OperationDefinitions\\ergpkv-operation-canReceiveInvoice.fsh",
+    "startLine": 53,
+    "endLine": 77
+  },
+  {
+    "outputFile": "StructureDefinition-ergpkv-canreceiveinvoice-outputparameter.json",
+    "fshName": "ERGPKVRParametersCanReceiveInvoiceOutput",
+    "fshType": "Profile",
+    "fshFile": "OperationDefinitions\\ergpkv-operation-canReceiveInvoice.fsh",
+    "startLine": 89,
+    "endLine": 113
+  },
+  {
+    "outputFile": "StructureDefinition-ergpkv-docref-signature.json",
+    "fshName": "ERGPKVDocRefSignature",
+    "fshType": "Extension",
+    "fshFile": "Profiles\\ergpkv-dokumentenmetadaten.fsh",
+    "startLine": 146,
+    "endLine": 153
+  },
+  {
+    "outputFile": "StructureDefinition-ergpkv-documentreference-gesamtbetrag.json",
+    "fshName": "ERGPKVDocumentReferenceGesamtbetrag",
+    "fshType": "Extension",
+    "fshFile": "Extensions\\ergpkv-documentreference-Gesamtbetrag.fsh",
+    "startLine": 1,
+    "endLine": 6
+  },
+  {
+    "outputFile": "StructureDefinition-ergpkv-documentreference-markierung.json",
+    "fshName": "ERGPKVDocumentReferenceMarkierung",
+    "fshType": "Extension",
+    "fshFile": "Extensions\\ergpkv-documentreference-markierung.fsh",
+    "startLine": 1,
+    "endLine": 7
+  },
+  {
+    "outputFile": "StructureDefinition-ergpkv-documentreference-rechnungsdatum.json",
+    "fshName": "ERGPKVDocumentReferenceRechnungsdatum",
+    "fshType": "Extension",
+    "fshFile": "Extensions\\ergpkv-documentreference-rechnungsdatum.fsh",
+    "startLine": 1,
+    "endLine": 6
+  },
+  {
+    "outputFile": "StructureDefinition-ergpkv-documentreference-zahlungszieldatum.json",
+    "fshName": "ERGPKVDocumentReferenceZahlungszieldatum",
+    "fshType": "Extension",
+    "fshFile": "Extensions\\ergpkv-documentreference-zahlungszieldatum.fsh",
+    "startLine": 1,
+    "endLine": 6
+  },
+  {
+    "outputFile": "StructureDefinition-ergpkv-dokumentenmetadaten.json",
+    "fshName": "ERGPKVDokumentenmetadaten",
+    "fshType": "Profile",
+    "fshFile": "Profiles\\ergpkv-dokumentenmetadaten.fsh",
+    "startLine": 4,
+    "endLine": 108
+  },
+  {
+    "outputFile": "StructureDefinition-ergpkv-gebuehrenordnung.json",
+    "fshName": "ERGPKVGebuehrenordnung",
+    "fshType": "Extension",
+    "fshFile": "Profiles\\ergpkv-rechnung.fsh",
+    "startLine": 119,
+    "endLine": 125
+  },
+  {
+    "outputFile": "StructureDefinition-ergpkv-invoice-period.json",
+    "fshName": "ERGPKVInvoicePeriod",
+    "fshType": "Extension",
+    "fshFile": "Extensions\\ergpkv-invoice-period.fsh",
+    "startLine": 1,
+    "endLine": 10
+  },
+  {
+    "outputFile": "StructureDefinition-ergpkv-nutzungsprotokoll.json",
+    "fshName": "ERGPKVNutzungsprotokoll",
+    "fshType": "Profile",
+    "fshFile": "Profiles\\ergpkv-nutzungsprotokoll.fsh",
+    "startLine": 1,
+    "endLine": 24
+  },
+  {
+    "outputFile": "StructureDefinition-ergpkv-pdf-repraesentation-rechnung.json",
+    "fshName": "ERGPKVPDFRepraesentationRechnung",
+    "fshType": "Extension",
+    "fshFile": "Profiles\\ergpkv-rechnung.fsh",
+    "startLine": 90,
+    "endLine": 93
+  },
+  {
+    "outputFile": "StructureDefinition-ergpkv-preisdetails-rechnungsposition.json",
+    "fshName": "ERGPKVPreisDetailsRechnungsposition",
+    "fshType": "Extension",
+    "fshFile": "Profiles\\ergpkv-rechnungsposition.fsh",
+    "startLine": 25,
+    "endLine": 33
+  },
+  {
+    "outputFile": "StructureDefinition-ergpkv-rechnung.json",
+    "fshName": "ERGPKVRechnung",
+    "fshType": "Profile",
+    "fshFile": "Profiles\\ergpkv-rechnung.fsh",
+    "startLine": 1,
+    "endLine": 87
+  },
+  {
+    "outputFile": "StructureDefinition-ergpkv-rechnungsdiagnose.json",
+    "fshName": "ERGPKVRechnungsdiagnose",
+    "fshType": "Profile",
+    "fshFile": "Profiles\\ergpkv-rechnungsdiagnose.fsh",
+    "startLine": 1,
+    "endLine": 18
+  },
+  {
+    "outputFile": "StructureDefinition-ergpkv-rechnungsdokument.json",
+    "fshName": "ERGPKVRechnungsdokument",
+    "fshType": "Profile",
+    "fshFile": "Profiles\\ergpkv-rechnungsdokument.fsh",
+    "startLine": 1,
+    "endLine": 12
+  },
+  {
+    "outputFile": "StructureDefinition-ergpkv-rechnungsposition.json",
+    "fshName": "ERGPKVRechnungsposition",
+    "fshType": "Profile",
+    "fshFile": "Profiles\\ergpkv-rechnungsposition.fsh",
+    "startLine": 1,
+    "endLine": 23
+  },
+  {
+    "outputFile": "StructureDefinition-ergpkv-task-requestedPerformer.json",
+    "fshName": "ERGPKVTaskRequestedPerformer",
+    "fshType": "Extension",
+    "fshFile": "Extensions\\ergpkv-task-requestedPerformer.fsh",
+    "startLine": 1,
+    "endLine": 10
+  },
+  {
+    "outputFile": "StructureDefinition-ergpkv-versicherteperson.json",
+    "fshName": "ERGPKVersichertePerson",
+    "fshType": "Profile",
+    "fshFile": "Profiles\\ergpkv-versicherteperson.fsh",
+    "startLine": 1,
+    "endLine": 26
+  },
+  {
+    "outputFile": "StructureDefinition-ergpkv-zahlungsziel.json",
+    "fshName": "ERGPKVZahlungsziel",
+    "fshType": "Extension",
+    "fshFile": "Profiles\\ergpkv-rechnung.fsh",
+    "startLine": 95,
+    "endLine": 98
+  },
+  {
+    "outputFile": "Task-BeispielTaskRechnungsworkflow3-FD.json",
+    "fshName": "BeispielTaskRechnungsworkflow3-FD",
+    "fshType": "Instance",
+    "fshFile": "Szenarien\\Szenario3a-LE.fsh",
+    "startLine": 179,
+    "endLine": 205
+  },
+  {
+    "outputFile": "Task-BeispielTaskRechnungsworkflowMitAbwRechnEmpf.json",
+    "fshName": "BeispielTaskRechnungsworkflowMitAbwRechnEmpf",
+    "fshType": "Instance",
+    "fshFile": "Szenarien\\Szenario3a-LE-Alternative.fsh",
+    "startLine": 67,
+    "endLine": 87
+  },
+  {
+    "outputFile": "Task-BeispielTaskReimbursment3.json",
+    "fshName": "BeispielTaskReimbursment3",
+    "fshType": "Instance",
+    "fshFile": "Szenarien\\Szenario3b-FdV.fsh",
+    "startLine": 26,
+    "endLine": 52
+  },
+  {
+    "outputFile": "ValueSet-BehandlungsartVS.json",
+    "fshName": "BehandlungsartVS",
+    "fshType": "ValueSet",
+    "fshFile": "Examples\\BeispielRechnung.fsh",
+    "startLine": 138,
+    "endLine": 142
+  },
+  {
+    "outputFile": "ValueSet-GebuehrenordnungenVS.json",
+    "fshName": "GebuehrenordnungenVS",
+    "fshType": "ValueSet",
+    "fshFile": "Examples\\BeispielRechnung.fsh",
+    "startLine": 150,
+    "endLine": 154
+  },
+  {
+    "outputFile": "ValueSet-TESTICD10GM.json",
+    "fshName": "TESTICD10GM",
+    "fshType": "ValueSet",
+    "fshFile": "Questionnaire\\ValueSet-ICD10.fsh",
+    "startLine": 3,
+    "endLine": 42
+  },
+  {
+    "outputFile": "ValueSet-ergpkv-audit-event-sub-type.json",
+    "fshName": "ERGPKVAuditEventSubType",
+    "fshType": "ValueSet",
+    "fshFile": "Profiles\\ergpkv-nutzungsprotokoll.fsh",
+    "startLine": 37,
+    "endLine": 64
+  },
+  {
+    "outputFile": "ValueSet-ergpkv-behandlungsartVS.json",
+    "fshName": "ERGPKVBehandlungsartVS",
+    "fshType": "ValueSet",
+    "fshFile": "Profiles\\ergpkv-rechnung.fsh",
+    "startLine": 113,
+    "endLine": 117
+  },
+  {
+    "outputFile": "ValueSet-ergpkv-gebuehrenordnungenVS.json",
+    "fshName": "ERGPKVGebuehrenordnungenVS",
+    "fshType": "ValueSet",
+    "fshFile": "Profiles\\ergpkv-rechnung.fsh",
+    "startLine": 133,
+    "endLine": 137
+  },
+  {
+    "outputFile": "ValueSet-ergpkv-rechnung-markierung-vs.json",
+    "fshName": "ERGPKVRechnungMarkierungVS",
+    "fshType": "ValueSet",
+    "fshFile": "ValueSets\\ergpkv-rechnung-markierung-vs.fsh",
+    "startLine": 1,
+    "endLine": 5
+  },
+  {
+    "outputFile": "ValueSet-ergpkv-rechnung-submit-modus-vs.json",
+    "fshName": "ERGPKVRechnungSubmitModusVS",
+    "fshType": "ValueSet",
+    "fshFile": "OperationDefinitions\\ergpkv-operation-submit.fsh",
+    "startLine": 93,
+    "endLine": 97
+  },
+  {
+    "outputFile": "ValueSet-ergpkv-rechnungsstatus.json",
+    "fshName": "ERGPKVRechnungsstatus",
+    "fshType": "ValueSet",
+    "fshFile": "Profiles\\ergpkv-dokumentenmetadaten.fsh",
+    "startLine": 119,
+    "endLine": 123
+  },
+  {
+    "outputFile": "ValueSet-ergpkv-restricted-mime-types.json",
+    "fshName": "ERGPKVRestrictedMimeTypes",
+    "fshType": "ValueSet",
+    "fshFile": "Profiles\\ergpkv-dokumentenmetadaten.fsh",
+    "startLine": 112,
+    "endLine": 117
+  },
+  {
+    "outputFile": "ValueSet-ergpkv-sonstigesdokument-type-vs.json",
+    "fshName": "ERGPKVSonstigesDokumentTypeVS",
+    "fshType": "ValueSet",
+    "fshFile": "ValueSets\\ergpkv-sonstigesDokument-type-vs.fsh",
+    "startLine": 1,
+    "endLine": 5
+  }
+]

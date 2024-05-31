@@ -2,9 +2,23 @@
   "resourceType": "StructureDefinition",
   "id": "ergpkv-rechnungsposition",
   "url": "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-rechnungsposition",
+  "version": "1.0.0-ballot",
   "name": "ERGPKVRechnungsposition",
   "title": "ERGPKV Rechnungsposition",
-  "status": "draft",
+  "status": "active",
+  "experimental": false,
+  "date": "2024-06-01",
+  "publisher": "gematik GmbH",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://gematik.de/"
+        }
+      ]
+    }
+  ],
   "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,
@@ -13,6 +27,20 @@
   "derivation": "constraint",
   "differential": {
     "element": [
+      {
+        "id": "ChargeItem.extension",
+        "path": "ChargeItem.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
       {
         "id": "ChargeItem.extension:unitPriceComponent",
         "path": "ChargeItem.extension",

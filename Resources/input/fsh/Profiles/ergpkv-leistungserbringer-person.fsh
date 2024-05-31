@@ -1,6 +1,7 @@
 Profile: RGPKVLeistungserbringer
 Parent: Practitioner
 Id: RGPKVLeistungserbringer
+* insert Meta
 * identifier ^slicing.discriminator.type = #pattern
 * identifier ^slicing.discriminator.path = "$this"
 * identifier ^slicing.rules = #open

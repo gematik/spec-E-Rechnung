@@ -3,7 +3,11 @@
   "id": "BeispielParameterProcessFlagInput",
   "parameter": [
     {
-      "name": "tag"
+      "name": "tag",
+      "valueCoding": {
+        "system": "https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnung-markierung-cs",
+        "code": "bezahlt"
+      }
     }
   ]
 }

@@ -5,6 +5,7 @@ Profile: ERGPKVDokumentenmetadaten
 Title: "ERGPKV Dokumentenmetadaten"
 Parent: DocumentReference
 Id: ergpkv-dokumentenmetadaten
+* insert Meta
 * obeys SignaturVerpflichtendRechnung
 * obeys RechnungOderAnhang
 * extension MS
@@ -150,9 +151,6 @@ Description: "Extension zur Abbildung einer Digitalen Signatur über die Rechnun
 * extension.url = "http://example.org/fhir/StructureDefinition/ergpkv-docref-signature"
 * value[x] 1.. MS
 * value[x] only Signature
-
-//TODO Extension mit Coding für Markierungen
-//TODO danach custom Search Param
 
 // ------------- Constraints -------------
 

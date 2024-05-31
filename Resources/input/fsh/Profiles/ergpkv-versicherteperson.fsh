@@ -2,6 +2,7 @@ Profile: ERGPKVersichertePerson
 Title: "ERGPKVersichertePerson"
 Parent: Patient
 Id: ergpkv-versicherteperson
+* insert Meta
 * id 1..1 MS
 * extension contains https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-abweichender-rechnungsempfaenger named abweichender-rechnungsempfaenger 0..1 MS
 * active 1.. MS
