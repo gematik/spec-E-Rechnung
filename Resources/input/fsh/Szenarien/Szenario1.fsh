@@ -56,22 +56,6 @@ InstanceOf: ERGPKVDokumentenmetadaten
 // Operations zwischen LE und FD
 // **************************************************  
 
-//Input für Aufruf der $canReceiveInvoice-Operation
-Instance: BeispielParameterCanReceiveInvoiceInput1-LE
-InstanceOf: ERGPKVRParametersCanReceiveInvoiceInput
-* parameter[kvnr]
-  * valueString = "A123456789"
-* parameter[displayname]
-  * valueString = "Manfred Mustervater"
-
-//Output zur $canReceiveInvoice-Operation
-Instance: BeispielParameterCanReceiveInvoiceOutput1-LE
-InstanceOf: ERGPKVRParametersCanReceiveInvoiceOutput
-Usage: #example
-* parameter[rechnungsempfaenger]
-  * resource = BeispielPatientManfredMustervater1-FD
-* parameter[versichertePerson]
-  * resource = BeispielPatientManfredMustervater1-FD
 
 //Input für Aufruf der $submit-Operation
 Instance: BeispielParameterSubmitInput1-LE
