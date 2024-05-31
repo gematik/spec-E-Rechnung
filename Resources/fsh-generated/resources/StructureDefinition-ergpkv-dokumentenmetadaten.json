@@ -518,7 +518,7 @@
         "id": "DocumentReference.context.related:patient",
         "path": "DocumentReference.context.related",
         "sliceName": "patient",
-        "min": 0,
+        "min": 1,
         "max": "1",
         "type": [
           {
