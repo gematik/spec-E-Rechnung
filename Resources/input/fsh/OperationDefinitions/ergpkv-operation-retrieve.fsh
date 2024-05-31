@@ -37,7 +37,7 @@ Description: "Abrufen von E-Rechnungen, strukturierten Rechnungsinhalten und Dok
   * documentation = "Angabe ob die originale Rechnung inkl. Signatur neben dem angereicherten Rechnungsdokument zurückgegeben werden soll als 'content'-Element. Default: false. Dieser Parameter darf nur durch das PSK als Client verwendet werden."
   * type = #boolean
 * parameter[+]
-  * name = #erechnung
+  * name = #dokument
   * use = #out
   * min = 1
   * max = "1"

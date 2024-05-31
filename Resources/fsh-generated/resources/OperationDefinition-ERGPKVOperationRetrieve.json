@@ -39,7 +39,7 @@
       "type": "boolean"
     },
     {
-      "name": "erechnung",
+      "name": "dokument",
       "use": "out",
       "min": 1,
       "max": "1",
