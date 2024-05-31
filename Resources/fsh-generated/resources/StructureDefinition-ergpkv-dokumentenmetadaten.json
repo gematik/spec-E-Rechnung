@@ -89,16 +89,6 @@
       {
         "id": "DocumentReference.extension",
         "path": "DocumentReference.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        },
         "mustSupport": true
       },
       {

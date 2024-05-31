@@ -20,7 +20,7 @@ Description: "Rechnung einreichen durch die Leistungserbringer:in"
   * use = #in
   * min = 1
   * max = "1"
-  * documentation = "Vollständige E-Rechnung mit verschiedenen Attachments: 1) Rechnungs-PDF 2) Strukturierte Daten inkl. Signatur."
+  * documentation = "Vollständige E-Rechnung mit verschiedenen Attachments: 1) Rechnungs-PDF 2) Strukturierte Daten OHNE Signatur."
   * type = #DocumentReference
 * parameter[+]
   * name = #anhang
