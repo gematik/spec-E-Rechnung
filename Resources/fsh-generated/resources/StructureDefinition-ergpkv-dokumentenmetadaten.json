@@ -496,18 +496,53 @@
       {
         "id": "DocumentReference.context",
         "path": "DocumentReference.context",
+        "slicing": {
+          "rules": "open"
+        },
         "mustSupport": true
       },
       {
         "id": "DocumentReference.context.related",
         "path": "DocumentReference.context.related",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "resolve",
+              "path": "$this.resolve()"
+            }
+          ]
+        },
         "comment": "Der Fachdienst verknüpft alle Rechnungsdokumente mit der Rechnungsempfänger:in.",
         "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.context.related:patient",
+        "path": "DocumentReference.context.related",
+        "sliceName": "patient",
+        "min": 0,
+        "max": "1",
         "type": [
           {
             "code": "Reference",
             "targetProfile": [
               "http://hl7.org/fhir/StructureDefinition/Patient"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.context.related:anhaenge",
+        "path": "DocumentReference.context.related",
+        "sliceName": "anhaenge",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/DocumentReference"
             ]
           }
         ],
