@@ -2,6 +2,7 @@ Profile: RGPKVLeistungserbringer
 Parent: Practitioner
 Id: RGPKVLeistungserbringer
 * insert Meta
+* identifier MS
 * identifier ^slicing.discriminator.type = #pattern
 * identifier ^slicing.discriminator.path = "$this"
 * identifier ^slicing.rules = #open
@@ -11,6 +12,7 @@ Id: RGPKVLeistungserbringer
 * identifier[TelematikId] ^patternIdentifier.type = $v2-0203#PRN
 * identifier[TelematikId].type 1..
 * address only $adresse-de
+* address MS
 * address
   * extension[Stadtteil] MS
   * type MS
@@ -22,6 +24,7 @@ Id: RGPKVLeistungserbringer
   * postalCode MS
   * country MS
 * name only $name-de
+* name MS
 * name
   * use MS
   * family MS
