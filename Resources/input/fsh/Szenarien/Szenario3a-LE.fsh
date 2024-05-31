@@ -115,24 +115,6 @@ InstanceOf: DocumentReference
 // Operations zwischen LE und FD
 // **************************************************  
 
-
-//Input für Aufruf der $canReceiveInvoice-Operation
-Instance: BeispielParameterCanReceiveInvoiceInput3-LE
-InstanceOf: ERGPKVRParametersCanReceiveInvoiceInput
-* parameter[kvnr]
-  * valueString = "A000000000"
-* parameter[displayname]
-  * valueString = "Manfred Mustermann"
-
-//Output zur $canReceiveInvoice-Operation
-Instance: BeispielParameterCanReceiveInvoiceOutput3-LE
-InstanceOf: ERGPKVRParametersCanReceiveInvoiceOutput
-Usage: #example
-* parameter[rechnungsempfaenger]
-  * resource = BeispielPatient3-FD
-* parameter[versichertePerson]
-  * resource = BeispielPatient3-FD
-
 //Input für Aufruf der $submit-Operation
 Instance: BeispielParameterSubmitInput3-LE
 InstanceOf: Parameters

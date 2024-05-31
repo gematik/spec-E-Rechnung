@@ -20,7 +20,7 @@ Description: "Rechnung einreichen durch die Leistungserbringer:in"
   * use = #in
   * min = 1
   * max = "1"
-  * documentation = "Vollständige E-Rechnung mit verschiedenen Attachments: 1) Rechnungs-PDF 2) Strukturierte Daten inkl. Signatur."
+  * documentation = "Vollständige E-Rechnung mit verschiedenen Attachments: 1) Rechnungs-PDF 2) Strukturierte Daten OHNE Signatur."
   * type = #DocumentReference
 * parameter[+]
   * name = #anhang
@@ -94,4 +94,4 @@ ValueSet:  ERGPKVRechnungSubmitModusVS
 Id: ergpkv-rechnung-submit-modus-vs
 Title: "ERGPKV Rechnung Type VS"
 Description:  "ValueSet für die Differenzierung von der Verarbeitungsmodi für $erchnung-submit"
-* include codes from system https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnung-submit-modus-vs
+* include codes from system https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnung-submit-modus

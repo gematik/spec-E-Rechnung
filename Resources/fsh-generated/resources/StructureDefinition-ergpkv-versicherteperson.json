@@ -34,20 +34,6 @@
         "mustSupport": true
       },
       {
-        "id": "Patient.extension",
-        "path": "Patient.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
-      },
-      {
         "id": "Patient.extension:abweichender-rechnungsempfaenger",
         "path": "Patient.extension",
         "sliceName": "abweichender-rechnungsempfaenger",

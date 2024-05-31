@@ -9,7 +9,7 @@
   "compose": {
     "include": [
       {
-        "system": "https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnung-submit-modus-vs"
+        "system": "https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnung-submit-modus"
       }
     ]
   }

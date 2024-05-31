@@ -50,23 +50,6 @@ InstanceOf: ERGPKVRechnungsdokument
 // **************************************************  
 
 
-//Input für Aufruf der $canReceiveInvoice-Operation
-Instance: BeispielParameterCanReceiveInvoiceInput0-LE
-InstanceOf: ERGPKVRParametersCanReceiveInvoiceInput
-* parameter[kvnr]
-  * valueString = "A000000000"
-* parameter[displayname]
-  * valueString = "Manfred Mustermann"
-
-//Output zur $canReceiveInvoice-Operation
-Instance: BeispielParameterCanReceiveInvoiceOutput0-LE
-InstanceOf: ERGPKVRParametersCanReceiveInvoiceOutput
-Usage: #example
-* parameter[rechnungsempfaenger]
-  * resource = BeispielPatientManfredMustermann0-FD
-* parameter[versichertePerson]
-  * resource = BeispielPatientManfredMustermann0-FD
-
 //Input für Aufruf der $submit-Operation
 //Instance: BeispielParameterSubmitInput0-LE
 //InstanceOf: Parameters
