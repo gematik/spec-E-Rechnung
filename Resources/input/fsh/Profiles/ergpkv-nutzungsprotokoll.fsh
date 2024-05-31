@@ -4,7 +4,7 @@ Id: ergpkv-nutzungsprotokoll
 Title: "ERGPKV Nutzungsprotokoll"
 * insert Meta
 * type MS
-* type = #rest
+* type = #rest //ValueSet rest und interne operationen
 * subtype MS
 * subtype from ERGPKVAuditEventSubType
 * subtype ^comment = "Erweiterung des Core ValueSet um die Operations der Spec-E-Rechnung"
@@ -12,10 +12,11 @@ Title: "ERGPKV Nutzungsprotokoll"
 * recorded MS
 * outcome MS
 * agent MS
-* agent
-  * who 1.. MS
-  * who.identifier 1.. MS
-  * who.identifier ^comment = "Die KVNR ist aus dem Claim urn:telematik:claims:id des mitzusendenen Access-Token zu extrahieren."
+* agent //TODO Agent type einschränken auf menschlich und system
+  * who MS
+  * who.identifier MS
+  * who.identifier ^comment = "Die KVNR ist aus dem Claim urn:telematik:claims:id des mitzusendenen Access-Token zu extrahieren." //TODO KVNR oder TelematikId
+  * who.display 1.. MS
   * requestor MS
 * source.observer.display MS
 * source.observer.display ^comment = "Freitext-Rolle des Servers, auf das Event ausgelöst wurde"

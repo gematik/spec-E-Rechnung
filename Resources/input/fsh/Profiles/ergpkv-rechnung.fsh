@@ -30,11 +30,12 @@ Id: ergpkv-rechnung
 * participant ^slicing.discriminator.type = #pattern
 * participant ^slicing.discriminator.path = "role"
 * participant ^slicing.rules = #open
-* participant contains leistungserbringer 0..* MS
+* participant contains leistungserbringer 1..* MS
 * participant[leistungserbringer]
   * role MS
-  * role = http://snomed.info/sct#39607008
+  * role = http://snomed.info/sct#39607008 //TODO anderer Code
   * actor only Reference(Practitioner or Organization)
+    * reference MS
     * identifier MS
     * identifier only IdentifierIknr or IdentifierTelematikId
 * recipient 1.. MS

@@ -245,13 +245,14 @@
           ],
           "rules": "open"
         },
+        "min": 1,
         "mustSupport": true
       },
       {
         "id": "Invoice.participant:leistungserbringer",
         "path": "Invoice.participant",
         "sliceName": "leistungserbringer",
-        "min": 0,
+        "min": 1,
         "max": "*",
         "mustSupport": true
       },
@@ -281,6 +282,11 @@
             ]
           }
         ]
+      },
+      {
+        "id": "Invoice.participant:leistungserbringer.actor.reference",
+        "path": "Invoice.participant.actor.reference",
+        "mustSupport": true
       },
       {
         "id": "Invoice.participant:leistungserbringer.actor.identifier",

@@ -68,13 +68,17 @@
       {
         "id": "AuditEvent.agent.who",
         "path": "AuditEvent.agent.who",
-        "min": 1,
         "mustSupport": true
       },
       {
         "id": "AuditEvent.agent.who.identifier",
         "path": "AuditEvent.agent.who.identifier",
         "comment": "Die KVNR ist aus dem Claim urn:telematik:claims:id des mitzusendenen Access-Token zu extrahieren.",
+        "mustSupport": true
+      },
+      {
+        "id": "AuditEvent.agent.who.display",
+        "path": "AuditEvent.agent.who.display",
         "min": 1,
         "mustSupport": true
       },

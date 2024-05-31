@@ -25,6 +25,7 @@ Id: ergpkv-versicherteperson
   * ^comment = "vgl. Abschnitt 5.4.2.3 Bereitgestellte Claims und Scopes, Feature-Dokument E-Rechnung"
   * text 1.. MS
 
+//TODO alle AbweichenderRechnungsempfaenger entfernen
 Extension: ERGPKVAbweichenderRechnungsempfaenger
 Id: ergpkv-abweichender-rechnungsempfaenger
 Title: "ERGPKV Abweichender Rechnungsempfaenger"

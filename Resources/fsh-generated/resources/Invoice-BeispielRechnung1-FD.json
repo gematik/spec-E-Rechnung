@@ -29,6 +29,18 @@
       "value": "2023-01"
     }
   ],
+  "participant": [
+    {
+      "role": {
+        "coding": [
+          {
+            "code": "39607008",
+            "system": "http://snomed.info/sct"
+          }
+        ]
+      }
+    }
+  ],
   "recipient": {
     "identifier": {
       "system": "http://fhir.de/sid/gkv/kvid-10",
