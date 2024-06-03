@@ -36,6 +36,7 @@ Id: erg-rechnung
   * role = http://snomed.info/sct#39607008 //TODO anderer Code
   * actor only Reference(Practitioner or Organization)
     * reference MS
+    * reference ^comment = "Die referenzierten Instanzen sollten valide zu den Profilen ERGLeistungserbringerOrganisation und ERGLeistungserbringer sein"
     * identifier MS
     * identifier only IdentifierIknr or IdentifierTelematikId
 * recipient 1.. MS

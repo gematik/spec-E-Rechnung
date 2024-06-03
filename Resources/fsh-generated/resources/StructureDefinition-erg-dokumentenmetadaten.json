@@ -99,26 +99,26 @@
         "mustSupport": true
       },
       {
-        "id": "DocumentReference.meta.tag:erg-status",
+        "id": "DocumentReference.meta.tag:erg-rechnungsstatus",
         "path": "DocumentReference.meta.tag",
-        "sliceName": "erg-status",
+        "sliceName": "erg-rechnungsstatus",
         "comment": "Vgl. Abschnitt 4.4.1 Workflow einer Rechnung des Feature-Dokuments E-Rechnung",
         "min": 0,
         "max": "1",
         "mustSupport": true,
         "binding": {
           "strength": "required",
-          "valueSet": "https://gematik.de/fhir/erg/CodeSystem/erg-rechnungsstatus"
+          "valueSet": "https://gematik.de/fhir/erg/ValueSet/erg-rechnungsstatus"
         }
       },
       {
-        "id": "DocumentReference.meta.tag:erg-status.system",
+        "id": "DocumentReference.meta.tag:erg-rechnungsstatus.system",
         "path": "DocumentReference.meta.tag.system",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "DocumentReference.meta.tag:erg-status.code",
+        "id": "DocumentReference.meta.tag:erg-rechnungsstatus.code",
         "path": "DocumentReference.meta.tag.code",
         "min": 1,
         "mustSupport": true
@@ -267,36 +267,36 @@
         "min": 1
       },
       {
-        "id": "DocumentReference.type.coding:KDL",
+        "id": "DocumentReference.type.coding:IHE-TypeCode",
         "path": "DocumentReference.type.coding",
-        "sliceName": "KDL",
-        "short": "Dokumenttyp gemäß Klinischer Dokumentenliste (KDL)",
-        "comment": "Top-Level Kodes der KDL sollten angboten werden um der Benutzer:in eine verständliche Auswahl zu präsentieren. Hinweis: Zur Kodierung einer Rechnung, in Abgrenzung zu Anhängen, MUSS der KDL-Code 'AM010106' verwendet werden.",
+        "sliceName": "IHE-TypeCode",
+        "short": "Dokumenttyp gemäß IHE-TypeCode",
         "min": 0,
         "max": "1",
         "patternCoding": {
-          "system": "http://dvmd.de/fhir/CodeSystem/kdl"
+          "system": "http://ihe-d.de/CodeSystems/IHEXDStypeCode"
         },
         "mustSupport": true,
         "binding": {
           "strength": "extensible",
-          "valueSet": "https://gematik.de/fhir/erg/ValueSet/erg-sonstigesdokument-type-vs"
+          "valueSet": "http://ihe-d.de/ValueSets/IHEXDStypeCode"
         }
       },
       {
-        "id": "DocumentReference.type.coding:KDL.system",
+        "id": "DocumentReference.type.coding:IHE-TypeCode.system",
         "path": "DocumentReference.type.coding.system",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "DocumentReference.type.coding:KDL.code",
+        "id": "DocumentReference.type.coding:IHE-TypeCode.code",
         "path": "DocumentReference.type.coding.code",
+        "comment": "Standard-Code für Rechnung ist 'ABRE'",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "DocumentReference.type.coding:KDL.display",
+        "id": "DocumentReference.type.coding:IHE-TypeCode.display",
         "path": "DocumentReference.type.coding.display",
         "min": 1,
         "mustSupport": true

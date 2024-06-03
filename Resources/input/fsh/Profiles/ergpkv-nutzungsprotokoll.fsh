@@ -4,18 +4,20 @@ Title: "ERG Nutzungsprotokoll"
 Id: erg-nutzungsprotokoll
 * insert Meta
 * type MS
-* type = #rest //ValueSet rest und interne operationen
+* type from ERGAuditEventType (required)
 * subtype MS
-* subtype from ERGAuditEventSubType
+* subtype from ERGAuditEventSubType (extensible)
 * subtype ^comment = "Erweiterung des Core ValueSet um die Operations der Spec-E-Rechnung"
 * action MS
 * recorded MS
 * outcome MS
 * agent MS
 * agent //TODO Agent type einschränken auf menschlich und system
+  * type 1.. MS
+  * type from ERGAuditEventAgentType (required)
   * who MS
-  * who.identifier MS
-  * who.identifier ^comment = "Die KVNR ist aus dem Claim urn:telematik:claims:id des mitzusendenen Access-Token zu extrahieren." //TODO KVNR oder TelematikId
+  * who.identifier ..1 MS
+  * who.identifier ^comment = "Der Identifier wird vom Server gesetzt und kann entweder eine KVNR oder Telematik-ID sein" //TODO KVNR oder TelematikId
   * who.display 1.. MS
   * requestor MS
 * source.observer.display MS
@@ -23,6 +25,9 @@ Id: erg-nutzungsprotokoll
 * entity MS
 * entity.what MS
 * entity.what ^comment = "Referenzierung aller betroffenen Ressourcen"
+* entity.what.display MS
+* entity.name MS
+* entity.description MS
 
 CodeSystem: ERGOperationen
 Id: erg-operationen
@@ -33,31 +38,30 @@ Title: "ERG Operationen"
 * #process-flag "ERechnung_ProcessFlag"
 * #erase "ERechnung_Erase"
 
+CodeSystem: ERGPropRestInterations
+Id: erg-prop-rest-interactions
+Title: "ERG proprietäre RESTful Interaktionen"
+* #create "Erstellen"
+* #read "Lesen"
+* #update "Aktualisieren"
+* #delete "Löschen"
+
 ValueSet: ERGAuditEventSubType
 Id: erg-audit-event-sub-type
 Title: "ERG Audit Event Sub-Type"
-* DCM#110120
-* DCM#110121
-* DCM#110122
-* DCM#110123
-* DCM#110124
-* DCM#110125
-* DCM#110126
-* DCM#110127
-* DCM#110128
-* DCM#110129
-* DCM#110130
-* DCM#110131
-* DCM#110132
-* DCM#110133
-* DCM#110134
-* DCM#110135
-* DCM#110136
-* DCM#110137
-* DCM#110138
-* DCM#110139
-* DCM#110140
-* DCM#110141
-* DCM#110142
 * include codes from system $restful-interaction
 * include codes from system ERGOperationen
+* include codes from system ERGPropRestInterations
+
+ValueSet: ERGAuditEventType
+Id: erg-audit-event-type
+Title: "ERG Audit Event Type"
+* http://dicom.nema.org/resources/ontology/DCM#110100 "Application Activity"
+* https://hl7.org/fhir/R4/codesystem-audit-event-type.html#rest "RESTful Operation"
+
+
+ValueSet: ERGAuditEventAgentType
+Id: erg-audit-event-agent-type
+Title: "ERG Audit Event Agent Type"
+* http://terminology.hl7.org/CodeSystem/extra-security-role-type#humanuser "human user"
+* http://terminology.hl7.org/CodeSystem/extra-security-role-type#dataprocessor "data processor"

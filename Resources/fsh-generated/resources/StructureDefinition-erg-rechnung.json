@@ -308,6 +308,7 @@
       {
         "id": "Invoice.participant:leistungserbringer.actor.reference",
         "path": "Invoice.participant.actor.reference",
+        "comment": "Die referenzierten Instanzen sollten valide zu den Profilen ERGLeistungserbringerOrganisation und ERGLeistungserbringer sein",
         "mustSupport": true
       },
       {

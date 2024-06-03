@@ -1,0 +1,25 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "ERGAuditEventAgentType",
+  "id": "erg-audit-event-agent-type",
+  "title": "ERG Audit Event Agent Type",
+  "url": "https://gematik.de/fhir/erg/ValueSet/erg-audit-event-agent-type",
+  "compose": {
+    "include": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/extra-security-role-type",
+        "concept": [
+          {
+            "code": "humanuser",
+            "display": "human user"
+          },
+          {
+            "code": "dataprocessor",
+            "display": "data processor"
+          }
+        ]
+      }
+    ]
+  }
+}

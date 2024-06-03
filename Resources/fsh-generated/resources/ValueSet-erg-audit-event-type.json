@@ -1,0 +1,30 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "ERGAuditEventType",
+  "id": "erg-audit-event-type",
+  "title": "ERG Audit Event Type",
+  "url": "https://gematik.de/fhir/erg/ValueSet/erg-audit-event-type",
+  "compose": {
+    "include": [
+      {
+        "system": "http://dicom.nema.org/resources/ontology/DCM",
+        "concept": [
+          {
+            "code": "110100",
+            "display": "Application Activity"
+          }
+        ]
+      },
+      {
+        "system": "https://hl7.org/fhir/R4/codesystem-audit-event-type.html",
+        "concept": [
+          {
+            "code": "rest",
+            "display": "RESTful Operation"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -16,6 +16,8 @@ Id: erg-rechnungsposition
   * coding[GOZ] ^patternCoding.system = "http://fhir.de/CodeSystem/bzäk/goz"
   * text 1.. MS
 * subject MS
+* subject.reference MS
+* subject.reference ^comment = "Die referenzierte Instanz sollte valide zum Profil ERGersichertePerson sein"
 * occurrencePeriod 1.. MS
 * quantity 1.. MS
 * factorOverride 1.. MS

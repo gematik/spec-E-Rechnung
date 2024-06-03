@@ -62,10 +62,11 @@
       {
         "id": "AuditEvent.type",
         "path": "AuditEvent.type",
-        "patternCoding": {
-          "code": "rest"
-        },
-        "mustSupport": true
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://gematik.de/fhir/erg/ValueSet/erg-audit-event-type"
+        }
       },
       {
         "id": "AuditEvent.subtype",
@@ -73,7 +74,7 @@
         "comment": "Erweiterung des Core ValueSet um die Operations der Spec-E-Rechnung",
         "mustSupport": true,
         "binding": {
-          "strength": "required",
+          "strength": "extensible",
           "valueSet": "https://gematik.de/fhir/erg/ValueSet/erg-audit-event-sub-type"
         }
       },
@@ -98,6 +99,16 @@
         "mustSupport": true
       },
       {
+        "id": "AuditEvent.agent.type",
+        "path": "AuditEvent.agent.type",
+        "min": 1,
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://gematik.de/fhir/erg/ValueSet/erg-audit-event-agent-type"
+        }
+      },
+      {
         "id": "AuditEvent.agent.who",
         "path": "AuditEvent.agent.who",
         "mustSupport": true
@@ -105,7 +116,7 @@
       {
         "id": "AuditEvent.agent.who.identifier",
         "path": "AuditEvent.agent.who.identifier",
-        "comment": "Die KVNR ist aus dem Claim urn:telematik:claims:id des mitzusendenen Access-Token zu extrahieren.",
+        "comment": "Der Identifier wird vom Server gesetzt und kann entweder eine KVNR oder Telematik-ID sein",
         "mustSupport": true
       },
       {
@@ -134,6 +145,21 @@
         "id": "AuditEvent.entity.what",
         "path": "AuditEvent.entity.what",
         "comment": "Referenzierung aller betroffenen Ressourcen",
+        "mustSupport": true
+      },
+      {
+        "id": "AuditEvent.entity.what.display",
+        "path": "AuditEvent.entity.what.display",
+        "mustSupport": true
+      },
+      {
+        "id": "AuditEvent.entity.name",
+        "path": "AuditEvent.entity.name",
+        "mustSupport": true
+      },
+      {
+        "id": "AuditEvent.entity.description",
+        "path": "AuditEvent.entity.description",
         "mustSupport": true
       }
     ]

@@ -19,8 +19,8 @@ Id: erg-dokumentenmetadaten
   * ^slicing.discriminator.type = #pattern
   * ^slicing.discriminator.path = "$this"
   * ^slicing.rules = #open
-* meta.tag contains erg-status 0..1 MS
-* meta.tag[erg-status] from https://gematik.de/fhir/erg/CodeSystem/erg-rechnungsstatus (required)
+* meta.tag contains erg-rechnungsstatus 0..1 MS
+* meta.tag[erg-rechnungsstatus] from erg-rechnungsstatus (required)
   * ^comment = "Vgl. Abschnitt 4.4.1 Workflow einer Rechnung des Feature-Dokuments E-Rechnung"
   * system 1.. MS
   * code 1.. MS
@@ -38,13 +38,13 @@ Id: erg-dokumentenmetadaten
   * ^slicing.discriminator.type = #pattern
   * ^slicing.discriminator.path = "$this"
   * ^slicing.rules = #open
-* type.coding contains KDL 0..1 MS
-* type.coding[KDL] from https://gematik.de/fhir/erg/ValueSet/erg-sonstigesdokument-type-vs (extensible)
-  * ^short = "Dokumenttyp gemäß Klinischer Dokumentenliste (KDL)"
-  * ^comment = "Top-Level Kodes der KDL sollten angboten werden um der Benutzer:in eine verständliche Auswahl zu präsentieren. Hinweis: Zur Kodierung einer Rechnung, in Abgrenzung zu Anhängen, MUSS der KDL-Code 'AM010106' verwendet werden."
-  * ^patternCoding.system = "http://dvmd.de/fhir/CodeSystem/kdl"
+* type.coding contains IHE-TypeCode 0..1 MS
+* type.coding[IHE-TypeCode] from http://ihe-d.de/ValueSets/IHEXDStypeCode (extensible)
+  * ^short = "Dokumenttyp gemäß IHE-TypeCode"
+  * ^patternCoding.system = "http://ihe-d.de/CodeSystems/IHEXDStypeCode"
   * system 1.. MS
   * code 1.. MS
+  * code ^comment = "Standard-Code für Rechnung ist 'ABRE'"
   * display 1.. MS
 * description 1..1 MS
   * ^short = "Dokumententitel"
@@ -125,7 +125,6 @@ Title: "ERG Restricted Mime Types"
 ValueSet: ERGRechnungsstatus
 Id: erg-rechnungsstatus
 Title: "ERG Rechnungsstatus"
-
 * include codes from system https://gematik.de/fhir/erg/CodeSystem/erg-rechnungsstatus-cs
 
 // ------------- CodeSystem -------------

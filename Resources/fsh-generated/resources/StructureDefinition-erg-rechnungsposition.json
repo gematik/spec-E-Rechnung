@@ -137,6 +137,12 @@
         "mustSupport": true
       },
       {
+        "id": "ChargeItem.subject.reference",
+        "path": "ChargeItem.subject.reference",
+        "comment": "Die referenzierte Instanz sollte valide zum Profil ERGersichertePerson sein",
+        "mustSupport": true
+      },
+      {
         "id": "ChargeItem.occurrence[x]",
         "path": "ChargeItem.occurrence[x]",
         "slicing": {

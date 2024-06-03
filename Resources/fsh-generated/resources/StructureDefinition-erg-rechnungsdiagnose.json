@@ -112,6 +112,7 @@
       {
         "id": "Condition.subject.reference",
         "path": "Condition.subject.reference",
+        "comment": "Die referenzierte Instanz sollte valide zum Profil ERGersichertePerson sein",
         "min": 1,
         "mustSupport": true
       }

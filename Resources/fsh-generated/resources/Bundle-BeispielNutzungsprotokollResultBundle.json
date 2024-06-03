@@ -27,6 +27,13 @@
         "outcome": "0",
         "agent": [
           {
+            "type": {
+              "coding": [
+                {
+                  "code": "humanuser"
+                }
+              ]
+            },
             "who": {
               "identifier": {
                 "type": {

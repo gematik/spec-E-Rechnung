@@ -17,3 +17,4 @@ Id: erg-rechnungsdiagnose
   * display MS
 * subject MS
 * subject.reference 1.. MS
+* subject.reference ^comment = "Die referenzierte Instanz sollte valide zum Profil ERGersichertePerson sein"
