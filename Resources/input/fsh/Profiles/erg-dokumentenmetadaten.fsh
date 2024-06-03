@@ -20,7 +20,7 @@ Id: erg-dokumentenmetadaten
   * ^slicing.discriminator.path = "$this"
   * ^slicing.rules = #open
 * meta.tag contains erg-rechnungsstatus 0..1 MS
-* meta.tag[erg-rechnungsstatus] from erg-rechnungsstatus (required)
+* meta.tag[erg-rechnungsstatus] from ERGRechnungsstatusVS (required)
   * ^comment = "Vgl. Abschnitt 4.4.1 Workflow einer Rechnung des Feature-Dokuments E-Rechnung"
   * system 1.. MS
   * code 1.. MS
@@ -88,7 +88,7 @@ Id: erg-dokumentenmetadaten
   * format MS
   * format = https://gematik.de/fhir/erg/CodeSystem/erg-attachment-format-cs#rechnungsinhalt
   * attachment 1..1 MS
-    * contentType from ERGRestrictedMimeTypes (required)
+    * contentType from ERGRestrictedMimeTypesVS (required)
     * contentType 1.. MS
       * ^comment = "Strukturierte Rechnungsinhalte können seitens der Leistungserbringer:in sowohl als JSON als auch XML übergeben werden."
     * data 1.. MS
@@ -116,15 +116,15 @@ Id: erg-dokumentenmetadaten
 
 // ------------- ValueSets -------------
 
-ValueSet: ERGRestrictedMimeTypes
-Id: erg-restricted-mime-types
+ValueSet: ERGRestrictedMimeTypesVS
+Id: erg-restricted-mime-types-vs
 Title: "ERG Restricted Mime Types"
 
 * include http://terminology.hl7.org/CodeSystem/mimetypes#application/fhir+json
 * include http://terminology.hl7.org/CodeSystem/mimetypes#application/fhir+xml
 
-ValueSet: ERGRechnungsstatus
-Id: erg-rechnungsstatus
+ValueSet: ERGRechnungsstatusVS
+Id: erg-rechnungsstatus-vs
 Title: "ERG Rechnungsstatus"
 * include codes from system https://gematik.de/fhir/erg/CodeSystem/erg-rechnungsstatus-cs
 
@@ -139,7 +139,7 @@ Description:  "CodeSystem für die Abbildung von verschieden Formatinhalten eine
 * #rechnungsinhalt "Strukturierter Rechnungsinhalt"
 * #rechnungsanhang "Rechnungsanhang"
 
-CodeSystem:  ERGARechnungsstatus
+CodeSystem:  ERGARechnungsstatusCS
 Id: erg-rechnungsstatus-cs
 Title: "ERG Rechnungsstatus CS"
 Description:  "CodeSystem für die Abbildung von verschieden Status eines Rechnungungsdokuments"

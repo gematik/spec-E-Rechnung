@@ -108,7 +108,7 @@
         "mustSupport": true,
         "binding": {
           "strength": "required",
-          "valueSet": "https://gematik.de/fhir/erg/ValueSet/erg-rechnungsstatus"
+          "valueSet": "https://gematik.de/fhir/erg/ValueSet/erg-rechnungsstatus-vs"
         }
       },
       {
@@ -483,7 +483,7 @@
         "mustSupport": true,
         "binding": {
           "strength": "required",
-          "valueSet": "https://gematik.de/fhir/erg/ValueSet/erg-restricted-mime-types"
+          "valueSet": "https://gematik.de/fhir/erg/ValueSet/erg-restricted-mime-types-vs"
         }
       },
       {

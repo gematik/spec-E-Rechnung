@@ -2,10 +2,10 @@
   "resourceType": "CodeSystem",
   "status": "draft",
   "content": "complete",
-  "name": "ERGPropRestInterations",
-  "id": "erg-prop-rest-interactions",
+  "name": "ERGPropRestInterationsCS",
+  "id": "erg-prop-rest-interactions-cs",
   "title": "ERG proprietäre RESTful Interaktionen",
-  "url": "https://gematik.de/fhir/erg/CodeSystem/erg-prop-rest-interactions",
+  "url": "https://gematik.de/fhir/erg/CodeSystem/erg-prop-rest-interactions-cs",
   "concept": [
     {
       "code": "create",

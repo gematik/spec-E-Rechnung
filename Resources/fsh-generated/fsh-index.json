@@ -96,8 +96,8 @@
     "endLine": 124
   },
   {
-    "outputFile": "CodeSystem-erg-operationen.json",
-    "fshName": "ERGOperationen",
+    "outputFile": "CodeSystem-erg-operationen-cs.json",
+    "fshName": "ERGOperationenCS",
     "fshType": "CodeSystem",
     "fshFile": "Profiles\\erg-nutzungsprotokoll.fsh",
     "startLine": 32,
@@ -112,8 +112,8 @@
     "endLine": 136
   },
   {
-    "outputFile": "CodeSystem-erg-prop-rest-interactions.json",
-    "fshName": "ERGPropRestInterations",
+    "outputFile": "CodeSystem-erg-prop-rest-interactions-cs.json",
+    "fshName": "ERGPropRestInterationsCS",
     "fshType": "CodeSystem",
     "fshFile": "Profiles\\erg-nutzungsprotokoll.fsh",
     "startLine": 41,
@@ -145,7 +145,7 @@
   },
   {
     "outputFile": "CodeSystem-erg-rechnungsstatus-cs.json",
-    "fshName": "ERGARechnungsstatus",
+    "fshName": "ERGARechnungsstatusCS",
     "fshType": "CodeSystem",
     "fshFile": "Profiles\\erg-dokumentenmetadaten.fsh",
     "startLine": 142,
@@ -624,24 +624,24 @@
     "endLine": 42
   },
   {
-    "outputFile": "ValueSet-erg-audit-event-agent-type.json",
-    "fshName": "ERGAuditEventAgentType",
+    "outputFile": "ValueSet-erg-audit-event-agent-type-vs.json",
+    "fshName": "ERGAuditEventAgentTypeVS",
     "fshType": "ValueSet",
     "fshFile": "Profiles\\erg-nutzungsprotokoll.fsh",
     "startLine": 63,
     "endLine": 67
   },
   {
-    "outputFile": "ValueSet-erg-audit-event-sub-type.json",
-    "fshName": "ERGAuditEventSubType",
+    "outputFile": "ValueSet-erg-audit-event-sub-type-vs.json",
+    "fshName": "ERGAuditEventSubTypeVS",
     "fshType": "ValueSet",
     "fshFile": "Profiles\\erg-nutzungsprotokoll.fsh",
     "startLine": 49,
     "endLine": 54
   },
   {
-    "outputFile": "ValueSet-erg-audit-event-type.json",
-    "fshName": "ERGAuditEventType",
+    "outputFile": "ValueSet-erg-audit-event-type-vs.json",
+    "fshName": "ERGAuditEventTypeVS",
     "fshType": "ValueSet",
     "fshFile": "Profiles\\erg-nutzungsprotokoll.fsh",
     "startLine": 56,
@@ -680,16 +680,16 @@
     "endLine": 97
   },
   {
-    "outputFile": "ValueSet-erg-rechnungsstatus.json",
-    "fshName": "ERGRechnungsstatus",
+    "outputFile": "ValueSet-erg-rechnungsstatus-vs.json",
+    "fshName": "ERGRechnungsstatusVS",
     "fshType": "ValueSet",
     "fshFile": "Profiles\\erg-dokumentenmetadaten.fsh",
     "startLine": 126,
     "endLine": 129
   },
   {
-    "outputFile": "ValueSet-erg-restricted-mime-types.json",
-    "fshName": "ERGRestrictedMimeTypes",
+    "outputFile": "ValueSet-erg-restricted-mime-types-vs.json",
+    "fshName": "ERGRestrictedMimeTypesVS",
     "fshType": "ValueSet",
     "fshFile": "Profiles\\erg-dokumentenmetadaten.fsh",
     "startLine": 119,

@@ -2,10 +2,10 @@
   "resourceType": "CodeSystem",
   "status": "draft",
   "content": "complete",
-  "name": "ERGOperationen",
-  "id": "erg-operationen",
+  "name": "ERGOperationenCS",
+  "id": "erg-operationen-cs",
   "title": "ERG Operationen",
-  "url": "https://gematik.de/fhir/erg/CodeSystem/erg-operationen",
+  "url": "https://gematik.de/fhir/erg/CodeSystem/erg-operationen-cs",
   "concept": [
     {
       "code": "erechnung-submit",

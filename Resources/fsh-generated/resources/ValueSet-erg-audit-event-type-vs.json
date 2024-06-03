@@ -1,10 +1,10 @@
 {
   "resourceType": "ValueSet",
   "status": "draft",
-  "name": "ERGAuditEventType",
-  "id": "erg-audit-event-type",
+  "name": "ERGAuditEventTypeVS",
+  "id": "erg-audit-event-type-vs",
   "title": "ERG Audit Event Type",
-  "url": "https://gematik.de/fhir/erg/ValueSet/erg-audit-event-type",
+  "url": "https://gematik.de/fhir/erg/ValueSet/erg-audit-event-type-vs",
   "compose": {
     "include": [
       {

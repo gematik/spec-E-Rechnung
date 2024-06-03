@@ -1,10 +1,10 @@
 {
   "resourceType": "ValueSet",
   "status": "draft",
-  "name": "ERGRestrictedMimeTypes",
-  "id": "erg-restricted-mime-types",
+  "name": "ERGRestrictedMimeTypesVS",
+  "id": "erg-restricted-mime-types-vs",
   "title": "ERG Restricted Mime Types",
-  "url": "https://gematik.de/fhir/erg/ValueSet/erg-restricted-mime-types",
+  "url": "https://gematik.de/fhir/erg/ValueSet/erg-restricted-mime-types-vs",
   "compose": {
     "include": [
       {

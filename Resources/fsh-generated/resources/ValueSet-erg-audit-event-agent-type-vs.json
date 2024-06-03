@@ -1,10 +1,10 @@
 {
   "resourceType": "ValueSet",
   "status": "draft",
-  "name": "ERGAuditEventAgentType",
-  "id": "erg-audit-event-agent-type",
+  "name": "ERGAuditEventAgentTypeVS",
+  "id": "erg-audit-event-agent-type-vs",
   "title": "ERG Audit Event Agent Type",
-  "url": "https://gematik.de/fhir/erg/ValueSet/erg-audit-event-agent-type",
+  "url": "https://gematik.de/fhir/erg/ValueSet/erg-audit-event-agent-type-vs",
   "compose": {
     "include": [
       {

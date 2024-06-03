@@ -2,7 +2,7 @@
   "resourceType": "CodeSystem",
   "status": "draft",
   "content": "complete",
-  "name": "ERGARechnungsstatus",
+  "name": "ERGARechnungsstatusCS",
   "id": "erg-rechnungsstatus-cs",
   "title": "ERG Rechnungsstatus CS",
   "description": "CodeSystem für die Abbildung von verschieden Status eines Rechnungungsdokuments",

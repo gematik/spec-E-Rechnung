@@ -65,7 +65,7 @@
         "mustSupport": true,
         "binding": {
           "strength": "required",
-          "valueSet": "https://gematik.de/fhir/erg/ValueSet/erg-audit-event-type"
+          "valueSet": "https://gematik.de/fhir/erg/ValueSet/erg-audit-event-type-vs"
         }
       },
       {
@@ -75,7 +75,7 @@
         "mustSupport": true,
         "binding": {
           "strength": "extensible",
-          "valueSet": "https://gematik.de/fhir/erg/ValueSet/erg-audit-event-sub-type"
+          "valueSet": "https://gematik.de/fhir/erg/ValueSet/erg-audit-event-sub-type-vs"
         }
       },
       {
@@ -105,7 +105,7 @@
         "mustSupport": true,
         "binding": {
           "strength": "required",
-          "valueSet": "https://gematik.de/fhir/erg/ValueSet/erg-audit-event-agent-type"
+          "valueSet": "https://gematik.de/fhir/erg/ValueSet/erg-audit-event-agent-type-vs"
         }
       },
       {
