@@ -1,7 +1,7 @@
 Profile: ERGLeistungserbringerOrganisation
 Parent: Organization
 Title: "ERG leistungserbringende Organisation"
-Id: RGPKVLeistungserbringerOrganisation
+Id: erg-leistungserbringer-organisation
 * insert Meta
 * identifier MS
 * identifier ^slicing.discriminator.type = #pattern

@@ -408,14 +408,6 @@
     "endLine": 128
   },
   {
-    "outputFile": "StructureDefinition-RGPKVLeistungserbringer.json",
-    "fshName": "ERGLeistungserbringer",
-    "fshType": "Profile",
-    "fshFile": "Profiles\\erg-leistungserbringer-person.fsh",
-    "startLine": 1,
-    "endLine": 47
-  },
-  {
     "outputFile": "StructureDefinition-RGPKVLeistungserbringerOrganisation.json",
     "fshName": "ERGLeistungserbringerOrganisation",
     "fshType": "Profile",
@@ -496,6 +488,14 @@
     "endLine": 10
   },
   {
+    "outputFile": "StructureDefinition-erg-leistungserbringer.json",
+    "fshName": "ERGLeistungserbringer",
+    "fshType": "Profile",
+    "fshFile": "Profiles\\erg-leistungserbringer-person.fsh",
+    "startLine": 1,
+    "endLine": 47
+  },
+  {
     "outputFile": "StructureDefinition-erg-nutzungsprotokoll.json",
     "fshName": "ERGNutzungsprotokoll",
     "fshType": "Profile",
@@ -565,7 +565,7 @@
     "fshType": "Profile",
     "fshFile": "Profiles\\erg-versicherteperson.fsh",
     "startLine": 1,
-    "endLine": 27
+    "endLine": 39
   },
   {
     "outputFile": "StructureDefinition-erg-zahlungsziel.json",

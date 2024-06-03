@@ -25,3 +25,15 @@ Id: erg-versicherteperson
   * given 1.. MS
   * family 1.. MS
   * text 1.. MS
+* address only $adresse-de
+* address MS
+* address
+  * extension[Stadtteil] MS
+  * type MS
+  * line MS
+  * line.extension[Strasse] MS
+  * line.extension[Hausnummer] MS
+  * line.extension[Adresszusatz] MS
+  * city MS
+  * postalCode MS
+  * country MS

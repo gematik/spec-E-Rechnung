@@ -38,7 +38,7 @@ Id: erg-dokumentenmetadaten
   * ^slicing.discriminator.type = #pattern
   * ^slicing.discriminator.path = "$this"
   * ^slicing.rules = #open
-* type.coding contains IHE-TypeCode 0..1 MS
+* type.coding contains IHE-TypeCode 0..1 MS and Rechnungstyp
 * type.coding[IHE-TypeCode] from http://ihe-d.de/ValueSets/IHEXDStypeCode (extensible)
   * ^short = "Dokumenttyp gemäß IHE-TypeCode"
   * ^patternCoding.system = "http://ihe-d.de/CodeSystems/IHEXDStypeCode"

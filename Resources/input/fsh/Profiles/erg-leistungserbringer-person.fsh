@@ -1,7 +1,7 @@
 Profile: ERGLeistungserbringer
 Parent: Practitioner
 Title: "ERG Leistungserbringer"
-Id: RGPKVLeistungserbringer
+Id: erg-leistungserbringer
 * insert Meta
 * identifier MS
 * identifier ^slicing.discriminator.type = #pattern
