@@ -1,0 +1,40 @@
+{
+  "resourceType": "DocumentReference",
+  "id": "BeispielDocumentReferenceSonstigesDokument3-FD",
+  "identifier": [
+    {
+      "system": "https://gematik.de/fhir/sid/erg-token",
+      "value": "987-654-321"
+    }
+  ],
+  "status": "current",
+  "type": {
+    "coding": [
+      {
+        "code": "PT130102",
+        "system": "http://dvmd.de/fhir/CodeSystem/kdl",
+        "display": "Molekularpathologiebefund"
+      }
+    ]
+  },
+  "description": "Molekularpathologiebefund vom 31.12.21",
+  "subject": {
+    "reference": "Patient/BeispielPatient3-FD"
+  },
+  "content": [
+    {
+      "attachment": {
+        "contentType": "application/pdf",
+        "url": "[FD-endpunkt]/Binary/patho-mit-token-barcode"
+      }
+    }
+  ],
+  "relatesTo": [
+    {
+      "code": "transforms",
+      "target": {
+        "reference": "DocumentReference/BeispielDocumentReferenceSonstigesDokument3-LE"
+      }
+    }
+  ]
+}
