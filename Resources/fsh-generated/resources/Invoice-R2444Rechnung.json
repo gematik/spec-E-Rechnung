@@ -3,10 +3,10 @@
   "id": "R2444Rechnung",
   "extension": [
     {
-      "url": "https://gematik.de/fhir/ergpkv/StructureDefinition/ExtensionBehandlungsart",
+      "url": "https://gematik.de/fhir/erg/StructureDefinition/ExtensionBehandlungsart",
       "valueCoding": {
         "code": "AMB",
-        "system": "https://gematik.de/fhir/ergpkv/CodeSystem/BehandlungsartCS"
+        "system": "https://gematik.de/fhir/erg/CodeSystem/BehandlungsartCS"
       }
     }
   ],
@@ -28,15 +28,15 @@
     "coding": [
       {
         "code": "erechnung",
-        "system": "https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnung-type-cs"
+        "system": "https://gematik.de/fhir/erg/CodeSystem/erg-rechnung-type-cs"
       }
     ],
     "extension": [
       {
-        "url": "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-gebuehrenordnung-type",
+        "url": "https://gematik.de/fhir/erg/StructureDefinition/erg-gebuehrenordnung-type",
         "valueCoding": {
           "code": "GOÄ",
-          "system": "https://gematik.de/fhir/ergpkv/CodeSystem/GebuehrenordnungenCS"
+          "system": "https://gematik.de/fhir/erg/CodeSystem/GebuehrenordnungenCS"
         }
       }
     ]
@@ -111,7 +111,7 @@
   "_paymentTerms": {
     "extension": [
       {
-        "url": "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-zahlungsziel",
+        "url": "https://gematik.de/fhir/erg/StructureDefinition/erg-zahlungsziel",
         "valueDate": "2024-04-19"
       }
     ]

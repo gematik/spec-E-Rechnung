@@ -1,11 +1,11 @@
 // ------------- OperationDefinition -------------
 
-Instance: ERGPKVOperationRetrieve
+Instance: ERGOperationRetrieve
 InstanceOf: OperationDefinition
 Usage: #example
-Title: "ERGPKV Operation Retrieve"
+Title: "ERG Operation Retrieve"
 Description: "Abrufen von E-Rechnungen, strukturierten Rechnungsinhalten und Dokumenten"
-* url = "https://gematik.de/fhir/ergpkv/OperationDefinition/Retrieve"
+* url = "https://gematik.de/fhir/erg/OperationDefinition/Retrieve"
 * status = #draft
 * kind = #operation
 * name = "ERechnung_Retrieve"

@@ -1,26 +1,26 @@
 // ------------- Profile -------------
 Alias: $kdl = http://dvmd.de/fhir/CodeSystem/kdl
 
-Profile: ERGPKVDokumentenmetadaten
-Title: "ERGPKV Dokumentenmetadaten"
+Profile: ERGDokumentenmetadaten
+Title: "ERG Dokumentenmetadaten"
 Parent: DocumentReference
-Id: ergpkv-dokumentenmetadaten
+Id: erg-dokumentenmetadaten
 * insert Meta
 * obeys SignaturVerpflichtendRechnung
 * obeys RechnungOderAnhang
 * extension MS
 * extension contains 
-  ERGPKVDocRefSignature named docRef-signature 0..1 MS and 
-  ERGPKVDocumentReferenceMarkierung named markierung 0..* MS and
-  ERGPKVDocumentReferenceRechnungsdatum named rechnungsdatum 0..1 MS and
-  ERGPKVDocumentReferenceZahlungszieldatum named zahlungszieldatum 0..1 MS and
-  ERGPKVDocumentReferenceGesamtbetrag named gesamtbetrag 0..1 MS
+  ERGDocRefSignature named docRef-signature 0..1 MS and 
+  ERGDocumentReferenceMarkierung named markierung 0..* MS and
+  ERGDocumentReferenceRechnungsdatum named rechnungsdatum 0..1 MS and
+  ERGDocumentReferenceZahlungszieldatum named zahlungszieldatum 0..1 MS and
+  ERGDocumentReferenceGesamtbetrag named gesamtbetrag 0..1 MS
 * meta.tag MS
   * ^slicing.discriminator.type = #pattern
   * ^slicing.discriminator.path = "$this"
   * ^slicing.rules = #open
-* meta.tag contains ergpkv-status 0..1 MS
-* meta.tag[ergpkv-status] from https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsstatus (required)
+* meta.tag contains erg-status 0..1 MS
+* meta.tag[erg-status] from https://gematik.de/fhir/erg/CodeSystem/erg-rechnungsstatus (required)
   * ^comment = "Vgl. Abschnitt 4.4.1 Workflow einer Rechnung des Feature-Dokuments E-Rechnung"
   * system 1.. MS
   * code 1.. MS
@@ -39,7 +39,7 @@ Id: ergpkv-dokumentenmetadaten
   * ^slicing.discriminator.path = "$this"
   * ^slicing.rules = #open
 * type.coding contains KDL 0..1 MS
-* type.coding[KDL] from https://gematik.de/fhir/ergpkv/ValueSet/ergpkv-sonstigesdokument-type-vs (extensible)
+* type.coding[KDL] from https://gematik.de/fhir/erg/ValueSet/erg-sonstigesdokument-type-vs (extensible)
   * ^short = "Dokumenttyp gemäß Klinischer Dokumentenliste (KDL)"
   * ^comment = "Top-Level Kodes der KDL sollten angboten werden um der Benutzer:in eine verständliche Auswahl zu präsentieren. Hinweis: Zur Kodierung einer Rechnung, in Abgrenzung zu Anhängen, MUSS der KDL-Code 'AM010106' verwendet werden."
   * ^patternCoding.system = "http://dvmd.de/fhir/CodeSystem/kdl"
@@ -65,7 +65,7 @@ Id: ergpkv-dokumentenmetadaten
   * ^comment = "Der FD muss die Base64-kodierten Daten aus attachment.data extrahieren und in eine Binary-Ressource auslagern."
 * content[rechnungspdf]
   * format MS
-  * format = https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-attachment-format-cs#erechnung
+  * format = https://gematik.de/fhir/erg/CodeSystem/erg-attachment-format-cs#erechnung
   * attachment 1..1 MS
     * contentType 1.. MS
     * contentType = #application/pdf
@@ -75,7 +75,7 @@ Id: ergpkv-dokumentenmetadaten
     * url MS
 * content[angereicherteRechnung]
   * format MS
-  * format = https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-attachment-format-cs#angereichertesPDF
+  * format = https://gematik.de/fhir/erg/CodeSystem/erg-attachment-format-cs#angereichertesPDF
   * attachment 1..1 MS
     * contentType 1.. MS
     * contentType = #application/pdf
@@ -85,9 +85,9 @@ Id: ergpkv-dokumentenmetadaten
     * url MS
 * content[strukturierterRechnungsinhalt]
   * format MS
-  * format = https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-attachment-format-cs#rechnungsinhalt
+  * format = https://gematik.de/fhir/erg/CodeSystem/erg-attachment-format-cs#rechnungsinhalt
   * attachment 1..1 MS
-    * contentType from ERGPKVRestrictedMimeTypes (required)
+    * contentType from ERGRestrictedMimeTypes (required)
     * contentType 1.. MS
       * ^comment = "Strukturierte Rechnungsinhalte können seitens der Leistungserbringer:in sowohl als JSON als auch XML übergeben werden."
     * data 1.. MS
@@ -95,7 +95,7 @@ Id: ergpkv-dokumentenmetadaten
     * url MS
 * content[anhang]
   * format MS
-  * format = https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-attachment-format-cs#rechnungsanhang
+  * format = https://gematik.de/fhir/erg/CodeSystem/erg-attachment-format-cs#rechnungsanhang
   * attachment 1..1 MS
     * contentType = #application/pdf
     * contentType 1.. MS
@@ -115,33 +115,33 @@ Id: ergpkv-dokumentenmetadaten
 
 // ------------- ValueSets -------------
 
-ValueSet: ERGPKVRestrictedMimeTypes
-Id: ergpkv-restricted-mime-types
-Title: "ERGPKV Restricted Mime Types"
+ValueSet: ERGRestrictedMimeTypes
+Id: erg-restricted-mime-types
+Title: "ERG Restricted Mime Types"
 
 * include http://terminology.hl7.org/CodeSystem/mimetypes#application/fhir+json
 * include http://terminology.hl7.org/CodeSystem/mimetypes#application/fhir+xml
 
-ValueSet: ERGPKVRechnungsstatus
-Id: ergpkv-rechnungsstatus
-Title: "ERGPKV Rechnungsstatus"
+ValueSet: ERGRechnungsstatus
+Id: erg-rechnungsstatus
+Title: "ERG Rechnungsstatus"
 
-* include codes from system https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsstatus-cs
+* include codes from system https://gematik.de/fhir/erg/CodeSystem/erg-rechnungsstatus-cs
 
 // ------------- CodeSystem -------------
 
-CodeSystem:  ERGPKVAttachmentFormatCS
-Id: ergpkv-attachment-format-cs
-Title: "ERGPKV Attachment Format CS"
+CodeSystem:  ERGAttachmentFormatCS
+Id: erg-attachment-format-cs
+Title: "ERG Attachment Format CS"
 Description:  "CodeSystem für die Abbildung von verschieden Formatinhalten eines Dokuments"
 * #erechnung "E-Rechnungsdokument"
 * #angereichertesPDF "E-Rechnungsdokument mit eingebetteten strukturierten Rechnungsinhalt"
 * #rechnungsinhalt "Strukturierter Rechnungsinhalt"
 * #rechnungsanhang "Rechnungsanhang"
 
-CodeSystem:  ERGPKVARechnungsstatus
-Id: ergpkv-rechnungsstatus-cs
-Title: "ERGPKV Rechnungsstatus CS"
+CodeSystem:  ERGARechnungsstatus
+Id: erg-rechnungsstatus-cs
+Title: "ERG Rechnungsstatus CS"
 Description:  "CodeSystem für die Abbildung von verschieden Status eines Rechnungungsdokuments"
 * #offen "Offen"
 * #erledigt "Erledigt"
@@ -149,12 +149,12 @@ Description:  "CodeSystem für die Abbildung von verschieden Status eines Rechnu
 
 // ------------- Extensions -------------
 
-Extension: ERGPKVDocRefSignature
-Id: ergpkv-docref-signature
-Title: "ERGPKV DocRef Signature"
+Extension: ERGDocRefSignature
+Id: erg-docref-signature
+Title: "ERG DocRef Signature"
 Description: "Extension zur Abbildung einer Digitalen Signatur über die Rechnungsrepräsentation, sowie den strukturierten Rechnungsinhalten"
 
-* extension.url = "http://example.org/fhir/StructureDefinition/ergpkv-docref-signature"
+* extension.url = "http://example.org/fhir/StructureDefinition/erg-docref-signature"
 * value[x] 1.. MS
 * value[x] only Signature
 
@@ -162,12 +162,12 @@ Description: "Extension zur Abbildung einer Digitalen Signatur über die Rechnun
 
 Invariant: SignaturVerpflichtendRechnung
 Description: "Eine Signature muss vorhanden sein, falls es sich bei der DocumentReference um eine Rechnung handelt."
-Expression: "type.coding.where(system = 'http://dvmd.de/fhir/CodeSystem/kdl' and code = 'AM010106').exists() implies extension.where(url = 'https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-docref-signature').exists()"
+Expression: "type.coding.where(system = 'http://dvmd.de/fhir/CodeSystem/kdl' and code = 'AM010106').exists() implies extension.where(url = 'https://gematik.de/fhir/erg/StructureDefinition/erg-docref-signature').exists()"
 Severity: #error
 
 Invariant: RechnungOderAnhang
 Description: "Ein Dokument kann entweder ein Anhang enthalten oder ein Rechnungsdokument inkl. strukturierten Rechnungsinhalten."
-Expression: "content.format.where(system = 'https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-attachment-format-cs' and code = 'rechnungsanhang').exists() xor (content.format.where(system = 'https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-attachment-format-cs' and code = 'erechnung').exists() and  content.format.where(system = 'https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-attachment-format-cs' and code = 'rechnungsinhalt').exists())"
+Expression: "content.format.where(system = 'https://gematik.de/fhir/erg/CodeSystem/erg-attachment-format-cs' and code = 'rechnungsanhang').exists() xor (content.format.where(system = 'https://gematik.de/fhir/erg/CodeSystem/erg-attachment-format-cs' and code = 'erechnung').exists() and  content.format.where(system = 'https://gematik.de/fhir/erg/CodeSystem/erg-attachment-format-cs' and code = 'rechnungsinhalt').exists())"
 Severity: #error
 
 

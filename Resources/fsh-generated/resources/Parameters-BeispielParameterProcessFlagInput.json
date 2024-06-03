@@ -5,7 +5,7 @@
     {
       "name": "tag",
       "valueCoding": {
-        "system": "https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnung-markierung-cs",
+        "system": "https://gematik.de/fhir/erg/CodeSystem/erg-rechnung-markierung-cs",
         "code": "bezahlt"
       }
     }

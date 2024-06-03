@@ -1,11 +1,11 @@
 // ------------- OperationDefinition -------------
 
-Instance: ERGPKVOperationChangeStatus
+Instance: ERGOperationChangeStatus
 InstanceOf: OperationDefinition
 Usage: #example
-Title: "ERGPKV Operation ChangeStatus"
+Title: "ERG Operation ChangeStatus"
 Description: "Änderung des Bearbeitungsstatus eines Dokumentes"
-* url = "https://gematik.de/fhir/ergpkv/OperationDefinition/ChangeStatus"
+* url = "https://gematik.de/fhir/erg/OperationDefinition/ChangeStatus"
 * status = #draft
 * kind = #operation
 * name = "ERechnung_ChangeStatus"
@@ -20,7 +20,7 @@ Description: "Änderung des Bearbeitungsstatus eines Dokumentes"
   * use = #in
   * min = 1
   * max = "1"
-  * documentation = "Valider Code aus CodeSystem ERGPKVARechnungsstatus"
+  * documentation = "Valider Code aus CodeSystem ERGARechnungsstatus"
   * type = #code
 * parameter[+]
   * name = #meta

@@ -3,7 +3,7 @@
   "id": "R2444PKVersichertePerson",
   "meta": {
     "profile": [
-      "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-versicherteperson"
+      "https://gematik.de/fhir/erg/StructureDefinition/erg-versicherteperson"
     ]
   },
   "identifier": [

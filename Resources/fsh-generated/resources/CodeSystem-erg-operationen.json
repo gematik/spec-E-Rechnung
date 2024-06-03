@@ -1,0 +1,32 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "draft",
+  "content": "complete",
+  "name": "ERGOperationen",
+  "id": "erg-operationen",
+  "title": "ERG Operationen",
+  "url": "https://gematik.de/fhir/erg/CodeSystem/erg-operationen",
+  "concept": [
+    {
+      "code": "erechnung-submit",
+      "display": "ERechnung_Submit"
+    },
+    {
+      "code": "retrieve",
+      "display": "ERechnung_Retrieve"
+    },
+    {
+      "code": "change-status",
+      "display": "ERechnung_ChangeStatus"
+    },
+    {
+      "code": "process-flag",
+      "display": "ERechnung_ProcessFlag"
+    },
+    {
+      "code": "erase",
+      "display": "ERechnung_Erase"
+    }
+  ],
+  "count": 5
+}

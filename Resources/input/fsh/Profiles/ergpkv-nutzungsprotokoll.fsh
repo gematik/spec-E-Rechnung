@@ -1,12 +1,12 @@
-Profile: ERGPKVNutzungsprotokoll
+Profile: ERGNutzungsprotokoll
 Parent: AuditEvent
-Id: ergpkv-nutzungsprotokoll
-Title: "ERGPKV Nutzungsprotokoll"
+Id: erg-nutzungsprotokoll
+Title: "ERG Nutzungsprotokoll"
 * insert Meta
 * type MS
 * type = #rest //ValueSet rest und interne operationen
 * subtype MS
-* subtype from ERGPKVAuditEventSubType
+* subtype from ERGAuditEventSubType
 * subtype ^comment = "Erweiterung des Core ValueSet um die Operations der Spec-E-Rechnung"
 * action MS
 * recorded MS
@@ -24,18 +24,18 @@ Title: "ERGPKV Nutzungsprotokoll"
 * entity.what MS
 * entity.what ^comment = "Referenzierung aller betroffenen Ressourcen"
 
-CodeSystem: ERGPKVOperationen
-Id: ergpkv-operationen
-Title: "ERGPKV Operationen"
+CodeSystem: ERGOperationen
+Id: erg-operationen
+Title: "ERG Operationen"
 * #erechnung-submit "ERechnung_Submit"
 * #retrieve "ERechnung_Retrieve"
 * #change-status "ERechnung_ChangeStatus"
 * #process-flag "ERechnung_ProcessFlag"
 * #erase "ERechnung_Erase"
 
-ValueSet: ERGPKVAuditEventSubType
-Id: ergpkv-audit-event-sub-type
-Title: "ERGPKV Audit Event Sub-Type"
+ValueSet: ERGAuditEventSubType
+Id: erg-audit-event-sub-type
+Title: "ERG Audit Event Sub-Type"
 * DCM#110120
 * DCM#110121
 * DCM#110122
@@ -60,4 +60,4 @@ Title: "ERGPKV Audit Event Sub-Type"
 * DCM#110141
 * DCM#110142
 * include codes from system $restful-interaction
-* include codes from system ERGPKVOperationen
+* include codes from system ERGOperationen

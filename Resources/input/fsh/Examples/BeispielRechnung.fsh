@@ -8,9 +8,9 @@ Usage: #example
   * type = http://fhir.de/CodeSystem/identifier-type-de-basis#invoice
   * system = "http://Orthoschmerz.de/fhir/patienten"
   * value = "2-444"
-* type = https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnung-type-cs#erechnung
+* type = https://gematik.de/fhir/erg/CodeSystem/erg-rechnung-type-cs#erechnung
 * type.extension[+]
-  * url = "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-gebuehrenordnung-type"
+  * url = "https://gematik.de/fhir/erg/StructureDefinition/erg-gebuehrenordnung-type"
   * valueCoding = GebuehrenordnungenCS#GOÄ
 * status = http://hl7.org/fhir/invoice-status#issued
 * participant
@@ -48,11 +48,11 @@ Usage: #example
 - **Verwendungszweck:** z.B. Rechnungs-Nr. 2-444
 "
 * paymentTerms.extension
-  * url = Canonical(ERGPKVZahlungsziel)
+  * url = Canonical(ERGZahlungsziel)
   * valueDate = 2024-04-19
 
 Instance: R2444ChargeItem
-InstanceOf: ERGPKVRechnungsposition
+InstanceOf: ERGRechnungsposition
 Usage: #example
 * status = #billable
 * code.coding
@@ -69,7 +69,7 @@ Usage: #example
   * extension[type].valueCode = #tax
 
 Instance: R2444PKVersichertePerson
-InstanceOf: ERGPKVersichertePerson
+InstanceOf: ERGersichertePerson
 Usage: #example
 * identifier
   * type = http://fhir.de/CodeSystem/identifier-type-de-basis#KVZ10
@@ -157,7 +157,7 @@ Instance: R2444Document
 InstanceOf: Composition
 Usage: #example
 * status = #final
-* type.coding = https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnung-type-cs#erechnung
+* type.coding = https://gematik.de/fhir/erg/CodeSystem/erg-rechnung-type-cs#erechnung
 * date = 2024-03-20
 * author = Reference(R2444Practitioner)
 * title = "Zusammenfassung strukturierte Daten Rechnung 4-222"

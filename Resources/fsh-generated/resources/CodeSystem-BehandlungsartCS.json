@@ -5,7 +5,7 @@
   "name": "BehandlungsartCS",
   "id": "BehandlungsartCS",
   "title": "Behandlungsart",
-  "url": "https://gematik.de/fhir/ergpkv/CodeSystem/BehandlungsartCS",
+  "url": "https://gematik.de/fhir/erg/CodeSystem/BehandlungsartCS",
   "concept": [
     {
       "code": "AMB",

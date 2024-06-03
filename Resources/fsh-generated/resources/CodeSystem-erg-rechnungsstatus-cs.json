@@ -1,0 +1,25 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "draft",
+  "content": "complete",
+  "name": "ERGARechnungsstatus",
+  "id": "erg-rechnungsstatus-cs",
+  "title": "ERG Rechnungsstatus CS",
+  "description": "CodeSystem für die Abbildung von verschieden Status eines Rechnungungsdokuments",
+  "url": "https://gematik.de/fhir/erg/CodeSystem/erg-rechnungsstatus-cs",
+  "concept": [
+    {
+      "code": "offen",
+      "display": "Offen"
+    },
+    {
+      "code": "erledigt",
+      "display": "Erledigt"
+    },
+    {
+      "code": "papierkorb",
+      "display": "Papierkorb"
+    }
+  ],
+  "count": 3
+}

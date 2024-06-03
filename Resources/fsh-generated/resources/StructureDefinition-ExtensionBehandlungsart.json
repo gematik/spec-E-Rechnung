@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "id": "ExtensionBehandlungsart",
-  "url": "https://gematik.de/fhir/ergpkv/StructureDefinition/ExtensionBehandlungsart",
+  "url": "https://gematik.de/fhir/erg/StructureDefinition/ExtensionBehandlungsart",
   "name": "ExtensionBehandlungsart",
   "title": "Extension Behandlungsart",
   "status": "draft",
@@ -34,7 +34,7 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "https://gematik.de/fhir/ergpkv/StructureDefinition/ExtensionBehandlungsart"
+        "fixedUri": "https://gematik.de/fhir/erg/StructureDefinition/ExtensionBehandlungsart"
       },
       {
         "id": "Extension.value[x]",
@@ -46,7 +46,7 @@
         ],
         "binding": {
           "strength": "required",
-          "valueSet": "https://gematik.de/fhir/ergpkv/ValueSet/BehandlungsartVS"
+          "valueSet": "https://gematik.de/fhir/erg/ValueSet/BehandlungsartVS"
         }
       }
     ]

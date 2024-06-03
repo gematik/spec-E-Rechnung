@@ -1,11 +1,11 @@
 // ------------- OperationDefinition -------------
 
-Instance: ERGPKVOperationErase
+Instance: ERGOperationErase
 InstanceOf: OperationDefinition
 Usage: #example
-Title: "ERGPKV Operation Erase"
+Title: "ERG Operation Erase"
 Description: "Permanente Löschung eines Dokumentes"
-* url = "https://gematik.de/fhir/ergpkv/OperationDefinition/Erase"
+* url = "https://gematik.de/fhir/erg/OperationDefinition/Erase"
 * status = #draft
 * kind = #operation
 * name = "ERechnung_Erase"

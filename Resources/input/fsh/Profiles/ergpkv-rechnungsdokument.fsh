@@ -1,7 +1,7 @@
-Profile: ERGPKVRechnungsdokument
-Title: "ERGPKV Rechnungsdokument"
+Profile: ERGRechnungsdokument
+Title: "ERG Rechnungsdokument"
 Parent: Binary
-Id: ergpkv-rechnungsdokument
+Id: erg-rechnungsdokument
 * insert Meta
 * contentType MS
 * contentType = #application/pdf (exactly)

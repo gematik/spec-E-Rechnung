@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "id": "RGPKVLeistungserbringer",
-  "url": "https://gematik.de/fhir/ergpkv/StructureDefinition/RGPKVLeistungserbringer",
+  "url": "https://gematik.de/fhir/erg/StructureDefinition/RGPKVLeistungserbringer",
   "version": "1.0.0-ballot",
   "name": "RGPKVLeistungserbringer",
   "status": "active",

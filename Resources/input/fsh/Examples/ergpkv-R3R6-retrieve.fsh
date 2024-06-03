@@ -13,7 +13,7 @@ InstanceOf: Parameters
 Instance: BeispielDocumentReferenceRechnungRetrieve
 InstanceOf: DocumentReference
 * identifier
-  * system = "https://gematik.de/fhir/sid/ergpkv-token"
+  * system = "https://gematik.de/fhir/sid/erg-token"
   * value = "123-456-789"
 * status = #current
 * type = $kdl#AM010106 "Rechnung ambulante/stationäre Behandlung"

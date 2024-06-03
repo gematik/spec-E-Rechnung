@@ -1,0 +1,29 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "draft",
+  "content": "complete",
+  "name": "ERGAttachmentFormatCS",
+  "id": "erg-attachment-format-cs",
+  "title": "ERG Attachment Format CS",
+  "description": "CodeSystem für die Abbildung von verschieden Formatinhalten eines Dokuments",
+  "url": "https://gematik.de/fhir/erg/CodeSystem/erg-attachment-format-cs",
+  "concept": [
+    {
+      "code": "erechnung",
+      "display": "E-Rechnungsdokument"
+    },
+    {
+      "code": "angereichertesPDF",
+      "display": "E-Rechnungsdokument mit eingebetteten strukturierten Rechnungsinhalt"
+    },
+    {
+      "code": "rechnungsinhalt",
+      "display": "Strukturierter Rechnungsinhalt"
+    },
+    {
+      "code": "rechnungsanhang",
+      "display": "Rechnungsanhang"
+    }
+  ],
+  "count": 4
+}

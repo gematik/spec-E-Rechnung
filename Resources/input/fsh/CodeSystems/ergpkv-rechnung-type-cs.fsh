@@ -1,5 +1,5 @@
-CodeSystem:  ERGPKVRechnungTypeCS
-Id: ergpkv-rechnung-type-cs
-Title: "ERGPKV Rechnung Type CS"
+CodeSystem:  ERGRechnungTypeCS
+Id: erg-rechnung-type-cs
+Title: "ERG Rechnung Type CS"
 Description:  "CodeSystem für die Differenzierung von verschiedenen Typen einer E-Rechnnung"
 * #erechnung "E-Rechnung"

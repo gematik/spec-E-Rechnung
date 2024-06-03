@@ -1,0 +1,20 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "draft",
+  "content": "complete",
+  "name": "ERGGebuehrenordnungenCS",
+  "id": "erg-gebuehrenordnungenCS",
+  "title": "Gebührenordnungen",
+  "url": "https://gematik.de/fhir/erg/CodeSystem/erg-gebuehrenordnungenCS",
+  "concept": [
+    {
+      "code": "GOÄ",
+      "display": "Gebührenordnung für Ärzte"
+    },
+    {
+      "code": "GOZ",
+      "display": "Gebührenordnung für Zahnärzte"
+    }
+  ],
+  "count": 2
+}

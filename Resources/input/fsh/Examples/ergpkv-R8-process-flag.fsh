@@ -3,7 +3,7 @@ InstanceOf: Parameters
 * parameter[+]
   * name = "tag"
   * valueCoding
-    * system = Canonical(ERGPKVRechnungMarkierungCS)
+    * system = Canonical(ERGRechnungMarkierungCS)
     * code = #bezahlt
 
 Instance: BeispielParameterProcessFlagOutput
@@ -14,10 +14,10 @@ InstanceOf: Parameters
     * versionId = "1"
     * lastUpdated = "2024-05-11T13:00:00.123+02:00"
     * tag[+]
-      * system = "https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsstatus-cs"
+      * system = "https://gematik.de/fhir/erg/CodeSystem/erg-rechnungsstatus-cs"
       * code = #erledigt
     * extension[+]
-      * url = Canonical(ERGPKVDocumentReferenceMarkierung)
+      * url = Canonical(ERGDocumentReferenceMarkierung)
       * valueCoding
-        * system = Canonical(ERGPKVRechnungMarkierungCS)
+        * system = Canonical(ERGRechnungMarkierungCS)
         * code = #bezahlt

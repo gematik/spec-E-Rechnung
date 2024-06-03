@@ -9,15 +9,15 @@
         "lastUpdated": "2024-05-11T13:00:00.123+02:00",
         "tag": [
           {
-            "system": "https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsstatus-cs",
+            "system": "https://gematik.de/fhir/erg/CodeSystem/erg-rechnungsstatus-cs",
             "code": "erledigt"
           }
         ],
         "extension": [
           {
-            "url": "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-documentreference-markierung",
+            "url": "https://gematik.de/fhir/erg/StructureDefinition/erg-documentreference-markierung",
             "valueCoding": {
-              "system": "https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnung-markierung-cs",
+              "system": "https://gematik.de/fhir/erg/CodeSystem/erg-rechnung-markierung-cs",
               "code": "bezahlt"
             }
           }

@@ -1,6 +1,6 @@
-Extension: ERGPKVInvoicePeriod
-Id: ergpkv-invoice-period
-Title: "ERGPKV Invoice Period"
+Extension: ERGInvoicePeriod
+Id: erg-invoice-period
+Title: "ERG Invoice Period"
 * insert Meta
 * ^url = "http://hl7.org/fhir/5.0/StructureDefinition/extension-Invoice.period"
 * value[x] only date or Period

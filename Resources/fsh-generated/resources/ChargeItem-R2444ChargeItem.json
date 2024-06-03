@@ -3,12 +3,12 @@
   "id": "R2444ChargeItem",
   "meta": {
     "profile": [
-      "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-rechnungsposition"
+      "https://gematik.de/fhir/erg/StructureDefinition/erg-rechnungsposition"
     ]
   },
   "extension": [
     {
-      "url": "https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-preisdetails-rechnungsposition",
+      "url": "https://gematik.de/fhir/erg/StructureDefinition/erg-preisdetails-rechnungsposition",
       "extension": [
         {
           "url": "type",

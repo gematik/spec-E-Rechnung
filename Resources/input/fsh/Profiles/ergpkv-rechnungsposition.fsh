@@ -1,7 +1,7 @@
-Profile: ERGPKVRechnungsposition
-Title: "ERGPKV Rechnungsposition"
+Profile: ERGRechnungsposition
+Title: "ERG Rechnungsposition"
 Parent: ChargeItem
-Id: ergpkv-rechnungsposition
+Id: erg-rechnungsposition
 * insert Meta
 * status MS // ToDo: ValueSet einschränken auf? nur billable?
 * code MS
@@ -20,11 +20,11 @@ Id: ergpkv-rechnungsposition
 * quantity 1.. MS
 * factorOverride 1.. MS
 * priceOverride 1.. MS
-* extension contains https://gematik.de/fhir/ergpkv/StructureDefinition/ergpkv-preisdetails-rechnungsposition named unitPriceComponent 0..1 MS
+* extension contains https://gematik.de/fhir/erg/StructureDefinition/erg-preisdetails-rechnungsposition named unitPriceComponent 0..1 MS
 
-Extension: ERGPKVPreisDetailsRechnungsposition
-Id: ergpkv-preisdetails-rechnungsposition
-Title: "ERGPKV Preisdetails Rechnungsposition"
+Extension: ERGPreisDetailsRechnungsposition
+Id: erg-preisdetails-rechnungsposition
+Title: "ERG Preisdetails Rechnungsposition"
 * extension contains type 1..1 MS and code 0..1 and factor 0..1 and amount 0..1
 * extension[type].value[x] only code
 * extension[type].valueCode from http://hl7.org/fhir/invoice-priceComponentType (required)

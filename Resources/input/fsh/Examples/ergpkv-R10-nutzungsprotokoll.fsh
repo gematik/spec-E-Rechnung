@@ -1,5 +1,5 @@
 Instance: BeispielNutzungsprotokoll
-InstanceOf: ERGPKVNutzungsprotokoll
+InstanceOf: ERGNutzungsprotokoll
 * type = #rest
 * subtype = #erechnung-submit
 * action = #C

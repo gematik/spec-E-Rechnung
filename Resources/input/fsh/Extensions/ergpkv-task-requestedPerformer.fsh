@@ -1,6 +1,6 @@
-Extension: ERGPKVTaskRequestedPerformer
-Id: ergpkv-task-requestedPerformer
-Title: "ERGPKV Task RequestedPerformer"
+Extension: ERGTaskRequestedPerformer
+Id: erg-task-requestedPerformer
+Title: "ERG Task RequestedPerformer"
 * insert Meta
 * ^url = "http://hl7.org/fhir/5.0/StructureDefinition/extension-Task.requestedPerformer"
 * value[x] only Reference(Patient)

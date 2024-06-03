@@ -1,0 +1,92 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "ERGAuditEventSubType",
+  "id": "erg-audit-event-sub-type",
+  "title": "ERG Audit Event Sub-Type",
+  "url": "https://gematik.de/fhir/erg/ValueSet/erg-audit-event-sub-type",
+  "compose": {
+    "include": [
+      {
+        "system": "http://dicom.nema.org/resources/ontology/DCM",
+        "concept": [
+          {
+            "code": "110120"
+          },
+          {
+            "code": "110121"
+          },
+          {
+            "code": "110122"
+          },
+          {
+            "code": "110123"
+          },
+          {
+            "code": "110124"
+          },
+          {
+            "code": "110125"
+          },
+          {
+            "code": "110126"
+          },
+          {
+            "code": "110127"
+          },
+          {
+            "code": "110128"
+          },
+          {
+            "code": "110129"
+          },
+          {
+            "code": "110130"
+          },
+          {
+            "code": "110131"
+          },
+          {
+            "code": "110132"
+          },
+          {
+            "code": "110133"
+          },
+          {
+            "code": "110134"
+          },
+          {
+            "code": "110135"
+          },
+          {
+            "code": "110136"
+          },
+          {
+            "code": "110137"
+          },
+          {
+            "code": "110138"
+          },
+          {
+            "code": "110139"
+          },
+          {
+            "code": "110140"
+          },
+          {
+            "code": "110141"
+          },
+          {
+            "code": "110142"
+          }
+        ]
+      },
+      {
+        "system": "http://hl7.org/fhir/restful-interaction"
+      },
+      {
+        "system": "https://gematik.de/fhir/erg/CodeSystem/erg-operationen"
+      }
+    ]
+  }
+}

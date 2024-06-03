@@ -5,11 +5,11 @@
   "id": "BehandlungsartVS",
   "title": "Behandlungsart",
   "description": "Diese Codes enthalten Behandlungsarten",
-  "url": "https://gematik.de/fhir/ergpkv/ValueSet/BehandlungsartVS",
+  "url": "https://gematik.de/fhir/erg/ValueSet/BehandlungsartVS",
   "compose": {
     "include": [
       {
-        "system": "https://gematik.de/fhir/ergpkv/CodeSystem/BehandlungsartCS"
+        "system": "https://gematik.de/fhir/erg/CodeSystem/BehandlungsartCS"
       }
     ]
   }

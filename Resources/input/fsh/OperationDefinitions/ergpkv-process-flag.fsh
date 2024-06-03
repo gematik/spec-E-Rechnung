@@ -1,11 +1,11 @@
 // ------------- OperationDefinition -------------
 
-Instance: ERGPKVOperationProcessFlag
+Instance: ERGOperationProcessFlag
 InstanceOf: OperationDefinition
 Usage: #example
-Title: "ERGPKV Operation ProcessFlag"
+Title: "ERG Operation ProcessFlag"
 Description: "Änderung des Bearbeitungsstatus eines Dokumentes"
-* url = "https://gematik.de/fhir/ergpkv/OperationDefinition/ProcessFlag"
+* url = "https://gematik.de/fhir/erg/OperationDefinition/ProcessFlag"
 * status = #draft
 * kind = #operation
 * name = "ERechnung_ProcessFlag"

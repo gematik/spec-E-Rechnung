@@ -1,12 +1,12 @@
-Profile: ERGPKVRechnung
-Title: "ERGPKV Rechnung"
+Profile: ERGRechnung
+Title: "ERG Rechnung"
 Parent: Invoice
-Id: ergpkv-rechnung
+Id: erg-rechnung
 * insert Meta
 * extension contains 
-  ERGPKVPDFRepraesentationRechnung named pdf-repraesentation-rechnung 0..1 MS and
-  ERGPKVInvoicePeriod named period 0..1 MS and
-  ERGPKVBehandlungsart named Behandlungsart 0..1 MS
+  ERGPDFRepraesentationRechnung named pdf-repraesentation-rechnung 0..1 MS and
+  ERGInvoicePeriod named period 0..1 MS and
+  ERGBehandlungsart named Behandlungsart 0..1 MS
 * identifier 1.. MS
 * identifier ^slicing.discriminator.type = #pattern
 * identifier ^slicing.discriminator.path = "type"
@@ -21,9 +21,9 @@ Id: ergpkv-rechnung
   * value 1.. MS
     * ^short = "Rechnungsnummer"
 * type 1.. MS
-* type = https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnung-type-cs#erechnung
+* type = https://gematik.de/fhir/erg/CodeSystem/erg-rechnung-type-cs#erechnung
 * type.extension contains
-    ERGPKVGebuehrenordnung named Gebührenordnung ..1 MS
+    ERGGebuehrenordnung named Gebührenordnung ..1 MS
 * status MS
 * status = http://hl7.org/fhir/invoice-status#issued
 * participant 0.. MS
@@ -85,54 +85,54 @@ Id: ergpkv-rechnung
   * ^short = "Nettobetrag der Rechnungssumme"
 * totalGross MS
   * ^short = "Bruttobetrag der Rechnungssumme"
-* paymentTerms.extension contains ERGPKVZahlungsziel named zahlungsziel 1..1 MS
+* paymentTerms.extension contains ERGZahlungsziel named zahlungsziel 1..1 MS
 
 
-Extension: ERGPKVPDFRepraesentationRechnung
-Id: ergpkv-pdf-repraesentation-rechnung
-Title: "ERGPKV PDF-Repräsentation Rechnung"
+Extension: ERGPDFRepraesentationRechnung
+Id: erg-pdf-repraesentation-rechnung
+Title: "ERG PDF-Repräsentation Rechnung"
 * value[x] only Reference(Binary)
 
-Extension: ERGPKVZahlungsziel
-Id: ergpkv-zahlungsziel
-Title: "ERGPKV Zahlungsziel"
+Extension: ERGZahlungsziel
+Id: erg-zahlungsziel
+Title: "ERG Zahlungsziel"
 * value[x] only date
 
-Extension: ERGPKVBehandlungsart
-Id: ergpkv-behandlungsart
+Extension: ERGBehandlungsart
+Id: erg-behandlungsart
 Title: "Extension Behandlungsart"
 * ^context.type = #element
 * ^context.expression = "Invoice"
 * value[x] only Coding
-* valueCoding from ERGPKVBehandlungsartVS
+* valueCoding from ERGBehandlungsartVS
 
-CodeSystem: ERGPKVBehandlungsartCS
-Id: ergpkv-behandlungsartCS
+CodeSystem: ERGBehandlungsartCS
+Id: erg-behandlungsartCS
 Title: "Behandlungsart"
 * #AMB "Ambulante Behandlung"
 
-ValueSet: ERGPKVBehandlungsartVS
-Id: ergpkv-behandlungsartVS
+ValueSet: ERGBehandlungsartVS
+Id: erg-behandlungsartVS
 Title: "Behandlungsart"
 Description: "Diese Codes enthalten Behandlungsarten der eRechnung PKV"
-* include codes from system ERGPKVBehandlungsartCS
+* include codes from system ERGBehandlungsartCS
 
-Extension: ERGPKVGebuehrenordnung
-Id: ergpkv-gebuehrenordnung
+Extension: ERGGebuehrenordnung
+Id: erg-gebuehrenordnung
 Title: "Extension Gebührenordnung"
 * ^context.type = #element
 * ^context.expression = "Invoice.type"
 * value[x] only Coding
-* valueCoding from ERGPKVGebuehrenordnungenVS
+* valueCoding from ERGGebuehrenordnungenVS
 
-CodeSystem: ERGPKVGebuehrenordnungenCS
-Id: ergpkv-gebuehrenordnungenCS
+CodeSystem: ERGGebuehrenordnungenCS
+Id: erg-gebuehrenordnungenCS
 Title: "Gebührenordnungen"
 * #GOÄ "Gebührenordnung für Ärzte"
 * #GOZ "Gebührenordnung für Zahnärzte"
 
-ValueSet: ERGPKVGebuehrenordnungenVS
-Id: ergpkv-gebuehrenordnungenVS
+ValueSet: ERGGebuehrenordnungenVS
+Id: erg-gebuehrenordnungenVS
 Title: "Gebührenordnungen"
 Description: "Diese Codes enthalten Gebührenordnungen"
 * include codes from system GebuehrenordnungenCS

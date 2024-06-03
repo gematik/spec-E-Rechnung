@@ -5,11 +5,11 @@
   "id": "GebuehrenordnungenVS",
   "title": "Gebührenordnungen",
   "description": "Diese Codes enthalten Gebührenordnungen",
-  "url": "https://gematik.de/fhir/ergpkv/ValueSet/GebuehrenordnungenVS",
+  "url": "https://gematik.de/fhir/erg/ValueSet/GebuehrenordnungenVS",
   "compose": {
     "include": [
       {
-        "system": "https://gematik.de/fhir/ergpkv/CodeSystem/GebuehrenordnungenCS"
+        "system": "https://gematik.de/fhir/erg/CodeSystem/GebuehrenordnungenCS"
       }
     ]
   }

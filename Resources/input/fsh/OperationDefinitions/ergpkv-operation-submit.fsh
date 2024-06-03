@@ -1,11 +1,11 @@
 // ------------- OperationDefinition -------------
 
-Instance: ERGPKVOperationSubmit
+Instance: ERGOperationSubmit
 InstanceOf: OperationDefinition
 Usage: #example
-Title: "ERGPKV Operation Erechnung-Submit"
+Title: "ERG Operation Erechnung-Submit"
 Description: "Rechnung einreichen durch die Leistungserbringer:in"
-* url = "https://gematik.de/fhir/ergpkv/OperationDefinition/Submit"
+* url = "https://gematik.de/fhir/erg/OperationDefinition/Submit"
 * status = #draft
 * kind = #operation
 * name = "ERechnung_Submit"
@@ -38,7 +38,7 @@ Description: "Rechnung einreichen durch die Leistungserbringer:in"
   * type = #code
   * binding
     * strength = #required
-    * valueSet = "https://gematik.de/fhir/ergpkv/ValueSet/ergpkv-rechnung-submit-modus-vs"
+    * valueSet = "https://gematik.de/fhir/erg/ValueSet/erg-rechnung-submit-modus-vs"
 * parameter[+]
   * name = #angereichertesPDF
   * use = #in
@@ -83,15 +83,15 @@ Description: "Rechnung einreichen durch die Leistungserbringer:in"
 
 // ------------- Terminology -------------
 
-CodeSystem:  ERGPKVRechnungSubmitModusCS
-Id: ergpkv-rechnung-submit-modus-cs
-Title: "ERGPKV Rechnung Submit Modus CS"
+CodeSystem:  ERGRechnungSubmitModusCS
+Id: erg-rechnung-submit-modus-cs
+Title: "ERG Rechnung Submit Modus CS"
 Description:  "CodeSystem für die Differenzierung von der Verarbeitungsmodi für $erchnung-submit"
 * #test "Test" "E-Rechnung wird als Test eingereicht. Der Fachdienst validiert nur die E-Rechnung und speichert diese nicht."
 * #normal "Normal" "E-Rechnung wird durch den Fachdienst gespeichert falls keine gravierenden Validierungsfehler vorhanden sind."
 
-ValueSet:  ERGPKVRechnungSubmitModusVS
-Id: ergpkv-rechnung-submit-modus-vs
-Title: "ERGPKV Rechnung Type VS"
+ValueSet:  ERGRechnungSubmitModusVS
+Id: erg-rechnung-submit-modus-vs
+Title: "ERG Rechnung Type VS"
 Description:  "ValueSet für die Differenzierung von der Verarbeitungsmodi für $erchnung-submit"
-* include codes from system https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnung-submit-modus
+* include codes from system https://gematik.de/fhir/erg/CodeSystem/erg-rechnung-submit-modus

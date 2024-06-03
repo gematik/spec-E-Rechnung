@@ -44,7 +44,7 @@ Instance: BeispielDocumentReferenceRechnung3-FD
 InstanceOf: DocumentReference
 //FD fügt Token hinzu
 * identifier
-  * system = "https://gematik.de/fhir/sid/ergpkv-token"
+  * system = "https://gematik.de/fhir/sid/erg-token"
   * value = "123-456-789"
 * status = #current
 * type = $kdl#AM010106 "Rechnung ambulante/stationäre Behandlung"
@@ -91,7 +91,7 @@ Instance: BeispielDocumentReferenceSonstigesDokument3-FD
 InstanceOf: DocumentReference
 //FD fügt Token hinzu
 * identifier
-  * system = "https://gematik.de/fhir/sid/ergpkv-token"
+  * system = "https://gematik.de/fhir/sid/erg-token"
   * value = "987-654-321"
 * status = #current
 * type = $kdl#PT130102 "Molekularpathologiebefund"

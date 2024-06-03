@@ -1,0 +1,16 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "ERGRechnungSubmitModusVS",
+  "id": "erg-rechnung-submit-modus-vs",
+  "title": "ERG Rechnung Type VS",
+  "description": "ValueSet für die Differenzierung von der Verarbeitungsmodi für $erchnung-submit",
+  "url": "https://gematik.de/fhir/erg/ValueSet/erg-rechnung-submit-modus-vs",
+  "compose": {
+    "include": [
+      {
+        "system": "https://gematik.de/fhir/erg/CodeSystem/erg-rechnung-submit-modus"
+      }
+    ]
+  }
+}

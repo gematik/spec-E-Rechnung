@@ -1,6 +1,6 @@
-Profile: ERGPKVRechnungsdiagnose
+Profile: ERGRechnungsdiagnose
 Parent: Condition
-Id: ergpkv-rechnungsdiagnose
+Id: erg-rechnungsdiagnose
 * insert Meta
 * code 1.. MS
 * code.coding MS
