@@ -76,8 +76,8 @@
     "fshName": "ERGAttachmentFormatCS",
     "fshType": "CodeSystem",
     "fshFile": "Profiles\\erg-dokumentenmetadaten.fsh",
-    "startLine": 132,
-    "endLine": 139
+    "startLine": 133,
+    "endLine": 140
   },
   {
     "outputFile": "CodeSystem-erg-behandlungsartCS.json",
@@ -140,8 +140,8 @@
     "fshName": "ERGARechnungsstatus",
     "fshType": "CodeSystem",
     "fshFile": "Profiles\\erg-dokumentenmetadaten.fsh",
-    "startLine": 141,
-    "endLine": 147
+    "startLine": 142,
+    "endLine": 148
   },
   {
     "outputFile": "Composition-R2444Document.json",
@@ -408,14 +408,6 @@
     "endLine": 128
   },
   {
-    "outputFile": "StructureDefinition-RGPKVLeistungserbringerOrganisation.json",
-    "fshName": "ERGLeistungserbringerOrganisation",
-    "fshType": "Profile",
-    "fshFile": "Profiles\\erg-leistungserbringer-organisation.fsh",
-    "startLine": 1,
-    "endLine": 34
-  },
-  {
     "outputFile": "StructureDefinition-erg-abrechnungsrelevante-diagnose.json",
     "fshName": "ERGAbrechnungsrelevanteDiagnose",
     "fshType": "Extension",
@@ -436,8 +428,8 @@
     "fshName": "ERGDocRefSignature",
     "fshType": "Extension",
     "fshFile": "Profiles\\erg-dokumentenmetadaten.fsh",
-    "startLine": 151,
-    "endLine": 158
+    "startLine": 152,
+    "endLine": 159
   },
   {
     "outputFile": "StructureDefinition-erg-documentreference-gesamtbetrag.json",
@@ -477,7 +469,7 @@
     "fshType": "Profile",
     "fshFile": "Profiles\\erg-dokumentenmetadaten.fsh",
     "startLine": 4,
-    "endLine": 114
+    "endLine": 115
   },
   {
     "outputFile": "StructureDefinition-erg-invoice-period.json",
@@ -486,6 +478,14 @@
     "fshFile": "Extensions\\erg-invoice-period.fsh",
     "startLine": 1,
     "endLine": 10
+  },
+  {
+    "outputFile": "StructureDefinition-erg-leistungserbringer-organisation.json",
+    "fshName": "ERGLeistungserbringerOrganisation",
+    "fshType": "Profile",
+    "fshFile": "Profiles\\erg-leistungserbringer-organisation.fsh",
+    "startLine": 1,
+    "endLine": 34
   },
   {
     "outputFile": "StructureDefinition-erg-leistungserbringer.json",
@@ -652,16 +652,16 @@
     "fshName": "ERGRechnungsstatus",
     "fshType": "ValueSet",
     "fshFile": "Profiles\\erg-dokumentenmetadaten.fsh",
-    "startLine": 125,
-    "endLine": 128
+    "startLine": 126,
+    "endLine": 129
   },
   {
     "outputFile": "ValueSet-erg-restricted-mime-types.json",
     "fshName": "ERGRestrictedMimeTypes",
     "fshType": "ValueSet",
     "fshFile": "Profiles\\erg-dokumentenmetadaten.fsh",
-    "startLine": 118,
-    "endLine": 123
+    "startLine": 119,
+    "endLine": 124
   },
   {
     "outputFile": "ValueSet-erg-sonstigesdokument-type-vs.json",

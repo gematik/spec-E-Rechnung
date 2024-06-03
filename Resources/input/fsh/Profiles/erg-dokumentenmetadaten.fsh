@@ -38,7 +38,7 @@ Id: erg-dokumentenmetadaten
   * ^slicing.discriminator.type = #pattern
   * ^slicing.discriminator.path = "$this"
   * ^slicing.rules = #open
-* type.coding contains IHE-TypeCode 0..1 MS and Rechnungstyp
+* type.coding contains IHE-TypeCode 0..1 MS and Rechnungstyp 1..1 MS
 * type.coding[IHE-TypeCode] from http://ihe-d.de/ValueSets/IHEXDStypeCode (extensible)
   * ^short = "Dokumenttyp gemäß IHE-TypeCode"
   * ^patternCoding.system = "http://ihe-d.de/CodeSystems/IHEXDStypeCode"
@@ -46,6 +46,7 @@ Id: erg-dokumentenmetadaten
   * code 1.. MS
   * code ^comment = "Standard-Code für Rechnung ist 'ABRE'"
   * display 1.. MS
+* type.coding[Rechnungstyp] ^patternCoding.system = "TODO"
 * description 1..1 MS
   * ^short = "Dokumententitel"
   * ^comment = "Menschenlesbarer Titel des Dokumentes, der dem Versicherten in der UI angezeigt wird. Der Titel kann manuell erfasst oder vom Dateinamen/Metadaten abgeleitet werden. z.B. &quot;Laborbefund vom 28.9.2023&quot;."

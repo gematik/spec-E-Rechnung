@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "RGPKVLeistungserbringerOrganisation",
-  "url": "https://gematik.de/fhir/erg/StructureDefinition/RGPKVLeistungserbringerOrganisation",
+  "id": "erg-leistungserbringer-organisation",
+  "url": "https://gematik.de/fhir/erg/StructureDefinition/erg-leistungserbringer-organisation",
   "version": "1.0.0-ballot",
   "name": "ERGLeistungserbringerOrganisation",
   "title": "ERG leistungserbringende Organisation",
