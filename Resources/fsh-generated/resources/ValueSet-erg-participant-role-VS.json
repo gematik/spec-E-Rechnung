@@ -1,0 +1,16 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "ERGParticipantRoleVS",
+  "id": "erg-participant-role-VS",
+  "title": "ERG Teilnehmer Rolle",
+  "description": "Diese Codes enthalten Teilnehmer Rollen der eRechnung",
+  "url": "https://gematik.de/fhir/erg/ValueSet/erg-participant-role-VS",
+  "compose": {
+    "include": [
+      {
+        "system": "https://gematik.de/fhir/erg/CodeSystem/erg-behandlungsartCS"
+      }
+    ]
+  }
+}

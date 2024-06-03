@@ -28,16 +28,7 @@
     "coding": [
       {
         "code": "erechnung",
-        "system": "https://gematik.de/fhir/erg/CodeSystem/erg-rechnung-type-cs"
-      }
-    ],
-    "extension": [
-      {
-        "url": "https://gematik.de/fhir/erg/StructureDefinition/erg-gebuehrenordnung-type",
-        "valueCoding": {
-          "code": "GOÄ",
-          "system": "https://gematik.de/fhir/erg/CodeSystem/GebuehrenordnungenCS"
-        }
+        "system": "https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnung-type-cs"
       }
     ]
   },

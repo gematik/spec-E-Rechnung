@@ -44,32 +44,24 @@
     "fshName": "R2444Bundle",
     "fshType": "Instance",
     "fshFile": "Examples\\BeispielRechnung.fsh",
-    "startLine": 180,
-    "endLine": 201
+    "startLine": 165,
+    "endLine": 186
   },
   {
     "outputFile": "ChargeItem-R2444ChargeItem.json",
     "fshName": "R2444ChargeItem",
     "fshType": "Instance",
     "fshFile": "Examples\\BeispielRechnung.fsh",
-    "startLine": 54,
-    "endLine": 69
+    "startLine": 51,
+    "endLine": 66
   },
   {
     "outputFile": "CodeSystem-BehandlungsartCS.json",
     "fshName": "BehandlungsartCS",
     "fshType": "CodeSystem",
     "fshFile": "Examples\\BeispielRechnung.fsh",
-    "startLine": 133,
-    "endLine": 136
-  },
-  {
-    "outputFile": "CodeSystem-GebuehrenordnungenCS.json",
-    "fshName": "GebuehrenordnungenCS",
-    "fshType": "CodeSystem",
-    "fshFile": "Examples\\BeispielRechnung.fsh",
-    "startLine": 144,
-    "endLine": 148
+    "startLine": 130,
+    "endLine": 133
   },
   {
     "outputFile": "CodeSystem-erg-attachment-format-cs.json",
@@ -84,16 +76,8 @@
     "fshName": "ERGBehandlungsartCS",
     "fshType": "CodeSystem",
     "fshFile": "Profiles\\ergpkv-rechnung.fsh",
-    "startLine": 110,
-    "endLine": 113
-  },
-  {
-    "outputFile": "CodeSystem-erg-gebuehrenordnungenCS.json",
-    "fshName": "ERGGebuehrenordnungenCS",
-    "fshType": "CodeSystem",
-    "fshFile": "Profiles\\ergpkv-rechnung.fsh",
-    "startLine": 129,
-    "endLine": 133
+    "startLine": 113,
+    "endLine": 116
   },
   {
     "outputFile": "CodeSystem-erg-operationen.json",
@@ -102,6 +86,14 @@
     "fshFile": "Profiles\\ergpkv-nutzungsprotokoll.fsh",
     "startLine": 32,
     "endLine": 39
+  },
+  {
+    "outputFile": "CodeSystem-erg-participant-role-CS.json",
+    "fshName": "ERGParticipantRoleCS",
+    "fshType": "CodeSystem",
+    "fshFile": "Profiles\\ergpkv-rechnung.fsh",
+    "startLine": 124,
+    "endLine": 128
   },
   {
     "outputFile": "CodeSystem-erg-prop-rest-interactions.json",
@@ -148,16 +140,16 @@
     "fshName": "R2444Document",
     "fshType": "Instance",
     "fshFile": "Examples\\BeispielRechnung.fsh",
-    "startLine": 156,
-    "endLine": 178
+    "startLine": 141,
+    "endLine": 163
   },
   {
     "outputFile": "Condition-R2444Diagnose.json",
     "fshName": "R2444Diagnose",
     "fshType": "Instance",
     "fshFile": "Examples\\BeispielRechnung.fsh",
-    "startLine": 85,
-    "endLine": 94
+    "startLine": 82,
+    "endLine": 91
   },
   {
     "outputFile": "DocumentReference-BeispielDocumentReferenceRechnung3-FD.json",
@@ -229,7 +221,7 @@
     "fshType": "Instance",
     "fshFile": "Examples\\BeispielRechnung.fsh",
     "startLine": 1,
-    "endLine": 52
+    "endLine": 49
   },
   {
     "outputFile": "OperationDefinition-ERGOperationChangeStatus.json",
@@ -348,16 +340,16 @@
     "fshName": "R2444PKVersichertePerson",
     "fshType": "Instance",
     "fshFile": "Examples\\BeispielRechnung.fsh",
-    "startLine": 71,
-    "endLine": 83
+    "startLine": 68,
+    "endLine": 80
   },
   {
     "outputFile": "Practitioner-R2444Practitioner.json",
     "fshName": "R2444Practitioner",
     "fshType": "Instance",
     "fshFile": "Examples\\BeispielRechnung.fsh",
-    "startLine": 96,
-    "endLine": 125
+    "startLine": 93,
+    "endLine": 122
   },
   {
     "outputFile": "Questionnaire-QuestionnaireInvoice.json",
@@ -388,8 +380,8 @@
     "fshName": "ExtensionBehandlungsart",
     "fshType": "Extension",
     "fshFile": "Examples\\BeispielRechnung.fsh",
-    "startLine": 127,
-    "endLine": 131
+    "startLine": 124,
+    "endLine": 128
   },
   {
     "outputFile": "StructureDefinition-RGPKVLeistungserbringer.json",
@@ -412,8 +404,8 @@
     "fshName": "ERGBehandlungsart",
     "fshType": "Extension",
     "fshFile": "Profiles\\ergpkv-rechnung.fsh",
-    "startLine": 102,
-    "endLine": 108
+    "startLine": 105,
+    "endLine": 111
   },
   {
     "outputFile": "StructureDefinition-erg-docref-signature.json",
@@ -464,14 +456,6 @@
     "endLine": 114
   },
   {
-    "outputFile": "StructureDefinition-erg-gebuehrenordnung.json",
-    "fshName": "ERGGebuehrenordnung",
-    "fshType": "Extension",
-    "fshFile": "Profiles\\ergpkv-rechnung.fsh",
-    "startLine": 121,
-    "endLine": 127
-  },
-  {
     "outputFile": "StructureDefinition-erg-invoice-period.json",
     "fshName": "ERGInvoicePeriod",
     "fshType": "Extension",
@@ -492,8 +476,8 @@
     "fshName": "ERGPDFRepraesentationRechnung",
     "fshType": "Extension",
     "fshFile": "Profiles\\ergpkv-rechnung.fsh",
-    "startLine": 92,
-    "endLine": 95
+    "startLine": 95,
+    "endLine": 98
   },
   {
     "outputFile": "StructureDefinition-erg-preisdetails-rechnungsposition.json",
@@ -509,7 +493,7 @@
     "fshType": "Profile",
     "fshFile": "Profiles\\ergpkv-rechnung.fsh",
     "startLine": 1,
-    "endLine": 89
+    "endLine": 92
   },
   {
     "outputFile": "StructureDefinition-erg-rechnungsdiagnose.json",
@@ -556,24 +540,16 @@
     "fshName": "ERGZahlungsziel",
     "fshType": "Extension",
     "fshFile": "Profiles\\ergpkv-rechnung.fsh",
-    "startLine": 97,
-    "endLine": 100
+    "startLine": 100,
+    "endLine": 103
   },
   {
     "outputFile": "ValueSet-BehandlungsartVS.json",
     "fshName": "BehandlungsartVS",
     "fshType": "ValueSet",
     "fshFile": "Examples\\BeispielRechnung.fsh",
-    "startLine": 138,
-    "endLine": 142
-  },
-  {
-    "outputFile": "ValueSet-GebuehrenordnungenVS.json",
-    "fshName": "GebuehrenordnungenVS",
-    "fshType": "ValueSet",
-    "fshFile": "Examples\\BeispielRechnung.fsh",
-    "startLine": 150,
-    "endLine": 154
+    "startLine": 135,
+    "endLine": 139
   },
   {
     "outputFile": "ValueSet-TESTICD10GM.json",
@@ -612,16 +588,16 @@
     "fshName": "ERGBehandlungsartVS",
     "fshType": "ValueSet",
     "fshFile": "Profiles\\ergpkv-rechnung.fsh",
-    "startLine": 115,
-    "endLine": 119
+    "startLine": 118,
+    "endLine": 122
   },
   {
-    "outputFile": "ValueSet-erg-gebuehrenordnungenVS.json",
-    "fshName": "ERGGebuehrenordnungenVS",
+    "outputFile": "ValueSet-erg-participant-role-VS.json",
+    "fshName": "ERGParticipantRoleVS",
     "fshType": "ValueSet",
     "fshFile": "Profiles\\ergpkv-rechnung.fsh",
-    "startLine": 135,
-    "endLine": 139
+    "startLine": 130,
+    "endLine": 134
   },
   {
     "outputFile": "ValueSet-erg-rechnung-markierung-vs.json",

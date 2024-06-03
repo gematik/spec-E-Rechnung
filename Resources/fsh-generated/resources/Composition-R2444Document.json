@@ -6,7 +6,7 @@
     "coding": [
       {
         "code": "erechnung",
-        "system": "https://gematik.de/fhir/erg/CodeSystem/erg-rechnung-type-cs"
+        "system": "https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnung-type-cs"
       }
     ]
   },

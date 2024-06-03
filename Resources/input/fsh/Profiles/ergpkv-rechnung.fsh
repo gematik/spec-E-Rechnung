@@ -22,21 +22,24 @@ Id: erg-rechnung
     * ^short = "Rechnungsnummer"
 * type 1.. MS
 * type = https://gematik.de/fhir/erg/CodeSystem/erg-rechnung-type-cs#erechnung
-* type.extension contains
-    ERGGebuehrenordnung named Gebührenordnung ..1 MS
 * status MS
 * status = http://hl7.org/fhir/invoice-status#issued
 * participant 0.. MS
+* participant.role MS
+* participant.role from ERGParticipantRoleVS
 * participant ^slicing.discriminator.type = #pattern
 * participant ^slicing.discriminator.path = "role"
 * participant ^slicing.rules = #open
-* participant contains leistungserbringer 1..* MS
+* participant contains leistungserbringer ..* MS and forderungsinhaber ..* MS
 * participant[leistungserbringer]
-  * role MS
-  * role = http://snomed.info/sct#39607008 //TODO anderer Code
+  * role = ERGParticipantRoleCS#leistungserbringer
   * actor only Reference(Practitioner or Organization)
-    * reference MS
-    * reference ^comment = "Die referenzierten Instanzen sollten valide zu den Profilen ERGLeistungserbringerOrganisation und ERGLeistungserbringer sein"
+    * identifier MS
+    * identifier only IdentifierIknr or IdentifierTelematikId
+* participant[forderungsinhaber]
+  * role MS
+  * role = ERGParticipantRoleCS#forderungsinhaber
+  * actor only Reference(Practitioner or Organization)
     * identifier MS
     * identifier only IdentifierIknr or IdentifierTelematikId
 * recipient 1.. MS
@@ -115,25 +118,17 @@ Title: "ERG Behandlungsart"
 ValueSet: ERGBehandlungsartVS
 Id: erg-behandlungsartVS
 Title: "ERG Behandlungsart"
-Description: "Diese Codes enthalten Behandlungsarten der eRechnung PKV"
+Description: "Diese Codes enthalten Behandlungsarten der eRechnung"
 * include codes from system ERGBehandlungsartCS
 
-Extension: ERGGebuehrenordnung
-Id: erg-gebuehrenordnung
-Title: "ERG Extension Gebührenordnung"
-* ^context.type = #element
-* ^context.expression = "Invoice.type"
-* value[x] only Coding
-* valueCoding from ERGGebuehrenordnungenVS
+CodeSystem: ERGParticipantRoleCS
+Id: erg-participant-role-CS
+Title: "ERG Teilnehmer Rolle"
+* #leistungserbringer "Leistungserbringer"
+* #forderungsinhaber "Forderungsinhaber"
 
-CodeSystem: ERGGebuehrenordnungenCS
-Id: erg-gebuehrenordnungenCS
-Title: "ERG Gebührenordnungen"
-* #GOÄ "Gebührenordnung für Ärzte"
-* #GOZ "Gebührenordnung für Zahnärzte"
-
-ValueSet: ERGGebuehrenordnungenVS
-Id: erg-gebuehrenordnungenVS
-Title: "ERG Gebührenordnungen"
-Description: "Diese Codes enthalten Gebührenordnungen"
-* include codes from system GebuehrenordnungenCS
+ValueSet: ERGParticipantRoleVS
+Id: erg-participant-role-VS
+Title: "ERG Teilnehmer Rolle"
+Description: "Diese Codes enthalten Teilnehmer Rollen der eRechnung"
+* include codes from system ERGBehandlungsartCS

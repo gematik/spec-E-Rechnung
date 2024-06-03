@@ -8,10 +8,7 @@ Usage: #example
   * type = http://fhir.de/CodeSystem/identifier-type-de-basis#invoice
   * system = "http://Orthoschmerz.de/fhir/patienten"
   * value = "2-444"
-* type = https://gematik.de/fhir/erg/CodeSystem/erg-rechnung-type-cs#erechnung
-* type.extension[+]
-  * url = "https://gematik.de/fhir/erg/StructureDefinition/erg-gebuehrenordnung-type"
-  * valueCoding = GebuehrenordnungenCS#GOÄ
+* type = https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnung-type-cs#erechnung
 * status = http://hl7.org/fhir/invoice-status#issued
 * participant
   * role = http://snomed.info/sct#39607008
@@ -141,23 +138,11 @@ Title: "Behandlungsart"
 Description: "Diese Codes enthalten Behandlungsarten"
 * include codes from system BehandlungsartCS
 
-CodeSystem: GebuehrenordnungenCS
-Id: GebuehrenordnungenCS
-Title: "Gebührenordnungen"
-* #GOÄ "Gebührenordnung für Ärzte"
-* #GOZ "Gebührenordnung für Zahnärzte"
-
-ValueSet: GebuehrenordnungenVS
-Id: GebuehrenordnungenVS
-Title: "Gebührenordnungen"
-Description: "Diese Codes enthalten Gebührenordnungen"
-* include codes from system GebuehrenordnungenCS
-
 Instance: R2444Document
 InstanceOf: Composition
 Usage: #example
 * status = #final
-* type.coding = https://gematik.de/fhir/erg/CodeSystem/erg-rechnung-type-cs#erechnung
+* type.coding = https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnung-type-cs#erechnung
 * date = 2024-03-20
 * author = Reference(R2444Practitioner)
 * title = "Zusammenfassung strukturierte Daten Rechnung 4-222"
