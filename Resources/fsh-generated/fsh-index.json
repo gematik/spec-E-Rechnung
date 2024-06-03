@@ -152,28 +152,20 @@
     "endLine": 91
   },
   {
-    "outputFile": "DocumentReference-BeispielDocumentReferenceRechnung3-FD.json",
-    "fshName": "BeispielDocumentReferenceRechnung3-FD",
-    "fshType": "Instance",
-    "fshFile": "Szenarien\\Szenario3a-LE.fsh",
-    "startLine": 31,
-    "endLine": 63
-  },
-  {
     "outputFile": "DocumentReference-BeispielDocumentReferenceRechnung3-LE.json",
     "fshName": "BeispielDocumentReferenceRechnung3-LE",
     "fshType": "Instance",
-    "fshFile": "Szenarien\\Szenario3a-LE.fsh",
-    "startLine": 1,
-    "endLine": 29
+    "fshFile": "Examples\\erg-R2-bulk-submit.fsh",
+    "startLine": 21,
+    "endLine": 49
   },
   {
     "outputFile": "DocumentReference-BeispielDocumentReferenceRechnung3.1-LE.json",
     "fshName": "BeispielDocumentReferenceRechnung3.1-LE",
     "fshType": "Instance",
     "fshFile": "Examples\\erg-R2-bulk-submit.fsh",
-    "startLine": 22,
-    "endLine": 53
+    "startLine": 72,
+    "endLine": 103
   },
   {
     "outputFile": "DocumentReference-BeispielDocumentReferenceRechnungRetrieve.json",
@@ -192,28 +184,20 @@
     "endLine": 45
   },
   {
-    "outputFile": "DocumentReference-BeispielDocumentReferenceSonstigesDokument3-FD.json",
-    "fshName": "BeispielDocumentReferenceSonstigesDokument3-FD",
-    "fshType": "Instance",
-    "fshFile": "Szenarien\\Szenario3a-LE.fsh",
-    "startLine": 78,
-    "endLine": 97
-  },
-  {
     "outputFile": "DocumentReference-BeispielDocumentReferenceSonstigesDokument3-LE.json",
     "fshName": "BeispielDocumentReferenceSonstigesDokument3-LE",
     "fshType": "Instance",
-    "fshFile": "Szenarien\\Szenario3a-LE.fsh",
-    "startLine": 65,
-    "endLine": 75
+    "fshFile": "Examples\\erg-R2-bulk-submit.fsh",
+    "startLine": 51,
+    "endLine": 61
   },
   {
     "outputFile": "DocumentReference-BeispielDocumentReferenceSonstigesDokument3.1-LE.json",
     "fshName": "BeispielDocumentReferenceSonstigesDokument3.1-LE",
     "fshType": "Instance",
     "fshFile": "Examples\\erg-R2-bulk-submit.fsh",
-    "startLine": 55,
-    "endLine": 65
+    "startLine": 105,
+    "endLine": 115
   },
   {
     "outputFile": "Invoice-R2444Rechnung.json",
@@ -315,25 +299,25 @@
     "outputFile": "Parameters-BeispielParameterSubmitInput3-LE.json",
     "fshName": "BeispielParameterSubmitInput3-LE",
     "fshType": "Instance",
-    "fshFile": "Szenarien\\Szenario3a-LE.fsh",
-    "startLine": 104,
-    "endLine": 111
+    "fshFile": "Examples\\erg-R2-bulk-submit.fsh",
+    "startLine": 12,
+    "endLine": 19
   },
   {
     "outputFile": "Parameters-BeispielParameterSubmitInput3.1-LE.json",
     "fshName": "BeispielParameterSubmitInput3.1-LE",
     "fshType": "Instance",
     "fshFile": "Examples\\erg-R2-bulk-submit.fsh",
-    "startLine": 13,
-    "endLine": 20
+    "startLine": 63,
+    "endLine": 70
   },
   {
     "outputFile": "Patient-BeispielPatient3-FD.json",
     "fshName": "BeispielPatient3-FD",
     "fshType": "Instance",
-    "fshFile": "Szenarien\\Szenario3a-LE.fsh",
-    "startLine": 123,
-    "endLine": 133
+    "fshFile": "Examples\\erg-R2-bulk-submit.fsh",
+    "startLine": 117,
+    "endLine": 127
   },
   {
     "outputFile": "Patient-R2444PKVersichertePerson.json",
