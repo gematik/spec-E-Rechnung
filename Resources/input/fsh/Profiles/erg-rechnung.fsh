@@ -7,7 +7,7 @@ Id: erg-rechnung
   ERGPDFRepraesentationRechnung named pdf-repraesentation-rechnung 0..1 MS and
   ERGInvoicePeriod named period 0..1 MS and
   ERGBehandlungsart named Behandlungsart 0..1 MS and
-  ERGAbrechnungsrelevanteDiagnose named AbrechnungsrelevanteDiagnose 0..1 MS
+  ERGAbrechnungsrelevanteDiagnose named AbrechnungsrelevanteDiagnose 0..* MS
 * identifier 1.. MS
 * identifier ^slicing.discriminator.type = #pattern
 * identifier ^slicing.discriminator.path = "type"

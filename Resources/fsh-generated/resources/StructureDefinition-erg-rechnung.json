@@ -116,7 +116,7 @@
         "path": "Invoice.extension",
         "sliceName": "AbrechnungsrelevanteDiagnose",
         "min": 0,
-        "max": "1",
+        "max": "*",
         "type": [
           {
             "code": "Extension",
