@@ -637,7 +637,7 @@
     "fshType": "ValueSet",
     "fshFile": "ValueSets\\erg-rechnung-markierung-vs.fsh",
     "startLine": 1,
-    "endLine": 5
+    "endLine": 6
   },
   {
     "outputFile": "ValueSet-erg-rechnung-submit-modus-vs.json",
@@ -662,13 +662,5 @@
     "fshFile": "Profiles\\erg-dokumentenmetadaten.fsh",
     "startLine": 119,
     "endLine": 124
-  },
-  {
-    "outputFile": "ValueSet-erg-sonstigesdokument-type-vs.json",
-    "fshName": "ERGSonstigesDokumentTypeVS",
-    "fshType": "ValueSet",
-    "fshFile": "ValueSets\\erg-sonstigesDokument-type-vs.fsh",
-    "startLine": 1,
-    "endLine": 5
   }
 ]

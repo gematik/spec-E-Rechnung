@@ -78,8 +78,7 @@ ValueSet-erg-audit-event-sub-type.json                                   ERGAudi
 ValueSet-erg-audit-event-type.json                                       ERGAuditEventType                                 ValueSet    Profiles\erg-nutzungsprotokoll.fsh                      56 - 60
 ValueSet-erg-behandlungsartVS.json                                       ERGBehandlungsartVS                               ValueSet    Profiles\erg-rechnung.fsh                               126 - 130
 ValueSet-erg-participant-role-VS.json                                    ERGParticipantRoleVS                              ValueSet    Profiles\erg-rechnung.fsh                               138 - 142
-ValueSet-erg-rechnung-markierung-vs.json                                 ERGRechnungMarkierungVS                           ValueSet    ValueSets\erg-rechnung-markierung-vs.fsh                1 - 5
+ValueSet-erg-rechnung-markierung-vs.json                                 ERGRechnungMarkierungVS                           ValueSet    ValueSets\erg-rechnung-markierung-vs.fsh                1 - 6
 ValueSet-erg-rechnung-submit-modus-vs.json                               ERGRechnungSubmitModusVS                          ValueSet    OperationDefinitions\erg-operation-submit.fsh           93 - 97
 ValueSet-erg-rechnungsstatus.json                                        ERGRechnungsstatus                                ValueSet    Profiles\erg-dokumentenmetadaten.fsh                    126 - 129
 ValueSet-erg-restricted-mime-types.json                                  ERGRestrictedMimeTypes                            ValueSet    Profiles\erg-dokumentenmetadaten.fsh                    119 - 124
-ValueSet-erg-sonstigesdokument-type-vs.json                              ERGSonstigesDokumentTypeVS                        ValueSet    ValueSets\erg-sonstigesDokument-type-vs.fsh             1 - 5

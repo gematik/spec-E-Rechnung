@@ -1,11 +1,25 @@
 {
   "resourceType": "ValueSet",
-  "status": "draft",
+  "status": "active",
   "name": "ERGRechnungMarkierungVS",
   "id": "erg-rechnung-markierung-vs",
   "title": "ERG Rechnung Markierung VS",
   "description": "ValueSet für die Differenzierung von verschiedenen Arten von Markierungen eines Dokumentes",
   "url": "https://gematik.de/fhir/erg/ValueSet/erg-rechnung-markierung-vs",
+  "version": "1.0.0-ballot",
+  "experimental": false,
+  "date": "2024-06-01",
+  "publisher": "gematik GmbH",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://gematik.de/"
+        }
+      ]
+    }
+  ],
   "compose": {
     "include": [
       {
