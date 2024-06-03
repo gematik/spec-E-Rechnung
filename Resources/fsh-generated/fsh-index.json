@@ -40,6 +40,14 @@
     "endLine": 10
   },
   {
+    "outputFile": "Bundle-PatientenBundle.json",
+    "fshName": "PatientenBundle",
+    "fshType": "Instance",
+    "fshFile": "Examples\\erg-R0-patient-search.fsh",
+    "startLine": 1,
+    "endLine": 7
+  },
+  {
     "outputFile": "Bundle-R2444Bundle.json",
     "fshName": "R2444Bundle",
     "fshType": "Instance",
@@ -318,6 +326,14 @@
     "fshFile": "Examples\\erg-R2-bulk-submit.fsh",
     "startLine": 117,
     "endLine": 127
+  },
+  {
+    "outputFile": "Patient-PatientVater.json",
+    "fshName": "PatientVater",
+    "fshType": "Instance",
+    "fshFile": "Examples\\erg-R0-patient-search.fsh",
+    "startLine": 9,
+    "endLine": 21
   },
   {
     "outputFile": "Patient-R2444PKVersichertePerson.json",

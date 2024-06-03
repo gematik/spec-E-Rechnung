@@ -1,0 +1,29 @@
+{
+  "resourceType": "Patient",
+  "id": "PatientVater",
+  "active": true,
+  "name": [
+    {
+      "given": [
+        "Manfred"
+      ],
+      "family": "Mustermann"
+    }
+  ],
+  "identifier": [
+    {
+      "type": {
+        "coding": [
+          {
+            "code": "KVZ10",
+            "system": "http://fhir.de/CodeSystem/identifier-type-de-basis"
+          }
+        ]
+      },
+      "system": "http://fhir.de/sid/gkv/kvid-10",
+      "value": "A000000000"
+    }
+  ],
+  "gender": "male",
+  "birthDate": "1970-01-01"
+}

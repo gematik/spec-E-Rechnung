@@ -4,6 +4,7 @@ Bundle-BeispielNutzungsprotokollResultBundle.json                        Beispie
 Bundle-BulkRetrieveExampleInput.json                                     BulkRetrieveExampleInput                          Instance    Examples\erg-R3-bulk-retrieve.fsh                       1 - 10
 Bundle-BulkRetrieveExampleOutput.json                                    BulkRetrieveExampleOutput                         Instance    Examples\erg-R3-bulk-retrieve.fsh                       12 - 21
 Bundle-BulkSubmitExample.json                                            BulkSubmitExample                                 Instance    Examples\erg-R2-bulk-submit.fsh                         1 - 10
+Bundle-PatientenBundle.json                                              PatientenBundle                                   Instance    Examples\erg-R0-patient-search.fsh                      1 - 7
 Bundle-R2444Bundle.json                                                  R2444Bundle                                       Instance    Examples\BeispielRechnung.fsh                           165 - 186
 ChargeItem-R2444ChargeItem.json                                          R2444ChargeItem                                   Instance    Examples\BeispielRechnung.fsh                           51 - 66
 CodeSystem-BehandlungsartCS.json                                         BehandlungsartCS                                  CodeSystem  Examples\BeispielRechnung.fsh                           130 - 133
@@ -39,6 +40,7 @@ Parameters-BeispielParameterRetrieveInput2.json                          Beispie
 Parameters-BeispielParameterSubmitInput3-LE.json                         BeispielParameterSubmitInput3-LE                  Instance    Examples\erg-R2-bulk-submit.fsh                         12 - 19
 Parameters-BeispielParameterSubmitInput3.1-LE.json                       BeispielParameterSubmitInput3.1-LE                Instance    Examples\erg-R2-bulk-submit.fsh                         63 - 70
 Patient-BeispielPatient3-FD.json                                         BeispielPatient3-FD                               Instance    Examples\erg-R2-bulk-submit.fsh                         117 - 127
+Patient-PatientVater.json                                                PatientVater                                      Instance    Examples\erg-R0-patient-search.fsh                      9 - 21
 Patient-R2444PKVersichertePerson.json                                    R2444PKVersichertePerson                          Instance    Examples\BeispielRechnung.fsh                           68 - 80
 Practitioner-R2444Practitioner.json                                      R2444Practitioner                                 Instance    Examples\BeispielRechnung.fsh                           93 - 122
 Questionnaire-QuestionnaireInvoice.json                                  QuestionnaireInvoice                              Instance    Questionnaire\Invoice.fsh                               1 - 163
