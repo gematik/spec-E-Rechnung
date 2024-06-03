@@ -4,7 +4,7 @@
   "content": "complete",
   "name": "ERGGebuehrenordnungenCS",
   "id": "erg-gebuehrenordnungenCS",
-  "title": "Gebührenordnungen",
+  "title": "ERG Gebührenordnungen",
   "url": "https://gematik.de/fhir/erg/CodeSystem/erg-gebuehrenordnungenCS",
   "concept": [
     {

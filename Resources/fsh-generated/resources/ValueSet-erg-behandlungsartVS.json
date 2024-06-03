@@ -3,7 +3,7 @@
   "status": "draft",
   "name": "ERGBehandlungsartVS",
   "id": "erg-behandlungsartVS",
-  "title": "Behandlungsart",
+  "title": "ERG Behandlungsart",
   "description": "Diese Codes enthalten Behandlungsarten der eRechnung PKV",
   "url": "https://gematik.de/fhir/erg/ValueSet/erg-behandlungsartVS",
   "compose": {

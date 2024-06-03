@@ -3,7 +3,7 @@
   "id": "erg-gebuehrenordnung",
   "url": "https://gematik.de/fhir/erg/StructureDefinition/erg-gebuehrenordnung",
   "name": "ERGGebuehrenordnung",
-  "title": "Extension Gebührenordnung",
+  "title": "ERG Extension Gebührenordnung",
   "status": "draft",
   "fhirVersion": "4.0.1",
   "mapping": [

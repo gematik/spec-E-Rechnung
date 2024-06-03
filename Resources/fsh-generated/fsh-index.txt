@@ -47,8 +47,8 @@ Questionnaire-QuestionnaireInvoice.json                                  Questio
 QuestionnaireResponse-undefined.json                                     undefined                                         Instance    Questionnaire\InvoiceResponse.fsh                          23 - 58
 SearchParameter-erg-makierung.json                                       erg-makierung                                     Instance    SearchParameter\ergpkv-searchParam-ergpkvmakierung.fsh     1 - 14
 StructureDefinition-ExtensionBehandlungsart.json                         ExtensionBehandlungsart                           Extension   Examples\BeispielRechnung.fsh                              127 - 131
-StructureDefinition-RGPKVLeistungserbringer.json                         RGPKVLeistungserbringer                           Profile     Profiles\ergpkv-leistungserbringer-person.fsh              1 - 46
-StructureDefinition-RGPKVLeistungserbringerOrganisation.json             RGPKVLeistungserbringerOrganisation               Profile     Profiles\ergpkv-leistungserbringer-organisation.fsh        1 - 33
+StructureDefinition-RGPKVLeistungserbringer.json                         ERGLeistungserbringer                             Profile     Profiles\ergpkv-leistungserbringer-person.fsh              1 - 47
+StructureDefinition-RGPKVLeistungserbringerOrganisation.json             ERGLeistungserbringerOrganisation                 Profile     Profiles\ergpkv-leistungserbringer-organisation.fsh        1 - 34
 StructureDefinition-erg-abweichender-rechnungsempfaenger.json            ERGAbweichenderRechnungsempfaenger                Extension   Profiles\ergpkv-versicherteperson.fsh                      29 - 35
 StructureDefinition-erg-behandlungsart.json                              ERGBehandlungsart                                 Extension   Profiles\ergpkv-rechnung.fsh                               101 - 107
 StructureDefinition-erg-docref-signature.json                            ERGDocRefSignature                                Extension   Profiles\ergpkv-dokumentenmetadaten.fsh                    152 - 159
@@ -63,7 +63,7 @@ StructureDefinition-erg-nutzungsprotokoll.json                           ERGNutz
 StructureDefinition-erg-pdf-repraesentation-rechnung.json                ERGPDFRepraesentationRechnung                     Extension   Profiles\ergpkv-rechnung.fsh                               91 - 94
 StructureDefinition-erg-preisdetails-rechnungsposition.json              ERGPreisDetailsRechnungsposition                  Extension   Profiles\ergpkv-rechnungsposition.fsh                      25 - 33
 StructureDefinition-erg-rechnung.json                                    ERGRechnung                                       Profile     Profiles\ergpkv-rechnung.fsh                               1 - 88
-StructureDefinition-erg-rechnungsdiagnose.json                           ERGRechnungsdiagnose                              Profile     Profiles\ergpkv-rechnungsdiagnose.fsh                      1 - 18
+StructureDefinition-erg-rechnungsdiagnose.json                           ERGRechnungsdiagnose                              Profile     Profiles\ergpkv-rechnungsdiagnose.fsh                      1 - 19
 StructureDefinition-erg-rechnungsdokument.json                           ERGRechnungsdokument                              Profile     Profiles\ergpkv-rechnungsdokument.fsh                      1 - 12
 StructureDefinition-erg-rechnungsposition.json                           ERGRechnungsposition                              Profile     Profiles\ergpkv-rechnungsposition.fsh                      1 - 23
 StructureDefinition-erg-task-requestedPerformer.json                     ERGTaskRequestedPerformer                         Extension   Extensions\ergpkv-task-requestedPerformer.fsh              1 - 10

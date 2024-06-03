@@ -1,5 +1,6 @@
-Profile: RGPKVLeistungserbringerOrganisation
+Profile: ERGLeistungserbringerOrganisation
 Parent: Organization
+Title: "ERG leistungserbringende Organisation"
 Id: RGPKVLeistungserbringerOrganisation
 * insert Meta
 * identifier MS

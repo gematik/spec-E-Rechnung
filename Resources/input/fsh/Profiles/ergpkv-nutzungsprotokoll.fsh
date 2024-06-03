@@ -1,7 +1,7 @@
 Profile: ERGNutzungsprotokoll
 Parent: AuditEvent
-Id: erg-nutzungsprotokoll
 Title: "ERG Nutzungsprotokoll"
+Id: erg-nutzungsprotokoll
 * insert Meta
 * type MS
 * type = #rest //ValueSet rest und interne operationen

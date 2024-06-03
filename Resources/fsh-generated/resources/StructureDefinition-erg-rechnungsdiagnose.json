@@ -4,6 +4,7 @@
   "url": "https://gematik.de/fhir/erg/StructureDefinition/erg-rechnungsdiagnose",
   "version": "1.0.0-ballot",
   "name": "ERGRechnungsdiagnose",
+  "title": "ERG Rechnungsdiagnose",
   "status": "active",
   "experimental": false,
   "date": "2024-06-01",

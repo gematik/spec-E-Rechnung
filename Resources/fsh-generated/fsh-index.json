@@ -385,19 +385,19 @@
   },
   {
     "outputFile": "StructureDefinition-RGPKVLeistungserbringer.json",
-    "fshName": "RGPKVLeistungserbringer",
+    "fshName": "ERGLeistungserbringer",
     "fshType": "Profile",
     "fshFile": "Profiles\\ergpkv-leistungserbringer-person.fsh",
     "startLine": 1,
-    "endLine": 46
+    "endLine": 47
   },
   {
     "outputFile": "StructureDefinition-RGPKVLeistungserbringerOrganisation.json",
-    "fshName": "RGPKVLeistungserbringerOrganisation",
+    "fshName": "ERGLeistungserbringerOrganisation",
     "fshType": "Profile",
     "fshFile": "Profiles\\ergpkv-leistungserbringer-organisation.fsh",
     "startLine": 1,
-    "endLine": 33
+    "endLine": 34
   },
   {
     "outputFile": "StructureDefinition-erg-abweichender-rechnungsempfaenger.json",
@@ -517,7 +517,7 @@
     "fshType": "Profile",
     "fshFile": "Profiles\\ergpkv-rechnungsdiagnose.fsh",
     "startLine": 1,
-    "endLine": 18
+    "endLine": 19
   },
   {
     "outputFile": "StructureDefinition-erg-rechnungsdokument.json",

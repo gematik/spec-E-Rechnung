@@ -3,7 +3,7 @@
   "status": "draft",
   "name": "ERGGebuehrenordnungenVS",
   "id": "erg-gebuehrenordnungenVS",
-  "title": "Gebührenordnungen",
+  "title": "ERG Gebührenordnungen",
   "description": "Diese Codes enthalten Gebührenordnungen",
   "url": "https://gematik.de/fhir/erg/ValueSet/erg-gebuehrenordnungenVS",
   "compose": {

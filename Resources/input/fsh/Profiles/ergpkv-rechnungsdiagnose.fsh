@@ -1,5 +1,6 @@
 Profile: ERGRechnungsdiagnose
 Parent: Condition
+Title: "ERG Rechnungsdiagnose"
 Id: erg-rechnungsdiagnose
 * insert Meta
 * code 1.. MS

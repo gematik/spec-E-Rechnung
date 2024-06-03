@@ -1,5 +1,6 @@
-Profile: RGPKVLeistungserbringer
+Profile: ERGLeistungserbringer
 Parent: Practitioner
+Title: "ERG Leistungserbringer"
 Id: RGPKVLeistungserbringer
 * insert Meta
 * identifier MS

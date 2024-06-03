@@ -1,5 +1,5 @@
 Profile: ERGersichertePerson
-Title: "ERGersichertePerson"
+Title: "ERG Versicherte Person"
 Parent: Patient
 Id: erg-versicherteperson
 * insert Meta

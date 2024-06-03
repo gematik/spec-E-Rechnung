@@ -100,7 +100,7 @@ Title: "ERG Zahlungsziel"
 
 Extension: ERGBehandlungsart
 Id: erg-behandlungsart
-Title: "Extension Behandlungsart"
+Title: "ERG Extension Behandlungsart"
 * ^context.type = #element
 * ^context.expression = "Invoice"
 * value[x] only Coding
@@ -108,18 +108,18 @@ Title: "Extension Behandlungsart"
 
 CodeSystem: ERGBehandlungsartCS
 Id: erg-behandlungsartCS
-Title: "Behandlungsart"
+Title: "ERG Behandlungsart"
 * #AMB "Ambulante Behandlung"
 
 ValueSet: ERGBehandlungsartVS
 Id: erg-behandlungsartVS
-Title: "Behandlungsart"
+Title: "ERG Behandlungsart"
 Description: "Diese Codes enthalten Behandlungsarten der eRechnung PKV"
 * include codes from system ERGBehandlungsartCS
 
 Extension: ERGGebuehrenordnung
 Id: erg-gebuehrenordnung
-Title: "Extension Gebührenordnung"
+Title: "ERG Extension Gebührenordnung"
 * ^context.type = #element
 * ^context.expression = "Invoice.type"
 * value[x] only Coding
@@ -127,12 +127,12 @@ Title: "Extension Gebührenordnung"
 
 CodeSystem: ERGGebuehrenordnungenCS
 Id: erg-gebuehrenordnungenCS
-Title: "Gebührenordnungen"
+Title: "ERG Gebührenordnungen"
 * #GOÄ "Gebührenordnung für Ärzte"
 * #GOZ "Gebührenordnung für Zahnärzte"
 
 ValueSet: ERGGebuehrenordnungenVS
 Id: erg-gebuehrenordnungenVS
-Title: "Gebührenordnungen"
+Title: "ERG Gebührenordnungen"
 Description: "Diese Codes enthalten Gebührenordnungen"
 * include codes from system GebuehrenordnungenCS
