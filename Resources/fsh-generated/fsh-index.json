@@ -561,7 +561,7 @@
   },
   {
     "outputFile": "StructureDefinition-erg-versicherteperson.json",
-    "fshName": "ERGersichertePerson",
+    "fshName": "ERGVersichertePerson",
     "fshType": "Profile",
     "fshFile": "Profiles\\erg-versicherteperson.fsh",
     "startLine": 1,

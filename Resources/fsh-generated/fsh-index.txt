@@ -69,7 +69,7 @@ StructureDefinition-erg-rechnungsdiagnose.json                           ERGRech
 StructureDefinition-erg-rechnungsdokument.json                           ERGRechnungsdokument                              Profile     Profiles\erg-rechnungsdokument.fsh                      1 - 12
 StructureDefinition-erg-rechnungsposition.json                           ERGRechnungsposition                              Profile     Profiles\erg-rechnungsposition.fsh                      1 - 25
 StructureDefinition-erg-task-requestedPerformer.json                     ERGTaskRequestedPerformer                         Extension   Extensions\erg-task-requestedPerformer.fsh              1 - 10
-StructureDefinition-erg-versicherteperson.json                           ERGersichertePerson                               Profile     Profiles\erg-versicherteperson.fsh                      1 - 27
+StructureDefinition-erg-versicherteperson.json                           ERGVersichertePerson                              Profile     Profiles\erg-versicherteperson.fsh                      1 - 27
 StructureDefinition-erg-zahlungsziel.json                                ERGZahlungsziel                                   Extension   Profiles\erg-rechnung.fsh                               100 - 103
 ValueSet-BehandlungsartVS.json                                           BehandlungsartVS                                  ValueSet    Examples\BeispielRechnung.fsh                           135 - 139
 ValueSet-TESTICD10GM.json                                                TESTICD10GM                                       ValueSet    Questionnaire\ValueSet-ICD10.fsh                        3 - 42

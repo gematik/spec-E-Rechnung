@@ -1,4 +1,4 @@
-Profile: ERGersichertePerson
+Profile: ERGVersichertePerson
 Title: "ERG Versicherte Person"
 Parent: Patient
 Id: erg-versicherteperson

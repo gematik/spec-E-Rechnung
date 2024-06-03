@@ -66,7 +66,7 @@ Usage: #example
   * extension[type].valueCode = #tax
 
 Instance: R2444PKVersichertePerson
-InstanceOf: ERGersichertePerson
+InstanceOf: ERGVersichertePerson
 Usage: #example
 * identifier
   * type = http://fhir.de/CodeSystem/identifier-type-de-basis#KVZ10

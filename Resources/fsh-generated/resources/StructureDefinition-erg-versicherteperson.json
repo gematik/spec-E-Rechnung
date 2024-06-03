@@ -3,7 +3,7 @@
   "id": "erg-versicherteperson",
   "url": "https://gematik.de/fhir/erg/StructureDefinition/erg-versicherteperson",
   "version": "1.0.0-ballot",
-  "name": "ERGersichertePerson",
+  "name": "ERGVersichertePerson",
   "title": "ERG Versicherte Person",
   "status": "active",
   "experimental": false,
