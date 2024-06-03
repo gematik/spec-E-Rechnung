@@ -9,6 +9,7 @@ InstanceOf: ERGPKVNutzungsprotokoll
   * type = http://terminology.hl7.org/CodeSystem/v2-0203#PRN
   * system = "https://gematik.de/fhir/sid/telematik-id"
   * value = "11223344"
+* agent.who.display = "Beispiel Leistungsempfänmger"
 * agent.requestor = true
 * source.observer.display = "FdV"
 * entity.what = Reference(BeispielDocumentReferenceRechnungRetrieve)

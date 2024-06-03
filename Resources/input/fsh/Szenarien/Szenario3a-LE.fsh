@@ -15,9 +15,6 @@ InstanceOf: DocumentReference
 * status = #current
 * type = $kdl#AM010106 "Rechnung ambulante/stationäre Behandlung"
 * description = "Rechnung Reiseimpfung vom 10.01.2024"
-//Referenz auf Patient hier nicht relevant (kann nicht auflösbarer Link auf Instanz des LE-PVS sein)
-//Patientenkontext ergibt sich aus Task.for Referenz, die vom Fachdienst gesetzt wird
-//Versichertennummer kann zum Abgleich verwendet werden
 * subject
   * identifier
     * system = "http://fhir.de/sid/gkv/kvid-10"
@@ -130,16 +127,6 @@ InstanceOf: Parameters
 //* parameter[returnTokenPdf]
 //  * valueBoolean = #true
 
-//Output zur $submit-Operation
-Instance: BeispielParameterSubmitOutput3-FD
-InstanceOf: Parameters
-* parameter[+]
-  * name = "rechnung"
-  * resource = BeispielDocumentReferenceRechnung3-FD
-* parameter[+]
-  * name = "anhang"
-  * resource = BeispielDocumentReferenceSonstigesDokument3-FD
-
 
 // **************************************************
 // Vom Fachdienst erstellter Task & extrahierte Daten
@@ -156,39 +143,3 @@ Usage: #example
   * value = "A000000000"
 * address
   * text = "Musterweg 2, 3. Etage, 98764 Musterhausen, DE"
-
-  
-Instance: BeispielTaskRechnungsworkflow3-FD
-InstanceOf: Task
-* owner = Reference(BeispielPatient3-FD)
-* for = Reference(BeispielPatient3-FD)
-* status = #ready
-* intent = http://hl7.org/fhir/request-intent#proposal
-* businessStatus = https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnungsworkflow-businessStatus-cs#neu
-//TODO: Würde der Fachdienst hier nicht die Telematik-ID substituieren und auf einen Benutzer-Account vom Typ "Practitioner/-Role" verweisen???
-* requester.identifier.value = "<telematik id>"
-* input[+]
-  * type.coding.display = "rechnung-original"
-  * valueReference = Reference(BeispielDocumentReferenceRechnung3-LE)
-* input[+]
-  * type.coding.display = "anhang-original"
-  * valueReference = Reference(BeispielDocumentReferenceSonstigesDokument3-LE)
-* output[+]
-  * type.coding.display = "rechnung-meta"
-  * valueReference = Reference(BeispielDocumentReferenceRechnung3-FD)
-* output[+]
-  * type.coding.display = "rechnung-pdf"
-  * valueReference = Reference(BeispielBinaryRechnungsPDF3-FD) 
-* output[+]
-  * type.coding.display = "anhang-meta"
-  * valueReference = Reference(BeispielDocumentReferenceSonstigesDokument3-FD)
-* output[+]
-  * type.coding.display = "anhang-pdf"
-  * valueReference = Reference(BeispielBinaryRechnungsPDF3-FD) 
-
-
-Instance: BeispielBinaryRechnungsPDF3-FD
-InstanceOf: ERGPKVRechnungsdokument
-//PDF mit aufgedrucktem Token-Code
-* data = "DIESISTNUREINBEISPIELDIESISTKEINVALIDESPDF00"
-

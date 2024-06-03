@@ -39,7 +39,8 @@
                 },
                 "system": "https://gematik.de/fhir/sid/telematik-id",
                 "value": "11223344"
-              }
+              },
+              "display": "Beispiel Leistungsempfänmger"
             },
             "requestor": true
           }
