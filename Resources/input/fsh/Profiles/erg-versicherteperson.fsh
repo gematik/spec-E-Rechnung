@@ -6,7 +6,7 @@ Id: erg-versicherteperson
 * id 1..1 MS
 * active 1.. MS
   * ^comment = "Indikation für den Client, dass es sich um eine Person handelt die über ein aktives Postfach im Fachdienst verfügt."
-* birthDate MS
+* birthDate 1.. MS
   * ^comment = "vgl. Abschnitt 5.4.2.3 Bereitgestellte Claims und Scopes, Feature-Dokument E-Rechnung"
 * identifier MS
   * ^slicing.discriminator.type = #pattern
@@ -22,4 +22,6 @@ Id: erg-versicherteperson
   * value MS
 * name 1.. MS
   * ^comment = "vgl. Abschnitt 5.4.2.3 Bereitgestellte Claims und Scopes, Feature-Dokument E-Rechnung"
+  * given 1.. MS
+  * family 1.. MS
   * text 1.. MS

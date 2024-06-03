@@ -3,7 +3,7 @@
     "outputFile": "AuditEvent-BeispielNutzungsprotokoll.json",
     "fshName": "BeispielNutzungsprotokoll",
     "fshType": "Instance",
-    "fshFile": "Examples\\ergpkv-R10-nutzungsprotokoll.fsh",
+    "fshFile": "Examples\\erg-R10-nutzungsprotokoll.fsh",
     "startLine": 1,
     "endLine": 16
   },
@@ -11,7 +11,7 @@
     "outputFile": "Bundle-BeispielNutzungsprotokollResultBundle.json",
     "fshName": "BeispielNutzungsprotokollResultBundle",
     "fshType": "Instance",
-    "fshFile": "Examples\\ergpkv-R10-nutzungsprotokoll.fsh",
+    "fshFile": "Examples\\erg-R10-nutzungsprotokoll.fsh",
     "startLine": 18,
     "endLine": 24
   },
@@ -19,7 +19,7 @@
     "outputFile": "Bundle-BulkRetrieveExampleInput.json",
     "fshName": "BulkRetrieveExampleInput",
     "fshType": "Instance",
-    "fshFile": "Examples\\ergpkv-R3-bulk-retrieve.fsh",
+    "fshFile": "Examples\\erg-R3-bulk-retrieve.fsh",
     "startLine": 1,
     "endLine": 10
   },
@@ -27,7 +27,7 @@
     "outputFile": "Bundle-BulkRetrieveExampleOutput.json",
     "fshName": "BulkRetrieveExampleOutput",
     "fshType": "Instance",
-    "fshFile": "Examples\\ergpkv-R3-bulk-retrieve.fsh",
+    "fshFile": "Examples\\erg-R3-bulk-retrieve.fsh",
     "startLine": 12,
     "endLine": 21
   },
@@ -35,7 +35,7 @@
     "outputFile": "Bundle-BulkSubmitExample.json",
     "fshName": "BulkSubmitExample",
     "fshType": "Instance",
-    "fshFile": "Examples\\ergpkv-R2-bulk-submit.fsh",
+    "fshFile": "Examples\\erg-R2-bulk-submit.fsh",
     "startLine": 1,
     "endLine": 10
   },
@@ -67,7 +67,7 @@
     "outputFile": "CodeSystem-erg-attachment-format-cs.json",
     "fshName": "ERGAttachmentFormatCS",
     "fshType": "CodeSystem",
-    "fshFile": "Profiles\\ergpkv-dokumentenmetadaten.fsh",
+    "fshFile": "Profiles\\erg-dokumentenmetadaten.fsh",
     "startLine": 132,
     "endLine": 139
   },
@@ -75,15 +75,15 @@
     "outputFile": "CodeSystem-erg-behandlungsartCS.json",
     "fshName": "ERGBehandlungsartCS",
     "fshType": "CodeSystem",
-    "fshFile": "Profiles\\ergpkv-rechnung.fsh",
-    "startLine": 113,
-    "endLine": 116
+    "fshFile": "Profiles\\erg-rechnung.fsh",
+    "startLine": 112,
+    "endLine": 115
   },
   {
     "outputFile": "CodeSystem-erg-operationen.json",
     "fshName": "ERGOperationen",
     "fshType": "CodeSystem",
-    "fshFile": "Profiles\\ergpkv-nutzungsprotokoll.fsh",
+    "fshFile": "Profiles\\erg-nutzungsprotokoll.fsh",
     "startLine": 32,
     "endLine": 39
   },
@@ -91,15 +91,15 @@
     "outputFile": "CodeSystem-erg-participant-role-CS.json",
     "fshName": "ERGParticipantRoleCS",
     "fshType": "CodeSystem",
-    "fshFile": "Profiles\\ergpkv-rechnung.fsh",
-    "startLine": 124,
-    "endLine": 128
+    "fshFile": "Profiles\\erg-rechnung.fsh",
+    "startLine": 123,
+    "endLine": 127
   },
   {
     "outputFile": "CodeSystem-erg-prop-rest-interactions.json",
     "fshName": "ERGPropRestInterations",
     "fshType": "CodeSystem",
-    "fshFile": "Profiles\\ergpkv-nutzungsprotokoll.fsh",
+    "fshFile": "Profiles\\erg-nutzungsprotokoll.fsh",
     "startLine": 41,
     "endLine": 47
   },
@@ -107,7 +107,7 @@
     "outputFile": "CodeSystem-erg-rechnung-markierung-cs.json",
     "fshName": "ERGRechnungMarkierungCS",
     "fshType": "CodeSystem",
-    "fshFile": "CodeSystems\\ergpkv-rechnung-markierung.fsh",
+    "fshFile": "CodeSystems\\erg-rechnung-markierung.fsh",
     "startLine": 1,
     "endLine": 12
   },
@@ -115,7 +115,7 @@
     "outputFile": "CodeSystem-erg-rechnung-submit-modus-cs.json",
     "fshName": "ERGRechnungSubmitModusCS",
     "fshType": "CodeSystem",
-    "fshFile": "OperationDefinitions\\ergpkv-operation-submit.fsh",
+    "fshFile": "OperationDefinitions\\erg-operation-submit.fsh",
     "startLine": 86,
     "endLine": 91
   },
@@ -123,7 +123,7 @@
     "outputFile": "CodeSystem-erg-rechnung-type-cs.json",
     "fshName": "ERGRechnungTypeCS",
     "fshType": "CodeSystem",
-    "fshFile": "CodeSystems\\ergpkv-rechnung-type-cs.fsh",
+    "fshFile": "CodeSystems\\erg-rechnung-type-cs.fsh",
     "startLine": 1,
     "endLine": 5
   },
@@ -131,7 +131,7 @@
     "outputFile": "CodeSystem-erg-rechnungsstatus-cs.json",
     "fshName": "ERGARechnungsstatus",
     "fshType": "CodeSystem",
-    "fshFile": "Profiles\\ergpkv-dokumentenmetadaten.fsh",
+    "fshFile": "Profiles\\erg-dokumentenmetadaten.fsh",
     "startLine": 141,
     "endLine": 147
   },
@@ -171,7 +171,7 @@
     "outputFile": "DocumentReference-BeispielDocumentReferenceRechnung3.1-LE.json",
     "fshName": "BeispielDocumentReferenceRechnung3.1-LE",
     "fshType": "Instance",
-    "fshFile": "Examples\\ergpkv-R2-bulk-submit.fsh",
+    "fshFile": "Examples\\erg-R2-bulk-submit.fsh",
     "startLine": 22,
     "endLine": 53
   },
@@ -179,7 +179,7 @@
     "outputFile": "DocumentReference-BeispielDocumentReferenceRechnungRetrieve.json",
     "fshName": "BeispielDocumentReferenceRechnungRetrieve",
     "fshType": "Instance",
-    "fshFile": "Examples\\ergpkv-R3R6-retrieve.fsh",
+    "fshFile": "Examples\\erg-R3R6-retrieve.fsh",
     "startLine": 13,
     "endLine": 29
   },
@@ -187,7 +187,7 @@
     "outputFile": "DocumentReference-BeispielDocumentReferenceRechnungRetrieve2.json",
     "fshName": "BeispielDocumentReferenceRechnungRetrieve2",
     "fshType": "Instance",
-    "fshFile": "Examples\\ergpkv-R3-bulk-retrieve.fsh",
+    "fshFile": "Examples\\erg-R3-bulk-retrieve.fsh",
     "startLine": 29,
     "endLine": 45
   },
@@ -211,7 +211,7 @@
     "outputFile": "DocumentReference-BeispielDocumentReferenceSonstigesDokument3.1-LE.json",
     "fshName": "BeispielDocumentReferenceSonstigesDokument3.1-LE",
     "fshType": "Instance",
-    "fshFile": "Examples\\ergpkv-R2-bulk-submit.fsh",
+    "fshFile": "Examples\\erg-R2-bulk-submit.fsh",
     "startLine": 55,
     "endLine": 65
   },
@@ -227,7 +227,7 @@
     "outputFile": "OperationDefinition-ERGOperationChangeStatus.json",
     "fshName": "ERGOperationChangeStatus",
     "fshType": "Instance",
-    "fshFile": "OperationDefinitions\\ergpkv-change-status.fsh",
+    "fshFile": "OperationDefinitions\\erg-change-status.fsh",
     "startLine": 3,
     "endLine": 31
   },
@@ -235,7 +235,7 @@
     "outputFile": "OperationDefinition-ERGOperationErase.json",
     "fshName": "ERGOperationErase",
     "fshType": "Instance",
-    "fshFile": "OperationDefinitions\\ergpkv-operation-erase.fsh",
+    "fshFile": "OperationDefinitions\\erg-operation-erase.fsh",
     "startLine": 3,
     "endLine": 17
   },
@@ -243,7 +243,7 @@
     "outputFile": "OperationDefinition-ERGOperationProcessFlag.json",
     "fshName": "ERGOperationProcessFlag",
     "fshType": "Instance",
-    "fshFile": "OperationDefinitions\\ergpkv-process-flag.fsh",
+    "fshFile": "OperationDefinitions\\erg-process-flag.fsh",
     "startLine": 3,
     "endLine": 31
   },
@@ -251,7 +251,7 @@
     "outputFile": "OperationDefinition-ERGOperationRetrieve.json",
     "fshName": "ERGOperationRetrieve",
     "fshType": "Instance",
-    "fshFile": "OperationDefinitions\\ergpkv-operation-retrieve.fsh",
+    "fshFile": "OperationDefinitions\\erg-operation-retrieve.fsh",
     "startLine": 3,
     "endLine": 45
   },
@@ -259,7 +259,7 @@
     "outputFile": "OperationDefinition-ERGOperationSubmit.json",
     "fshName": "ERGOperationSubmit",
     "fshType": "Instance",
-    "fshFile": "OperationDefinitions\\ergpkv-operation-submit.fsh",
+    "fshFile": "OperationDefinitions\\erg-operation-submit.fsh",
     "startLine": 3,
     "endLine": 82
   },
@@ -267,7 +267,7 @@
     "outputFile": "Parameters-BeispielParameterChangeStatusInput.json",
     "fshName": "BeispielParameterChangeStatusInput",
     "fshType": "Instance",
-    "fshFile": "Examples\\ergpkv-R7-change-status.fsh",
+    "fshFile": "Examples\\erg-R7-change-status.fsh",
     "startLine": 1,
     "endLine": 5
   },
@@ -275,7 +275,7 @@
     "outputFile": "Parameters-BeispielParameterChangeStatusOutput.json",
     "fshName": "BeispielParameterChangeStatusOutput",
     "fshType": "Instance",
-    "fshFile": "Examples\\ergpkv-R7-change-status.fsh",
+    "fshFile": "Examples\\erg-R7-change-status.fsh",
     "startLine": 7,
     "endLine": 11
   },
@@ -283,7 +283,7 @@
     "outputFile": "Parameters-BeispielParameterProcessFlagInput.json",
     "fshName": "BeispielParameterProcessFlagInput",
     "fshType": "Instance",
-    "fshFile": "Examples\\ergpkv-R8-process-flag.fsh",
+    "fshFile": "Examples\\erg-R8-process-flag.fsh",
     "startLine": 1,
     "endLine": 7
   },
@@ -291,7 +291,7 @@
     "outputFile": "Parameters-BeispielParameterProcessFlagOutput.json",
     "fshName": "BeispielParameterProcessFlagOutput",
     "fshType": "Instance",
-    "fshFile": "Examples\\ergpkv-R8-process-flag.fsh",
+    "fshFile": "Examples\\erg-R8-process-flag.fsh",
     "startLine": 9,
     "endLine": 23
   },
@@ -299,7 +299,7 @@
     "outputFile": "Parameters-BeispielParameterRetrieveInput.json",
     "fshName": "BeispielParameterRetrieveInput",
     "fshType": "Instance",
-    "fshFile": "Examples\\ergpkv-R3R6-retrieve.fsh",
+    "fshFile": "Examples\\erg-R3R6-retrieve.fsh",
     "startLine": 1,
     "endLine": 11
   },
@@ -307,7 +307,7 @@
     "outputFile": "Parameters-BeispielParameterRetrieveInput2.json",
     "fshName": "BeispielParameterRetrieveInput2",
     "fshType": "Instance",
-    "fshFile": "Examples\\ergpkv-R3-bulk-retrieve.fsh",
+    "fshFile": "Examples\\erg-R3-bulk-retrieve.fsh",
     "startLine": 23,
     "endLine": 27
   },
@@ -323,7 +323,7 @@
     "outputFile": "Parameters-BeispielParameterSubmitInput3.1-LE.json",
     "fshName": "BeispielParameterSubmitInput3.1-LE",
     "fshType": "Instance",
-    "fshFile": "Examples\\ergpkv-R2-bulk-submit.fsh",
+    "fshFile": "Examples\\erg-R2-bulk-submit.fsh",
     "startLine": 13,
     "endLine": 20
   },
@@ -371,7 +371,7 @@
     "outputFile": "SearchParameter-erg-makierung.json",
     "fshName": "erg-makierung",
     "fshType": "Instance",
-    "fshFile": "SearchParameter\\ergpkv-searchParam-ergpkvmakierung.fsh",
+    "fshFile": "SearchParameter\\erg-searchParam-ergpkvmakierung.fsh",
     "startLine": 1,
     "endLine": 14
   },
@@ -387,7 +387,7 @@
     "outputFile": "StructureDefinition-RGPKVLeistungserbringer.json",
     "fshName": "ERGLeistungserbringer",
     "fshType": "Profile",
-    "fshFile": "Profiles\\ergpkv-leistungserbringer-person.fsh",
+    "fshFile": "Profiles\\erg-leistungserbringer-person.fsh",
     "startLine": 1,
     "endLine": 47
   },
@@ -395,7 +395,7 @@
     "outputFile": "StructureDefinition-RGPKVLeistungserbringerOrganisation.json",
     "fshName": "ERGLeistungserbringerOrganisation",
     "fshType": "Profile",
-    "fshFile": "Profiles\\ergpkv-leistungserbringer-organisation.fsh",
+    "fshFile": "Profiles\\erg-leistungserbringer-organisation.fsh",
     "startLine": 1,
     "endLine": 34
   },
@@ -403,15 +403,15 @@
     "outputFile": "StructureDefinition-erg-behandlungsart.json",
     "fshName": "ERGBehandlungsart",
     "fshType": "Extension",
-    "fshFile": "Profiles\\ergpkv-rechnung.fsh",
-    "startLine": 105,
-    "endLine": 111
+    "fshFile": "Profiles\\erg-rechnung.fsh",
+    "startLine": 104,
+    "endLine": 110
   },
   {
     "outputFile": "StructureDefinition-erg-docref-signature.json",
     "fshName": "ERGDocRefSignature",
     "fshType": "Extension",
-    "fshFile": "Profiles\\ergpkv-dokumentenmetadaten.fsh",
+    "fshFile": "Profiles\\erg-dokumentenmetadaten.fsh",
     "startLine": 151,
     "endLine": 158
   },
@@ -419,7 +419,7 @@
     "outputFile": "StructureDefinition-erg-documentreference-gesamtbetrag.json",
     "fshName": "ERGDocumentReferenceGesamtbetrag",
     "fshType": "Extension",
-    "fshFile": "Extensions\\ergpkv-documentreference-Gesamtbetrag.fsh",
+    "fshFile": "Extensions\\erg-documentreference-Gesamtbetrag.fsh",
     "startLine": 1,
     "endLine": 6
   },
@@ -427,7 +427,7 @@
     "outputFile": "StructureDefinition-erg-documentreference-markierung.json",
     "fshName": "ERGDocumentReferenceMarkierung",
     "fshType": "Extension",
-    "fshFile": "Extensions\\ergpkv-documentreference-markierung.fsh",
+    "fshFile": "Extensions\\erg-documentreference-markierung.fsh",
     "startLine": 1,
     "endLine": 7
   },
@@ -435,7 +435,7 @@
     "outputFile": "StructureDefinition-erg-documentreference-rechnungsdatum.json",
     "fshName": "ERGDocumentReferenceRechnungsdatum",
     "fshType": "Extension",
-    "fshFile": "Extensions\\ergpkv-documentreference-rechnungsdatum.fsh",
+    "fshFile": "Extensions\\erg-documentreference-rechnungsdatum.fsh",
     "startLine": 1,
     "endLine": 6
   },
@@ -443,7 +443,7 @@
     "outputFile": "StructureDefinition-erg-documentreference-zahlungszieldatum.json",
     "fshName": "ERGDocumentReferenceZahlungszieldatum",
     "fshType": "Extension",
-    "fshFile": "Extensions\\ergpkv-documentreference-zahlungszieldatum.fsh",
+    "fshFile": "Extensions\\erg-documentreference-zahlungszieldatum.fsh",
     "startLine": 1,
     "endLine": 6
   },
@@ -451,7 +451,7 @@
     "outputFile": "StructureDefinition-erg-dokumentenmetadaten.json",
     "fshName": "ERGDokumentenmetadaten",
     "fshType": "Profile",
-    "fshFile": "Profiles\\ergpkv-dokumentenmetadaten.fsh",
+    "fshFile": "Profiles\\erg-dokumentenmetadaten.fsh",
     "startLine": 4,
     "endLine": 114
   },
@@ -459,7 +459,7 @@
     "outputFile": "StructureDefinition-erg-invoice-period.json",
     "fshName": "ERGInvoicePeriod",
     "fshType": "Extension",
-    "fshFile": "Extensions\\ergpkv-invoice-period.fsh",
+    "fshFile": "Extensions\\erg-invoice-period.fsh",
     "startLine": 1,
     "endLine": 10
   },
@@ -467,7 +467,7 @@
     "outputFile": "StructureDefinition-erg-nutzungsprotokoll.json",
     "fshName": "ERGNutzungsprotokoll",
     "fshType": "Profile",
-    "fshFile": "Profiles\\ergpkv-nutzungsprotokoll.fsh",
+    "fshFile": "Profiles\\erg-nutzungsprotokoll.fsh",
     "startLine": 1,
     "endLine": 30
   },
@@ -475,15 +475,15 @@
     "outputFile": "StructureDefinition-erg-pdf-repraesentation-rechnung.json",
     "fshName": "ERGPDFRepraesentationRechnung",
     "fshType": "Extension",
-    "fshFile": "Profiles\\ergpkv-rechnung.fsh",
-    "startLine": 95,
-    "endLine": 98
+    "fshFile": "Profiles\\erg-rechnung.fsh",
+    "startLine": 94,
+    "endLine": 97
   },
   {
     "outputFile": "StructureDefinition-erg-preisdetails-rechnungsposition.json",
     "fshName": "ERGPreisDetailsRechnungsposition",
     "fshType": "Extension",
-    "fshFile": "Profiles\\ergpkv-rechnungsposition.fsh",
+    "fshFile": "Profiles\\erg-rechnungsposition.fsh",
     "startLine": 27,
     "endLine": 35
   },
@@ -491,15 +491,15 @@
     "outputFile": "StructureDefinition-erg-rechnung.json",
     "fshName": "ERGRechnung",
     "fshType": "Profile",
-    "fshFile": "Profiles\\ergpkv-rechnung.fsh",
+    "fshFile": "Profiles\\erg-rechnung.fsh",
     "startLine": 1,
-    "endLine": 92
+    "endLine": 91
   },
   {
     "outputFile": "StructureDefinition-erg-rechnungsdiagnose.json",
     "fshName": "ERGRechnungsdiagnose",
     "fshType": "Profile",
-    "fshFile": "Profiles\\ergpkv-rechnungsdiagnose.fsh",
+    "fshFile": "Profiles\\erg-rechnungsdiagnose.fsh",
     "startLine": 1,
     "endLine": 20
   },
@@ -507,7 +507,7 @@
     "outputFile": "StructureDefinition-erg-rechnungsdokument.json",
     "fshName": "ERGRechnungsdokument",
     "fshType": "Profile",
-    "fshFile": "Profiles\\ergpkv-rechnungsdokument.fsh",
+    "fshFile": "Profiles\\erg-rechnungsdokument.fsh",
     "startLine": 1,
     "endLine": 12
   },
@@ -515,7 +515,7 @@
     "outputFile": "StructureDefinition-erg-rechnungsposition.json",
     "fshName": "ERGRechnungsposition",
     "fshType": "Profile",
-    "fshFile": "Profiles\\ergpkv-rechnungsposition.fsh",
+    "fshFile": "Profiles\\erg-rechnungsposition.fsh",
     "startLine": 1,
     "endLine": 25
   },
@@ -523,7 +523,7 @@
     "outputFile": "StructureDefinition-erg-task-requestedPerformer.json",
     "fshName": "ERGTaskRequestedPerformer",
     "fshType": "Extension",
-    "fshFile": "Extensions\\ergpkv-task-requestedPerformer.fsh",
+    "fshFile": "Extensions\\erg-task-requestedPerformer.fsh",
     "startLine": 1,
     "endLine": 10
   },
@@ -531,17 +531,17 @@
     "outputFile": "StructureDefinition-erg-versicherteperson.json",
     "fshName": "ERGersichertePerson",
     "fshType": "Profile",
-    "fshFile": "Profiles\\ergpkv-versicherteperson.fsh",
+    "fshFile": "Profiles\\erg-versicherteperson.fsh",
     "startLine": 1,
-    "endLine": 25
+    "endLine": 27
   },
   {
     "outputFile": "StructureDefinition-erg-zahlungsziel.json",
     "fshName": "ERGZahlungsziel",
     "fshType": "Extension",
-    "fshFile": "Profiles\\ergpkv-rechnung.fsh",
-    "startLine": 100,
-    "endLine": 103
+    "fshFile": "Profiles\\erg-rechnung.fsh",
+    "startLine": 99,
+    "endLine": 102
   },
   {
     "outputFile": "ValueSet-BehandlungsartVS.json",
@@ -563,7 +563,7 @@
     "outputFile": "ValueSet-erg-audit-event-agent-type.json",
     "fshName": "ERGAuditEventAgentType",
     "fshType": "ValueSet",
-    "fshFile": "Profiles\\ergpkv-nutzungsprotokoll.fsh",
+    "fshFile": "Profiles\\erg-nutzungsprotokoll.fsh",
     "startLine": 63,
     "endLine": 67
   },
@@ -571,7 +571,7 @@
     "outputFile": "ValueSet-erg-audit-event-sub-type.json",
     "fshName": "ERGAuditEventSubType",
     "fshType": "ValueSet",
-    "fshFile": "Profiles\\ergpkv-nutzungsprotokoll.fsh",
+    "fshFile": "Profiles\\erg-nutzungsprotokoll.fsh",
     "startLine": 49,
     "endLine": 54
   },
@@ -579,7 +579,7 @@
     "outputFile": "ValueSet-erg-audit-event-type.json",
     "fshName": "ERGAuditEventType",
     "fshType": "ValueSet",
-    "fshFile": "Profiles\\ergpkv-nutzungsprotokoll.fsh",
+    "fshFile": "Profiles\\erg-nutzungsprotokoll.fsh",
     "startLine": 56,
     "endLine": 60
   },
@@ -587,23 +587,23 @@
     "outputFile": "ValueSet-erg-behandlungsartVS.json",
     "fshName": "ERGBehandlungsartVS",
     "fshType": "ValueSet",
-    "fshFile": "Profiles\\ergpkv-rechnung.fsh",
-    "startLine": 118,
-    "endLine": 122
+    "fshFile": "Profiles\\erg-rechnung.fsh",
+    "startLine": 117,
+    "endLine": 121
   },
   {
     "outputFile": "ValueSet-erg-participant-role-VS.json",
     "fshName": "ERGParticipantRoleVS",
     "fshType": "ValueSet",
-    "fshFile": "Profiles\\ergpkv-rechnung.fsh",
-    "startLine": 130,
-    "endLine": 134
+    "fshFile": "Profiles\\erg-rechnung.fsh",
+    "startLine": 129,
+    "endLine": 133
   },
   {
     "outputFile": "ValueSet-erg-rechnung-markierung-vs.json",
     "fshName": "ERGRechnungMarkierungVS",
     "fshType": "ValueSet",
-    "fshFile": "ValueSets\\ergpkv-rechnung-markierung-vs.fsh",
+    "fshFile": "ValueSets\\erg-rechnung-markierung-vs.fsh",
     "startLine": 1,
     "endLine": 5
   },
@@ -611,7 +611,7 @@
     "outputFile": "ValueSet-erg-rechnung-submit-modus-vs.json",
     "fshName": "ERGRechnungSubmitModusVS",
     "fshType": "ValueSet",
-    "fshFile": "OperationDefinitions\\ergpkv-operation-submit.fsh",
+    "fshFile": "OperationDefinitions\\erg-operation-submit.fsh",
     "startLine": 93,
     "endLine": 97
   },
@@ -619,7 +619,7 @@
     "outputFile": "ValueSet-erg-rechnungsstatus.json",
     "fshName": "ERGRechnungsstatus",
     "fshType": "ValueSet",
-    "fshFile": "Profiles\\ergpkv-dokumentenmetadaten.fsh",
+    "fshFile": "Profiles\\erg-dokumentenmetadaten.fsh",
     "startLine": 125,
     "endLine": 128
   },
@@ -627,7 +627,7 @@
     "outputFile": "ValueSet-erg-restricted-mime-types.json",
     "fshName": "ERGRestrictedMimeTypes",
     "fshType": "ValueSet",
-    "fshFile": "Profiles\\ergpkv-dokumentenmetadaten.fsh",
+    "fshFile": "Profiles\\erg-dokumentenmetadaten.fsh",
     "startLine": 118,
     "endLine": 123
   },
@@ -635,7 +635,7 @@
     "outputFile": "ValueSet-erg-sonstigesdokument-type-vs.json",
     "fshName": "ERGSonstigesDokumentTypeVS",
     "fshType": "ValueSet",
-    "fshFile": "ValueSets\\ergpkv-sonstigesDokument-type-vs.fsh",
+    "fshFile": "ValueSets\\erg-sonstigesDokument-type-vs.fsh",
     "startLine": 1,
     "endLine": 5
   }

@@ -55,12 +55,11 @@ Id: erg-rechnung
   * identifier only IdentifierKvid10
   * display 1.. MS
 * subject 1..1 MS
-  * ^short = "Leistungsempfänger"
+  * reference 1..1 MS
+  * ^short = "Behandelte Person"
   * display 1..1 MS
-    * ^short = "Name des Leistungsemfängers"
-    * ^comment = "Der Name des Leistungeempfängers (behandelter Patient) muss angegeben werden 
-    und kann vom Namen des Rechnungsempfängers abweichen, 
-    z.B. wenn Eltern Rechnungen für ihre Kinder erhalten."
+    * ^short = "Name der behandelten Person"
+    * ^comment = "Der Name der behandelten Person muss angegeben werden und kann vom Namen des Rechnungsempfängers abweichen, z.B. wenn Eltern Rechnungen für ihre Kinder erhalten."
 * date 1.. MS
 * issuer 1.. MS
   * ^short = "Leistungserbringer"
