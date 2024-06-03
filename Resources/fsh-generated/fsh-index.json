@@ -40,6 +40,14 @@
     "endLine": 10
   },
   {
+    "outputFile": "Bundle-BulkSubmitExampleOutput.json",
+    "fshName": "BulkSubmitExampleOutput",
+    "fshType": "Instance",
+    "fshFile": "Examples\\erg-R2-bulk-submit.fsh",
+    "startLine": 133,
+    "endLine": 142
+  },
+  {
     "outputFile": "Bundle-PatientenBundle.json",
     "fshName": "PatientenBundle",
     "fshType": "Instance",
@@ -176,6 +184,14 @@
     "endLine": 49
   },
   {
+    "outputFile": "DocumentReference-BeispielDocumentReferenceRechnung3.1-FD.json",
+    "fshName": "BeispielDocumentReferenceRechnung3.1-FD",
+    "fshType": "Instance",
+    "fshFile": "Examples\\erg-R2-bulk-submit.fsh",
+    "startLine": 153,
+    "endLine": 185
+  },
+  {
     "outputFile": "DocumentReference-BeispielDocumentReferenceRechnung3.1-LE.json",
     "fshName": "BeispielDocumentReferenceRechnung3.1-LE",
     "fshType": "Instance",
@@ -214,6 +230,14 @@
     "fshFile": "Examples\\erg-R2-bulk-submit.fsh",
     "startLine": 51,
     "endLine": 61
+  },
+  {
+    "outputFile": "DocumentReference-BeispielDocumentReferenceSonstigesDokument3.1-FD.json",
+    "fshName": "BeispielDocumentReferenceSonstigesDokument3.1-FD",
+    "fshType": "Instance",
+    "fshFile": "Examples\\erg-R2-bulk-submit.fsh",
+    "startLine": 187,
+    "endLine": 206
   },
   {
     "outputFile": "DocumentReference-BeispielDocumentReferenceSonstigesDokument3.1-LE.json",
@@ -342,6 +366,14 @@
     "fshFile": "Examples\\erg-R1-submit.fsh",
     "startLine": 1,
     "endLine": 8
+  },
+  {
+    "outputFile": "Parameters-BeispielParameterSubmitOutput3.1-FD.json",
+    "fshName": "BeispielParameterSubmitOutput3.1-FD",
+    "fshType": "Instance",
+    "fshFile": "Examples\\erg-R2-bulk-submit.fsh",
+    "startLine": 144,
+    "endLine": 151
   },
   {
     "outputFile": "Patient-BeispielPatient3-FD.json",
