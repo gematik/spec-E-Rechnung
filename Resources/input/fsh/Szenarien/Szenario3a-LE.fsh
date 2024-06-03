@@ -1,15 +1,3 @@
-// **************************************************
-// Szenario 0: 
-// Rechnung für Patient mit eigenem Postfach 
-// mit einfacher Rechnung (ohne separate Positionen)
-// ohne beigefügte Dokumente
-// **************************************************
-
-
-// **************************************************
-//  Vom Leistungserbringer erzeugte Daten
-// **************************************************
-
 Instance: BeispielDocumentReferenceRechnung3-LE
 InstanceOf: DocumentReference
 * status = #current

@@ -76,8 +76,8 @@
     "fshName": "ERGBehandlungsartCS",
     "fshType": "CodeSystem",
     "fshFile": "Profiles\\erg-rechnung.fsh",
-    "startLine": 112,
-    "endLine": 115
+    "startLine": 121,
+    "endLine": 124
   },
   {
     "outputFile": "CodeSystem-erg-operationen.json",
@@ -92,8 +92,8 @@
     "fshName": "ERGParticipantRoleCS",
     "fshType": "CodeSystem",
     "fshFile": "Profiles\\erg-rechnung.fsh",
-    "startLine": 123,
-    "endLine": 127
+    "startLine": 132,
+    "endLine": 136
   },
   {
     "outputFile": "CodeSystem-erg-prop-rest-interactions.json",
@@ -156,16 +156,16 @@
     "fshName": "BeispielDocumentReferenceRechnung3-FD",
     "fshType": "Instance",
     "fshFile": "Szenarien\\Szenario3a-LE.fsh",
-    "startLine": 43,
-    "endLine": 75
+    "startLine": 31,
+    "endLine": 63
   },
   {
     "outputFile": "DocumentReference-BeispielDocumentReferenceRechnung3-LE.json",
     "fshName": "BeispielDocumentReferenceRechnung3-LE",
     "fshType": "Instance",
     "fshFile": "Szenarien\\Szenario3a-LE.fsh",
-    "startLine": 13,
-    "endLine": 41
+    "startLine": 1,
+    "endLine": 29
   },
   {
     "outputFile": "DocumentReference-BeispielDocumentReferenceRechnung3.1-LE.json",
@@ -196,16 +196,16 @@
     "fshName": "BeispielDocumentReferenceSonstigesDokument3-FD",
     "fshType": "Instance",
     "fshFile": "Szenarien\\Szenario3a-LE.fsh",
-    "startLine": 90,
-    "endLine": 109
+    "startLine": 78,
+    "endLine": 97
   },
   {
     "outputFile": "DocumentReference-BeispielDocumentReferenceSonstigesDokument3-LE.json",
     "fshName": "BeispielDocumentReferenceSonstigesDokument3-LE",
     "fshType": "Instance",
     "fshFile": "Szenarien\\Szenario3a-LE.fsh",
-    "startLine": 77,
-    "endLine": 87
+    "startLine": 65,
+    "endLine": 75
   },
   {
     "outputFile": "DocumentReference-BeispielDocumentReferenceSonstigesDokument3.1-LE.json",
@@ -316,8 +316,8 @@
     "fshName": "BeispielParameterSubmitInput3-LE",
     "fshType": "Instance",
     "fshFile": "Szenarien\\Szenario3a-LE.fsh",
-    "startLine": 116,
-    "endLine": 123
+    "startLine": 104,
+    "endLine": 111
   },
   {
     "outputFile": "Parameters-BeispielParameterSubmitInput3.1-LE.json",
@@ -332,8 +332,8 @@
     "fshName": "BeispielPatient3-FD",
     "fshType": "Instance",
     "fshFile": "Szenarien\\Szenario3a-LE.fsh",
-    "startLine": 135,
-    "endLine": 145
+    "startLine": 123,
+    "endLine": 133
   },
   {
     "outputFile": "Patient-R2444PKVersichertePerson.json",
@@ -400,12 +400,20 @@
     "endLine": 34
   },
   {
+    "outputFile": "StructureDefinition-erg-abrechnungsrelevante-diagnose.json",
+    "fshName": "ERGAbrechnungsrelevanteDiagnose",
+    "fshType": "Extension",
+    "fshFile": "Profiles\\erg-rechnung.fsh",
+    "startLine": 113,
+    "endLine": 119
+  },
+  {
     "outputFile": "StructureDefinition-erg-behandlungsart.json",
     "fshName": "ERGBehandlungsart",
     "fshType": "Extension",
     "fshFile": "Profiles\\erg-rechnung.fsh",
-    "startLine": 104,
-    "endLine": 110
+    "startLine": 105,
+    "endLine": 111
   },
   {
     "outputFile": "StructureDefinition-erg-docref-signature.json",
@@ -476,8 +484,8 @@
     "fshName": "ERGPDFRepraesentationRechnung",
     "fshType": "Extension",
     "fshFile": "Profiles\\erg-rechnung.fsh",
-    "startLine": 94,
-    "endLine": 97
+    "startLine": 95,
+    "endLine": 98
   },
   {
     "outputFile": "StructureDefinition-erg-preisdetails-rechnungsposition.json",
@@ -493,7 +501,7 @@
     "fshType": "Profile",
     "fshFile": "Profiles\\erg-rechnung.fsh",
     "startLine": 1,
-    "endLine": 91
+    "endLine": 92
   },
   {
     "outputFile": "StructureDefinition-erg-rechnungsdiagnose.json",
@@ -540,8 +548,8 @@
     "fshName": "ERGZahlungsziel",
     "fshType": "Extension",
     "fshFile": "Profiles\\erg-rechnung.fsh",
-    "startLine": 99,
-    "endLine": 102
+    "startLine": 100,
+    "endLine": 103
   },
   {
     "outputFile": "ValueSet-BehandlungsartVS.json",
@@ -588,16 +596,16 @@
     "fshName": "ERGBehandlungsartVS",
     "fshType": "ValueSet",
     "fshFile": "Profiles\\erg-rechnung.fsh",
-    "startLine": 117,
-    "endLine": 121
+    "startLine": 126,
+    "endLine": 130
   },
   {
     "outputFile": "ValueSet-erg-participant-role-VS.json",
     "fshName": "ERGParticipantRoleVS",
     "fshType": "ValueSet",
     "fshFile": "Profiles\\erg-rechnung.fsh",
-    "startLine": 129,
-    "endLine": 133
+    "startLine": 138,
+    "endLine": 142
   },
   {
     "outputFile": "ValueSet-erg-rechnung-markierung-vs.json",
