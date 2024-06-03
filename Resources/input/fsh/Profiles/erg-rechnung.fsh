@@ -116,7 +116,7 @@ Title: "ERG abrechnungsrelevante Diagnose"
 * ^context.type = #element
 * ^context.expression = "Invoice"
 * value[x] only Reference
-* valueReference = Reference(Condition)
+* valueReference only Reference(Condition)
 
 CodeSystem: ERGBehandlungsartCS
 Id: erg-behandlungsartCS
