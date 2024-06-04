@@ -9,7 +9,7 @@
   "compose": {
     "include": [
       {
-        "system": "https://gematik.de/fhir/erg/CodeSystem/erg-rechnung-submit-modus"
+        "system": "https://gematik.de/fhir/erg/CodeSystem/erg-rechnung-submit-modus-cs"
       }
     ]
   }

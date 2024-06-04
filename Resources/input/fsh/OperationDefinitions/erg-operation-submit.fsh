@@ -94,4 +94,4 @@ ValueSet:  ERGRechnungSubmitModusVS
 Id: erg-rechnung-submit-modus-vs
 Title: "ERG Rechnung Type VS"
 Description:  "ValueSet für die Differenzierung von der Verarbeitungsmodi für $erchnung-submit"
-* include codes from system https://gematik.de/fhir/erg/CodeSystem/erg-rechnung-submit-modus
+* include codes from system https://gematik.de/fhir/erg/CodeSystem/erg-rechnung-submit-modus-cs
