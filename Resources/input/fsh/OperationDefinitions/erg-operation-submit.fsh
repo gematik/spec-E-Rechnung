@@ -8,7 +8,7 @@ Description: "Rechnung einreichen durch die Leistungserbringer:in"
 * url = "https://gematik.de/fhir/erg/OperationDefinition/Submit"
 * status = #draft
 * kind = #operation
-* name = "ERechnung_Submit"
+* name = "ERGSubmit"
 * code = #erechnung-submit
 * resource = #Patient
 * system = false

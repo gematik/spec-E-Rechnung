@@ -8,7 +8,7 @@ Description: "Abrufen von E-Rechnungen, strukturierten Rechnungsinhalten und Dok
 * url = "https://gematik.de/fhir/erg/OperationDefinition/Retrieve"
 * status = #draft
 * kind = #operation
-* name = "ERechnung_Retrieve"
+* name = "ERGRetrieve"
 * code = #retrieve
 * resource = #DocumentReference
 * system = false

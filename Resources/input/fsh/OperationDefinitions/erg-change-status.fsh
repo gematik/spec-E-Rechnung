@@ -8,7 +8,7 @@ Description: "Änderung des Bearbeitungsstatus eines Dokumentes"
 * url = "https://gematik.de/fhir/erg/OperationDefinition/ChangeStatus"
 * status = #draft
 * kind = #operation
-* name = "ERechnung_ChangeStatus"
+* name = "ERGChangeStatus"
 * code = #change-status
 * resource = #DocumentReference
 * system = false

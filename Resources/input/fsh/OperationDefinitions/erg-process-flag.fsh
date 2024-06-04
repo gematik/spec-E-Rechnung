@@ -8,7 +8,7 @@ Description: "Änderung des Bearbeitungsstatus eines Dokumentes"
 * url = "https://gematik.de/fhir/erg/OperationDefinition/ProcessFlag"
 * status = #draft
 * kind = #operation
-* name = "ERechnung_ProcessFlag"
+* name = "ERGProcessFlag"
 * code = #process-flag
 * resource = #DocumentReference
 * system = false

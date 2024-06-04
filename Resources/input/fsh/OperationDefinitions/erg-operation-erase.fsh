@@ -8,7 +8,7 @@ Description: "Permanente Löschung eines Dokumentes"
 * url = "https://gematik.de/fhir/erg/OperationDefinition/Erase"
 * status = #draft
 * kind = #operation
-* name = "ERechnung_Erase"
+* name = "ERGErase"
 * code = #erase
 * resource = #DocumentReference
 * system = false
