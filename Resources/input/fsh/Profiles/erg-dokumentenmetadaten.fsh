@@ -10,11 +10,12 @@ Id: erg-dokumentenmetadaten
 * obeys RechnungOderAnhang
 * extension MS
 * extension contains 
-  ERGDocRefSignature named docRef-signature 0..1 MS and 
-  ERGDocumentReferenceMarkierung named markierung 0..* MS and
+  ERGDocRefSignature named docRef-signature 0..1 MS and
   ERGDocumentReferenceRechnungsdatum named rechnungsdatum 0..1 MS and
   ERGDocumentReferenceZahlungszieldatum named zahlungszieldatum 0..1 MS and
   ERGDocumentReferenceGesamtbetrag named gesamtbetrag 0..1 MS
+* meta.extension MS
+* meta.extension contains ERGDocumentReferenceMarkierung named markierung 0..* MS
 * meta.tag MS
   * ^slicing.discriminator.type = #pattern
   * ^slicing.discriminator.path = "$this"

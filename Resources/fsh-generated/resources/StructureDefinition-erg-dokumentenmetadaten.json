@@ -48,6 +48,27 @@
         ]
       },
       {
+        "id": "DocumentReference.meta.extension",
+        "path": "DocumentReference.meta.extension",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.meta.extension:markierung",
+        "path": "DocumentReference.meta.extension",
+        "sliceName": "markierung",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://gematik.de/fhir/erg/StructureDefinition/erg-documentreference-markierung"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
         "id": "DocumentReference.meta.tag",
         "path": "DocumentReference.meta.tag",
         "slicing": {
@@ -102,22 +123,6 @@
             "code": "Extension",
             "profile": [
               "https://gematik.de/fhir/erg/StructureDefinition/erg-docref-signature"
-            ]
-          }
-        ],
-        "mustSupport": true
-      },
-      {
-        "id": "DocumentReference.extension:markierung",
-        "path": "DocumentReference.extension",
-        "sliceName": "markierung",
-        "min": 0,
-        "max": "*",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "https://gematik.de/fhir/erg/StructureDefinition/erg-documentreference-markierung"
             ]
           }
         ],

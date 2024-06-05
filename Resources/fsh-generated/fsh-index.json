@@ -84,8 +84,8 @@
     "fshName": "ERGAttachmentFormatCS",
     "fshType": "CodeSystem",
     "fshFile": "Profiles/erg-dokumentenmetadaten.fsh",
-    "startLine": 133,
-    "endLine": 140
+    "startLine": 134,
+    "endLine": 141
   },
   {
     "outputFile": "CodeSystem-erg-behandlungsartCS.json",
@@ -156,8 +156,8 @@
     "fshName": "ERGARechnungsstatusCS",
     "fshType": "CodeSystem",
     "fshFile": "Profiles/erg-dokumentenmetadaten.fsh",
-    "startLine": 142,
-    "endLine": 148
+    "startLine": 143,
+    "endLine": 149
   },
   {
     "outputFile": "Composition-R2444Document.json",
@@ -468,8 +468,8 @@
     "fshName": "ERGDocRefSignature",
     "fshType": "Extension",
     "fshFile": "Profiles/erg-dokumentenmetadaten.fsh",
-    "startLine": 152,
-    "endLine": 159
+    "startLine": 153,
+    "endLine": 160
   },
   {
     "outputFile": "StructureDefinition-erg-documentreference-gesamtbetrag.json",
@@ -509,7 +509,7 @@
     "fshType": "Profile",
     "fshFile": "Profiles/erg-dokumentenmetadaten.fsh",
     "startLine": 4,
-    "endLine": 115
+    "endLine": 116
   },
   {
     "outputFile": "StructureDefinition-erg-invoice-period.json",
@@ -700,15 +700,15 @@
     "fshName": "ERGRechnungsstatusVS",
     "fshType": "ValueSet",
     "fshFile": "Profiles/erg-dokumentenmetadaten.fsh",
-    "startLine": 126,
-    "endLine": 129
+    "startLine": 127,
+    "endLine": 130
   },
   {
     "outputFile": "ValueSet-erg-restricted-mime-types-vs.json",
     "fshName": "ERGRestrictedMimeTypesVS",
     "fshType": "ValueSet",
     "fshFile": "Profiles/erg-dokumentenmetadaten.fsh",
-    "startLine": 119,
-    "endLine": 124
+    "startLine": 120,
+    "endLine": 125
   }
 ]
