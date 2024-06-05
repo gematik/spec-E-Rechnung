@@ -1,0 +1,21 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "draft",
+  "content": "complete",
+  "name": "ERGDokumentArtDerArchivierungCS",
+  "id": "erg-dokument-artderarchivierung-cs",
+  "title": "ERG Dokument ArtDerArchivierung CS",
+  "description": "CodeSystem für die Differenzierung von verschiedenen Arten von Markierungen eines Dokumentes",
+  "url": "https://gematik.de/fhir/erg/CodeSystem/erg-dokument-artderarchivierung-cs",
+  "concept": [
+    {
+      "code": "epa",
+      "display": "ePA"
+    },
+    {
+      "code": "persoenlich",
+      "display": "Persönliche Ablage"
+    }
+  ],
+  "count": 2
+}

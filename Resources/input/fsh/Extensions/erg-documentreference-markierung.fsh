@@ -25,6 +25,7 @@ Title: "ERG DocumentReference Markierung"
 * extension[artDerArchivierung] obeys artDerArchivierung
 * extension[artDerArchivierung].value[x] only Coding
 * extension[details].value[x] 1..1
+* extension[markierung].value[x] from ERGDokumentArtDerArchivierungVS (required)
 
 
 Invariant: artDerArchivierung

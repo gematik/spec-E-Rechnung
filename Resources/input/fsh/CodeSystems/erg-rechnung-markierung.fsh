@@ -10,3 +10,10 @@ Description:  "CodeSystem für die Differenzierung von verschiedenen Arten von M
 * #bezahlt "Bezahlt"
 * #archiviert "Archiviert"
 * #persoenlich "Persönlich"
+
+CodeSystem:  ERGDokumentArtDerArchivierungCS
+Id: erg-dokument-artderarchivierung-cs
+Title: "ERG Dokument ArtDerArchivierung CS"
+Description:  "CodeSystem für die Differenzierung von verschiedenen Arten von Markierungen eines Dokumentes"
+* #epa "ePA"
+* #persoenlich "Persönliche Ablage"

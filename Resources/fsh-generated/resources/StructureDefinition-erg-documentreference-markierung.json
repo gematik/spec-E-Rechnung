@@ -66,7 +66,7 @@
         ],
         "binding": {
           "strength": "required",
-          "valueSet": "https://gematik.de/fhir/erg/ValueSet/erg-rechnung-markierung-vs"
+          "valueSet": "https://gematik.de/fhir/erg/ValueSet/erg-dokument-artderarchivierung-vs"
         }
       },
       {
