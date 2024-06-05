@@ -20,6 +20,13 @@
     }
   ],
   "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    }
+  ],
   "kind": "resource",
   "abstract": false,
   "type": "Binary",

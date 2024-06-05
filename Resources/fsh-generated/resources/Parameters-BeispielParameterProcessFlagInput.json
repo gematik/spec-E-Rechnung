@@ -3,11 +3,19 @@
   "id": "BeispielParameterProcessFlagInput",
   "parameter": [
     {
-      "name": "tag",
+      "name": "markierung",
       "valueCoding": {
         "system": "https://gematik.de/fhir/erg/CodeSystem/erg-rechnung-markierung-cs",
         "code": "bezahlt"
       }
+    },
+    {
+      "name": "zeitpunkt",
+      "valueDateTime": "2024-05-30T13:00:00.001+02:00"
+    },
+    {
+      "name": "details",
+      "valueString": "Bezahlt mit falschem Betreff"
     }
   ]
 }

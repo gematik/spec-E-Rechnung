@@ -20,6 +20,28 @@
     }
   ],
   "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2 Mapping"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    },
+    {
+      "identity": "workflow",
+      "uri": "http://hl7.org/fhir/workflow",
+      "name": "Workflow Pattern"
+    }
+  ],
   "kind": "resource",
   "abstract": false,
   "type": "Invoice",
@@ -27,6 +49,20 @@
   "derivation": "constraint",
   "differential": {
     "element": [
+      {
+        "id": "Invoice.extension",
+        "path": "Invoice.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
       {
         "id": "Invoice.extension:pdf-repraesentation-rechnung",
         "path": "Invoice.extension",
@@ -187,7 +223,7 @@
         "id": "Invoice.recipient",
         "path": "Invoice.recipient",
         "short": "Rechnungsempfänger",
-        "comment": "Das System des Leistungserbringers referenziert hier üblicherweise \n  auf die lokale Instanz des Patienten um die Rechnung einer Patientenakte zuzuordnen. \n  Der Fachdienst substitutiert den Link mit der Referenz auf das Postfach des Patienten \n  bei der Extraktion der Invoice aus dem Bundle. Die Angabe der Versichertennummer dient \n  der Plausibilisierung. Die KV-Nummer in der Instanz des Bundles muss daher mit der \n  KV-Nummer übereinstimmen, die im Fachdienst für das Postfach des Rechnungsempfängers hinterlegt ist. ",
+        "comment": "Das System des Leistungserbringers referenziert hier üblicherweise \r\n  auf die lokale Instanz des Patienten um die Rechnung einer Patientenakte zuzuordnen. \r\n  Der Fachdienst substitutiert den Link mit der Referenz auf das Postfach des Patienten \r\n  bei der Extraktion der Invoice aus dem Bundle. Die Angabe der Versichertennummer dient \r\n  der Plausibilisierung. Die KV-Nummer in der Instanz des Bundles muss daher mit der \r\n  KV-Nummer übereinstimmen, die im Fachdienst für das Postfach des Rechnungsempfängers hinterlegt ist. ",
         "min": 1,
         "type": [
           {
@@ -348,7 +384,7 @@
         "id": "Invoice.issuer",
         "path": "Invoice.issuer",
         "short": "Leistungserbringer",
-        "comment": "Der Leistungserbringer kann vom einreichenden Benutzer \n      der Rechnung (z.B. Abrechnungsdiesntleister) abweichen",
+        "comment": "Der Leistungserbringer kann vom einreichenden Benutzer \r\n      der Rechnung (z.B. Abrechnungsdiesntleister) abweichen",
         "min": 1,
         "mustSupport": true
       },
@@ -453,6 +489,16 @@
       {
         "id": "Invoice.paymentTerms.extension",
         "path": "Invoice.paymentTerms.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
         "min": 1
       },
       {
