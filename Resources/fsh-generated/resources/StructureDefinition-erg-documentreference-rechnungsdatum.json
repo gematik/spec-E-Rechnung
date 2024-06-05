@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "erg-documentreference-rechnungsdatum",
   "url": "https://gematik.de/fhir/erg/StructureDefinition/erg-documentreference-rechnungsdatum",
-  "version": "1.0.0-ballot",
+  "version": "1.0.0-CC",
   "name": "ERGDocumentReferenceRechnungsdatum",
   "title": "ERG DocumentReference Rechnungsdatum",
   "status": "active",
@@ -20,13 +20,6 @@
     }
   ],
   "fhirVersion": "4.0.1",
-  "mapping": [
-    {
-      "identity": "rim",
-      "uri": "http://hl7.org/v3",
-      "name": "RIM Mapping"
-    }
-  ],
   "kind": "complex-type",
   "abstract": false,
   "context": [

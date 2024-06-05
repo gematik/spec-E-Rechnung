@@ -5,7 +5,7 @@ RuleSet: BundleRequest(method, url)
 
 RuleSet: Meta
 * ^status = #active
-* ^version = "1.0.0-ballot"
+* ^version = "1.0.0-CC"
 * ^experimental = false
 * ^date = "2024-06-01"
 * ^publisher = "gematik GmbH"
