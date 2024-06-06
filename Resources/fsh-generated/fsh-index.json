@@ -256,6 +256,14 @@
     "endLine": 115
   },
   {
+    "outputFile": "DocumentReference-ExampleR5DocumentReference.json",
+    "fshName": "ExampleR5DocumentReference",
+    "fshType": "Instance",
+    "fshFile": "Examples\\erg-R5-retrieve.fsh",
+    "startLine": 2,
+    "endLine": 39
+  },
+  {
     "outputFile": "Invoice-R2444Rechnung.json",
     "fshName": "R2444Rechnung",
     "fshType": "Instance",

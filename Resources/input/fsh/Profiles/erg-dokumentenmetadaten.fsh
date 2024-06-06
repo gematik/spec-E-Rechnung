@@ -47,7 +47,7 @@ Id: erg-dokumentenmetadaten
   * code 1.. MS
   * code ^comment = "Standard-Code für Rechnung ist 'ABRE'"
   * display 1.. MS
-* type.coding[Rechnungstyp] ^patternCoding.system = "TODO"
+* type.coding[Rechnungstyp] ^patternCoding.system = "http://dvmd.de/fhir/CodeSystem/kdl"
 * description 1..1 MS
   * ^short = "Dokumententitel"
   * ^comment = "Menschenlesbarer Titel des Dokumentes, der dem Versicherten in der UI angezeigt wird. Der Titel kann manuell erfasst oder vom Dateinamen/Metadaten abgeleitet werden. z.B. &quot;Laborbefund vom 28.9.2023&quot;."

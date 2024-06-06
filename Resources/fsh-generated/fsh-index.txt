@@ -31,6 +31,7 @@ DocumentReference-BeispielDocumentReferenceSonstigesDokument3-FD.json    Beispie
 DocumentReference-BeispielDocumentReferenceSonstigesDokument3-LE.json    BeispielDocumentReferenceSonstigesDokument3-LE    Instance    Examples\erg-R2-bulk-submit.fsh                         51 - 61
 DocumentReference-BeispielDocumentReferenceSonstigesDokument3.1-FD.json  BeispielDocumentReferenceSonstigesDokument3.1-FD  Instance    Examples\erg-R2-bulk-submit.fsh                         187 - 206
 DocumentReference-BeispielDocumentReferenceSonstigesDokument3.1-LE.json  BeispielDocumentReferenceSonstigesDokument3.1-LE  Instance    Examples\erg-R2-bulk-submit.fsh                         105 - 115
+DocumentReference-ExampleR5DocumentReference.json                        ExampleR5DocumentReference                        Instance    Examples\erg-R5-retrieve.fsh                            2 - 39
 Invoice-R2444Rechnung.json                                               R2444Rechnung                                     Instance    Examples\BeispielRechnung.fsh                           1 - 49
 OperationDefinition-ERGOperationChangeStatus.json                        ERGOperationChangeStatus                          Instance    OperationDefinitions\erg-change-status.fsh              3 - 31
 OperationDefinition-ERGOperationErase.json                               ERGOperationErase                                 Instance    OperationDefinitions\erg-operation-erase.fsh            3 - 17
