@@ -48,6 +48,14 @@
     "endLine": 142
   },
   {
+    "outputFile": "Bundle-ExampleR5Bundle.json",
+    "fshName": "ExampleR5Bundle",
+    "fshType": "Instance",
+    "fshFile": "Examples\\erg-R5-retrieve.fsh",
+    "startLine": 41,
+    "endLine": 47
+  },
+  {
     "outputFile": "Bundle-PatientenBundle.json",
     "fshName": "PatientenBundle",
     "fshType": "Instance",

@@ -37,3 +37,11 @@ Title: "Example ERG Document Reference"
 * content[anhang].attachment.contentType = #application/pdf
 * content[anhang].attachment.data = "DIESISTNUREINBEISPIELDIESISTKEINVALIDESPDF00"
 * content[anhang].attachment.url = "http://example.com/fhir/binary/101112"
+
+Instance: ExampleR5Bundle
+InstanceOf: Bundle
+* type = #searchset
+* total = 1
+* entry[+]
+  * resource = ExampleR5DocumentReference
+  * search.mode = #match
