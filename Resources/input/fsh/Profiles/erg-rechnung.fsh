@@ -108,7 +108,7 @@ Title: "ERG Extension Behandlungsart"
 * ^context.type = #element
 * ^context.expression = "Invoice"
 * value[x] only Coding
-* valueCoding from ERGBehandlungsartVS
+* valueCoding from $EncounterClassDe
 
 Extension: ERGAbrechnungsrelevanteDiagnose
 Id: erg-abrechnungsrelevante-diagnose
@@ -117,17 +117,6 @@ Title: "ERG abrechnungsrelevante Diagnose"
 * ^context.expression = "Invoice"
 * value[x] only Reference
 * valueReference only Reference(Condition)
-
-CodeSystem: ERGBehandlungsartCS
-Id: erg-behandlungsartCS
-Title: "ERG Behandlungsart"
-* #AMB "Ambulante Behandlung"
-
-ValueSet: ERGBehandlungsartVS
-Id: erg-behandlungsartVS
-Title: "ERG Behandlungsart"
-Description: "Diese Codes enthalten Behandlungsarten der eRechnung"
-* include codes from system ERGBehandlungsartCS
 
 CodeSystem: ERGParticipantRoleCS
 Id: erg-participant-role-CS
@@ -139,4 +128,4 @@ ValueSet: ERGParticipantRoleVS
 Id: erg-participant-role-VS
 Title: "ERG Teilnehmer Rolle"
 Description: "Diese Codes enthalten Teilnehmer Rollen der eRechnung"
-* include codes from system ERGBehandlungsartCS
+* include codes from system ERGParticipantRoleCS

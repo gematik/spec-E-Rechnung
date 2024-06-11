@@ -96,14 +96,6 @@
     "endLine": 141
   },
   {
-    "outputFile": "CodeSystem-erg-behandlungsartCS.json",
-    "fshName": "ERGBehandlungsartCS",
-    "fshType": "CodeSystem",
-    "fshFile": "Profiles\\erg-rechnung.fsh",
-    "startLine": 121,
-    "endLine": 124
-  },
-  {
     "outputFile": "CodeSystem-erg-dokument-artderarchivierung-cs.json",
     "fshName": "ERGDokumentArtDerArchivierungCS",
     "fshType": "CodeSystem",
@@ -124,8 +116,8 @@
     "fshName": "ERGParticipantRoleCS",
     "fshType": "CodeSystem",
     "fshFile": "Profiles\\erg-rechnung.fsh",
-    "startLine": 132,
-    "endLine": 136
+    "startLine": 121,
+    "endLine": 125
   },
   {
     "outputFile": "CodeSystem-erg-prop-rest-interactions-cs.json",
@@ -672,14 +664,6 @@
     "endLine": 60
   },
   {
-    "outputFile": "ValueSet-erg-behandlungsartVS.json",
-    "fshName": "ERGBehandlungsartVS",
-    "fshType": "ValueSet",
-    "fshFile": "Profiles\\erg-rechnung.fsh",
-    "startLine": 126,
-    "endLine": 130
-  },
-  {
     "outputFile": "ValueSet-erg-dokument-artderarchivierung-vs.json",
     "fshName": "ERGDokumentArtDerArchivierungVS",
     "fshType": "ValueSet",
@@ -692,8 +676,8 @@
     "fshName": "ERGParticipantRoleVS",
     "fshType": "ValueSet",
     "fshFile": "Profiles\\erg-rechnung.fsh",
-    "startLine": 138,
-    "endLine": 142
+    "startLine": 127,
+    "endLine": 131
   },
   {
     "outputFile": "ValueSet-erg-rechnung-markierung-vs.json",

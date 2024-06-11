@@ -12,3 +12,4 @@ Alias: $identifier-iknr = http://fhir.de/StructureDefinition/identifier-iknr
 Alias: $kbv-fachrichtung-cs = https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_BAR2_ARZTNRFACHGRUPPE
 Alias: $kbv-fachrichtung-vs = https://fhir.kbv.de/ValueSet/KBV_VS_SFHIR_BAR2_ARZTNRFACHGRUPPE
 Alias: $restful-interaction = http://hl7.org/fhir/restful-interaction
+Alias: $EncounterClassDe = http://fhir.de/ValueSet/EncounterClassDE
