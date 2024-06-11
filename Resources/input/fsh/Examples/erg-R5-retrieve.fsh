@@ -15,8 +15,8 @@ Title: "Example ERG Document Reference"
 * status = http://hl7.org/fhir/document-reference-status#current
 * identifier.system = "http://example.com/fhir/identifiers"
 * identifier.value = "123456789"
-* type.coding[IHE-TypeCode] = http://ihe-d.de/CodeSystems/IHEXDStypeCode#ABRE
-* type.coding[IHE-TypeCode].display = "Abrechnungsdokumente"
+* type.coding[Rechnungstyp] = http://dvmd.de/fhir/CodeSystem/kdl#AM010106
+* type.coding[Rechnungstyp].display = "Rechnung ambulante/stationäre Behandlung"
 * description = "Laborbefund vom 28.9.2023"
 * subject.display = "Max Mustermann"
 * author.identifier.system = "https://gematik.de/fhir/sid/telematik-id"

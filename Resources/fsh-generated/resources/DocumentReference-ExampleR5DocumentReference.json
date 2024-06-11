@@ -17,12 +17,9 @@
   "type": {
     "coding": [
       {
-        "system": "http://ihe-d.de/CodeSystems/IHEXDStypeCode",
-        "code": "ABRE",
-        "display": "Abrechnungsdokumente"
-      },
-      {
-        "system": "http://dvmd.de/fhir/CodeSystem/kdl"
+        "system": "http://dvmd.de/fhir/CodeSystem/kdl",
+        "code": "AM010106",
+        "display": "Rechnung ambulante/stationäre Behandlung"
       }
     ]
   },
