@@ -1,11 +1,11 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "erg-docref-signature",
-  "url": "https://gematik.de/fhir/erg/StructureDefinition/erg-docref-signature",
-  "name": "ERGDocRefSignature",
-  "title": "ERG DocRef Signature",
+  "id": "erg-docref-fachrichtung",
+  "url": "https://gematik.de/fhir/erg/StructureDefinition/erg-docref-fachrichtung",
+  "name": "ERGDocRefFachrichtung",
+  "title": "ERG DocRef Fachrichtung",
   "status": "draft",
-  "description": "Extension zur Abbildung einer Digitalen Signatur über die Rechnungsrepräsentation, sowie den strukturierten Rechnungsinhalten",
+  "description": "Extension zur Angabe der Fachrichtung zur Steuerung des Abrechungsworkflows",
   "fhirVersion": "4.0.1",
   "kind": "complex-type",
   "abstract": false,
@@ -28,7 +28,7 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "https://gematik.de/fhir/erg/StructureDefinition/erg-docref-signature"
+        "fixedUri": "https://gematik.de/fhir/erg/StructureDefinition/erg-docref-fachrichtung"
       },
       {
         "id": "Extension.value[x]",
@@ -36,10 +36,14 @@
         "min": 1,
         "type": [
           {
-            "code": "Signature"
+            "code": "Coding"
           }
         ],
-        "mustSupport": true
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://ihe-d.de/ValueSets/IHEXDSpracticeSettingCode"
+        }
       }
     ]
   }

@@ -13,7 +13,8 @@ Id: erg-dokumentenmetadaten
   ERGDocRefSignature named docRef-signature 0..1 MS and
   ERGDocumentReferenceRechnungsdatum named rechnungsdatum 0..1 MS and
   ERGDocumentReferenceZahlungszieldatum named zahlungszieldatum 0..1 MS and
-  ERGDocumentReferenceGesamtbetrag named gesamtbetrag 0..1 MS
+  ERGDocumentReferenceGesamtbetrag named gesamtbetrag 0..1 MS and
+  ERGDocRefFachrichtung named fachrichtung 0..1 MS
 * meta.extension MS
 * meta.extension contains ERGDocumentReferenceMarkierung named markierung 0..* MS
 * meta.tag MS
@@ -156,9 +157,17 @@ Id: erg-docref-signature
 Title: "ERG DocRef Signature"
 Description: "Extension zur Abbildung einer Digitalen Signatur über die Rechnungsrepräsentation, sowie den strukturierten Rechnungsinhalten"
 
-* extension.url = "http://example.org/fhir/StructureDefinition/erg-docref-signature"
 * value[x] 1.. MS
 * value[x] only Signature
+
+Extension: ERGDocRefFachrichtung
+Id: erg-docref-fachrichtung
+Title: "ERG DocRef Fachrichtung"
+Description: "Extension zur Angabe der Fachrichtung zur Steuerung des Abrechungsworkflows"
+
+* value[x] 1.. MS
+* value[x] only Coding
+* value[x] from http://ihe-d.de/ValueSets/IHEXDSpracticeSettingCode (required)
 
 // ------------- Constraints -------------
 

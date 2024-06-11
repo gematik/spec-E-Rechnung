@@ -110,16 +110,6 @@
       {
         "id": "DocumentReference.extension",
         "path": "DocumentReference.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        },
         "mustSupport": true
       },
       {
@@ -187,6 +177,22 @@
         "mustSupport": true
       },
       {
+        "id": "DocumentReference.extension:fachrichtung",
+        "path": "DocumentReference.extension",
+        "sliceName": "fachrichtung",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://gematik.de/fhir/erg/StructureDefinition/erg-docref-fachrichtung"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
         "id": "DocumentReference.identifier",
         "path": "DocumentReference.identifier",
         "comment": "Eindeutiger Identifikator vergeben durch das RE-PS (z.B. Interne Dokumentennummer). Das System MUSS eindeutig pro Leistungserbringer:in vergeben werden.",
@@ -235,36 +241,35 @@
         "min": 1
       },
       {
-        "id": "DocumentReference.type.coding:IHE-TypeCode",
+        "id": "DocumentReference.type.coding:DokumentenKlassifizierung",
         "path": "DocumentReference.type.coding",
-        "sliceName": "IHE-TypeCode",
-        "short": "Dokumenttyp gemäß IHE-TypeCode",
+        "sliceName": "DokumentenKlassifizierung",
+        "short": "Dokumenttyp gemäß KDL",
         "min": 0,
         "max": "1",
         "patternCoding": {
-          "system": "http://ihe-d.de/CodeSystems/IHEXDStypeCode"
+          "system": "http://dvmd.de/fhir/CodeSystem/kdl"
         },
         "mustSupport": true,
         "binding": {
-          "strength": "extensible",
-          "valueSet": "http://ihe-d.de/ValueSets/IHEXDStypeCode"
+          "strength": "required",
+          "valueSet": "https://gematik.de/fhir/erg/CodeSystem/erg-sonstigesdokument-type-vs"
         }
       },
       {
-        "id": "DocumentReference.type.coding:IHE-TypeCode.system",
+        "id": "DocumentReference.type.coding:DokumentenKlassifizierung.system",
         "path": "DocumentReference.type.coding.system",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "DocumentReference.type.coding:IHE-TypeCode.code",
+        "id": "DocumentReference.type.coding:DokumentenKlassifizierung.code",
         "path": "DocumentReference.type.coding.code",
-        "comment": "Standard-Code für Rechnung ist 'ABRE'",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "DocumentReference.type.coding:IHE-TypeCode.display",
+        "id": "DocumentReference.type.coding:DokumentenKlassifizierung.display",
         "path": "DocumentReference.type.coding.display",
         "min": 1,
         "mustSupport": true
@@ -273,10 +278,11 @@
         "id": "DocumentReference.type.coding:Rechnungstyp",
         "path": "DocumentReference.type.coding",
         "sliceName": "Rechnungstyp",
-        "min": 1,
+        "min": 0,
         "max": "1",
         "patternCoding": {
-          "system": "http://dvmd.de/fhir/CodeSystem/kdl"
+          "system": "http://dvmd.de/fhir/CodeSystem/kdl",
+          "code": "AM010106"
         },
         "mustSupport": true
       },
