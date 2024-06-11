@@ -1,0 +1,46 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "erg-docref-leistungsart",
+  "url": "https://gematik.de/fhir/erg/StructureDefinition/erg-docref-leistungsart",
+  "name": "ERGDocRefLeistungsart",
+  "title": "ERG DocRef Leistungsart",
+  "status": "draft",
+  "description": "Extension zur Angabe einer Leistungsart",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "Element"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "https://gematik.de/fhir/erg/StructureDefinition/erg-docref-leistungsart"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": true
+      }
+    ]
+  }
+}

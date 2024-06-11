@@ -14,7 +14,8 @@ Id: erg-dokumentenmetadaten
   ERGDocumentReferenceRechnungsdatum named rechnungsdatum 0..1 MS and
   ERGDocumentReferenceZahlungszieldatum named zahlungszieldatum 0..1 MS and
   ERGDocumentReferenceGesamtbetrag named gesamtbetrag 0..1 MS and
-  ERGDocRefFachrichtung named fachrichtung 0..1 MS
+  ERGDocRefFachrichtung named fachrichtung 0..1 MS and
+  ERGDocRefLeistungsart named leistungsart 0..1 MS
 * meta.extension MS
 * meta.extension contains ERGDocumentReferenceMarkierung named markierung 0..* MS
 * meta.tag MS
@@ -168,6 +169,14 @@ Description: "Extension zur Angabe der Fachrichtung zur Steuerung des Abrechungs
 * value[x] 1.. MS
 * value[x] only Coding
 * value[x] from http://ihe-d.de/ValueSets/IHEXDSpracticeSettingCode (required)
+
+Extension: ERGDocRefLeistungsart
+Id: erg-docref-leistungsart
+Title: "ERG DocRef Leistungsart"
+Description: "Extension zur Angabe einer Leistungsart"
+
+* value[x] 1.. MS
+* value[x] only Coding
 
 // ------------- Constraints -------------
 
