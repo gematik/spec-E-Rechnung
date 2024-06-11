@@ -9,7 +9,7 @@
   "compose": {
     "include": [
       {
-        "system": "https://gematik.de/fhir/erg/CodeSystem/erg-behandlungsartCS"
+        "system": "https://gematik.de/fhir/erg/CodeSystem/erg-participant-role-CS"
       }
     ]
   }
