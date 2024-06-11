@@ -15,7 +15,8 @@ Id: erg-dokumentenmetadaten
   ERGDocumentReferenceZahlungszieldatum named zahlungszieldatum 0..1 MS and
   ERGDocumentReferenceGesamtbetrag named gesamtbetrag 0..1 MS and
   ERGDocRefFachrichtung named fachrichtung 0..1 MS and
-  ERGDocRefLeistungsart named leistungsart 0..1 MS
+  ERGDocRefLeistungsart named leistungsart 0..1 MS and
+  ERGBehandlungsart named behandlungsart 0..1 MS
 * meta.extension MS
 * meta.extension contains ERGDocumentReferenceMarkierung named markierung 0..* MS
 * meta.tag MS
