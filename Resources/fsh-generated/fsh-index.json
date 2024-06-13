@@ -108,8 +108,8 @@
     "fshName": "ERGOperationenCS",
     "fshType": "CodeSystem",
     "fshFile": "Profiles\\erg-nutzungsprotokoll.fsh",
-    "startLine": 32,
-    "endLine": 39
+    "startLine": 42,
+    "endLine": 49
   },
   {
     "outputFile": "CodeSystem-erg-participant-role-CS.json",
@@ -124,8 +124,8 @@
     "fshName": "ERGPropRestInterationsCS",
     "fshType": "CodeSystem",
     "fshFile": "Profiles\\erg-nutzungsprotokoll.fsh",
-    "startLine": 41,
-    "endLine": 47
+    "startLine": 51,
+    "endLine": 57
   },
   {
     "outputFile": "CodeSystem-erg-rechnung-markierung-cs.json",
@@ -565,7 +565,7 @@
     "fshType": "Profile",
     "fshFile": "Profiles\\erg-nutzungsprotokoll.fsh",
     "startLine": 1,
-    "endLine": 30
+    "endLine": 40
   },
   {
     "outputFile": "StructureDefinition-erg-pdf-repraesentation-rechnung.json",
@@ -660,24 +660,24 @@
     "fshName": "ERGAuditEventAgentTypeVS",
     "fshType": "ValueSet",
     "fshFile": "Profiles\\erg-nutzungsprotokoll.fsh",
-    "startLine": 63,
-    "endLine": 67
+    "startLine": 73,
+    "endLine": 77
   },
   {
     "outputFile": "ValueSet-erg-audit-event-sub-type-vs.json",
     "fshName": "ERGAuditEventSubTypeVS",
     "fshType": "ValueSet",
     "fshFile": "Profiles\\erg-nutzungsprotokoll.fsh",
-    "startLine": 49,
-    "endLine": 54
+    "startLine": 59,
+    "endLine": 64
   },
   {
     "outputFile": "ValueSet-erg-audit-event-type-vs.json",
     "fshName": "ERGAuditEventTypeVS",
     "fshType": "ValueSet",
     "fshFile": "Profiles\\erg-nutzungsprotokoll.fsh",
-    "startLine": 56,
-    "endLine": 60
+    "startLine": 66,
+    "endLine": 70
   },
   {
     "outputFile": "ValueSet-erg-dokument-artderarchivierung-vs.json",

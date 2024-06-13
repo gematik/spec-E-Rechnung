@@ -12,12 +12,12 @@ Id: erg-nutzungsprotokoll
 * recorded MS
 * outcome MS
 * agent MS
-* agent //TODO Agent type einschränken auf menschlich und system
+* agent
   * type 1.. MS
   * type from ERGAuditEventAgentTypeVS (required)
   * who MS
   * who.identifier ..1 MS
-  * who.identifier ^comment = "Der Identifier wird vom Server gesetzt und kann entweder eine KVNR oder Telematik-ID sein" //TODO KVNR oder TelematikId
+  * who.identifier ^comment = "Der Identifier wird vom Server gesetzt und kann entweder eine KVNR oder Telematik-ID sein"
   * who.display 1.. MS
   * requestor MS
 * source.observer.display MS
@@ -28,6 +28,16 @@ Id: erg-nutzungsprotokoll
 * entity.what.display MS
 * entity.name MS
 * entity.description MS
+* entity ^slicing.discriminator.type = #pattern
+* entity ^slicing.discriminator.path = "what.type"
+* entity ^slicing.rules = #open
+* entity contains Versicherter ..1 MS
+* entity[Versicherter].what.type = http://hl7.org/fhir/resource-types#Patient
+* entity[Versicherter].what.identifier only IdentifierKvid10
+  * ^patternIdentifier.type = http://fhir.de/CodeSystem/identifier-type-de-basis#KVZ10
+  * type 1.. MS
+  * system MS
+  * value MS
 
 CodeSystem: ERGOperationenCS
 Id: erg-operationen-cs
