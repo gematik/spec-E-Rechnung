@@ -7,7 +7,7 @@
   "title": "ERG Rechnungsposition",
   "status": "active",
   "experimental": false,
-  "date": "2024-06-01",
+  "date": "2024-06-20",
   "publisher": "gematik GmbH",
   "contact": [
     {
@@ -27,20 +27,6 @@
   "derivation": "constraint",
   "differential": {
     "element": [
-      {
-        "id": "ChargeItem.extension",
-        "path": "ChargeItem.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
-      },
       {
         "id": "ChargeItem.extension:unitPriceComponent",
         "path": "ChargeItem.extension",

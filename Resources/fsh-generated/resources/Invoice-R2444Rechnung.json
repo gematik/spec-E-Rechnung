@@ -98,7 +98,7 @@
     "value": 16.32,
     "currency": "EUR"
   },
-  "paymentTerms": "\r\n**Bankinformationen:**\r\n\r\n- **Kontoinhalberin:** `Dr. med. Olivia Orthoschmerz`\r\n- **IBAN:** `DE00 100 200 300 400 67`\r\n- **BIC:** `MUSTERBIC11`\r\n- **Name der Bank:** Musterbank AG\r\n- **Verwendungszweck:** z.B. Rechnungs-Nr. 2-444\r\n",
+  "paymentTerms": "\n**Bankinformationen:**\n\n- **Kontoinhalberin:** `Dr. med. Olivia Orthoschmerz`\n- **IBAN:** `DE00 100 200 300 400 67`\n- **BIC:** `MUSTERBIC11`\n- **Name der Bank:** Musterbank AG\n- **Verwendungszweck:** z.B. Rechnungs-Nr. 2-444\n",
   "_paymentTerms": {
     "extension": [
       {

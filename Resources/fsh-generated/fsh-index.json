@@ -3,7 +3,7 @@
     "outputFile": "AuditEvent-BeispielNutzungsprotokoll.json",
     "fshName": "BeispielNutzungsprotokoll",
     "fshType": "Instance",
-    "fshFile": "Examples\\erg-R10-nutzungsprotokoll.fsh",
+    "fshFile": "Examples/erg-R10-nutzungsprotokoll.fsh",
     "startLine": 1,
     "endLine": 16
   },
@@ -11,7 +11,7 @@
     "outputFile": "Bundle-BeispielNutzungsprotokollResultBundle.json",
     "fshName": "BeispielNutzungsprotokollResultBundle",
     "fshType": "Instance",
-    "fshFile": "Examples\\erg-R10-nutzungsprotokoll.fsh",
+    "fshFile": "Examples/erg-R10-nutzungsprotokoll.fsh",
     "startLine": 18,
     "endLine": 24
   },
@@ -19,7 +19,7 @@
     "outputFile": "Bundle-BulkRetrieveExampleInput.json",
     "fshName": "BulkRetrieveExampleInput",
     "fshType": "Instance",
-    "fshFile": "Examples\\erg-R3-bulk-retrieve.fsh",
+    "fshFile": "Examples/erg-R3-bulk-retrieve.fsh",
     "startLine": 1,
     "endLine": 10
   },
@@ -27,7 +27,7 @@
     "outputFile": "Bundle-BulkRetrieveExampleOutput.json",
     "fshName": "BulkRetrieveExampleOutput",
     "fshType": "Instance",
-    "fshFile": "Examples\\erg-R3-bulk-retrieve.fsh",
+    "fshFile": "Examples/erg-R3-bulk-retrieve.fsh",
     "startLine": 12,
     "endLine": 21
   },
@@ -35,7 +35,7 @@
     "outputFile": "Bundle-BulkSubmitExample.json",
     "fshName": "BulkSubmitExample",
     "fshType": "Instance",
-    "fshFile": "Examples\\erg-R2-bulk-submit.fsh",
+    "fshFile": "Examples/erg-R2-bulk-submit.fsh",
     "startLine": 1,
     "endLine": 10
   },
@@ -43,7 +43,7 @@
     "outputFile": "Bundle-BulkSubmitExampleOutput.json",
     "fshName": "BulkSubmitExampleOutput",
     "fshType": "Instance",
-    "fshFile": "Examples\\erg-R2-bulk-submit.fsh",
+    "fshFile": "Examples/erg-R2-bulk-submit.fsh",
     "startLine": 133,
     "endLine": 142
   },
@@ -51,7 +51,7 @@
     "outputFile": "Bundle-ExampleR5Bundle.json",
     "fshName": "ExampleR5Bundle",
     "fshType": "Instance",
-    "fshFile": "Examples\\erg-R5-retrieve.fsh",
+    "fshFile": "Examples/erg-R5-retrieve.fsh",
     "startLine": 41,
     "endLine": 47
   },
@@ -59,7 +59,7 @@
     "outputFile": "Bundle-PatientenBundle.json",
     "fshName": "PatientenBundle",
     "fshType": "Instance",
-    "fshFile": "Examples\\erg-R0-patient-search.fsh",
+    "fshFile": "Examples/erg-R0-patient-search.fsh",
     "startLine": 1,
     "endLine": 7
   },
@@ -67,7 +67,7 @@
     "outputFile": "Bundle-R2444Bundle.json",
     "fshName": "R2444Bundle",
     "fshType": "Instance",
-    "fshFile": "Examples\\BeispielRechnung.fsh",
+    "fshFile": "Examples/BeispielRechnung.fsh",
     "startLine": 165,
     "endLine": 186
   },
@@ -75,7 +75,7 @@
     "outputFile": "ChargeItem-R2444ChargeItem.json",
     "fshName": "R2444ChargeItem",
     "fshType": "Instance",
-    "fshFile": "Examples\\BeispielRechnung.fsh",
+    "fshFile": "Examples/BeispielRechnung.fsh",
     "startLine": 51,
     "endLine": 66
   },
@@ -83,7 +83,7 @@
     "outputFile": "CodeSystem-BehandlungsartCS.json",
     "fshName": "BehandlungsartCS",
     "fshType": "CodeSystem",
-    "fshFile": "Examples\\BeispielRechnung.fsh",
+    "fshFile": "Examples/BeispielRechnung.fsh",
     "startLine": 130,
     "endLine": 133
   },
@@ -91,7 +91,7 @@
     "outputFile": "CodeSystem-erg-attachment-format-cs.json",
     "fshName": "ERGAttachmentFormatCS",
     "fshType": "CodeSystem",
-    "fshFile": "Profiles\\erg-dokumentenmetadaten.fsh",
+    "fshFile": "Profiles/erg-dokumentenmetadaten.fsh",
     "startLine": 138,
     "endLine": 145
   },
@@ -99,7 +99,7 @@
     "outputFile": "CodeSystem-erg-dokument-artderarchivierung-cs.json",
     "fshName": "ERGDokumentArtDerArchivierungCS",
     "fshType": "CodeSystem",
-    "fshFile": "CodeSystems\\erg-rechnung-markierung.fsh",
+    "fshFile": "CodeSystems/erg-rechnung-markierung.fsh",
     "startLine": 14,
     "endLine": 19
   },
@@ -107,7 +107,7 @@
     "outputFile": "CodeSystem-erg-operationen-cs.json",
     "fshName": "ERGOperationenCS",
     "fshType": "CodeSystem",
-    "fshFile": "Profiles\\erg-nutzungsprotokoll.fsh",
+    "fshFile": "Profiles/erg-nutzungsprotokoll.fsh",
     "startLine": 42,
     "endLine": 49
   },
@@ -115,7 +115,7 @@
     "outputFile": "CodeSystem-erg-participant-role-CS.json",
     "fshName": "ERGParticipantRoleCS",
     "fshType": "CodeSystem",
-    "fshFile": "Profiles\\erg-rechnung.fsh",
+    "fshFile": "Profiles/erg-rechnung.fsh",
     "startLine": 120,
     "endLine": 124
   },
@@ -123,7 +123,7 @@
     "outputFile": "CodeSystem-erg-prop-rest-interactions-cs.json",
     "fshName": "ERGPropRestInterationsCS",
     "fshType": "CodeSystem",
-    "fshFile": "Profiles\\erg-nutzungsprotokoll.fsh",
+    "fshFile": "Profiles/erg-nutzungsprotokoll.fsh",
     "startLine": 51,
     "endLine": 57
   },
@@ -131,7 +131,7 @@
     "outputFile": "CodeSystem-erg-rechnung-markierung-cs.json",
     "fshName": "ERGRechnungMarkierungCS",
     "fshType": "CodeSystem",
-    "fshFile": "CodeSystems\\erg-rechnung-markierung.fsh",
+    "fshFile": "CodeSystems/erg-rechnung-markierung.fsh",
     "startLine": 1,
     "endLine": 12
   },
@@ -139,7 +139,7 @@
     "outputFile": "CodeSystem-erg-rechnung-submit-modus-cs.json",
     "fshName": "ERGRechnungSubmitModusCS",
     "fshType": "CodeSystem",
-    "fshFile": "OperationDefinitions\\erg-operation-submit.fsh",
+    "fshFile": "OperationDefinitions/erg-operation-submit.fsh",
     "startLine": 86,
     "endLine": 91
   },
@@ -147,7 +147,7 @@
     "outputFile": "CodeSystem-erg-rechnung-type-cs.json",
     "fshName": "ERGRechnungTypeCS",
     "fshType": "CodeSystem",
-    "fshFile": "CodeSystems\\erg-rechnung-type-cs.fsh",
+    "fshFile": "CodeSystems/erg-rechnung-type-cs.fsh",
     "startLine": 1,
     "endLine": 5
   },
@@ -155,7 +155,7 @@
     "outputFile": "CodeSystem-erg-rechnungsstatus-cs.json",
     "fshName": "ERGARechnungsstatusCS",
     "fshType": "CodeSystem",
-    "fshFile": "Profiles\\erg-dokumentenmetadaten.fsh",
+    "fshFile": "Profiles/erg-dokumentenmetadaten.fsh",
     "startLine": 147,
     "endLine": 153
   },
@@ -163,7 +163,7 @@
     "outputFile": "Composition-R2444Document.json",
     "fshName": "R2444Document",
     "fshType": "Instance",
-    "fshFile": "Examples\\BeispielRechnung.fsh",
+    "fshFile": "Examples/BeispielRechnung.fsh",
     "startLine": 141,
     "endLine": 163
   },
@@ -171,7 +171,7 @@
     "outputFile": "Condition-R2444Diagnose.json",
     "fshName": "R2444Diagnose",
     "fshType": "Instance",
-    "fshFile": "Examples\\BeispielRechnung.fsh",
+    "fshFile": "Examples/BeispielRechnung.fsh",
     "startLine": 82,
     "endLine": 91
   },
@@ -179,7 +179,7 @@
     "outputFile": "DocumentReference-BeispielDocumentReferenceRechnung3-FD.json",
     "fshName": "BeispielDocumentReferenceRechnung3-FD",
     "fshType": "Instance",
-    "fshFile": "Examples\\erg-R1-submit.fsh",
+    "fshFile": "Examples/erg-R1-submit.fsh",
     "startLine": 10,
     "endLine": 42
   },
@@ -187,7 +187,7 @@
     "outputFile": "DocumentReference-BeispielDocumentReferenceRechnung3-LE.json",
     "fshName": "BeispielDocumentReferenceRechnung3-LE",
     "fshType": "Instance",
-    "fshFile": "Examples\\erg-R2-bulk-submit.fsh",
+    "fshFile": "Examples/erg-R2-bulk-submit.fsh",
     "startLine": 21,
     "endLine": 49
   },
@@ -195,7 +195,7 @@
     "outputFile": "DocumentReference-BeispielDocumentReferenceRechnung3.1-FD.json",
     "fshName": "BeispielDocumentReferenceRechnung3.1-FD",
     "fshType": "Instance",
-    "fshFile": "Examples\\erg-R2-bulk-submit.fsh",
+    "fshFile": "Examples/erg-R2-bulk-submit.fsh",
     "startLine": 153,
     "endLine": 185
   },
@@ -203,7 +203,7 @@
     "outputFile": "DocumentReference-BeispielDocumentReferenceRechnung3.1-LE.json",
     "fshName": "BeispielDocumentReferenceRechnung3.1-LE",
     "fshType": "Instance",
-    "fshFile": "Examples\\erg-R2-bulk-submit.fsh",
+    "fshFile": "Examples/erg-R2-bulk-submit.fsh",
     "startLine": 72,
     "endLine": 103
   },
@@ -211,7 +211,7 @@
     "outputFile": "DocumentReference-BeispielDocumentReferenceRechnungRetrieve.json",
     "fshName": "BeispielDocumentReferenceRechnungRetrieve",
     "fshType": "Instance",
-    "fshFile": "Examples\\erg-R3R6-retrieve.fsh",
+    "fshFile": "Examples/erg-R3R6-retrieve.fsh",
     "startLine": 13,
     "endLine": 29
   },
@@ -219,7 +219,7 @@
     "outputFile": "DocumentReference-BeispielDocumentReferenceRechnungRetrieve2.json",
     "fshName": "BeispielDocumentReferenceRechnungRetrieve2",
     "fshType": "Instance",
-    "fshFile": "Examples\\erg-R3-bulk-retrieve.fsh",
+    "fshFile": "Examples/erg-R3-bulk-retrieve.fsh",
     "startLine": 29,
     "endLine": 45
   },
@@ -227,7 +227,7 @@
     "outputFile": "DocumentReference-BeispielDocumentReferenceSonstigesDokument3-FD.json",
     "fshName": "BeispielDocumentReferenceSonstigesDokument3-FD",
     "fshType": "Instance",
-    "fshFile": "Examples\\erg-R1-submit.fsh",
+    "fshFile": "Examples/erg-R1-submit.fsh",
     "startLine": 44,
     "endLine": 63
   },
@@ -235,7 +235,7 @@
     "outputFile": "DocumentReference-BeispielDocumentReferenceSonstigesDokument3-LE.json",
     "fshName": "BeispielDocumentReferenceSonstigesDokument3-LE",
     "fshType": "Instance",
-    "fshFile": "Examples\\erg-R2-bulk-submit.fsh",
+    "fshFile": "Examples/erg-R2-bulk-submit.fsh",
     "startLine": 51,
     "endLine": 61
   },
@@ -243,7 +243,7 @@
     "outputFile": "DocumentReference-BeispielDocumentReferenceSonstigesDokument3.1-FD.json",
     "fshName": "BeispielDocumentReferenceSonstigesDokument3.1-FD",
     "fshType": "Instance",
-    "fshFile": "Examples\\erg-R2-bulk-submit.fsh",
+    "fshFile": "Examples/erg-R2-bulk-submit.fsh",
     "startLine": 187,
     "endLine": 206
   },
@@ -251,7 +251,7 @@
     "outputFile": "DocumentReference-BeispielDocumentReferenceSonstigesDokument3.1-LE.json",
     "fshName": "BeispielDocumentReferenceSonstigesDokument3.1-LE",
     "fshType": "Instance",
-    "fshFile": "Examples\\erg-R2-bulk-submit.fsh",
+    "fshFile": "Examples/erg-R2-bulk-submit.fsh",
     "startLine": 105,
     "endLine": 115
   },
@@ -259,7 +259,7 @@
     "outputFile": "DocumentReference-ExampleR5DocumentReference.json",
     "fshName": "ExampleR5DocumentReference",
     "fshType": "Instance",
-    "fshFile": "Examples\\erg-R5-retrieve.fsh",
+    "fshFile": "Examples/erg-R5-retrieve.fsh",
     "startLine": 2,
     "endLine": 39
   },
@@ -267,7 +267,7 @@
     "outputFile": "Invoice-R2444Rechnung.json",
     "fshName": "R2444Rechnung",
     "fshType": "Instance",
-    "fshFile": "Examples\\BeispielRechnung.fsh",
+    "fshFile": "Examples/BeispielRechnung.fsh",
     "startLine": 1,
     "endLine": 49
   },
@@ -275,7 +275,7 @@
     "outputFile": "OperationDefinition-ERGOperationChangeStatus.json",
     "fshName": "ERGOperationChangeStatus",
     "fshType": "Instance",
-    "fshFile": "OperationDefinitions\\erg-change-status.fsh",
+    "fshFile": "OperationDefinitions/erg-change-status.fsh",
     "startLine": 3,
     "endLine": 31
   },
@@ -283,7 +283,7 @@
     "outputFile": "OperationDefinition-ERGOperationErase.json",
     "fshName": "ERGOperationErase",
     "fshType": "Instance",
-    "fshFile": "OperationDefinitions\\erg-operation-erase.fsh",
+    "fshFile": "OperationDefinitions/erg-operation-erase.fsh",
     "startLine": 3,
     "endLine": 17
   },
@@ -291,7 +291,7 @@
     "outputFile": "OperationDefinition-ERGOperationProcessFlag.json",
     "fshName": "ERGOperationProcessFlag",
     "fshType": "Instance",
-    "fshFile": "OperationDefinitions\\erg-process-flag.fsh",
+    "fshFile": "OperationDefinitions/erg-process-flag.fsh",
     "startLine": 3,
     "endLine": 59
   },
@@ -299,7 +299,7 @@
     "outputFile": "OperationDefinition-ERGOperationRetrieve.json",
     "fshName": "ERGOperationRetrieve",
     "fshType": "Instance",
-    "fshFile": "OperationDefinitions\\erg-operation-retrieve.fsh",
+    "fshFile": "OperationDefinitions/erg-operation-retrieve.fsh",
     "startLine": 3,
     "endLine": 45
   },
@@ -307,7 +307,7 @@
     "outputFile": "OperationDefinition-ERGOperationSubmit.json",
     "fshName": "ERGOperationSubmit",
     "fshType": "Instance",
-    "fshFile": "OperationDefinitions\\erg-operation-submit.fsh",
+    "fshFile": "OperationDefinitions/erg-operation-submit.fsh",
     "startLine": 3,
     "endLine": 82
   },
@@ -315,7 +315,7 @@
     "outputFile": "Parameters-BeispielParameterChangeStatusInput.json",
     "fshName": "BeispielParameterChangeStatusInput",
     "fshType": "Instance",
-    "fshFile": "Examples\\erg-R7-change-status.fsh",
+    "fshFile": "Examples/erg-R7-change-status.fsh",
     "startLine": 1,
     "endLine": 5
   },
@@ -323,7 +323,7 @@
     "outputFile": "Parameters-BeispielParameterChangeStatusOutput.json",
     "fshName": "BeispielParameterChangeStatusOutput",
     "fshType": "Instance",
-    "fshFile": "Examples\\erg-R7-change-status.fsh",
+    "fshFile": "Examples/erg-R7-change-status.fsh",
     "startLine": 7,
     "endLine": 11
   },
@@ -331,7 +331,7 @@
     "outputFile": "Parameters-BeispielParameterProcessFlagInput.json",
     "fshName": "BeispielParameterProcessFlagInput",
     "fshType": "Instance",
-    "fshFile": "Examples\\erg-R8-process-flag.fsh",
+    "fshFile": "Examples/erg-R8-process-flag.fsh",
     "startLine": 1,
     "endLine": 13
   },
@@ -339,7 +339,7 @@
     "outputFile": "Parameters-BeispielParameterProcessFlagOutput.json",
     "fshName": "BeispielParameterProcessFlagOutput",
     "fshType": "Instance",
-    "fshFile": "Examples\\erg-R8-process-flag.fsh",
+    "fshFile": "Examples/erg-R8-process-flag.fsh",
     "startLine": 16,
     "endLine": 38
   },
@@ -347,7 +347,7 @@
     "outputFile": "Parameters-BeispielParameterRetrieveInput.json",
     "fshName": "BeispielParameterRetrieveInput",
     "fshType": "Instance",
-    "fshFile": "Examples\\erg-R3R6-retrieve.fsh",
+    "fshFile": "Examples/erg-R3R6-retrieve.fsh",
     "startLine": 1,
     "endLine": 11
   },
@@ -355,7 +355,7 @@
     "outputFile": "Parameters-BeispielParameterRetrieveInput2.json",
     "fshName": "BeispielParameterRetrieveInput2",
     "fshType": "Instance",
-    "fshFile": "Examples\\erg-R3-bulk-retrieve.fsh",
+    "fshFile": "Examples/erg-R3-bulk-retrieve.fsh",
     "startLine": 23,
     "endLine": 27
   },
@@ -363,7 +363,7 @@
     "outputFile": "Parameters-BeispielParameterSubmitInput3-LE.json",
     "fshName": "BeispielParameterSubmitInput3-LE",
     "fshType": "Instance",
-    "fshFile": "Examples\\erg-R2-bulk-submit.fsh",
+    "fshFile": "Examples/erg-R2-bulk-submit.fsh",
     "startLine": 12,
     "endLine": 19
   },
@@ -371,7 +371,7 @@
     "outputFile": "Parameters-BeispielParameterSubmitInput3.1-LE.json",
     "fshName": "BeispielParameterSubmitInput3.1-LE",
     "fshType": "Instance",
-    "fshFile": "Examples\\erg-R2-bulk-submit.fsh",
+    "fshFile": "Examples/erg-R2-bulk-submit.fsh",
     "startLine": 63,
     "endLine": 70
   },
@@ -379,7 +379,7 @@
     "outputFile": "Parameters-BeispielParameterSubmitOutput3-FD.json",
     "fshName": "BeispielParameterSubmitOutput3-FD",
     "fshType": "Instance",
-    "fshFile": "Examples\\erg-R1-submit.fsh",
+    "fshFile": "Examples/erg-R1-submit.fsh",
     "startLine": 1,
     "endLine": 8
   },
@@ -387,7 +387,7 @@
     "outputFile": "Parameters-BeispielParameterSubmitOutput3.1-FD.json",
     "fshName": "BeispielParameterSubmitOutput3.1-FD",
     "fshType": "Instance",
-    "fshFile": "Examples\\erg-R2-bulk-submit.fsh",
+    "fshFile": "Examples/erg-R2-bulk-submit.fsh",
     "startLine": 144,
     "endLine": 151
   },
@@ -395,7 +395,7 @@
     "outputFile": "Patient-BeispielPatient3-FD.json",
     "fshName": "BeispielPatient3-FD",
     "fshType": "Instance",
-    "fshFile": "Examples\\erg-R2-bulk-submit.fsh",
+    "fshFile": "Examples/erg-R2-bulk-submit.fsh",
     "startLine": 117,
     "endLine": 127
   },
@@ -403,7 +403,7 @@
     "outputFile": "Patient-PatientVater.json",
     "fshName": "PatientVater",
     "fshType": "Instance",
-    "fshFile": "Examples\\erg-R0-patient-search.fsh",
+    "fshFile": "Examples/erg-R0-patient-search.fsh",
     "startLine": 9,
     "endLine": 21
   },
@@ -411,7 +411,7 @@
     "outputFile": "Patient-R2444PKVersichertePerson.json",
     "fshName": "R2444PKVersichertePerson",
     "fshType": "Instance",
-    "fshFile": "Examples\\BeispielRechnung.fsh",
+    "fshFile": "Examples/BeispielRechnung.fsh",
     "startLine": 68,
     "endLine": 80
   },
@@ -419,7 +419,7 @@
     "outputFile": "Practitioner-R2444Practitioner.json",
     "fshName": "R2444Practitioner",
     "fshType": "Instance",
-    "fshFile": "Examples\\BeispielRechnung.fsh",
+    "fshFile": "Examples/BeispielRechnung.fsh",
     "startLine": 93,
     "endLine": 122
   },
@@ -427,7 +427,7 @@
     "outputFile": "Questionnaire-QuestionnaireInvoice.json",
     "fshName": "QuestionnaireInvoice",
     "fshType": "Instance",
-    "fshFile": "Questionnaire\\Invoice.fsh",
+    "fshFile": "Questionnaire/Invoice.fsh",
     "startLine": 1,
     "endLine": 163
   },
@@ -435,7 +435,7 @@
     "outputFile": "QuestionnaireResponse-undefined.json",
     "fshName": "undefined",
     "fshType": "Instance",
-    "fshFile": "Questionnaire\\InvoiceResponse.fsh",
+    "fshFile": "Questionnaire/InvoiceResponse.fsh",
     "startLine": 23,
     "endLine": 58
   },
@@ -443,7 +443,7 @@
     "outputFile": "SearchParameter-erg-makierung.json",
     "fshName": "erg-makierung",
     "fshType": "Instance",
-    "fshFile": "SearchParameter\\erg-searchParam-ergpkvmakierung.fsh",
+    "fshFile": "SearchParameter/erg-searchParam-ergpkvmakierung.fsh",
     "startLine": 1,
     "endLine": 14
   },
@@ -451,7 +451,7 @@
     "outputFile": "StructureDefinition-ExtensionBehandlungsart.json",
     "fshName": "ExtensionBehandlungsart",
     "fshType": "Extension",
-    "fshFile": "Examples\\BeispielRechnung.fsh",
+    "fshFile": "Examples/BeispielRechnung.fsh",
     "startLine": 124,
     "endLine": 128
   },
@@ -459,7 +459,7 @@
     "outputFile": "StructureDefinition-erg-abrechnungsrelevante-diagnose.json",
     "fshName": "ERGAbrechnungsrelevanteDiagnose",
     "fshType": "Extension",
-    "fshFile": "Profiles\\erg-rechnung.fsh",
+    "fshFile": "Profiles/erg-rechnung.fsh",
     "startLine": 112,
     "endLine": 118
   },
@@ -467,7 +467,7 @@
     "outputFile": "StructureDefinition-erg-behandlungsart.json",
     "fshName": "ERGBehandlungsart",
     "fshType": "Extension",
-    "fshFile": "Profiles\\erg-rechnung.fsh",
+    "fshFile": "Profiles/erg-rechnung.fsh",
     "startLine": 104,
     "endLine": 110
   },
@@ -475,7 +475,7 @@
     "outputFile": "StructureDefinition-erg-docref-fachrichtung.json",
     "fshName": "ERGDocRefFachrichtung",
     "fshType": "Extension",
-    "fshFile": "Profiles\\erg-dokumentenmetadaten.fsh",
+    "fshFile": "Profiles/erg-dokumentenmetadaten.fsh",
     "startLine": 165,
     "endLine": 172
   },
@@ -483,7 +483,7 @@
     "outputFile": "StructureDefinition-erg-docref-leistungsart.json",
     "fshName": "ERGDocRefLeistungsart",
     "fshType": "Extension",
-    "fshFile": "Profiles\\erg-dokumentenmetadaten.fsh",
+    "fshFile": "Profiles/erg-dokumentenmetadaten.fsh",
     "startLine": 174,
     "endLine": 180
   },
@@ -491,7 +491,7 @@
     "outputFile": "StructureDefinition-erg-docref-signature.json",
     "fshName": "ERGDocRefSignature",
     "fshType": "Extension",
-    "fshFile": "Profiles\\erg-dokumentenmetadaten.fsh",
+    "fshFile": "Profiles/erg-dokumentenmetadaten.fsh",
     "startLine": 157,
     "endLine": 163
   },
@@ -499,7 +499,7 @@
     "outputFile": "StructureDefinition-erg-documentreference-gesamtbetrag.json",
     "fshName": "ERGDocumentReferenceGesamtbetrag",
     "fshType": "Extension",
-    "fshFile": "Extensions\\erg-documentreference-Gesamtbetrag.fsh",
+    "fshFile": "Extensions/erg-documentreference-Gesamtbetrag.fsh",
     "startLine": 1,
     "endLine": 6
   },
@@ -507,7 +507,7 @@
     "outputFile": "StructureDefinition-erg-documentreference-markierung.json",
     "fshName": "ERGDocumentReferenceMarkierung",
     "fshType": "Extension",
-    "fshFile": "Extensions\\erg-documentreference-markierung.fsh",
+    "fshFile": "Extensions/erg-documentreference-markierung.fsh",
     "startLine": 1,
     "endLine": 28
   },
@@ -515,7 +515,7 @@
     "outputFile": "StructureDefinition-erg-documentreference-rechnungsdatum.json",
     "fshName": "ERGDocumentReferenceRechnungsdatum",
     "fshType": "Extension",
-    "fshFile": "Extensions\\erg-documentreference-rechnungsdatum.fsh",
+    "fshFile": "Extensions/erg-documentreference-rechnungsdatum.fsh",
     "startLine": 1,
     "endLine": 6
   },
@@ -523,7 +523,7 @@
     "outputFile": "StructureDefinition-erg-documentreference-zahlungszieldatum.json",
     "fshName": "ERGDocumentReferenceZahlungszieldatum",
     "fshType": "Extension",
-    "fshFile": "Extensions\\erg-documentreference-zahlungszieldatum.fsh",
+    "fshFile": "Extensions/erg-documentreference-zahlungszieldatum.fsh",
     "startLine": 1,
     "endLine": 6
   },
@@ -531,7 +531,7 @@
     "outputFile": "StructureDefinition-erg-dokumentenmetadaten.json",
     "fshName": "ERGDokumentenmetadaten",
     "fshType": "Profile",
-    "fshFile": "Profiles\\erg-dokumentenmetadaten.fsh",
+    "fshFile": "Profiles/erg-dokumentenmetadaten.fsh",
     "startLine": 4,
     "endLine": 120
   },
@@ -539,7 +539,7 @@
     "outputFile": "StructureDefinition-erg-invoice-period.json",
     "fshName": "ERGInvoicePeriod",
     "fshType": "Extension",
-    "fshFile": "Extensions\\erg-invoice-period.fsh",
+    "fshFile": "Extensions/erg-invoice-period.fsh",
     "startLine": 1,
     "endLine": 10
   },
@@ -547,7 +547,7 @@
     "outputFile": "StructureDefinition-erg-leistungserbringer-organisation.json",
     "fshName": "ERGLeistungserbringerOrganisation",
     "fshType": "Profile",
-    "fshFile": "Profiles\\erg-leistungserbringer-organisation.fsh",
+    "fshFile": "Profiles/erg-leistungserbringer-organisation.fsh",
     "startLine": 1,
     "endLine": 34
   },
@@ -555,7 +555,7 @@
     "outputFile": "StructureDefinition-erg-leistungserbringer.json",
     "fshName": "ERGLeistungserbringer",
     "fshType": "Profile",
-    "fshFile": "Profiles\\erg-leistungserbringer-person.fsh",
+    "fshFile": "Profiles/erg-leistungserbringer-person.fsh",
     "startLine": 1,
     "endLine": 47
   },
@@ -563,7 +563,7 @@
     "outputFile": "StructureDefinition-erg-nutzungsprotokoll.json",
     "fshName": "ERGNutzungsprotokoll",
     "fshType": "Profile",
-    "fshFile": "Profiles\\erg-nutzungsprotokoll.fsh",
+    "fshFile": "Profiles/erg-nutzungsprotokoll.fsh",
     "startLine": 1,
     "endLine": 40
   },
@@ -571,7 +571,7 @@
     "outputFile": "StructureDefinition-erg-pdf-repraesentation-rechnung.json",
     "fshName": "ERGPDFRepraesentationRechnung",
     "fshType": "Extension",
-    "fshFile": "Profiles\\erg-rechnung.fsh",
+    "fshFile": "Profiles/erg-rechnung.fsh",
     "startLine": 94,
     "endLine": 97
   },
@@ -579,7 +579,7 @@
     "outputFile": "StructureDefinition-erg-preisdetails-rechnungsposition.json",
     "fshName": "ERGPreisDetailsRechnungsposition",
     "fshType": "Extension",
-    "fshFile": "Profiles\\erg-rechnungsposition.fsh",
+    "fshFile": "Profiles/erg-rechnungsposition.fsh",
     "startLine": 27,
     "endLine": 35
   },
@@ -587,7 +587,7 @@
     "outputFile": "StructureDefinition-erg-rechnung.json",
     "fshName": "ERGRechnung",
     "fshType": "Profile",
-    "fshFile": "Profiles\\erg-rechnung.fsh",
+    "fshFile": "Profiles/erg-rechnung.fsh",
     "startLine": 1,
     "endLine": 91
   },
@@ -595,7 +595,7 @@
     "outputFile": "StructureDefinition-erg-rechnungsdiagnose.json",
     "fshName": "ERGRechnungsdiagnose",
     "fshType": "Profile",
-    "fshFile": "Profiles\\erg-rechnungsdiagnose.fsh",
+    "fshFile": "Profiles/erg-rechnungsdiagnose.fsh",
     "startLine": 1,
     "endLine": 20
   },
@@ -603,7 +603,7 @@
     "outputFile": "StructureDefinition-erg-rechnungsdokument.json",
     "fshName": "ERGRechnungsdokument",
     "fshType": "Profile",
-    "fshFile": "Profiles\\erg-rechnungsdokument.fsh",
+    "fshFile": "Profiles/erg-rechnungsdokument.fsh",
     "startLine": 1,
     "endLine": 12
   },
@@ -611,7 +611,7 @@
     "outputFile": "StructureDefinition-erg-rechnungsposition.json",
     "fshName": "ERGRechnungsposition",
     "fshType": "Profile",
-    "fshFile": "Profiles\\erg-rechnungsposition.fsh",
+    "fshFile": "Profiles/erg-rechnungsposition.fsh",
     "startLine": 1,
     "endLine": 25
   },
@@ -619,7 +619,7 @@
     "outputFile": "StructureDefinition-erg-task-requestedPerformer.json",
     "fshName": "ERGTaskRequestedPerformer",
     "fshType": "Extension",
-    "fshFile": "Extensions\\erg-task-requestedPerformer.fsh",
+    "fshFile": "Extensions/erg-task-requestedPerformer.fsh",
     "startLine": 1,
     "endLine": 10
   },
@@ -627,7 +627,7 @@
     "outputFile": "StructureDefinition-erg-versicherteperson.json",
     "fshName": "ERGVersichertePerson",
     "fshType": "Profile",
-    "fshFile": "Profiles\\erg-versicherteperson.fsh",
+    "fshFile": "Profiles/erg-versicherteperson.fsh",
     "startLine": 1,
     "endLine": 39
   },
@@ -635,7 +635,7 @@
     "outputFile": "StructureDefinition-erg-zahlungsziel.json",
     "fshName": "ERGZahlungsziel",
     "fshType": "Extension",
-    "fshFile": "Profiles\\erg-rechnung.fsh",
+    "fshFile": "Profiles/erg-rechnung.fsh",
     "startLine": 99,
     "endLine": 102
   },
@@ -643,7 +643,7 @@
     "outputFile": "ValueSet-BehandlungsartVS.json",
     "fshName": "BehandlungsartVS",
     "fshType": "ValueSet",
-    "fshFile": "Examples\\BeispielRechnung.fsh",
+    "fshFile": "Examples/BeispielRechnung.fsh",
     "startLine": 135,
     "endLine": 139
   },
@@ -651,7 +651,7 @@
     "outputFile": "ValueSet-TESTICD10GM.json",
     "fshName": "TESTICD10GM",
     "fshType": "ValueSet",
-    "fshFile": "Questionnaire\\ValueSet-ICD10.fsh",
+    "fshFile": "Questionnaire/ValueSet-ICD10.fsh",
     "startLine": 3,
     "endLine": 42
   },
@@ -659,7 +659,7 @@
     "outputFile": "ValueSet-erg-audit-event-agent-type-vs.json",
     "fshName": "ERGAuditEventAgentTypeVS",
     "fshType": "ValueSet",
-    "fshFile": "Profiles\\erg-nutzungsprotokoll.fsh",
+    "fshFile": "Profiles/erg-nutzungsprotokoll.fsh",
     "startLine": 73,
     "endLine": 77
   },
@@ -667,7 +667,7 @@
     "outputFile": "ValueSet-erg-audit-event-sub-type-vs.json",
     "fshName": "ERGAuditEventSubTypeVS",
     "fshType": "ValueSet",
-    "fshFile": "Profiles\\erg-nutzungsprotokoll.fsh",
+    "fshFile": "Profiles/erg-nutzungsprotokoll.fsh",
     "startLine": 59,
     "endLine": 64
   },
@@ -675,7 +675,7 @@
     "outputFile": "ValueSet-erg-audit-event-type-vs.json",
     "fshName": "ERGAuditEventTypeVS",
     "fshType": "ValueSet",
-    "fshFile": "Profiles\\erg-nutzungsprotokoll.fsh",
+    "fshFile": "Profiles/erg-nutzungsprotokoll.fsh",
     "startLine": 66,
     "endLine": 70
   },
@@ -683,7 +683,7 @@
     "outputFile": "ValueSet-erg-dokument-artderarchivierung-vs.json",
     "fshName": "ERGDokumentArtDerArchivierungVS",
     "fshType": "ValueSet",
-    "fshFile": "ValueSets\\erg-rechnung-markierung-vs.fsh",
+    "fshFile": "ValueSets/erg-rechnung-markierung-vs.fsh",
     "startLine": 8,
     "endLine": 13
   },
@@ -691,7 +691,7 @@
     "outputFile": "ValueSet-erg-participant-role-VS.json",
     "fshName": "ERGParticipantRoleVS",
     "fshType": "ValueSet",
-    "fshFile": "Profiles\\erg-rechnung.fsh",
+    "fshFile": "Profiles/erg-rechnung.fsh",
     "startLine": 126,
     "endLine": 130
   },
@@ -699,7 +699,7 @@
     "outputFile": "ValueSet-erg-rechnung-markierung-vs.json",
     "fshName": "ERGRechnungMarkierungVS",
     "fshType": "ValueSet",
-    "fshFile": "ValueSets\\erg-rechnung-markierung-vs.fsh",
+    "fshFile": "ValueSets/erg-rechnung-markierung-vs.fsh",
     "startLine": 1,
     "endLine": 6
   },
@@ -707,7 +707,7 @@
     "outputFile": "ValueSet-erg-rechnung-submit-modus-vs.json",
     "fshName": "ERGRechnungSubmitModusVS",
     "fshType": "ValueSet",
-    "fshFile": "OperationDefinitions\\erg-operation-submit.fsh",
+    "fshFile": "OperationDefinitions/erg-operation-submit.fsh",
     "startLine": 93,
     "endLine": 97
   },
@@ -715,7 +715,7 @@
     "outputFile": "ValueSet-erg-rechnungsstatus-vs.json",
     "fshName": "ERGRechnungsstatusVS",
     "fshType": "ValueSet",
-    "fshFile": "Profiles\\erg-dokumentenmetadaten.fsh",
+    "fshFile": "Profiles/erg-dokumentenmetadaten.fsh",
     "startLine": 131,
     "endLine": 134
   },
@@ -723,7 +723,7 @@
     "outputFile": "ValueSet-erg-restricted-mime-types-vs.json",
     "fshName": "ERGRestrictedMimeTypesVS",
     "fshType": "ValueSet",
-    "fshFile": "Profiles\\erg-dokumentenmetadaten.fsh",
+    "fshFile": "Profiles/erg-dokumentenmetadaten.fsh",
     "startLine": 124,
     "endLine": 129
   },
@@ -731,8 +731,8 @@
     "outputFile": "ValueSet-erg-sonstigesdokument-type-vs.json",
     "fshName": "ERGSonstigesDokumentTypeVS",
     "fshType": "ValueSet",
-    "fshFile": "ValueSets\\erg-sonstigesDokument-type-vs.fsh",
+    "fshFile": "ValueSets/erg-sonstigesDokument-type-vs.fsh",
     "startLine": 1,
-    "endLine": 5
+    "endLine": 6
   }
 ]

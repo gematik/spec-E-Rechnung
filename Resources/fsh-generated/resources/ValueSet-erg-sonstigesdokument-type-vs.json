@@ -1,11 +1,25 @@
 {
   "resourceType": "ValueSet",
-  "status": "draft",
+  "status": "active",
   "name": "ERGSonstigesDokumentTypeVS",
   "id": "erg-sonstigesdokument-type-vs",
   "title": "ERG Sonstiges Dokument Type VS",
   "description": "ValueSet zur Klassifizierung von weiteren Dokumenten",
+  "version": "1.0.0-CC",
   "url": "https://gematik.de/fhir/erg/ValueSet/erg-sonstigesdokument-type-vs",
+  "experimental": false,
+  "date": "2024-06-20",
+  "publisher": "gematik GmbH",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://gematik.de/"
+        }
+      ]
+    }
+  ],
   "compose": {
     "include": [
       {
