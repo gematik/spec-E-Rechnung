@@ -71,7 +71,7 @@ StructureDefinition-erg-leistungserbringer-organisation.json             ERGLeis
 StructureDefinition-erg-leistungserbringer.json                          ERGLeistungserbringer                             Profile     Profiles/erg-leistungserbringer-person.fsh              1 - 47
 StructureDefinition-erg-nutzungsprotokoll.json                           ERGNutzungsprotokoll                              Profile     Profiles/erg-nutzungsprotokoll.fsh                      1 - 40
 StructureDefinition-erg-pdf-repraesentation-rechnung.json                ERGPDFRepraesentationRechnung                     Extension   Profiles/erg-rechnung.fsh                               94 - 98
-StructureDefinition-erg-preisdetails-rechnungsposition.json              ERGPreisDetailsRechnungsposition                  Extension   Profiles/erg-rechnungsposition.fsh                      27 - 35
+StructureDefinition-erg-preisdetails-rechnungsposition.json              ERGPreisDetailsRechnungsposition                  Extension   Profiles/erg-rechnungsposition.fsh                      27 - 36
 StructureDefinition-erg-rechnung.json                                    ERGRechnung                                       Profile     Profiles/erg-rechnung.fsh                               1 - 91
 StructureDefinition-erg-rechnungsdiagnose.json                           ERGRechnungsdiagnose                              Profile     Profiles/erg-rechnungsdiagnose.fsh                      1 - 20
 StructureDefinition-erg-rechnungsdokument.json                           ERGRechnungsdokument                              Profile     Profiles/erg-rechnungsdokument.fsh                      1 - 12

@@ -581,7 +581,7 @@
     "fshType": "Extension",
     "fshFile": "Profiles/erg-rechnungsposition.fsh",
     "startLine": 27,
-    "endLine": 35
+    "endLine": 36
   },
   {
     "outputFile": "StructureDefinition-erg-rechnung.json",

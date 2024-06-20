@@ -27,6 +27,7 @@ Id: erg-rechnungsposition
 Extension: ERGPreisDetailsRechnungsposition
 Id: erg-preisdetails-rechnungsposition
 Title: "ERG Preisdetails Rechnungsposition"
+* insert Meta
 * extension contains type 1..1 MS and code 0..1 and factor 0..1 and amount 0..1
 * extension[type].value[x] only code
 * extension[type].valueCode from http://hl7.org/fhir/invoice-priceComponentType (required)
