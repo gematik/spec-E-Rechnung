@@ -2,9 +2,23 @@
   "resourceType": "StructureDefinition",
   "id": "erg-docref-leistungsart",
   "url": "https://gematik.de/fhir/erg/StructureDefinition/erg-docref-leistungsart",
+  "version": "1.0.0-CC",
   "name": "ERGDocRefLeistungsart",
   "title": "ERG DocRef Leistungsart",
-  "status": "draft",
+  "status": "active",
+  "experimental": false,
+  "date": "2024-06-20",
+  "publisher": "gematik GmbH",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://gematik.de/"
+        }
+      ]
+    }
+  ],
   "description": "Extension zur Angabe einer Leistungsart",
   "fhirVersion": "4.0.1",
   "kind": "complex-type",

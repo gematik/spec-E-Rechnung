@@ -92,8 +92,8 @@
     "fshName": "ERGAttachmentFormatCS",
     "fshType": "CodeSystem",
     "fshFile": "Profiles/erg-dokumentenmetadaten.fsh",
-    "startLine": 138,
-    "endLine": 145
+    "startLine": 140,
+    "endLine": 148
   },
   {
     "outputFile": "CodeSystem-erg-dokument-artderarchivierung-cs.json",
@@ -156,8 +156,8 @@
     "fshName": "ERGARechnungsstatusCS",
     "fshType": "CodeSystem",
     "fshFile": "Profiles/erg-dokumentenmetadaten.fsh",
-    "startLine": 147,
-    "endLine": 153
+    "startLine": 150,
+    "endLine": 157
   },
   {
     "outputFile": "Composition-R2444Document.json",
@@ -476,24 +476,24 @@
     "fshName": "ERGDocRefFachrichtung",
     "fshType": "Extension",
     "fshFile": "Profiles/erg-dokumentenmetadaten.fsh",
-    "startLine": 165,
-    "endLine": 172
+    "startLine": 170,
+    "endLine": 178
   },
   {
     "outputFile": "StructureDefinition-erg-docref-leistungsart.json",
     "fshName": "ERGDocRefLeistungsart",
     "fshType": "Extension",
     "fshFile": "Profiles/erg-dokumentenmetadaten.fsh",
-    "startLine": 174,
-    "endLine": 180
+    "startLine": 180,
+    "endLine": 187
   },
   {
     "outputFile": "StructureDefinition-erg-docref-signature.json",
     "fshName": "ERGDocRefSignature",
     "fshType": "Extension",
     "fshFile": "Profiles/erg-dokumentenmetadaten.fsh",
-    "startLine": 157,
-    "endLine": 163
+    "startLine": 161,
+    "endLine": 168
   },
   {
     "outputFile": "StructureDefinition-erg-documentreference-gesamtbetrag.json",
@@ -716,8 +716,8 @@
     "fshName": "ERGRechnungsstatusVS",
     "fshType": "ValueSet",
     "fshFile": "Profiles/erg-dokumentenmetadaten.fsh",
-    "startLine": 131,
-    "endLine": 134
+    "startLine": 132,
+    "endLine": 136
   },
   {
     "outputFile": "ValueSet-erg-restricted-mime-types-vs.json",
@@ -725,7 +725,7 @@
     "fshType": "ValueSet",
     "fshFile": "Profiles/erg-dokumentenmetadaten.fsh",
     "startLine": 124,
-    "endLine": 129
+    "endLine": 130
   },
   {
     "outputFile": "ValueSet-erg-sonstigesdokument-type-vs.json",

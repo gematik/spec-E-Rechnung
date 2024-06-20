@@ -1,10 +1,24 @@
 {
   "resourceType": "ValueSet",
-  "status": "draft",
+  "status": "active",
   "name": "ERGRestrictedMimeTypesVS",
   "id": "erg-restricted-mime-types-vs",
   "title": "ERG Restricted Mime Types",
+  "version": "1.0.0-CC",
   "url": "https://gematik.de/fhir/erg/ValueSet/erg-restricted-mime-types-vs",
+  "experimental": false,
+  "date": "2024-06-20",
+  "publisher": "gematik GmbH",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://gematik.de/"
+        }
+      ]
+    }
+  ],
   "compose": {
     "include": [
       {

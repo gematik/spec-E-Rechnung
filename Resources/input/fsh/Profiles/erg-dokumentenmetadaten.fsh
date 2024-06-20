@@ -124,6 +124,7 @@ Id: erg-dokumentenmetadaten
 ValueSet: ERGRestrictedMimeTypesVS
 Id: erg-restricted-mime-types-vs
 Title: "ERG Restricted Mime Types"
+* insert Meta
 
 * include http://terminology.hl7.org/CodeSystem/mimetypes#application/fhir+json
 * include http://terminology.hl7.org/CodeSystem/mimetypes#application/fhir+xml
@@ -131,6 +132,7 @@ Title: "ERG Restricted Mime Types"
 ValueSet: ERGRechnungsstatusVS
 Id: erg-rechnungsstatus-vs
 Title: "ERG Rechnungsstatus"
+* insert Meta
 * include codes from system https://gematik.de/fhir/erg/CodeSystem/erg-rechnungsstatus-cs
 
 // ------------- CodeSystem -------------
@@ -139,6 +141,7 @@ CodeSystem:  ERGAttachmentFormatCS
 Id: erg-attachment-format-cs
 Title: "ERG Attachment Format CS"
 Description:  "CodeSystem für die Abbildung von verschieden Formatinhalten eines Dokuments"
+* insert Meta
 * #erechnung "E-Rechnungsdokument"
 * #angereichertesPDF "E-Rechnungsdokument mit eingebetteten strukturierten Rechnungsinhalt"
 * #rechnungsinhalt "Strukturierter Rechnungsinhalt"
@@ -148,6 +151,7 @@ CodeSystem:  ERGARechnungsstatusCS
 Id: erg-rechnungsstatus-cs
 Title: "ERG Rechnungsstatus CS"
 Description:  "CodeSystem für die Abbildung von verschieden Status eines Rechnungungsdokuments"
+* insert Meta
 * #offen "Offen"
 * #erledigt "Erledigt"
 * #papierkorb "Papierkorb"
@@ -158,6 +162,7 @@ Extension: ERGDocRefSignature
 Id: erg-docref-signature
 Title: "ERG DocRef Signature"
 Description: "Extension zur Abbildung einer Digitalen Signatur über die Rechnungsrepräsentation, sowie den strukturierten Rechnungsinhalten"
+* insert Meta
 
 * value[x] 1.. MS
 * value[x] only Signature
@@ -166,6 +171,7 @@ Extension: ERGDocRefFachrichtung
 Id: erg-docref-fachrichtung
 Title: "ERG DocRef Fachrichtung"
 Description: "Extension zur Angabe der Fachrichtung zur Steuerung des Abrechungsworkflows"
+* insert Meta
 
 * value[x] 1.. MS
 * value[x] only Coding
@@ -175,6 +181,7 @@ Extension: ERGDocRefLeistungsart
 Id: erg-docref-leistungsart
 Title: "ERG DocRef Leistungsart"
 Description: "Extension zur Angabe einer Leistungsart"
+* insert Meta
 
 * value[x] 1.. MS
 * value[x] only Coding
