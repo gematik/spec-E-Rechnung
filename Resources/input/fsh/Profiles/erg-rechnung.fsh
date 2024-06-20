@@ -94,16 +94,19 @@ Id: erg-rechnung
 Extension: ERGPDFRepraesentationRechnung
 Id: erg-pdf-repraesentation-rechnung
 Title: "ERG PDF-Repräsentation Rechnung"
+* insert Meta
 * value[x] only Reference(Binary)
 
 Extension: ERGZahlungsziel
 Id: erg-zahlungsziel
 Title: "ERG Zahlungsziel"
+* insert Meta
 * value[x] only date
 
 Extension: ERGBehandlungsart
 Id: erg-behandlungsart
 Title: "ERG Extension Behandlungsart"
+* insert Meta
 * ^context.type = #element
 * ^context.expression = "Invoice"
 * value[x] only Coding
@@ -112,6 +115,7 @@ Title: "ERG Extension Behandlungsart"
 Extension: ERGAbrechnungsrelevanteDiagnose
 Id: erg-abrechnungsrelevante-diagnose
 Title: "ERG abrechnungsrelevante Diagnose"
+* insert Meta
 * ^context.type = #element
 * ^context.expression = "Invoice"
 * value[x] only Reference
@@ -120,6 +124,7 @@ Title: "ERG abrechnungsrelevante Diagnose"
 CodeSystem: ERGParticipantRoleCS
 Id: erg-participant-role-CS
 Title: "ERG Teilnehmer Rolle"
+* insert Meta
 * #leistungserbringer "Leistungserbringer"
 * #forderungsinhaber "Forderungsinhaber"
 
@@ -127,4 +132,5 @@ ValueSet: ERGParticipantRoleVS
 Id: erg-participant-role-VS
 Title: "ERG Teilnehmer Rolle"
 Description: "Diese Codes enthalten Teilnehmer Rollen der eRechnung"
+* insert Meta
 * include codes from system ERGParticipantRoleCS

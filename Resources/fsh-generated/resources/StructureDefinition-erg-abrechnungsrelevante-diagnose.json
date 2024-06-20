@@ -2,9 +2,23 @@
   "resourceType": "StructureDefinition",
   "id": "erg-abrechnungsrelevante-diagnose",
   "url": "https://gematik.de/fhir/erg/StructureDefinition/erg-abrechnungsrelevante-diagnose",
+  "version": "1.0.0-CC",
   "name": "ERGAbrechnungsrelevanteDiagnose",
   "title": "ERG abrechnungsrelevante Diagnose",
-  "status": "draft",
+  "status": "active",
+  "experimental": false,
+  "date": "2024-06-20",
+  "publisher": "gematik GmbH",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://gematik.de/"
+        }
+      ]
+    }
+  ],
   "fhirVersion": "4.0.1",
   "kind": "complex-type",
   "abstract": false,

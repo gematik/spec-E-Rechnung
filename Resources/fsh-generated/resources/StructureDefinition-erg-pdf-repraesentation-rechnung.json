@@ -2,9 +2,23 @@
   "resourceType": "StructureDefinition",
   "id": "erg-pdf-repraesentation-rechnung",
   "url": "https://gematik.de/fhir/erg/StructureDefinition/erg-pdf-repraesentation-rechnung",
+  "version": "1.0.0-CC",
   "name": "ERGPDFRepraesentationRechnung",
   "title": "ERG PDF-Repräsentation Rechnung",
-  "status": "draft",
+  "status": "active",
+  "experimental": false,
+  "date": "2024-06-20",
+  "publisher": "gematik GmbH",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://gematik.de/"
+        }
+      ]
+    }
+  ],
   "fhirVersion": "4.0.1",
   "kind": "complex-type",
   "abstract": false,

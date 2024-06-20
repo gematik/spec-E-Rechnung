@@ -116,8 +116,8 @@
     "fshName": "ERGParticipantRoleCS",
     "fshType": "CodeSystem",
     "fshFile": "Profiles/erg-rechnung.fsh",
-    "startLine": 120,
-    "endLine": 124
+    "startLine": 124,
+    "endLine": 129
   },
   {
     "outputFile": "CodeSystem-erg-prop-rest-interactions-cs.json",
@@ -460,16 +460,16 @@
     "fshName": "ERGAbrechnungsrelevanteDiagnose",
     "fshType": "Extension",
     "fshFile": "Profiles/erg-rechnung.fsh",
-    "startLine": 112,
-    "endLine": 118
+    "startLine": 115,
+    "endLine": 122
   },
   {
     "outputFile": "StructureDefinition-erg-behandlungsart.json",
     "fshName": "ERGBehandlungsart",
     "fshType": "Extension",
     "fshFile": "Profiles/erg-rechnung.fsh",
-    "startLine": 104,
-    "endLine": 110
+    "startLine": 106,
+    "endLine": 113
   },
   {
     "outputFile": "StructureDefinition-erg-docref-fachrichtung.json",
@@ -573,7 +573,7 @@
     "fshType": "Extension",
     "fshFile": "Profiles/erg-rechnung.fsh",
     "startLine": 94,
-    "endLine": 97
+    "endLine": 98
   },
   {
     "outputFile": "StructureDefinition-erg-preisdetails-rechnungsposition.json",
@@ -636,8 +636,8 @@
     "fshName": "ERGZahlungsziel",
     "fshType": "Extension",
     "fshFile": "Profiles/erg-rechnung.fsh",
-    "startLine": 99,
-    "endLine": 102
+    "startLine": 100,
+    "endLine": 104
   },
   {
     "outputFile": "ValueSet-BehandlungsartVS.json",
@@ -692,8 +692,8 @@
     "fshName": "ERGParticipantRoleVS",
     "fshType": "ValueSet",
     "fshFile": "Profiles/erg-rechnung.fsh",
-    "startLine": 126,
-    "endLine": 130
+    "startLine": 131,
+    "endLine": 136
   },
   {
     "outputFile": "ValueSet-erg-rechnung-markierung-vs.json",

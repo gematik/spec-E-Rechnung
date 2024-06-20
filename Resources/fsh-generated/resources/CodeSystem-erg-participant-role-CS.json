@@ -1,10 +1,11 @@
 {
   "resourceType": "CodeSystem",
-  "status": "draft",
+  "status": "active",
   "content": "complete",
   "name": "ERGParticipantRoleCS",
   "id": "erg-participant-role-CS",
   "title": "ERG Teilnehmer Rolle",
+  "version": "1.0.0-CC",
   "url": "https://gematik.de/fhir/erg/CodeSystem/erg-participant-role-CS",
   "concept": [
     {
@@ -14,6 +15,19 @@
     {
       "code": "forderungsinhaber",
       "display": "Forderungsinhaber"
+    }
+  ],
+  "experimental": false,
+  "date": "2024-06-20",
+  "publisher": "gematik GmbH",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://gematik.de/"
+        }
+      ]
     }
   ],
   "count": 2

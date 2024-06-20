@@ -13,7 +13,7 @@ CodeSystem-BehandlungsartCS.json                                         Behandl
 CodeSystem-erg-attachment-format-cs.json                                 ERGAttachmentFormatCS                             CodeSystem  Profiles/erg-dokumentenmetadaten.fsh                    140 - 148
 CodeSystem-erg-dokument-artderarchivierung-cs.json                       ERGDokumentArtDerArchivierungCS                   CodeSystem  CodeSystems/erg-rechnung-markierung.fsh                 14 - 19
 CodeSystem-erg-operationen-cs.json                                       ERGOperationenCS                                  CodeSystem  Profiles/erg-nutzungsprotokoll.fsh                      42 - 50
-CodeSystem-erg-participant-role-CS.json                                  ERGParticipantRoleCS                              CodeSystem  Profiles/erg-rechnung.fsh                               120 - 124
+CodeSystem-erg-participant-role-CS.json                                  ERGParticipantRoleCS                              CodeSystem  Profiles/erg-rechnung.fsh                               124 - 129
 CodeSystem-erg-prop-rest-interactions-cs.json                            ERGPropRestInterationsCS                          CodeSystem  Profiles/erg-nutzungsprotokoll.fsh                      52 - 59
 CodeSystem-erg-rechnung-markierung-cs.json                               ERGRechnungMarkierungCS                           CodeSystem  CodeSystems/erg-rechnung-markierung.fsh                 1 - 12
 CodeSystem-erg-rechnung-submit-modus-cs.json                             ERGRechnungSubmitModusCS                          CodeSystem  OperationDefinitions/erg-operation-submit.fsh           86 - 92
@@ -56,8 +56,8 @@ Questionnaire-QuestionnaireInvoice.json                                  Questio
 QuestionnaireResponse-undefined.json                                     undefined                                         Instance    Questionnaire/InvoiceResponse.fsh                       23 - 58
 SearchParameter-erg-makierung.json                                       erg-makierung                                     Instance    SearchParameter/erg-searchParam-ergpkvmakierung.fsh     1 - 14
 StructureDefinition-ExtensionBehandlungsart.json                         ExtensionBehandlungsart                           Extension   Examples/BeispielRechnung.fsh                           124 - 128
-StructureDefinition-erg-abrechnungsrelevante-diagnose.json               ERGAbrechnungsrelevanteDiagnose                   Extension   Profiles/erg-rechnung.fsh                               112 - 118
-StructureDefinition-erg-behandlungsart.json                              ERGBehandlungsart                                 Extension   Profiles/erg-rechnung.fsh                               104 - 110
+StructureDefinition-erg-abrechnungsrelevante-diagnose.json               ERGAbrechnungsrelevanteDiagnose                   Extension   Profiles/erg-rechnung.fsh                               115 - 122
+StructureDefinition-erg-behandlungsart.json                              ERGBehandlungsart                                 Extension   Profiles/erg-rechnung.fsh                               106 - 113
 StructureDefinition-erg-docref-fachrichtung.json                         ERGDocRefFachrichtung                             Extension   Profiles/erg-dokumentenmetadaten.fsh                    170 - 178
 StructureDefinition-erg-docref-leistungsart.json                         ERGDocRefLeistungsart                             Extension   Profiles/erg-dokumentenmetadaten.fsh                    180 - 187
 StructureDefinition-erg-docref-signature.json                            ERGDocRefSignature                                Extension   Profiles/erg-dokumentenmetadaten.fsh                    161 - 168
@@ -70,7 +70,7 @@ StructureDefinition-erg-invoice-period.json                              ERGInvo
 StructureDefinition-erg-leistungserbringer-organisation.json             ERGLeistungserbringerOrganisation                 Profile     Profiles/erg-leistungserbringer-organisation.fsh        1 - 34
 StructureDefinition-erg-leistungserbringer.json                          ERGLeistungserbringer                             Profile     Profiles/erg-leistungserbringer-person.fsh              1 - 47
 StructureDefinition-erg-nutzungsprotokoll.json                           ERGNutzungsprotokoll                              Profile     Profiles/erg-nutzungsprotokoll.fsh                      1 - 40
-StructureDefinition-erg-pdf-repraesentation-rechnung.json                ERGPDFRepraesentationRechnung                     Extension   Profiles/erg-rechnung.fsh                               94 - 97
+StructureDefinition-erg-pdf-repraesentation-rechnung.json                ERGPDFRepraesentationRechnung                     Extension   Profiles/erg-rechnung.fsh                               94 - 98
 StructureDefinition-erg-preisdetails-rechnungsposition.json              ERGPreisDetailsRechnungsposition                  Extension   Profiles/erg-rechnungsposition.fsh                      27 - 35
 StructureDefinition-erg-rechnung.json                                    ERGRechnung                                       Profile     Profiles/erg-rechnung.fsh                               1 - 91
 StructureDefinition-erg-rechnungsdiagnose.json                           ERGRechnungsdiagnose                              Profile     Profiles/erg-rechnungsdiagnose.fsh                      1 - 20
@@ -78,14 +78,14 @@ StructureDefinition-erg-rechnungsdokument.json                           ERGRech
 StructureDefinition-erg-rechnungsposition.json                           ERGRechnungsposition                              Profile     Profiles/erg-rechnungsposition.fsh                      1 - 25
 StructureDefinition-erg-task-requestedPerformer.json                     ERGTaskRequestedPerformer                         Extension   Extensions/erg-task-requestedPerformer.fsh              1 - 10
 StructureDefinition-erg-versicherteperson.json                           ERGVersichertePerson                              Profile     Profiles/erg-versicherteperson.fsh                      1 - 39
-StructureDefinition-erg-zahlungsziel.json                                ERGZahlungsziel                                   Extension   Profiles/erg-rechnung.fsh                               99 - 102
+StructureDefinition-erg-zahlungsziel.json                                ERGZahlungsziel                                   Extension   Profiles/erg-rechnung.fsh                               100 - 104
 ValueSet-BehandlungsartVS.json                                           BehandlungsartVS                                  ValueSet    Examples/BeispielRechnung.fsh                           135 - 139
 ValueSet-TESTICD10GM.json                                                TESTICD10GM                                       ValueSet    Questionnaire/ValueSet-ICD10.fsh                        3 - 42
 ValueSet-erg-audit-event-agent-type-vs.json                              ERGAuditEventAgentTypeVS                          ValueSet    Profiles/erg-nutzungsprotokoll.fsh                      77 - 82
 ValueSet-erg-audit-event-sub-type-vs.json                                ERGAuditEventSubTypeVS                            ValueSet    Profiles/erg-nutzungsprotokoll.fsh                      61 - 67
 ValueSet-erg-audit-event-type-vs.json                                    ERGAuditEventTypeVS                               ValueSet    Profiles/erg-nutzungsprotokoll.fsh                      69 - 74
 ValueSet-erg-dokument-artderarchivierung-vs.json                         ERGDokumentArtDerArchivierungVS                   ValueSet    ValueSets/erg-rechnung-markierung-vs.fsh                8 - 13
-ValueSet-erg-participant-role-VS.json                                    ERGParticipantRoleVS                              ValueSet    Profiles/erg-rechnung.fsh                               126 - 130
+ValueSet-erg-participant-role-VS.json                                    ERGParticipantRoleVS                              ValueSet    Profiles/erg-rechnung.fsh                               131 - 136
 ValueSet-erg-rechnung-markierung-vs.json                                 ERGRechnungMarkierungVS                           ValueSet    ValueSets/erg-rechnung-markierung-vs.fsh                1 - 6
 ValueSet-erg-rechnung-submit-modus-vs.json                               ERGRechnungSubmitModusVS                          ValueSet    OperationDefinitions/erg-operation-submit.fsh           94 - 99
 ValueSet-erg-rechnungsstatus-vs.json                                     ERGRechnungsstatusVS                              ValueSet    Profiles/erg-dokumentenmetadaten.fsh                    132 - 136
