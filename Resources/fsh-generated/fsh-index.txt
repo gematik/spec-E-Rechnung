@@ -16,7 +16,7 @@ CodeSystem-erg-operationen-cs.json                                       ERGOper
 CodeSystem-erg-participant-role-CS.json                                  ERGParticipantRoleCS                              CodeSystem  Profiles/erg-rechnung.fsh                               124 - 129
 CodeSystem-erg-prop-rest-interactions-cs.json                            ERGPropRestInterationsCS                          CodeSystem  Profiles/erg-nutzungsprotokoll.fsh                      52 - 59
 CodeSystem-erg-rechnung-markierung-cs.json                               ERGRechnungMarkierungCS                           CodeSystem  CodeSystems/erg-rechnung-markierung.fsh                 1 - 13
-CodeSystem-erg-rechnung-submit-modus-cs.json                             ERGRechnungSubmitModusCS                          CodeSystem  OperationDefinitions/erg-operation-submit.fsh           86 - 92
+CodeSystem-erg-rechnung-submit-modus-cs.json                             ERGRechnungSubmitModusCS                          CodeSystem  OperationDefinitions/erg-operation-submit.fsh           89 - 95
 CodeSystem-erg-rechnung-type-cs.json                                     ERGRechnungTypeCS                                 CodeSystem  CodeSystems/erg-rechnung-type-cs.fsh                    1 - 6
 CodeSystem-erg-rechnungsstatus-cs.json                                   ERGARechnungsstatusCS                             CodeSystem  Profiles/erg-dokumentenmetadaten.fsh                    150 - 157
 Composition-R2444Document.json                                           R2444Document                                     Instance    Examples/BeispielRechnung.fsh                           141 - 163
@@ -33,11 +33,11 @@ DocumentReference-BeispielDocumentReferenceSonstigesDokument3.1-FD.json  Beispie
 DocumentReference-BeispielDocumentReferenceSonstigesDokument3.1-LE.json  BeispielDocumentReferenceSonstigesDokument3.1-LE  Instance    Examples/erg-R2-bulk-submit.fsh                         105 - 115
 DocumentReference-ExampleR5DocumentReference.json                        ExampleR5DocumentReference                        Instance    Examples/erg-R5-retrieve.fsh                            2 - 39
 Invoice-R2444Rechnung.json                                               R2444Rechnung                                     Instance    Examples/BeispielRechnung.fsh                           1 - 49
-OperationDefinition-ERGOperationChangeStatus.json                        ERGOperationChangeStatus                          Instance    OperationDefinitions/erg-change-status.fsh              3 - 31
-OperationDefinition-ERGOperationErase.json                               ERGOperationErase                                 Instance    OperationDefinitions/erg-operation-erase.fsh            3 - 17
-OperationDefinition-ERGOperationProcessFlag.json                         ERGOperationProcessFlag                           Instance    OperationDefinitions/erg-process-flag.fsh               3 - 59
-OperationDefinition-ERGOperationRetrieve.json                            ERGOperationRetrieve                              Instance    OperationDefinitions/erg-operation-retrieve.fsh         3 - 45
-OperationDefinition-ERGOperationSubmit.json                              ERGOperationSubmit                                Instance    OperationDefinitions/erg-operation-submit.fsh           3 - 82
+OperationDefinition-ERGOperationChangeStatus.json                        ERGOperationChangeStatus                          Instance    OperationDefinitions/erg-change-status.fsh              3 - 34
+OperationDefinition-ERGOperationErase.json                               ERGOperationErase                                 Instance    OperationDefinitions/erg-operation-erase.fsh            3 - 20
+OperationDefinition-ERGOperationProcessFlag.json                         ERGOperationProcessFlag                           Instance    OperationDefinitions/erg-process-flag.fsh               3 - 62
+OperationDefinition-ERGOperationRetrieve.json                            ERGOperationRetrieve                              Instance    OperationDefinitions/erg-operation-retrieve.fsh         3 - 48
+OperationDefinition-ERGOperationSubmit.json                              ERGOperationSubmit                                Instance    OperationDefinitions/erg-operation-submit.fsh           3 - 85
 Parameters-BeispielParameterChangeStatusInput.json                       BeispielParameterChangeStatusInput                Instance    Examples/erg-R7-change-status.fsh                       1 - 5
 Parameters-BeispielParameterChangeStatusOutput.json                      BeispielParameterChangeStatusOutput               Instance    Examples/erg-R7-change-status.fsh                       7 - 11
 Parameters-BeispielParameterProcessFlagInput.json                        BeispielParameterProcessFlagInput                 Instance    Examples/erg-R8-process-flag.fsh                        1 - 13
@@ -87,7 +87,7 @@ ValueSet-erg-audit-event-type-vs.json                                    ERGAudi
 ValueSet-erg-dokument-artderarchivierung-vs.json                         ERGDokumentArtDerArchivierungVS                   ValueSet    ValueSets/erg-rechnung-markierung-vs.fsh                8 - 13
 ValueSet-erg-participant-role-VS.json                                    ERGParticipantRoleVS                              ValueSet    Profiles/erg-rechnung.fsh                               131 - 136
 ValueSet-erg-rechnung-markierung-vs.json                                 ERGRechnungMarkierungVS                           ValueSet    ValueSets/erg-rechnung-markierung-vs.fsh                1 - 6
-ValueSet-erg-rechnung-submit-modus-vs.json                               ERGRechnungSubmitModusVS                          ValueSet    OperationDefinitions/erg-operation-submit.fsh           94 - 99
+ValueSet-erg-rechnung-submit-modus-vs.json                               ERGRechnungSubmitModusVS                          ValueSet    OperationDefinitions/erg-operation-submit.fsh           97 - 102
 ValueSet-erg-rechnungsstatus-vs.json                                     ERGRechnungsstatusVS                              ValueSet    Profiles/erg-dokumentenmetadaten.fsh                    132 - 136
 ValueSet-erg-restricted-mime-types-vs.json                               ERGRestrictedMimeTypesVS                          ValueSet    Profiles/erg-dokumentenmetadaten.fsh                    124 - 130
 ValueSet-erg-sonstigesdokument-type-vs.json                              ERGSonstigesDokumentTypeVS                        ValueSet    ValueSets/erg-sonstigesDokument-type-vs.fsh             1 - 6

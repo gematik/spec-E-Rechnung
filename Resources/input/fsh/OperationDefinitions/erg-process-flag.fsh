@@ -6,7 +6,10 @@ Usage: #example
 Title: "ERG Operation ProcessFlag"
 Description: "Änderung des Bearbeitungsstatus eines Dokumentes"
 * url = "https://gematik.de/fhir/erg/OperationDefinition/ProcessFlag"
-* status = #draft
+* status = #active
+* version = "1.0.0-CC"
+* experimental = false
+* date = "2024-06-20"
 * kind = #operation
 * name = "ERGProcessFlag"
 * code = #process-flag

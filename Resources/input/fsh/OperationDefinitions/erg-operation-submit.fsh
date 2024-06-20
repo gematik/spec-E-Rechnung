@@ -6,7 +6,10 @@ Usage: #example
 Title: "ERG Operation Erechnung-Submit"
 Description: "Rechnung einreichen durch die Leistungserbringer:in"
 * url = "https://gematik.de/fhir/erg/OperationDefinition/Submit"
-* status = #draft
+* status = #active
+* version = "1.0.0-CC"
+* experimental = false
+* date = "2024-06-20"
 * kind = #operation
 * name = "ERGSubmit"
 * code = #erechnung-submit

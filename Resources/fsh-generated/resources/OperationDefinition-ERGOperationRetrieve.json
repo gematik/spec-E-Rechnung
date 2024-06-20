@@ -1,8 +1,11 @@
 {
   "resourceType": "OperationDefinition",
   "id": "ERGOperationRetrieve",
+  "status": "active",
+  "version": "1.0.0-CC",
+  "experimental": false,
+  "date": "2024-06-20",
   "url": "https://gematik.de/fhir/erg/OperationDefinition/Retrieve",
-  "status": "draft",
   "kind": "operation",
   "name": "ERGRetrieve",
   "code": "retrieve",

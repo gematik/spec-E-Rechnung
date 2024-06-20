@@ -5,8 +5,11 @@ InstanceOf: OperationDefinition
 Usage: #example
 Title: "ERG Operation Retrieve"
 Description: "Abrufen von E-Rechnungen, strukturierten Rechnungsinhalten und Dokumenten"
+* status = #active
+* version = "1.0.0-CC"
+* experimental = false
+* date = "2024-06-20"
 * url = "https://gematik.de/fhir/erg/OperationDefinition/Retrieve"
-* status = #draft
 * kind = #operation
 * name = "ERGRetrieve"
 * code = #retrieve

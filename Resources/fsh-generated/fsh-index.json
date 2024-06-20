@@ -140,8 +140,8 @@
     "fshName": "ERGRechnungSubmitModusCS",
     "fshType": "CodeSystem",
     "fshFile": "OperationDefinitions/erg-operation-submit.fsh",
-    "startLine": 86,
-    "endLine": 92
+    "startLine": 89,
+    "endLine": 95
   },
   {
     "outputFile": "CodeSystem-erg-rechnung-type-cs.json",
@@ -277,7 +277,7 @@
     "fshType": "Instance",
     "fshFile": "OperationDefinitions/erg-change-status.fsh",
     "startLine": 3,
-    "endLine": 31
+    "endLine": 34
   },
   {
     "outputFile": "OperationDefinition-ERGOperationErase.json",
@@ -285,7 +285,7 @@
     "fshType": "Instance",
     "fshFile": "OperationDefinitions/erg-operation-erase.fsh",
     "startLine": 3,
-    "endLine": 17
+    "endLine": 20
   },
   {
     "outputFile": "OperationDefinition-ERGOperationProcessFlag.json",
@@ -293,7 +293,7 @@
     "fshType": "Instance",
     "fshFile": "OperationDefinitions/erg-process-flag.fsh",
     "startLine": 3,
-    "endLine": 59
+    "endLine": 62
   },
   {
     "outputFile": "OperationDefinition-ERGOperationRetrieve.json",
@@ -301,7 +301,7 @@
     "fshType": "Instance",
     "fshFile": "OperationDefinitions/erg-operation-retrieve.fsh",
     "startLine": 3,
-    "endLine": 45
+    "endLine": 48
   },
   {
     "outputFile": "OperationDefinition-ERGOperationSubmit.json",
@@ -309,7 +309,7 @@
     "fshType": "Instance",
     "fshFile": "OperationDefinitions/erg-operation-submit.fsh",
     "startLine": 3,
-    "endLine": 82
+    "endLine": 85
   },
   {
     "outputFile": "Parameters-BeispielParameterChangeStatusInput.json",
@@ -708,8 +708,8 @@
     "fshName": "ERGRechnungSubmitModusVS",
     "fshType": "ValueSet",
     "fshFile": "OperationDefinitions/erg-operation-submit.fsh",
-    "startLine": 94,
-    "endLine": 99
+    "startLine": 97,
+    "endLine": 102
   },
   {
     "outputFile": "ValueSet-erg-rechnungsstatus-vs.json",

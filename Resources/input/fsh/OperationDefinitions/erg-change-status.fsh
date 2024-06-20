@@ -6,7 +6,10 @@ Usage: #example
 Title: "ERG Operation ChangeStatus"
 Description: "Änderung des Bearbeitungsstatus eines Dokumentes"
 * url = "https://gematik.de/fhir/erg/OperationDefinition/ChangeStatus"
-* status = #draft
+* status = #active
+* version = "1.0.0-CC"
+* experimental = false
+* date = "2024-06-20"
 * kind = #operation
 * name = "ERGChangeStatus"
 * code = #change-status
