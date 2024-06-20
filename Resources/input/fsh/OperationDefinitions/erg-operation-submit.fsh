@@ -87,6 +87,7 @@ CodeSystem:  ERGRechnungSubmitModusCS
 Id: erg-rechnung-submit-modus-cs
 Title: "ERG Rechnung Submit Modus CS"
 Description:  "CodeSystem für die Differenzierung von der Verarbeitungsmodi für $erchnung-submit"
+* insert Meta
 * #test "Test" "E-Rechnung wird als Test eingereicht. Der Fachdienst validiert nur die E-Rechnung und speichert diese nicht."
 * #normal "Normal" "E-Rechnung wird durch den Fachdienst gespeichert falls keine gravierenden Validierungsfehler vorhanden sind."
 
@@ -94,4 +95,5 @@ ValueSet:  ERGRechnungSubmitModusVS
 Id: erg-rechnung-submit-modus-vs
 Title: "ERG Rechnung Type VS"
 Description:  "ValueSet für die Differenzierung von der Verarbeitungsmodi für $erchnung-submit"
+* insert Meta
 * include codes from system https://gematik.de/fhir/erg/CodeSystem/erg-rechnung-submit-modus-cs

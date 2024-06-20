@@ -141,7 +141,7 @@
     "fshType": "CodeSystem",
     "fshFile": "OperationDefinitions/erg-operation-submit.fsh",
     "startLine": 86,
-    "endLine": 91
+    "endLine": 92
   },
   {
     "outputFile": "CodeSystem-erg-rechnung-type-cs.json",
@@ -708,8 +708,8 @@
     "fshName": "ERGRechnungSubmitModusVS",
     "fshType": "ValueSet",
     "fshFile": "OperationDefinitions/erg-operation-submit.fsh",
-    "startLine": 93,
-    "endLine": 97
+    "startLine": 94,
+    "endLine": 99
   },
   {
     "outputFile": "ValueSet-erg-rechnungsstatus-vs.json",

@@ -16,7 +16,7 @@ CodeSystem-erg-operationen-cs.json                                       ERGOper
 CodeSystem-erg-participant-role-CS.json                                  ERGParticipantRoleCS                              CodeSystem  Profiles/erg-rechnung.fsh                               120 - 124
 CodeSystem-erg-prop-rest-interactions-cs.json                            ERGPropRestInterationsCS                          CodeSystem  Profiles/erg-nutzungsprotokoll.fsh                      52 - 59
 CodeSystem-erg-rechnung-markierung-cs.json                               ERGRechnungMarkierungCS                           CodeSystem  CodeSystems/erg-rechnung-markierung.fsh                 1 - 12
-CodeSystem-erg-rechnung-submit-modus-cs.json                             ERGRechnungSubmitModusCS                          CodeSystem  OperationDefinitions/erg-operation-submit.fsh           86 - 91
+CodeSystem-erg-rechnung-submit-modus-cs.json                             ERGRechnungSubmitModusCS                          CodeSystem  OperationDefinitions/erg-operation-submit.fsh           86 - 92
 CodeSystem-erg-rechnung-type-cs.json                                     ERGRechnungTypeCS                                 CodeSystem  CodeSystems/erg-rechnung-type-cs.fsh                    1 - 5
 CodeSystem-erg-rechnungsstatus-cs.json                                   ERGARechnungsstatusCS                             CodeSystem  Profiles/erg-dokumentenmetadaten.fsh                    150 - 157
 Composition-R2444Document.json                                           R2444Document                                     Instance    Examples/BeispielRechnung.fsh                           141 - 163
@@ -87,7 +87,7 @@ ValueSet-erg-audit-event-type-vs.json                                    ERGAudi
 ValueSet-erg-dokument-artderarchivierung-vs.json                         ERGDokumentArtDerArchivierungVS                   ValueSet    ValueSets/erg-rechnung-markierung-vs.fsh                8 - 13
 ValueSet-erg-participant-role-VS.json                                    ERGParticipantRoleVS                              ValueSet    Profiles/erg-rechnung.fsh                               126 - 130
 ValueSet-erg-rechnung-markierung-vs.json                                 ERGRechnungMarkierungVS                           ValueSet    ValueSets/erg-rechnung-markierung-vs.fsh                1 - 6
-ValueSet-erg-rechnung-submit-modus-vs.json                               ERGRechnungSubmitModusVS                          ValueSet    OperationDefinitions/erg-operation-submit.fsh           93 - 97
+ValueSet-erg-rechnung-submit-modus-vs.json                               ERGRechnungSubmitModusVS                          ValueSet    OperationDefinitions/erg-operation-submit.fsh           94 - 99
 ValueSet-erg-rechnungsstatus-vs.json                                     ERGRechnungsstatusVS                              ValueSet    Profiles/erg-dokumentenmetadaten.fsh                    132 - 136
 ValueSet-erg-restricted-mime-types-vs.json                               ERGRestrictedMimeTypesVS                          ValueSet    Profiles/erg-dokumentenmetadaten.fsh                    124 - 130
 ValueSet-erg-sonstigesdokument-type-vs.json                              ERGSonstigesDokumentTypeVS                        ValueSet    ValueSets/erg-sonstigesDokument-type-vs.fsh             1 - 6

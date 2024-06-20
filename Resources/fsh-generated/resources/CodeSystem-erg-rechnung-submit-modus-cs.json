@@ -1,11 +1,12 @@
 {
   "resourceType": "CodeSystem",
-  "status": "draft",
+  "status": "active",
   "content": "complete",
   "name": "ERGRechnungSubmitModusCS",
   "id": "erg-rechnung-submit-modus-cs",
   "title": "ERG Rechnung Submit Modus CS",
   "description": "CodeSystem für die Differenzierung von der Verarbeitungsmodi für $erchnung-submit",
+  "version": "1.0.0-CC",
   "url": "https://gematik.de/fhir/erg/CodeSystem/erg-rechnung-submit-modus-cs",
   "concept": [
     {
@@ -17,6 +18,19 @@
       "code": "normal",
       "display": "Normal",
       "definition": "E-Rechnung wird durch den Fachdienst gespeichert falls keine gravierenden Validierungsfehler vorhanden sind."
+    }
+  ],
+  "experimental": false,
+  "date": "2024-06-20",
+  "publisher": "gematik GmbH",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://gematik.de/"
+        }
+      ]
     }
   ],
   "count": 2
