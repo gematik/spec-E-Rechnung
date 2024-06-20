@@ -34,7 +34,7 @@ Description: "Abrufen von E-Rechnungen, strukturierten Rechnungsinhalten und Dok
   * use = #in
   * min = 0
   * max = "1"
-  * documentation = "Angabe ob die originale Rechnung inkl. Signatur neben dem angereicherten Rechnungsdokument zurückgegeben werden soll als 'content'-Element. Default: false. Die originale Rechnung ist nur vom FdV an das PSK direkt weiterzugeben. Falls das Rechnungsdokument ausgedruckt werden sollte durch immer das angereicherte PDF inkl. Barcode zu verwenden."
+  * documentation = "Angabe ob die originale Rechnung inkl. Signatur neben dem angereicherten Rechnungsdokument zurückgegeben werden soll als 'content'-Element. Default: false. Die originale Rechnung ist nur vom FdV an das ITSys-KTR direkt weiterzugeben. Falls das Rechnungsdokument ausgedruckt werden sollte durch immer das angereicherte PDF inkl. Barcode zu verwenden."
   * type = #boolean
 * parameter[+]
   * name = #dokument
