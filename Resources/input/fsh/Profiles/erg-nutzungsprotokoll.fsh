@@ -42,6 +42,7 @@ Id: erg-nutzungsprotokoll
 CodeSystem: ERGOperationenCS
 Id: erg-operationen-cs
 Title: "ERG Operationen"
+* insert Meta
 * #erechnung-submit "ERechnung_Submit"
 * #retrieve "ERechnung_Retrieve"
 * #change-status "ERechnung_ChangeStatus"
@@ -51,6 +52,7 @@ Title: "ERG Operationen"
 CodeSystem: ERGPropRestInterationsCS
 Id: erg-prop-rest-interactions-cs
 Title: "ERG proprietäre RESTful Interaktionen"
+* insert Meta
 * #create "Erstellen"
 * #read "Lesen"
 * #update "Aktualisieren"
@@ -59,6 +61,7 @@ Title: "ERG proprietäre RESTful Interaktionen"
 ValueSet: ERGAuditEventSubTypeVS
 Id: erg-audit-event-sub-type-vs
 Title: "ERG Audit Event Sub-Type"
+* insert Meta
 * include codes from system $restful-interaction
 * include codes from system ERGOperationenCS
 * include codes from system ERGPropRestInterationsCS
@@ -66,6 +69,7 @@ Title: "ERG Audit Event Sub-Type"
 ValueSet: ERGAuditEventTypeVS
 Id: erg-audit-event-type-vs
 Title: "ERG Audit Event Type"
+* insert Meta
 * http://dicom.nema.org/resources/ontology/DCM#110100 "Application Activity"
 * https://hl7.org/fhir/R4/codesystem-audit-event-type.html#rest "RESTful Operation"
 
@@ -73,5 +77,6 @@ Title: "ERG Audit Event Type"
 ValueSet: ERGAuditEventAgentTypeVS
 Id: erg-audit-event-agent-type-vs
 Title: "ERG Audit Event Agent Type"
+* insert Meta
 * http://terminology.hl7.org/CodeSystem/extra-security-role-type#humanuser "human user"
 * http://terminology.hl7.org/CodeSystem/extra-security-role-type#dataprocessor "data processor"

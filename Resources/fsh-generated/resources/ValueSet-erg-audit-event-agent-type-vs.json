@@ -1,10 +1,24 @@
 {
   "resourceType": "ValueSet",
-  "status": "draft",
+  "status": "active",
   "name": "ERGAuditEventAgentTypeVS",
   "id": "erg-audit-event-agent-type-vs",
   "title": "ERG Audit Event Agent Type",
+  "version": "1.0.0-CC",
   "url": "https://gematik.de/fhir/erg/ValueSet/erg-audit-event-agent-type-vs",
+  "experimental": false,
+  "date": "2024-06-20",
+  "publisher": "gematik GmbH",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://gematik.de/"
+        }
+      ]
+    }
+  ],
   "compose": {
     "include": [
       {
