@@ -11,13 +11,13 @@ Bundle-R2444Bundle.json                                                  R2444Bu
 ChargeItem-R2444ChargeItem.json                                          R2444ChargeItem                                   Instance    Examples/BeispielRechnung.fsh                           51 - 66
 CodeSystem-BehandlungsartCS.json                                         BehandlungsartCS                                  CodeSystem  Examples/BeispielRechnung.fsh                           130 - 133
 CodeSystem-erg-attachment-format-cs.json                                 ERGAttachmentFormatCS                             CodeSystem  Profiles/erg-dokumentenmetadaten.fsh                    140 - 148
-CodeSystem-erg-dokument-artderarchivierung-cs.json                       ERGDokumentArtDerArchivierungCS                   CodeSystem  CodeSystems/erg-rechnung-markierung.fsh                 14 - 19
+CodeSystem-erg-dokument-artderarchivierung-cs.json                       ERGDokumentArtDerArchivierungCS                   CodeSystem  CodeSystems/erg-rechnung-markierung.fsh                 15 - 21
 CodeSystem-erg-operationen-cs.json                                       ERGOperationenCS                                  CodeSystem  Profiles/erg-nutzungsprotokoll.fsh                      42 - 50
 CodeSystem-erg-participant-role-CS.json                                  ERGParticipantRoleCS                              CodeSystem  Profiles/erg-rechnung.fsh                               124 - 129
 CodeSystem-erg-prop-rest-interactions-cs.json                            ERGPropRestInterationsCS                          CodeSystem  Profiles/erg-nutzungsprotokoll.fsh                      52 - 59
-CodeSystem-erg-rechnung-markierung-cs.json                               ERGRechnungMarkierungCS                           CodeSystem  CodeSystems/erg-rechnung-markierung.fsh                 1 - 12
+CodeSystem-erg-rechnung-markierung-cs.json                               ERGRechnungMarkierungCS                           CodeSystem  CodeSystems/erg-rechnung-markierung.fsh                 1 - 13
 CodeSystem-erg-rechnung-submit-modus-cs.json                             ERGRechnungSubmitModusCS                          CodeSystem  OperationDefinitions/erg-operation-submit.fsh           86 - 92
-CodeSystem-erg-rechnung-type-cs.json                                     ERGRechnungTypeCS                                 CodeSystem  CodeSystems/erg-rechnung-type-cs.fsh                    1 - 5
+CodeSystem-erg-rechnung-type-cs.json                                     ERGRechnungTypeCS                                 CodeSystem  CodeSystems/erg-rechnung-type-cs.fsh                    1 - 6
 CodeSystem-erg-rechnungsstatus-cs.json                                   ERGARechnungsstatusCS                             CodeSystem  Profiles/erg-dokumentenmetadaten.fsh                    150 - 157
 Composition-R2444Document.json                                           R2444Document                                     Instance    Examples/BeispielRechnung.fsh                           141 - 163
 Condition-R2444Diagnose.json                                             R2444Diagnose                                     Instance    Examples/BeispielRechnung.fsh                           82 - 91

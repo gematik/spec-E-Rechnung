@@ -100,8 +100,8 @@
     "fshName": "ERGDokumentArtDerArchivierungCS",
     "fshType": "CodeSystem",
     "fshFile": "CodeSystems/erg-rechnung-markierung.fsh",
-    "startLine": 14,
-    "endLine": 19
+    "startLine": 15,
+    "endLine": 21
   },
   {
     "outputFile": "CodeSystem-erg-operationen-cs.json",
@@ -133,7 +133,7 @@
     "fshType": "CodeSystem",
     "fshFile": "CodeSystems/erg-rechnung-markierung.fsh",
     "startLine": 1,
-    "endLine": 12
+    "endLine": 13
   },
   {
     "outputFile": "CodeSystem-erg-rechnung-submit-modus-cs.json",
@@ -149,7 +149,7 @@
     "fshType": "CodeSystem",
     "fshFile": "CodeSystems/erg-rechnung-type-cs.fsh",
     "startLine": 1,
-    "endLine": 5
+    "endLine": 6
   },
   {
     "outputFile": "CodeSystem-erg-rechnungsstatus-cs.json",
