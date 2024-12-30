@@ -4,14 +4,19 @@ Title: "ERG Nutzungsprotokoll"
 Id: erg-nutzungsprotokoll
 * insert Meta
 * type MS
+  * ^comment = "Angabe ob es sich um eine zu protokollierende Nutzerinteraktion nach Abschnittt '5.5.9 Nutzerprotokolle' des Feature-Dokuments 'E-Rechnung' handelt oder um eine durchgeführte REST-API-Interaktion durch den FD."
 * type from ERGAuditEventTypeVS (required)
 * subtype MS
+  * ^comment = "Erlaubt die Kodierung aller REST-API Operationen der Spec-E-Rechnung"
 * subtype from ERGAuditEventSubTypeVS (extensible)
-* subtype ^comment = "Erweiterung des Core ValueSet um die Operations der Spec-E-Rechnung"
 * action MS
+  * ^comment = "Angabe ob es sich um eine lesende/schreibende/ausführende Interaktion handelt."
 * recorded MS
+  * ^comment = "Der Zeitpunkt des Zugriffs ist zu protokollieren. Siehe Abschnittt '4.8.6 Protokolleintrag'des Feature-Dokuments 'E-Rechnung'."
 * outcome MS
+  * ^comment = "Angabe ob die zu protokollierende Interaktion erfolgreich ausgeführt werden konnte."
 * agent MS
+  * ^comment = "Angaben zum Akteur (Nutzer oder eRg FD), der den Zugriff durchgeführt hat. Siehe Abschnittt '4.8.6 Protokolleintrag'des Feature-Dokuments 'E-Rechnung'."
 * agent
   * type 1.. MS
   * type from ERGAuditEventAgentTypeVS (required)
