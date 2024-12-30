@@ -25,6 +25,7 @@ Id: erg-dokumentenmetadaten
   * ^comment = "Siehe Abschnitt '4.8.1.1 Rechnung' des Feature-Dokuments E-Rechnung"
 * meta.extension MS
 * meta.extension contains ERGDocumentReferenceMarkierung named markierung 0..* MS
+* meta.extension[ERGDocumentReferenceMarkierung]
     * ^comment = "Vgl. Abschnitt '4.4.2 Markierungen' des Feature-Dokuments E-Rechnung"
 * meta.tag MS
   * ^slicing.discriminator.type = #pattern
@@ -67,7 +68,7 @@ Id: erg-dokumentenmetadaten
   * ^comment = "Vollständiger Name der behandelten Person. Siehe Abschnitt '4.8.1.1 Rechnung' des Feature-Dokuments E-Rechnung."
   * display 1..1 MS
 * author MS
-    * ^comment = "Der Fachdienst verknüpft alle Rechnungsdokumente mit der Telematik-ID des einreichenden Akteurs."
+  * ^comment = "Der Fachdienst verknüpft alle Rechnungsdokumente mit der Telematik-ID des einreichenden Akteurs."
   * identifier 1.. MS
   * identifier only IdentifierTelematikId
   * display 1.. MS
