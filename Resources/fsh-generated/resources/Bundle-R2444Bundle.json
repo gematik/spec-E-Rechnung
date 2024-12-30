@@ -309,7 +309,6 @@
         ],
         "address": [
           {
-            "use": "official",
             "type": "physical",
             "line": [
               "Marktplatz 2"
