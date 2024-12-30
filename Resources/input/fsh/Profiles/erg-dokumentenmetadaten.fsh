@@ -17,13 +17,21 @@ Id: erg-dokumentenmetadaten
   ERGDocRefFachrichtung named fachrichtung 0..1 MS and
   ERGDocRefLeistungsart named leistungsart 0..1 MS and
   ERGBehandlungsart named behandlungsart 0..1 MS
+* extension[rechnungsdatum]
+  * ^comment = "Siehe Abschnitt '4.8.1.1 Rechnung' des Feature-Dokuments E-Rechnung"
+* extension[zahlungszieldatum]
+  * ^comment = "Siehe Abschnitt '4.8.1.1 Rechnung' des Feature-Dokuments E-Rechnung"
+* extension[gesamtbetrag]
+  * ^comment = "Siehe Abschnitt '4.8.1.1 Rechnung' des Feature-Dokuments E-Rechnung"
 * meta.extension MS
 * meta.extension contains ERGDocumentReferenceMarkierung named markierung 0..* MS
+    * ^comment = "Vgl. Abschnitt '4.4.2 Markierungen' des Feature-Dokuments E-Rechnung"
 * meta.tag MS
   * ^slicing.discriminator.type = #pattern
   * ^slicing.discriminator.path = "$this"
   * ^slicing.rules = #open
 * meta.tag contains erg-rechnungsstatus 0..1 MS
+  * ^comment = "Metaangaben zur E-Rechnung die sich auf das Rechnungsdokument als Ganzes beziehen und nicht Teil des durch den RE-PS erstellten Dokuments sind."
 * meta.tag[erg-rechnungsstatus] from ERGRechnungsstatusVS (required)
   * ^comment = "Vgl. Abschnitt 4.4.1 Workflow einer Rechnung des Feature-Dokuments E-Rechnung"
   * system 1.. MS
@@ -37,7 +45,7 @@ Id: erg-dokumentenmetadaten
   * system 1.. MS
   * value 1.. MS
 * type 1.. MS
-  * ^short = "Dokumenttyp"
+  * ^comment = "Kodierung des Dokumentes als 'Rechnung', sowie darüber hinausgehende Klassifizierung per KDL"
 * type.coding 1.. 
   * ^slicing.discriminator.type = #pattern
   * ^slicing.discriminator.path = "$this"
@@ -56,10 +64,11 @@ Id: erg-dokumentenmetadaten
   * ^short = "Dokumententitel"
   * ^comment = "Menschenlesbarer Titel des Dokumentes, der dem Versicherten in der UI angezeigt wird. Der Titel kann manuell erfasst oder vom Dateinamen/Metadaten abgeleitet werden. z.B. &quot;Laborbefund vom 28.9.2023&quot;."
 * subject 1.. MS
+  * ^comment = "Vollständiger Name der behandelten Person. Siehe Abschnitt '4.8.1.1 Rechnung' des Feature-Dokuments E-Rechnung."
   * display 1..1 MS
 * author MS
-  * identifier 1.. MS
     * ^comment = "Der Fachdienst verknüpft alle Rechnungsdokumente mit der Telematik-ID des einreichenden Akteurs."
+  * identifier 1.. MS
   * identifier only IdentifierTelematikId
   * display 1.. MS
 * content 1.. MS
