@@ -4,5 +4,7 @@
   filename: Ressourcen-Profile
 - name: Terminologien
   filename: Terminologien
+- name: Extensions
+  filename: Extensions
 - name: Invarianten
   filename: Invarianten.page.md

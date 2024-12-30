@@ -6,3 +6,5 @@
   filename: Rechnungsinhalte
 - name: Akteure
   filename: Akteure
+- name: Datenobjekte
+  filename: Datenobjekte
