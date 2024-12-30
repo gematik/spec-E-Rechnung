@@ -43,7 +43,7 @@ Id: erg-dokumentenmetadaten
   * ^slicing.discriminator.path = "$this"
   * ^slicing.rules = #open
 * type.coding contains DokumentenKlassifizierung 0..1 MS and Rechnungstyp 0..1 MS
-* type.coding[DokumentenKlassifizierung] from https://gematik.de/fhir/erg/CodeSystem/erg-sonstigesdokument-type-vs (required)
+* type.coding[DokumentenKlassifizierung] from ERGSonstigesDokumentTypeVS (required)
   * ^short = "Dokumenttyp gemäß KDL"
   * ^patternCoding.system = "http://dvmd.de/fhir/CodeSystem/kdl"
   * system 1.. MS
