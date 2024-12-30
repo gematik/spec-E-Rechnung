@@ -98,7 +98,6 @@ Usage: #example
   * system = "https://gematik.de/fhir/sid/telematik-id"
   * value = "11223344"
 * address
-  * use = #official
   * type = #physical
   * line[+] = "Marktplatz 2"
   * line.extension[+]
