@@ -29,7 +29,7 @@ Id: erg-nutzungsprotokoll
 * source.observer.display ^comment = "Freitext-Rolle des Servers, auf das Event ausgelöst wurde"
 * entity MS
 * entity.what MS
-* entity.what ^comment = "Referenzierung aller betroffenen Ressourcen"
+* entity.what ^comment = "Referenzierung aller durch die zu protokollierende Interaktion betroffenen Ressourcen"
 * entity.what.display MS
 * entity.name MS
 * entity.description MS
