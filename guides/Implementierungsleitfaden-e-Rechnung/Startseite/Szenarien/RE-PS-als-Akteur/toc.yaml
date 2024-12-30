@@ -1,0 +1,12 @@
+- name: Index
+  filename: Index.page.md
+- name: 'R0: Abfrage des Rechnungsempfängers und dessen Einwilligung zum Rechnungsversand'
+  filename: R0-Abfrage-des-Rechnungsempfängers-und-dessen-Einwilligung-zum-Rechnungsversand.page.md
+- name: 'R1: Rechnung mit Dokumenten validieren und versenden'
+  filename: R1-Rechnung-mit-Dokumenten-validieren-und-versenden.page.md
+- name: 'R2: Rechnung validieren/einreichen (Bulk)'
+  filename: R2-Rechnung-validieren-einreichen-Bulk.page.md
+- name: 'R3: Abfrage von angereicherten PDF/A per Token (Rechnungsersteller)'
+  filename: R3-Abfrage-von-angereicherten-PDF-A-per-Token-Rechnungsersteller.page.md
+- name: 'R4: Abfrage von angereicherten PDF/A per Token (Rechnungsersteller) (Bulk)'
+  filename: R4-Abfrage-von-angereicherten-PDF-A-per-Token-Rechnungsersteller-Bulk.page.md

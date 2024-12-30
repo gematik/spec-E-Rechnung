@@ -1,0 +1,8 @@
+- name: Index
+  filename: Index.page.md
+- name: Rechnungsmetadaten
+  filename: Rechnungsmetadaten
+- name: Rechnungsinhalte
+  filename: Rechnungsinhalte
+- name: Akteure
+  filename: Akteure
