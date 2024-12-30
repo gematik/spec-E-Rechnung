@@ -251,7 +251,6 @@
       {
         "id": "DocumentReference.status",
         "path": "DocumentReference.status",
-        "short": "Dokumentenstatus",
         "comment": "Versionierung von Dokumenten ist nicht unterstützt. Nur jeweils die aktuelle Version des Dokumentes wird akzeptiert.",
         "patternCode": "current",
         "mustSupport": true
@@ -281,7 +280,6 @@
         "id": "DocumentReference.type.coding:DokumentenKlassifizierung",
         "path": "DocumentReference.type.coding",
         "sliceName": "DokumentenKlassifizierung",
-        "short": "Dokumenttyp gemäß KDL",
         "min": 0,
         "max": "1",
         "patternCoding": {
@@ -365,7 +363,6 @@
       {
         "id": "DocumentReference.description",
         "path": "DocumentReference.description",
-        "short": "Dokumententitel",
         "comment": "Menschenlesbarer Titel des Dokumentes, der dem Versicherten in der UI angezeigt wird. Der Titel kann manuell erfasst oder vom Dateinamen/Metadaten abgeleitet werden. z.B. &quot;Laborbefund vom 28.9.2023&quot;.",
         "min": 1,
         "mustSupport": true
