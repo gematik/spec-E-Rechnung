@@ -25,7 +25,7 @@ Id: erg-dokumentenmetadaten
   * ^comment = "Siehe Abschnitt '4.8.1.1 Rechnung' des Feature-Dokuments E-Rechnung"
 * meta.extension MS
 * meta.extension contains ERGDocumentReferenceMarkierung named markierung 0..* MS
-* meta.extension[ERGDocumentReferenceMarkierung]
+* meta.extension[markierung]
     * ^comment = "Vgl. Abschnitt '4.4.2 Markierungen' des Feature-Dokuments E-Rechnung"
 * meta.tag MS
   * ^slicing.discriminator.type = #pattern
