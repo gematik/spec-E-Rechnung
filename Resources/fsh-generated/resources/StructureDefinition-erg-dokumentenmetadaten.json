@@ -285,7 +285,7 @@
         "mustSupport": true,
         "binding": {
           "strength": "required",
-          "valueSet": "https://gematik.de/fhir/erg/CodeSystem/erg-sonstigesdokument-type-vs"
+          "valueSet": "https://gematik.de/fhir/erg/ValueSet/erg-sonstigesdokument-type-vs"
         }
       },
       {
