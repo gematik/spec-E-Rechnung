@@ -39,7 +39,6 @@ Id: erg-dokumentenmetadaten
   * code 1.. MS
 * status MS
 * status = #current
-  * ^short = "Dokumentenstatus"
   * ^comment = "Versionierung von Dokumenten ist nicht unterstützt. Nur jeweils die aktuelle Version des Dokumentes wird akzeptiert."
 * identifier 1.. MS
   * ^comment = "Eindeutiger Identifikator vergeben durch das RE-PS (z.B. Interne Dokumentennummer). Das System MUSS eindeutig pro Leistungserbringer:in vergeben werden."
@@ -53,7 +52,6 @@ Id: erg-dokumentenmetadaten
   * ^slicing.rules = #open
 * type.coding contains DokumentenKlassifizierung 0..1 MS and Rechnungstyp 0..1 MS
 * type.coding[DokumentenKlassifizierung] from ERGSonstigesDokumentTypeVS (required)
-  * ^short = "Dokumenttyp gemäß KDL"
   * ^patternCoding.system = "http://dvmd.de/fhir/CodeSystem/kdl"
   * system 1.. MS
   * code 1.. MS
@@ -62,7 +60,6 @@ Id: erg-dokumentenmetadaten
   * ^patternCoding.system = "http://dvmd.de/fhir/CodeSystem/kdl"
   * ^patternCoding.code = #AM010106
 * description 1..1 MS
-  * ^short = "Dokumententitel"
   * ^comment = "Menschenlesbarer Titel des Dokumentes, der dem Versicherten in der UI angezeigt wird. Der Titel kann manuell erfasst oder vom Dateinamen/Metadaten abgeleitet werden. z.B. &quot;Laborbefund vom 28.9.2023&quot;."
 * subject 1.. MS
   * ^comment = "Vollständiger Name der behandelten Person. Siehe Abschnitt '4.8.1.1 Rechnung' des Feature-Dokuments E-Rechnung."
