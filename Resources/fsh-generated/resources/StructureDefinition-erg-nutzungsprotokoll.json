@@ -126,7 +126,7 @@
       {
         "id": "AuditEvent.entity.what",
         "path": "AuditEvent.entity.what",
-        "comment": "Referenzierung aller betroffenen Ressourcen",
+        "comment": "Referenzierung aller durch die zu protokollierende Interaktion betroffenen Ressourcen",
         "mustSupport": true
       },
       {
