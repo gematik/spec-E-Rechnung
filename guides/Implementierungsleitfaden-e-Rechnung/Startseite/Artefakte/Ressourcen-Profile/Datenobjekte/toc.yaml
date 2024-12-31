@@ -1,23 +1,5 @@
 - name: Index
   filename: Index.page.md
-- name: ERGAbrechnungsrelevanteDiagnose (Extension).
-  filename: Datenobjekt_erg-abrechnungsrelevante-diagnose
-- name: ERGBehandlungsart (Extension).
-  filename: Datenobjekt_erg-behandlungsart
-- name: ERGDocRefFachrichtung (Extension).
-  filename: Datenobjekt_erg-docref-fachrichtung
-- name: ERGDocRefLeistungsart (Extension).
-  filename: Datenobjekt_erg-docref-leistungsart
-- name: ERGDocRefSignature (Extension).
-  filename: Datenobjekt_erg-docref-signature
-- name: ERGDocumentReferenceGesamtbetrag (Extension).
-  filename: Datenobjekt_erg-documentreference-gesamtbetrag
-- name: ERGDocumentReferenceMarkierung (Extension).
-  filename: Datenobjekt_erg-documentreference-markierung
-- name: ERGDocumentReferenceRechnungsdatum (Extension).
-  filename: Datenobjekt_erg-documentreference-rechnungsdatum
-- name: ERGDocumentReferenceZahlungszieldatum (Extension).
-  filename: Datenobjekt_erg-documentreference-zahlungszieldatum
 - name: ERGDokumentenmetadaten (DocumentReference).
   filename: Datenobjekt_erg-dokumentenmetadaten
 - name: ERGInvoicePeriod (Extension).
