@@ -1,50 +1,50 @@
 - name: Index
   filename: Index.page.md
 - name: ERGAbrechnungsrelevanteDiagnose (Extension).
-  filename: Datenobjekte_erg-abrechnungsrelevante-diagnose
+  filename: Datenobjekt_erg-abrechnungsrelevante-diagnose
 - name: ERGBehandlungsart (Extension).
-  filename: Datenobjekte_erg-behandlungsart
+  filename: Datenobjekt_erg-behandlungsart
 - name: ERGDocRefFachrichtung (Extension).
-  filename: Datenobjekte_erg-docref-fachrichtung
+  filename: Datenobjekt_erg-docref-fachrichtung
 - name: ERGDocRefLeistungsart (Extension).
-  filename: Datenobjekte_erg-docref-leistungsart
+  filename: Datenobjekt_erg-docref-leistungsart
 - name: ERGDocRefSignature (Extension).
-  filename: Datenobjekte_erg-docref-signature
+  filename: Datenobjekt_erg-docref-signature
 - name: ERGDocumentReferenceGesamtbetrag (Extension).
-  filename: Datenobjekte_erg-documentreference-gesamtbetrag
+  filename: Datenobjekt_erg-documentreference-gesamtbetrag
 - name: ERGDocumentReferenceMarkierung (Extension).
-  filename: Datenobjekte_erg-documentreference-markierung
+  filename: Datenobjekt_erg-documentreference-markierung
 - name: ERGDocumentReferenceRechnungsdatum (Extension).
-  filename: Datenobjekte_erg-documentreference-rechnungsdatum
+  filename: Datenobjekt_erg-documentreference-rechnungsdatum
 - name: ERGDocumentReferenceZahlungszieldatum (Extension).
-  filename: Datenobjekte_erg-documentreference-zahlungszieldatum
+  filename: Datenobjekt_erg-documentreference-zahlungszieldatum
 - name: ERGDokumentenmetadaten (DocumentReference).
-  filename: Datenobjekte_erg-dokumentenmetadaten
+  filename: Datenobjekt_erg-dokumentenmetadaten
 - name: ERGInvoicePeriod (Extension).
-  filename: Datenobjekte_extension-Invoice.period
+  filename: Datenobjekt_extension-Invoice.period
 - name: ERGLeistungserbringerOrganisation (Organization).
-  filename: Datenobjekte_erg-leistungserbringer-organisation
+  filename: Datenobjekt_erg-leistungserbringer-organisation
 - name: ERGLeistungserbringer (Practitioner).
-  filename: Datenobjekte_erg-leistungserbringer
+  filename: Datenobjekt_erg-leistungserbringer
 - name: ERGNutzungsprotokoll (AuditEvent).
-  filename: Datenobjekte_erg-nutzungsprotokoll
+  filename: Datenobjekt_erg-nutzungsprotokoll
 - name: ERGPDFRepraesentationRechnung (Extension).
-  filename: Datenobjekte_erg-pdf-repraesentation-rechnung
+  filename: Datenobjekt_erg-pdf-repraesentation-rechnung
 - name: ERGPreisDetailsRechnungsposition (Extension).
-  filename: Datenobjekte_erg-preisdetails-rechnungsposition
+  filename: Datenobjekt_erg-preisdetails-rechnungsposition
 - name: ERGRechnung (Invoice).
-  filename: Datenobjekte_erg-rechnung
+  filename: Datenobjekt_erg-rechnung
 - name: ERGRechnungsdiagnose (Condition).
-  filename: Datenobjekte_erg-rechnungsdiagnose
+  filename: Datenobjekt_erg-rechnungsdiagnose
 - name: ERGRechnungsdokument (Binary).
-  filename: Datenobjekte_erg-rechnungsdokument
+  filename: Datenobjekt_erg-rechnungsdokument
 - name: ERGRechnungsposition (ChargeItem).
-  filename: Datenobjekte_erg-rechnungsposition
+  filename: Datenobjekt_erg-rechnungsposition
 - name: ERGTaskRequestedPerformer (Extension).
-  filename: Datenobjekte_extension-Task.requestedPerformer
+  filename: Datenobjekt_extension-Task.requestedPerformer
 - name: ERGVersichertePerson (Patient).
-  filename: Datenobjekte_erg-versicherteperson
+  filename: Datenobjekt_erg-versicherteperson
 - name: ERGZahlungsziel (Extension).
-  filename: Datenobjekte_erg-zahlungsziel
+  filename: Datenobjekt_erg-zahlungsziel
 - name: ExtensionBehandlungsart (Extension).
-  filename: Datenobjekte_ExtensionBehandlungsart
+  filename: Datenobjekt_ExtensionBehandlungsart
