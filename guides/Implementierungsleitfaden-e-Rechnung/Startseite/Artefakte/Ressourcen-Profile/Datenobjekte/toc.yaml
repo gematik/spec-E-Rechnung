@@ -40,11 +40,3 @@
   filename: Datenobjekt_erg-rechnungsdokument
 - name: ERGRechnungsposition (ChargeItem).
   filename: Datenobjekt_erg-rechnungsposition
-- name: ERGTaskRequestedPerformer (Extension).
-  filename: Datenobjekt_extension-Task.requestedPerformer
-- name: ERGVersichertePerson (Patient).
-  filename: Datenobjekt_erg-versicherteperson
-- name: ERGZahlungsziel (Extension).
-  filename: Datenobjekt_erg-zahlungsziel
-- name: ExtensionBehandlungsart (Extension).
-  filename: Datenobjekt_ExtensionBehandlungsart
