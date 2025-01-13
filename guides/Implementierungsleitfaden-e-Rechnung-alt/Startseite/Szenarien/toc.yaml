@@ -1,0 +1,8 @@
+- name: Index
+  filename: index.page.md
+- name: RE-PS als Akteur
+  filename: RE-PS-als-Akteur
+- name: eRg FdV als Akteur
+  filename: eRg-FdV-als-Akteur
+- name: ITSys-KTR als Akteur
+  filename: ITSys-KTR-als-Akteur
