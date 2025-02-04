@@ -9,7 +9,13 @@ Alias: $gender-de = http://fhir.de/StructureDefinition/gender-amtlich-de
 Alias: $identifier-tmid = http://fhir.de/StructureDefinition/identifier-telematik-id
 Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
 Alias: $identifier-iknr = http://fhir.de/StructureDefinition/identifier-iknr
-Alias: $kbv-fachrichtung-cs = https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_BAR2_ARZTNRFACHGRUPPE
-Alias: $kbv-fachrichtung-vs = https://fhir.kbv.de/ValueSet/KBV_VS_SFHIR_BAR2_ARZTNRFACHGRUPPE
+Alias: $identifier-bsnr = http://fhir.de/StructureDefinition/identifier-bsnr
+Alias: $identifier-telematikId = http://fhir.de/StructureDefinition/identifier-telematik-id
 Alias: $restful-interaction = http://hl7.org/fhir/restful-interaction
 Alias: $EncounterClassDe = http://fhir.de/ValueSet/EncounterClassDE
+Alias: $kdl = http://dvmd.de/fhir/CodeSystem/kdl
+Alias: $ihe-practiceSettingCode = http://ihe-d.de/ValueSets/IHEXDSpracticeSettingCode
+
+//TODO Delete?
+Alias: $kbv-fachrichtung-cs = https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_BAR2_ARZTNRFACHGRUPPE
+Alias: $kbv-fachrichtung-vs = https://fhir.kbv.de/ValueSet/KBV_VS_SFHIR_BAR2_ARZTNRFACHGRUPPE
