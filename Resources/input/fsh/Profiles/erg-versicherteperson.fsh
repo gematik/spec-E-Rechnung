@@ -1,4 +1,4 @@
-Profile: ERGVersichertePerson
+Profile: ERGVersichertePerson //Wäre für mich ein Profil, was in die Metadaten rutscht? Weil es außerhalb der Inhalte genutzt wird?! TODO @Alexander Z?
 Title: "ERG Versicherte Person"
 Parent: Patient
 Id: erg-versicherteperson
