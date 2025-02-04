@@ -1,0 +1,464 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "erg-institution",
+  "url": "https://gematik.de/fhir/erg/StructureDefinition/erg-institution",
+  "version": "1.0.0-CC",
+  "name": "ERGInstitution",
+  "title": "ERG Institution",
+  "status": "active",
+  "experimental": false,
+  "date": "2024-06-20",
+  "publisher": "gematik GmbH",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://gematik.de/"
+        }
+      ]
+    }
+  ],
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Organization",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Organization",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Organization.identifier",
+        "path": "Organization.identifier",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.identifier:Telematik-ID",
+        "path": "Organization.identifier",
+        "sliceName": "Telematik-ID",
+        "short": "Telematik-ID (VZD-Eintrag)",
+        "comment": "Die Telematik-ID (VZD-Eintrag) SOLL vorhanden sein",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Identifier",
+            "profile": [
+              "http://fhir.de/StructureDefinition/identifier-telematik-id"
+            ]
+          }
+        ],
+        "patternIdentifier": {
+          "type": {
+            "coding": [
+              {
+                "code": "PRN",
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+              }
+            ]
+          }
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.identifier:Telematik-ID.type",
+        "path": "Organization.identifier.type",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.identifier:Telematik-ID.system",
+        "path": "Organization.identifier.system",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.identifier:Telematik-ID.value",
+        "path": "Organization.identifier.value",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.identifier:IKNR",
+        "path": "Organization.identifier",
+        "sliceName": "IKNR",
+        "short": "IK-Nummer",
+        "comment": "Für privatärztliche Praxis SOLL die IK-Nummer vorhanden sein. Bei allen anderen Institutionen KANN sie vorhanden sein. Die IK-Nummer SOLL für alle Apotheken vorhanden sein.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Identifier",
+            "profile": [
+              "http://fhir.de/StructureDefinition/identifier-iknr"
+            ]
+          }
+        ],
+        "patternIdentifier": {
+          "type": {
+            "coding": [
+              {
+                "code": "XX",
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+              }
+            ]
+          }
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.identifier:IKNR.type",
+        "path": "Organization.identifier.type",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.identifier:IKNR.system",
+        "path": "Organization.identifier.system",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.identifier:IKNR.value",
+        "path": "Organization.identifier.value",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.identifier:BSNR",
+        "path": "Organization.identifier",
+        "sliceName": "BSNR",
+        "short": "Betriebsstättennummer",
+        "comment": "Die Betriebsstättennummer für vertragsärztliche Praxen SOLL vorhanden sein",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Identifier",
+            "profile": [
+              "http://fhir.de/StructureDefinition/identifier-bsnr"
+            ]
+          }
+        ],
+        "patternIdentifier": {
+          "type": {
+            "coding": [
+              {
+                "code": "BSNR",
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+              }
+            ]
+          }
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.identifier:BSNR.type",
+        "path": "Organization.identifier.type",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.identifier:BSNR.system",
+        "path": "Organization.identifier.system",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.identifier:BSNR.value",
+        "path": "Organization.identifier.value",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.identifier:USt-ID-Nr",
+        "path": "Organization.identifier",
+        "sliceName": "USt-ID-Nr",
+        "short": "Umsatzsteuer-Identifikationsnummer",
+        "comment": "Die Umsatzsteuer-Identifikationsnummer KANN vorhanden sein.\n  Sie KANN vorkommen, wenn eine Institution die Rolle eines 'Abweichender Forderungsinhaber', sowie des 'Rechnungsersteller' inne hat.",
+        "min": 0,
+        "max": "1",
+        "patternIdentifier": {
+          "type": {
+            "coding": [
+              {
+                "code": "TAX",
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+              }
+            ]
+          }
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.identifier:USt-ID-Nr.type",
+        "path": "Organization.identifier.type",
+        "min": 1,
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "TAX",
+              "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.identifier:USt-ID-Nr.system",
+        "path": "Organization.identifier.system",
+        "comment": "Es gibt kein FHIR-NamingSystem für die USt.-ID von offizieller Seite. Aus dem Grund ist System nicht mit MS gekennzeichnet und SOLL nicht befüllt sein."
+      },
+      {
+        "id": "Organization.identifier:USt-ID-Nr.value",
+        "path": "Organization.identifier.value",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.type",
+        "path": "Organization.type",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.type:Fachrichtung",
+        "path": "Organization.type",
+        "sliceName": "Fachrichtung",
+        "short": "Fachrichtung",
+        "comment": "Die Fachrichtung SOLL vorhanden sein.",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://ihe-d.de/ValueSets/IHEXDSpracticeSettingCode"
+        }
+      },
+      {
+        "id": "Organization.name",
+        "path": "Organization.name",
+        "short": "Institutionsname",
+        "comment": "Der Institutionsname SOLL vorhanden sein.",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.telecom",
+        "path": "Organization.telecom",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.telecom:Telefon",
+        "path": "Organization.telecom",
+        "sliceName": "Telefon",
+        "short": "Telefon",
+        "comment": "Die Angabe einer Telefonnummer KANN vorhanden sein.\n  Sie KANN vorkommen, wenn eine Institution die Rolle eines 'Abweichender Forderungsinhaber', sowie des 'Rechnungsersteller' inne hat.",
+        "min": 0,
+        "max": "*",
+        "patternContactPoint": {
+          "system": "phone"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.telecom:Telefon.system",
+        "path": "Organization.telecom.system",
+        "patternCode": "phone",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.telecom:Telefon.value",
+        "path": "Organization.telecom.value",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.address",
+        "path": "Organization.address",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.address:Strassenanschrift",
+        "path": "Organization.address",
+        "sliceName": "Strassenanschrift",
+        "short": "Strassenanschrift",
+        "comment": "Die Strassenanschrift SOLL vorhanden sein.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Address",
+            "profile": [
+              "http://fhir.de/StructureDefinition/address-de-basis"
+            ]
+          }
+        ],
+        "patternAddress": {
+          "type": "both"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.address:Strassenanschrift.type",
+        "path": "Organization.address.type",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.address:Strassenanschrift.line",
+        "path": "Organization.address.line",
+        "short": "Straße und Hausnummer",
+        "comment": "Straße und Hausnummer SOLLEN angegeben werden, die Extensions zur strukurierten Erfassung KÖNNEN vorhanden sein.",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.address:Strassenanschrift.line.extension:Strasse",
+        "path": "Organization.address.line.extension",
+        "sliceName": "Strasse",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.address:Strassenanschrift.line.extension:Hausnummer",
+        "path": "Organization.address.line.extension",
+        "sliceName": "Hausnummer",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.address:Strassenanschrift.line.extension:Adresszusatz",
+        "path": "Organization.address.line.extension",
+        "sliceName": "Adresszusatz",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.address:Strassenanschrift.line.extension:Postfach",
+        "path": "Organization.address.line.extension",
+        "sliceName": "Postfach",
+        "max": "0"
+      },
+      {
+        "id": "Organization.address:Strassenanschrift.city",
+        "path": "Organization.address.city",
+        "short": "Ort",
+        "comment": "Der Ort SOLL vorhanden sein.",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.address:Strassenanschrift.postalCode",
+        "path": "Organization.address.postalCode",
+        "comment": "Die Postleitzahl SOLL vorhanden sein.",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.address:Strassenanschrift.country",
+        "path": "Organization.address.country",
+        "short": "Länderkennzeichen",
+        "comment": "Das Länderkennzeichen KANN vorhanden sein.",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.address:Postfach",
+        "path": "Organization.address",
+        "sliceName": "Postfach",
+        "short": "Postfach",
+        "comment": "Das Postfach SOLL vorhanden sein.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Address",
+            "profile": [
+              "http://fhir.de/StructureDefinition/address-de-basis"
+            ]
+          }
+        ],
+        "patternAddress": {
+          "type": "postal"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.address:Postfach.type",
+        "path": "Organization.address.type",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.address:Postfach.line",
+        "path": "Organization.address.line",
+        "short": "Postfach-Angabe",
+        "comment": "Die Postfach-Angabe SOLL angegeben werden, die Extensions zur strukurierten Erfassung KANN vorhanden sein.",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.address:Postfach.line.extension:Strasse",
+        "path": "Organization.address.line.extension",
+        "sliceName": "Strasse",
+        "max": "0"
+      },
+      {
+        "id": "Organization.address:Postfach.line.extension:Hausnummer",
+        "path": "Organization.address.line.extension",
+        "sliceName": "Hausnummer",
+        "max": "0"
+      },
+      {
+        "id": "Organization.address:Postfach.line.extension:Adresszusatz",
+        "path": "Organization.address.line.extension",
+        "sliceName": "Adresszusatz",
+        "max": "0"
+      },
+      {
+        "id": "Organization.address:Postfach.line.extension:Postfach",
+        "path": "Organization.address.line.extension",
+        "sliceName": "Postfach",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.address:Postfach.city",
+        "path": "Organization.address.city",
+        "short": "Ort",
+        "comment": "Der Ort SOLL vorhanden sein.",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.address:Postfach.postalCode",
+        "path": "Organization.address.postalCode",
+        "comment": "Die Postleitzahl SOLL vorhanden sein.",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.address:Postfach.country",
+        "path": "Organization.address.country",
+        "short": "Länderkennzeichen",
+        "comment": "Das Länderkennzeichen KANN vorhanden sein.",
+        "mustSupport": true
+      }
+    ]
+  }
+}
