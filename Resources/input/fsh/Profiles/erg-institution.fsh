@@ -17,13 +17,15 @@ Id: erg-institution
   * type 1.. MS
   * system MS
   * value MS
+    * ^short = "Telematik-ID (VZD-Eintrag)"
   * ^short = "Telematik-ID (VZD-Eintrag)"
-  * ^comment = "Die Telematik-ID (VZD-Eintrag) SOLL vorhanden sein"
+  * ^comment = "Die Telematik-ID (VZD-Eintrag) SOLL vorhanden sein."
 * identifier[IKNR] only $identifier-iknr
   * ^patternIdentifier.type = $v2-0203#XX
   * type 1.. MS
   * system MS
   * value MS
+    * ^short = "IK-Nummer"
   * ^short = "IK-Nummer"
   * ^comment = "Für privatärztliche Praxis SOLL die IK-Nummer vorhanden sein. Bei allen anderen Institutionen KANN sie vorhanden sein. Die IK-Nummer SOLL für alle Apotheken vorhanden sein."
 * identifier[BSNR] only $identifier-bsnr
@@ -31,8 +33,9 @@ Id: erg-institution
   * type 1.. MS
   * system MS
   * value MS
+    * ^short = "Betriebsstättennummer"
   * ^short = "Betriebsstättennummer"
-  * ^comment = "Die Betriebsstättennummer für vertragsärztliche Praxen SOLL vorhanden sein"
+  * ^comment = "Die Betriebsstättennummer für vertragsärztliche Praxen SOLL vorhanden sein."
 * identifier[USt-ID-Nr]
   * ^patternIdentifier.type = $v2-0203#TAX
   * type 1.. MS
@@ -51,6 +54,8 @@ Id: erg-institution
 * type[Fachrichtung] from $ihe-practiceSettingCode (required)
   * ^short = "Fachrichtung"
   * ^comment = "Die Fachrichtung SOLL vorhanden sein."
+  * coding.system 1.. MS
+  * coding.code 1.. MS
 * name MS
   * ^short = "Institutionsname"
   * ^comment = "Der Institutionsname SOLL vorhanden sein."
@@ -67,6 +72,7 @@ Id: erg-institution
   * system MS
   * system = #phone
   * value MS
+    * ^short = "Telefonnummer"
 * address MS
 * address ^slicing.discriminator.type = #pattern
 * address ^slicing.discriminator.path = "$this"
