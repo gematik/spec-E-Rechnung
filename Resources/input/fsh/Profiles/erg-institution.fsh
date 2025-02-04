@@ -37,7 +37,7 @@ Id: erg-institution
   * ^short = "Betriebsstättennummer"
   * ^comment = "Die Betriebsstättennummer für vertragsärztliche Praxen SOLL vorhanden sein."
 * identifier[USt-ID-Nr]
-  * ^patternIdentifier.type = $v2-0203#TAX
+  * ^patternIdentifier.type = $v2-0203#TAX //TODO Anfrage beim TC Term läuft
   * type 1.. MS
   * type = $v2-0203#TAX //TODO Anfrage beim TC Term läuft
   * system ^comment = "Es gibt kein FHIR-NamingSystem für die USt.-ID von offizieller Seite. Aus dem Grund ist System nicht mit MS gekennzeichnet und SOLL nicht befüllt sein." //TODO Anfrage beim TC Term läuft
@@ -89,8 +89,11 @@ Id: erg-institution
     * ^short = "Straße und Hausnummer"
     * ^comment = "Straße und Hausnummer SOLLEN angegeben werden, die Extensions zur strukurierten Erfassung KÖNNEN vorhanden sein."
     * extension[Strasse] 0..1 MS
+      * ^comment = "Die Extension zur strukurierten Erfassung der Straße KANN vorhanden sein."
     * extension[Hausnummer] 0..1 MS
+      * ^comment = "Die Extension zur strukurierten Erfassung der Hausnummer KANN vorhanden sein."
     * extension[Adresszusatz] 0..1 MS
+      * ^comment = "Die Extension zur strukurierten Erfassung des Adresszusatz KANN vorhanden sein."
     * extension[Postfach] 0..0
   * city MS
     * ^short = "Ort"
@@ -114,6 +117,7 @@ Id: erg-institution
     * extension[Hausnummer] 0..0 
     * extension[Adresszusatz] 0..0 
     * extension[Postfach] 0..1 MS
+      * ^comment = "Die Extension zur strukurierten Erfassung des Postfach KANN vorhanden sein."
   * city MS
     * ^short = "Ort"
     * ^comment = "Der Ort SOLL vorhanden sein."
