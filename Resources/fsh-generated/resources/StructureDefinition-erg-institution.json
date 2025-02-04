@@ -46,7 +46,7 @@
         "path": "Organization.identifier",
         "sliceName": "Telematik-ID",
         "short": "Telematik-ID (VZD-Eintrag)",
-        "comment": "Die Telematik-ID (VZD-Eintrag) SOLL vorhanden sein",
+        "comment": "Die Telematik-ID (VZD-Eintrag) SOLL vorhanden sein.",
         "min": 0,
         "max": "1",
         "type": [
@@ -83,6 +83,7 @@
       {
         "id": "Organization.identifier:Telematik-ID.value",
         "path": "Organization.identifier.value",
+        "short": "Telematik-ID (VZD-Eintrag)",
         "mustSupport": true
       },
       {
@@ -127,6 +128,7 @@
       {
         "id": "Organization.identifier:IKNR.value",
         "path": "Organization.identifier.value",
+        "short": "IK-Nummer",
         "mustSupport": true
       },
       {
@@ -134,7 +136,7 @@
         "path": "Organization.identifier",
         "sliceName": "BSNR",
         "short": "Betriebsstättennummer",
-        "comment": "Die Betriebsstättennummer für vertragsärztliche Praxen SOLL vorhanden sein",
+        "comment": "Die Betriebsstättennummer für vertragsärztliche Praxen SOLL vorhanden sein.",
         "min": 0,
         "max": "1",
         "type": [
@@ -171,6 +173,7 @@
       {
         "id": "Organization.identifier:BSNR.value",
         "path": "Organization.identifier.value",
+        "short": "Betriebsstättennummer",
         "mustSupport": true
       },
       {
@@ -247,6 +250,18 @@
         }
       },
       {
+        "id": "Organization.type:Fachrichtung.coding.system",
+        "path": "Organization.type.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.type:Fachrichtung.coding.code",
+        "path": "Organization.type.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
         "id": "Organization.name",
         "path": "Organization.name",
         "short": "Institutionsname",
@@ -289,6 +304,7 @@
       {
         "id": "Organization.telecom:Telefon.value",
         "path": "Organization.telecom.value",
+        "short": "Telefonnummer",
         "mustSupport": true
       },
       {
