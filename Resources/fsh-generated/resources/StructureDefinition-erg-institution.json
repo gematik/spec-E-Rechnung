@@ -358,18 +358,21 @@
         "id": "Organization.address:Strassenanschrift.line.extension:Strasse",
         "path": "Organization.address.line.extension",
         "sliceName": "Strasse",
+        "comment": "Die Extension zur strukurierten Erfassung der Straße KANN vorhanden sein.",
         "mustSupport": true
       },
       {
         "id": "Organization.address:Strassenanschrift.line.extension:Hausnummer",
         "path": "Organization.address.line.extension",
         "sliceName": "Hausnummer",
+        "comment": "Die Extension zur strukurierten Erfassung der Hausnummer KANN vorhanden sein.",
         "mustSupport": true
       },
       {
         "id": "Organization.address:Strassenanschrift.line.extension:Adresszusatz",
         "path": "Organization.address.line.extension",
         "sliceName": "Adresszusatz",
+        "comment": "Die Extension zur strukurierten Erfassung des Adresszusatz KANN vorhanden sein.",
         "mustSupport": true
       },
       {
@@ -453,6 +456,7 @@
         "id": "Organization.address:Postfach.line.extension:Postfach",
         "path": "Organization.address.line.extension",
         "sliceName": "Postfach",
+        "comment": "Die Extension zur strukurierten Erfassung des Postfach KANN vorhanden sein.",
         "mustSupport": true
       },
       {
