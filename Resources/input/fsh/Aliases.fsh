@@ -16,6 +16,11 @@ Alias: $restful-interaction = http://hl7.org/fhir/restful-interaction
 Alias: $EncounterClassDe = http://fhir.de/ValueSet/EncounterClassDE
 Alias: $kdl = http://dvmd.de/fhir/CodeSystem/kdl
 Alias: $ihe-practiceSettingCode = http://ihe-d.de/ValueSets/IHEXDSpracticeSettingCode
+Alias: $icd10-cs = http://fhir.de/CodeSystem/bfarm/icd-10-gm
+Alias: $icd10-vs = http://fhir.de/ValueSet/bfarm/icd-10-gm
+Alias: $coding-icd-10 = http://fhir.de/StructureDefinition/CodingICD10GM
+Alias: $ops-cs = http://fhir.de/CodeSystem/bfarm/ops
+Alias: $coding-ops = http://fhir.de/StructureDefinition/CodingOPS
 
 //TODO Delete?
 Alias: $kbv-fachrichtung-cs = https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_BAR2_ARZTNRFACHGRUPPE

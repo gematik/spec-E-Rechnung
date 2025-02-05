@@ -3,23 +3,61 @@ Title: "ERG Rechnung"
 Parent: Invoice
 Id: erg-rechnung
 * insert Meta
+//TODO @Alexander Z, sollen wir das drin lassen? Im Workshop ist das gar nicht auf der Liste für die Inhalte gelandet
 * extension contains 
-  ERGPDFRepraesentationRechnung named pdf-repraesentation-rechnung 0..1 MS and
-  ERGInvoicePeriod named period 0..1 MS and
-  ERGAbrechnungsrelevanteDiagnose named AbrechnungsrelevanteDiagnose 0..* MS
+  ERGPDFRepraesentationRechnung named pdf-repraesentation-rechnung 0..1 MS and 
+  http://hl7.org/fhir/5.0/StructureDefinition/extension-Invoice.period[x] named Behandlungszeitraum 0..1 MS and
+  ExtensionAbrechnungsDiagnoseProzedur named AbrechnungsDiagnoseProzedur 0..* MS
+* extension[AbrechnungsDiagnoseProzedur]
+  * extension[Use].valueCoding MS
+    * ^short = "Kennzeichen Hauptdiagnose"
+    * ^comment = "Das Kennzeichen Hauptdiagnose SOLL vorhanden sein."
+    * code = http://TODO.de#main-diagnosis
+  * extension[Referenz].valueReference MS
+    * ^short = "Zuordnung von Diagnosen oder Prozeduren zur Rechnung"
+    * ^comment = "Diagnosen und Prozeduren SOLLEN zur Rechnung zugeordnet sein."
+* extension[Behandlungszeitraum]
+  * ^short = "Behandlungszeitraum"
+  * ^comment = "Der Behandlungszeitraum SOLL vorhanden sein."
+  * valuePeriod MS
+    * start MS
+      * ^short = "Startdatum"
+    * end MS
+      * ^short = "Enddatum"
 * identifier 1.. MS
 * identifier ^slicing.discriminator.type = #pattern
-* identifier ^slicing.discriminator.path = "type"
+* identifier ^slicing.discriminator.path = "$this"
 * identifier ^slicing.rules = #open
-* identifier contains rechnungsnummer 1..1
-* identifier[rechnungsnummer]
-  * ^short = "Vom System des Leistungserbringers vergebene Rechnungsnummer"
+* identifier contains
+  Rechnungsnummer 1..1 MS and
+  Antragsnummer ..1 MS
+* identifier[Rechnungsnummer]
+  * ^patternIdentifier.type = http://TODO.de#invoice
+  * ^short = "Rechnungs-Nr. (der LEI)"
+  * ^comment = "Die Rechnungs-Nr. (der LEI) MUSS vorhanden sein."
   * type 1.. MS
-  * type = http://fhir.de/CodeSystem/identifier-type-de-basis#invoice
+  * type = http://TODO.de#invoice
   * system 1.. MS
-    * ^short = "Namensraum der Rechnungsnummern des Leistungeerbringers"
+    * ^short = "NamingSystem der Rechnungs-Nr. (der LEI)"
   * value 1.. MS
-    * ^short = "Rechnungsnummer"
+    * ^short = "Rechnungs-Nr. (der LEI)"
+* date 1.. MS
+  * ^short = "Rechnungsdatum"
+  * ^comment = "Das Rechnungsdatum MUSS vorhanden sein."
+* identifier[Antragsnummer]
+  * ^patternIdentifier.type = http://TODO.de#Auftragsnummer
+  * ^short = "Referenz auf Heil- und Kostenplan, Kostenvoranschlag oder Kostenübernahmeantrag"
+  * ^comment = "Die Rechnungs-Nr. (der LEI) MUSS vorhanden sein."
+  * type 1.. MS
+  * type = http://TODO.de#Auftragsnummer
+  * system 1.. MS
+    * ^short = "NamingSystem der Rechnungs-Nr. (der LEI)"
+  * value 1.. MS
+    * ^short = "Rechnungs-Nr. (der LEI)"
+* date 1.. MS
+  * ^short = "Rechnungsdatum"
+  * ^comment = "Das Rechnungsdatum MUSS vorhanden sein."
+// ---- Nicht überarbeitet---
 * type 1.. MS
 * type = https://gematik.de/fhir/erg/CodeSystem/erg-rechnung-type-cs#erechnung
 * status MS
@@ -60,7 +98,7 @@ Id: erg-rechnung
   * display 1..1 MS
     * ^short = "Name der behandelten Person"
     * ^comment = "Der Name der behandelten Person muss angegeben werden und kann vom Namen des Rechnungsempfängers abweichen, z.B. wenn Eltern Rechnungen für ihre Kinder erhalten."
-* date 1.. MS
+
 * issuer 1.. MS
   * ^short = "Leistungserbringer"
   * ^comment = "Der Leistungserbringer kann vom einreichenden Benutzer 
@@ -112,15 +150,6 @@ Title: "ERG Extension Behandlungsart"
 * value[x] only Coding
 * valueCoding from $EncounterClassDe
 
-Extension: ERGAbrechnungsrelevanteDiagnose
-Id: erg-abrechnungsrelevante-diagnose
-Title: "ERG abrechnungsrelevante Diagnose"
-* insert Meta
-* ^context.type = #element
-* ^context.expression = "Invoice"
-* value[x] only Reference
-* valueReference only Reference(Condition)
-
 CodeSystem: ERGParticipantRoleCS
 Id: erg-participant-role-CS
 Title: "ERG Teilnehmer Rolle"
@@ -134,3 +163,19 @@ Title: "ERG Teilnehmer Rolle"
 Description: "Diese Codes enthalten Teilnehmer Rollen der eRechnung"
 * insert Meta
 * include codes from system ERGParticipantRoleCS
+
+Extension: ExtensionAbrechnungsDiagnoseProzedur
+Id: ExtensionAbrechnungsDiagnoseProzedur
+Title: "Abrechnungsrelevanz von Diagnosen und Prozeduren"
+Description: """Diese Extension erlaubt es einer Invoice Diagnosen oder Prozeduren, incl. Qualifier wie bspw: "Primär-DRG" zuzuordnen. Dies ermöglicht unter anderem das Zuordnen von Haupt- und Nebendiagnosen zu einem Account zum Zweck der DRG Erstellung."""
+* insert Meta
+* ^context.type = #element
+* ^context.expression = "Invoice"
+* . ^short = "Abrechnungsrelevanz von Diagnosen und Prozeduren"
+* extension contains
+    Use 1..1 and
+    Referenz 1..*
+* extension[Use].value[x] only Coding
+* extension[Use].valueCoding 0..1
+* extension[Use].valueCoding from http://fhir.de/ValueSet/AbrechnungsDiagnoseProzedur (extensible)
+* extension[Referenz].value[x] only Reference(Condition or Procedure)
