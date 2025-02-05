@@ -44,35 +44,105 @@
         "mustSupport": true
       },
       {
-        "id": "Invoice.extension:period",
+        "id": "Invoice.extension:Behandlungszeitraum",
         "path": "Invoice.extension",
-        "sliceName": "period",
+        "sliceName": "Behandlungszeitraum",
+        "short": "Behandlungszeitraum",
+        "comment": "Der Behandlungszeitraum SOLL vorhanden sein.",
         "min": 0,
         "max": "1",
         "type": [
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Invoice.period"
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Invoice.period[x]"
             ]
           }
         ],
         "mustSupport": true
       },
       {
-        "id": "Invoice.extension:AbrechnungsrelevanteDiagnose",
+        "id": "Invoice.extension:Behandlungszeitraum.value[x]",
+        "path": "Invoice.extension.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "id": "Invoice.extension:Behandlungszeitraum.value[x]:valuePeriod",
+        "path": "Invoice.extension.value[x]",
+        "sliceName": "valuePeriod",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Period"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.extension:Behandlungszeitraum.value[x]:valuePeriod.start",
+        "path": "Invoice.extension.value[x].start",
+        "short": "Startdatum",
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.extension:Behandlungszeitraum.value[x]:valuePeriod.end",
+        "path": "Invoice.extension.value[x].end",
+        "short": "Enddatum",
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.extension:AbrechnungsDiagnoseProzedur",
         "path": "Invoice.extension",
-        "sliceName": "AbrechnungsrelevanteDiagnose",
+        "sliceName": "AbrechnungsDiagnoseProzedur",
         "min": 0,
         "max": "*",
         "type": [
           {
             "code": "Extension",
             "profile": [
-              "https://gematik.de/fhir/erg/StructureDefinition/erg-abrechnungsrelevante-diagnose"
+              "https://gematik.de/fhir/erg/StructureDefinition/ExtensionAbrechnungsDiagnoseProzedur"
             ]
           }
         ],
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.extension:AbrechnungsDiagnoseProzedur.extension:Use",
+        "path": "Invoice.extension.extension",
+        "sliceName": "Use"
+      },
+      {
+        "id": "Invoice.extension:AbrechnungsDiagnoseProzedur.extension:Use.value[x]",
+        "path": "Invoice.extension.extension.value[x]",
+        "short": "Kennzeichen Hauptdiagnose",
+        "comment": "Das Kennzeichen Hauptdiagnose SOLL vorhanden sein.",
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.extension:AbrechnungsDiagnoseProzedur.extension:Use.value[x].code",
+        "path": "Invoice.extension.extension.value[x].code",
+        "patternCode": "main-diagnosis"
+      },
+      {
+        "id": "Invoice.extension:AbrechnungsDiagnoseProzedur.extension:Referenz",
+        "path": "Invoice.extension.extension",
+        "sliceName": "Referenz"
+      },
+      {
+        "id": "Invoice.extension:AbrechnungsDiagnoseProzedur.extension:Referenz.value[x]",
+        "path": "Invoice.extension.extension.value[x]",
+        "short": "Zuordnung von Diagnosen oder Prozeduren zur Rechnung",
+        "comment": "Diagnosen und Prozeduren SOLLEN zur Rechnung zugeordnet sein.",
         "mustSupport": true
       },
       {
@@ -82,7 +152,7 @@
           "discriminator": [
             {
               "type": "pattern",
-              "path": "type"
+              "path": "$this"
             }
           ],
           "rules": "open"
@@ -91,38 +161,98 @@
         "mustSupport": true
       },
       {
-        "id": "Invoice.identifier:rechnungsnummer",
+        "id": "Invoice.identifier:Rechnungsnummer",
         "path": "Invoice.identifier",
-        "sliceName": "rechnungsnummer",
-        "short": "Vom System des Leistungserbringers vergebene Rechnungsnummer",
+        "sliceName": "Rechnungsnummer",
+        "short": "Rechnungs-Nr. (der LEI)",
+        "comment": "Die Rechnungs-Nr. (der LEI) MUSS vorhanden sein.",
         "min": 1,
-        "max": "1"
+        "max": "1",
+        "patternIdentifier": {
+          "type": {
+            "coding": [
+              {
+                "code": "invoice",
+                "system": "http://TODO.de"
+              }
+            ]
+          }
+        },
+        "mustSupport": true
       },
       {
-        "id": "Invoice.identifier:rechnungsnummer.type",
+        "id": "Invoice.identifier:Rechnungsnummer.type",
         "path": "Invoice.identifier.type",
         "min": 1,
         "patternCodeableConcept": {
           "coding": [
             {
               "code": "invoice",
-              "system": "http://fhir.de/CodeSystem/identifier-type-de-basis"
+              "system": "http://TODO.de"
             }
           ]
         },
         "mustSupport": true
       },
       {
-        "id": "Invoice.identifier:rechnungsnummer.system",
+        "id": "Invoice.identifier:Rechnungsnummer.system",
         "path": "Invoice.identifier.system",
-        "short": "Namensraum der Rechnungsnummern des Leistungeerbringers",
+        "short": "NamingSystem der Rechnungs-Nr. (der LEI)",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "Invoice.identifier:rechnungsnummer.value",
+        "id": "Invoice.identifier:Rechnungsnummer.value",
         "path": "Invoice.identifier.value",
-        "short": "Rechnungsnummer",
+        "short": "Rechnungs-Nr. (der LEI)",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.identifier:Antragsnummer",
+        "path": "Invoice.identifier",
+        "sliceName": "Antragsnummer",
+        "short": "Referenz auf Heil- und Kostenplan, Kostenvoranschlag oder Kostenübernahmeantrag",
+        "comment": "Die Rechnungs-Nr. (der LEI) MUSS vorhanden sein.",
+        "min": 0,
+        "max": "1",
+        "patternIdentifier": {
+          "type": {
+            "coding": [
+              {
+                "code": "Auftragsnummer",
+                "system": "http://TODO.de"
+              }
+            ]
+          }
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.identifier:Antragsnummer.type",
+        "path": "Invoice.identifier.type",
+        "min": 1,
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "Auftragsnummer",
+              "system": "http://TODO.de"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.identifier:Antragsnummer.system",
+        "path": "Invoice.identifier.system",
+        "short": "NamingSystem der Rechnungs-Nr. (der LEI)",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.identifier:Antragsnummer.value",
+        "path": "Invoice.identifier.value",
+        "short": "Rechnungs-Nr. (der LEI)",
         "min": 1,
         "mustSupport": true
       },
@@ -206,6 +336,8 @@
       {
         "id": "Invoice.date",
         "path": "Invoice.date",
+        "short": "Rechnungsdatum",
+        "comment": "Das Rechnungsdatum MUSS vorhanden sein.",
         "min": 1,
         "mustSupport": true
       },

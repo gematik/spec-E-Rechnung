@@ -30,7 +30,6 @@
       {
         "id": "Condition.code",
         "path": "Condition.code",
-        "min": 1,
         "mustSupport": true
       },
       {
@@ -45,43 +44,102 @@
           ],
           "rules": "open"
         },
-        "min": 1,
         "mustSupport": true
       },
       {
         "id": "Condition.code.coding:ICD-10-GM",
         "path": "Condition.code.coding",
         "sliceName": "ICD-10-GM",
-        "min": 1,
+        "short": "Code und Text nach ICD-10",
+        "comment": "Die Codierung nach ICD-10 SOLL vorhanden sein.",
+        "min": 0,
         "max": "1",
+        "type": [
+          {
+            "code": "Coding",
+            "profile": [
+              "http://fhir.de/StructureDefinition/CodingICD10GM"
+            ]
+          }
+        ],
+        "patternCoding": {
+          "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.code.coding:ICD-10-GM.extension:Seitenlokalisation",
+        "path": "Condition.code.coding.extension",
+        "sliceName": "Seitenlokalisation",
+        "short": "Lokalisierung",
+        "comment": "Die Lokalisierung SOLL vorhanden sein.",
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.code.coding:ICD-10-GM.extension:Seitenlokalisation.value[x]",
+        "path": "Condition.code.coding.extension.value[x]",
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.code.coding:ICD-10-GM.extension:Seitenlokalisation.value[x].system",
+        "path": "Condition.code.coding.extension.value[x].system",
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.code.coding:ICD-10-GM.extension:Seitenlokalisation.value[x].code",
+        "path": "Condition.code.coding.extension.value[x].code",
         "mustSupport": true
       },
       {
         "id": "Condition.code.coding:ICD-10-GM.system",
         "path": "Condition.code.coding.system",
-        "patternUri": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
         "mustSupport": true
       },
       {
         "id": "Condition.code.coding:ICD-10-GM.code",
         "path": "Condition.code.coding.code",
+        "short": "Code nach ICD-10",
+        "comment": "Der Code nach ICD-10 SOLL vorhanden sein.",
         "mustSupport": true
       },
       {
         "id": "Condition.code.coding:ICD-10-GM.display",
         "path": "Condition.code.coding.display",
+        "short": "Text zum ICD-10 Code",
+        "comment": "Der Text zum ICD-10 Code SOLL vorhanden sein.",
         "mustSupport": true
       },
       {
         "id": "Condition.subject",
         "path": "Condition.subject",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://gematik.de/fhir/erg/StructureDefinition/erg-person",
+              "http://hl7.org/fhir/StructureDefinition/Patient"
+            ]
+          }
+        ],
         "mustSupport": true
       },
       {
         "id": "Condition.subject.reference",
         "path": "Condition.subject.reference",
-        "comment": "Die referenzierte Instanz sollte valide zum Profil ERVersichertePerson sein",
+        "comment": "Die Diagnose SOLL auf eine zugehörige Behandelte Person referenzieren.",
         "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.onset[x]",
+        "path": "Condition.onset[x]",
+        "short": "Behandlungsdatum (Erstdiagnose)",
+        "comment": "Das Behandlungsdatum (Erstdiagnose) SOLL vorhanden sein.",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
         "mustSupport": true
       }
     ]
