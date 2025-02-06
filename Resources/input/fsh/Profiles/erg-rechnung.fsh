@@ -8,7 +8,8 @@ Id: erg-rechnung
   ERGPDFRepraesentationRechnung named pdf-repraesentation-rechnung 0..1 MS and 
   http://hl7.org/fhir/5.0/StructureDefinition/extension-Invoice.period[x] named Behandlungszeitraum 0..1 MS and
   ERGAbrechnungsDiagnoseProzedur named AbrechnungsDiagnoseProzedur 0..* MS and
-  ERGBehandlungsart named Benhandlungsart 1..1 MS
+  ERGBehandlungsart named Benhandlungsart 1..1 MS and
+  ERGFachrichtung named Fachrichtung 1..1 MS
 * extension[AbrechnungsDiagnoseProzedur]
   * extension[Use].valueCoding MS
     * ^short = "Kennzeichen Hauptdiagnose"
@@ -28,6 +29,12 @@ Id: erg-rechnung
 * extension[Benhandlungsart]
   * ^short = "Behandlungsart"
   * ^comment = "Die Behandlungsart MUSS vorhanden sein."
+  * valueCoding 1..1 MS
+    * system 1.. MS
+    * code 1.. MS
+* extension[Fachrichtung]
+  * ^short = "Fachrichtung"
+  * ^comment = "Die Fachrichtung MUSS vorhanden sein."
   * valueCoding 1..1 MS
     * system 1.. MS
     * code 1.. MS
@@ -82,28 +89,13 @@ Id: erg-rechnung
     * ^short = "Zusatzinformation zur Abrechnungsart"
     * ^comment = "Die Zusatzinformation zur Abrechnungsart SOLL vorhanden sein, wenn es sich um eine Abrechnung nach §13 Abs. 2 SGB V handelt."
   * extension[Zusatzinformation].valueBoolean MS
-
-// ---- Nicht überarbeitet---
-* status MS
-* status = http://hl7.org/fhir/invoice-status#issued
-* participant 0.. MS
-* participant.role MS
-* participant.role from ERGParticipantRoleVS
-* participant ^slicing.discriminator.type = #pattern
-* participant ^slicing.discriminator.path = "role"
-* participant ^slicing.rules = #open
-* participant contains leistungserbringer ..* MS and forderungsinhaber ..* MS
-* participant[leistungserbringer]
-  * role = ERGParticipantRoleCS#leistungserbringer
-  * actor only Reference(Practitioner or Organization)
-    * identifier MS
-    * identifier only IdentifierIknr or IdentifierTelematikId
-* participant[forderungsinhaber]
-  * role MS
-  * role = ERGParticipantRoleCS#forderungsinhaber
-  * actor only Reference(Practitioner or Organization)
-    * identifier MS
-    * identifier only IdentifierIknr or IdentifierTelematikId
+* subject 1..1 MS
+* subject only Reference(ERGPerson or Patient)
+  * reference 1..1 MS
+  * ^short = "Behandelte Person"
+  * display 1..1 MS //TODO Hatten wir in der ersten Version drin, sollen wir den entfernen jetzt?
+    * ^short = "Name der behandelten Person"
+    * ^comment = "Der Name der behandelten Person SOLL angegeben werden und kann vom Rechnungsempfänger abweichen, z.B. wenn Eltern Rechnungen für ihre Kinder erhalten."
 * recipient 1.. MS
   * ^short = "Rechnungsempfänger"
   * ^comment = "Das System des Leistungserbringers referenziert hier üblicherweise 
@@ -111,27 +103,42 @@ Id: erg-rechnung
   Der Fachdienst substitutiert den Link mit der Referenz auf das Postfach des Patienten 
   bei der Extraktion der Invoice aus dem Bundle. Die Angabe der Versichertennummer dient 
   der Plausibilisierung. Die KV-Nummer in der Instanz des Bundles muss daher mit der 
-  KV-Nummer übereinstimmen, die im Fachdienst für das Postfach des Rechnungsempfängers hinterlegt ist. "
-* recipient only Reference(Patient)
+  KV-Nummer übereinstimmen, die im Fachdienst für das Postfach des Rechnungsempfängers hinterlegt ist. " //TODO Text aus erster Version
+* recipient only Reference(ERGPerson or Patient)
+  * reference MS
   * identifier 1.. MS
-  * identifier only IdentifierKvid10
+  * identifier only IdentifierKvid10 //TODO hatten wir in der ersten Version drin, sollen wir das so lassen?
   * display 1.. MS
-* subject 1..1 MS
-  * reference 1..1 MS
-  * ^short = "Behandelte Person"
-  * display 1..1 MS
-    * ^short = "Name der behandelten Person"
-    * ^comment = "Der Name der behandelten Person muss angegeben werden und kann vom Namen des Rechnungsempfängers abweichen, z.B. wenn Eltern Rechnungen für ihre Kinder erhalten."
-
+* status MS
+  * ^short = "Status der Rechnung"
+  * ^comment = "Der Status MUSS vorhanden sein. Im Normalfall ist der Code 'issued' anzugeben."
 * issuer 1.. MS
-  * ^short = "Leistungserbringer"
-  * ^comment = "Der Leistungserbringer kann vom einreichenden Benutzer 
-      der Rechnung (z.B. Abrechnungsdiesntleister) abweichen"
-  * identifier 1.. MS
-    * ^short =  "Telematik-ID des Leistungserbrigners"
-  * identifier only IdentifierTelematikId
-  * display 1.. MS
-    * ^short = "Name des Leistungserbringers"
+* issuer only Reference(ERGInstitution or Organization)
+  * ^short = "Rechnungsersteller"
+  * ^comment = "Der Rechnungsersteller MUSS vorhanden sein."
+  * reference 1.. MS 
+* participant MS
+  * ^short = "weitere behandelnde Leistungserbringer oder abweichender Forderungsinhaber"
+* participant.role MS
+* participant.role from ERGParticipantRoleVS (required)
+* participant ^slicing.discriminator.type = #pattern
+* participant ^slicing.discriminator.path = "role"
+* participant ^slicing.rules = #open
+* participant contains 
+  Leistungserbringer 1..* MS and
+  Forderungsinhaber ..1 MS
+* participant[Leistungserbringer]
+  * ^short = "Weitere behandelnde Leistungserbringer"
+  * ^comment = "Weitere behandelnde Leistungserbringer SOLLEN vorhanden sein."
+  * role = ERGParticipantRoleCS#leistungserbringer
+  * actor only Reference(ERGLeistungserbringerPerson or ERGInstitution or Practitioner or Organization)
+* participant[Forderungsinhaber]
+  * ^short = "Abweichender Forderungsinhaber"
+  * ^comment = "Der abweichender Forderungsinhaber SOLL vorhanden sein."
+  * role MS
+  * role = ERGParticipantRoleCS#forderungsinhaber
+  * actor only Reference(ERGLeistungserbringerPerson or ERGInstitution or Practitioner or Organization)
+// ---- Nicht überarbeitet---
 * lineItem MS
   * ^short = "Rechnungspositionen"
 * lineItem.chargeItem[x] only Reference
@@ -172,7 +179,7 @@ Title: "ERG Extension Behandlungsart"
 * ^context.type = #element
 * ^context.expression = "Invoice"
 * value[x] only Coding
-* valueCoding from $EncounterClassDe
+* valueCoding from ERGRechnungBehandlungsartVS
 
 CodeSystem: ERGParticipantRoleCS
 Id: erg-participant-role-CS
@@ -215,3 +222,12 @@ Ist die Extension gesetzt, dann ist die Frage der Abrechnung nach §13 Abs. 2 SG
 * . ^short = "Zusatzinformation zur Abrechnungsart"
 * value[x] only boolean
 * valueBoolean = true
+
+Extension: ERGFachrichtung
+Id: erg-fachrichtung
+Title: "ERG Extension Fachrichtung"
+* insert Meta
+* ^context.type = #element
+* ^context.expression = "Invoice"
+* value[x] only Coding
+* valueCoding from $ihe-practiceSettingCode (required)
