@@ -9,7 +9,8 @@ Id: erg-rechnung
   http://hl7.org/fhir/5.0/StructureDefinition/extension-Invoice.period[x] named Behandlungszeitraum 0..1 MS and
   ERGAbrechnungsDiagnoseProzedur named AbrechnungsDiagnoseProzedur 0..* MS and
   ERGBehandlungsart named Benhandlungsart 1..1 MS and
-  ERGFachrichtung named Fachrichtung 1..1 MS
+  ERGFachrichtung named Fachrichtung 1..1 MS and
+  $extension-replaces named Korrekturrechnung ..1 MS
 * extension[AbrechnungsDiagnoseProzedur]
   * extension[Use].valueCoding MS
     * ^short = "Kennzeichen Hauptdiagnose"
@@ -38,6 +39,11 @@ Id: erg-rechnung
   * valueCoding 1..1 MS
     * system 1.. MS
     * code 1.. MS
+* extension[Korrekturrechnung]
+  * ^short = "Info Korrekturrechnung"
+  * ^comment = "Wenn die Instanz dieser Rechnung eine Korrektur einer anderen Rechnung ist, soll die ersetzte Rechnung hier referenziert werden."
+  * valueCanonical 1..1 MS
+  * valueCanonical only Canonical(ERGRechnung or Invoice)
 * identifier 1.. MS
 * identifier ^slicing.discriminator.type = #pattern
 * identifier ^slicing.discriminator.path = "$this"
@@ -77,7 +83,8 @@ Id: erg-rechnung
   * ^slicing.discriminator.path = "$this"
   * ^slicing.rules = #open
 * type.coding contains 
-  AusrichtungDerRechnung 0..1 MS
+  AusrichtungDerRechnung ..1 MS and
+  Rechnungsart ..1 MS
 * type.coding[AusrichtungDerRechnung] from ERGRechnungAbrechnungsartVS (required)
   * ^patternCoding.system = Canonical(ERGRechnungAbrechnungsartCS)
   * ^short = "Abrechnungsart der Rechnung"
@@ -89,6 +96,12 @@ Id: erg-rechnung
     * ^short = "Zusatzinformation zur Abrechnungsart"
     * ^comment = "Die Zusatzinformation zur Abrechnungsart SOLL vorhanden sein, wenn es sich um eine Abrechnung nach §13 Abs. 2 SGB V handelt."
   * extension[Zusatzinformation].valueBoolean MS
+* type.coding[Rechnungsart] from ERGRechnungsartVS (required)
+  * ^patternCoding.system = Canonical(ERGRechnungsartCS)
+  * ^short = "Rechnungsart"
+  * ^comment = "Die Rechnungsart SOLL vorhanden sein."
+  * system 1.. MS
+  * code 1.. MS
 * subject 1..1 MS
 * subject only Reference(ERGPerson or Patient)
   * reference 1..1 MS
@@ -138,26 +151,60 @@ Id: erg-rechnung
   * role MS
   * role = ERGParticipantRoleCS#forderungsinhaber
   * actor only Reference(ERGLeistungserbringerPerson or ERGInstitution or Practitioner or Organization)
+* note MS
+  * ^short = "Hinweise an den Kostenträger"
+  * ^comment = "Der Hinweise an den Kostenträger KANN vorhanden sein."
+* paymentTerms MS
+  * ^short = "Zahlungsdaten Überweisung und weitere Zahlungsmethoden"
+  * ^comment = "Die Zahlungsdaten zur Überweisung SOLLEN vorhanden sein.
+  Weitere Zahlungsmethoden wie bspw. Paypal, Klarna, Kreditkarte KÖNNEN auch hier angegeben werden.
+  Die Extensions zur qualifizierung der Zahlungsdaten KÖNNEN vorhanden sein." //TODO Extensions hinzufügen
+* paymentTerms.extension contains ERGZahlungsziel named Zahlungsziel 1..1 MS
+* paymentTerms.extension[Zahlungsziel]
+  * ^short = "Zahlungsziel als Datum oder Fristangabe"
+  * ^comment = "Das Zahlungsziel SOLL vorhanden sein."
+* totalNet MS
+  * ^short = "Zahlbetrag (Netto)"
+  * ^comment = "Der Rechnungsbetrag SOLL vorhanden sein."
+* totalGross MS
+  * ^short = "Zahlbetrag (Brutto)"
+  * ^comment = "Der Zahlbetrag SOLL vorhanden sein."
 // ---- Nicht überarbeitet---
+* totalPriceComponent MS
+* totalPriceComponent ^slicing.discriminator.type = #pattern
+* totalPriceComponent ^slicing.discriminator.path = "$this"
+* totalPriceComponent ^slicing.rules = #open
+* totalPriceComponent contains 
+  SummeRechnungspositionen ..1 MS and
+  MinderungNachGOZ ..1 MS and
+  Abzug MS and
+  Rechnungsbetrag 1..1 MS and
+  BereitsGezahltAbzüge ..1 MS
+* totalPriceComponent[SummeRechnungspositionen]
+  * ^short = "Summe aller Rechnungspositionen"
+  * ^comment = "Die Summe aller Rechnungspositionen SOLL vorhanden sein."
+  * type = #base
+* totalPriceComponent[MinderungNachGOZ]
+  * ^short = "Minderungen nach §7 GOZ"
+  * ^comment = "Die Minderungen nach §7 GOZ SOLLEN vorhanden sein."
+  * type = #deduction
+* totalPriceComponent[Abzug]
+  * ^short = "Abzug"
+  * ^comment = "Der Abzug SOLL vorhanden sein."
+  * type = #deduction
+* totalPriceComponent[BereitsGezahltAbzüge]
+  * ^short = "Abzug Anzahlungen, Vorauszahlungen, Abschlagzahlungen"
+  * ^comment ="Der Abzug bei Anzahlungen, Vorauszahlungen oder Abschlagzahlungen SOLL vorhanden sein."
+  * type = #deduction
+* totalPriceComponent[Rechnungsbetrag] //TODO ggf. als TotalNet?
+  * ^short = "Rechnungsbetrag"
+  * ^comment = "Der Rechnungsbetrag MUSS vorhanden sein."
+  * type = #base
 * lineItem MS
   * ^short = "Rechnungspositionen"
 * lineItem.chargeItem[x] only Reference
 * lineItem.chargeItemReference MS
-* totalPriceComponent MS
-* totalPriceComponent ^slicing.discriminator.type = #pattern
-* totalPriceComponent ^slicing.discriminator.path = "code"
-* totalPriceComponent ^slicing.rules = #open
-* totalPriceComponent contains tax 0..1 MS // ToDo: Constraint for totalPriceComponent dependant on .type?
-* totalPriceComponent[tax]
-  * ^short = "Steuersatz und -Betrag"
-  * type = #tax
-  * factor 1..1 MS // Constraint 19% or 7%
-  * amount 1..1 MS 
-* totalNet MS
-  * ^short = "Nettobetrag der Rechnungssumme"
-* totalGross MS
-  * ^short = "Bruttobetrag der Rechnungssumme"
-* paymentTerms.extension contains ERGZahlungsziel named zahlungsziel 1..1 MS
+
 
 
 Extension: ERGPDFRepraesentationRechnung

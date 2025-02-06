@@ -22,6 +22,7 @@ Alias: $icd10-vs = http://fhir.de/ValueSet/bfarm/icd-10-gm
 Alias: $coding-icd-10 = http://fhir.de/StructureDefinition/CodingICD10GM
 Alias: $ops-cs = http://fhir.de/CodeSystem/bfarm/ops
 Alias: $coding-ops = http://fhir.de/StructureDefinition/CodingOPS
+Alias: $extension-replaces = http://hl7.org/fhir/StructureDefinition/replaces
 
 //TODO Delete?
 Alias: $kbv-fachrichtung-cs = https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_BAR2_ARZTNRFACHGRUPPE
