@@ -7,7 +7,8 @@ Id: erg-rechnung
 * extension contains 
   ERGPDFRepraesentationRechnung named pdf-repraesentation-rechnung 0..1 MS and 
   http://hl7.org/fhir/5.0/StructureDefinition/extension-Invoice.period[x] named Behandlungszeitraum 0..1 MS and
-  ExtensionAbrechnungsDiagnoseProzedur named AbrechnungsDiagnoseProzedur 0..* MS
+  ERGAbrechnungsDiagnoseProzedur named AbrechnungsDiagnoseProzedur 0..* MS and
+  ERGBehandlungsart named Benhandlungsart 1..1 MS
 * extension[AbrechnungsDiagnoseProzedur]
   * extension[Use].valueCoding MS
     * ^short = "Kennzeichen Hauptdiagnose"
@@ -24,6 +25,12 @@ Id: erg-rechnung
       * ^short = "Startdatum"
     * end MS
       * ^short = "Enddatum"
+* extension[Benhandlungsart]
+  * ^short = "Behandlungsart"
+  * ^comment = "Die Behandlungsart MUSS vorhanden sein."
+  * valueCoding 1..1 MS
+    * system 1.. MS
+    * code 1.. MS
 * identifier 1.. MS
 * identifier ^slicing.discriminator.type = #pattern
 * identifier ^slicing.discriminator.path = "$this"
@@ -57,9 +64,26 @@ Id: erg-rechnung
 * date 1.. MS
   * ^short = "Rechnungsdatum"
   * ^comment = "Das Rechnungsdatum MUSS vorhanden sein."
+* type MS
+* type.coding 1.. MS
+  * ^slicing.discriminator.type = #pattern
+  * ^slicing.discriminator.path = "$this"
+  * ^slicing.rules = #open
+* type.coding contains 
+  AusrichtungDerRechnung 0..1 MS
+* type.coding[AusrichtungDerRechnung] from ERGRechnungAbrechnungsartVS (required)
+  * ^patternCoding.system = Canonical(ERGRechnungAbrechnungsartCS)
+  * ^short = "Abrechnungsart der Rechnung"
+  * ^comment = "Die Grundsätzliche Ausrichtung der Rechnung (Abrechnungsart) SOLL vorhanden sein."
+  * system 1.. MS
+  * code 1.. MS
+  * extension contains ERGZusatzinformationZurAbrechnungsart named Zusatzinformation ..1 MS
+  * extension[Zusatzinformation]
+    * ^short = "Zusatzinformation zur Abrechnungsart"
+    * ^comment = "Die Zusatzinformation zur Abrechnungsart SOLL vorhanden sein, wenn es sich um eine Abrechnung nach §13 Abs. 2 SGB V handelt."
+  * extension[Zusatzinformation].valueBoolean MS
+
 // ---- Nicht überarbeitet---
-* type 1.. MS
-* type = https://gematik.de/fhir/erg/CodeSystem/erg-rechnung-type-cs#erechnung
 * status MS
 * status = http://hl7.org/fhir/invoice-status#issued
 * participant 0.. MS
@@ -164,8 +188,8 @@ Description: "Diese Codes enthalten Teilnehmer Rollen der eRechnung"
 * insert Meta
 * include codes from system ERGParticipantRoleCS
 
-Extension: ExtensionAbrechnungsDiagnoseProzedur
-Id: ExtensionAbrechnungsDiagnoseProzedur
+Extension: ERGAbrechnungsDiagnoseProzedur
+Id: ERGAbrechnungsDiagnoseProzedur
 Title: "Abrechnungsrelevanz von Diagnosen und Prozeduren"
 Description: """Diese Extension erlaubt es einer Invoice Diagnosen oder Prozeduren, incl. Qualifier wie bspw: "Primär-DRG" zuzuordnen. Dies ermöglicht unter anderem das Zuordnen von Haupt- und Nebendiagnosen zu einem Account zum Zweck der DRG Erstellung."""
 * insert Meta
@@ -179,3 +203,15 @@ Description: """Diese Extension erlaubt es einer Invoice Diagnosen oder Prozedur
 * extension[Use].valueCoding 0..1
 * extension[Use].valueCoding from http://fhir.de/ValueSet/AbrechnungsDiagnoseProzedur (extensible)
 * extension[Referenz].value[x] only Reference(Condition or Procedure)
+
+Extension: ERGZusatzinformationZurAbrechnungsart
+Id: ERGZusatzinformationZurAbrechnungsart
+Title: "Zusatzinformation zur Abrechnungsart"
+Description: "Die Abrechnung nach §13 kann ergänzend zu den grundsätzlichen Ausrichtungen der Abrechnung aufgeführt werden. Diese Extension erlaubt es, die Ausrichtung der Rechnung entsprechend zu flaggen.
+Ist die Extension gesetzt, dann ist die Frage der Abrechnung nach §13 Abs. 2 SGB V mit 'Ja' beantwortet"
+* insert Meta
+* ^context.type = #element
+* ^context.expression = "Invoice.type"
+* . ^short = "Zusatzinformation zur Abrechnungsart"
+* value[x] only boolean
+* valueBoolean = true
