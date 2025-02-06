@@ -30,7 +30,7 @@
       {
         "id": "Invoice.extension",
         "path": "Invoice.extension",
-        "min": 1
+        "min": 2
       },
       {
         "id": "Invoice.extension:pdf-repraesentation-rechnung",
@@ -187,6 +187,42 @@
         "mustSupport": true
       },
       {
+        "id": "Invoice.extension:Fachrichtung",
+        "path": "Invoice.extension",
+        "sliceName": "Fachrichtung",
+        "short": "Fachrichtung",
+        "comment": "Die Fachrichtung MUSS vorhanden sein.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://gematik.de/fhir/erg/StructureDefinition/erg-fachrichtung"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.extension:Fachrichtung.value[x]",
+        "path": "Invoice.extension.value[x]",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.extension:Fachrichtung.value[x].system",
+        "path": "Invoice.extension.value[x].system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.extension:Fachrichtung.value[x].code",
+        "path": "Invoice.extension.value[x].code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
         "id": "Invoice.identifier",
         "path": "Invoice.identifier",
         "slicing": {
@@ -300,7 +336,8 @@
       {
         "id": "Invoice.status",
         "path": "Invoice.status",
-        "patternCode": "issued",
+        "short": "Status der Rechnung",
+        "comment": "Der Status MUSS vorhanden sein. Im Normalfall ist der Code 'issued' anzugeben.",
         "mustSupport": true
       },
       {
@@ -380,6 +417,15 @@
         "path": "Invoice.subject",
         "short": "Behandelte Person",
         "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://gematik.de/fhir/erg/StructureDefinition/erg-person",
+              "http://hl7.org/fhir/StructureDefinition/Patient"
+            ]
+          }
+        ],
         "mustSupport": true
       },
       {
@@ -392,7 +438,7 @@
         "id": "Invoice.subject.display",
         "path": "Invoice.subject.display",
         "short": "Name der behandelten Person",
-        "comment": "Der Name der behandelten Person muss angegeben werden und kann vom Namen des Rechnungsempfängers abweichen, z.B. wenn Eltern Rechnungen für ihre Kinder erhalten.",
+        "comment": "Der Name der behandelten Person SOLL angegeben werden und kann vom Rechnungsempfänger abweichen, z.B. wenn Eltern Rechnungen für ihre Kinder erhalten.",
         "min": 1,
         "mustSupport": true
       },
@@ -406,10 +452,16 @@
           {
             "code": "Reference",
             "targetProfile": [
+              "https://gematik.de/fhir/erg/StructureDefinition/erg-person",
               "http://hl7.org/fhir/StructureDefinition/Patient"
             ]
           }
         ],
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.recipient.reference",
+        "path": "Invoice.recipient.reference",
         "mustSupport": true
       },
       {
@@ -452,6 +504,8 @@
           ],
           "rules": "open"
         },
+        "short": "weitere behandelnde Leistungserbringer oder abweichender Forderungsinhaber",
+        "min": 1,
         "mustSupport": true
       },
       {
@@ -464,15 +518,17 @@
         }
       },
       {
-        "id": "Invoice.participant:leistungserbringer",
+        "id": "Invoice.participant:Leistungserbringer",
         "path": "Invoice.participant",
-        "sliceName": "leistungserbringer",
-        "min": 0,
+        "sliceName": "Leistungserbringer",
+        "short": "Weitere behandelnde Leistungserbringer",
+        "comment": "Weitere behandelnde Leistungserbringer SOLLEN vorhanden sein.",
+        "min": 1,
         "max": "*",
         "mustSupport": true
       },
       {
-        "id": "Invoice.participant:leistungserbringer.role",
+        "id": "Invoice.participant:Leistungserbringer.role",
         "path": "Invoice.participant.role",
         "min": 1,
         "patternCodeableConcept": {
@@ -485,12 +541,14 @@
         }
       },
       {
-        "id": "Invoice.participant:leistungserbringer.actor",
+        "id": "Invoice.participant:Leistungserbringer.actor",
         "path": "Invoice.participant.actor",
         "type": [
           {
             "code": "Reference",
             "targetProfile": [
+              "https://gematik.de/fhir/erg/StructureDefinition/erg-leistungserbringer-person",
+              "https://gematik.de/fhir/erg/StructureDefinition/erg-institution",
               "http://hl7.org/fhir/StructureDefinition/Practitioner",
               "http://hl7.org/fhir/StructureDefinition/Organization"
             ]
@@ -498,29 +556,17 @@
         ]
       },
       {
-        "id": "Invoice.participant:leistungserbringer.actor.identifier",
-        "path": "Invoice.participant.actor.identifier",
-        "type": [
-          {
-            "code": "Identifier",
-            "profile": [
-              "http://fhir.de/StructureDefinition/identifier-iknr",
-              "http://fhir.de/StructureDefinition/identifier-telematik-id"
-            ]
-          }
-        ],
-        "mustSupport": true
-      },
-      {
-        "id": "Invoice.participant:forderungsinhaber",
+        "id": "Invoice.participant:Forderungsinhaber",
         "path": "Invoice.participant",
-        "sliceName": "forderungsinhaber",
+        "sliceName": "Forderungsinhaber",
+        "short": "Abweichender Forderungsinhaber",
+        "comment": "Der abweichender Forderungsinhaber SOLL vorhanden sein.",
         "min": 0,
-        "max": "*",
+        "max": "1",
         "mustSupport": true
       },
       {
-        "id": "Invoice.participant:forderungsinhaber.role",
+        "id": "Invoice.participant:Forderungsinhaber.role",
         "path": "Invoice.participant.role",
         "min": 1,
         "patternCodeableConcept": {
@@ -533,12 +579,14 @@
         }
       },
       {
-        "id": "Invoice.participant:forderungsinhaber.actor",
+        "id": "Invoice.participant:Forderungsinhaber.actor",
         "path": "Invoice.participant.actor",
         "type": [
           {
             "code": "Reference",
             "targetProfile": [
+              "https://gematik.de/fhir/erg/StructureDefinition/erg-leistungserbringer-person",
+              "https://gematik.de/fhir/erg/StructureDefinition/erg-institution",
               "http://hl7.org/fhir/StructureDefinition/Practitioner",
               "http://hl7.org/fhir/StructureDefinition/Organization"
             ]
@@ -546,46 +594,25 @@
         ]
       },
       {
-        "id": "Invoice.participant:forderungsinhaber.actor.identifier",
-        "path": "Invoice.participant.actor.identifier",
-        "type": [
-          {
-            "code": "Identifier",
-            "profile": [
-              "http://fhir.de/StructureDefinition/identifier-iknr",
-              "http://fhir.de/StructureDefinition/identifier-telematik-id"
-            ]
-          }
-        ],
-        "mustSupport": true
-      },
-      {
         "id": "Invoice.issuer",
         "path": "Invoice.issuer",
-        "short": "Leistungserbringer",
-        "comment": "Der Leistungserbringer kann vom einreichenden Benutzer \n      der Rechnung (z.B. Abrechnungsdiesntleister) abweichen",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Invoice.issuer.identifier",
-        "path": "Invoice.issuer.identifier",
-        "short": "Telematik-ID des Leistungserbrigners",
+        "short": "Rechnungsersteller",
+        "comment": "Der Rechnungsersteller MUSS vorhanden sein.",
         "min": 1,
         "type": [
           {
-            "code": "Identifier",
-            "profile": [
-              "http://fhir.de/StructureDefinition/identifier-telematik-id"
+            "code": "Reference",
+            "targetProfile": [
+              "https://gematik.de/fhir/erg/StructureDefinition/erg-institution",
+              "http://hl7.org/fhir/StructureDefinition/Organization"
             ]
           }
         ],
         "mustSupport": true
       },
       {
-        "id": "Invoice.issuer.display",
-        "path": "Invoice.issuer.display",
-        "short": "Name des Leistungserbringers",
+        "id": "Invoice.issuer.reference",
+        "path": "Invoice.issuer.reference",
         "min": 1,
         "mustSupport": true
       },

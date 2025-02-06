@@ -1,10 +1,10 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "erg-behandlungsart",
-  "url": "https://gematik.de/fhir/erg/StructureDefinition/erg-behandlungsart",
+  "id": "erg-fachrichtung",
+  "url": "https://gematik.de/fhir/erg/StructureDefinition/erg-fachrichtung",
   "version": "1.0.0-CC",
-  "name": "ERGBehandlungsart",
-  "title": "ERG Extension Behandlungsart",
+  "name": "ERGFachrichtung",
+  "title": "ERG Extension Fachrichtung",
   "status": "active",
   "experimental": false,
   "date": "2024-06-20",
@@ -41,7 +41,7 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "https://gematik.de/fhir/erg/StructureDefinition/erg-behandlungsart"
+        "fixedUri": "https://gematik.de/fhir/erg/StructureDefinition/erg-fachrichtung"
       },
       {
         "id": "Extension.value[x]",
@@ -53,7 +53,7 @@
         ],
         "binding": {
           "strength": "required",
-          "valueSet": "https://gematik.de/fhir/erg/ValueSet/erg-rechnung-behandlungsart-vs"
+          "valueSet": "http://ihe-d.de/ValueSets/IHEXDSpracticeSettingCode"
         }
       }
     ]
