@@ -163,49 +163,69 @@ Id: erg-rechnung
 * paymentTerms.extension[Zahlungsziel]
   * ^short = "Zahlungsziel als Datum oder Fristangabe"
   * ^comment = "Das Zahlungsziel SOLL vorhanden sein."
-* totalNet MS
-  * ^short = "Zahlbetrag (Netto)"
-  * ^comment = "Der Rechnungsbetrag SOLL vorhanden sein."
-* totalGross MS
-  * ^short = "Zahlbetrag (Brutto)"
-  * ^comment = "Der Zahlbetrag SOLL vorhanden sein."
-// ---- Nicht überarbeitet---
+* totalNet 1.. MS
+  * ^short = "Rechnungsbetrag (Netto)"
+  * ^comment = "Der Rechnungsbetrag in Netto MUSS vorhanden sein."
+* totalGross 1.. MS
+  * ^short = "Rechnungsbetrag (Brutto)"
+  * ^comment = "Der Rechnungsbetrag in Brutto MUSS vorhanden sein."
 * totalPriceComponent MS
 * totalPriceComponent ^slicing.discriminator.type = #pattern
-* totalPriceComponent ^slicing.discriminator.path = "$this"
+* totalPriceComponent ^slicing.discriminator.path = "code"
 * totalPriceComponent ^slicing.rules = #open
 * totalPriceComponent contains 
   SummeRechnungspositionen ..1 MS and
   MinderungNachGOZ ..1 MS and
-  Abzug MS and
-  Rechnungsbetrag 1..1 MS and
-  BereitsGezahltAbzüge ..1 MS
+  Abzug ..* MS
 * totalPriceComponent[SummeRechnungspositionen]
   * ^short = "Summe aller Rechnungspositionen"
   * ^comment = "Die Summe aller Rechnungspositionen SOLL vorhanden sein."
   * type = #base
+  * code = ERGTotalPriceComponentTypeCS#SummeRechnungspositionen
+  * factor 0..0
+  * amount ..1 MS
+    * ^short = "Wert in EUR"
+    * currency 1.. MS
+    * currency = #EUR
+    * value 1.. MS
 * totalPriceComponent[MinderungNachGOZ]
   * ^short = "Minderungen nach §7 GOZ"
   * ^comment = "Die Minderungen nach §7 GOZ SOLLEN vorhanden sein."
   * type = #deduction
+  * code = ERGTotalPriceComponentTypeCS#Minderung7GOZ
+  * factor 0..0
+  * amount ..1 MS
+    * ^short = "Wert in EUR"
+    * currency 1.. MS
+    * currency = #EUR
+    * value 1.. MS
 * totalPriceComponent[Abzug]
   * ^short = "Abzug"
   * ^comment = "Der Abzug SOLL vorhanden sein."
   * type = #deduction
-* totalPriceComponent[BereitsGezahltAbzüge]
-  * ^short = "Abzug Anzahlungen, Vorauszahlungen, Abschlagzahlungen"
-  * ^comment ="Der Abzug bei Anzahlungen, Vorauszahlungen oder Abschlagzahlungen SOLL vorhanden sein."
-  * type = #deduction
-* totalPriceComponent[Rechnungsbetrag] //TODO ggf. als TotalNet?
-  * ^short = "Rechnungsbetrag"
-  * ^comment = "Der Rechnungsbetrag MUSS vorhanden sein."
-  * type = #base
+  * code from ERGTotalPriceComponentTypeVS (required)
+    * ^short = "Kategorisierung des Abzugs"
+    * ^comment = "Die Kategorisierung des Abzugs SOLL vorhanden sein."
+  * factor 0..0
+  * amount ..1 MS
+    * ^short = "Wert in EUR"
+    * currency 1.. MS
+    * currency = #EUR
+    * value 1.. MS
+  * extension contains ERGAbzugKassenanteil named Kassenanteil ..1 MS
+  * extension[Kassenanteil]
+    * ^short = "Kassenanteil in Prozent"
+    * ^comment = "Der Kassenanteil in Prozent SOLL vorhanden sein."
+    * valueQuantity 1.. MS
+      * unit MS
+      * value MS
+      * system MS
+      * code MS
+// ---- Nicht überarbeitet---
 * lineItem MS
   * ^short = "Rechnungspositionen"
 * lineItem.chargeItem[x] only Reference
 * lineItem.chargeItemReference MS
-
-
 
 Extension: ERGPDFRepraesentationRechnung
 Id: erg-pdf-repraesentation-rechnung
@@ -278,3 +298,18 @@ Title: "ERG Extension Fachrichtung"
 * ^context.expression = "Invoice"
 * value[x] only Coding
 * valueCoding from $ihe-practiceSettingCode (required)
+
+Extension: ERGAbzugKassenanteil
+Id: erg-abzug-kassenanteil
+Title: "ERG Extension Abzug Kassenanteil in Prozent"
+* insert Meta
+* ^context.type = #element
+* ^context.expression = "Invoice.totalPriceComponent"
+* value[x] only Quantity
+* valueQuantity
+  * unit 1..
+  * unit = "%"
+  * code 1..
+  * code = #%
+  * system 1..
+  * system = "http://unitsofmeasure.org"
