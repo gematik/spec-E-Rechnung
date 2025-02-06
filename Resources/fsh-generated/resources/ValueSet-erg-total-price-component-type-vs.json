@@ -1,0 +1,28 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "ERGTotalPriceComponentTypeVS",
+  "id": "erg-total-price-component-type-vs",
+  "url": "https://gematik.de/fhir/erg/ValueSet/erg-total-price-component-type-vs",
+  "compose": {
+    "include": [
+      {
+        "system": "https://gematik.de/fhir/erg/CodeSystem/erg-total-price-component-type-cs",
+        "concept": [
+          {
+            "code": "FestzuschussKasse",
+            "display": "Festzuschuss Kasse"
+          },
+          {
+            "code": "VorleistungKst",
+            "display": "Vorleistungen anderer Kostenträger"
+          },
+          {
+            "code": "KostenBema13AtoD",
+            "display": "Kosten gem. den BEMA-Pos. 13a - d"
+          }
+        ]
+      }
+    ]
+  }
+}

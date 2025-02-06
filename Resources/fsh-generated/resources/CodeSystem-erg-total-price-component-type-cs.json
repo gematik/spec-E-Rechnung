@@ -1,0 +1,53 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "ERGTotalPriceComponentTypeCS",
+  "id": "erg-total-price-component-type-cs",
+  "title": "ERG Rechnungssumme Art der Komponente CS",
+  "description": "CodeSystem für die verschiedenen Rechnungsarten innerhalb einer E-Rechnnung",
+  "version": "1.0.0-CC",
+  "url": "https://gematik.de/fhir/erg/CodeSystem/erg-total-price-component-type-cs",
+  "concept": [
+    {
+      "code": "SummeRechnungspositionen",
+      "display": "Summe aller Rechnungspositionen"
+    },
+    {
+      "code": "Minderung7GOZ",
+      "display": "Minderungen nach §7 GOZ"
+    },
+    {
+      "code": "Abzug",
+      "display": "Übergeordnete Abzug-Kategorie",
+      "concept": [
+        {
+          "code": "FestzuschussKasse",
+          "display": "Festzuschuss Kasse"
+        },
+        {
+          "code": "VorleistungKst",
+          "display": "Vorleistungen anderer Kostenträger"
+        },
+        {
+          "code": "KostenBema13AtoD",
+          "display": "Kosten gem. den BEMA-Pos. 13a - d"
+        }
+      ]
+    }
+  ],
+  "experimental": false,
+  "date": "2024-06-20",
+  "publisher": "gematik GmbH",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://gematik.de/"
+        }
+      ]
+    }
+  ],
+  "count": 6
+}

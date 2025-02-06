@@ -1,0 +1,35 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "ERGRechnungsartCS",
+  "id": "erg-rechnungsart-cs",
+  "title": "ERG Rechnungsart CS",
+  "description": "CodeSystem für die verschiedenen Rechnungsarten innerhalb einer E-Rechnnung",
+  "version": "1.0.0-CC",
+  "url": "https://gematik.de/fhir/erg/CodeSystem/erg-rechnungsart-cs",
+  "concept": [
+    {
+      "code": "ABSCHLUSS",
+      "display": "Abschlussrechnung"
+    },
+    {
+      "code": "TEIL",
+      "display": "Teilrechnung"
+    }
+  ],
+  "experimental": false,
+  "date": "2024-06-20",
+  "publisher": "gematik GmbH",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://gematik.de/"
+        }
+      ]
+    }
+  ],
+  "count": 2
+}

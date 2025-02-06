@@ -223,6 +223,38 @@
         "mustSupport": true
       },
       {
+        "id": "Invoice.extension:Korrekturrechnung",
+        "path": "Invoice.extension",
+        "sliceName": "Korrekturrechnung",
+        "short": "Info Korrekturrechnung",
+        "comment": "Wenn die Instanz dieser Rechnung eine Korrektur einer anderen Rechnung ist, soll die ersetzte Rechnung hier referenziert werden.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/replaces"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.extension:Korrekturrechnung.value[x]",
+        "path": "Invoice.extension.value[x]",
+        "type": [
+          {
+            "code": "canonical",
+            "targetProfile": [
+              "https://gematik.de/fhir/erg/StructureDefinition/erg-rechnung",
+              "http://hl7.org/fhir/StructureDefinition/Invoice"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
         "id": "Invoice.identifier",
         "path": "Invoice.identifier",
         "slicing": {
@@ -408,6 +440,35 @@
       },
       {
         "id": "Invoice.type.coding:AusrichtungDerRechnung.code",
+        "path": "Invoice.type.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.type.coding:Rechnungsart",
+        "path": "Invoice.type.coding",
+        "sliceName": "Rechnungsart",
+        "short": "Rechnungsart",
+        "comment": "Die Rechnungsart SOLL vorhanden sein.",
+        "min": 0,
+        "max": "1",
+        "patternCoding": {
+          "system": "https://gematik.de/fhir/erg/CodeSystem/erg-rechnungsart-cs"
+        },
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://gematik.de/fhir/erg/ValueSet/erg-rechnungsart-vs"
+        }
+      },
+      {
+        "id": "Invoice.type.coding:Rechnungsart.system",
+        "path": "Invoice.type.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.type.coding:Rechnungsart.code",
         "path": "Invoice.type.coding.code",
         "min": 1,
         "mustSupport": true
@@ -650,10 +711,11 @@
         "mustSupport": true
       },
       {
-        "id": "Invoice.totalPriceComponent:tax",
+        "id": "Invoice.totalPriceComponent:SummeRechnungspositionen",
         "path": "Invoice.totalPriceComponent",
-        "sliceName": "tax",
-        "short": "Steuersatz und -Betrag",
+        "sliceName": "SummeRechnungspositionen",
+        "short": "Summe aller Rechnungspositionen",
+        "comment": "Die Summe aller Rechnungspositionen SOLL vorhanden sein.",
         "min": 0,
         "max": "1",
         "type": [
@@ -664,32 +726,223 @@
         "mustSupport": true
       },
       {
-        "id": "Invoice.totalPriceComponent:tax.type",
+        "id": "Invoice.totalPriceComponent:SummeRechnungspositionen.type",
         "path": "Invoice.totalPriceComponent.type",
-        "patternCode": "tax"
+        "patternCode": "base"
       },
       {
-        "id": "Invoice.totalPriceComponent:tax.factor",
+        "id": "Invoice.totalPriceComponent:SummeRechnungspositionen.code",
+        "path": "Invoice.totalPriceComponent.code",
+        "min": 1,
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "SummeRechnungspositionen",
+              "system": "https://gematik.de/fhir/erg/CodeSystem/erg-total-price-component-type-cs"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Invoice.totalPriceComponent:SummeRechnungspositionen.factor",
         "path": "Invoice.totalPriceComponent.factor",
+        "max": "0"
+      },
+      {
+        "id": "Invoice.totalPriceComponent:SummeRechnungspositionen.amount",
+        "path": "Invoice.totalPriceComponent.amount",
+        "short": "Wert in EUR",
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.totalPriceComponent:SummeRechnungspositionen.amount.value",
+        "path": "Invoice.totalPriceComponent.amount.value",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "Invoice.totalPriceComponent:tax.amount",
-        "path": "Invoice.totalPriceComponent.amount",
+        "id": "Invoice.totalPriceComponent:SummeRechnungspositionen.amount.currency",
+        "path": "Invoice.totalPriceComponent.amount.currency",
         "min": 1,
+        "patternCode": "EUR",
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.totalPriceComponent:MinderungNachGOZ",
+        "path": "Invoice.totalPriceComponent",
+        "sliceName": "MinderungNachGOZ",
+        "short": "Minderungen nach §7 GOZ",
+        "comment": "Die Minderungen nach §7 GOZ SOLLEN vorhanden sein.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.totalPriceComponent:MinderungNachGOZ.type",
+        "path": "Invoice.totalPriceComponent.type",
+        "patternCode": "deduction"
+      },
+      {
+        "id": "Invoice.totalPriceComponent:MinderungNachGOZ.code",
+        "path": "Invoice.totalPriceComponent.code",
+        "min": 1,
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "Minderung7GOZ",
+              "system": "https://gematik.de/fhir/erg/CodeSystem/erg-total-price-component-type-cs"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Invoice.totalPriceComponent:MinderungNachGOZ.factor",
+        "path": "Invoice.totalPriceComponent.factor",
+        "max": "0"
+      },
+      {
+        "id": "Invoice.totalPriceComponent:MinderungNachGOZ.amount",
+        "path": "Invoice.totalPriceComponent.amount",
+        "short": "Wert in EUR",
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.totalPriceComponent:MinderungNachGOZ.amount.value",
+        "path": "Invoice.totalPriceComponent.amount.value",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.totalPriceComponent:MinderungNachGOZ.amount.currency",
+        "path": "Invoice.totalPriceComponent.amount.currency",
+        "min": 1,
+        "patternCode": "EUR",
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.totalPriceComponent:Abzug",
+        "path": "Invoice.totalPriceComponent",
+        "sliceName": "Abzug",
+        "short": "Abzug",
+        "comment": "Der Abzug SOLL vorhanden sein.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.totalPriceComponent:Abzug.extension:Kassenanteil",
+        "path": "Invoice.totalPriceComponent.extension",
+        "sliceName": "Kassenanteil",
+        "short": "Kassenanteil in Prozent",
+        "comment": "Der Kassenanteil in Prozent SOLL vorhanden sein.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://gematik.de/fhir/erg/StructureDefinition/erg-abzug-kassenanteil"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.totalPriceComponent:Abzug.extension:Kassenanteil.value[x]",
+        "path": "Invoice.totalPriceComponent.extension.value[x]",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.totalPriceComponent:Abzug.extension:Kassenanteil.value[x].value",
+        "path": "Invoice.totalPriceComponent.extension.value[x].value",
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.totalPriceComponent:Abzug.extension:Kassenanteil.value[x].unit",
+        "path": "Invoice.totalPriceComponent.extension.value[x].unit",
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.totalPriceComponent:Abzug.extension:Kassenanteil.value[x].system",
+        "path": "Invoice.totalPriceComponent.extension.value[x].system",
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.totalPriceComponent:Abzug.extension:Kassenanteil.value[x].code",
+        "path": "Invoice.totalPriceComponent.extension.value[x].code",
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.totalPriceComponent:Abzug.type",
+        "path": "Invoice.totalPriceComponent.type",
+        "patternCode": "deduction"
+      },
+      {
+        "id": "Invoice.totalPriceComponent:Abzug.code",
+        "path": "Invoice.totalPriceComponent.code",
+        "short": "Kategorisierung des Abzugs",
+        "comment": "Die Kategorisierung des Abzugs SOLL vorhanden sein.",
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://gematik.de/fhir/erg/ValueSet/erg-total-price-component-type-vs"
+        }
+      },
+      {
+        "id": "Invoice.totalPriceComponent:Abzug.factor",
+        "path": "Invoice.totalPriceComponent.factor",
+        "max": "0"
+      },
+      {
+        "id": "Invoice.totalPriceComponent:Abzug.amount",
+        "path": "Invoice.totalPriceComponent.amount",
+        "short": "Wert in EUR",
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.totalPriceComponent:Abzug.amount.value",
+        "path": "Invoice.totalPriceComponent.amount.value",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.totalPriceComponent:Abzug.amount.currency",
+        "path": "Invoice.totalPriceComponent.amount.currency",
+        "min": 1,
+        "patternCode": "EUR",
         "mustSupport": true
       },
       {
         "id": "Invoice.totalNet",
         "path": "Invoice.totalNet",
-        "short": "Nettobetrag der Rechnungssumme",
+        "short": "Rechnungsbetrag (Netto)",
+        "comment": "Der Rechnungsbetrag in Netto MUSS vorhanden sein.",
+        "min": 1,
         "mustSupport": true
       },
       {
         "id": "Invoice.totalGross",
         "path": "Invoice.totalGross",
-        "short": "Bruttobetrag der Rechnungssumme",
+        "short": "Rechnungsbetrag (Brutto)",
+        "comment": "Der Rechnungsbetrag in Brutto MUSS vorhanden sein.",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.paymentTerms",
+        "path": "Invoice.paymentTerms",
+        "short": "Zahlungsdaten Überweisung und weitere Zahlungsmethoden",
+        "comment": "Die Zahlungsdaten zur Überweisung SOLLEN vorhanden sein.\n  Weitere Zahlungsmethoden wie bspw. Paypal, Klarna, Kreditkarte KÖNNEN auch hier angegeben werden.\n  Die Extensions zur qualifizierung der Zahlungsdaten KÖNNEN vorhanden sein.",
         "mustSupport": true
       },
       {
@@ -708,9 +961,11 @@
         "min": 1
       },
       {
-        "id": "Invoice.paymentTerms.extension:zahlungsziel",
+        "id": "Invoice.paymentTerms.extension:Zahlungsziel",
         "path": "Invoice.paymentTerms.extension",
-        "sliceName": "zahlungsziel",
+        "sliceName": "Zahlungsziel",
+        "short": "Zahlungsziel als Datum oder Fristangabe",
+        "comment": "Das Zahlungsziel SOLL vorhanden sein.",
         "min": 1,
         "max": "1",
         "type": [
@@ -721,6 +976,13 @@
             ]
           }
         ],
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.note",
+        "path": "Invoice.note",
+        "short": "Hinweise an den Kostenträger",
+        "comment": "Der Hinweise an den Kostenträger KANN vorhanden sein.",
         "mustSupport": true
       }
     ]
