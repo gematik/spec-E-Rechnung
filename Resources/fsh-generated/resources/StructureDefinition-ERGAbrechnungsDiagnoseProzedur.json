@@ -1,9 +1,9 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "ExtensionAbrechnungsDiagnoseProzedur",
-  "url": "https://gematik.de/fhir/erg/StructureDefinition/ExtensionAbrechnungsDiagnoseProzedur",
+  "id": "ERGAbrechnungsDiagnoseProzedur",
+  "url": "https://gematik.de/fhir/erg/StructureDefinition/ERGAbrechnungsDiagnoseProzedur",
   "version": "1.0.0-CC",
-  "name": "ExtensionAbrechnungsDiagnoseProzedur",
+  "name": "ERGAbrechnungsDiagnoseProzedur",
   "title": "Abrechnungsrelevanz von Diagnosen und Prozeduren",
   "status": "active",
   "experimental": false,
@@ -107,7 +107,7 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "https://gematik.de/fhir/erg/StructureDefinition/ExtensionAbrechnungsDiagnoseProzedur"
+        "fixedUri": "https://gematik.de/fhir/erg/StructureDefinition/ERGAbrechnungsDiagnoseProzedur"
       },
       {
         "id": "Extension.value[x]",
