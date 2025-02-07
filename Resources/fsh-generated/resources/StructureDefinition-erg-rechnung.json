@@ -151,6 +151,30 @@
         "mustSupport": true
       },
       {
+        "id": "Invoice.extension:AbrechnungsDiagnoseProzedurFreitext",
+        "path": "Invoice.extension",
+        "sliceName": "AbrechnungsDiagnoseProzedurFreitext",
+        "short": "Einleitung",
+        "comment": "Diagnose und Prozedure als Freitextangabe",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://gematik.de/fhir/erg/StructureDefinition/ERGAbrechnungsDiagnoseProzedurFreitext"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.extension:AbrechnungsDiagnoseProzedurFreitext.value[x]",
+        "path": "Invoice.extension.value[x]",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
         "id": "Invoice.extension:Benhandlungsart",
         "path": "Invoice.extension",
         "sliceName": "Benhandlungsart",
@@ -728,7 +752,8 @@
       {
         "id": "Invoice.totalPriceComponent:SummeRechnungspositionen.type",
         "path": "Invoice.totalPriceComponent.type",
-        "patternCode": "base"
+        "patternCode": "base",
+        "mustSupport": true
       },
       {
         "id": "Invoice.totalPriceComponent:SummeRechnungspositionen.code",
@@ -741,7 +766,8 @@
               "system": "https://gematik.de/fhir/erg/CodeSystem/erg-total-price-component-type-cs"
             }
           ]
-        }
+        },
+        "mustSupport": true
       },
       {
         "id": "Invoice.totalPriceComponent:SummeRechnungspositionen.factor",
@@ -785,7 +811,8 @@
       {
         "id": "Invoice.totalPriceComponent:MinderungNachGOZ.type",
         "path": "Invoice.totalPriceComponent.type",
-        "patternCode": "deduction"
+        "patternCode": "deduction",
+        "mustSupport": true
       },
       {
         "id": "Invoice.totalPriceComponent:MinderungNachGOZ.code",
@@ -798,7 +825,8 @@
               "system": "https://gematik.de/fhir/erg/CodeSystem/erg-total-price-component-type-cs"
             }
           ]
-        }
+        },
+        "mustSupport": true
       },
       {
         "id": "Invoice.totalPriceComponent:MinderungNachGOZ.factor",
@@ -886,13 +914,16 @@
       {
         "id": "Invoice.totalPriceComponent:Abzug.type",
         "path": "Invoice.totalPriceComponent.type",
-        "patternCode": "deduction"
+        "patternCode": "deduction",
+        "mustSupport": true
       },
       {
         "id": "Invoice.totalPriceComponent:Abzug.code",
         "path": "Invoice.totalPriceComponent.code",
         "short": "Kategorisierung des Abzugs",
         "comment": "Die Kategorisierung des Abzugs SOLL vorhanden sein.",
+        "min": 1,
+        "mustSupport": true,
         "binding": {
           "strength": "required",
           "valueSet": "https://gematik.de/fhir/erg/ValueSet/erg-total-price-component-type-vs"

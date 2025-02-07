@@ -1,0 +1,62 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ERGAbrechnungsDiagnoseProzedurFreitext",
+  "url": "https://gematik.de/fhir/erg/StructureDefinition/ERGAbrechnungsDiagnoseProzedurFreitext",
+  "version": "1.0.0-CC",
+  "name": "ERGAbrechnungsDiagnoseProzedurFreitext",
+  "title": "Abrechnungsrelevanz von Diagnosen und Prozeduren als Freitext",
+  "status": "active",
+  "experimental": false,
+  "date": "2024-06-20",
+  "publisher": "gematik GmbH",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://gematik.de/"
+        }
+      ]
+    }
+  ],
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "Invoice"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Abrechnungsrelevanz von Diagnosen und Prozeduren als Freitext"
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "https://gematik.de/fhir/erg/StructureDefinition/ERGAbrechnungsDiagnoseProzedurFreitext"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      }
+    ]
+  }
+}

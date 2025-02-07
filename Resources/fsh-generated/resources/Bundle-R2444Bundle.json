@@ -188,22 +188,6 @@
       "resource": {
         "resourceType": "ChargeItem",
         "id": "R2444ChargeItem",
-        "meta": {
-          "profile": [
-            "https://gematik.de/fhir/erg/StructureDefinition/erg-rechnungsposition"
-          ]
-        },
-        "extension": [
-          {
-            "url": "https://gematik.de/fhir/erg/StructureDefinition/erg-preisdetails-rechnungsposition",
-            "extension": [
-              {
-                "url": "type",
-                "valueCode": "tax"
-              }
-            ]
-          }
-        ],
         "status": "billable",
         "code": {
           "coding": [
