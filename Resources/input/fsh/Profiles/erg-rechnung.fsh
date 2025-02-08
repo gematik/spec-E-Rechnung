@@ -21,12 +21,14 @@ Id: erg-rechnung
     * ^comment = "Diagnosen und Prozeduren SOLLEN zur Rechnung zugeordnet sein."
 * extension[Behandlungszeitraum]
   * ^short = "Behandlungszeitraum"
-  * ^comment = "Der Behandlungszeitraum SOLL vorhanden sein."
+  * ^comment = "Entweder ein Behandlungszeitraum, oder ein -datum SOLL vorhanden sein."
   * valuePeriod MS
     * start MS
       * ^short = "Startdatum"
     * end MS
       * ^short = "Enddatum"
+  * valueDate MS
+    * ^short = "Behandlungsdatum"
 * extension[Benhandlungsart]
   * ^short = "Behandlungsart"
   * ^comment = "Die Behandlungsart MUSS vorhanden sein."
@@ -313,3 +315,9 @@ Title: "ERG Extension Abzug Kassenanteil in Prozent"
   * code = #%
   * system 1..
   * system = "http://unitsofmeasure.org"
+
+ValueSet: ERGAbrechnungsDiagnoseProzedur
+Id: erg-abrechnungs-diagnose-prozedur
+Title: ""
+Description: ""
+* 
