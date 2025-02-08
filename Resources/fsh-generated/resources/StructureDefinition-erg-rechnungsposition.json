@@ -28,6 +28,47 @@
   "differential": {
     "element": [
       {
+        "id": "ChargeItem.extension",
+        "path": "ChargeItem.extension",
+        "min": 1
+      },
+      {
+        "id": "ChargeItem.extension:Rechnungspositionstyp",
+        "path": "ChargeItem.extension",
+        "sliceName": "Rechnungspositionstyp",
+        "short": "Rechnungspositionstyp",
+        "comment": "Der Rechnungspositionstyp MUSS vorhanden sein.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://gematik.de/fhir/erg/StructureDefinition/erg-chargeitem-type"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "ChargeItem.extension:Rechnungspositionstyp.value[x]",
+        "path": "ChargeItem.extension.value[x]",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "ChargeItem.extension:Rechnungspositionstyp.value[x].system",
+        "path": "ChargeItem.extension.value[x].system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "ChargeItem.extension:Rechnungspositionstyp.value[x].code",
+        "path": "ChargeItem.extension.value[x].code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
         "id": "ChargeItem.extension:unitPriceComponent",
         "path": "ChargeItem.extension",
         "sliceName": "unitPriceComponent",
@@ -51,6 +92,8 @@
       {
         "id": "ChargeItem.code",
         "path": "ChargeItem.code",
+        "short": "Gebührenordnung-Nummer (Ziffer oder Paragraph)",
+        "comment": "Ist der Rechnungspositionstyp auf eine Gebührenordnung festgelegt, SOLL die Gebührenordnung-Nummer als Ziffer oder Paragraph vorhanden sein.",
         "mustSupport": true
       },
       {
@@ -71,6 +114,7 @@
         "id": "ChargeItem.code.coding:GOÄ",
         "path": "ChargeItem.code.coding",
         "sliceName": "GOÄ",
+        "short": "GOÄ Ziffer",
         "min": 0,
         "max": "1",
         "patternCoding": {
@@ -79,9 +123,26 @@
         "mustSupport": true
       },
       {
+        "id": "ChargeItem.code.coding:GOÄ.system",
+        "path": "ChargeItem.code.coding.system",
+        "mustSupport": true
+      },
+      {
+        "id": "ChargeItem.code.coding:GOÄ.code",
+        "path": "ChargeItem.code.coding.code",
+        "mustSupport": true
+      },
+      {
+        "id": "ChargeItem.code.coding:GOÄ.display",
+        "path": "ChargeItem.code.coding.display",
+        "short": "Legendentext der Gebührenordnung",
+        "mustSupport": true
+      },
+      {
         "id": "ChargeItem.code.coding:GOZ",
         "path": "ChargeItem.code.coding",
         "sliceName": "GOZ",
+        "short": "GOZ Ziffer",
         "min": 0,
         "max": "1",
         "patternCoding": {
@@ -90,9 +151,25 @@
         "mustSupport": true
       },
       {
+        "id": "ChargeItem.code.coding:GOZ.system",
+        "path": "ChargeItem.code.coding.system",
+        "mustSupport": true
+      },
+      {
+        "id": "ChargeItem.code.coding:GOZ.code",
+        "path": "ChargeItem.code.coding.code",
+        "mustSupport": true
+      },
+      {
+        "id": "ChargeItem.code.coding:GOZ.display",
+        "path": "ChargeItem.code.coding.display",
+        "short": "Legendentext der Gebührenordnung",
+        "mustSupport": true
+      },
+      {
         "id": "ChargeItem.code.text",
         "path": "ChargeItem.code.text",
-        "min": 1,
+        "short": "Bezeichnung für Auslagen/Sachkosten, z.B. Wirkstoffname",
         "mustSupport": true
       },
       {
@@ -119,17 +196,75 @@
           "ordered": false,
           "rules": "open"
         },
-        "min": 1
+        "short": "Behandlungsdatum oder -zeitraum",
+        "comment": "Mindestens eins, Datum oder Zeitraum, SOLLEN zur Behandlung vorhanden sein.",
+        "type": [
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "Period"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "ChargeItem.occurrence[x]:occurrenceDateTime",
+        "path": "ChargeItem.occurrence[x]",
+        "sliceName": "occurrenceDateTime",
+        "short": "Behandlungsdatum",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": true
       },
       {
         "id": "ChargeItem.occurrence[x]:occurrencePeriod",
         "path": "ChargeItem.occurrence[x]",
         "sliceName": "occurrencePeriod",
-        "min": 1,
+        "short": "Behandlungszeitraum",
+        "min": 0,
         "max": "1",
         "type": [
           {
             "code": "Period"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "ChargeItem.occurrence[x]:occurrencePeriod.start",
+        "path": "ChargeItem.occurrence[x].start",
+        "mustSupport": true
+      },
+      {
+        "id": "ChargeItem.occurrence[x]:occurrencePeriod.end",
+        "path": "ChargeItem.occurrence[x].end",
+        "mustSupport": true
+      },
+      {
+        "id": "ChargeItem.performer",
+        "path": "ChargeItem.performer",
+        "mustSupport": true
+      },
+      {
+        "id": "ChargeItem.performer.actor",
+        "path": "ChargeItem.performer.actor",
+        "short": "Referenz Behandelnder Leistungserbringer",
+        "comment": "Eine Referenz auf behandelnder Leistungserbringer SOLL vorhanden sein.",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://gematik.de/fhir/erg/StructureDefinition/erg-leistungserbringer-person",
+              "https://gematik.de/fhir/erg/StructureDefinition/erg-institution",
+              "http://hl7.org/fhir/StructureDefinition/Practitioner",
+              "http://hl7.org/fhir/StructureDefinition/Organization"
+            ]
           }
         ],
         "mustSupport": true
@@ -150,6 +285,18 @@
         "id": "ChargeItem.priceOverride",
         "path": "ChargeItem.priceOverride",
         "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "ChargeItem.reason",
+        "path": "ChargeItem.reason",
+        "mustSupport": true
+      },
+      {
+        "id": "ChargeItem.reason.text",
+        "path": "ChargeItem.reason.text",
+        "short": "Begründung in Abhängigkeit zur Gebührenziffer",
+        "comment": "Die Begründung in Abhängigkeit zur Gebührenziffer SOLL vorhanden sein.\n  Beispiele sind:\n  - obligatorisch bei analoger Rechnungsposition\n  - Angabe zu den behandelten Organen\n  - Überschreitung der Regelsätze",
         "mustSupport": true
       }
     ]

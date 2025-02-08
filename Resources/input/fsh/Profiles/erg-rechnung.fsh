@@ -8,6 +8,7 @@ Id: erg-rechnung
   ERGPDFRepraesentationRechnung named pdf-repraesentation-rechnung 0..1 MS and 
   http://hl7.org/fhir/5.0/StructureDefinition/extension-Invoice.period[x] named Behandlungszeitraum 0..1 MS and
   ERGAbrechnungsDiagnoseProzedur named AbrechnungsDiagnoseProzedur 0..* MS and
+  ERGAbrechnungsDiagnoseProzedurFreitext named AbrechnungsDiagnoseProzedurFreitext ..1 MS and
   ERGBehandlungsart named Benhandlungsart 1..1 MS and
   ERGFachrichtung named Fachrichtung 1..1 MS and
   $extension-replaces named Korrekturrechnung ..1 MS
@@ -29,6 +30,10 @@ Id: erg-rechnung
       * ^short = "Enddatum"
   * valueDate MS
     * ^short = "Behandlungsdatum"
+* extension[AbrechnungsDiagnoseProzedurFreitext]
+  * ^short = "Einleitung"
+  * ^comment = "Diagnose und Prozedure als Freitextangabe"
+  * valueString 1.. MS
 * extension[Benhandlungsart]
   * ^short = "Behandlungsart"
   * ^comment = "Die Behandlungsart MUSS vorhanden sein."
@@ -182,7 +187,9 @@ Id: erg-rechnung
 * totalPriceComponent[SummeRechnungspositionen]
   * ^short = "Summe aller Rechnungspositionen"
   * ^comment = "Die Summe aller Rechnungspositionen SOLL vorhanden sein."
+  * type MS
   * type = #base
+  * code 1.. MS
   * code = ERGTotalPriceComponentTypeCS#SummeRechnungspositionen
   * factor 0..0
   * amount ..1 MS
@@ -193,7 +200,9 @@ Id: erg-rechnung
 * totalPriceComponent[MinderungNachGOZ]
   * ^short = "Minderungen nach §7 GOZ"
   * ^comment = "Die Minderungen nach §7 GOZ SOLLEN vorhanden sein."
+  * type MS
   * type = #deduction
+  * code 1.. MS
   * code = ERGTotalPriceComponentTypeCS#Minderung7GOZ
   * factor 0..0
   * amount ..1 MS
@@ -204,7 +213,9 @@ Id: erg-rechnung
 * totalPriceComponent[Abzug]
   * ^short = "Abzug"
   * ^comment = "Der Abzug SOLL vorhanden sein."
+  * type MS
   * type = #deduction
+  * code 1.. MS
   * code from ERGTotalPriceComponentTypeVS (required)
     * ^short = "Kategorisierung des Abzugs"
     * ^comment = "Die Kategorisierung des Abzugs SOLL vorhanden sein."
@@ -280,6 +291,16 @@ Description: """Diese Extension erlaubt es einer Invoice Diagnosen oder Prozedur
 * extension[Use].valueCoding from http://fhir.de/ValueSet/AbrechnungsDiagnoseProzedur (extensible)
 * extension[Referenz].value[x] only Reference(Condition or Procedure)
 
+Extension: ERGAbrechnungsDiagnoseProzedurFreitext
+Id: ERGAbrechnungsDiagnoseProzedurFreitext
+Title: "Abrechnungsrelevanz von Diagnosen und Prozeduren als Freitext"
+Description: ""
+* insert Meta
+* ^context.type = #element
+* ^context.expression = "Invoice"
+* . ^short = "Abrechnungsrelevanz von Diagnosen und Prozeduren als Freitext"
+* value[x] only string
+
 Extension: ERGZusatzinformationZurAbrechnungsart
 Id: ERGZusatzinformationZurAbrechnungsart
 Title: "Zusatzinformation zur Abrechnungsart"
@@ -315,9 +336,3 @@ Title: "ERG Extension Abzug Kassenanteil in Prozent"
   * code = #%
   * system 1..
   * system = "http://unitsofmeasure.org"
-
-ValueSet: ERGAbrechnungsDiagnoseProzedur
-Id: erg-abrechnungs-diagnose-prozedur
-Title: ""
-Description: ""
-* 

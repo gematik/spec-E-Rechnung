@@ -49,7 +49,7 @@ Usage: #example
   * valueDate = 2024-04-19
 
 Instance: R2444ChargeItem
-InstanceOf: ERGRechnungsposition
+InstanceOf: ChargeItem
 Usage: #example
 * status = #billable
 * code.coding
@@ -62,8 +62,8 @@ Usage: #example
 * quantity.value = 1
 * factorOverride = 3.5
 * priceOverride.value = 16.32
-* extension[unitPriceComponent]
-  * extension[type].valueCode = #tax
+//* extension[unitPriceComponent]
+//  * extension[type].valueCode = #tax
 
 Instance: R2444PKVersichertePerson
 InstanceOf: ERGVersichertePerson

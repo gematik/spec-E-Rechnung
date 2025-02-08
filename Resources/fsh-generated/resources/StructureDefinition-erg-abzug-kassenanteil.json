@@ -53,6 +53,11 @@
         ]
       },
       {
+        "id": "Extension.value[x].value",
+        "path": "Extension.value[x].value",
+        "min": 1
+      },
+      {
         "id": "Extension.value[x].unit",
         "path": "Extension.value[x].unit",
         "min": 1,
