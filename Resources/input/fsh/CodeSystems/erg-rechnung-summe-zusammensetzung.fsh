@@ -1,7 +1,6 @@
 CodeSystem: ERGTotalPriceComponentTypeCS
 Id: erg-total-price-component-type-cs
-Title: "ERG Rechnungssumme Art der Komponente CS" //TODO Benamung....
-Description:  "CodeSystem für die verschiedenen Rechnungsarten innerhalb einer E-Rechnnung"
+Title: "ERG Art der Rechnungssumme"
 * insert Meta
 * #SummeRechnungspositionen "Summe aller Rechnungspositionen"
 * #Minderung7GOZ "Minderungen nach §7 GOZ"
@@ -10,10 +9,9 @@ Description:  "CodeSystem für die verschiedenen Rechnungsarten innerhalb einer 
 * #Abzug #VorleistungKst "Vorleistungen anderer Kostenträger"
 * #Abzug #KostenBema13AtoD "Kosten gem. den BEMA-Pos. 13a - d"
 
-ValueSet: ERGTotalPriceComponentTypeVS
-Id: erg-total-price-component-type-vs
-Title: ""
-Description: ""
+ValueSet: ERGTotalPriceComponentDeductionTypeVS
+Id: erg-total-price-component-deduction-type-vs
+Title: "ERG Art des Abzugs von der Summe der gesamten Rechnungspositionen"
 * ERGTotalPriceComponentTypeCS#FestzuschussKasse "Festzuschuss Kasse"
 * ERGTotalPriceComponentTypeCS#VorleistungKst "Vorleistungen anderer Kostenträger"
 * ERGTotalPriceComponentTypeCS#KostenBema13AtoD "Kosten gem. den BEMA-Pos. 13a - d"

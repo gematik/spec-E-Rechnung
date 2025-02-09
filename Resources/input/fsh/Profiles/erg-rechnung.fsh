@@ -216,7 +216,7 @@ Id: erg-rechnung
   * type MS
   * type = #deduction
   * code 1.. MS
-  * code from ERGTotalPriceComponentTypeVS (required)
+  * code from ERGTotalPriceComponentDeductionTypeVS (required)
     * ^short = "Kategorisierung des Abzugs"
     * ^comment = "Die Kategorisierung des Abzugs SOLL vorhanden sein."
   * factor 0..0
@@ -234,11 +234,34 @@ Id: erg-rechnung
       * value MS
       * system MS
       * code MS
-// ---- Nicht überarbeitet---
-* lineItem MS
+* lineItem MS //TODO Sequenz?
   * ^short = "Rechnungspositionen"
 * lineItem.chargeItem[x] only Reference
 * lineItem.chargeItemReference MS
+* lineItem.chargeItemReference only Reference(ERGRechnungsposition or ChargeItem)
+  * ^short = "Referenz auf die Instanz der Rechnungsposition"
+  * ^comment = "Die Referenz auf die Instanz der Rechnungsposition MUSS vorhanden sein."
+* lineItem.priceComponent	MS
+* lineItem.priceComponent ^slicing.discriminator.type = #pattern
+* lineItem.priceComponent ^slicing.discriminator.path = "$this"
+* lineItem.priceComponent ^slicing.rules = #open
+* lineItem.priceComponent contains
+  BruttoBetrag ..1 MS and
+  Steuern ..1 MS
+* lineItem.priceComponent[BruttoBetrag]
+  * ^short = "Betrag pro Rechnungsposition"
+  * ^comment = "Der Betrag pro Rechnungsposition SOLL vorhanden sein."
+  * type MS
+  * type = #base
+  * factor 0..0
+  * amount 1.. MS
+* lineItem.priceComponent[Steuern]
+  * ^short = "Steuern enthalten im Brutto Betrag"
+  * ^comment = "Die enthaltenen Steuern SOLLEN vorhanden sein."
+  * type MS
+  * type = #tax
+  * factor 0..0
+  * amount 1.. MS
 
 Extension: ERGPDFRepraesentationRechnung
 Id: erg-pdf-repraesentation-rechnung
@@ -294,7 +317,6 @@ Description: """Diese Extension erlaubt es einer Invoice Diagnosen oder Prozedur
 Extension: ERGAbrechnungsDiagnoseProzedurFreitext
 Id: ERGAbrechnungsDiagnoseProzedurFreitext
 Title: "Abrechnungsrelevanz von Diagnosen und Prozeduren als Freitext"
-Description: ""
 * insert Meta
 * ^context.type = #element
 * ^context.expression = "Invoice"
