@@ -11,7 +11,8 @@ Id: erg-rechnung
   ERGAbrechnungsDiagnoseProzedurFreitext named AbrechnungsDiagnoseProzedurFreitext ..1 MS and
   ERGBehandlungsart named Benhandlungsart 1..1 MS and
   ERGFachrichtung named Fachrichtung 1..1 MS and
-  $extension-replaces named Korrekturrechnung ..1 MS
+  $extension-replaces named Korrekturrechnung ..1 MS and
+  ERGBemaPunktsumme named BemaPunktsumme ..1 MS
 * extension[AbrechnungsDiagnoseProzedur]
   * extension[Use].valueCoding MS
     * ^short = "Kennzeichen Hauptdiagnose"
@@ -51,6 +52,15 @@ Id: erg-rechnung
   * ^comment = "Wenn die Instanz dieser Rechnung eine Korrektur einer anderen Rechnung ist, soll die ersetzte Rechnung hier referenziert werden."
   * valueCanonical 1..1 MS
   * valueCanonical only Canonical(ERGRechnung or Invoice)
+* extension[BemaPunktsumme]
+  * extension[Punktsumme] MS
+    * ^short = "Summe Punktzahlen der BEMA-Leistungen"
+    * ^comment = "Die Summe Punktzahlen der BEMA-Leistungen SOLL vorhanden sein."
+    * valueDecimal MS
+  * extension[Punktwert] MS
+    * ^short = "Punktwert der BEMA-Leistungen"
+    * ^comment = "Der Punktwert der BEMA-Leistungen SOLL vorhanden sein."
+    * valueDecimal MS
 * identifier 1.. MS
 * identifier ^slicing.discriminator.type = #pattern
 * identifier ^slicing.discriminator.path = "$this"
@@ -177,6 +187,17 @@ Id: erg-rechnung
   * ^short = "Rechnungsbetrag (Brutto)"
   * ^comment = "Der Rechnungsbetrag in Brutto MUSS vorhanden sein."
 * totalPriceComponent MS
+/* totalPriceComponent.extension contains
+  ERGTeilsummen named Teilsumme ..* MS
+* totalPriceComponent.extension[Teilsumme]
+  * ^short = "Teilsummen in EUR für die Rechnungspositionstyp"
+  * ^comment = "Für alle vorkommenden Rechnungspositionstypen SOLL eine Teilsumme vorhanden sein."
+  * extension[Type] MS
+    * valueCoding 1.. MS
+  * extension[Summe] MS
+    * valueMoney 1.. MS
+      * currency 1.. MS
+      * value 1.. MS*/
 * totalPriceComponent ^slicing.discriminator.type = #pattern
 * totalPriceComponent ^slicing.discriminator.path = "code"
 * totalPriceComponent ^slicing.rules = #open
@@ -274,87 +295,3 @@ Id: erg-zahlungsziel
 Title: "ERG Zahlungsziel"
 * insert Meta
 * value[x] only date
-
-Extension: ERGBehandlungsart
-Id: erg-behandlungsart
-Title: "ERG Extension Behandlungsart"
-* insert Meta
-* ^context.type = #element
-* ^context.expression = "Invoice"
-* value[x] only Coding
-* valueCoding from ERGRechnungBehandlungsartVS
-
-CodeSystem: ERGParticipantRoleCS
-Id: erg-participant-role-CS
-Title: "ERG Teilnehmer Rolle"
-* insert Meta
-* #leistungserbringer "Leistungserbringer"
-* #forderungsinhaber "Forderungsinhaber"
-
-ValueSet: ERGParticipantRoleVS
-Id: erg-participant-role-VS
-Title: "ERG Teilnehmer Rolle"
-Description: "Diese Codes enthalten Teilnehmer Rollen der eRechnung"
-* insert Meta
-* include codes from system ERGParticipantRoleCS
-
-Extension: ERGAbrechnungsDiagnoseProzedur
-Id: ERGAbrechnungsDiagnoseProzedur
-Title: "Abrechnungsrelevanz von Diagnosen und Prozeduren"
-Description: """Diese Extension erlaubt es einer Invoice Diagnosen oder Prozeduren, incl. Qualifier wie bspw: "Primär-DRG" zuzuordnen. Dies ermöglicht unter anderem das Zuordnen von Haupt- und Nebendiagnosen zu einem Account zum Zweck der DRG Erstellung."""
-* insert Meta
-* ^context.type = #element
-* ^context.expression = "Invoice"
-* . ^short = "Abrechnungsrelevanz von Diagnosen und Prozeduren"
-* extension contains
-    Use 1..1 and
-    Referenz 1..*
-* extension[Use].value[x] only Coding
-* extension[Use].valueCoding 0..1
-* extension[Use].valueCoding from http://fhir.de/ValueSet/AbrechnungsDiagnoseProzedur (extensible)
-* extension[Referenz].value[x] only Reference(Condition or Procedure)
-
-Extension: ERGAbrechnungsDiagnoseProzedurFreitext
-Id: ERGAbrechnungsDiagnoseProzedurFreitext
-Title: "Abrechnungsrelevanz von Diagnosen und Prozeduren als Freitext"
-* insert Meta
-* ^context.type = #element
-* ^context.expression = "Invoice"
-* . ^short = "Abrechnungsrelevanz von Diagnosen und Prozeduren als Freitext"
-* value[x] only string
-
-Extension: ERGZusatzinformationZurAbrechnungsart
-Id: ERGZusatzinformationZurAbrechnungsart
-Title: "Zusatzinformation zur Abrechnungsart"
-Description: "Die Abrechnung nach §13 kann ergänzend zu den grundsätzlichen Ausrichtungen der Abrechnung aufgeführt werden. Diese Extension erlaubt es, die Ausrichtung der Rechnung entsprechend zu flaggen.
-Ist die Extension gesetzt, dann ist die Frage der Abrechnung nach §13 Abs. 2 SGB V mit 'Ja' beantwortet"
-* insert Meta
-* ^context.type = #element
-* ^context.expression = "Invoice.type"
-* . ^short = "Zusatzinformation zur Abrechnungsart"
-* value[x] only boolean
-* valueBoolean = true
-
-Extension: ERGFachrichtung
-Id: erg-fachrichtung
-Title: "ERG Extension Fachrichtung"
-* insert Meta
-* ^context.type = #element
-* ^context.expression = "Invoice"
-* value[x] only Coding
-* valueCoding from $ihe-practiceSettingCode (required)
-
-Extension: ERGAbzugKassenanteil
-Id: erg-abzug-kassenanteil
-Title: "ERG Extension Abzug Kassenanteil in Prozent"
-* insert Meta
-* ^context.type = #element
-* ^context.expression = "Invoice.totalPriceComponent"
-* value[x] only Quantity
-* valueQuantity
-  * unit 1..
-  * unit = "%"
-  * code 1..
-  * code = #%
-  * system 1..
-  * system = "http://unitsofmeasure.org"
