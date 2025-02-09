@@ -1,0 +1,95 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ERGTeilsumme",
+  "url": "https://gematik.de/fhir/erg/StructureDefinition/ERGTeilsumme",
+  "name": "ERGTeilsumme",
+  "title": "ERG Teilsumme",
+  "status": "draft",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "expression": "Invoice.totalPriceComponent",
+      "type": "element"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension.extension:Type",
+        "path": "Extension.extension",
+        "sliceName": "Type",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension:Type.extension",
+        "path": "Extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:Type.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "Type"
+      },
+      {
+        "id": "Extension.extension:Type.value[x]",
+        "path": "Extension.extension.value[x]",
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://gematik.de/fhir/erg/ValueSet/erg-chargeitem-type-VS"
+        }
+      },
+      {
+        "id": "Extension.extension:Summe",
+        "path": "Extension.extension",
+        "sliceName": "Summe",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension:Summe.extension",
+        "path": "Extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:Summe.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "Summe"
+      },
+      {
+        "id": "Extension.extension:Summe.value[x]",
+        "path": "Extension.extension.value[x]",
+        "type": [
+          {
+            "code": "Money"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:Summe.value[x].currency",
+        "path": "Extension.extension.value[x].currency",
+        "patternCode": "EUR"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "https://gematik.de/fhir/erg/StructureDefinition/ERGTeilsumme"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "max": "0"
+      }
+    ]
+  }
+}

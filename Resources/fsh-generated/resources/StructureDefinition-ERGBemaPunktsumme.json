@@ -1,0 +1,86 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ERGBemaPunktsumme",
+  "url": "https://gematik.de/fhir/erg/StructureDefinition/ERGBemaPunktsumme",
+  "name": "ERGBemaPunktsumme",
+  "title": "ERG BEMA Punktsumme",
+  "status": "draft",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "expression": "Invoice",
+      "type": "element"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension.extension:Punktsumme",
+        "path": "Extension.extension",
+        "sliceName": "Punktsumme",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension:Punktsumme.extension",
+        "path": "Extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:Punktsumme.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "Punktsumme"
+      },
+      {
+        "id": "Extension.extension:Punktsumme.value[x]",
+        "path": "Extension.extension.value[x]",
+        "type": [
+          {
+            "code": "decimal"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:Punktwert",
+        "path": "Extension.extension",
+        "sliceName": "Punktwert",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension:Punktwert.extension",
+        "path": "Extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:Punktwert.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "Punktwert"
+      },
+      {
+        "id": "Extension.extension:Punktwert.value[x]",
+        "path": "Extension.extension.value[x]",
+        "type": [
+          {
+            "code": "decimal"
+          }
+        ]
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "https://gematik.de/fhir/erg/StructureDefinition/ERGBemaPunktsumme"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "max": "0"
+      }
+    ]
+  }
+}
