@@ -16,11 +16,15 @@ Id: erg-rechnungsposition
     * system 1.. MS
 * extension[Zusatz]
   * ^short = "Zusatz"
-  * ^comment = "Der Zusatz SOLL vorhanden sein."
+  * ^comment = "Im Falle einer GOÄ, GOÄ-neu oder GOZ Rechnungsposition, SOLL der Zusatz vorhanden sein.
+  Bei einer BEMA Rechnungsposition ist der Zusatz nicht gefordert."
   * valueCoding MS
     * code 1.. MS
     * system 1.. MS
 * extension[WegegeldReiseentschädigung] MS
+  * ^short = "Wegegeld oder Reiseentschädigung"
+  * ^comment = "Im Falle einer GOÄ, GOÄ-neu oder GOZ Rechnungsposition SOLL Wegegeld oder Reiseentschädigung vorhanden sein.
+  Im Falle einer BEMA Rechnungsposition ist das Element nicht gefordert."
   * extension[Wegegeld] MS
     * ^short = "Wegegeld bis 25km"
     * ^comment = "Das Wegegeld bis 25km SOLL vorhanden sein."
@@ -62,19 +66,24 @@ Id: erg-rechnungsposition
 * extension[GebührenordnungAngaben]
   * extension[Einfachsatz] MS
     * ^short = "Gebühr Einfachsatz in EUR"
-    * ^comment = "Der Gebühr Einfachsatz in EUR SOLL vorhanden sein."
+    * ^comment = "Im Falle einer GOÄ, GOÄ-neu oder GOZ Rechnungsposition, SOLL der Gebühr Einfachsatz in EUR vorhanden sein.
+    Im Falle einer BEMA Rechnungsposition ist er nicht gefordert."
     * valueMoney MS
       * currency 1.. MS
       * value 1.. MS
   * extension[Punktzahl] MS
     * ^short = "Punktzahl BEMA"
-    * ^comment = "Die Punktzahl BEMA SOLL vorhanden sein."
+    * ^comment = "Im Fall einer BEMA Rechnungsposition SOLL die Punktzahl BEMA vorhanden sein.
+    Im Falle einer GOÄ, GOÄ-neu oder GOZ Rechnungsposition ist die Punktzahl BEMA nicht gefordert."
     * valueDecimal MS
   * extension[Faktor] MS
     * ^short = "Faktor"
-    * ^comment = "Der Faktor SOLL vorhanden sein."
+    * ^comment = "Im Falle einer GOÄ, GOÄ-neu oder GOZ Rechnungsposition SOLL der Faktor vorhanden sein."
     * valueDecimal MS
   * extension[FaktorId] MS
+    * ^comment = "Im Falle einer GOÄ-neu Rechnungsposition SOLL die Faktor ID vorhanden sein.
+    Im Falle einer GOÄ Rechnungsposition KANN die Faktor ID vorhanden sein.
+    Im Falle einer GOZ oder BEMA Rechnungsposition ist die Faktor ID nicht gefordert."
     * extension[Id] MS
       * ^short = "Faktor ID"
       * ^comment = "Die Faktor ID SOLL vorhanden sein."
@@ -84,7 +93,8 @@ Id: erg-rechnungsposition
       * valueCoding MS
   * extension[Minderung§6GOÄ] MS
     * ^short = "Minderungen nach §6a GOÄ in Prozent"
-    * ^comment = "Die Minderungen nach §6a GOÄ in Prozent SOLL vorhanden sein."
+    * ^comment = "Im Falle einer GOÄ oder GOÄ-neu Rechnungsposition SOLL die Minderungen nach §6a GOÄ in Prozent vorhanden sein.
+    Im Falle einer GOZ oder BEMA Rechnungsposition ist das Element nicht gefordert."
     * valueQuantity MS
       * unit 1.. MS
       * code 1.. MS
@@ -130,11 +140,14 @@ Id: erg-rechnungsposition
   * actor MS
   * actor only Reference(ERGLeistungserbringerPerson or ERGInstitution or Practitioner or Organization)
     * ^short = "Referenz Behandelnder Leistungserbringer"
-    * ^comment = "Eine Referenz auf behandelnder Leistungserbringer SOLL vorhanden sein."
+    * ^comment = "Im Falle einer GOÄ-neu Rechnungsposition, SOLL die Referenz auf einen behandelnden Leistungserbringer vorhanden sein.
+    Im Fall einer GOÄ Rechnungsposition, KANN ein behandelnder Leistungserbringer vorhanden sein.
+    Bei GOZ oder BEMA Leistungen ist ein behandelnder Leistungserbringer nicht gefordert."
 * reason MS
 * reason.text MS
   * ^short = "Begründung in Abhängigkeit zur Gebührenziffer"
-  * ^comment = "Die Begründung in Abhängigkeit zur Gebührenziffer SOLL vorhanden sein.
+  * ^comment = "Im Falle einer GOÄ, GOÄ-neu oder GOZ Rechnungsposition, SOLL die Begründung in Abhängigkeit zur Gebührenziffer vorhanden sein.
+  Bei einer BEMA Rechnungsposition ist die Begründung in Abhängigkeit zur Gebührenziffer nicht gefordert.
   Beispiele sind:
   - obligatorisch bei analoger Rechnungsposition
   - Angabe zu den behandelten Organen
@@ -142,10 +155,16 @@ Id: erg-rechnungsposition
 * bodysite MS
 * bodysite.extension contains ERGZahnRegion named ZahnRegion ..1 MS
 * bodysite.extension[ZahnRegion]
+  * ^short = "Zahn/Region"
+  * ^comment = "Im Falle einer GOZ oder BEMA Rechnungsposition, SOLL das Element Zahn/Region vorhanden sein.
+  Im Falle einer GOÄ oder GOÄ-neu Rechnungsposition ist das Element nicht gefordert.
+  Im GOZ-Rechnungsformular zugelassen ist 
+  - zwei Ziffern durch Komma und Leerzeichen getrennt
+  - Bereich zugelassen, z.B. 17-27
+  Die Kieferbezeichnung mit 'OK' und 'UK' ist im Formular nicht zulässig, da die Verwendung allerdings die Regel ist, wird der Inhalt des Feldes nicht nach Korrektheit überprüft."
   * valueString 1.. MS
 * product[x] MS
 * product[x] only CodeableConcept
-  * ^comment = "Bei Auslagen oder Sachkosten SOLL hier die PZN oder der Name des Medikamentes, Wirkstoffs oder Material angegeben werden."
 * productCodeableConcept MS
   * text MS
     * ^short = "Material / Wirkstoffname"
@@ -156,10 +175,11 @@ Id: erg-rechnungsposition
   * coding contains PZN ..1 MS
   * coding[PZN] only $coding-pzn
     * ^short = "Pharmazentralnummer"
-    * ^comment = "Die Pharmazentralnummer (PZN) SOLL vorhanden sein."
+    * ^comment = "Im Falle einer GOÄ oder GOÄ-neu Rechnungsposition SOLL die Pharmazentralnummer (PZN) vorhanden sein.
+    Im Falle einer GOZ oder BEMA Rechnungsposition wird die PZN nicht gefordert."
 * quantity MS
   * ^short = "Anzahl oder verbrauchte Menge"
-  * ^comment = "Ist die Rechnungsposition vom Typ 'Auslagen/Sachkosten' SOLL hier die Anzahl des unter product[x] angegebenen Medikament, Wirkstoff oder Material vorhanden sein.
+  * ^comment = "Ist die Rechnungsposition vom Typ 'Auslagen/Sachkosten' und es eine GOÄ, GOÄ-neu oder GOZ Rechnungsposition, SOLL hier die Anzahl des unter product[x] angegebenen Medikament, Wirkstoff oder Material vorhanden sein.
   Ist die Rechnungsposition vom Typ 'GOÄ', 'GOZ' oder 'BEMA' SOLL hier die Anzahl vorhanden sein."
   * value 1.. MS
     * ^short = "Menge"

@@ -14,6 +14,9 @@ Id: erg-rechnung
   $extension-replaces named Korrekturrechnung ..1 MS and
   ERGBemaPunktsumme named BemaPunktsumme ..1 MS
 * extension[AbrechnungsDiagnoseProzedur]
+  * ^short = "Diagnose"
+  * ^comment = "Im Falle einer GOÄ oder GOÄ-neu Rechnung, SOLLEN Diagnosen und Prozeduren vorhanden sein.
+  Im Falle einer GOZ oder BEMA Rechnung werden keine Diagnosen oder Prozedur gefordert."
   * extension[Use].valueCoding MS
     * ^short = "Kennzeichen Hauptdiagnose"
     * ^comment = "Das Kennzeichen Hauptdiagnose SOLL vorhanden sein."
@@ -32,8 +35,9 @@ Id: erg-rechnung
   * valueDate MS
     * ^short = "Behandlungsdatum"
 * extension[AbrechnungsDiagnoseProzedurFreitext]
-  * ^short = "Einleitung"
-  * ^comment = "Diagnose und Prozedure als Freitextangabe"
+  * ^short = "Einleitung (Diagnose und Prozedure als Freitextangabe)"
+  * ^comment = "Im Falle einer GOÄ, GOZ oder BEMA Rechnung, SOLLEN Diagnose und Prozedure als Freitextangabe vorhanden sein.
+  Im Falle einer GOÄ-neu Rechnung werden keine Diagnosen und Prozeduren als Freitext gefordert."
   * valueString 1.. MS
 * extension[Benhandlungsart]
   * ^short = "Behandlungsart"
@@ -53,6 +57,8 @@ Id: erg-rechnung
   * valueCanonical 1..1 MS
   * valueCanonical only Canonical(ERGRechnung or Invoice)
 * extension[BemaPunktsumme]
+  * ^comment = "Im Falle einer BEMA Rechnung SOLL die Punktsumme BEMA vorhanden sein.
+  Im Falle einer GOÄ, GOÄ-neu oder GOZ Rechnung ist das Element nicht gefordert."
   * extension[Punktsumme] MS
     * ^short = "Summe Punktzahlen der BEMA-Leistungen"
     * ^comment = "Die Summe Punktzahlen der BEMA-Leistungen SOLL vorhanden sein."
@@ -159,7 +165,8 @@ Id: erg-rechnung
   Forderungsinhaber ..1 MS
 * participant[Leistungserbringer]
   * ^short = "Weitere behandelnde Leistungserbringer"
-  * ^comment = "Weitere behandelnde Leistungserbringer SOLLEN vorhanden sein."
+  * ^comment = "Im Falle einer GOÄ oder GOÄ-neu Rechnung, SOLLLEN weitere behandelnde Leistungserbringer vorhanden sein.
+  Im Falle einer GOZ oder BEMA Rechnung, KÖNNEN weitere behandelnde Leistungserbringer vorhanden sein."
   * role = ERGParticipantRoleCS#leistungserbringer
   * actor only Reference(ERGLeistungserbringerPerson or ERGInstitution or Practitioner or Organization)
 * participant[Forderungsinhaber]
@@ -175,7 +182,7 @@ Id: erg-rechnung
   * ^short = "Zahlungsdaten Überweisung und weitere Zahlungsmethoden"
   * ^comment = "Die Zahlungsdaten zur Überweisung SOLLEN vorhanden sein.
   Weitere Zahlungsmethoden wie bspw. Paypal, Klarna, Kreditkarte KÖNNEN auch hier angegeben werden.
-  Die Extensions zur qualifizierung der Zahlungsdaten KÖNNEN vorhanden sein." //TODO Extensions hinzufügen
+  Ebenfalls sollte hier der Zahlbetrag in EUR inkl. potenzieller Abzüge durch Anzahlungen, Vorauszahlungen oder Abschlagzahlungen."
 * paymentTerms.extension contains ERGZahlungsziel named Zahlungsziel 1..1 MS
 * paymentTerms.extension[Zahlungsziel]
   * ^short = "Zahlungsziel als Datum oder Fristangabe"
@@ -187,8 +194,8 @@ Id: erg-rechnung
   * ^short = "Rechnungsbetrag (Brutto)"
   * ^comment = "Der Rechnungsbetrag in Brutto MUSS vorhanden sein."
 * totalPriceComponent MS
-/* totalPriceComponent.extension contains
-  ERGTeilsummen named Teilsumme ..* MS
+* totalPriceComponent.extension contains
+  ERGTeilsumme named Teilsumme ..* MS
 * totalPriceComponent.extension[Teilsumme]
   * ^short = "Teilsummen in EUR für die Rechnungspositionstyp"
   * ^comment = "Für alle vorkommenden Rechnungspositionstypen SOLL eine Teilsumme vorhanden sein."
@@ -197,7 +204,7 @@ Id: erg-rechnung
   * extension[Summe] MS
     * valueMoney 1.. MS
       * currency 1.. MS
-      * value 1.. MS*/
+      * value 1.. MS
 * totalPriceComponent ^slicing.discriminator.type = #pattern
 * totalPriceComponent ^slicing.discriminator.path = "code"
 * totalPriceComponent ^slicing.rules = #open
@@ -220,7 +227,8 @@ Id: erg-rechnung
     * value 1.. MS
 * totalPriceComponent[MinderungNachGOZ]
   * ^short = "Minderungen nach §7 GOZ"
-  * ^comment = "Die Minderungen nach §7 GOZ SOLLEN vorhanden sein."
+  * ^comment = "Im Falle einer GOZ Rechnung SOLLEN die Minderungen nach §7 GOZ vorhanden sein.
+  Im Falle einer GOÄ, GOÄ-neu oder BEMA Rechnung ist das Element nicht gefordert."
   * type MS
   * type = #deduction
   * code 1.. MS
@@ -249,7 +257,9 @@ Id: erg-rechnung
   * extension contains ERGAbzugKassenanteil named Kassenanteil ..1 MS
   * extension[Kassenanteil]
     * ^short = "Kassenanteil in Prozent"
-    * ^comment = "Der Kassenanteil in Prozent SOLL vorhanden sein."
+    * ^comment = "Im Falle einer BEMA Rechnung SOLL der Kassenanteil in Prozent vorhanden sein.
+    Im Falle einer GOZ Rechnung KANN der  Kassenanteil in Prozent vorhanden sein.
+    Im Falle einer GOÄ oder GOÄ-neu Rechnung ist das Element nicht gefordert."
     * valueQuantity 1.. MS
       * unit MS
       * value MS
@@ -271,7 +281,8 @@ Id: erg-rechnung
   Steuern ..1 MS
 * lineItem.priceComponent[BruttoBetrag]
   * ^short = "Betrag pro Rechnungsposition"
-  * ^comment = "Der Betrag pro Rechnungsposition SOLL vorhanden sein."
+  * ^comment = "Im Falle einer GOÄ, GOÄ-neu oder GOZ Rechnungsposition, SOLL der Betrag pro Rechnungsposition vorhanden sein.
+  Im Falle einer BEMA Rechnungsposition ist das Element nicht gefordert."
   * type MS
   * type = #base
   * factor 0..0
