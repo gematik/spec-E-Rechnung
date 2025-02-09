@@ -59,6 +59,37 @@ Id: erg-rechnungsposition
     * extension[Verkehrsmittel] MS
       * ^short = "Verkehrsmittel"
       * valueString 1.. MS
+* extension[GebührenordnungAngaben]
+  * extension[Einfachsatz] MS
+    * ^short = "Gebühr Einfachsatz in EUR"
+    * ^comment = "Der Gebühr Einfachsatz in EUR SOLL vorhanden sein."
+    * valueMoney MS
+      * currency 1.. MS
+      * value 1.. MS
+  * extension[Punktzahl] MS
+    * ^short = "Punktzahl BEMA"
+    * ^comment = "Die Punktzahl BEMA SOLL vorhanden sein."
+    * valueDecimal MS
+  * extension[Faktor] MS
+    * ^short = "Faktor"
+    * ^comment = "Der Faktor SOLL vorhanden sein."
+    * valueDecimal MS
+  * extension[FaktorId] MS
+    * extension[Id] MS
+      * ^short = "Faktor ID"
+      * ^comment = "Die Faktor ID SOLL vorhanden sein."
+    * extension[Ausprägung] MS
+      * ^short = "Faktor ID Ausprägung"
+      * ^comment = "Die Faktor ID Ausprägung SOLL vorhanden sein."
+      * valueCoding MS
+  * extension[Minderung§6GOÄ] MS
+    * ^short = "Minderungen nach §6a GOÄ in Prozent"
+    * ^comment = "Die Minderungen nach §6a GOÄ in Prozent SOLL vorhanden sein."
+    * valueQuantity MS
+      * unit 1.. MS
+      * code 1.. MS
+      * system 1.. MS
+      * value 1.. MS
 * code MS
   * ^short = "Gebührenordnung-Nummer (Ziffer oder Paragraph)"
   * ^comment = "Ist der Rechnungspositionstyp auf eine Gebührenordnung festgelegt, SOLL die Gebührenordnung-Nummer als Ziffer oder Paragraph vorhanden sein."

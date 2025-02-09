@@ -17,7 +17,6 @@ Context: ChargeItem
       * system = "http://unitsofmeasure.org"
   * extension[Nacht]
     * value[x] only boolean
-    * valueBoolean MS
 * extension[Reiseentschädigung]
   * extension contains
     Abwesenheit ..1 and
