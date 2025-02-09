@@ -33,8 +33,6 @@
       {
         "id": "Extension.value[x]",
         "path": "Extension.value[x]",
-        "short": "",
-        "comment": "Das Element Zahn/Region ist ein Freitextfelt und SOLL vorhanden sein.\n  Im GOZ-Rechnungsformular zugelassen ist \n  - zwei Ziffern durch Komma und Leerzeichen getrennt\n  - Bereich zugelassen, z.B. 17-27\n  Die Kieferbezeichnung mit 'OK' und 'UK' ist im Formular nicht zulässig, da die Verwendung allerdings die Regel ist, wird der Inhalt des Feldes nicht nach Korrektheit überprüft.",
         "type": [
           {
             "code": "string"

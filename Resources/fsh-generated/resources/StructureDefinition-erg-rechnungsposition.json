@@ -73,7 +73,7 @@
         "path": "ChargeItem.extension",
         "sliceName": "Zusatz",
         "short": "Zusatz",
-        "comment": "Der Zusatz SOLL vorhanden sein.",
+        "comment": "Im Falle einer GOÄ, GOÄ-neu oder GOZ Rechnungsposition, SOLL der Zusatz vorhanden sein.\n  Bei einer BEMA Rechnungsposition ist der Zusatz nicht gefordert.",
         "min": 0,
         "max": "1",
         "type": [
@@ -107,6 +107,8 @@
         "id": "ChargeItem.extension:WegegeldReiseentschädigung",
         "path": "ChargeItem.extension",
         "sliceName": "WegegeldReiseentschädigung",
+        "short": "Wegegeld oder Reiseentschädigung",
+        "comment": "Im Falle einer GOÄ, GOÄ-neu oder GOZ Rechnungsposition SOLL Wegegeld oder Reiseentschädigung vorhanden sein.\n  Im Falle einer BEMA Rechnungsposition ist das Element nicht gefordert.",
         "min": 0,
         "max": "1",
         "type": [
@@ -313,7 +315,7 @@
         "path": "ChargeItem.extension.extension",
         "sliceName": "Einfachsatz",
         "short": "Gebühr Einfachsatz in EUR",
-        "comment": "Der Gebühr Einfachsatz in EUR SOLL vorhanden sein.",
+        "comment": "Im Falle einer GOÄ, GOÄ-neu oder GOZ Rechnungsposition, SOLL der Gebühr Einfachsatz in EUR vorhanden sein.\n    Im Falle einer BEMA Rechnungsposition ist er nicht gefordert.",
         "mustSupport": true
       },
       {
@@ -338,7 +340,7 @@
         "path": "ChargeItem.extension.extension",
         "sliceName": "Punktzahl",
         "short": "Punktzahl BEMA",
-        "comment": "Die Punktzahl BEMA SOLL vorhanden sein.",
+        "comment": "Im Fall einer BEMA Rechnungsposition SOLL die Punktzahl BEMA vorhanden sein.\n    Im Falle einer GOÄ, GOÄ-neu oder GOZ Rechnungsposition ist die Punktzahl BEMA nicht gefordert.",
         "mustSupport": true
       },
       {
@@ -351,7 +353,7 @@
         "path": "ChargeItem.extension.extension",
         "sliceName": "Faktor",
         "short": "Faktor",
-        "comment": "Der Faktor SOLL vorhanden sein.",
+        "comment": "Im Falle einer GOÄ, GOÄ-neu oder GOZ Rechnungsposition SOLL der Faktor vorhanden sein.",
         "mustSupport": true
       },
       {
@@ -363,6 +365,7 @@
         "id": "ChargeItem.extension:GebührenordnungAngaben.extension:FaktorId",
         "path": "ChargeItem.extension.extension",
         "sliceName": "FaktorId",
+        "comment": "Im Falle einer GOÄ-neu Rechnungsposition SOLL die Faktor ID vorhanden sein.\n    Im Falle einer GOÄ Rechnungsposition KANN die Faktor ID vorhanden sein.\n    Im Falle einer GOZ oder BEMA Rechnungsposition ist die Faktor ID nicht gefordert.",
         "mustSupport": true
       },
       {
@@ -391,7 +394,7 @@
         "path": "ChargeItem.extension.extension",
         "sliceName": "Minderung§6GOÄ",
         "short": "Minderungen nach §6a GOÄ in Prozent",
-        "comment": "Die Minderungen nach §6a GOÄ in Prozent SOLL vorhanden sein.",
+        "comment": "Im Falle einer GOÄ oder GOÄ-neu Rechnungsposition SOLL die Minderungen nach §6a GOÄ in Prozent vorhanden sein.\n    Im Falle einer GOZ oder BEMA Rechnungsposition ist das Element nicht gefordert.",
         "mustSupport": true
       },
       {
@@ -605,7 +608,7 @@
         "id": "ChargeItem.performer.actor",
         "path": "ChargeItem.performer.actor",
         "short": "Referenz Behandelnder Leistungserbringer",
-        "comment": "Eine Referenz auf behandelnder Leistungserbringer SOLL vorhanden sein.",
+        "comment": "Im Falle einer GOÄ-neu Rechnungsposition, SOLL die Referenz auf einen behandelnden Leistungserbringer vorhanden sein.\n    Im Fall einer GOÄ Rechnungsposition, KANN ein behandelnder Leistungserbringer vorhanden sein.\n    Bei GOZ oder BEMA Leistungen ist ein behandelnder Leistungserbringer nicht gefordert.",
         "type": [
           {
             "code": "Reference",
@@ -623,7 +626,7 @@
         "id": "ChargeItem.quantity",
         "path": "ChargeItem.quantity",
         "short": "Anzahl oder verbrauchte Menge",
-        "comment": "Ist die Rechnungsposition vom Typ 'Auslagen/Sachkosten' SOLL hier die Anzahl des unter product[x] angegebenen Medikament, Wirkstoff oder Material vorhanden sein.\n  Ist die Rechnungsposition vom Typ 'GOÄ', 'GOZ' oder 'BEMA' SOLL hier die Anzahl vorhanden sein.",
+        "comment": "Ist die Rechnungsposition vom Typ 'Auslagen/Sachkosten' und es eine GOÄ, GOÄ-neu oder GOZ Rechnungsposition, SOLL hier die Anzahl des unter product[x] angegebenen Medikament, Wirkstoff oder Material vorhanden sein.\n  Ist die Rechnungsposition vom Typ 'GOÄ', 'GOZ' oder 'BEMA' SOLL hier die Anzahl vorhanden sein.",
         "mustSupport": true
       },
       {
@@ -663,6 +666,8 @@
         "id": "ChargeItem.bodysite.extension:ZahnRegion",
         "path": "ChargeItem.bodysite.extension",
         "sliceName": "ZahnRegion",
+        "short": "Zahn/Region",
+        "comment": "Im Falle einer GOZ oder BEMA Rechnungsposition, SOLL das Element Zahn/Region vorhanden sein.\n  Im Falle einer GOÄ oder GOÄ-neu Rechnungsposition ist das Element nicht gefordert.\n  Im GOZ-Rechnungsformular zugelassen ist \n  - zwei Ziffern durch Komma und Leerzeichen getrennt\n  - Bereich zugelassen, z.B. 17-27\n  Die Kieferbezeichnung mit 'OK' und 'UK' ist im Formular nicht zulässig, da die Verwendung allerdings die Regel ist, wird der Inhalt des Feldes nicht nach Korrektheit überprüft.",
         "min": 0,
         "max": "1",
         "type": [
@@ -690,13 +695,12 @@
         "id": "ChargeItem.reason.text",
         "path": "ChargeItem.reason.text",
         "short": "Begründung in Abhängigkeit zur Gebührenziffer",
-        "comment": "Die Begründung in Abhängigkeit zur Gebührenziffer SOLL vorhanden sein.\n  Beispiele sind:\n  - obligatorisch bei analoger Rechnungsposition\n  - Angabe zu den behandelten Organen\n  - Überschreitung der Regelsätze",
+        "comment": "Im Falle einer GOÄ, GOÄ-neu oder GOZ Rechnungsposition, SOLL die Begründung in Abhängigkeit zur Gebührenziffer vorhanden sein.\n  Bei einer BEMA Rechnungsposition ist die Begründung in Abhängigkeit zur Gebührenziffer nicht gefordert.\n  Beispiele sind:\n  - obligatorisch bei analoger Rechnungsposition\n  - Angabe zu den behandelten Organen\n  - Überschreitung der Regelsätze",
         "mustSupport": true
       },
       {
         "id": "ChargeItem.product[x]",
         "path": "ChargeItem.product[x]",
-        "comment": "Bei Auslagen oder Sachkosten SOLL hier die PZN oder der Name des Medikamentes, Wirkstoffs oder Material angegeben werden.",
         "type": [
           {
             "code": "CodeableConcept"
@@ -722,7 +726,7 @@
         "path": "ChargeItem.product[x].coding",
         "sliceName": "PZN",
         "short": "Pharmazentralnummer",
-        "comment": "Die Pharmazentralnummer (PZN) SOLL vorhanden sein.",
+        "comment": "Im Falle einer GOÄ oder GOÄ-neu Rechnungsposition SOLL die Pharmazentralnummer (PZN) vorhanden sein.\n    Im Falle einer GOZ oder BEMA Rechnungsposition wird die PZN nicht gefordert.",
         "min": 0,
         "max": "1",
         "type": [
