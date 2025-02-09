@@ -190,7 +190,7 @@ Id: erg-rechnungsposition
   * code 1.. MS
     * ^short = "Einheit als UCUM-Code"
 * status MS
-  * ^short = "Der Status der Rechnungsposition MUSS vorhanden sein. Im Normalfall ist 'billable' zu nutzen." //TODO Passt der Status?
+  * ^short = "Der Status der Rechnungsposition MUSS vorhanden sein. Im Normalfall ist 'billable' zu nutzen." //TODO-102 Passt der Status?
 * subject MS
 * subject only Reference(ERGVersichertePerson or Patient)
   * ^short = "Behandelte Person"
