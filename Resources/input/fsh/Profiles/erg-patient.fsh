@@ -88,7 +88,7 @@ Id: erg-person
     * ^short = "Länderkennzeichen"
     * ^comment = "Das Länderkennzeichen KANN vorhanden sein."
 * address[Postfach] only $adresse-de
-  //* obeys address-cnt-2or3-char TODO Frage an Alexander Z.
+  //* obeys address-cnt-2or3-char TODO-102
   * ^short = "Postfach"
   * ^comment = "Das Postfach SOLL vorhanden sein."
   * ^patternAddress.type = #postal

@@ -17,7 +17,7 @@ Context: ChargeItem
   * extension contains
     Id ..1 and
     Ausprägung ..1
-  * extension[Id].value[x] only string //TODO Klärung des Datentyp
+  * extension[Id].value[x] only string //TODO Klärung des Datentyp (Kommentar an Klaus)
   * extension[Ausprägung]
     * value[x] only Coding
     * valueCoding from ERGRechnungspositionFaktorIdAuspraegungenVS (required)

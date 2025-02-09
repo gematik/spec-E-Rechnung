@@ -3,7 +3,7 @@ Title: "ERG Rechnung"
 Parent: Invoice
 Id: erg-rechnung
 * insert Meta
-//TODO @Alexander Z, sollen wir das drin lassen? Im Workshop ist das gar nicht auf der Liste für die Inhalte gelandet
+//TODO-102 @Alexander Z, sollen wir ERGPDFRepraesentationRechnung drin lassen? Im Workshop ist das gar nicht auf der Liste für die Inhalte gelandet
 * extension contains 
   ERGPDFRepraesentationRechnung named pdf-repraesentation-rechnung 0..1 MS and 
   http://hl7.org/fhir/5.0/StructureDefinition/extension-Invoice.period[x] named Behandlungszeitraum 0..1 MS and
@@ -129,7 +129,7 @@ Id: erg-rechnung
 * subject only Reference(ERGPerson or Patient)
   * reference 1..1 MS
   * ^short = "Behandelte Person"
-  * display 1..1 MS //TODO Hatten wir in der ersten Version drin, sollen wir den entfernen jetzt?
+  * display 1..1 MS //TODO-102 Hatten wir in der ersten Version drin, sollen wir den entfernen jetzt?
     * ^short = "Name der behandelten Person"
     * ^comment = "Der Name der behandelten Person SOLL angegeben werden und kann vom Rechnungsempfänger abweichen, z.B. wenn Eltern Rechnungen für ihre Kinder erhalten."
 * recipient 1.. MS
@@ -139,7 +139,7 @@ Id: erg-rechnung
   Der Fachdienst substitutiert den Link mit der Referenz auf das Postfach des Patienten 
   bei der Extraktion der Invoice aus dem Bundle. Die Angabe der Versichertennummer dient 
   der Plausibilisierung. Die KV-Nummer in der Instanz des Bundles muss daher mit der 
-  KV-Nummer übereinstimmen, die im Fachdienst für das Postfach des Rechnungsempfängers hinterlegt ist. " //TODO Text aus erster Version
+  KV-Nummer übereinstimmen, die im Fachdienst für das Postfach des Rechnungsempfängers hinterlegt ist. " //TODO-102 Text aus erster Version
 * recipient only Reference(ERGPerson or Patient)
   * reference MS
   * identifier 1.. MS
@@ -265,7 +265,7 @@ Id: erg-rechnung
       * value MS
       * system MS
       * code MS
-* lineItem MS //TODO Sequenz?
+* lineItem MS //TODO-102 Sequenz?
   * ^short = "Rechnungspositionen"
 * lineItem.chargeItem[x] only Reference
 * lineItem.chargeItemReference MS
