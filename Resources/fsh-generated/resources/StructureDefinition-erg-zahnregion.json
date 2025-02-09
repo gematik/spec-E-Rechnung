@@ -1,0 +1,46 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "erg-zahnregion",
+  "url": "https://gematik.de/fhir/erg/StructureDefinition/erg-zahnregion",
+  "name": "ERGZahnRegion",
+  "title": "ERG Zahn/Region Extension",
+  "status": "draft",
+  "description": "In dieser Extension wird die Angabe der Zahn/Region an einer Rechnungsposition der eRechnung abgebildet.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "expression": "ChargeItem.bodysite",
+      "type": "element"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "https://gematik.de/fhir/erg/StructureDefinition/erg-zahnregion"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "short": "",
+        "comment": "Das Element Zahn/Region ist ein Freitextfelt und SOLL vorhanden sein.\n  Im GOZ-Rechnungsformular zugelassen ist \n  - zwei Ziffern durch Komma und Leerzeichen getrennt\n  - Bereich zugelassen, z.B. 17-27\n  Die Kieferbezeichnung mit 'OK' und 'UK' ist im Formular nicht zulässig, da die Verwendung allerdings die Regel ist, wird der Inhalt des Feldes nicht nach Korrektheit überprüft.",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      }
+    ]
+  }
+}

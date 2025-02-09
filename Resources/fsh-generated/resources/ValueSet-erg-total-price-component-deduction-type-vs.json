@@ -1,9 +1,10 @@
 {
   "resourceType": "ValueSet",
   "status": "draft",
-  "name": "ERGTotalPriceComponentTypeVS",
-  "id": "erg-total-price-component-type-vs",
-  "url": "https://gematik.de/fhir/erg/ValueSet/erg-total-price-component-type-vs",
+  "name": "ERGTotalPriceComponentDeductionTypeVS",
+  "id": "erg-total-price-component-deduction-type-vs",
+  "title": "ERG Art des Abzugs von der Summe der gesamten Rechnungspositionen",
+  "url": "https://gematik.de/fhir/erg/ValueSet/erg-total-price-component-deduction-type-vs",
   "compose": {
     "include": [
       {

@@ -53,7 +53,7 @@
         "path": "Invoice.extension",
         "sliceName": "Behandlungszeitraum",
         "short": "Behandlungszeitraum",
-        "comment": "Der Behandlungszeitraum SOLL vorhanden sein.",
+        "comment": "Entweder ein Behandlungszeitraum, oder ein -datum SOLL vorhanden sein.",
         "min": 0,
         "max": "1",
         "type": [
@@ -103,6 +103,20 @@
         "id": "Invoice.extension:Behandlungszeitraum.value[x]:valuePeriod.end",
         "path": "Invoice.extension.value[x].end",
         "short": "Enddatum",
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.extension:Behandlungszeitraum.value[x]:valueDate",
+        "path": "Invoice.extension.value[x]",
+        "sliceName": "valueDate",
+        "short": "Behandlungsdatum",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "date"
+          }
+        ],
         "mustSupport": true
       },
       {
@@ -710,14 +724,85 @@
       {
         "id": "Invoice.lineItem.chargeItem[x]",
         "path": "Invoice.lineItem.chargeItem[x]",
+        "short": "Referenz auf die Instanz der Rechnungsposition",
+        "comment": "Die Referenz auf die Instanz der Rechnungsposition MUSS vorhanden sein.",
         "type": [
           {
             "code": "Reference",
             "targetProfile": [
+              "https://gematik.de/fhir/erg/StructureDefinition/erg-rechnungsposition",
               "http://hl7.org/fhir/StructureDefinition/ChargeItem"
             ]
           }
         ],
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.lineItem.priceComponent",
+        "path": "Invoice.lineItem.priceComponent",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.lineItem.priceComponent:BruttoBetrag",
+        "path": "Invoice.lineItem.priceComponent",
+        "sliceName": "BruttoBetrag",
+        "short": "Betrag pro Rechnungsposition",
+        "comment": "Der Betrag pro Rechnungsposition SOLL vorhanden sein.",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.lineItem.priceComponent:BruttoBetrag.type",
+        "path": "Invoice.lineItem.priceComponent.type",
+        "patternCode": "base",
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.lineItem.priceComponent:BruttoBetrag.factor",
+        "path": "Invoice.lineItem.priceComponent.factor",
+        "max": "0"
+      },
+      {
+        "id": "Invoice.lineItem.priceComponent:BruttoBetrag.amount",
+        "path": "Invoice.lineItem.priceComponent.amount",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.lineItem.priceComponent:Steuern",
+        "path": "Invoice.lineItem.priceComponent",
+        "sliceName": "Steuern",
+        "short": "Steuern enthalten im Brutto Betrag",
+        "comment": "Die enthaltenen Steuern SOLLEN vorhanden sein.",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.lineItem.priceComponent:Steuern.type",
+        "path": "Invoice.lineItem.priceComponent.type",
+        "patternCode": "tax",
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.lineItem.priceComponent:Steuern.factor",
+        "path": "Invoice.lineItem.priceComponent.factor",
+        "max": "0"
+      },
+      {
+        "id": "Invoice.lineItem.priceComponent:Steuern.amount",
+        "path": "Invoice.lineItem.priceComponent.amount",
+        "min": 1,
         "mustSupport": true
       },
       {
@@ -926,7 +1011,7 @@
         "mustSupport": true,
         "binding": {
           "strength": "required",
-          "valueSet": "https://gematik.de/fhir/erg/ValueSet/erg-total-price-component-type-vs"
+          "valueSet": "https://gematik.de/fhir/erg/ValueSet/erg-total-price-component-deduction-type-vs"
         }
       },
       {

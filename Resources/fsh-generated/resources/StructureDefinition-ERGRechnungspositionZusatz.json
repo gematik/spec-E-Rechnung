@@ -1,0 +1,48 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ERGRechnungspositionZusatz",
+  "url": "https://gematik.de/fhir/erg/StructureDefinition/ERGRechnungspositionZusatz",
+  "name": "ERGRechnungspositionZusatz",
+  "title": "ERG Rechnungsposition Zusatz Extension",
+  "status": "draft",
+  "description": "In dieser Extension wird der Zusatz zu einer Rechnungsposition im Kontext der eRechnung abgebildet.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "expression": "ChargeItem",
+      "type": "element"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "https://gematik.de/fhir/erg/StructureDefinition/ERGRechnungspositionZusatz"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://gematik.de/fhir/erg/ValueSet/erg-rechnungsposition-zusatz-VS"
+        }
+      }
+    ]
+  }
+}

@@ -1,9 +1,10 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "erg-chargeitem-type",
-  "url": "https://gematik.de/fhir/erg/StructureDefinition/erg-chargeitem-type",
+  "id": "erg-rechnungsposition-type",
+  "url": "https://gematik.de/fhir/erg/StructureDefinition/erg-rechnungsposition-type",
   "version": "1.0.0-CC",
-  "name": "ERGChargeItemType",
+  "name": "ERGRechnungspositionType",
+  "title": "ERG Typ der Rechnungsposition Extension",
   "status": "active",
   "experimental": false,
   "date": "2024-06-20",
@@ -18,6 +19,7 @@
       ]
     }
   ],
+  "description": "In dieser Extension wird der Typ einer Rechnungsposition im Kontext der eRechnung abgebildet.",
   "fhirVersion": "4.0.1",
   "kind": "complex-type",
   "abstract": false,
@@ -40,7 +42,7 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "https://gematik.de/fhir/erg/StructureDefinition/erg-chargeitem-type"
+        "fixedUri": "https://gematik.de/fhir/erg/StructureDefinition/erg-rechnungsposition-type"
       },
       {
         "id": "Extension.value[x]",

@@ -1,8 +1,9 @@
 {
   "resourceType": "ValueSet",
   "status": "active",
-  "name": "ERGChargeItemTypeVS",
+  "name": "ERGRechnungspositionTypeVS",
   "id": "erg-chargeitem-type-VS",
+  "title": "ERG Typ der Rechnungsposition ValueSet",
   "version": "1.0.0-CC",
   "url": "https://gematik.de/fhir/erg/ValueSet/erg-chargeitem-type-VS",
   "experimental": false,

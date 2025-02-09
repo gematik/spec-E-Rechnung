@@ -44,7 +44,7 @@
           {
             "code": "Extension",
             "profile": [
-              "https://gematik.de/fhir/erg/StructureDefinition/erg-chargeitem-type"
+              "https://gematik.de/fhir/erg/StructureDefinition/erg-rechnungsposition-type"
             ]
           }
         ],
@@ -69,16 +69,67 @@
         "mustSupport": true
       },
       {
-        "id": "ChargeItem.extension:unitPriceComponent",
+        "id": "ChargeItem.extension:Zusatz",
         "path": "ChargeItem.extension",
-        "sliceName": "unitPriceComponent",
+        "sliceName": "Zusatz",
+        "short": "Zusatz",
+        "comment": "Der Zusatz SOLL vorhanden sein.",
         "min": 0,
         "max": "1",
         "type": [
           {
             "code": "Extension",
             "profile": [
-              "https://gematik.de/fhir/erg/StructureDefinition/erg-preisdetails-rechnungsposition"
+              "https://gematik.de/fhir/erg/StructureDefinition/ERGRechnungspositionZusatz"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "ChargeItem.extension:Zusatz.value[x]",
+        "path": "ChargeItem.extension.value[x]",
+        "mustSupport": true
+      },
+      {
+        "id": "ChargeItem.extension:Zusatz.value[x].system",
+        "path": "ChargeItem.extension.value[x].system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "ChargeItem.extension:Zusatz.value[x].code",
+        "path": "ChargeItem.extension.value[x].code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "ChargeItem.extension:WegegeldReiseentschädigung",
+        "path": "ChargeItem.extension",
+        "sliceName": "WegegeldReiseentschädigung",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://gematik.de/fhir/erg/StructureDefinition/erg-wegegeld-reiseentschaedigung"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "ChargeItem.extension:GebührenordnungAngaben",
+        "path": "ChargeItem.extension",
+        "sliceName": "GebührenordnungAngaben",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://gematik.de/fhir/erg/StructureDefinition/erg-rechnungsposition-go-angaben"
             ]
           }
         ],
@@ -87,6 +138,7 @@
       {
         "id": "ChargeItem.status",
         "path": "ChargeItem.status",
+        "short": "Der Status der Rechnungsposition MUSS vorhanden sein. Im Normalfall ist 'billable' zu nutzen.",
         "mustSupport": true
       },
       {
@@ -175,12 +227,22 @@
       {
         "id": "ChargeItem.subject",
         "path": "ChargeItem.subject",
+        "short": "Behandelte Person",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://gematik.de/fhir/erg/StructureDefinition/erg-versicherteperson",
+              "http://hl7.org/fhir/StructureDefinition/Patient"
+            ]
+          }
+        ],
         "mustSupport": true
       },
       {
         "id": "ChargeItem.subject.reference",
         "path": "ChargeItem.subject.reference",
-        "comment": "Die referenzierte Instanz sollte valide zum Profil ERGersichertePerson sein",
+        "min": 1,
         "mustSupport": true
       },
       {
@@ -272,18 +334,62 @@
       {
         "id": "ChargeItem.quantity",
         "path": "ChargeItem.quantity",
+        "short": "Anzahl oder verbrauchte Menge",
+        "comment": "Ist die Rechnungsposition vom Typ 'Auslagen/Sachkosten' SOLL hier die Anzahl des unter product[x] angegebenen Medikament, Wirkstoff oder Material vorhanden sein.\n  Ist die Rechnungsposition vom Typ 'GOÄ', 'GOZ' oder 'BEMA' SOLL hier die Anzahl vorhanden sein.",
+        "mustSupport": true
+      },
+      {
+        "id": "ChargeItem.quantity.value",
+        "path": "ChargeItem.quantity.value",
+        "short": "Menge",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "ChargeItem.factorOverride",
-        "path": "ChargeItem.factorOverride",
+        "id": "ChargeItem.quantity.unit",
+        "path": "ChargeItem.quantity.unit",
+        "short": "Einheit",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "ChargeItem.priceOverride",
-        "path": "ChargeItem.priceOverride",
+        "id": "ChargeItem.quantity.system",
+        "path": "ChargeItem.quantity.system",
+        "min": 1,
+        "patternUri": "http://unitsofmeasure.org",
+        "mustSupport": true
+      },
+      {
+        "id": "ChargeItem.quantity.code",
+        "path": "ChargeItem.quantity.code",
+        "short": "Einheit als UCUM-Code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "ChargeItem.bodysite",
+        "path": "ChargeItem.bodysite",
+        "mustSupport": true
+      },
+      {
+        "id": "ChargeItem.bodysite.extension:ZahnRegion",
+        "path": "ChargeItem.bodysite.extension",
+        "sliceName": "ZahnRegion",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://gematik.de/fhir/erg/StructureDefinition/erg-zahnregion"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "ChargeItem.bodysite.extension:ZahnRegion.value[x]",
+        "path": "ChargeItem.bodysite.extension.value[x]",
         "min": 1,
         "mustSupport": true
       },
@@ -297,6 +403,55 @@
         "path": "ChargeItem.reason.text",
         "short": "Begründung in Abhängigkeit zur Gebührenziffer",
         "comment": "Die Begründung in Abhängigkeit zur Gebührenziffer SOLL vorhanden sein.\n  Beispiele sind:\n  - obligatorisch bei analoger Rechnungsposition\n  - Angabe zu den behandelten Organen\n  - Überschreitung der Regelsätze",
+        "mustSupport": true
+      },
+      {
+        "id": "ChargeItem.product[x]",
+        "path": "ChargeItem.product[x]",
+        "comment": "Bei Auslagen oder Sachkosten SOLL hier die PZN oder der Name des Medikamentes, Wirkstoffs oder Material angegeben werden.",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "ChargeItem.product[x].coding",
+        "path": "ChargeItem.product[x].coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        }
+      },
+      {
+        "id": "ChargeItem.product[x].coding:PZN",
+        "path": "ChargeItem.product[x].coding",
+        "sliceName": "PZN",
+        "short": "Pharmazentralnummer",
+        "comment": "Die Pharmazentralnummer (PZN) SOLL vorhanden sein.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Coding",
+            "profile": [
+              "http://fhir.de/StructureDefinition/CodingPZN"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "ChargeItem.product[x].text",
+        "path": "ChargeItem.product[x].text",
+        "short": "Material / Wirkstoffname",
+        "comment": "Das Material oder der Wirkstoffname SOLLEN hier vorhanden sein.",
         "mustSupport": true
       }
     ]

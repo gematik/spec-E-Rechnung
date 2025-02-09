@@ -1,0 +1,15 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "ERGRechnungspositionFaktorIdAuspraegungenVS",
+  "id": "erg-rechnungsposition-faktor-id-auspraegungen-VS",
+  "title": "ERG Rechnungsposition Ausprägungen der FaktorID ValueSet",
+  "url": "https://gematik.de/fhir/erg/ValueSet/erg-rechnungsposition-faktor-id-auspraegungen-VS",
+  "compose": {
+    "include": [
+      {
+        "system": "https://gematik.de/fhir/erg/CodeSystem/erg-rechnungsposition-faktor-id-auspraegungen-CS"
+      }
+    ]
+  }
+}

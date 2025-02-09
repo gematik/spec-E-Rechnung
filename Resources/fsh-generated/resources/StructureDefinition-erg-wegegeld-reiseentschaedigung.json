@@ -1,0 +1,343 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "erg-wegegeld-reiseentschaedigung",
+  "url": "https://gematik.de/fhir/erg/StructureDefinition/erg-wegegeld-reiseentschaedigung",
+  "name": "ERGWegegeldReiseentschaedigung",
+  "title": "ERG Wegegeld/Reiseentschädigung Extension",
+  "status": "draft",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "expression": "ChargeItem",
+      "type": "element"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension.extension:Wegegeld",
+        "path": "Extension.extension",
+        "sliceName": "Wegegeld",
+        "short": "Wegegeld bis 25km",
+        "comment": "Das Wegegeld bis 25km SOLL vorhanden sein.",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.extension:Wegegeld.extension:Entfernung",
+        "path": "Extension.extension.extension",
+        "sliceName": "Entfernung",
+        "short": "Entfernung in km",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.extension:Wegegeld.extension:Entfernung.extension",
+        "path": "Extension.extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:Wegegeld.extension:Entfernung.url",
+        "path": "Extension.extension.extension.url",
+        "fixedUri": "Entfernung"
+      },
+      {
+        "id": "Extension.extension:Wegegeld.extension:Entfernung.value[x]",
+        "path": "Extension.extension.extension.value[x]",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.extension:Wegegeld.extension:Entfernung.value[x].value",
+        "path": "Extension.extension.extension.value[x].value",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.extension:Wegegeld.extension:Entfernung.value[x].unit",
+        "path": "Extension.extension.extension.value[x].unit",
+        "min": 1,
+        "patternString": "km",
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.extension:Wegegeld.extension:Entfernung.value[x].system",
+        "path": "Extension.extension.extension.value[x].system",
+        "min": 1,
+        "patternUri": "http://unitsofmeasure.org",
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.extension:Wegegeld.extension:Entfernung.value[x].code",
+        "path": "Extension.extension.extension.value[x].code",
+        "min": 1,
+        "patternCode": "km",
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.extension:Wegegeld.extension:Nacht",
+        "path": "Extension.extension.extension",
+        "sliceName": "Nacht",
+        "short": "Nacht",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.extension:Wegegeld.extension:Nacht.extension",
+        "path": "Extension.extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:Wegegeld.extension:Nacht.url",
+        "path": "Extension.extension.extension.url",
+        "fixedUri": "Nacht"
+      },
+      {
+        "id": "Extension.extension:Wegegeld.extension:Nacht.value[x]",
+        "path": "Extension.extension.extension.value[x]",
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.extension:Wegegeld.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "Wegegeld"
+      },
+      {
+        "id": "Extension.extension:Wegegeld.value[x]",
+        "path": "Extension.extension.value[x]",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:Reiseentschädigung",
+        "path": "Extension.extension",
+        "sliceName": "Reiseentschädigung",
+        "short": "Reiseentschädigung ab 25 km",
+        "comment": "Die Reiseentschädigung ab 25 km SOLL vorhanden sein.",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.extension:Reiseentschädigung.extension:Abwesenheit",
+        "path": "Extension.extension.extension",
+        "sliceName": "Abwesenheit",
+        "short": "Abwesenheit in Stunden",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.extension:Reiseentschädigung.extension:Abwesenheit.extension",
+        "path": "Extension.extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:Reiseentschädigung.extension:Abwesenheit.url",
+        "path": "Extension.extension.extension.url",
+        "fixedUri": "Abwesenheit"
+      },
+      {
+        "id": "Extension.extension:Reiseentschädigung.extension:Abwesenheit.value[x]",
+        "path": "Extension.extension.extension.value[x]",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.extension:Reiseentschädigung.extension:Abwesenheit.value[x].value",
+        "path": "Extension.extension.extension.value[x].value",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.extension:Reiseentschädigung.extension:Abwesenheit.value[x].unit",
+        "path": "Extension.extension.extension.value[x].unit",
+        "min": 1,
+        "patternString": "h",
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.extension:Reiseentschädigung.extension:Abwesenheit.value[x].system",
+        "path": "Extension.extension.extension.value[x].system",
+        "min": 1,
+        "patternUri": "http://unitsofmeasure.org",
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.extension:Reiseentschädigung.extension:Abwesenheit.value[x].code",
+        "path": "Extension.extension.extension.value[x].code",
+        "min": 1,
+        "patternCode": "h",
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.extension:Reiseentschädigung.extension:Entfernung",
+        "path": "Extension.extension.extension",
+        "sliceName": "Entfernung",
+        "short": "Entfernung in km",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.extension:Reiseentschädigung.extension:Entfernung.extension",
+        "path": "Extension.extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:Reiseentschädigung.extension:Entfernung.url",
+        "path": "Extension.extension.extension.url",
+        "fixedUri": "Entfernung"
+      },
+      {
+        "id": "Extension.extension:Reiseentschädigung.extension:Entfernung.value[x]",
+        "path": "Extension.extension.extension.value[x]",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.extension:Reiseentschädigung.extension:Entfernung.value[x].value",
+        "path": "Extension.extension.extension.value[x].value",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.extension:Reiseentschädigung.extension:Entfernung.value[x].unit",
+        "path": "Extension.extension.extension.value[x].unit",
+        "min": 1,
+        "patternString": "km",
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.extension:Reiseentschädigung.extension:Entfernung.value[x].system",
+        "path": "Extension.extension.extension.value[x].system",
+        "min": 1,
+        "patternUri": "http://unitsofmeasure.org",
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.extension:Reiseentschädigung.extension:Entfernung.value[x].code",
+        "path": "Extension.extension.extension.value[x].code",
+        "min": 1,
+        "patternCode": "km",
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.extension:Reiseentschädigung.extension:Übernachtung",
+        "path": "Extension.extension.extension",
+        "sliceName": "Übernachtung",
+        "short": "Kosten der Übernachtung",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.extension:Reiseentschädigung.extension:Übernachtung.extension",
+        "path": "Extension.extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:Reiseentschädigung.extension:Übernachtung.url",
+        "path": "Extension.extension.extension.url",
+        "fixedUri": "Übernachtung"
+      },
+      {
+        "id": "Extension.extension:Reiseentschädigung.extension:Übernachtung.value[x]",
+        "path": "Extension.extension.extension.value[x]",
+        "type": [
+          {
+            "code": "Money"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.extension:Reiseentschädigung.extension:Übernachtung.value[x].value",
+        "path": "Extension.extension.extension.value[x].value",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.extension:Reiseentschädigung.extension:Übernachtung.value[x].currency",
+        "path": "Extension.extension.extension.value[x].currency",
+        "min": 1,
+        "patternCode": "EUR",
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.extension:Reiseentschädigung.extension:Verkehrsmittel",
+        "path": "Extension.extension.extension",
+        "sliceName": "Verkehrsmittel",
+        "short": "Verkehrsmittel",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.extension:Reiseentschädigung.extension:Verkehrsmittel.extension",
+        "path": "Extension.extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:Reiseentschädigung.extension:Verkehrsmittel.url",
+        "path": "Extension.extension.extension.url",
+        "fixedUri": "Verkehrsmittel"
+      },
+      {
+        "id": "Extension.extension:Reiseentschädigung.extension:Verkehrsmittel.value[x]",
+        "path": "Extension.extension.extension.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.extension:Reiseentschädigung.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "Reiseentschädigung"
+      },
+      {
+        "id": "Extension.extension:Reiseentschädigung.value[x]",
+        "path": "Extension.extension.value[x]",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "https://gematik.de/fhir/erg/StructureDefinition/erg-wegegeld-reiseentschaedigung"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "max": "0"
+      }
+    ]
+  }
+}

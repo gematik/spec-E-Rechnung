@@ -2,8 +2,9 @@
   "resourceType": "CodeSystem",
   "status": "active",
   "content": "complete",
-  "name": "ERGChargeItemTypeCS",
+  "name": "ERGRechnungspositionTypeCS",
   "id": "erg-chargeitem-type-CS",
+  "title": "ERG Typ der Rechnungsposition CodeSystem",
   "version": "1.0.0-CC",
   "url": "https://gematik.de/fhir/erg/CodeSystem/erg-chargeitem-type-CS",
   "concept": [
