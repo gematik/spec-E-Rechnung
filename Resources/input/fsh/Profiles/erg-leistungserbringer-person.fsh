@@ -99,7 +99,7 @@ Id: erg-leistungserbringer-person
     * ^short = "Länderkennzeichen"
     * ^comment = "Das Länderkennzeichen KANN vorhanden sein."
 * address[Postfach] only $adresse-de
-  //* obeys address-cnt-2or3-char TODO-102
+  * obeys address-cnt-2or3-char
   * ^short = "Postfach"
   * ^comment = "Das Postfach SOLL vorhanden sein."
   * ^patternAddress.type = #postal

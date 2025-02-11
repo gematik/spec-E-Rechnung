@@ -39,4 +39,6 @@ Context: ChargeItem
     * value[x] only Money
     * valueMoney.currency = #EUR
   * extension[Verkehrsmittel]
-    * value[x] only string
+    * value[x] only string //TODO SCT ValueSet, alles unter Motorvehicle
+
+//46160005? Fehlt zu Fuß und andere unmotorisierte Verkehrsmittel

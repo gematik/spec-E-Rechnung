@@ -77,21 +77,17 @@ Id: erg-rechnungsposition
     Im Falle einer GOÄ, GOÄ-neu oder GOZ Rechnungsposition ist die Punktzahl BEMA nicht gefordert."
     * valueDecimal MS
   * extension[Faktor] MS
-    * ^short = "Faktor"
-    * ^comment = "Im Falle einer GOÄ, GOÄ-neu oder GOZ Rechnungsposition SOLL der Faktor vorhanden sein."
-    * valueDecimal MS
-  * extension[FaktorId] MS
-    * ^comment = "Im Falle einer GOÄ-neu Rechnungsposition SOLL die Faktor ID vorhanden sein.
-    Im Falle einer GOÄ Rechnungsposition KANN die Faktor ID vorhanden sein.
-    Im Falle einer GOZ oder BEMA Rechnungsposition ist die Faktor ID nicht gefordert."
-    * extension[Id] MS
-      * ^short = "Faktor ID"
-      * ^comment = "Die Faktor ID SOLL vorhanden sein."
+    * extension[Value]
+      * ^short = "Faktor"
+      * ^comment = "Im Falle einer GOÄ, GOÄ-neu oder GOZ Rechnungsposition SOLL der Faktor vorhanden sein."
+      * valueDecimal MS
     * extension[Ausprägung] MS
-      * ^short = "Faktor ID Ausprägung"
-      * ^comment = "Die Faktor ID Ausprägung SOLL vorhanden sein."
+      * ^short = "Faktor Ausprägung"
+      * ^comment = "Im Falle einer GOÄ-neu Rechnungsposition SOLL die Faktor Ausprägung vorhanden sein.
+      Im Falle einer GOÄ Rechnungsposition KANN die Faktor Ausprägung vorhanden sein.
+      Im Falle einer GOZ oder BEMA Rechnungsposition ist die Faktor Ausprägung nicht gefordert."
       * valueCoding MS
-  * extension[Minderung§6GOÄ] MS
+  * extension[MinderungP6GOÄ] MS
     * ^short = "Minderungen nach §6a GOÄ in Prozent"
     * ^comment = "Im Falle einer GOÄ oder GOÄ-neu Rechnungsposition SOLL die Minderungen nach §6a GOÄ in Prozent vorhanden sein.
     Im Falle einer GOZ oder BEMA Rechnungsposition ist das Element nicht gefordert."
@@ -190,8 +186,9 @@ Id: erg-rechnungsposition
   * code 1.. MS
     * ^short = "Einheit als UCUM-Code"
 * status MS
-  * ^short = "Der Status der Rechnungsposition MUSS vorhanden sein. Im Normalfall ist 'billable' zu nutzen." //TODO-102 Passt der Status?
+* status = #billable
+  * ^short = "Der Status der Rechnungsposition MUSS vorhanden sein."
 * subject MS
-* subject only Reference(ERGVersichertePerson or Patient)
+* subject only Reference(ERGPerson or Patient)
   * ^short = "Behandelte Person"
   * reference 1.. MS

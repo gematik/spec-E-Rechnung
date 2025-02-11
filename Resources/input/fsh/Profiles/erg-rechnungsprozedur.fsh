@@ -3,7 +3,8 @@ Parent: Procedure
 Title: "ERG Rechnungsprozedur"
 Id: erg-rechnungsprozedur
 * insert Meta
-* status MS //TODO-102 Wie gehen wir generell mit dem Status um? Fix Wert?
+* status MS
+* status = #completed
 * code MS
 * code.coding MS
 * code.coding ^slicing.discriminator.type = #pattern

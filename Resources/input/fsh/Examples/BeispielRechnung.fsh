@@ -1,4 +1,4 @@
-Instance: R2444Rechnung
+/*Instance: R2444Rechnung
 InstanceOf: Invoice
 Usage: #example
 * extension[+]
@@ -182,4 +182,4 @@ Usage: #example
   * resource = R2444PKVersichertePerson
 * entry[+]
   * fullUrl = "Practitioner/R2444Practitioner"
-  * resource = R2444Practitioner
+  * resource = R2444Practitioner*/

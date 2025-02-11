@@ -37,10 +37,9 @@ Id: erg-institution
   * ^short = "Betriebsstättennummer"
   * ^comment = "Die Betriebsstättennummer für vertragsärztliche Praxen SOLL vorhanden sein."
 * identifier[USt-ID-Nr]
-  * ^patternIdentifier.type = $v2-0203#TAX //TODO Anfrage beim TC Term läuft
+  * ^patternIdentifier.type.text = "UmsatzsteuerId"
   * type 1.. MS
-  * type = $v2-0203#TAX //TODO Anfrage beim TC Term läuft
-  * system ^comment = "Es gibt kein FHIR-NamingSystem für die USt.-ID von offizieller Seite. Aus dem Grund ist System nicht mit MS gekennzeichnet und SOLL nicht befüllt sein." //TODO Anfrage beim TC Term läuft
+  * system ^comment = "Es gibt kein FHIR-NamingSystem für die USt.-ID von offizieller Seite. Aus dem Grund ist System nicht mit MS gekennzeichnet und SOLL nicht befüllt sein."
   * value 1.. MS
   * ^short = "Umsatzsteuer-Identifikationsnummer"
   * ^comment = "Die Umsatzsteuer-Identifikationsnummer KANN vorhanden sein.
@@ -105,7 +104,7 @@ Id: erg-institution
     * ^short = "Länderkennzeichen"
     * ^comment = "Das Länderkennzeichen KANN vorhanden sein."
 * address[Postfach] only $adresse-de
-  //* obeys address-cnt-2or3-char TODO-102 Sollen wir das beibehalten?
+  * obeys address-cnt-2or3-char
   * ^short = "Postfach"
   * ^comment = "Das Postfach SOLL vorhanden sein."
   * ^patternAddress.type = #postal

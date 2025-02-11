@@ -11,7 +11,7 @@ Description: """Diese Extension erlaubt es einer Invoice Diagnosen oder Prozedur
     Referenz 1..*
 * extension[Use].value[x] only Coding
 * extension[Use].valueCoding 0..1
-* extension[Use].valueCoding from http://fhir.de/ValueSet/AbrechnungsDiagnoseProzedur (extensible)
+* extension[Use].valueCoding from ERGAbrechnungsDiagnoseUseVS (required)
 * extension[Referenz].value[x] only Reference(Condition or Procedure)
 
 Extension: ERGAbrechnungsDiagnoseProzedurFreitext

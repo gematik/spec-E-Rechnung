@@ -3,9 +3,8 @@ Title: "ERG Rechnung"
 Parent: Invoice
 Id: erg-rechnung
 * insert Meta
-//TODO-102 @Alexander Z, sollen wir ERGPDFRepraesentationRechnung drin lassen? Im Workshop ist das gar nicht auf der Liste für die Inhalte gelandet
+//TODO-102 @Alexander Z, sollen wir ERGPDFRepraesentationRechnung drin lassen? Im Workshop ist das gar nicht auf der Liste für die Inhalte gelandet -> raus
 * extension contains 
-  ERGPDFRepraesentationRechnung named pdf-repraesentation-rechnung 0..1 MS and 
   http://hl7.org/fhir/5.0/StructureDefinition/extension-Invoice.period[x] named Behandlungszeitraum 0..1 MS and
   ERGAbrechnungsDiagnoseProzedur named AbrechnungsDiagnoseProzedur 0..* MS and
   ERGAbrechnungsDiagnoseProzedurFreitext named AbrechnungsDiagnoseProzedurFreitext ..1 MS and
@@ -129,25 +128,24 @@ Id: erg-rechnung
 * subject only Reference(ERGPerson or Patient)
   * reference 1..1 MS
   * ^short = "Behandelte Person"
-  * display 1..1 MS //TODO-102 Hatten wir in der ersten Version drin, sollen wir den entfernen jetzt?
-    * ^short = "Name der behandelten Person"
-    * ^comment = "Der Name der behandelten Person SOLL angegeben werden und kann vom Rechnungsempfänger abweichen, z.B. wenn Eltern Rechnungen für ihre Kinder erhalten."
+  //TODO Comment
+  * ^comment = "Der Name der behandelten Person SOLL angegeben werden und kann vom Rechnungsempfänger abweichen, z.B. wenn Eltern Rechnungen für ihre Kinder erhalten."
 * recipient 1.. MS
   * ^short = "Rechnungsempfänger"
-  * ^comment = "Das System des Leistungserbringers referenziert hier üblicherweise 
-  auf die lokale Instanz des Patienten um die Rechnung einer Patientenakte zuzuordnen. 
-  Der Fachdienst substitutiert den Link mit der Referenz auf das Postfach des Patienten 
-  bei der Extraktion der Invoice aus dem Bundle. Die Angabe der Versichertennummer dient 
-  der Plausibilisierung. Die KV-Nummer in der Instanz des Bundles muss daher mit der 
-  KV-Nummer übereinstimmen, die im Fachdienst für das Postfach des Rechnungsempfängers hinterlegt ist. " //TODO-102 Text aus erster Version
 * recipient only Reference(ERGPerson or Patient)
-  * reference MS
+  * reference 1.. MS
   * identifier 1.. MS
-  * identifier only IdentifierKvid10 //TODO hatten wir in der ersten Version drin, sollen wir das so lassen?
+  * identifier only IdentifierKvid10 //TODO Info an Klaus
+    * ^comment = "Das System des Leistungserbringers referenziert hier üblicherweise 
+    auf die lokale Instanz des Patienten um die Rechnung einer Patientenakte zuzuordnen. 
+    Der Fachdienst substitutiert den Link mit der Referenz auf das Postfach des Patienten 
+    bei der Extraktion der Invoice aus dem Bundle. Die Angabe der Versichertennummer dient 
+    der Plausibilisierung. Die KV-Nummer in der Instanz des Bundles muss daher mit der 
+    KV-Nummer übereinstimmen, die im Fachdienst für das Postfach des Rechnungsempfängers hinterlegt ist." //TODO-102 Text aus erster Version
   * display 1.. MS
 * status MS
   * ^short = "Status der Rechnung"
-  * ^comment = "Der Status MUSS vorhanden sein. Im Normalfall ist der Code 'issued' anzugeben."
+  * ^comment = "Der Status MUSS vorhanden sein. Im Normalfall ist der Code 'issued' anzugeben." //TODO Satz zu Draft
 * issuer 1.. MS
 * issuer only Reference(ERGInstitution or Organization)
   * ^short = "Rechnungsersteller"
@@ -265,7 +263,7 @@ Id: erg-rechnung
       * value MS
       * system MS
       * code MS
-* lineItem MS //TODO-102 Sequenz?
+* lineItem MS //TODO-102 Sequenz? -> MS und KANN
   * ^short = "Rechnungspositionen"
 * lineItem.chargeItem[x] only Reference
 * lineItem.chargeItemReference MS
@@ -294,12 +292,6 @@ Id: erg-rechnung
   * type = #tax
   * factor 0..0
   * amount 1.. MS
-
-Extension: ERGPDFRepraesentationRechnung
-Id: erg-pdf-repraesentation-rechnung
-Title: "ERG PDF-Repräsentation Rechnung"
-* insert Meta
-* value[x] only Reference(Binary)
 
 Extension: ERGZahlungsziel
 Id: erg-zahlungsziel
