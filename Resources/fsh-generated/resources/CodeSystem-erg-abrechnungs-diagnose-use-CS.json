@@ -1,0 +1,30 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "ERGAbrechnungsDiagnoseUseCS",
+  "id": "erg-abrechnungs-diagnose-use-CS",
+  "title": "ERG Abrechnungsdiagnose Use CodeSystem",
+  "version": "1.0.0-CC",
+  "url": "https://gematik.de/fhir/erg/CodeSystem/erg-abrechnungs-diagnose-use-CS",
+  "concept": [
+    {
+      "code": "main-diagnosis",
+      "display": "Hauptdiagnose"
+    }
+  ],
+  "experimental": false,
+  "date": "2024-06-20",
+  "publisher": "gematik GmbH",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://gematik.de/"
+        }
+      ]
+    }
+  ],
+  "count": 1
+}

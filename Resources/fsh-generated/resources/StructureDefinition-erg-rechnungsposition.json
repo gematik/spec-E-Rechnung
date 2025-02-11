@@ -352,76 +352,66 @@
         "id": "ChargeItem.extension:GebührenordnungAngaben.extension:Faktor",
         "path": "ChargeItem.extension.extension",
         "sliceName": "Faktor",
+        "mustSupport": true
+      },
+      {
+        "id": "ChargeItem.extension:GebührenordnungAngaben.extension:Faktor.extension:Value",
+        "path": "ChargeItem.extension.extension.extension",
+        "sliceName": "Value",
         "short": "Faktor",
-        "comment": "Im Falle einer GOÄ, GOÄ-neu oder GOZ Rechnungsposition SOLL der Faktor vorhanden sein.",
-        "mustSupport": true
+        "comment": "Im Falle einer GOÄ, GOÄ-neu oder GOZ Rechnungsposition SOLL der Faktor vorhanden sein."
       },
       {
-        "id": "ChargeItem.extension:GebührenordnungAngaben.extension:Faktor.value[x]",
-        "path": "ChargeItem.extension.extension.value[x]",
-        "mustSupport": true
-      },
-      {
-        "id": "ChargeItem.extension:GebührenordnungAngaben.extension:FaktorId",
-        "path": "ChargeItem.extension.extension",
-        "sliceName": "FaktorId",
-        "comment": "Im Falle einer GOÄ-neu Rechnungsposition SOLL die Faktor ID vorhanden sein.\n    Im Falle einer GOÄ Rechnungsposition KANN die Faktor ID vorhanden sein.\n    Im Falle einer GOZ oder BEMA Rechnungsposition ist die Faktor ID nicht gefordert.",
-        "mustSupport": true
-      },
-      {
-        "id": "ChargeItem.extension:GebührenordnungAngaben.extension:FaktorId.extension:Id",
-        "path": "ChargeItem.extension.extension.extension",
-        "sliceName": "Id",
-        "short": "Faktor ID",
-        "comment": "Die Faktor ID SOLL vorhanden sein.",
-        "mustSupport": true
-      },
-      {
-        "id": "ChargeItem.extension:GebührenordnungAngaben.extension:FaktorId.extension:Ausprägung",
-        "path": "ChargeItem.extension.extension.extension",
-        "sliceName": "Ausprägung",
-        "short": "Faktor ID Ausprägung",
-        "comment": "Die Faktor ID Ausprägung SOLL vorhanden sein.",
-        "mustSupport": true
-      },
-      {
-        "id": "ChargeItem.extension:GebührenordnungAngaben.extension:FaktorId.extension:Ausprägung.value[x]",
+        "id": "ChargeItem.extension:GebührenordnungAngaben.extension:Faktor.extension:Value.value[x]",
         "path": "ChargeItem.extension.extension.extension.value[x]",
         "mustSupport": true
       },
       {
-        "id": "ChargeItem.extension:GebührenordnungAngaben.extension:Minderung§6GOÄ",
+        "id": "ChargeItem.extension:GebührenordnungAngaben.extension:Faktor.extension:Ausprägung",
+        "path": "ChargeItem.extension.extension.extension",
+        "sliceName": "Ausprägung",
+        "short": "Faktor Ausprägung",
+        "comment": "Im Falle einer GOÄ-neu Rechnungsposition SOLL die Faktor Ausprägung vorhanden sein.\n      Im Falle einer GOÄ Rechnungsposition KANN die Faktor Ausprägung vorhanden sein.\n      Im Falle einer GOZ oder BEMA Rechnungsposition ist die Faktor Ausprägung nicht gefordert.",
+        "mustSupport": true
+      },
+      {
+        "id": "ChargeItem.extension:GebührenordnungAngaben.extension:Faktor.extension:Ausprägung.value[x]",
+        "path": "ChargeItem.extension.extension.extension.value[x]",
+        "mustSupport": true
+      },
+      {
+        "id": "ChargeItem.extension:GebührenordnungAngaben.extension:MinderungP6GOÄ",
         "path": "ChargeItem.extension.extension",
-        "sliceName": "Minderung§6GOÄ",
+        "sliceName": "MinderungP6GOÄ",
         "short": "Minderungen nach §6a GOÄ in Prozent",
         "comment": "Im Falle einer GOÄ oder GOÄ-neu Rechnungsposition SOLL die Minderungen nach §6a GOÄ in Prozent vorhanden sein.\n    Im Falle einer GOZ oder BEMA Rechnungsposition ist das Element nicht gefordert.",
         "mustSupport": true
       },
       {
-        "id": "ChargeItem.extension:GebührenordnungAngaben.extension:Minderung§6GOÄ.value[x]",
+        "id": "ChargeItem.extension:GebührenordnungAngaben.extension:MinderungP6GOÄ.value[x]",
         "path": "ChargeItem.extension.extension.value[x]",
         "mustSupport": true
       },
       {
-        "id": "ChargeItem.extension:GebührenordnungAngaben.extension:Minderung§6GOÄ.value[x].value",
+        "id": "ChargeItem.extension:GebührenordnungAngaben.extension:MinderungP6GOÄ.value[x].value",
         "path": "ChargeItem.extension.extension.value[x].value",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "ChargeItem.extension:GebührenordnungAngaben.extension:Minderung§6GOÄ.value[x].unit",
+        "id": "ChargeItem.extension:GebührenordnungAngaben.extension:MinderungP6GOÄ.value[x].unit",
         "path": "ChargeItem.extension.extension.value[x].unit",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "ChargeItem.extension:GebührenordnungAngaben.extension:Minderung§6GOÄ.value[x].system",
+        "id": "ChargeItem.extension:GebührenordnungAngaben.extension:MinderungP6GOÄ.value[x].system",
         "path": "ChargeItem.extension.extension.value[x].system",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "ChargeItem.extension:GebührenordnungAngaben.extension:Minderung§6GOÄ.value[x].code",
+        "id": "ChargeItem.extension:GebührenordnungAngaben.extension:MinderungP6GOÄ.value[x].code",
         "path": "ChargeItem.extension.extension.value[x].code",
         "min": 1,
         "mustSupport": true
@@ -429,7 +419,8 @@
       {
         "id": "ChargeItem.status",
         "path": "ChargeItem.status",
-        "short": "Der Status der Rechnungsposition MUSS vorhanden sein. Im Normalfall ist 'billable' zu nutzen.",
+        "short": "Der Status der Rechnungsposition MUSS vorhanden sein.",
+        "patternCode": "billable",
         "mustSupport": true
       },
       {
@@ -523,7 +514,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "https://gematik.de/fhir/erg/StructureDefinition/erg-versicherteperson",
+              "https://gematik.de/fhir/erg/StructureDefinition/erg-person",
               "http://hl7.org/fhir/StructureDefinition/Patient"
             ]
           }

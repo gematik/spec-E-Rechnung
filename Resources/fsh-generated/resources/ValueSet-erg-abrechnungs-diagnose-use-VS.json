@@ -1,0 +1,29 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "ERGAbrechnungsDiagnoseUseVS",
+  "id": "erg-abrechnungs-diagnose-use-VS",
+  "title": "ERG Abrechnungsdiagnose Use ValueSet",
+  "version": "1.0.0-CC",
+  "url": "https://gematik.de/fhir/erg/ValueSet/erg-abrechnungs-diagnose-use-VS",
+  "experimental": false,
+  "date": "2024-06-20",
+  "publisher": "gematik GmbH",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://gematik.de/"
+        }
+      ]
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "https://gematik.de/fhir/erg/CodeSystem/erg-abrechnungs-diagnose-use-CS"
+      }
+    ]
+  }
+}

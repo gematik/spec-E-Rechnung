@@ -30,6 +30,7 @@
       {
         "id": "Procedure.status",
         "path": "Procedure.status",
+        "patternCode": "completed",
         "mustSupport": true
       },
       {

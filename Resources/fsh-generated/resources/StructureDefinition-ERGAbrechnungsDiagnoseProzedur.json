@@ -70,8 +70,8 @@
           }
         ],
         "binding": {
-          "strength": "extensible",
-          "valueSet": "http://fhir.de/ValueSet/AbrechnungsDiagnoseProzedur"
+          "strength": "required",
+          "valueSet": "https://gematik.de/fhir/erg/ValueSet/erg-abrechnungs-diagnose-use-VS"
         }
       },
       {
