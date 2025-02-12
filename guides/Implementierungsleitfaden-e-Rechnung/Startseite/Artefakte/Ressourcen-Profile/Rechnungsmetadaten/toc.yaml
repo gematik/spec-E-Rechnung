@@ -5,8 +5,8 @@
 - name: Extensions
   filename: Extensions
 - name: ERGDokumentenmetadaten (DocumentReference).
-  filename: Datenobjekt_erg-dokumentenmetadaten
+  filename: Datenobjekt_dokumentenmetadaten
 - name: ERGNutzungsprotokoll (AuditEvent).
-  filename: Datenobjekt_erg-nutzungsprotokoll
+  filename: Datenobjekt_nutzungsprotokoll
 - name: ERGRechnungsdokument (Binary).
-  filename: Datenobjekt_erg-rechnungsdokument
+  filename: Datenobjekt_rechnungsdokument
