@@ -30,6 +30,8 @@
       {
         "id": "Procedure.status",
         "path": "Procedure.status",
+        "short": "Status der Prozedur",
+        "comment": "Der Status der Prozedur MUSS vorhanden sein.",
         "patternCode": "completed",
         "mustSupport": true
       },
@@ -76,6 +78,8 @@
       {
         "id": "Procedure.code.coding:OPS.system",
         "path": "Procedure.code.coding.system",
+        "short": "System des OPS Code",
+        "comment": "Das System des OPS Code MUSS vorhanden sein.",
         "mustSupport": true
       },
       {
@@ -95,11 +99,13 @@
       {
         "id": "Procedure.subject",
         "path": "Procedure.subject",
+        "short": "Referenz auf die behandelte Person",
+        "comment": "Die Procedure SOLL auf eine zugehörige behandelte Person referenzieren.",
         "type": [
           {
             "code": "Reference",
             "targetProfile": [
-              "https://gematik.de/fhir/erg/StructureDefinition/erg-person",
+              "https://gematik.de/fhir/erg/StructureDefinition/erg-patient",
               "http://hl7.org/fhir/StructureDefinition/Patient"
             ]
           }
@@ -109,7 +115,6 @@
       {
         "id": "Procedure.subject.reference",
         "path": "Procedure.subject.reference",
-        "comment": "Die Procedure SOLL auf eine zugehörige Behandelte Person referenzieren.",
         "min": 1,
         "mustSupport": true
       },
@@ -126,6 +131,7 @@
           "ordered": false,
           "rules": "open"
         },
+        "short": "OPS Behandlungsdatum oder -zeitraum",
         "comment": "Entweder das OPS Behandlungsdatum, oder der -zeitraum SOLL vorhanden sein.",
         "type": [
           {

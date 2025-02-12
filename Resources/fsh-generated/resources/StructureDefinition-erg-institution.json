@@ -78,6 +78,8 @@
       {
         "id": "Organization.identifier:Telematik-ID.system",
         "path": "Organization.identifier.system",
+        "short": "System der Telematik-ID",
+        "comment": "Das System der Telematik-ID MUSS vorhanden sein.",
         "mustSupport": true
       },
       {
@@ -123,6 +125,8 @@
       {
         "id": "Organization.identifier:IKNR.system",
         "path": "Organization.identifier.system",
+        "short": "System der IK-Nummer",
+        "comment": "Das System der IK-Nummer MUSS vorhanden sein.",
         "mustSupport": true
       },
       {
@@ -168,6 +172,8 @@
       {
         "id": "Organization.identifier:BSNR.system",
         "path": "Organization.identifier.system",
+        "short": "System der BSNR",
+        "comment": "Das System der BSNR MUSS vorhanden sein.",
         "mustSupport": true
       },
       {

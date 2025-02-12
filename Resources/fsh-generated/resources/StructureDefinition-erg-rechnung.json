@@ -551,7 +551,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "https://gematik.de/fhir/erg/StructureDefinition/erg-person",
+              "https://gematik.de/fhir/erg/StructureDefinition/erg-patient",
               "http://hl7.org/fhir/StructureDefinition/Patient"
             ]
           }
@@ -573,7 +573,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "https://gematik.de/fhir/erg/StructureDefinition/erg-person",
+              "https://gematik.de/fhir/erg/StructureDefinition/erg-patient",
               "http://hl7.org/fhir/StructureDefinition/Patient"
             ]
           }
@@ -670,7 +670,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "https://gematik.de/fhir/erg/StructureDefinition/erg-leistungserbringer-person",
+              "https://gematik.de/fhir/erg/StructureDefinition/erg-person",
               "https://gematik.de/fhir/erg/StructureDefinition/erg-institution",
               "http://hl7.org/fhir/StructureDefinition/Practitioner",
               "http://hl7.org/fhir/StructureDefinition/Organization"
@@ -708,7 +708,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "https://gematik.de/fhir/erg/StructureDefinition/erg-leistungserbringer-person",
+              "https://gematik.de/fhir/erg/StructureDefinition/erg-person",
               "https://gematik.de/fhir/erg/StructureDefinition/erg-institution",
               "http://hl7.org/fhir/StructureDefinition/Practitioner",
               "http://hl7.org/fhir/StructureDefinition/Organization"
