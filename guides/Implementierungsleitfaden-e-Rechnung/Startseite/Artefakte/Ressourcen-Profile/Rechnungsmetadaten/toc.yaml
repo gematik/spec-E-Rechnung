@@ -1,8 +1,12 @@
-- name: ERG Dokumenten Metadaten (DocumentReference)
-  filename: ERG-Dokumenten-Metadaten-DocumentReference.page.md
-- name: ERG Rechnungsdokument (Binary)
-  filename: ERG-Rechnungsdokument-Binary.page.md
-- name: ERG Nutzungsprotokoll (AuditEvent)
-  filename: ERG-Nutzungsprotokoll-AuditEvent.page.md
 - name: Index
   filename: Index.page.md
+- name: Terminologien
+  filename: Terminologien
+- name: Extensions
+  filename: Extensions
+- name: ERGDokumentenmetadaten (DocumentReference).
+  filename: Datenobjekt_erg-dokumentenmetadaten
+- name: ERGNutzungsprotokoll (AuditEvent).
+  filename: Datenobjekt_erg-nutzungsprotokoll
+- name: ERGRechnungsdokument (Binary).
+  filename: Datenobjekt_erg-rechnungsdokument

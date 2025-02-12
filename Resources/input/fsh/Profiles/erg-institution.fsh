@@ -16,6 +16,8 @@ Id: erg-institution
   * ^patternIdentifier.type = $v2-0203#PRN
   * type 1.. MS
   * system MS
+    * ^short = "System der Telematik-ID"
+    * ^comment = "Das System der Telematik-ID MUSS vorhanden sein."
   * value MS
     * ^short = "Telematik-ID (VZD-Eintrag)"
   * ^short = "Telematik-ID (VZD-Eintrag)"
@@ -24,6 +26,8 @@ Id: erg-institution
   * ^patternIdentifier.type = $v2-0203#XX
   * type 1.. MS
   * system MS
+    * ^short = "System der IK-Nummer"
+    * ^comment = "Das System der IK-Nummer MUSS vorhanden sein."
   * value MS
     * ^short = "IK-Nummer"
   * ^short = "IK-Nummer"
@@ -32,6 +36,8 @@ Id: erg-institution
   * ^patternIdentifier.type = $v2-0203#BSNR
   * type 1.. MS
   * system MS
+    * ^short = "System der BSNR"
+    * ^comment = "Das System der BSNR MUSS vorhanden sein."
   * value MS
     * ^short = "Betriebsstättennummer"
   * ^short = "Betriebsstättennummer"

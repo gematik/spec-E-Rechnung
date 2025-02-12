@@ -15,6 +15,8 @@ Id: erg-rechnungsdiagnose
   * ^comment = "Die Codierung nach ICD-10 SOLL vorhanden sein."
   * ^patternCoding.system = $icd10-cs
   * system MS
+    * ^short = "System des ICD-10 Code"
+    * ^comment = "Das System des ICD-10 Code MUSS vorhanden sein."
   * code MS
     * ^short = "Code nach ICD-10"
     * ^comment = "Der Code nach ICD-10 SOLL vorhanden sein."
@@ -25,14 +27,15 @@ Id: erg-rechnungsdiagnose
     * ^short = "Lokalisierung"
     * ^comment = "Die Lokalisierung SOLL vorhanden sein."
   * extension[Seitenlokalisation].valueCoding MS
-    * system MS
-    * code MS
+    * system 1.. MS
+    * code 1.. MS
 * onset[x] MS
 * onset[x] only dateTime
 * onsetDateTime MS
   * ^short = "Behandlungsdatum (Erstdiagnose)"
   * ^comment = "Das Behandlungsdatum (Erstdiagnose) SOLL vorhanden sein."
 * subject MS
+  * ^short = "Referenz auf die behandelte Person"
+  * ^comment = "Die Diagnose SOLL auf eine zugehörige behandelte Person referenzieren."
 * subject only Reference(ERGPatient or Patient)
 * subject.reference 1.. MS
-* subject.reference ^comment = "Die Diagnose SOLL auf eine zugehörige Behandelte Person referenzieren."

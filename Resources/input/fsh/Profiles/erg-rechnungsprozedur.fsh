@@ -4,6 +4,8 @@ Title: "ERG Rechnungsprozedur"
 Id: erg-rechnungsprozedur
 * insert Meta
 * status MS
+  * ^short = "Status der Prozedur"
+  * ^comment = "Der Status der Prozedur MUSS vorhanden sein."
 * status = #completed
 * code MS
 * code.coding MS
@@ -17,6 +19,8 @@ Id: erg-rechnungsprozedur
   * ^comment = "Die Codierung nach OPS SOLL vorhanden sein."
   * ^patternCoding.system = $ops-cs
   * system MS
+    * ^short = "System des OPS Code"
+    * ^comment = "Das System des OPS Code MUSS vorhanden sein."
   * code MS
     * ^short = "Code nach OPS"
     * ^comment = "Der Code nach OPS SOLL vorhanden sein."
@@ -24,6 +28,7 @@ Id: erg-rechnungsprozedur
     * ^short = "Text zum OPS Code"
     * ^comment = "Der Text zum OPS Code SOLL vorhanden sein."
 * performed[x] MS
+  * ^short = "OPS Behandlungsdatum oder -zeitraum"
   * ^comment = "Entweder das OPS Behandlungsdatum, oder der -zeitraum SOLL vorhanden sein."
 * performed[x] only dateTime or Period
 * performedDateTime MS
@@ -31,6 +36,7 @@ Id: erg-rechnungsprozedur
 * performedPeriod MS
   * ^short = "OPS Behandlungszeitraum"
 * subject MS
+  * ^short = "Referenz auf die behandelte Person"
+  * ^comment = "Die Procedure SOLL auf eine zugehörige behandelte Person referenzieren."
 * subject only Reference(ERGPatient or Patient)
 * subject.reference 1.. MS
-* subject.reference ^comment = "Die Procedure SOLL auf eine zugehörige Behandelte Person referenzieren."

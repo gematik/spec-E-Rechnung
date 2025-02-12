@@ -1,8 +1,20 @@
-- name: ERG Rechnung (Invoice)
-  filename: ERG-Rechnung-Invoice.page.md
-- name: ERG Rechnungsposition (ChargeItem)
-  filename: ERG-Rechnungsposition-ChargeItem.page.md
-- name: ERG Rechnungsdiagnose (Condition)
-  filename: ERG-Rechnungsdiagnose-Condition.page.md
 - name: Index
   filename: Index.page.md
+- name: Terminologien
+  filename: Terminologien
+- name: Extensions
+  filename: Extensions
+- name: ERGInstitution (Organization).
+  filename: Datenobjekt_erg-institution
+- name: ERGPerson (Practitioner).
+  filename: Datenobjekt_erg-person
+- name: ERGPatient (Patient).
+  filename: Datenobjekt_erg-patient
+- name: ERGRechnung (Invoice).
+  filename: Datenobjekt_erg-rechnung
+- name: ERGRechnungsdiagnose (Condition).
+  filename: Datenobjekt_erg-rechnungsdiagnose
+- name: ERGRechnungsposition (ChargeItem).
+  filename: Datenobjekt_erg-rechnungsposition
+- name: ERGRechnungsprozedur (Procedure).
+  filename: Datenobjekt_erg-rechnungsprozedur
