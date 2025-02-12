@@ -1,4 +1,4 @@
-//TODO DocRef Searchset Example
+
 Instance: ExampleR5DocumentReference
 InstanceOf: ERGDokumentenmetadaten
 Title: "Example ERG Document Reference"

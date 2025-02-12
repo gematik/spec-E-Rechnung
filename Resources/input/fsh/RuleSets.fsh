@@ -7,7 +7,7 @@ RuleSet: Meta
 * ^status = #active
 * ^version = "1.0.0-CC"
 * ^experimental = false
-* ^date = "2024-06-20"
+* ^date = "2025-02-28"
 * ^publisher = "gematik GmbH"
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "http://gematik.de/"

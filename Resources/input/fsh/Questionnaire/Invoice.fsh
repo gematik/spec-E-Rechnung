@@ -21,7 +21,7 @@ InstanceOf: Questionnaire
     * answerOption[+].valueString = "stationäre Mitbehandlung"
     * answerOption[+].valueString = "nachstationäre Behandlung"
     * answerOption[+].valueString = "Konsil"
-    //ToDo: Codierung/ValueSet verwenden, Vorbelegen mit Encounter.type
+    //: Codierung/ValueSet verwenden, Vorbelegen mit Encounter.type
   * item[+] 
     * insert addItem("behandlungszeitraum", #group, "Behandlungszeitraum")
     * item[+]

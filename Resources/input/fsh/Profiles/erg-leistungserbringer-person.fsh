@@ -1,7 +1,7 @@
-Profile: ERGLeistungserbringerPerson //TODO Profilname überarbeiten, dass es zu beiden Rollen passt
+Profile: ERGPerson
 Parent: Practitioner
-Title: "ERG leistungserbringer Person"
-Description: "Das Profil ERGLeistungserbringerPerson wird in für die Rolle 'Behandelnder Leistungserbringer' oder 'Abweichender Forderungsinhaber' verwendet."
+Title: "ERG Person"
+Description: "Das Profil ERGPerson wird in für die Rolle 'Behandelnder Leistungserbringer' oder 'Abweichender Forderungsinhaber' verwendet."
 Id: erg-leistungserbringer-person
 * insert Meta
 * identifier MS
@@ -20,10 +20,9 @@ Id: erg-leistungserbringer-person
   * ^short = "Telematik-ID (VZD-Eintrag)"
   * ^comment = "Die Telematik-ID (VZD-Eintrag) SOLL vorhanden sein."
 * identifier[USt-ID-Nr]
-  * ^patternIdentifier.type = $v2-0203#TAX //TODO Anfrage beim TC Term läuft
+  * ^patternIdentifier.type.text = "UmsatzsteuerId"
   * type 1.. MS
-  * type = $v2-0203#TAX //TODO Anfrage beim TC Term läuft
-  * system ^comment = "Es gibt kein FHIR-NamingSystem für die USt.-ID von offizieller Seite. Aus dem Grund ist System nicht mit MS gekennzeichnet und SOLL nicht befüllt sein." //TODO Anfrage beim TC Term läuft
+  * system ^comment = "Es gibt kein FHIR-NamingSystem für die USt.-ID von offizieller Seite. Aus dem Grund ist System nicht mit MS gekennzeichnet und SOLL nicht befüllt sein."
   * value 1.. MS
   * ^short = "Umsatzsteuer-Identifikationsnummer"
   * ^comment = "Die Umsatzsteuer-Identifikationsnummer KANN vorhanden sein.

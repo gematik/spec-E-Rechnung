@@ -3,7 +3,6 @@ Title: "ERG Rechnung"
 Parent: Invoice
 Id: erg-rechnung
 * insert Meta
-//TODO-102 @Alexander Z, sollen wir ERGPDFRepraesentationRechnung drin lassen? Im Workshop ist das gar nicht auf der Liste für die Inhalte gelandet -> raus
 * extension contains 
   http://hl7.org/fhir/5.0/StructureDefinition/extension-Invoice.period[x] named Behandlungszeitraum 0..1 MS and
   ERGAbrechnungsDiagnoseProzedur named AbrechnungsDiagnoseProzedur 0..* MS and
@@ -19,7 +18,7 @@ Id: erg-rechnung
   * extension[Use].valueCoding MS
     * ^short = "Kennzeichen Hauptdiagnose"
     * ^comment = "Das Kennzeichen Hauptdiagnose SOLL vorhanden sein."
-    * code = http://TODO.de#main-diagnosis
+    * code = ERGAbrechnungsDiagnoseUseCS#main-diagnosis
   * extension[Referenz].valueReference MS
     * ^short = "Zuordnung von Diagnosen oder Prozeduren zur Rechnung"
     * ^comment = "Diagnosen und Prozeduren SOLLEN zur Rechnung zugeordnet sein."
@@ -74,11 +73,11 @@ Id: erg-rechnung
   Rechnungsnummer 1..1 MS and
   Antragsnummer ..1 MS
 * identifier[Rechnungsnummer]
-  * ^patternIdentifier.type = http://TODO.de#invoice
+  * ^patternIdentifier.type = ERGRechnungIdentifierTypeCS#invoice
   * ^short = "Rechnungs-Nr. (der LEI)"
   * ^comment = "Die Rechnungs-Nr. (der LEI) MUSS vorhanden sein."
   * type 1.. MS
-  * type = http://TODO.de#invoice
+  * type = ERGRechnungIdentifierTypeCS#invoice
   * system 1.. MS
     * ^short = "NamingSystem der Rechnungs-Nr. (der LEI)"
   * value 1.. MS
@@ -87,11 +86,11 @@ Id: erg-rechnung
   * ^short = "Rechnungsdatum"
   * ^comment = "Das Rechnungsdatum MUSS vorhanden sein."
 * identifier[Antragsnummer]
-  * ^patternIdentifier.type = http://TODO.de#Auftragsnummer
+  * ^patternIdentifier.type = ERGRechnungIdentifierTypeCS#auftragsnummer
   * ^short = "Referenz auf Heil- und Kostenplan, Kostenvoranschlag oder Kostenübernahmeantrag"
   * ^comment = "Die Rechnungs-Nr. (der LEI) MUSS vorhanden sein."
   * type 1.. MS
-  * type = http://TODO.de#Auftragsnummer
+  * type = ERGRechnungIdentifierTypeCS#auftragsnummer
   * system 1.. MS
     * ^short = "NamingSystem der Rechnungs-Nr. (der LEI)"
   * value 1.. MS
@@ -125,14 +124,13 @@ Id: erg-rechnung
   * system 1.. MS
   * code 1.. MS
 * subject 1..1 MS
-* subject only Reference(ERGPerson or Patient)
+* subject only Reference(ERGPatient or Patient)
   * reference 1..1 MS
   * ^short = "Behandelte Person"
-  //TODO Comment
   * ^comment = "Der Name der behandelten Person SOLL angegeben werden und kann vom Rechnungsempfänger abweichen, z.B. wenn Eltern Rechnungen für ihre Kinder erhalten."
 * recipient 1.. MS
   * ^short = "Rechnungsempfänger"
-* recipient only Reference(ERGPerson or Patient)
+* recipient only Reference(ERGPatient or Patient)
   * reference 1.. MS
   * identifier 1.. MS
   * identifier only IdentifierKvid10 //TODO Info an Klaus
@@ -145,7 +143,8 @@ Id: erg-rechnung
   * display 1.. MS
 * status MS
   * ^short = "Status der Rechnung"
-  * ^comment = "Der Status MUSS vorhanden sein. Im Normalfall ist der Code 'issued' anzugeben." //TODO Satz zu Draft
+  * ^comment = "Der Status MUSS vorhanden sein."
+* status = #issued
 * issuer 1.. MS
 * issuer only Reference(ERGInstitution or Organization)
   * ^short = "Rechnungsersteller"
@@ -166,13 +165,13 @@ Id: erg-rechnung
   * ^comment = "Im Falle einer GOÄ oder GOÄ-neu Rechnung, SOLLLEN weitere behandelnde Leistungserbringer vorhanden sein.
   Im Falle einer GOZ oder BEMA Rechnung, KÖNNEN weitere behandelnde Leistungserbringer vorhanden sein."
   * role = ERGParticipantRoleCS#leistungserbringer
-  * actor only Reference(ERGLeistungserbringerPerson or ERGInstitution or Practitioner or Organization)
+  * actor only Reference(ERGPerson or ERGInstitution or Practitioner or Organization)
 * participant[Forderungsinhaber]
   * ^short = "Abweichender Forderungsinhaber"
   * ^comment = "Der abweichender Forderungsinhaber SOLL vorhanden sein."
   * role MS
   * role = ERGParticipantRoleCS#forderungsinhaber
-  * actor only Reference(ERGLeistungserbringerPerson or ERGInstitution or Practitioner or Organization)
+  * actor only Reference(ERGPerson or ERGInstitution or Practitioner or Organization)
 * note MS
   * ^short = "Hinweise an den Kostenträger"
   * ^comment = "Der Hinweise an den Kostenträger KANN vorhanden sein."
@@ -265,6 +264,9 @@ Id: erg-rechnung
       * code MS
 * lineItem MS //TODO-102 Sequenz? -> MS und KANN
   * ^short = "Rechnungspositionen"
+* lineItem.sequence 1.. MS
+  * ^short = "Reihenfolge der Rechnungsposition"
+  * ^comment = "Die Reihenfolge der Rechnungsposition MUSS mit einer Sequenz-Nummer angegeben werden. Die Sequenz muss mit 1 als erste Ziffer beginnen."
 * lineItem.chargeItem[x] only Reference
 * lineItem.chargeItemReference MS
 * lineItem.chargeItemReference only Reference(ERGRechnungsposition or ChargeItem)

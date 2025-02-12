@@ -33,6 +33,6 @@ Id: erg-rechnungsdiagnose
   * ^short = "Behandlungsdatum (Erstdiagnose)"
   * ^comment = "Das Behandlungsdatum (Erstdiagnose) SOLL vorhanden sein."
 * subject MS
-* subject only Reference(ERGPerson or Patient)
+* subject only Reference(ERGPatient or Patient)
 * subject.reference 1.. MS
-* subject.reference ^comment = "Die Diagnose SOLL auf eine zugehörige Behandelte Person referenzieren." //TODO wirklich SOLL?
+* subject.reference ^comment = "Die Diagnose SOLL auf eine zugehörige Behandelte Person referenzieren."

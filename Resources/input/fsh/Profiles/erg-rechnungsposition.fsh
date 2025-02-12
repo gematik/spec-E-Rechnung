@@ -134,7 +134,7 @@ Id: erg-rechnungsposition
   * end MS
 * performer MS
   * actor MS
-  * actor only Reference(ERGLeistungserbringerPerson or ERGInstitution or Practitioner or Organization)
+  * actor only Reference(ERGPerson or ERGInstitution or Practitioner or Organization)
     * ^short = "Referenz Behandelnder Leistungserbringer"
     * ^comment = "Im Falle einer GOÄ-neu Rechnungsposition, SOLL die Referenz auf einen behandelnden Leistungserbringer vorhanden sein.
     Im Fall einer GOÄ Rechnungsposition, KANN ein behandelnder Leistungserbringer vorhanden sein.
@@ -189,6 +189,6 @@ Id: erg-rechnungsposition
 * status = #billable
   * ^short = "Der Status der Rechnungsposition MUSS vorhanden sein."
 * subject MS
-* subject only Reference(ERGPerson or Patient)
+* subject only Reference(ERGPatient or Patient)
   * ^short = "Behandelte Person"
   * reference 1.. MS

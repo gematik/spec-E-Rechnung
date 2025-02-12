@@ -1,4 +1,4 @@
-Profile: ERGPerson
+Profile: ERGPatient
 Parent: Patient
 Id: erg-person
 * insert Meta
