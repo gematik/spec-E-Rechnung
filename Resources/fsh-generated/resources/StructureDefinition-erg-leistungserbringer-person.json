@@ -3,11 +3,11 @@
   "id": "erg-leistungserbringer-person",
   "url": "https://gematik.de/fhir/erg/StructureDefinition/erg-leistungserbringer-person",
   "version": "1.0.0-CC",
-  "name": "ERGLeistungserbringerPerson",
-  "title": "ERG leistungserbringer Person",
+  "name": "ERGPerson",
+  "title": "ERG Person",
   "status": "active",
   "experimental": false,
-  "date": "2024-06-20",
+  "date": "2025-02-28",
   "publisher": "gematik GmbH",
   "contact": [
     {
@@ -19,7 +19,7 @@
       ]
     }
   ],
-  "description": "Das Profil ERGLeistungserbringerPerson wird in für die Rolle 'Behandelnder Leistungserbringer' oder 'Abweichender Forderungsinhaber' verwendet.",
+  "description": "Das Profil ERGPerson wird in für die Rolle 'Behandelnder Leistungserbringer' oder 'Abweichender Forderungsinhaber' verwendet.",
   "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,
@@ -97,12 +97,7 @@
         "max": "1",
         "patternIdentifier": {
           "type": {
-            "coding": [
-              {
-                "code": "TAX",
-                "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
-              }
-            ]
+            "text": "UmsatzsteuerId"
           }
         },
         "mustSupport": true
@@ -111,14 +106,6 @@
         "id": "Practitioner.identifier:USt-ID-Nr.type",
         "path": "Practitioner.identifier.type",
         "min": 1,
-        "patternCodeableConcept": {
-          "coding": [
-            {
-              "code": "TAX",
-              "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
-            }
-          ]
-        },
         "mustSupport": true
       },
       {

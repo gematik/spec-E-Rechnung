@@ -2,15 +2,19 @@
   "resourceType": "CodeSystem",
   "status": "active",
   "content": "complete",
-  "name": "ERGAbrechnungsDiagnoseUseCS",
-  "id": "erg-abrechnungs-diagnose-use-CS",
-  "title": "ERG Abrechnungsdiagnose Use CodeSystem",
+  "name": "ERGRechnungIdentifierTypeCS",
+  "id": "erg-rechnung-identifier-type-cs",
+  "title": "ERG Rechnung Identifier Type CS",
   "version": "1.0.0-CC",
-  "url": "https://gematik.de/fhir/erg/CodeSystem/erg-abrechnungs-diagnose-use-CS",
+  "url": "https://gematik.de/fhir/erg/CodeSystem/erg-rechnung-identifier-type-cs",
   "concept": [
     {
-      "code": "main-diagnosis",
-      "display": "Hauptdiagnose"
+      "code": "invoice",
+      "display": "Rechnungsnummer"
+    },
+    {
+      "code": "auftragsnummer",
+      "display": "Auftragsnummer"
     }
   ],
   "experimental": false,
@@ -26,5 +30,5 @@
       ]
     }
   ],
-  "count": 1
+  "count": 2
 }

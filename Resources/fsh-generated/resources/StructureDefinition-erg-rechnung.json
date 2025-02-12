@@ -7,7 +7,7 @@
   "title": "ERG Rechnung",
   "status": "active",
   "experimental": false,
-  "date": "2024-06-20",
+  "date": "2025-02-28",
   "publisher": "gematik GmbH",
   "contact": [
     {
@@ -349,7 +349,7 @@
             "coding": [
               {
                 "code": "invoice",
-                "system": "http://TODO.de"
+                "system": "https://gematik.de/fhir/erg/CodeSystem/erg-rechnung-identifier-type-cs"
               }
             ]
           }
@@ -364,7 +364,7 @@
           "coding": [
             {
               "code": "invoice",
-              "system": "http://TODO.de"
+              "system": "https://gematik.de/fhir/erg/CodeSystem/erg-rechnung-identifier-type-cs"
             }
           ]
         },
@@ -396,8 +396,8 @@
           "type": {
             "coding": [
               {
-                "code": "Auftragsnummer",
-                "system": "http://TODO.de"
+                "code": "auftragsnummer",
+                "system": "https://gematik.de/fhir/erg/CodeSystem/erg-rechnung-identifier-type-cs"
               }
             ]
           }
@@ -411,8 +411,8 @@
         "patternCodeableConcept": {
           "coding": [
             {
-              "code": "Auftragsnummer",
-              "system": "http://TODO.de"
+              "code": "auftragsnummer",
+              "system": "https://gematik.de/fhir/erg/CodeSystem/erg-rechnung-identifier-type-cs"
             }
           ]
         },
@@ -436,7 +436,8 @@
         "id": "Invoice.status",
         "path": "Invoice.status",
         "short": "Status der Rechnung",
-        "comment": "Der Status MUSS vorhanden sein. Im Normalfall ist der Code 'issued' anzugeben.",
+        "comment": "Der Status MUSS vorhanden sein.",
+        "patternCode": "issued",
         "mustSupport": true
       },
       {
@@ -742,6 +743,14 @@
         "id": "Invoice.lineItem",
         "path": "Invoice.lineItem",
         "short": "Rechnungspositionen",
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.lineItem.sequence",
+        "path": "Invoice.lineItem.sequence",
+        "short": "Reihenfolge der Rechnungsposition",
+        "comment": "Die Reihenfolge der Rechnungsposition MUSS mit einer Sequenz-Nummer angegeben werden. Die Sequenz muss mit 1 als erste Ziffer beginnen.",
+        "min": 1,
         "mustSupport": true
       },
       {
