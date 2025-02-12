@@ -5,16 +5,16 @@
 - name: Extensions
   filename: Extensions
 - name: ERGInstitution (Organization).
-  filename: Datenobjekt_erg-institution
+  filename: Datenobjekt_institution
 - name: ERGPerson (Practitioner).
-  filename: Datenobjekt_erg-person
+  filename: Datenobjekt_person
 - name: ERGPatient (Patient).
-  filename: Datenobjekt_erg-patient
+  filename: Datenobjekt_patient
 - name: ERGRechnung (Invoice).
-  filename: Datenobjekt_erg-rechnung
+  filename: Datenobjekt_rechnung
 - name: ERGRechnungsdiagnose (Condition).
-  filename: Datenobjekt_erg-rechnungsdiagnose
+  filename: Datenobjekt_rechnungsdiagnose
 - name: ERGRechnungsposition (ChargeItem).
-  filename: Datenobjekt_erg-rechnungsposition
+  filename: Datenobjekt_rechnungsposition
 - name: ERGRechnungsprozedur (Procedure).
-  filename: Datenobjekt_erg-rechnungsprozedur
+  filename: Datenobjekt_rechnungsprozedur
