@@ -233,9 +233,9 @@
         "path": "Organization.type",
         "sliceName": "Fachrichtung",
         "short": "Fachrichtung",
-        "comment": "Die Fachrichtung SOLL vorhanden sein.",
+        "comment": "Die Fachrichtung SOLL vorhanden sein. Das Element ist wiederholbar.",
         "min": 0,
-        "max": "1",
+        "max": "*",
         "mustSupport": true,
         "binding": {
           "strength": "required",

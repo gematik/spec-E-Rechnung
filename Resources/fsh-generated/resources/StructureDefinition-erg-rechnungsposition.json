@@ -367,15 +367,15 @@
         "mustSupport": true
       },
       {
-        "id": "ChargeItem.extension:GebührenordnungAngaben.extension:Faktor.extension:Ausprägung",
+        "id": "ChargeItem.extension:GebührenordnungAngaben.extension:Faktor.extension:FaktorID",
         "path": "ChargeItem.extension.extension.extension",
-        "sliceName": "Ausprägung",
-        "short": "Faktor Ausprägung",
-        "comment": "Im Falle einer GOÄ-neu Rechnungsposition SOLL die Faktor Ausprägung vorhanden sein.\n      Im Falle einer GOÄ Rechnungsposition KANN die Faktor Ausprägung vorhanden sein.\n      Im Falle einer GOZ oder BEMA Rechnungsposition ist die Faktor Ausprägung nicht gefordert.",
+        "sliceName": "FaktorID",
+        "short": "Faktor FaktorID",
+        "comment": "Im Falle einer GOÄ-neu Rechnungsposition SOLL die Faktor FaktorID vorhanden sein.\n      Im Falle einer GOÄ Rechnungsposition KANN die Faktor FaktorID vorhanden sein.\n      Im Falle einer GOZ oder BEMA Rechnungsposition ist die Faktor FaktorID nicht gefordert.",
         "mustSupport": true
       },
       {
-        "id": "ChargeItem.extension:GebührenordnungAngaben.extension:Faktor.extension:Ausprägung.value[x]",
+        "id": "ChargeItem.extension:GebührenordnungAngaben.extension:Faktor.extension:FaktorID.value[x]",
         "path": "ChargeItem.extension.extension.extension.value[x]",
         "mustSupport": true
       },
@@ -414,6 +414,29 @@
         "id": "ChargeItem.extension:GebührenordnungAngaben.extension:MinderungP6GOÄ.value[x].code",
         "path": "ChargeItem.extension.extension.value[x].code",
         "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "ChargeItem.extension:Behandlungsdatum",
+        "path": "ChargeItem.extension",
+        "sliceName": "Behandlungsdatum",
+        "short": "Behandlungsdatum",
+        "comment": "Das Behandlungsdatum SOLL vorhanden sein.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://gematik.de/fhir/erg/StructureDefinition/ERGRechnungspositionBehandlungsdatum"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "ChargeItem.extension:Behandlungsdatum.value[x]",
+        "path": "ChargeItem.extension.value[x]",
         "mustSupport": true
       },
       {
@@ -530,49 +553,8 @@
       {
         "id": "ChargeItem.occurrence[x]",
         "path": "ChargeItem.occurrence[x]",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "type",
-              "path": "$this"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        },
-        "short": "Behandlungsdatum oder -zeitraum",
-        "comment": "Mindestens eins, Datum oder Zeitraum, SOLLEN zur Behandlung vorhanden sein.",
-        "type": [
-          {
-            "code": "dateTime"
-          },
-          {
-            "code": "Period"
-          }
-        ],
-        "mustSupport": true
-      },
-      {
-        "id": "ChargeItem.occurrence[x]:occurrenceDateTime",
-        "path": "ChargeItem.occurrence[x]",
-        "sliceName": "occurrenceDateTime",
-        "short": "Behandlungsdatum",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "dateTime"
-          }
-        ],
-        "mustSupport": true
-      },
-      {
-        "id": "ChargeItem.occurrence[x]:occurrencePeriod",
-        "path": "ChargeItem.occurrence[x]",
-        "sliceName": "occurrencePeriod",
         "short": "Behandlungszeitraum",
-        "min": 0,
-        "max": "1",
+        "comment": "Im Falle einer GOÄ, GOÄ-neu oder GOZ Rechnungsposition, SOLL der Leistungszeitraum vorhanden sein.\n  Im Falle einer BEMA Rechnungsposition, ist das Element nicht gefordert",
         "type": [
           {
             "code": "Period"
@@ -581,12 +563,12 @@
         "mustSupport": true
       },
       {
-        "id": "ChargeItem.occurrence[x]:occurrencePeriod.start",
+        "id": "ChargeItem.occurrence[x].start",
         "path": "ChargeItem.occurrence[x].start",
         "mustSupport": true
       },
       {
-        "id": "ChargeItem.occurrence[x]:occurrencePeriod.end",
+        "id": "ChargeItem.occurrence[x].end",
         "path": "ChargeItem.occurrence[x].end",
         "mustSupport": true
       },

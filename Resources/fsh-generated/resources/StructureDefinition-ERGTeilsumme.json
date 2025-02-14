@@ -81,6 +81,63 @@
         "patternCode": "EUR"
       },
       {
+        "id": "Extension.extension:UStProzent",
+        "path": "Extension.extension",
+        "sliceName": "UStProzent",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension:UStProzent.extension",
+        "path": "Extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:UStProzent.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "UStProzent"
+      },
+      {
+        "id": "Extension.extension:UStProzent.value[x]",
+        "path": "Extension.extension.value[x]",
+        "type": [
+          {
+            "code": "decimal"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:UStBetrag",
+        "path": "Extension.extension",
+        "sliceName": "UStBetrag",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension:UStBetrag.extension",
+        "path": "Extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:UStBetrag.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "UStBetrag"
+      },
+      {
+        "id": "Extension.extension:UStBetrag.value[x]",
+        "path": "Extension.extension.value[x]",
+        "type": [
+          {
+            "code": "Money"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:UStBetrag.value[x].currency",
+        "path": "Extension.extension.value[x].currency",
+        "patternCode": "EUR"
+      },
+      {
         "id": "Extension.url",
         "path": "Extension.url",
         "fixedUri": "https://gematik.de/fhir/erg/StructureDefinition/ERGTeilsumme"

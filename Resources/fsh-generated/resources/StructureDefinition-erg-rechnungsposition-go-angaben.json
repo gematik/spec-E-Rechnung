@@ -110,24 +110,24 @@
         ]
       },
       {
-        "id": "Extension.extension:Faktor.extension:Ausprägung",
+        "id": "Extension.extension:Faktor.extension:FaktorID",
         "path": "Extension.extension.extension",
-        "sliceName": "Ausprägung",
+        "sliceName": "FaktorID",
         "min": 0,
         "max": "1"
       },
       {
-        "id": "Extension.extension:Faktor.extension:Ausprägung.extension",
+        "id": "Extension.extension:Faktor.extension:FaktorID.extension",
         "path": "Extension.extension.extension.extension",
         "max": "0"
       },
       {
-        "id": "Extension.extension:Faktor.extension:Ausprägung.url",
+        "id": "Extension.extension:Faktor.extension:FaktorID.url",
         "path": "Extension.extension.extension.url",
-        "fixedUri": "Ausprägung"
+        "fixedUri": "FaktorID"
       },
       {
-        "id": "Extension.extension:Faktor.extension:Ausprägung.value[x]",
+        "id": "Extension.extension:Faktor.extension:FaktorID.value[x]",
         "path": "Extension.extension.extension.value[x]",
         "type": [
           {

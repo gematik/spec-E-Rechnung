@@ -4,7 +4,7 @@
   "content": "complete",
   "name": "ERGRechnungspositionFaktorIdAuspraegungenCS",
   "id": "erg-rechnungsposition-faktor-id-auspraegungen-CS",
-  "title": "ERG Rechnungsposition Ausprägungen der FaktorID CodeSystem",
+  "title": "ERG Rechnungsposition FaktorIDen der FaktorID CodeSystem",
   "url": "https://gematik.de/fhir/erg/CodeSystem/erg-rechnungsposition-faktor-id-auspraegungen-CS",
   "concept": [
     {

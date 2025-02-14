@@ -205,8 +205,7 @@
         "id": "Patient.birthDate",
         "path": "Patient.birthDate",
         "short": "Geburtsdatum",
-        "comment": "Das Geburtsdatum MUSS vorhanden sein.",
-        "min": 1,
+        "comment": "Das Geburtsdatum SOLL vorhanden sein.",
         "mustSupport": true
       },
       {

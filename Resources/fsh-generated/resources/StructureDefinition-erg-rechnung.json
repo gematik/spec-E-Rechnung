@@ -251,7 +251,7 @@
         "path": "Invoice.extension",
         "sliceName": "Korrekturrechnung",
         "short": "Info Korrekturrechnung",
-        "comment": "Wenn die Instanz dieser Rechnung eine Korrektur einer anderen Rechnung ist, soll die ersetzte Rechnung hier referenziert werden.",
+        "comment": "Wenn die Instanz dieser Rechnung eine Korrektur einer anderen Rechnung ist, SOLL die ersetzte Rechnung hier referenziert werden.",
         "min": 0,
         "max": "1",
         "type": [
@@ -276,6 +276,41 @@
             ]
           }
         ],
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.extension:Korrekturtoken",
+        "path": "Invoice.extension",
+        "sliceName": "Korrekturtoken",
+        "short": "Info Korrekturtoken",
+        "comment": "Wenn die Instanz dieser Rechnung eine Korrektur einer anderen Rechnung ist, SOLL das Token der ersetzten Rechnung hier angegeben werden.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://gematik.de/fhir/erg/StructureDefinition/ERGTokenStornierteRechnung"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.extension:Korrekturtoken.value[x]",
+        "path": "Invoice.extension.value[x]",
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.extension:Korrekturtoken.value[x].system",
+        "path": "Invoice.extension.value[x].system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.extension:Korrekturtoken.value[x].value",
+        "path": "Invoice.extension.value[x].value",
+        "min": 1,
         "mustSupport": true
       },
       {
@@ -878,6 +913,7 @@
         "id": "Invoice.totalPriceComponent.extension:Teilsumme.extension:Type",
         "path": "Invoice.totalPriceComponent.extension.extension",
         "sliceName": "Type",
+        "short": "Rechnungspositionstyp",
         "mustSupport": true
       },
       {
@@ -890,6 +926,7 @@
         "id": "Invoice.totalPriceComponent.extension:Teilsumme.extension:Summe",
         "path": "Invoice.totalPriceComponent.extension.extension",
         "sliceName": "Summe",
+        "short": "Bruttosumme",
         "mustSupport": true
       },
       {
@@ -906,6 +943,43 @@
       },
       {
         "id": "Invoice.totalPriceComponent.extension:Teilsumme.extension:Summe.value[x].currency",
+        "path": "Invoice.totalPriceComponent.extension.extension.value[x].currency",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.totalPriceComponent.extension:Teilsumme.extension:UStProzent",
+        "path": "Invoice.totalPriceComponent.extension.extension",
+        "sliceName": "UStProzent",
+        "short": "Enthaltene Umsatzsteuer in Prozent",
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.totalPriceComponent.extension:Teilsumme.extension:UStProzent.value[x]",
+        "path": "Invoice.totalPriceComponent.extension.extension.value[x]",
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.totalPriceComponent.extension:Teilsumme.extension:UStBetrag",
+        "path": "Invoice.totalPriceComponent.extension.extension",
+        "sliceName": "UStBetrag",
+        "short": "Enthaltene Umsatzsteuer als Betrag",
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.totalPriceComponent.extension:Teilsumme.extension:UStBetrag.value[x]",
+        "path": "Invoice.totalPriceComponent.extension.extension.value[x]",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.totalPriceComponent.extension:Teilsumme.extension:UStBetrag.value[x].value",
+        "path": "Invoice.totalPriceComponent.extension.extension.value[x].value",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.totalPriceComponent.extension:Teilsumme.extension:UStBetrag.value[x].currency",
         "path": "Invoice.totalPriceComponent.extension.extension.value[x].currency",
         "min": 1,
         "mustSupport": true
@@ -942,12 +1016,28 @@
         "id": "Invoice.totalPriceComponent:SummeRechnungspositionen.extension:Teilsumme.extension:Type",
         "path": "Invoice.totalPriceComponent.extension.extension",
         "sliceName": "Type",
+        "short": "Rechnungspositionstyp",
         "mustSupport": true
       },
       {
         "id": "Invoice.totalPriceComponent:SummeRechnungspositionen.extension:Teilsumme.extension:Summe",
         "path": "Invoice.totalPriceComponent.extension.extension",
         "sliceName": "Summe",
+        "short": "Bruttosumme",
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.totalPriceComponent:SummeRechnungspositionen.extension:Teilsumme.extension:UStProzent",
+        "path": "Invoice.totalPriceComponent.extension.extension",
+        "sliceName": "UStProzent",
+        "short": "Enthaltene Umsatzsteuer in Prozent",
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.totalPriceComponent:SummeRechnungspositionen.extension:Teilsumme.extension:UStBetrag",
+        "path": "Invoice.totalPriceComponent.extension.extension",
+        "sliceName": "UStBetrag",
+        "short": "Enthaltene Umsatzsteuer als Betrag",
         "mustSupport": true
       },
       {
@@ -1026,12 +1116,28 @@
         "id": "Invoice.totalPriceComponent:MinderungNachGOZ.extension:Teilsumme.extension:Type",
         "path": "Invoice.totalPriceComponent.extension.extension",
         "sliceName": "Type",
+        "short": "Rechnungspositionstyp",
         "mustSupport": true
       },
       {
         "id": "Invoice.totalPriceComponent:MinderungNachGOZ.extension:Teilsumme.extension:Summe",
         "path": "Invoice.totalPriceComponent.extension.extension",
         "sliceName": "Summe",
+        "short": "Bruttosumme",
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.totalPriceComponent:MinderungNachGOZ.extension:Teilsumme.extension:UStProzent",
+        "path": "Invoice.totalPriceComponent.extension.extension",
+        "sliceName": "UStProzent",
+        "short": "Enthaltene Umsatzsteuer in Prozent",
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.totalPriceComponent:MinderungNachGOZ.extension:Teilsumme.extension:UStBetrag",
+        "path": "Invoice.totalPriceComponent.extension.extension",
+        "sliceName": "UStBetrag",
+        "short": "Enthaltene Umsatzsteuer als Betrag",
         "mustSupport": true
       },
       {
@@ -1110,12 +1216,28 @@
         "id": "Invoice.totalPriceComponent:Abzug.extension:Teilsumme.extension:Type",
         "path": "Invoice.totalPriceComponent.extension.extension",
         "sliceName": "Type",
+        "short": "Rechnungspositionstyp",
         "mustSupport": true
       },
       {
         "id": "Invoice.totalPriceComponent:Abzug.extension:Teilsumme.extension:Summe",
         "path": "Invoice.totalPriceComponent.extension.extension",
         "sliceName": "Summe",
+        "short": "Bruttosumme",
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.totalPriceComponent:Abzug.extension:Teilsumme.extension:UStProzent",
+        "path": "Invoice.totalPriceComponent.extension.extension",
+        "sliceName": "UStProzent",
+        "short": "Enthaltene Umsatzsteuer in Prozent",
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.totalPriceComponent:Abzug.extension:Teilsumme.extension:UStBetrag",
+        "path": "Invoice.totalPriceComponent.extension.extension",
+        "sliceName": "UStBetrag",
+        "short": "Enthaltene Umsatzsteuer als Betrag",
         "mustSupport": true
       },
       {

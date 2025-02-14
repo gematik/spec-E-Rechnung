@@ -245,9 +245,13 @@
         "path": "Extension.extension.extension.value[x]",
         "type": [
           {
-            "code": "string"
+            "code": "Coding"
           }
-        ]
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://gematik.de/fhir/erg/ValueSet/ERGVerkehrsmittel"
+        }
       },
       {
         "id": "Extension.extension:Reiseentschädigung.url",
