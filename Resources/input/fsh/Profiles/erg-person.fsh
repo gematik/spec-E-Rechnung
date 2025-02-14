@@ -125,9 +125,9 @@ Description: "Das Profil ERGPerson wird in für die Rolle 'Behandelnder Leistung
   * ^slicing.discriminator.path = "$this"
   * ^slicing.rules = #open
 * qualification.code.coding contains
-    Fachrichtung ..1 MS
+    Fachrichtung ..* MS
 * qualification.code.coding[Fachrichtung] from $ihe-practiceSettingCode (required)
   * ^short = "Fachrichtung"
-  * ^comment = "Die Fachrichtung SOLL vorhanden sein."
+  * ^comment = "Die Fachrichtung SOLL vorhanden sein. Das Element ist wiederholbar."
   * system 1.. MS
   * code 1.. MS

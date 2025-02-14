@@ -10,6 +10,7 @@ Id: erg-rechnung
   ERGBehandlungsart named Benhandlungsart 1..1 MS and
   ERGFachrichtung named Fachrichtung 1..1 MS and
   $extension-replaces named Korrekturrechnung ..1 MS and
+  ERGTokenStornierteRechnung named Korrekturtoken ..1 MS and
   ERGBemaPunktsumme named BemaPunktsumme ..1 MS
 * extension[AbrechnungsDiagnoseProzedur]
   * ^short = "Diagnose"
@@ -51,9 +52,15 @@ Id: erg-rechnung
     * code 1.. MS
 * extension[Korrekturrechnung]
   * ^short = "Info Korrekturrechnung"
-  * ^comment = "Wenn die Instanz dieser Rechnung eine Korrektur einer anderen Rechnung ist, soll die ersetzte Rechnung hier referenziert werden."
+  * ^comment = "Wenn die Instanz dieser Rechnung eine Korrektur einer anderen Rechnung ist, SOLL die ersetzte Rechnung hier referenziert werden."
   * valueCanonical 1..1 MS
   * valueCanonical only Canonical(ERGRechnung or Invoice)
+* extension[Korrekturtoken]
+  * ^short = "Info Korrekturtoken"
+  * ^comment = "Wenn die Instanz dieser Rechnung eine Korrektur einer anderen Rechnung ist, SOLL das Token der ersetzten Rechnung hier angegeben werden."
+  * valueIdentifier MS
+    * system 1.. MS
+    * value 1.. MS
 * extension[BemaPunktsumme]
   * ^comment = "Im Falle einer BEMA Rechnung SOLL die Punktsumme BEMA vorhanden sein.
   Im Falle einer GOÄ, GOÄ-neu oder GOZ Rechnung ist das Element nicht gefordert."
@@ -197,8 +204,18 @@ Id: erg-rechnung
   * ^short = "Teilsummen in EUR für die Rechnungspositionstyp"
   * ^comment = "Für alle vorkommenden Rechnungspositionstypen SOLL eine Teilsumme vorhanden sein."
   * extension[Type] MS
+    * ^short = "Rechnungspositionstyp"
     * valueCoding 1.. MS
   * extension[Summe] MS
+    * ^short = "Bruttosumme"
+    * valueMoney 1.. MS
+      * currency 1.. MS
+      * value 1.. MS
+  * extension[UStProzent] MS
+    * ^short = "Enthaltene Umsatzsteuer in Prozent"
+    * valueDecimal MS
+  * extension[UStBetrag] MS
+    * ^short = "Enthaltene Umsatzsteuer als Betrag"
     * valueMoney 1.. MS
       * currency 1.. MS
       * value 1.. MS

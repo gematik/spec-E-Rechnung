@@ -7,7 +7,8 @@ Id: erg-rechnungsposition
   ERGRechnungspositionType named Rechnungspositionstyp 1..1 MS and
   ERGRechnungspositionZusatz named Zusatz ..1 MS and
   ERGWegegeldReiseentschaedigung named WegegeldReiseentschädigung ..1 MS and
-  ERGRechnungspositionGOAngaben named GebührenordnungAngaben ..1 MS
+  ERGRechnungspositionGOAngaben named GebührenordnungAngaben ..1 MS and
+  ERGRechnungspositionBehandlungsdatum named Behandlungsdatum ..1 MS
 * extension[Rechnungspositionstyp]
   * ^short = "Rechnungspositionstyp"
   * ^comment = "Der Rechnungspositionstyp MUSS vorhanden sein."
@@ -62,7 +63,7 @@ Id: erg-rechnungsposition
         * value 1.. MS
     * extension[Verkehrsmittel] MS
       * ^short = "Verkehrsmittel"
-      * valueString 1.. MS
+      * valueCoding 1.. MS
 * extension[GebührenordnungAngaben]
   * extension[Einfachsatz] MS
     * ^short = "Gebühr Einfachsatz in EUR"
@@ -81,11 +82,11 @@ Id: erg-rechnungsposition
       * ^short = "Faktor"
       * ^comment = "Im Falle einer GOÄ, GOÄ-neu oder GOZ Rechnungsposition SOLL der Faktor vorhanden sein."
       * valueDecimal MS
-    * extension[Ausprägung] MS
-      * ^short = "Faktor Ausprägung"
-      * ^comment = "Im Falle einer GOÄ-neu Rechnungsposition SOLL die Faktor Ausprägung vorhanden sein.
-      Im Falle einer GOÄ Rechnungsposition KANN die Faktor Ausprägung vorhanden sein.
-      Im Falle einer GOZ oder BEMA Rechnungsposition ist die Faktor Ausprägung nicht gefordert."
+    * extension[FaktorID] MS
+      * ^short = "Faktor FaktorID"
+      * ^comment = "Im Falle einer GOÄ-neu Rechnungsposition SOLL die Faktor FaktorID vorhanden sein.
+      Im Falle einer GOÄ Rechnungsposition KANN die Faktor FaktorID vorhanden sein.
+      Im Falle einer GOZ oder BEMA Rechnungsposition ist die Faktor FaktorID nicht gefordert."
       * valueCoding MS
   * extension[MinderungP6GOÄ] MS
     * ^short = "Minderungen nach §6a GOÄ in Prozent"
@@ -96,6 +97,10 @@ Id: erg-rechnungsposition
       * code 1.. MS
       * system 1.. MS
       * value 1.. MS
+* extension[Behandlungsdatum]
+  * ^short = "Behandlungsdatum"
+  * ^comment = "Das Behandlungsdatum SOLL vorhanden sein."
+  * valueDate MS
 * code MS
   * ^short = "Gebührenordnung-Nummer (Ziffer oder Paragraph)"
   * ^comment = "Ist der Rechnungspositionstyp auf eine Gebührenordnung festgelegt, SOLL die Gebührenordnung-Nummer als Ziffer oder Paragraph vorhanden sein."
@@ -123,11 +128,10 @@ Id: erg-rechnungsposition
   * text MS
     * ^short = "Bezeichnung für Auslagen/Sachkosten, z.B. Wirkstoffname"
 * occurrence[x] MS
-* occurrence[x] only dateTime or Period
-  * ^short = "Behandlungsdatum oder -zeitraum"
-  * ^comment = "Mindestens eins, Datum oder Zeitraum, SOLLEN zur Behandlung vorhanden sein."
-* occurrenceDateTime MS
-  * ^short = "Behandlungsdatum"
+* occurrence[x] only Period
+  * ^short = "Leistungszeitraum"
+  * ^comment = "Im Falle einer GOÄ, GOÄ-neu oder GOZ Rechnungsposition, SOLL der Leistungszeitraum vorhanden sein.
+  Im Falle einer BEMA Rechnungsposition, ist das Element nicht gefordert"
 * occurrencePeriod MS
   * ^short = "Behandlungszeitraum"
   * start MS

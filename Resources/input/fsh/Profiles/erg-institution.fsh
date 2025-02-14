@@ -55,10 +55,10 @@ Id: erg-institution
 * type ^slicing.discriminator.path = "$this"
 * type ^slicing.rules = #open
 * type contains
-    Fachrichtung ..1 MS
+    Fachrichtung ..* MS
 * type[Fachrichtung] from $ihe-practiceSettingCode (required)
   * ^short = "Fachrichtung"
-  * ^comment = "Die Fachrichtung SOLL vorhanden sein."
+  * ^comment = "Die Fachrichtung SOLL vorhanden sein. Das Element ist wiederholbar."
   * coding.system 1.. MS
   * coding.code 1.. MS
 * name MS

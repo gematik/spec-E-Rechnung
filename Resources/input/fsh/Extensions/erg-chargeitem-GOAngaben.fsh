@@ -15,9 +15,9 @@ Context: ChargeItem
 * extension[Faktor]
   * extension contains 
     Value ..1 and
-    Ausprägung ..1
+    FaktorID ..1
   * extension[Value].value[x] only decimal
-  * extension[Ausprägung]
+  * extension[FaktorID]
     * value[x] only Coding
     * valueCoding from ERGRechnungspositionFaktorIdAuspraegungenVS (required)  
 * extension[MinderungP6GOÄ]

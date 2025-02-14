@@ -29,9 +29,9 @@ Id: erg-patient
         * ^short = "IK-Nummer der Krankenkasse"
       * ^short = "IK-Nummer der Krankenkasse"
       * ^comment = "Bei GKV-Versicherten Personen MUSS die IK-Nummer der Krankenkasse angegeben werden."
-* birthDate 1.. MS
+* birthDate MS
   * ^short = "Geburtsdatum"
-  * ^comment = "Das Geburtsdatum MUSS vorhanden sein."
+  * ^comment = "Das Geburtsdatum SOLL vorhanden sein."
 * name only $humanname-de
 * name MS
   * ^short = "Name"

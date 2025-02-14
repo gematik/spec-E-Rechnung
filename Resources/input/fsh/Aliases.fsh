@@ -24,3 +24,4 @@ Alias: $ops-cs = http://fhir.de/CodeSystem/bfarm/ops
 Alias: $coding-ops = http://fhir.de/StructureDefinition/CodingOPS
 Alias: $extension-replaces = http://hl7.org/fhir/StructureDefinition/replaces
 Alias: $coding-pzn = http://fhir.de/StructureDefinition/CodingPZN
+Alias: $sct = http://snomed.info/sct
