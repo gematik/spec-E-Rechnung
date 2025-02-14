@@ -8,5 +8,7 @@
   filename: Über-diese-spezifikation
 - name: Szenarien
   filename: Szenarien
-- name: Artefakte
-  filename: Artefakte
+- name: Artefakte-Inhalte
+  filename: Artefakte-Inhalte
+- name: Artefakte-Metadaten
+  filename: Artefakte-Metadaten
