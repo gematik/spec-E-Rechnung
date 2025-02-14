@@ -11,6 +11,8 @@ canonical7: https://gematik.de/fhir/erg/StructureDefinition/erg-rechnungsprozedu
 
 {{index:current}}
 
+## Zuordnung Rechnungsinhalte zum FHIR Element
+
 <fql>
 from
 	StructureDefinition
