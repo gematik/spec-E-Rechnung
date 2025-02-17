@@ -3,6 +3,11 @@ RuleSet: BundleRequest(method, url)
   * method = #{method}
   * url = {url}
 
+RuleSet: Expectation (expectation)
+* extension[+]
+  * url = $capabilitystatement-expectation
+  * valueCode = {expectation}
+
 RuleSet: Meta
 * ^status = #active
 * ^version = "1.0.0-CC"
@@ -11,3 +16,12 @@ RuleSet: Meta
 * ^publisher = "gematik GmbH"
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "http://gematik.de/"
+
+RuleSet: MetaInstance
+* version = "1.0.0-CC"
+* status = #active
+* experimental = false
+* publisher = "gematik GmbH"
+* contact.telecom.system = #url
+* contact.telecom.value = "http://gematik.de/"
+* date = "2025-02-28"
