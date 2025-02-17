@@ -1,11 +1,10 @@
 Instance: CapabilityStatementFD
 InstanceOf: CapabilityStatement
 Usage: #definition
-* insert Meta-CapabilityStatement
+* insert MetaInstance
+* url = "https://gematik.de/fhir/erg/CapabilityStatement/ISiKCapabilityStatementBasisServer"
 * name = "CapabilityStatementFD"
 * title = "CapabilityStatement Fachdienst E-Rechnnung"
-* contact.telecom.system = #url
-* contact.telecom.value = "https://www.gematik.de"
 * description = 
   "Dieses CapabilityStatement beschreibt alle Interaktionen, 
   die ein E-Rechnung-konformer Fachdienst unterstützen MUSS bzw. KANN.
@@ -73,14 +72,16 @@ Usage: #definition
       * insert Expectation (#SHALL)
       * name = "retrieve"
       * definition = "https://gematik.de/fhir/erg/OperationDefinition/Retrieve"
-        * operation[+]
-    * insert Expectation (#SHALL)
+    * operation[+]
+      * insert Expectation (#SHALL)
       * name = "change-status"
       * definition = "https://gematik.de/fhir/erg/OperationDefinition/ChangeStatus"
-    * insert Expectation (#SHALL)
+    * operation[+]
+      * insert Expectation (#SHALL)
       * name = "process-flag"
       * definition = "https://gematik.de/fhir/erg/OperationDefinition/ProcessFlag"
-    * insert Expectation (#SHALL)
+    * operation[+]
+      * insert Expectation (#SHALL)
       * name = "erase"
       * definition = "https://gematik.de/fhir/erg/OperationDefinition/Erase"
   * resource[+]
