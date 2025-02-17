@@ -77,7 +77,7 @@ Usage: #definition
       * type = #reference
     * searchParam[+]
       * insert Expectation (#SHALL)
-      * name = "subject"
+      * name = "type"
       * definition = "http://hl7.org/fhir/SearchParameter/clinical-type"
       * type = #token
     * searchParam[+]
