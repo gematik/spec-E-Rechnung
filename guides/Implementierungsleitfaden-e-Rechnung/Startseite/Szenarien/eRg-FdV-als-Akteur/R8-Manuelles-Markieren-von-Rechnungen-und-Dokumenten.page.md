@@ -30,7 +30,7 @@ Die Input- und Output-Parameter werden durch die OperationDefinition `https://ge
 ### Beispiele
 
 ```
-HTTP GET [fachdienst-endpunkt]/DocumentReference/[id]/$change-status
+HTTP GET [fachdienst-endpunkt]/DocumentReference/[id]/$process-flag
 ```
 
 <tabs>
