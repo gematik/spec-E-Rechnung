@@ -25,6 +25,12 @@ Usage: #definition
       * code = #read
     * interaction[+]
       * insert Expectation (#SHALL)
+      * code = #search-type
+    * searchParam[+]
+      * insert Expectation (#SHALL)
+      * name = "_id"
+      * definition = "http://hl7.org/fhir/SearchParameter/Resource-id"
+      * type = #token
     * searchParam[+]
       * insert Expectation (#SHALL)
       * name = "identifier"
@@ -43,6 +49,17 @@ Usage: #definition
     * type = #DocumentReference
     * insert Expectation (#SHALL)
     * supportedProfile = Canonical(ERGRechnungsdokument)
+    * interaction[+]
+      * insert Expectation (#SHALL)
+      * code = #read
+    * interaction[+]
+      * insert Expectation (#SHALL)
+      * code = #search-type
+    * searchParam[+]
+      * insert Expectation (#SHALL)
+      * name = "_id"
+      * definition = "http://hl7.org/fhir/SearchParameter/Resource-id"
+      * type = #token
     * searchParam[+]
       * insert Expectation (#SHALL)
       * name = "_tag"
@@ -87,7 +104,18 @@ Usage: #definition
   * resource[+]
     * type = #AuditEvent
     * insert Expectation (#SHALL)
+    * interaction[+]
+      * insert Expectation (#SHALL)
+      * code = #read
+    * interaction[+]
+      * insert Expectation (#SHALL)
+      * code = #search-type
     * supportedProfile = Canonical(ERGNutzungsprotokoll)
+    * searchParam[+]
+      * insert Expectation (#SHALL)
+      * name = "_id"
+      * definition = "http://hl7.org/fhir/SearchParameter/Resource-id"
+      * type = #token
     * searchParam[+]
       * insert Expectation (#SHALL)
       * name = "agent"
