@@ -1,5 +1,7 @@
 - name: Index
   filename: Index.page.md
+- name: CapabilityStatementFD
+  filename: CapabilityStatements
 - name: ERGDokumentenmetadaten (DocumentReference)
   filename: Datenobjekt_dokumentenmetadaten
 - name: ERGNutzungsprotokoll (AuditEvent)
