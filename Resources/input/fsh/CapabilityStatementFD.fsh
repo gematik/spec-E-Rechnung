@@ -2,7 +2,7 @@ Instance: CapabilityStatementFD
 InstanceOf: CapabilityStatement
 Usage: #definition
 * insert MetaInstance
-* url = "https://gematik.de/fhir/erg/CapabilityStatement/ISiKCapabilityStatementBasisServer"
+* url = "https://gematik.de/fhir/erg/CapabilityStatement/ERGCapabilityStatementFD"
 * name = "CapabilityStatementFD"
 * title = "CapabilityStatement Fachdienst E-Rechnnung"
 * description = 
