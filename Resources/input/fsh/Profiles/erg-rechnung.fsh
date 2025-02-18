@@ -140,13 +140,13 @@ Id: erg-rechnung
 * recipient only Reference(ERGPatient or Patient)
   * reference 1.. MS
   * identifier 1.. MS
-  * identifier only IdentifierKvid10 //TODO Info an Klaus
+  * identifier only IdentifierKvid10
     * ^comment = "Das System des Leistungserbringers referenziert hier üblicherweise 
     auf die lokale Instanz des Patienten um die Rechnung einer Patientenakte zuzuordnen. 
     Der Fachdienst substitutiert den Link mit der Referenz auf das Postfach des Patienten 
     bei der Extraktion der Invoice aus dem Bundle. Die Angabe der Versichertennummer dient 
     der Plausibilisierung. Die KV-Nummer in der Instanz des Bundles muss daher mit der 
-    KV-Nummer übereinstimmen, die im Fachdienst für das Postfach des Rechnungsempfängers hinterlegt ist." //TODO-102 Text aus erster Version
+    KV-Nummer übereinstimmen, die im Fachdienst für das Postfach des Rechnungsempfängers hinterlegt ist."
   * display 1.. MS
 * status MS
   * ^short = "Status der Rechnung"
@@ -279,7 +279,7 @@ Id: erg-rechnung
       * value MS
       * system MS
       * code MS
-* lineItem MS //TODO-102 Sequenz? -> MS und KANN
+* lineItem MS
   * ^short = "Rechnungspositionen"
 * lineItem.sequence 1.. MS
   * ^short = "Reihenfolge der Rechnungsposition"
