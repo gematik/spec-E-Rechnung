@@ -1,12 +1,12 @@
 - name: Index
   filename: Index.page.md
+- name: ERGDokumentenmetadaten (DocumentReference)
+  filename: Datenobjekt_dokumentenmetadaten
+- name: ERGNutzungsprotokoll (AuditEvent)
+  filename: Datenobjekt_nutzungsprotokoll
+- name: ERGRechnungsdokument (Binary)
+  filename: Datenobjekt_rechnungsdokument
 - name: Terminologien
   filename: Terminologien
 - name: Extensions
   filename: Extensions
-- name: ERGDokumentenmetadaten (DocumentReference).
-  filename: Datenobjekt_dokumentenmetadaten
-- name: ERGNutzungsprotokoll (AuditEvent).
-  filename: Datenobjekt_nutzungsprotokoll
-- name: ERGRechnungsdokument (Binary).
-  filename: Datenobjekt_rechnungsdokument

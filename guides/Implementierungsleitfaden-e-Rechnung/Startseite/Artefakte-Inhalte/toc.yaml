@@ -1,18 +1,18 @@
 - name: Index
   filename: Index.page.md
-- name: ERGInstitution (Organization).
+- name: ERGInstitution (Organization)
   filename: Datenobjekt_institution
-- name: ERGPerson (Practitioner).
+- name: ERGPerson (Practitioner)
   filename: Datenobjekt_person
-- name: ERGPatient (Patient).
+- name: ERGPatient (Patient)
   filename: Datenobjekt_patient
-- name: ERGRechnung (Invoice).
+- name: ERGRechnung (Invoice)
   filename: Datenobjekt_rechnung
-- name: ERGRechnungsposition (ChargeItem).
+- name: ERGRechnungsposition (ChargeItem)
   filename: Datenobjekt_rechnungsposition
-- name: ERGRechnungsdiagnose (Condition).
+- name: ERGRechnungsdiagnose (Condition)
   filename: Datenobjekt_rechnungsdiagnose
-- name: ERGRechnungsprozedur (Procedure).
+- name: ERGRechnungsprozedur (Procedure)
   filename: Datenobjekt_rechnungsprozedur
 - name: Terminologien
   filename: Terminologien
