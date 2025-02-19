@@ -12,6 +12,7 @@ Alias: $identifier-bsnr = http://fhir.de/StructureDefinition/identifier-bsnr
 Alias: $identifier-telematikId = http://fhir.de/StructureDefinition/identifier-telematik-id
 Alias: $identifier-kvnr = http://fhir.de/StructureDefinition/identifier-kvid-10
 Alias: $identifier-kvnr-type = http://fhir.de/CodeSystem/identifier-type-de-basis
+Alias: $identifier-kzvabrechnungsnr = http://fhir.de/StructureDefinition/identifier-kzva
 Alias: $restful-interaction = http://hl7.org/fhir/restful-interaction
 Alias: $EncounterClassDe-vs = http://fhir.de/ValueSet/EncounterClassDE
 Alias: $EncounterClassDe-cs = http://terminology.hl7.org/CodeSystem/v3-ActCode

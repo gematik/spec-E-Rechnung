@@ -11,6 +11,7 @@ Id: erg-institution
     Telematik-ID ..1 MS and
     IKNR ..1 MS and
     BSNR ..1 MS and
+    KZVAbrechnungsnummer ..1 MS and
     USt-ID-Nr ..1 MS
 * identifier[Telematik-ID] only $identifier-telematikId
   * ^patternIdentifier.type = $v2-0203#PRN
@@ -42,6 +43,16 @@ Id: erg-institution
     * ^short = "Betriebsstättennummer"
   * ^short = "Betriebsstättennummer"
   * ^comment = "Die Betriebsstättennummer für vertragsärztliche Praxen SOLL vorhanden sein."
+* identifier[KZVAbrechnungsnummer] only $identifier-kzvabrechnungsnr
+  * ^patternIdentifier.type = $identifier-kvnr-type#KZVA
+  * type 1.. MS
+  * system MS
+    * ^short = "System der Abrechnungsnummer für zahnärztliche Praxen"
+    * ^comment = "Das System der Abrechnungsnummer für zahnärztliche Praxen MUSS vorhanden sein."
+  * value MS
+    * ^short = "Abrechnungsnummer für zahnärztliche Praxen"
+  * ^short = "Abrechnungsnummer für zahnärztliche Praxen"
+  * ^comment = "Die Abrechnungsnummer für zahnärztliche Praxen SOLL vorhanden sein."
 * identifier[USt-ID-Nr]
   * ^patternIdentifier.type.text = "UmsatzsteuerId"
   * type 1.. MS
