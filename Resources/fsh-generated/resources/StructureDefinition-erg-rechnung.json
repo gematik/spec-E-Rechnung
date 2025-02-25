@@ -175,9 +175,9 @@
         "mustSupport": true
       },
       {
-        "id": "Invoice.extension:Benhandlungsart",
+        "id": "Invoice.extension:Behandlungsart",
         "path": "Invoice.extension",
-        "sliceName": "Benhandlungsart",
+        "sliceName": "Behandlungsart",
         "short": "Behandlungsart",
         "comment": "Die Behandlungsart MUSS vorhanden sein.",
         "min": 1,
@@ -193,19 +193,19 @@
         "mustSupport": true
       },
       {
-        "id": "Invoice.extension:Benhandlungsart.value[x]",
+        "id": "Invoice.extension:Behandlungsart.value[x]",
         "path": "Invoice.extension.value[x]",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "Invoice.extension:Benhandlungsart.value[x].system",
+        "id": "Invoice.extension:Behandlungsart.value[x].system",
         "path": "Invoice.extension.value[x].system",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "Invoice.extension:Benhandlungsart.value[x].code",
+        "id": "Invoice.extension:Behandlungsart.value[x].code",
         "path": "Invoice.extension.value[x].code",
         "min": 1,
         "mustSupport": true

@@ -110,24 +110,24 @@
         ]
       },
       {
-        "id": "Extension.extension:Faktor.extension:FaktorID",
+        "id": "Extension.extension:Faktor.extension:FaktorGrund",
         "path": "Extension.extension.extension",
-        "sliceName": "FaktorID",
+        "sliceName": "FaktorGrund",
         "min": 0,
         "max": "1"
       },
       {
-        "id": "Extension.extension:Faktor.extension:FaktorID.extension",
+        "id": "Extension.extension:Faktor.extension:FaktorGrund.extension",
         "path": "Extension.extension.extension.extension",
         "max": "0"
       },
       {
-        "id": "Extension.extension:Faktor.extension:FaktorID.url",
+        "id": "Extension.extension:Faktor.extension:FaktorGrund.url",
         "path": "Extension.extension.extension.url",
-        "fixedUri": "FaktorID"
+        "fixedUri": "FaktorGrund"
       },
       {
-        "id": "Extension.extension:Faktor.extension:FaktorID.value[x]",
+        "id": "Extension.extension:Faktor.extension:FaktorGrund.value[x]",
         "path": "Extension.extension.extension.value[x]",
         "type": [
           {
@@ -136,7 +136,7 @@
         ],
         "binding": {
           "strength": "required",
-          "valueSet": "https://gematik.de/fhir/erg/ValueSet/erg-rechnungsposition-faktor-id-auspraegungen-VS"
+          "valueSet": "https://gematik.de/fhir/erg/ValueSet/erg-rechnungsposition-faktor-gruende-auspraegungen-VS"
         }
       },
       {
@@ -150,16 +150,16 @@
         "max": "0"
       },
       {
-        "id": "Extension.extension:FaktorId",
+        "id": "Extension.extension:FaktorGrund",
         "path": "Extension.extension",
-        "sliceName": "FaktorId",
+        "sliceName": "FaktorGrund",
         "min": 0,
         "max": "1"
       },
       {
-        "id": "Extension.extension:FaktorId.url",
+        "id": "Extension.extension:FaktorGrund.url",
         "path": "Extension.extension.url",
-        "fixedUri": "FaktorId"
+        "fixedUri": "FaktorGrund"
       },
       {
         "id": "Extension.extension:MinderungP6GOÄ",

@@ -367,15 +367,15 @@
         "mustSupport": true
       },
       {
-        "id": "ChargeItem.extension:GebührenordnungAngaben.extension:Faktor.extension:FaktorID",
+        "id": "ChargeItem.extension:GebührenordnungAngaben.extension:Faktor.extension:FaktorGrund",
         "path": "ChargeItem.extension.extension.extension",
-        "sliceName": "FaktorID",
-        "short": "Faktor FaktorID",
-        "comment": "Im Falle einer GOÄ-neu Rechnungsposition SOLL die Faktor FaktorID vorhanden sein.\n      Im Falle einer GOÄ Rechnungsposition KANN die Faktor FaktorID vorhanden sein.\n      Im Falle einer GOZ oder BEMA Rechnungsposition ist die Faktor FaktorID nicht gefordert.",
+        "sliceName": "FaktorGrund",
+        "short": "Faktor Grund",
+        "comment": "Im Falle einer GOÄ-neu Rechnungsposition SOLL der Faktor Grund vorhanden sein.\n      Im Falle einer GOÄ Rechnungsposition KANN der Faktor Grund vorhanden sein.\n      Im Falle einer GOZ oder BEMA Rechnungsposition ist der Faktor Grund nicht gefordert.",
         "mustSupport": true
       },
       {
-        "id": "ChargeItem.extension:GebührenordnungAngaben.extension:Faktor.extension:FaktorID.value[x]",
+        "id": "ChargeItem.extension:GebührenordnungAngaben.extension:Faktor.extension:FaktorGrund.value[x]",
         "path": "ChargeItem.extension.extension.extension.value[x]",
         "mustSupport": true
       },
