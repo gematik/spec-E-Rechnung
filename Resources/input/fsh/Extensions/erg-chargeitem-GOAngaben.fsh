@@ -6,7 +6,7 @@ Context: ChargeItem
   Einfachsatz ..1 and
   Punktzahl ..1 and
   Faktor ..1 and
-  FaktorId ..1 and
+  FaktorGrund ..1 and
   MinderungP6GOÄ ..1
 * extension[Einfachsatz]
   * value[x] only Money
@@ -15,11 +15,11 @@ Context: ChargeItem
 * extension[Faktor]
   * extension contains 
     Value ..1 and
-    FaktorID ..1
+    FaktorGrund ..1
   * extension[Value].value[x] only decimal
-  * extension[FaktorID]
+  * extension[FaktorGrund]
     * value[x] only Coding
-    * valueCoding from ERGRechnungspositionFaktorIdAuspraegungenVS (required)  
+    * valueCoding from ERGRechnungspositionFaktorGruendeVS (required)  
 * extension[MinderungP6GOÄ]
   * value[x] only Quantity
   * valueQuantity

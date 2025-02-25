@@ -7,7 +7,7 @@ Id: erg-rechnung
   http://hl7.org/fhir/5.0/StructureDefinition/extension-Invoice.period[x] named Behandlungszeitraum 0..1 MS and
   ERGAbrechnungsDiagnoseProzedur named AbrechnungsDiagnoseProzedur 0..* MS and
   ERGAbrechnungsDiagnoseProzedurFreitext named AbrechnungsDiagnoseProzedurFreitext ..1 MS and
-  ERGBehandlungsart named Benhandlungsart 1..1 MS and
+  ERGBehandlungsart named Behandlungsart 1..1 MS and
   ERGFachrichtung named Fachrichtung 1..1 MS and
   $extension-replaces named Korrekturrechnung ..1 MS and
   ERGTokenStornierteRechnung named Korrekturtoken ..1 MS and
@@ -38,7 +38,7 @@ Id: erg-rechnung
   * ^comment = "Im Falle einer GOÄ, GOZ oder BEMA Rechnung, SOLLEN Diagnose und Prozedure als Freitextangabe vorhanden sein.
   Im Falle einer GOÄ-neu Rechnung werden keine Diagnosen und Prozeduren als Freitext gefordert."
   * valueString 1.. MS
-* extension[Benhandlungsart]
+* extension[Behandlungsart]
   * ^short = "Behandlungsart"
   * ^comment = "Die Behandlungsart MUSS vorhanden sein."
   * valueCoding 1..1 MS

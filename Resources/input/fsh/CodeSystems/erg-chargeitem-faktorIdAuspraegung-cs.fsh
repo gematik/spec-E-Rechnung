@@ -1,6 +1,6 @@
-CodeSystem: ERGRechnungspositionFaktorIdAuspraegungenCS
-Id: erg-rechnungsposition-faktor-id-auspraegungen-CS
-Title: "ERG Rechnungsposition FaktorIDen der FaktorID CodeSystem"
+CodeSystem: ERGRechnungspositionFaktorGruendeCS
+Id: erg-rechnungsposition-faktor-gruende-CS
+Title: "ERG Rechnungsposition Faktor Gründe CodeSystem"
 * #HV "Honorarvereinbarung" "Die HV ist der Rechnung beizulegen."
 * #BT "Basistarif"
 * #ST "Standardtarif"

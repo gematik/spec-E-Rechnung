@@ -82,11 +82,11 @@ Id: erg-rechnungsposition
       * ^short = "Faktor"
       * ^comment = "Im Falle einer GOÄ, GOÄ-neu oder GOZ Rechnungsposition SOLL der Faktor vorhanden sein."
       * valueDecimal MS
-    * extension[FaktorID] MS
-      * ^short = "Faktor FaktorID"
-      * ^comment = "Im Falle einer GOÄ-neu Rechnungsposition SOLL die Faktor FaktorID vorhanden sein.
-      Im Falle einer GOÄ Rechnungsposition KANN die Faktor FaktorID vorhanden sein.
-      Im Falle einer GOZ oder BEMA Rechnungsposition ist die Faktor FaktorID nicht gefordert."
+    * extension[FaktorGrund] MS
+      * ^short = "Faktor Grund"
+      * ^comment = "Im Falle einer GOÄ-neu Rechnungsposition SOLL der Faktor Grund vorhanden sein.
+      Im Falle einer GOÄ Rechnungsposition KANN der Faktor Grund vorhanden sein.
+      Im Falle einer GOZ oder BEMA Rechnungsposition ist der Faktor Grund nicht gefordert."
       * valueCoding MS
   * extension[MinderungP6GOÄ] MS
     * ^short = "Minderungen nach §6a GOÄ in Prozent"

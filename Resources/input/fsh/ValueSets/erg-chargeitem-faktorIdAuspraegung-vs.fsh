@@ -1,4 +1,4 @@
-ValueSet: ERGRechnungspositionFaktorIdAuspraegungenVS
-Id: erg-rechnungsposition-faktor-id-auspraegungen-VS
-Title: "ERG Rechnungsposition FaktorIDen der FaktorID ValueSet"
-* include codes from system ERGRechnungspositionFaktorIdAuspraegungenCS
+ValueSet: ERGRechnungspositionFaktorGruendeVS
+Id: erg-rechnungsposition-faktor-gruende-auspraegungen-VS
+Title: "ERG Rechnungsposition Faktor Gründe ValueSet"
+* include codes from system ERGRechnungspositionFaktorGruendeCS
