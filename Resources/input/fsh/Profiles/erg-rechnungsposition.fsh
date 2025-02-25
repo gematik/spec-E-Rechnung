@@ -120,7 +120,7 @@ Id: erg-rechnungsposition
       * ^short = "Legendentext der Gebührenordnung"
   * coding[GOZ]
     * ^short = "GOZ Ziffer"
-    * ^patternCoding.system = "http://fhir.de/CodeSystem/bzäk/goz"
+    * ^patternCoding.system = "http://fhir.de/CodeSystem/bäk/gzä"
     * code MS
     * system MS
     * display MS
