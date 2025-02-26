@@ -17,7 +17,6 @@ Die nachfolgende Interaktion ist relevant für den FD als Server, sowie für das
 |Suchresultatparameter `_count`|Durch den Client gewünschte Page-Size, der FD KANN Vorgaben für die Maximale Page-Size definieren|
 |User-Kontext `KVNR`| Kardinalität: 1..1<br>Hinweis: Die KVNR ist aus dem Claim `urn:telematik:claims:id` des mitzusendenen Access-Token zu extrahieren.|
 
-ToDo: Custom SearchParameter definieren
 
 |API-Zustand|HTTP-Status-Code|
 |-|-|
