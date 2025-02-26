@@ -61,25 +61,25 @@ mit Body:
 
 Es MUSS durch den FD sichergestellt werden, dass die zurückgegebene Patient-Ressourcen eine stabile id besitzten.
 
-Die zurückgegebene Patient-Ressource MUSS valide gegen das Profil `ERGPKVersichertePerson` sein.
+Die zurückgegebene Patient-Ressource MUSS valide gegen das Profil `ERGPatient` sein.
 
 <fql output="table" headers="true">
 from
 	StructureDefinition
 where
-	url = 'https://gematik.de/fhir/erg/StructureDefinition/erg-versicherteperson'
+	url = 'https://gematik.de/fhir/erg/StructureDefinition/erg-patient'
 select
 	Canonical: url, Status: status, Version: version, Basis: baseDefinition
 </fql>
 
 <br>
 
-{{tree:https://gematik.de/fhir/erg/StructureDefinition/erg-versicherteperson, buttons}}
+{{tree:https://gematik.de/fhir/erg/StructureDefinition/erg-patient, buttons}}
 
 <br>
 
 Folgende Implementierungshinweise sind zu beachten:
 
 <fql output="table" headers="false">
-from StructureDefinition where url = 'https://gematik.de/fhir/erg/StructureDefinition/erg-versicherteperson' for differential.element where comment.exists() select path, comment
+from StructureDefinition where url = 'https://gematik.de/fhir/erg/StructureDefinition/erg-patient' for differential.element where comment.exists() select path, comment
 </fql>
