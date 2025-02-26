@@ -14,7 +14,7 @@ Die nachfolgende Interaktion ist relevant für den FD als Server, sowie für das
 |HTTP-Methode|GET|
 |Endpunkt|/Patient|
 |Suchparameter `identifier`| Kardinalität: 1..1 <br>Type: Token<br>Hinweis: Hierbei handelt es sich immer um eine KVNR, das System `http://fhir.de/sid/gkv/kvid-10` MUSS durch den FD ergänzt werden, falls der Client dies nicht mitliefert.|
-|Suchparameter `birthdate`| Kardinalität: 1..1<br>Type: date|
+|Suchparameter `birthdate`| Kardinalität: 1..1<br>Type: date<br>Das Geburtsdatum MUSS taggenau übergeben werden. Such-Modifier, wie z.B. 'le', 'ge' sind in diesem Kontext nicht vorgesehen.|
 |User-Kontext `Telematik-ID`| Kardinalität: 1..1<br>Hinweis: Die Telematik-ID ist aus dem Claim `idNummer` des mitzusendenen Access-Token zu extrahieren.|
 
 |API-Zustand|HTTP-Status-Code|
