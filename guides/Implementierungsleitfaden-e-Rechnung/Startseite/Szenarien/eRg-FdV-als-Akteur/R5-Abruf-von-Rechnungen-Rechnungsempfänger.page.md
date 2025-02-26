@@ -39,9 +39,9 @@ HTTP GET [fachdienst-endpunkt]/DocumentReference?type=ABRE
 ```
 und/oder anhand des Status
 ```
-HTTP GET [fachdienst-endpunkt]/DocumentReference?date=gt2024-01-01&_tag=offen
+HTTP GET [fachdienst-endpunkt]/DocumentReference?_tag=offen
 
-HTTP GET [fachdienst-endpunkt]/DocumentReference?date=gt2024-01-01&_tag:not=papierkorb
+HTTP GET [fachdienst-endpunkt]/DocumentReference?_tag:not=papierkorb
 ```
 
 Antwort des Endpunktes im Erfolgsfall:
