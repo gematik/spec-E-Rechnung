@@ -33,7 +33,7 @@ gematik GmbH
 
 ### Ansprechpartner
 * Peter Tabeling
-* Andrea Schminck
+* Frank Weber
 * Klaus Jäde
 * Alexander Essenwanger
 
