@@ -17,13 +17,13 @@ Weitere Informationen siehe [§359a SGB V](https://www.gesetze-im-internet.de/sg
 
 ### Status
 
-Version: 1.0.0-CC
+Version: 1.0.0-rc1
 
 Realm: Deutschland
 
 Reifegrad: STU <!-- Draft, STU (Standard for Trial Use) oder Normativ--> 
 
-Datum: 20.06.2024
+Datum: 27.02.2025
 
 ### Herausgeber
 
