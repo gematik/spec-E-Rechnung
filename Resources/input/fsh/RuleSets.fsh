@@ -10,7 +10,7 @@ RuleSet: Expectation (expectation)
 
 RuleSet: Meta
 * ^status = #active
-* ^version = "1.0.0-CC"
+* ^version = "1.1.0-RC1"
 * ^experimental = false
 * ^date = "2025-02-28"
 * ^publisher = "gematik GmbH"
@@ -18,7 +18,7 @@ RuleSet: Meta
 * ^contact.telecom.value = "http://gematik.de/"
 
 RuleSet: MetaInstance
-* version = "1.0.0-CC"
+* version = "1.1.0-RC1"
 * status = #active
 * experimental = false
 * publisher = "gematik GmbH"
