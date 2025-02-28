@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "ERGAbrechnungsDiagnoseProzedur",
   "url": "https://gematik.de/fhir/erg/StructureDefinition/ERGAbrechnungsDiagnoseProzedur",
-  "version": "1.0.0-CC",
+  "version": "1.1.0-RC1",
   "name": "ERGAbrechnungsDiagnoseProzedur",
   "title": "Abrechnungsrelevanz von Diagnosen und Prozeduren",
   "status": "active",

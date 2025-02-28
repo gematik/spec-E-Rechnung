@@ -5,7 +5,7 @@
   "name": "ERGPropRestInterationsCS",
   "id": "erg-prop-rest-interactions-cs",
   "title": "ERG proprietäre RESTful Interaktionen",
-  "version": "1.0.0-CC",
+  "version": "1.1.0-RC1",
   "url": "https://gematik.de/fhir/erg/CodeSystem/erg-prop-rest-interactions-cs",
   "concept": [
     {

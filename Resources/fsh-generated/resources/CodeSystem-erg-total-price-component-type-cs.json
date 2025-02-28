@@ -5,7 +5,7 @@
   "name": "ERGTotalPriceComponentTypeCS",
   "id": "erg-total-price-component-type-cs",
   "title": "ERG Art der Rechnungssumme",
-  "version": "1.0.0-CC",
+  "version": "1.1.0-RC1",
   "url": "https://gematik.de/fhir/erg/CodeSystem/erg-total-price-component-type-cs",
   "concept": [
     {

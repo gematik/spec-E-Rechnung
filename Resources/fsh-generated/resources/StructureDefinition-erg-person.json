@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "erg-person",
   "url": "https://gematik.de/fhir/erg/StructureDefinition/erg-person",
-  "version": "1.0.0-CC",
+  "version": "1.1.0-RC1",
   "name": "ERGPerson",
   "title": "ERG Person",
   "status": "active",

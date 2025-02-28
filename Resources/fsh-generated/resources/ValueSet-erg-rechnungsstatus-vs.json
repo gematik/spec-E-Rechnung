@@ -4,7 +4,7 @@
   "name": "ERGRechnungsstatusVS",
   "id": "erg-rechnungsstatus-vs",
   "title": "ERG Rechnungsstatus",
-  "version": "1.0.0-CC",
+  "version": "1.1.0-RC1",
   "url": "https://gematik.de/fhir/erg/ValueSet/erg-rechnungsstatus-vs",
   "experimental": false,
   "date": "2025-02-28",

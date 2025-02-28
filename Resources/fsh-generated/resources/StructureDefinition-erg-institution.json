@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "erg-institution",
   "url": "https://gematik.de/fhir/erg/StructureDefinition/erg-institution",
-  "version": "1.0.0-CC",
+  "version": "1.1.0-RC1",
   "name": "ERGInstitution",
   "title": "ERG Institution",
   "status": "active",

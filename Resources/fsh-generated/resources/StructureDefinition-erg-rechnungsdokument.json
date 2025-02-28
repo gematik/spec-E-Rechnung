@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "erg-rechnungsdokument",
   "url": "https://gematik.de/fhir/erg/StructureDefinition/erg-rechnungsdokument",
-  "version": "1.0.0-CC",
+  "version": "1.1.0-RC1",
   "name": "ERGRechnungsdokument",
   "title": "ERG Rechnungsdokument",
   "status": "active",

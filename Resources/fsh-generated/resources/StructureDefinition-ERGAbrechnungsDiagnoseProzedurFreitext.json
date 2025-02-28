@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "ERGAbrechnungsDiagnoseProzedurFreitext",
   "url": "https://gematik.de/fhir/erg/StructureDefinition/ERGAbrechnungsDiagnoseProzedurFreitext",
-  "version": "1.0.0-CC",
+  "version": "1.1.0-RC1",
   "name": "ERGAbrechnungsDiagnoseProzedurFreitext",
   "title": "Abrechnungsrelevanz von Diagnosen und Prozeduren als Freitext",
   "status": "active",

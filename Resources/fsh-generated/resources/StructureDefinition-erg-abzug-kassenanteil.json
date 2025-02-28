@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "erg-abzug-kassenanteil",
   "url": "https://gematik.de/fhir/erg/StructureDefinition/erg-abzug-kassenanteil",
-  "version": "1.0.0-CC",
+  "version": "1.1.0-RC1",
   "name": "ERGAbzugKassenanteil",
   "title": "ERG Extension Abzug Kassenanteil in Prozent",
   "status": "active",

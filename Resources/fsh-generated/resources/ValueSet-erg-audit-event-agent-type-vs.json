@@ -4,7 +4,7 @@
   "name": "ERGAuditEventAgentTypeVS",
   "id": "erg-audit-event-agent-type-vs",
   "title": "ERG Audit Event Agent Type",
-  "version": "1.0.0-CC",
+  "version": "1.1.0-RC1",
   "url": "https://gematik.de/fhir/erg/ValueSet/erg-audit-event-agent-type-vs",
   "experimental": false,
   "date": "2025-02-28",

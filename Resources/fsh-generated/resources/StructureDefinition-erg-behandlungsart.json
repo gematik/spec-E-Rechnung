@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "erg-behandlungsart",
   "url": "https://gematik.de/fhir/erg/StructureDefinition/erg-behandlungsart",
-  "version": "1.0.0-CC",
+  "version": "1.1.0-RC1",
   "name": "ERGBehandlungsart",
   "title": "ERG Extension Behandlungsart",
   "status": "active",
