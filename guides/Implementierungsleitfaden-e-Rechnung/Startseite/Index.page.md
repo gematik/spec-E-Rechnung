@@ -40,7 +40,7 @@ gematik GmbH
 ### Weitere Links
 <!-- z. B. Beschreibungen des UseCases, Datenmodell, ges. Vorgaben, fachliche Anforderungen, relevante Spezifikationen-->
 * [GitHub Projekt](https://github.com/gematik/spec-E-Rechnung)
-* [Feature-Dokument E-Rechnung](https://gemspec.gematik.de/prereleases/Draft_E-Rechnung/)
+* [Feature-Dokument E-Rechnung](https://gemspec.gematik.de/prereleases/Draft_E-Rechnung_25_1/)
 
 
 
