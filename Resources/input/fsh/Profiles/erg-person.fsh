@@ -74,8 +74,8 @@ Description: "Das Profil ERGPerson wird in für die Rolle 'Behandelnder Leistung
     Strassenanschrift 0..* MS and
     Postfach 0..* MS
 * address[Strassenanschrift] only $adresse-de
-  * ^short = "Strassenanschrift"
-  * ^comment = "Die Strassenanschrift SOLL vorhanden sein."
+  * ^short = "Strassenanschrift der Arbeitsadresse"
+  * ^comment = "Die Strassenanschrift SOLL vorhanden sein. Es handelt sich hierbei um eine Arbeitsadresse, nicht um eine Privatadresse."
   * ^patternAddress.type = #both
   * type MS
   * line MS
