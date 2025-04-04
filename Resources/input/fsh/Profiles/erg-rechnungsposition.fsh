@@ -119,14 +119,14 @@ Id: erg-rechnungsposition
     * code MS
     * system MS
     * display MS
-      * ^short = "Legendentext der Gebührenordnung"
+      * ^short = "Legendentext der Gebührenordnung / Leistungsbeschreibung"
   * coding[GOZ]
     * ^short = "GOZ Ziffer"
     * ^patternCoding.system = "http://fhir.de/CodeSystem/bäk/gzä"
     * code MS
     * system MS
     * display MS
-      * ^short = "Legendentext der Gebührenordnung"
+      * ^short = "Legendentext der Gebührenordnung / Leistungsbeschreibung"
   * text MS
     * ^short = "Bezeichnung für Auslagen/Sachkosten, z.B. Wirkstoffname"
 * occurrence[x] MS
