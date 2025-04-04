@@ -28,7 +28,7 @@ Id: erg-patient
       * value 1.. MS
         * ^short = "IK-Nummer der Krankenkasse"
       * ^short = "IK-Nummer der Krankenkasse"
-      * ^comment = "Bei GKV-Versicherten Personen MUSS die IK-Nummer der Krankenkasse angegeben werden."
+      * ^comment = "Bei GKV-Versicherten Personen SOLL die IK-Nummer der Krankenkasse angegeben werden."
 * birthDate MS
   * ^short = "Geburtsdatum"
   * ^comment = "Das Geburtsdatum SOLL vorhanden sein."
