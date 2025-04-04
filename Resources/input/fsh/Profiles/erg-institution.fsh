@@ -32,7 +32,7 @@ Id: erg-institution
   * value MS
     * ^short = "IK-Nummer"
   * ^short = "IK-Nummer"
-  * ^comment = "Für privatärztliche Praxis SOLL die IK-Nummer vorhanden sein. Bei allen anderen Institutionen KANN sie vorhanden sein. Die IK-Nummer SOLL für alle Apotheken vorhanden sein."
+  * ^comment = "Für alle Institutionen KANN die IK-Nummer vorhanden sein."
 * identifier[BSNR] only $identifier-bsnr
   * ^patternIdentifier.type = $v2-0203#BSNR
   * type 1.. MS
@@ -42,13 +42,13 @@ Id: erg-institution
   * value MS
     * ^short = "Betriebsstättennummer"
   * ^short = "Betriebsstättennummer"
-  * ^comment = "Die Betriebsstättennummer für vertragsärztliche Praxen SOLL vorhanden sein."
+  * ^comment = "Die Betriebsstättennummer für vertragsärztliche Praxen KANN vorhanden sein."
 * identifier[KZVAbrechnungsnummer] only $identifier-kzvabrechnungsnr
   * ^patternIdentifier.type = $identifier-kvnr-type#KZVA
   * type 1.. MS
   * system MS
     * ^short = "System der Abrechnungsnummer für zahnärztliche Praxen"
-    * ^comment = "Das System der Abrechnungsnummer für zahnärztliche Praxen MUSS vorhanden sein."
+    * ^comment = "Das System der Abrechnungsnummer für zahnärztliche Praxen MUSS vorhanden sein, wenn eine Abrechnungsnummer angegeben ist."
   * value MS
     * ^short = "Abrechnungsnummer für zahnärztliche Praxen"
   * ^short = "Abrechnungsnummer für zahnärztliche Praxen"
