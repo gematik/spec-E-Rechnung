@@ -18,7 +18,8 @@ Id: erg-rechnungsposition
 * extension[Zusatz]
   * ^short = "Zusatz"
   * ^comment = "Im Falle einer GOÄ, GOÄ-neu oder GOZ Rechnungsposition, SOLL der Zusatz vorhanden sein.
-  Bei einer BEMA Rechnungsposition ist der Zusatz nicht gefordert."
+  Bei einer BEMA Rechnungsposition ist der Zusatz nicht gefordert.
+  Der Code F 'Leistungs zur Früherkennung' ist für GOZ-Rechnungen nicht relevant."
   * valueCoding MS
     * code 1.. MS
     * system 1.. MS
