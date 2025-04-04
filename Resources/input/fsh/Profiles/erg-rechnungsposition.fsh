@@ -102,8 +102,9 @@ Id: erg-rechnungsposition
   * ^comment = "Das Behandlungsdatum SOLL vorhanden sein."
   * valueDate MS
 * code MS
-  * ^short = "Gebührenordnung-Nummer (Ziffer oder Paragraph)"
-  * ^comment = "Ist der Rechnungspositionstyp auf eine Gebührenordnung festgelegt, SOLL die Gebührenordnung-Nummer als Ziffer oder Paragraph vorhanden sein."
+  * ^short = "Gebührenordnung-Nummer (Ziffer oder Paragraph) / Befundnummer"
+  * ^comment = "Ist der Rechnungspositionstyp auf eine Gebührenordnung festgelegt, SOLL die Gebührenordnung-Nummer als Ziffer oder Paragraph vorhanden sein.
+  Grundsätzlich sind nach dem GOZ Rechnungsformular die jeweiligen Befundnummern anzugeben."
   * coding MS
     * ^slicing.discriminator.type = #pattern
     * ^slicing.discriminator.path = "$this"
