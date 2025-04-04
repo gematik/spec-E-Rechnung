@@ -46,7 +46,8 @@ Id: erg-rechnung
     * code 1.. MS
 * extension[Fachrichtung]
   * ^short = "Fachrichtung"
-  * ^comment = "Die Fachrichtung MUSS vorhanden sein."
+  * ^comment = "Die Fachrichtung MUSS vorhanden sein.
+  Es wird empfohlen für zahnärztliche Rechnungen immer den Wert MZKH (Zahnmedizin) zu nutzen."
   * valueCoding 1..1 MS
     * system 1.. MS
     * code 1.. MS
