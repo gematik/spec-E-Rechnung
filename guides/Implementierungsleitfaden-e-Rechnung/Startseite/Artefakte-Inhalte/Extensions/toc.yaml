@@ -10,8 +10,6 @@
   filename: Invoice-Fachrichtung.page.md
 - name: Invoice-Korrekturrechnung
   filename: Invoice-Korrekturrechnung.page.md
-- name: Invoice-BemaPunktsumme
-  filename: Invoice-BemaPunktsumme.page.md
 - name: Invoice-Zusatzinformation
   filename: Invoice-Zusatzinformation.page.md
 - name: Invoice-Teilsumme

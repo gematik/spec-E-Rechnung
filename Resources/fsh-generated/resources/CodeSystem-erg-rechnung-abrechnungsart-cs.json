@@ -10,10 +10,6 @@
   "url": "https://gematik.de/fhir/erg/CodeSystem/erg-rechnung-abrechnungsart-cs",
   "concept": [
     {
-      "code": "BEMA",
-      "display": "Einheitliche Bewertungsmaßstab für zahnärztliche Leistungen"
-    },
-    {
       "code": "GOÄ",
       "display": "Gebührenordnung für Ärzte"
     },
@@ -35,5 +31,5 @@
       ]
     }
   ],
-  "count": 3
+  "count": 2
 }

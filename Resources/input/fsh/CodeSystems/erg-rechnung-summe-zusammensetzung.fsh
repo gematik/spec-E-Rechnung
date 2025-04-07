@@ -8,11 +8,9 @@ Title: "ERG Art der Rechnungssumme"
 * #Abzug "Übergeordnete Abzug-Kategorie"
 * #Abzug #FestzuschussKasse "Festzuschuss Kasse"
 * #Abzug #VorleistungKst "Vorleistungen anderer Kostenträger"
-* #Abzug #KostenBema13AtoD "Kosten gem. den BEMA-Pos. 13a - d"
 
 ValueSet: ERGTotalPriceComponentDeductionTypeVS
 Id: erg-total-price-component-deduction-type-vs
 Title: "ERG Art des Abzugs von der Summe der gesamten Rechnungspositionen"
 * ERGTotalPriceComponentTypeCS#FestzuschussKasse "Festzuschuss Kasse"
 * ERGTotalPriceComponentTypeCS#VorleistungKst "Vorleistungen anderer Kostenträger"
-* ERGTotalPriceComponentTypeCS#KostenBema13AtoD "Kosten gem. den BEMA-Pos. 13a - d"
