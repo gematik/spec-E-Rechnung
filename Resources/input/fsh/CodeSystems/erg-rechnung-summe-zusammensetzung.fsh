@@ -4,6 +4,7 @@ Title: "ERG Art der Rechnungssumme"
 * insert Meta
 * #SummeRechnungspositionen "Summe aller Rechnungspositionen"
 * #Minderung7GOZ "Minderungen nach §7 GOZ"
+* #Fremdlaborleistungen "Fremdlaborleistungen"
 * #Abzug "Übergeordnete Abzug-Kategorie"
 * #Abzug #FestzuschussKasse "Festzuschuss Kasse"
 * #Abzug #VorleistungKst "Vorleistungen anderer Kostenträger"

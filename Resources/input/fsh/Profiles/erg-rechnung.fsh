@@ -11,7 +11,8 @@ Id: erg-rechnung
   ERGFachrichtung named Fachrichtung 1..1 MS and
   $extension-replaces named Korrekturrechnung ..1 MS and
   ERGTokenStornierteRechnung named Korrekturtoken ..1 MS and
-  ERGBemaPunktsumme named BemaPunktsumme ..1 MS
+  ERGBemaPunktsumme named BemaPunktsumme ..1 MS and
+  $extension-basedOn named Antragsreferenz ..1 MS
 * extension[AbrechnungsDiagnoseProzedur]
   * ^short = "Diagnose"
   * ^comment = "Im Falle einer GOÄ oder GOÄ-neu Rechnung, SOLLEN Diagnosen und Prozeduren vorhanden sein.
@@ -46,7 +47,8 @@ Id: erg-rechnung
     * code 1.. MS
 * extension[Fachrichtung]
   * ^short = "Fachrichtung"
-  * ^comment = "Die Fachrichtung MUSS vorhanden sein."
+  * ^comment = "Die Fachrichtung MUSS vorhanden sein.
+  Es wird empfohlen für zahnärztliche Rechnungen immer den Wert MZKH (Zahnmedizin) zu nutzen."
   * valueCoding 1..1 MS
     * system 1.. MS
     * code 1.. MS
@@ -72,6 +74,21 @@ Id: erg-rechnung
     * ^short = "Punktwert der BEMA-Leistungen"
     * ^comment = "Der Punktwert der BEMA-Leistungen SOLL vorhanden sein."
     * valueDecimal MS
+* extension[Antragsreferenz]
+  * valueReference MS
+  * valueReference.reference 0..0
+  * valueReference.display 0..0
+  * valueReference.type 0..0
+  * valueReference.identifier 1..1 MS
+    * ^patternIdentifier.type = ERGRechnungIdentifierTypeCS#antragsreferenz
+    * ^short = "Referenz auf Heil- und Kostenplan, Kostenvoranschlag oder Kostenübernahmeantrag"
+    * ^comment = "Die Antragsreferenz SOLL vorhanden sein."
+    * type 1.. MS
+    * type = ERGRechnungIdentifierTypeCS#antragsreferenz
+    * system 1.. MS
+      * ^short = "NamingSystem der Antragsreferenz"
+    * value 1.. MS
+      * ^short = "Antragsreferenz"
 * identifier 1.. MS
 * identifier ^slicing.discriminator.type = #pattern
 * identifier ^slicing.discriminator.path = "$this"
@@ -85,19 +102,6 @@ Id: erg-rechnung
   * ^comment = "Die Rechnungs-Nr. (der LEI) MUSS vorhanden sein."
   * type 1.. MS
   * type = ERGRechnungIdentifierTypeCS#invoice
-  * system 1.. MS
-    * ^short = "NamingSystem der Rechnungs-Nr. (der LEI)"
-  * value 1.. MS
-    * ^short = "Rechnungs-Nr. (der LEI)"
-* date 1.. MS
-  * ^short = "Rechnungsdatum"
-  * ^comment = "Das Rechnungsdatum MUSS vorhanden sein."
-* identifier[Antragsnummer]
-  * ^patternIdentifier.type = ERGRechnungIdentifierTypeCS#auftragsnummer
-  * ^short = "Referenz auf Heil- und Kostenplan, Kostenvoranschlag oder Kostenübernahmeantrag"
-  * ^comment = "Die Rechnungs-Nr. (der LEI) MUSS vorhanden sein."
-  * type 1.. MS
-  * type = ERGRechnungIdentifierTypeCS#auftragsnummer
   * system 1.. MS
     * ^short = "NamingSystem der Rechnungs-Nr. (der LEI)"
   * value 1.. MS
@@ -225,6 +229,7 @@ Id: erg-rechnung
 * totalPriceComponent contains 
   SummeRechnungspositionen ..1 MS and
   MinderungNachGOZ ..1 MS and
+  Fremdlaborleistungen ..1 MS and
   Abzug ..* MS
 * totalPriceComponent[SummeRechnungspositionen]
   * ^short = "Summe aller Rechnungspositionen"
@@ -233,6 +238,19 @@ Id: erg-rechnung
   * type = #base
   * code 1.. MS
   * code = ERGTotalPriceComponentTypeCS#SummeRechnungspositionen
+  * factor 0..0
+  * amount ..1 MS
+    * ^short = "Wert in EUR"
+    * currency 1.. MS
+    * currency = #EUR
+    * value 1.. MS
+* totalPriceComponent[Fremdlaborleistungen]
+  * ^short = "Summe aller Fremdlaborleistungen"
+  * ^comment = "Die Summe aller Fremdlaborleistungen SOLL vorhanden sein."
+  * type MS
+  * type = #base
+  * code 1.. MS
+  * code = ERGTotalPriceComponentTypeCS#Fremdlaborleistungen
   * factor 0..0
   * amount ..1 MS
     * ^short = "Wert in EUR"

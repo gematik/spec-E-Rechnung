@@ -18,7 +18,8 @@ Id: erg-rechnungsposition
 * extension[Zusatz]
   * ^short = "Zusatz"
   * ^comment = "Im Falle einer GOÄ, GOÄ-neu oder GOZ Rechnungsposition, SOLL der Zusatz vorhanden sein.
-  Bei einer BEMA Rechnungsposition ist der Zusatz nicht gefordert."
+  Bei einer BEMA Rechnungsposition ist der Zusatz nicht gefordert.
+  Der Code F 'Leistungs zur Früherkennung' ist für GOZ-Rechnungen nicht relevant."
   * valueCoding MS
     * code 1.. MS
     * system 1.. MS
@@ -102,8 +103,9 @@ Id: erg-rechnungsposition
   * ^comment = "Das Behandlungsdatum SOLL vorhanden sein."
   * valueDate MS
 * code MS
-  * ^short = "Gebührenordnung-Nummer (Ziffer oder Paragraph)"
-  * ^comment = "Ist der Rechnungspositionstyp auf eine Gebührenordnung festgelegt, SOLL die Gebührenordnung-Nummer als Ziffer oder Paragraph vorhanden sein."
+  * ^short = "Gebührenziffer"
+  * ^comment = "Ist der Rechnungspositionstyp auf eine Gebührenordnung festgelegt, SOLL die Gebührenziffer vorhanden sein.
+  Die konkrete Bezeichnung der Gebührenziffer kann je nach Gebührenordnung abweichend sein."
   * coding MS
     * ^slicing.discriminator.type = #pattern
     * ^slicing.discriminator.path = "$this"
@@ -117,16 +119,16 @@ Id: erg-rechnungsposition
     * code MS
     * system MS
     * display MS
-      * ^short = "Legendentext der Gebührenordnung"
+      * ^short = "Legendentext der Gebührenordnung / Leistungsbeschreibung"
   * coding[GOZ]
     * ^short = "GOZ Ziffer"
     * ^patternCoding.system = "http://fhir.de/CodeSystem/bäk/gzä"
     * code MS
     * system MS
     * display MS
-      * ^short = "Legendentext der Gebührenordnung"
+      * ^short = "Legendentext der Gebührenordnung / Leistungsbeschreibung"
   * text MS
-    * ^short = "Bezeichnung für Auslagen/Sachkosten, z.B. Wirkstoffname"
+    * ^short = "Bezeichnung für Auslagen/Sachkosten, z.B. Wirkstoffname oder Fremdlaborleistung"
 * occurrence[x] MS
 * occurrence[x] only Period
   * ^short = "Leistungszeitraum"

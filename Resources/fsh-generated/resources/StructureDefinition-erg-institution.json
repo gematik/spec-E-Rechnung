@@ -93,7 +93,7 @@
         "path": "Organization.identifier",
         "sliceName": "IKNR",
         "short": "IK-Nummer",
-        "comment": "Für privatärztliche Praxis SOLL die IK-Nummer vorhanden sein. Bei allen anderen Institutionen KANN sie vorhanden sein. Die IK-Nummer SOLL für alle Apotheken vorhanden sein.",
+        "comment": "Für alle Institutionen KANN die IK-Nummer vorhanden sein.",
         "min": 0,
         "max": "1",
         "type": [
@@ -140,7 +140,7 @@
         "path": "Organization.identifier",
         "sliceName": "BSNR",
         "short": "Betriebsstättennummer",
-        "comment": "Die Betriebsstättennummer für vertragsärztliche Praxen SOLL vorhanden sein.",
+        "comment": "Die Betriebsstättennummer für vertragsärztliche Praxen KANN vorhanden sein.",
         "min": 0,
         "max": "1",
         "type": [
@@ -220,7 +220,7 @@
         "id": "Organization.identifier:KZVAbrechnungsnummer.system",
         "path": "Organization.identifier.system",
         "short": "System der Abrechnungsnummer für zahnärztliche Praxen",
-        "comment": "Das System der Abrechnungsnummer für zahnärztliche Praxen MUSS vorhanden sein.",
+        "comment": "Das System der Abrechnungsnummer für zahnärztliche Praxen MUSS vorhanden sein, wenn eine Abrechnungsnummer angegeben ist.",
         "mustSupport": true
       },
       {
