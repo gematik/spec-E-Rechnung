@@ -40,7 +40,7 @@ Die Signatur wird durch den FD über die Konkatenation aller Base64-kodierten In
 1. Attachment mit contentType = application/fhir+xml
 1. Attachment mit contentType = application/fhir+json  
 
-Weitere Details zur Signatur, siehe TODO.
+Weitere Details zur Signatur, siehe [gemSpec_eRg_FD - Abschnitt 6.5 Signatur](https://gemspec.gematik.de/prereleases/Draft_E-Rechnung_25_1/gemSpec_eRg_FD_V1.1.0_CC/#6.5).
 
 ### Rechnungsrepräsentation
 
