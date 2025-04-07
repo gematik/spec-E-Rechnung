@@ -251,8 +251,8 @@
         "id": "Practitioner.address:Strassenanschrift",
         "path": "Practitioner.address",
         "sliceName": "Strassenanschrift",
-        "short": "Strassenanschrift",
-        "comment": "Die Strassenanschrift SOLL vorhanden sein.",
+        "short": "Strassenanschrift der Arbeitsadresse",
+        "comment": "Die Strassenanschrift SOLL vorhanden sein. Es handelt sich hierbei um eine Arbeitsadresse, nicht um eine Privatadresse.",
         "min": 0,
         "max": "*",
         "type": [

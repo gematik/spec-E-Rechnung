@@ -21,8 +21,12 @@
       "display": "BEMA-Leistung"
     },
     {
-      "code": "LabborleistungMaterial",
-      "display": "Laborleistung/Material (inkl. BEL/BEB )"
+      "code": "EigenlaborleistungMaterial",
+      "display": "Eigenlaborleistung/Material"
+    },
+    {
+      "code": "Fremdlaborleistung",
+      "display": "Fremdlaborleistung"
     },
     {
       "code": "SachkostenAuslagen",
@@ -46,5 +50,5 @@
       ]
     }
   ],
-  "count": 6
+  "count": 7
 }

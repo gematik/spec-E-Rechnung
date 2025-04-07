@@ -73,7 +73,7 @@
         "path": "ChargeItem.extension",
         "sliceName": "Zusatz",
         "short": "Zusatz",
-        "comment": "Im Falle einer GOÄ, GOÄ-neu oder GOZ Rechnungsposition, SOLL der Zusatz vorhanden sein.\n  Bei einer BEMA Rechnungsposition ist der Zusatz nicht gefordert.",
+        "comment": "Im Falle einer GOÄ, GOÄ-neu oder GOZ Rechnungsposition, SOLL der Zusatz vorhanden sein.\n  Bei einer BEMA Rechnungsposition ist der Zusatz nicht gefordert.\n  Der Code F 'Leistungs zur Früherkennung' ist für GOZ-Rechnungen nicht relevant.",
         "min": 0,
         "max": "1",
         "type": [
@@ -449,8 +449,8 @@
       {
         "id": "ChargeItem.code",
         "path": "ChargeItem.code",
-        "short": "Gebührenordnung-Nummer (Ziffer oder Paragraph)",
-        "comment": "Ist der Rechnungspositionstyp auf eine Gebührenordnung festgelegt, SOLL die Gebührenordnung-Nummer als Ziffer oder Paragraph vorhanden sein.",
+        "short": "Gebührenziffer",
+        "comment": "Ist der Rechnungspositionstyp auf eine Gebührenordnung festgelegt, SOLL die Gebührenziffer vorhanden sein.\n  Die konkrete Bezeichnung der Gebührenziffer kann je nach Gebührenordnung abweichend sein.",
         "mustSupport": true
       },
       {
@@ -492,7 +492,7 @@
       {
         "id": "ChargeItem.code.coding:GOÄ.display",
         "path": "ChargeItem.code.coding.display",
-        "short": "Legendentext der Gebührenordnung",
+        "short": "Legendentext der Gebührenordnung / Leistungsbeschreibung",
         "mustSupport": true
       },
       {
@@ -520,13 +520,13 @@
       {
         "id": "ChargeItem.code.coding:GOZ.display",
         "path": "ChargeItem.code.coding.display",
-        "short": "Legendentext der Gebührenordnung",
+        "short": "Legendentext der Gebührenordnung / Leistungsbeschreibung",
         "mustSupport": true
       },
       {
         "id": "ChargeItem.code.text",
         "path": "ChargeItem.code.text",
-        "short": "Bezeichnung für Auslagen/Sachkosten, z.B. Wirkstoffname",
+        "short": "Bezeichnung für Auslagen/Sachkosten, z.B. Wirkstoffname oder Fremdlaborleistung",
         "mustSupport": true
       },
       {

@@ -96,7 +96,7 @@
         "id": "Patient.identifier:KVNR.assigner.identifier",
         "path": "Patient.identifier.assigner.identifier",
         "short": "IK-Nummer der Krankenkasse",
-        "comment": "Bei GKV-Versicherten Personen MUSS die IK-Nummer der Krankenkasse angegeben werden.",
+        "comment": "Bei GKV-Versicherten Personen SOLL die IK-Nummer der Krankenkasse angegeben werden.",
         "type": [
           {
             "code": "Identifier",

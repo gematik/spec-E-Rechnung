@@ -215,7 +215,7 @@
         "path": "Invoice.extension",
         "sliceName": "Fachrichtung",
         "short": "Fachrichtung",
-        "comment": "Die Fachrichtung MUSS vorhanden sein.",
+        "comment": "Die Fachrichtung MUSS vorhanden sein.\n  Es wird empfohlen für zahnärztliche Rechnungen immer den Wert MZKH (Zahnmedizin) zu nutzen.",
         "min": 1,
         "max": "1",
         "type": [
@@ -357,6 +357,88 @@
         "mustSupport": true
       },
       {
+        "id": "Invoice.extension:Antragsreferenz",
+        "path": "Invoice.extension",
+        "sliceName": "Antragsreferenz",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/event-basedOn"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.extension:Antragsreferenz.value[x]",
+        "path": "Invoice.extension.value[x]",
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.extension:Antragsreferenz.value[x].reference",
+        "path": "Invoice.extension.value[x].reference",
+        "max": "0"
+      },
+      {
+        "id": "Invoice.extension:Antragsreferenz.value[x].type",
+        "path": "Invoice.extension.value[x].type",
+        "max": "0"
+      },
+      {
+        "id": "Invoice.extension:Antragsreferenz.value[x].identifier",
+        "path": "Invoice.extension.value[x].identifier",
+        "short": "Referenz auf Heil- und Kostenplan, Kostenvoranschlag oder Kostenübernahmeantrag",
+        "comment": "Die Antragsreferenz SOLL vorhanden sein.",
+        "min": 1,
+        "patternIdentifier": {
+          "type": {
+            "coding": [
+              {
+                "code": "antragsreferenz",
+                "system": "https://gematik.de/fhir/erg/CodeSystem/erg-rechnung-identifier-type-cs"
+              }
+            ]
+          }
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.extension:Antragsreferenz.value[x].identifier.type",
+        "path": "Invoice.extension.value[x].identifier.type",
+        "min": 1,
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "antragsreferenz",
+              "system": "https://gematik.de/fhir/erg/CodeSystem/erg-rechnung-identifier-type-cs"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.extension:Antragsreferenz.value[x].identifier.system",
+        "path": "Invoice.extension.value[x].identifier.system",
+        "short": "NamingSystem der Antragsreferenz",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.extension:Antragsreferenz.value[x].identifier.value",
+        "path": "Invoice.extension.value[x].identifier.value",
+        "short": "Antragsreferenz",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.extension:Antragsreferenz.value[x].display",
+        "path": "Invoice.extension.value[x].display",
+        "max": "0"
+      },
+      {
         "id": "Invoice.identifier",
         "path": "Invoice.identifier",
         "slicing": {
@@ -423,48 +505,8 @@
         "id": "Invoice.identifier:Antragsnummer",
         "path": "Invoice.identifier",
         "sliceName": "Antragsnummer",
-        "short": "Referenz auf Heil- und Kostenplan, Kostenvoranschlag oder Kostenübernahmeantrag",
-        "comment": "Die Rechnungs-Nr. (der LEI) MUSS vorhanden sein.",
         "min": 0,
         "max": "1",
-        "patternIdentifier": {
-          "type": {
-            "coding": [
-              {
-                "code": "auftragsnummer",
-                "system": "https://gematik.de/fhir/erg/CodeSystem/erg-rechnung-identifier-type-cs"
-              }
-            ]
-          }
-        },
-        "mustSupport": true
-      },
-      {
-        "id": "Invoice.identifier:Antragsnummer.type",
-        "path": "Invoice.identifier.type",
-        "min": 1,
-        "patternCodeableConcept": {
-          "coding": [
-            {
-              "code": "auftragsnummer",
-              "system": "https://gematik.de/fhir/erg/CodeSystem/erg-rechnung-identifier-type-cs"
-            }
-          ]
-        },
-        "mustSupport": true
-      },
-      {
-        "id": "Invoice.identifier:Antragsnummer.system",
-        "path": "Invoice.identifier.system",
-        "short": "NamingSystem der Rechnungs-Nr. (der LEI)",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Invoice.identifier:Antragsnummer.value",
-        "path": "Invoice.identifier.value",
-        "short": "Rechnungs-Nr. (der LEI)",
-        "min": 1,
         "mustSupport": true
       },
       {
@@ -1179,6 +1221,106 @@
       },
       {
         "id": "Invoice.totalPriceComponent:MinderungNachGOZ.amount.currency",
+        "path": "Invoice.totalPriceComponent.amount.currency",
+        "min": 1,
+        "patternCode": "EUR",
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.totalPriceComponent:Fremdlaborleistungen",
+        "path": "Invoice.totalPriceComponent",
+        "sliceName": "Fremdlaborleistungen",
+        "short": "Summe aller Fremdlaborleistungen",
+        "comment": "Die Summe aller Fremdlaborleistungen SOLL vorhanden sein.",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.totalPriceComponent:Fremdlaborleistungen.extension:Teilsumme",
+        "path": "Invoice.totalPriceComponent.extension",
+        "sliceName": "Teilsumme",
+        "short": "Teilsummen in EUR für die Rechnungspositionstyp",
+        "comment": "Für alle vorkommenden Rechnungspositionstypen SOLL eine Teilsumme vorhanden sein.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://gematik.de/fhir/erg/StructureDefinition/ERGTeilsumme"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.totalPriceComponent:Fremdlaborleistungen.extension:Teilsumme.extension:Type",
+        "path": "Invoice.totalPriceComponent.extension.extension",
+        "sliceName": "Type",
+        "short": "Rechnungspositionstyp",
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.totalPriceComponent:Fremdlaborleistungen.extension:Teilsumme.extension:Summe",
+        "path": "Invoice.totalPriceComponent.extension.extension",
+        "sliceName": "Summe",
+        "short": "Bruttosumme",
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.totalPriceComponent:Fremdlaborleistungen.extension:Teilsumme.extension:UStProzent",
+        "path": "Invoice.totalPriceComponent.extension.extension",
+        "sliceName": "UStProzent",
+        "short": "Enthaltene Umsatzsteuer in Prozent",
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.totalPriceComponent:Fremdlaborleistungen.extension:Teilsumme.extension:UStBetrag",
+        "path": "Invoice.totalPriceComponent.extension.extension",
+        "sliceName": "UStBetrag",
+        "short": "Enthaltene Umsatzsteuer als Betrag",
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.totalPriceComponent:Fremdlaborleistungen.type",
+        "path": "Invoice.totalPriceComponent.type",
+        "patternCode": "base",
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.totalPriceComponent:Fremdlaborleistungen.code",
+        "path": "Invoice.totalPriceComponent.code",
+        "min": 1,
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "Fremdlaborleistungen",
+              "system": "https://gematik.de/fhir/erg/CodeSystem/erg-total-price-component-type-cs"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.totalPriceComponent:Fremdlaborleistungen.factor",
+        "path": "Invoice.totalPriceComponent.factor",
+        "max": "0"
+      },
+      {
+        "id": "Invoice.totalPriceComponent:Fremdlaborleistungen.amount",
+        "path": "Invoice.totalPriceComponent.amount",
+        "short": "Wert in EUR",
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.totalPriceComponent:Fremdlaborleistungen.amount.value",
+        "path": "Invoice.totalPriceComponent.amount.value",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.totalPriceComponent:Fremdlaborleistungen.amount.currency",
         "path": "Invoice.totalPriceComponent.amount.currency",
         "min": 1,
         "patternCode": "EUR",

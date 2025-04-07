@@ -13,8 +13,8 @@
       "display": "Rechnungsnummer"
     },
     {
-      "code": "auftragsnummer",
-      "display": "Auftragsnummer"
+      "code": "antragsreferenz",
+      "display": "Antragsreferenz"
     }
   ],
   "experimental": false,

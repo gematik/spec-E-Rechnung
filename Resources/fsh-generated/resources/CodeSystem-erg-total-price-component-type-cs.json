@@ -17,6 +17,10 @@
       "display": "Minderungen nach §7 GOZ"
     },
     {
+      "code": "Fremdlaborleistungen",
+      "display": "Fremdlaborleistungen"
+    },
+    {
       "code": "Abzug",
       "display": "Übergeordnete Abzug-Kategorie",
       "concept": [
@@ -48,5 +52,5 @@
       ]
     }
   ],
-  "count": 6
+  "count": 7
 }
