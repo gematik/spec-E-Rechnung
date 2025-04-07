@@ -108,7 +108,7 @@
         "path": "Invoice.extension",
         "sliceName": "AbrechnungsDiagnoseProzedur",
         "short": "Diagnose",
-        "comment": "Im Falle einer GOÄ oder GOÄ-neu Rechnung, SOLLEN Diagnosen und Prozeduren vorhanden sein.\n  Im Falle einer GOZ oder BEMA Rechnung werden keine Diagnosen oder Prozedur gefordert.",
+        "comment": "Im Falle einer GOÄ oder GOÄ-neu Rechnung, SOLLEN Diagnosen und Prozeduren vorhanden sein.\n  Im Falle einer GOZ Rechnung werden keine Diagnosen oder Prozedur gefordert.",
         "min": 0,
         "max": "*",
         "type": [
@@ -155,7 +155,7 @@
         "path": "Invoice.extension",
         "sliceName": "AbrechnungsDiagnoseProzedurFreitext",
         "short": "Einleitung (Diagnose und Prozedure als Freitextangabe)",
-        "comment": "Im Falle einer GOÄ, GOZ oder BEMA Rechnung, SOLLEN Diagnose und Prozedure als Freitextangabe vorhanden sein.\n  Im Falle einer GOÄ-neu Rechnung werden keine Diagnosen und Prozeduren als Freitext gefordert.",
+        "comment": "Im Falle einer GOÄ oder GOZ Rechnung, SOLLEN Diagnose und Prozedure als Freitextangabe vorhanden sein.\n  Im Falle einer GOÄ-neu Rechnung werden keine Diagnosen und Prozeduren als Freitext gefordert.",
         "min": 0,
         "max": "1",
         "type": [
@@ -311,49 +311,6 @@
         "id": "Invoice.extension:Korrekturtoken.value[x].value",
         "path": "Invoice.extension.value[x].value",
         "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Invoice.extension:BemaPunktsumme",
-        "path": "Invoice.extension",
-        "sliceName": "BemaPunktsumme",
-        "comment": "Im Falle einer BEMA Rechnung SOLL die Punktsumme BEMA vorhanden sein.\n  Im Falle einer GOÄ, GOÄ-neu oder GOZ Rechnung ist das Element nicht gefordert.",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "https://gematik.de/fhir/erg/StructureDefinition/ERGBemaPunktsumme"
-            ]
-          }
-        ],
-        "mustSupport": true
-      },
-      {
-        "id": "Invoice.extension:BemaPunktsumme.extension:Punktsumme",
-        "path": "Invoice.extension.extension",
-        "sliceName": "Punktsumme",
-        "short": "Summe Punktzahlen der BEMA-Leistungen",
-        "comment": "Die Summe Punktzahlen der BEMA-Leistungen SOLL vorhanden sein.",
-        "mustSupport": true
-      },
-      {
-        "id": "Invoice.extension:BemaPunktsumme.extension:Punktsumme.value[x]",
-        "path": "Invoice.extension.extension.value[x]",
-        "mustSupport": true
-      },
-      {
-        "id": "Invoice.extension:BemaPunktsumme.extension:Punktwert",
-        "path": "Invoice.extension.extension",
-        "sliceName": "Punktwert",
-        "short": "Punktwert der BEMA-Leistungen",
-        "comment": "Der Punktwert der BEMA-Leistungen SOLL vorhanden sein.",
-        "mustSupport": true
-      },
-      {
-        "id": "Invoice.extension:BemaPunktsumme.extension:Punktwert.value[x]",
-        "path": "Invoice.extension.extension.value[x]",
         "mustSupport": true
       },
       {
@@ -722,7 +679,7 @@
         "path": "Invoice.participant",
         "sliceName": "Leistungserbringer",
         "short": "Weitere behandelnde Leistungserbringer",
-        "comment": "Im Falle einer GOÄ oder GOÄ-neu Rechnung, SOLLLEN weitere behandelnde Leistungserbringer vorhanden sein.\n  Im Falle einer GOZ oder BEMA Rechnung, KÖNNEN weitere behandelnde Leistungserbringer vorhanden sein.",
+        "comment": "Im Falle einer GOÄ oder GOÄ-neu Rechnung, SOLLLEN weitere behandelnde Leistungserbringer vorhanden sein.\n  Im Falle einer GOZ Rechnung, KÖNNEN weitere behandelnde Leistungserbringer vorhanden sein.",
         "min": 1,
         "max": "*",
         "mustSupport": true
@@ -865,7 +822,7 @@
         "path": "Invoice.lineItem.priceComponent",
         "sliceName": "BruttoBetrag",
         "short": "Betrag pro Rechnungsposition",
-        "comment": "Im Falle einer GOÄ, GOÄ-neu oder GOZ Rechnungsposition, SOLL der Betrag pro Rechnungsposition vorhanden sein.\n  Im Falle einer BEMA Rechnungsposition ist das Element nicht gefordert.",
+        "comment": "Im Falle einer GOÄ, GOÄ-neu oder GOZ Rechnungsposition, SOLL der Betrag pro Rechnungsposition vorhanden sein.",
         "min": 0,
         "max": "1",
         "mustSupport": true
@@ -1131,7 +1088,7 @@
         "path": "Invoice.totalPriceComponent",
         "sliceName": "MinderungNachGOZ",
         "short": "Minderungen nach §7 GOZ",
-        "comment": "Im Falle einer GOZ Rechnung SOLLEN die Minderungen nach §7 GOZ vorhanden sein.\n  Im Falle einer GOÄ, GOÄ-neu oder BEMA Rechnung ist das Element nicht gefordert.",
+        "comment": "Im Falle einer GOZ Rechnung SOLLEN die Minderungen nach §7 GOZ vorhanden sein.\n  Im Falle einer GOÄ oder GOÄ-neu Rechnung ist das Element nicht gefordert.",
         "min": 0,
         "max": "1",
         "mustSupport": true
@@ -1387,7 +1344,7 @@
         "path": "Invoice.totalPriceComponent.extension",
         "sliceName": "Kassenanteil",
         "short": "Kassenanteil in Prozent",
-        "comment": "Im Falle einer BEMA Rechnung SOLL der Kassenanteil in Prozent vorhanden sein.\n    Im Falle einer GOZ Rechnung KANN der  Kassenanteil in Prozent vorhanden sein.\n    Im Falle einer GOÄ oder GOÄ-neu Rechnung ist das Element nicht gefordert.",
+        "comment": "Im Falle einer GOZ Rechnung KANN der Kassenanteil in Prozent vorhanden sein.\n    Im Falle einer GOÄ oder GOÄ-neu Rechnung ist das Element nicht gefordert.",
         "min": 0,
         "max": "1",
         "type": [
