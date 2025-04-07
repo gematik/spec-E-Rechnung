@@ -9,6 +9,10 @@ Im Rahmen der E-Rechnung-Veröffentlichungen wird das [Semantic Versioning](http
 Alle technischen Artefakte werden innerhalb des Packages ["de.gematik.erg"](https://simplifier.net/e-rechnung/~packages) versioniert veröffentlicht. Die Versionsnummer des Packages entspricht der Versionsnummer des dazugehörigen Implementierungsleitfadens.
 
 ----
+### Version 1.1.0
+
+* Anpassung aus Kommentierung
+
 ### Version 1.1.0-rc1
 
 * Vorabveröffentlichung für die Kommentierung
