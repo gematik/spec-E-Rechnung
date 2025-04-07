@@ -27,3 +27,4 @@ Alias: $extension-replaces = http://hl7.org/fhir/StructureDefinition/replaces
 Alias: $coding-pzn = http://fhir.de/StructureDefinition/CodingPZN
 Alias: $sct = http://snomed.info/sct
 Alias: $capabilitystatement-expectation = http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation
+Alias: $extension-basedOn = http://hl7.org/fhir/StructureDefinition/event-basedOn
