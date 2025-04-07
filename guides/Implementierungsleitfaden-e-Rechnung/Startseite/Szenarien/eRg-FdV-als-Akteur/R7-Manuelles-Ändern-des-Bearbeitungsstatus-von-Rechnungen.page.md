@@ -74,4 +74,10 @@ mit Body:
     </tab>
 </tabs>
 
+### Verarbeitungsschritte im FD
+
+* Falls während eines Aufrufs der FD feststellt, dass das eRg FdV versucht, den Status des Dokuments in denselben Status zu ändern, in dem es sich bereits befindet, so ist diese Statusänderung zu ignorieren. `HTTP 200 - OK` wird in diesem Fall zurückgegeben.
+
+* Der FD MUSS anhand der übergebenen Parameter den Meta-Tag 'erg-rechnungsstatus' auf der DokumentReference aktualisieren.
+
 ----
