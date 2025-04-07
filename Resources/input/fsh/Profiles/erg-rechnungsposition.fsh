@@ -128,7 +128,7 @@ Id: erg-rechnungsposition
     * display MS
       * ^short = "Legendentext der Gebührenordnung / Leistungsbeschreibung"
   * text MS
-    * ^short = "Bezeichnung für Auslagen/Sachkosten, z.B. Wirkstoffname"
+    * ^short = "Bezeichnung für Auslagen/Sachkosten, z.B. Wirkstoffname oder Fremdlaborleistung"
 * occurrence[x] MS
 * occurrence[x] only Period
   * ^short = "Leistungszeitraum"

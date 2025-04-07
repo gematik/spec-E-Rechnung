@@ -229,6 +229,7 @@ Id: erg-rechnung
 * totalPriceComponent contains 
   SummeRechnungspositionen ..1 MS and
   MinderungNachGOZ ..1 MS and
+  Fremdlaborleistungen ..1 MS and
   Abzug ..* MS
 * totalPriceComponent[SummeRechnungspositionen]
   * ^short = "Summe aller Rechnungspositionen"
@@ -237,6 +238,19 @@ Id: erg-rechnung
   * type = #base
   * code 1.. MS
   * code = ERGTotalPriceComponentTypeCS#SummeRechnungspositionen
+  * factor 0..0
+  * amount ..1 MS
+    * ^short = "Wert in EUR"
+    * currency 1.. MS
+    * currency = #EUR
+    * value 1.. MS
+* totalPriceComponent[Fremdlaborleistungen]
+  * ^short = "Summe aller Fremdlaborleistungen"
+  * ^comment = "Die Summe aller Fremdlaborleistungen SOLL vorhanden sein."
+  * type MS
+  * type = #base
+  * code 1.. MS
+  * code = ERGTotalPriceComponentTypeCS#Fremdlaborleistungen
   * factor 0..0
   * amount ..1 MS
     * ^short = "Wert in EUR"
