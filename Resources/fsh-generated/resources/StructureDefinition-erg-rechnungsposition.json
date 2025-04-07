@@ -437,7 +437,7 @@
         "id": "ChargeItem.code",
         "path": "ChargeItem.code",
         "short": "Gebührenziffer",
-        "comment": "Ist der Rechnungspositionstyp auf eine Gebührenordnung festgelegt, SOLL die Gebührenziffer vorhanden sein.\n  Die konkrete Bezeichnung der Gebührenziffer kann je nach Gebührenordnung abweichend sein.",
+        "comment": "Ist der Rechnungspositionstyp auf eine Gebührenordnung festgelegt, SOLL die Gebührenziffer vorhanden sein.\nMit 'Gebührenziffer' ist die eindeutige Kennung zu verstehen, die eine spezifische medizinische oder zahnmedizinische Leistung in den entsprechenden Gebührenordnungen beschreibt. Sie dient als Grundlage für die Abrechnung zwischen Leistungserbringern (Ärzten/Zahnärzten) und Kostenträgern (z. B. Krankenkassen oder Patienten). In spezifischen Gebührenordnungen werden ggf. abweichende Begriffe hierfür verwendet.",
         "mustSupport": true
       },
       {
