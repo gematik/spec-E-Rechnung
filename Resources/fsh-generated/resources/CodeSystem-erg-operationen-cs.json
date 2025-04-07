@@ -5,7 +5,7 @@
   "name": "ERGOperationenCS",
   "id": "erg-operationen-cs",
   "title": "ERG Operationen",
-  "version": "1.1.0-RC1",
+  "version": "1.1.0-rc2",
   "url": "https://gematik.de/fhir/erg/CodeSystem/erg-operationen-cs",
   "concept": [
     {
@@ -30,7 +30,7 @@
     }
   ],
   "experimental": false,
-  "date": "2025-02-28",
+  "date": "2025-04-07",
   "publisher": "gematik GmbH",
   "contact": [
     {

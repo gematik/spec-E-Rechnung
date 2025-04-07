@@ -5,10 +5,10 @@
   "id": "erg-participant-role-VS",
   "title": "ERG Teilnehmer Rolle",
   "description": "Diese Codes enthalten Teilnehmer Rollen der eRechnung",
-  "version": "1.1.0-RC1",
+  "version": "1.1.0-rc2",
   "url": "https://gematik.de/fhir/erg/ValueSet/erg-participant-role-VS",
   "experimental": false,
-  "date": "2025-02-28",
+  "date": "2025-04-07",
   "publisher": "gematik GmbH",
   "contact": [
     {
