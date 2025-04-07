@@ -2,12 +2,12 @@
   "resourceType": "StructureDefinition",
   "id": "erg-rechnungsposition-type",
   "url": "https://gematik.de/fhir/erg/StructureDefinition/erg-rechnungsposition-type",
-  "version": "1.1.0-RC1",
+  "version": "1.1.0-rc2",
   "name": "ERGRechnungspositionType",
   "title": "ERG Typ der Rechnungsposition Extension",
   "status": "active",
   "experimental": false,
-  "date": "2025-02-28",
+  "date": "2025-04-07",
   "publisher": "gematik GmbH",
   "contact": [
     {

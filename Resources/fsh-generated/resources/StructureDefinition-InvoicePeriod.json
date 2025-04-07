@@ -2,12 +2,12 @@
   "resourceType": "StructureDefinition",
   "id": "InvoicePeriod",
   "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Invoice.period[x]",
-  "version": "1.1.0-RC1",
+  "version": "1.1.0-rc2",
   "name": "InvoicePeriod",
   "title": "Invoice.period als Backport aus R5",
   "status": "active",
   "experimental": false,
-  "date": "2025-02-28",
+  "date": "2025-04-07",
   "publisher": "gematik GmbH",
   "contact": [
     {

@@ -4,10 +4,10 @@
   "name": "ERGAuditEventSubTypeVS",
   "id": "erg-audit-event-sub-type-vs",
   "title": "ERG Audit Event Sub-Type",
-  "version": "1.1.0-RC1",
+  "version": "1.1.0-rc2",
   "url": "https://gematik.de/fhir/erg/ValueSet/erg-audit-event-sub-type-vs",
   "experimental": false,
-  "date": "2025-02-28",
+  "date": "2025-04-07",
   "publisher": "gematik GmbH",
   "contact": [
     {

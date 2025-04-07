@@ -6,7 +6,7 @@
   "id": "erg-rechnung-type-cs",
   "title": "ERG Rechnung Type CS",
   "description": "CodeSystem für die Differenzierung von verschiedenen Typen einer E-Rechnnung",
-  "version": "1.1.0-RC1",
+  "version": "1.1.0-rc2",
   "url": "https://gematik.de/fhir/erg/CodeSystem/erg-rechnung-type-cs",
   "concept": [
     {
@@ -15,7 +15,7 @@
     }
   ],
   "experimental": false,
-  "date": "2025-02-28",
+  "date": "2025-04-07",
   "publisher": "gematik GmbH",
   "contact": [
     {

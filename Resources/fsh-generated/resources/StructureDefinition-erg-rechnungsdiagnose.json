@@ -2,12 +2,12 @@
   "resourceType": "StructureDefinition",
   "id": "erg-rechnungsdiagnose",
   "url": "https://gematik.de/fhir/erg/StructureDefinition/erg-rechnungsdiagnose",
-  "version": "1.1.0-RC1",
+  "version": "1.1.0-rc2",
   "name": "ERGRechnungsdiagnose",
   "title": "ERG Rechnungsdiagnose",
   "status": "active",
   "experimental": false,
-  "date": "2025-02-28",
+  "date": "2025-04-07",
   "publisher": "gematik GmbH",
   "contact": [
     {

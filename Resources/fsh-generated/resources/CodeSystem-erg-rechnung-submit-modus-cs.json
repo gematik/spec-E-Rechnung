@@ -6,7 +6,7 @@
   "id": "erg-rechnung-submit-modus-cs",
   "title": "ERG Rechnung Submit Modus CS",
   "description": "CodeSystem für die Differenzierung von der Verarbeitungsmodi für $erchnung-submit",
-  "version": "1.1.0-RC1",
+  "version": "1.1.0-rc2",
   "url": "https://gematik.de/fhir/erg/CodeSystem/erg-rechnung-submit-modus-cs",
   "concept": [
     {
@@ -21,7 +21,7 @@
     }
   ],
   "experimental": false,
-  "date": "2025-02-28",
+  "date": "2025-04-07",
   "publisher": "gematik GmbH",
   "contact": [
     {

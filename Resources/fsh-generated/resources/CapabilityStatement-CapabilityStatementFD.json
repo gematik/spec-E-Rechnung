@@ -2,7 +2,7 @@
   "resourceType": "CapabilityStatement",
   "id": "CapabilityStatementFD",
   "url": "https://gematik.de/fhir/erg/CapabilityStatement/ERGCapabilityStatementFD",
-  "version": "1.1.0-RC1",
+  "version": "1.1.0-rc2",
   "status": "active",
   "experimental": false,
   "publisher": "gematik GmbH",
@@ -16,7 +16,7 @@
       ]
     }
   ],
-  "date": "2025-02-28",
+  "date": "2025-04-07",
   "name": "CapabilityStatementFD",
   "title": "CapabilityStatement Fachdienst E-Rechnnung",
   "description": "Dieses CapabilityStatement beschreibt alle Interaktionen, \n  die ein E-Rechnung-konformer Fachdienst unterstützen MUSS bzw. KANN.\n",
