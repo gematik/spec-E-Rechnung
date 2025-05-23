@@ -1,6 +1,6 @@
-ValueSet: ERGVerkehrsmittel
-Id: ERGVerkehrsmittel
-Title: "ERGVerkehrsmittel"
+ValueSet: DiPagVerkehrsmittel
+Id: DiPagVerkehrsmittel
+Title: "Digitale PatientenrechnungVerkehrsmittel"
 Description: "Dieses ValueSet bietet eine Auswahl an Verkehrsmitteln, die im Rahmen einer Reisekostenentschädigung ausgewählt werden können."
 * $sct#46160005 "Motor vehicle"
 * $sct#52387005 "Taxi"

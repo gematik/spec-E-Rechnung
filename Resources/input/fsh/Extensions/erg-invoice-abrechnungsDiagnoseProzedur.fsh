@@ -1,5 +1,5 @@
-Extension: ERGAbrechnungsDiagnoseProzedur
-Id: ERGAbrechnungsDiagnoseProzedur
+Extension: DiPagAbrechnungsDiagnoseProzedur
+Id: DiPagAbrechnungsDiagnoseProzedur
 Title: "Abrechnungsrelevanz von Diagnosen und Prozeduren"
 Description: """Diese Extension erlaubt es einer Invoice Diagnosen oder Prozeduren, incl. Qualifier wie bspw: "Primär-DRG" zuzuordnen. Dies ermöglicht unter anderem das Zuordnen von Haupt- und Nebendiagnosen zu einem Account zum Zweck der DRG Erstellung."""
 * insert Meta
@@ -11,11 +11,11 @@ Description: """Diese Extension erlaubt es einer Invoice Diagnosen oder Prozedur
     Referenz 1..*
 * extension[Use].value[x] only Coding
 * extension[Use].valueCoding 0..1
-* extension[Use].valueCoding from ERGAbrechnungsDiagnoseUseVS (required)
+* extension[Use].valueCoding from DiPagAbrechnungsDiagnoseUseVS (required)
 * extension[Referenz].value[x] only Reference(Condition or Procedure)
 
-Extension: ERGAbrechnungsDiagnoseProzedurFreitext
-Id: ERGAbrechnungsDiagnoseProzedurFreitext
+Extension: DiPagAbrechnungsDiagnoseProzedurFreitext
+Id: DiPagAbrechnungsDiagnoseProzedurFreitext
 Title: "Abrechnungsrelevanz von Diagnosen und Prozeduren als Freitext"
 * insert Meta
 * ^context.type = #element

@@ -1,14 +1,14 @@
-Profile: ERGRechnungsposition
-Title: "ERG Rechnungsposition"
+Profile: DiPagRechnungsposition
+Title: "Digitale Patientenrechnung Rechnungsposition"
 Parent: ChargeItem
-Id: erg-rechnungsposition
+Id: dipag-rechnungsposition
 * insert Meta
 * extension contains
-  ERGRechnungspositionType named Rechnungspositionstyp 1..1 MS and
-  ERGRechnungspositionZusatz named Zusatz ..1 MS and
-  ERGWegegeldReiseentschaedigung named WegegeldReiseentschädigung ..1 MS and
-  ERGRechnungspositionGOAngaben named GebührenordnungAngaben ..1 MS and
-  ERGRechnungspositionBehandlungsdatum named Behandlungsdatum ..1 MS
+  DiPagRechnungspositionType named Rechnungspositionstyp 1..1 MS and
+  DiPagRechnungspositionZusatz named Zusatz ..1 MS and
+  DiPagWegegeldReiseentschaedigung named WegegeldReiseentschädigung ..1 MS and
+  DiPagRechnungspositionGOAngaben named GebührenordnungAngaben ..1 MS and
+  DiPagRechnungspositionBehandlungsdatum named Behandlungsdatum ..1 MS
 * extension[Rechnungspositionstyp]
   * ^short = "Rechnungspositionstyp"
   * ^comment = "Der Rechnungspositionstyp MUSS vorhanden sein."
@@ -131,7 +131,7 @@ Mit 'Gebührenziffer' ist die eindeutige Kennung zu verstehen, die eine spezifis
   * end MS
 * performer MS
   * actor MS
-  * actor only Reference(ERGPerson or ERGInstitution or Practitioner or Organization)
+  * actor only Reference(DiPagPerson or DiPagInstitution or Practitioner or Organization)
     * ^short = "Referenz Behandelnder Leistungserbringer"
     * ^comment = "Im Falle einer GOÄ-neu Rechnungsposition, SOLL die Referenz auf einen behandelnden Leistungserbringer vorhanden sein.
     Im Fall einer GOÄ Rechnungsposition, KANN ein behandelnder Leistungserbringer vorhanden sein.
@@ -145,7 +145,7 @@ Mit 'Gebührenziffer' ist die eindeutige Kennung zu verstehen, die eine spezifis
   - Angabe zu den behandelten Organen
   - Überschreitung der Regelsätze"
 * bodysite MS
-* bodysite.extension contains ERGZahnRegion named ZahnRegion ..1 MS
+* bodysite.extension contains DiPagZahnRegion named ZahnRegion ..1 MS
 * bodysite.extension[ZahnRegion]
   * ^short = "Zahn/Region"
   * ^comment = "Im Falle einer GOZ Rechnungsposition, SOLL das Element Zahn/Region vorhanden sein.
@@ -185,6 +185,6 @@ Mit 'Gebührenziffer' ist die eindeutige Kennung zu verstehen, die eine spezifis
 * status = #billable
   * ^short = "Der Status der Rechnungsposition MUSS vorhanden sein."
 * subject MS
-* subject only Reference(ERGPatient or Patient)
+* subject only Reference(DiPagPatient or Patient)
   * ^short = "Behandelte Person"
   * reference 1.. MS

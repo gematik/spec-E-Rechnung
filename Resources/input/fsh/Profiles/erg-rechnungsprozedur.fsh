@@ -1,7 +1,7 @@
-Profile: ERGRechnungsprozedur
+Profile: DiPagRechnungsprozedur
 Parent: Procedure
-Title: "ERG Rechnungsprozedur"
-Id: erg-rechnungsprozedur
+Title: "Digitale Patientenrechnung Rechnungsprozedur"
+Id: dipag-rechnungsprozedur
 * insert Meta
 * status MS
   * ^short = "Status der Prozedur"
@@ -38,5 +38,5 @@ Id: erg-rechnungsprozedur
 * subject MS
   * ^short = "Referenz auf die behandelte Person"
   * ^comment = "Die Procedure SOLL auf eine zugehörige behandelte Person referenzieren."
-* subject only Reference(ERGPatient or Patient)
+* subject only Reference(DiPagPatient or Patient)
 * subject.reference 1.. MS

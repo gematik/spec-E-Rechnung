@@ -1,6 +1,6 @@
-CodeSystem: ERGRechnungIdentifierTypeCS
-Id: erg-rechnung-identifier-type-cs
-Title: "ERG Rechnung Identifier Type CS"
+CodeSystem: DiPagRechnungIdentifierTypeCS
+Id: dipag-rechnung-identifier-type-cs
+Title: "Digitale Patientenrechnung Rechnung Identifier Type CS"
 * insert Meta
 * #invoice "Rechnungsnummer"
 * #antragsreferenz "Antragsreferenz"

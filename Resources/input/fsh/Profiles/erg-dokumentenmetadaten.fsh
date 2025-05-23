@@ -1,22 +1,22 @@
 // ------------- Profile -------------
 Alias: $kdl = http://dvmd.de/fhir/CodeSystem/kdl
 
-Profile: ERGDokumentenmetadaten
-Title: "ERG Dokumentenmetadaten"
+Profile: DiPagDokumentenmetadaten
+Title: "Digitale Patientenrechnung Dokumentenmetadaten"
 Parent: DocumentReference
-Id: erg-dokumentenmetadaten
+Id: dipag-dokumentenmetadaten
 * insert Meta
 * obeys SignaturVerpflichtendRechnung
 * obeys RechnungOderAnhang
 * extension MS
 * extension contains 
-  ERGDocRefSignature named docRef-signature 0..1 MS and
-  ERGDocumentReferenceRechnungsdatum named rechnungsdatum 0..1 MS and
-  ERGDocumentReferenceZahlungszieldatum named zahlungszieldatum 0..1 MS and
-  ERGDocumentReferenceGesamtbetrag named gesamtbetrag 0..1 MS and
-  ERGDocRefFachrichtung named fachrichtung 0..1 MS and
-  ERGDocRefLeistungsart named leistungsart 0..1 MS and
-  ERGBehandlungsart named behandlungsart 0..1 MS
+  DiPagDocRefSignature named docRef-signature 0..1 MS and
+  DiPagDocumentReferenceRechnungsdatum named rechnungsdatum 0..1 MS and
+  DiPagDocumentReferenceZahlungszieldatum named zahlungszieldatum 0..1 MS and
+  DiPagDocumentReferenceGesamtbetrag named gesamtbetrag 0..1 MS and
+  DiPagDocRefFachrichtung named fachrichtung 0..1 MS and
+  DiPagDocRefLeistungsart named leistungsart 0..1 MS and
+  DiPagBehandlungsart named behandlungsart 0..1 MS
 * extension[rechnungsdatum]
   * ^comment = "Siehe Abschnitt '4.8.1.1 Rechnung' des Feature-Dokuments E-Rechnung"
 * extension[zahlungszieldatum]
@@ -24,16 +24,16 @@ Id: erg-dokumentenmetadaten
 * extension[gesamtbetrag]
   * ^comment = "Siehe Abschnitt '4.8.1.1 Rechnung' des Feature-Dokuments E-Rechnung"
 * meta.extension MS
-* meta.extension contains ERGDocumentReferenceMarkierung named markierung 0..* MS
+* meta.extension contains DiPagDocumentReferenceMarkierung named markierung 0..* MS
 * meta.extension[markierung]
   * ^comment = "Vgl. Abschnitt '4.4.2 Markierungen' des Feature-Dokuments E-Rechnung"
 * meta.tag MS
   * ^slicing.discriminator.type = #pattern
   * ^slicing.discriminator.path = "$this"
   * ^slicing.rules = #open
-* meta.tag contains erg-rechnungsstatus 0..1 MS
+* meta.tag contains dipag-rechnungsstatus 0..1 MS
   * ^comment = "Metaangaben zur E-Rechnung die sich auf das Rechnungsdokument als Ganzes beziehen und nicht Teil des durch den RE-PS erstellten Dokuments sind."
-* meta.tag[erg-rechnungsstatus] from ERGRechnungsstatusVS (required)
+* meta.tag[dipag-rechnungsstatus] from DiPagRechnungsstatusVS (required)
   * ^comment = "Vgl. Abschnitt 4.4.1 Workflow einer Rechnung des Feature-Dokuments E-Rechnung"
   * system 1.. MS
   * code 1.. MS
@@ -51,7 +51,7 @@ Id: erg-dokumentenmetadaten
   * ^slicing.discriminator.path = "$this"
   * ^slicing.rules = #open
 * type.coding contains DokumentenKlassifizierung 0..1 MS and Rechnungstyp 0..1 MS
-* type.coding[DokumentenKlassifizierung] from ERGSonstigesDokumentTypeVS (required)
+* type.coding[DokumentenKlassifizierung] from DiPagSonstigesDokumentTypeVS (required)
   * ^patternCoding.system = "http://dvmd.de/fhir/CodeSystem/kdl"
   * system 1.. MS
   * code 1.. MS
@@ -78,7 +78,7 @@ Id: erg-dokumentenmetadaten
   * ^comment = "Der FD muss die Base64-kodierten Daten aus attachment.data extrahieren und in eine Binary-Ressource auslagern."
 * content[rechnungspdf]
   * format MS
-  * format = https://gematik.de/fhir/erg/CodeSystem/erg-attachment-format-cs#dipag
+  * format = https://gematik.de/fhir/erg/CodeSystem/dipag-attachment-format-cs#dipag
   * attachment 1..1 MS
     * contentType 1.. MS
     * contentType = #application/pdf
@@ -88,7 +88,7 @@ Id: erg-dokumentenmetadaten
     * url MS
 * content[angereicherteRechnung]
   * format MS
-  * format = https://gematik.de/fhir/erg/CodeSystem/erg-attachment-format-cs#angereichertesPDF
+  * format = https://gematik.de/fhir/erg/CodeSystem/dipag-attachment-format-cs#angereichertesPDF
   * attachment 1..1 MS
     * contentType 1.. MS
     * contentType = #application/pdf
@@ -98,9 +98,9 @@ Id: erg-dokumentenmetadaten
     * url MS
 * content[strukturierterRechnungsinhalt]
   * format MS
-  * format = https://gematik.de/fhir/erg/CodeSystem/erg-attachment-format-cs#rechnungsinhalt
+  * format = https://gematik.de/fhir/erg/CodeSystem/dipag-attachment-format-cs#rechnungsinhalt
   * attachment 1..1 MS
-    * contentType from ERGRestrictedMimeTypesVS (required)
+    * contentType from DiPagRestrictedMimeTypesVS (required)
     * contentType 1.. MS
       * ^comment = "Strukturierte Rechnungsinhalte können seitens der Leistungserbringer:in sowohl als JSON als auch XML übergeben werden."
     * data 1.. MS
@@ -108,7 +108,7 @@ Id: erg-dokumentenmetadaten
     * url MS
 * content[anhang]
   * format MS
-  * format = https://gematik.de/fhir/erg/CodeSystem/erg-attachment-format-cs#rechnungsanhang
+  * format = https://gematik.de/fhir/erg/CodeSystem/dipag-attachment-format-cs#rechnungsanhang
   * attachment 1..1 MS
     * contentType = #application/pdf
     * contentType 1.. MS
@@ -128,25 +128,25 @@ Id: erg-dokumentenmetadaten
 
 // ------------- ValueSets -------------
 
-ValueSet: ERGRestrictedMimeTypesVS
-Id: erg-restricted-mime-types-vs
-Title: "ERG Restricted Mime Types"
+ValueSet: DiPagRestrictedMimeTypesVS
+Id: dipag-restricted-mime-types-vs
+Title: "Digitale Patientenrechnung Restricted Mime Types"
 * insert Meta
 
 * include http://terminology.hl7.org/CodeSystem/mimetypes#application/fhir+json
 * include http://terminology.hl7.org/CodeSystem/mimetypes#application/fhir+xml
 
-ValueSet: ERGRechnungsstatusVS
-Id: erg-rechnungsstatus-vs
-Title: "ERG Rechnungsstatus"
+ValueSet: DiPagRechnungsstatusVS
+Id: dipag-rechnungsstatus-vs
+Title: "Digitale Patientenrechnung Rechnungsstatus"
 * insert Meta
-* include codes from system https://gematik.de/fhir/erg/CodeSystem/erg-rechnungsstatus-cs
+* include codes from system https://gematik.de/fhir/erg/CodeSystem/dipag-rechnungsstatus-cs
 
 // ------------- CodeSystem -------------
 
-CodeSystem:  ERGAttachmentFormatCS
-Id: erg-attachment-format-cs
-Title: "ERG Attachment Format CS"
+CodeSystem:  DiPagAttachmentFormatCS
+Id: dipag-attachment-format-cs
+Title: "Digitale Patientenrechnung Attachment Format CS"
 Description:  "CodeSystem für die Abbildung von verschieden Formatinhalten eines Dokuments"
 * insert Meta
 * #dipag "E-Rechnungsdokument"
@@ -154,9 +154,9 @@ Description:  "CodeSystem für die Abbildung von verschieden Formatinhalten eine
 * #rechnungsinhalt "Strukturierter Rechnungsinhalt"
 * #rechnungsanhang "Rechnungsanhang"
 
-CodeSystem:  ERGARechnungsstatusCS
-Id: erg-rechnungsstatus-cs
-Title: "ERG Rechnungsstatus CS"
+CodeSystem:  DiPagARechnungsstatusCS
+Id: dipag-rechnungsstatus-cs
+Title: "Digitale Patientenrechnung Rechnungsstatus CS"
 Description:  "CodeSystem für die Abbildung von verschieden Status eines Rechnungungsdokuments"
 * insert Meta
 * #offen "Offen"
@@ -165,18 +165,18 @@ Description:  "CodeSystem für die Abbildung von verschieden Status eines Rechnu
 
 // ------------- Extensions -------------
 
-Extension: ERGDocRefSignature
-Id: erg-docref-signature
-Title: "ERG DocRef Signature"
+Extension: DiPagDocRefSignature
+Id: dipag-docref-signature
+Title: "Digitale Patientenrechnung DocRef Signature"
 Description: "Extension zur Abbildung einer Digitalen Signatur über die Rechnungsrepräsentation, sowie den strukturierten Rechnungsinhalten"
 * insert Meta
 
 * value[x] 1.. MS
 * value[x] only Signature
 
-Extension: ERGDocRefFachrichtung
-Id: erg-docref-fachrichtung
-Title: "ERG DocRef Fachrichtung"
+Extension: DiPagDocRefFachrichtung
+Id: dipag-docref-fachrichtung
+Title: "Digitale Patientenrechnung DocRef Fachrichtung"
 Description: "Extension zur Angabe der Fachrichtung zur Steuerung des Abrechungsworkflows"
 * insert Meta
 
@@ -184,9 +184,9 @@ Description: "Extension zur Angabe der Fachrichtung zur Steuerung des Abrechungs
 * value[x] only Coding
 * value[x] from http://ihe-d.de/ValueSets/IHEXDSpracticeSettingCode (required)
 
-Extension: ERGDocRefLeistungsart
-Id: erg-docref-leistungsart
-Title: "ERG DocRef Leistungsart"
+Extension: DiPagDocRefLeistungsart
+Id: dipag-docref-leistungsart
+Title: "Digitale Patientenrechnung DocRef Leistungsart"
 Description: "Extension zur Angabe einer Leistungsart"
 * insert Meta
 
@@ -197,12 +197,12 @@ Description: "Extension zur Angabe einer Leistungsart"
 
 Invariant: SignaturVerpflichtendRechnung
 Description: "Eine Signature muss vorhanden sein, falls es sich bei der DocumentReference um eine Rechnung handelt."
-Expression: "type.coding.where(system = 'http://dvmd.de/fhir/CodeSystem/kdl' and code = 'AM010106').exists() implies extension.where(url = 'https://gematik.de/fhir/erg/StructureDefinition/erg-docref-signature').exists()"
+Expression: "type.coding.where(system = 'http://dvmd.de/fhir/CodeSystem/kdl' and code = 'AM010106').exists() implies extension.where(url = 'https://gematik.de/fhir/erg/StructureDefinition/dipag-docref-signature').exists()"
 Severity: #error
 
 Invariant: RechnungOderAnhang
 Description: "Ein Dokument kann entweder ein Anhang enthalten oder ein Rechnungsdokument inkl. strukturierten Rechnungsinhalten."
-Expression: "content.format.where(system = 'https://gematik.de/fhir/erg/CodeSystem/erg-attachment-format-cs' and code = 'rechnungsanhang').exists() xor (content.format.where(system = 'https://gematik.de/fhir/erg/CodeSystem/erg-attachment-format-cs' and code = 'dipag').exists() and  content.format.where(system = 'https://gematik.de/fhir/erg/CodeSystem/erg-attachment-format-cs' and code = 'rechnungsinhalt').exists())"
+Expression: "content.format.where(system = 'https://gematik.de/fhir/erg/CodeSystem/dipag-attachment-format-cs' and code = 'rechnungsanhang').exists() xor (content.format.where(system = 'https://gematik.de/fhir/erg/CodeSystem/dipag-attachment-format-cs' and code = 'dipag').exists() and  content.format.where(system = 'https://gematik.de/fhir/erg/CodeSystem/dipag-attachment-format-cs' and code = 'rechnungsinhalt').exists())"
 Severity: #error
 
 

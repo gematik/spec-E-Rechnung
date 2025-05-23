@@ -1,6 +1,6 @@
-CodeSystem: ERGTotalPriceComponentTypeCS
-Id: erg-total-price-component-type-cs
-Title: "ERG Art der Rechnungssumme"
+CodeSystem: DiPagTotalPriceComponentTypeCS
+Id: dipag-total-price-component-type-cs
+Title: "Digitale Patientenrechnung Art der Rechnungssumme"
 * insert Meta
 * #SummeRechnungspositionen "Summe aller Rechnungspositionen"
 * #Minderung7GOZ "Minderungen nach §7 GOZ"
@@ -9,8 +9,8 @@ Title: "ERG Art der Rechnungssumme"
 * #Abzug #FestzuschussKasse "Festzuschuss Kasse"
 * #Abzug #VorleistungKst "Vorleistungen anderer Kostenträger"
 
-ValueSet: ERGTotalPriceComponentDeductionTypeVS
-Id: erg-total-price-component-deduction-type-vs
-Title: "ERG Art des Abzugs von der Summe der gesamten Rechnungspositionen"
-* ERGTotalPriceComponentTypeCS#FestzuschussKasse "Festzuschuss Kasse"
-* ERGTotalPriceComponentTypeCS#VorleistungKst "Vorleistungen anderer Kostenträger"
+ValueSet: DiPagTotalPriceComponentDeductionTypeVS
+Id: dipag-total-price-component-deduction-type-vs
+Title: "Digitale Patientenrechnung Art des Abzugs von der Summe der gesamten Rechnungspositionen"
+* DiPagTotalPriceComponentTypeCS#FestzuschussKasse "Festzuschuss Kasse"
+* DiPagTotalPriceComponentTypeCS#VorleistungKst "Vorleistungen anderer Kostenträger"

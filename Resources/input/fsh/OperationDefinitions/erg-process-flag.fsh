@@ -1,9 +1,9 @@
 // ------------- OperationDefinition -------------
 
-Instance: ERGOperationProcessFlag
+Instance: DiPagOperationProcessFlag
 InstanceOf: OperationDefinition
 Usage: #example
-Title: "ERG Operation ProcessFlag"
+Title: "Digitale Patientenrechnung Operation ProcessFlag"
 Description: "Änderung des Bearbeitungsstatus eines Dokumentes"
 * url = "https://gematik.de/fhir/erg/OperationDefinition/ProcessFlag"
 * status = #active
@@ -11,7 +11,7 @@ Description: "Änderung des Bearbeitungsstatus eines Dokumentes"
 * experimental = false
 * date = "2024-06-20"
 * kind = #operation
-* name = "ERGProcessFlag"
+* name = "Digitale PatientenrechnungProcessFlag"
 * code = #process-flag
 * resource = #DocumentReference
 * system = false
@@ -58,5 +58,5 @@ Description: "Änderung des Bearbeitungsstatus eines Dokumentes"
   * use = #out
   * min = 1
   * max = "1"
-  * documentation = "Vollständiges Meta-Element des Rechnungsdokuments / des Anhangs inkl. Extension (siehe ERGDocumentReferenceMarkierung) zur Erfassung der Zusatzinformationen der Markierung"
+  * documentation = "Vollständiges Meta-Element des Rechnungsdokuments / des Anhangs inkl. Extension (siehe DiPagDocumentReferenceMarkierung) zur Erfassung der Zusatzinformationen der Markierung"
   * type = #Meta

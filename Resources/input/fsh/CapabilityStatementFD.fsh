@@ -2,7 +2,7 @@ Instance: CapabilityStatementFD
 InstanceOf: CapabilityStatement
 Usage: #definition
 * insert MetaInstance
-* url = "https://gematik.de/fhir/erg/CapabilityStatement/ERGCapabilityStatementFD"
+* url = "https://gematik.de/fhir/erg/CapabilityStatement/DiPagCapabilityStatementFD"
 * name = "CapabilityStatementFD"
 * title = "CapabilityStatement Fachdienst E-Rechnnung"
 * description = 
@@ -19,7 +19,7 @@ Usage: #definition
   * resource[+]
     * type = #Patient
     * insert Expectation (#SHALL)
-    * supportedProfile = Canonical(ERGPatient)
+    * supportedProfile = Canonical(DiPagPatient)
     * interaction[+]
       * insert Expectation (#SHALL)
       * code = #read
@@ -48,7 +48,7 @@ Usage: #definition
   * resource[+]
     * type = #DocumentReference
     * insert Expectation (#SHALL)
-    * supportedProfile = Canonical(ERGRechnungsdokument)
+    * supportedProfile = Canonical(DiPagRechnungsdokument)
     * interaction[+]
       * insert Expectation (#SHALL)
       * code = #read
@@ -82,8 +82,8 @@ Usage: #definition
       * type = #token
     * searchParam[+]
       * insert Expectation (#SHALL)
-      * name = "erg-makierung"
-      * definition = "https://gematik.de/fhir/erg/SearchParameter/erg-makierung"
+      * name = "dipag-makierung"
+      * definition = "https://gematik.de/fhir/erg/SearchParameter/dipag-makierung"
       * type = #token
     * operation[+]
       * insert Expectation (#SHALL)
@@ -110,7 +110,7 @@ Usage: #definition
     * interaction[+]
       * insert Expectation (#SHALL)
       * code = #search-type
-    * supportedProfile = Canonical(ERGNutzungsprotokoll)
+    * supportedProfile = Canonical(DiPagNutzungsprotokoll)
     * searchParam[+]
       * insert Expectation (#SHALL)
       * name = "_id"

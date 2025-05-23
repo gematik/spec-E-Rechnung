@@ -1,8 +1,8 @@
-Extension: ERGBehandlungsart
-Id: erg-behandlungsart
-Title: "ERG Extension Behandlungsart"
+Extension: DiPagBehandlungsart
+Id: dipag-behandlungsart
+Title: "Digitale Patientenrechnung Extension Behandlungsart"
 * insert Meta
 * ^context.type = #element
 * ^context.expression = "Invoice"
 * value[x] only Coding
-* valueCoding from ERGRechnungBehandlungsartVS
+* valueCoding from DiPagRechnungBehandlungsartVS

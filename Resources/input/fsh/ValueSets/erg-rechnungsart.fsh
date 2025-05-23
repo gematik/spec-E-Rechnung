@@ -1,6 +1,6 @@
-ValueSet:  ERGRechnungsartVS
-Id: erg-rechnungsart-vs
-Title: "ERG Rechnungsart VS"
+ValueSet:  DiPagRechnungsartVS
+Id: dipag-rechnungsart-vs
+Title: "Digitale Patientenrechnung Rechnungsart VS"
 Description:  "ValueSet zur Klassifizierung von Rechnungsarten"
 * insert Meta
-* include codes from system ERGRechnungsartCS
+* include codes from system DiPagRechnungsartCS

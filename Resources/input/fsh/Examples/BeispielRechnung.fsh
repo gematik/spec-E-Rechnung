@@ -45,7 +45,7 @@ Usage: #example
 - **Verwendungszweck:** z.B. Rechnungs-Nr. 2-444
 "
 * paymentTerms.extension
-  * url = Canonical(ERGZahlungsziel)
+  * url = Canonical(DiPagZahlungsziel)
   * valueDate = 2024-04-19
 
 Instance: R2444ChargeItem
@@ -66,7 +66,7 @@ Usage: #example
 //  * extension[type].valueCode = #tax
 
 Instance: R2444PKVersichertePerson
-InstanceOf: ERGVersichertePerson
+InstanceOf: DiPagVersichertePerson
 Usage: #example
 * identifier
   * type = http://fhir.de/CodeSystem/identifier-type-de-basis#KVZ10

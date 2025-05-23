@@ -1,6 +1,6 @@
-ValueSet:  ERGRechnungBehandlungsartVS
-Id: erg-rechnung-behandlungsart-vs
-Title: "ERG Rechnung Behandlungsart VS"
+ValueSet:  DiPagRechnungBehandlungsartVS
+Id: dipag-rechnung-behandlungsart-vs
+Title: "Digitale Patientenrechnung Rechnung Behandlungsart VS"
 Description:  "ValueSet zur Klassifizierung von Behandlungsarten"
 * insert Meta
 * $EncounterClassDe-cs#AMB

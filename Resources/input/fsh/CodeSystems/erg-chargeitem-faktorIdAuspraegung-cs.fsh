@@ -1,6 +1,6 @@
-CodeSystem: ERGRechnungspositionFaktorGruendeCS
-Id: erg-rechnungsposition-faktor-gruende-CS
-Title: "ERG Rechnungsposition Faktor Gründe CodeSystem"
+CodeSystem: DiPagRechnungspositionFaktorGruendeCS
+Id: dipag-rechnungsposition-faktor-gruende-CS
+Title: "Digitale Patientenrechnung Rechnungsposition Faktor Gründe CodeSystem"
 * #HV "Honorarvereinbarung" "Die HV ist der Rechnung beizulegen."
 * #BT "Basistarif"
 * #ST "Standardtarif"

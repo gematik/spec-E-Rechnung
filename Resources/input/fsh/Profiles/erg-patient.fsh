@@ -1,6 +1,6 @@
-Profile: ERGPatient
+Profile: DiPagPatient
 Parent: Patient
-Id: erg-patient
+Id: dipag-patient
 * insert Meta
 * identifier MS
   * ^slicing.discriminator.type = #pattern

@@ -1,8 +1,8 @@
-Profile: ERGPerson
-Id: erg-person
+Profile: DiPagPerson
+Id: dipag-person
 Parent: Practitioner
-Title: "ERG Person"
-Description: "Das Profil ERGPerson wird in für die Rolle 'Behandelnder Leistungserbringer' oder 'Abweichender Forderungsinhaber' verwendet."
+Title: "Digitale Patientenrechnung Person"
+Description: "Das Profil DiPagPerson wird in für die Rolle 'Behandelnder Leistungserbringer' oder 'Abweichender Forderungsinhaber' verwendet."
 * insert Meta
 * identifier MS
 * identifier ^slicing.discriminator.type = #pattern

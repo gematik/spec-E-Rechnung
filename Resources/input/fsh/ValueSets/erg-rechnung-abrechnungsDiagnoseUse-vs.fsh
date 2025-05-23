@@ -1,5 +1,5 @@
-ValueSet: ERGAbrechnungsDiagnoseUseVS
-Id: erg-abrechnungs-diagnose-use-VS
-Title: "ERG Abrechnungsdiagnose Use ValueSet"
+ValueSet: DiPagAbrechnungsDiagnoseUseVS
+Id: dipag-abrechnungs-diagnose-use-VS
+Title: "Digitale Patientenrechnung Abrechnungsdiagnose Use ValueSet"
 * insert Meta
-* include codes from system ERGAbrechnungsDiagnoseUseCS
+* include codes from system DiPagAbrechnungsDiagnoseUseCS

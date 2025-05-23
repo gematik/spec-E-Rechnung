@@ -1,6 +1,6 @@
-Extension: ERGFachrichtung
-Id: erg-fachrichtung
-Title: "ERG Extension Fachrichtung"
+Extension: DiPagFachrichtung
+Id: dipag-fachrichtung
+Title: "Digitale Patientenrechnung Extension Fachrichtung"
 * insert Meta
 * ^context.type = #element
 * ^context.expression = "Invoice"

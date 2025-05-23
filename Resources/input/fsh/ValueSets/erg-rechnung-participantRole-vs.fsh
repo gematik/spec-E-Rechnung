@@ -1,6 +1,6 @@
-ValueSet: ERGParticipantRoleVS
-Id: erg-participant-role-VS
-Title: "ERG Teilnehmer Rolle"
+ValueSet: DiPagParticipantRoleVS
+Id: dipag-participant-role-VS
+Title: "Digitale Patientenrechnung Teilnehmer Rolle"
 Description: "Diese Codes enthalten Teilnehmer Rollen der Digitale Patientenrechnung"
 * insert Meta
-* include codes from system ERGParticipantRoleCS
+* include codes from system DiPagParticipantRoleCS

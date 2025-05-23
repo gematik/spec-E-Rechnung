@@ -1,7 +1,7 @@
-Profile: ERGRechnungsdiagnose
+Profile: DiPagRechnungsdiagnose
 Parent: Condition
-Title: "ERG Rechnungsdiagnose"
-Id: erg-rechnungsdiagnose
+Title: "Digitale Patientenrechnung Rechnungsdiagnose"
+Id: dipag-rechnungsdiagnose
 * insert Meta
 * code MS
 * code.coding MS
@@ -37,5 +37,5 @@ Id: erg-rechnungsdiagnose
 * subject MS
   * ^short = "Referenz auf die behandelte Person"
   * ^comment = "Die Diagnose SOLL auf eine zugehörige behandelte Person referenzieren."
-* subject only Reference(ERGPatient or Patient)
+* subject only Reference(DiPagPatient or Patient)
 * subject.reference 1.. MS

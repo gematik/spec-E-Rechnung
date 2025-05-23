@@ -1,14 +1,14 @@
-Profile: ERGNutzungsprotokoll
+Profile: DiPagNutzungsprotokoll
 Parent: AuditEvent
-Title: "ERG Nutzungsprotokoll"
-Id: erg-nutzungsprotokoll
+Title: "Digitale Patientenrechnung Nutzungsprotokoll"
+Id: dipag-nutzungsprotokoll
 * insert Meta
 * type MS
   * ^comment = "Angabe ob es sich um eine zu protokollierende Nutzerinteraktion nach Abschnittt '5.5.9 Nutzerprotokolle' des Feature-Dokuments 'E-Rechnung' handelt oder um eine durchgeführte REST-API-Interaktion durch den FD."
-* type from ERGAuditEventTypeVS (required)
+* type from DiPagAuditEventTypeVS (required)
 * subtype MS
   * ^comment = "Erlaubt die Kodierung aller REST-API Operationen der Spec-E-Rechnung"
-* subtype from ERGAuditEventSubTypeVS (extensible)
+* subtype from DiPagAuditEventSubTypeVS (extensible)
 * action MS
   * ^comment = "Angabe ob es sich um eine lesende/schreibende/ausführende Interaktion handelt."
 * recorded MS
@@ -19,7 +19,7 @@ Id: erg-nutzungsprotokoll
   * ^comment = "Angaben zum Akteur (Nutzer oder DiPag FD), der den Zugriff durchgeführt hat. Siehe Abschnittt '4.8.6 Protokolleintrag'des Feature-Dokuments 'E-Rechnung'."
 * agent
   * type 1.. MS
-  * type from ERGAuditEventAgentTypeVS (required)
+  * type from DiPagAuditEventAgentTypeVS (required)
   * who MS
   * who.identifier ..1 MS
   * who.identifier ^comment = "Der Identifier wird vom Server gesetzt und kann entweder eine KVNR oder Telematik-ID sein"
@@ -44,9 +44,9 @@ Id: erg-nutzungsprotokoll
   * system MS
   * value MS
 
-CodeSystem: ERGOperationenCS
-Id: erg-operationen-cs
-Title: "ERG Operationen"
+CodeSystem: DiPagOperationenCS
+Id: dipag-operationen-cs
+Title: "Digitale Patientenrechnung Operationen"
 * insert Meta
 * #dipag-submit "Digitale Patientenrechnung_Submit"
 * #retrieve "Digitale Patientenrechnung_Retrieve"
@@ -54,34 +54,34 @@ Title: "ERG Operationen"
 * #process-flag "Digitale Patientenrechnung_ProcessFlag"
 * #erase "Digitale Patientenrechnung_Erase"
 
-CodeSystem: ERGPropRestInterationsCS
-Id: erg-prop-rest-interactions-cs
-Title: "ERG proprietäre RESTful Interaktionen"
+CodeSystem: DiPagPropRestInterationsCS
+Id: dipag-prop-rest-interactions-cs
+Title: "Digitale Patientenrechnung proprietäre RESTful Interaktionen"
 * insert Meta
 * #create "Erstellen"
 * #read "Lesen"
 * #update "Aktualisieren"
 * #delete "Löschen"
 
-ValueSet: ERGAuditEventSubTypeVS
-Id: erg-audit-event-sub-type-vs
-Title: "ERG Audit Event Sub-Type"
+ValueSet: DiPagAuditEventSubTypeVS
+Id: dipag-audit-event-sub-type-vs
+Title: "Digitale Patientenrechnung Audit Event Sub-Type"
 * insert Meta
 * include codes from system $restful-interaction
-* include codes from system ERGOperationenCS
-* include codes from system ERGPropRestInterationsCS
+* include codes from system DiPagOperationenCS
+* include codes from system DiPagPropRestInterationsCS
 
-ValueSet: ERGAuditEventTypeVS
-Id: erg-audit-event-type-vs
-Title: "ERG Audit Event Type"
+ValueSet: DiPagAuditEventTypeVS
+Id: dipag-audit-event-type-vs
+Title: "Digitale Patientenrechnung Audit Event Type"
 * insert Meta
 * http://dicom.nema.org/resources/ontology/DCM#110100 "Application Activity"
 * https://hl7.org/fhir/R4/codesystem-audit-event-type.html#rest "RESTful Operation"
 
 
-ValueSet: ERGAuditEventAgentTypeVS
-Id: erg-audit-event-agent-type-vs
-Title: "ERG Audit Event Agent Type"
+ValueSet: DiPagAuditEventAgentTypeVS
+Id: dipag-audit-event-agent-type-vs
+Title: "Digitale Patientenrechnung Audit Event Agent Type"
 * insert Meta
 * http://terminology.hl7.org/CodeSystem/extra-security-role-type#humanuser "human user"
 * http://terminology.hl7.org/CodeSystem/extra-security-role-type#dataprocessor "data processor"

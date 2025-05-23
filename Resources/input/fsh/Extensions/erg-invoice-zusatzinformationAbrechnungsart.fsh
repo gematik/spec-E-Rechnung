@@ -1,5 +1,5 @@
-Extension: ERGZusatzinformationZurAbrechnungsart
-Id: ERGZusatzinformationZurAbrechnungsart
+Extension: DiPagZusatzinformationZurAbrechnungsart
+Id: DiPagZusatzinformationZurAbrechnungsart
 Title: "Zusatzinformation zur Abrechnungsart"
 Description: "Die Abrechnung nach §13 kann ergänzend zu den grundsätzlichen Ausrichtungen der Abrechnung aufgeführt werden. Diese Extension erlaubt es, die Ausrichtung der Rechnung entsprechend zu flaggen."
 * insert Meta

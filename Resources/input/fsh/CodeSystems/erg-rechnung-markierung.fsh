@@ -1,6 +1,6 @@
-CodeSystem:  ERGRechnungMarkierungCS
-Id: erg-rechnung-markierung-cs
-Title: "ERG Rechnung Markierung CS"
+CodeSystem:  DiPagRechnungMarkierungCS
+Id: dipag-rechnung-markierung-cs
+Title: "Digitale Patientenrechnung Rechnung Markierung CS"
 Description:  "CodeSystem für die Differenzierung von verschiedenen Arten von Markierungen eines Dokumentes"
 * insert Meta
 * #eingereicht-frontend "Eingereicht (per Frontend)"
@@ -12,9 +12,9 @@ Description:  "CodeSystem für die Differenzierung von verschiedenen Arten von M
 * #archiviert "Archiviert"
 * #persoenlich "Persönlich"
 
-CodeSystem:  ERGDokumentArtDerArchivierungCS
-Id: erg-dokument-artderarchivierung-cs
-Title: "ERG Dokument ArtDerArchivierung CS"
+CodeSystem:  DiPagDokumentArtDerArchivierungCS
+Id: dipag-dokument-artderarchivierung-cs
+Title: "Digitale Patientenrechnung Dokument ArtDerArchivierung CS"
 Description:  "CodeSystem für die Differenzierung von verschiedenen Arten von Markierungen eines Dokumentes"
 * insert Meta
 * #epa "ePA"

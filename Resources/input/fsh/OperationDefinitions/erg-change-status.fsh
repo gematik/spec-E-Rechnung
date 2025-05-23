@@ -1,9 +1,9 @@
 // ------------- OperationDefinition -------------
 
-Instance: ERGOperationChangeStatus
+Instance: DiPagOperationChangeStatus
 InstanceOf: OperationDefinition
 Usage: #example
-Title: "ERG Operation ChangeStatus"
+Title: "Digitale Patientenrechnung Operation ChangeStatus"
 Description: "Änderung des Bearbeitungsstatus eines Dokumentes"
 * url = "https://gematik.de/fhir/erg/OperationDefinition/ChangeStatus"
 * status = #active
@@ -11,7 +11,7 @@ Description: "Änderung des Bearbeitungsstatus eines Dokumentes"
 * experimental = false
 * date = "2024-06-20"
 * kind = #operation
-* name = "ERGChangeStatus"
+* name = "Digitale Patientenrechnung ChangeStatus"
 * code = #change-status
 * resource = #DocumentReference
 * system = false
@@ -23,7 +23,7 @@ Description: "Änderung des Bearbeitungsstatus eines Dokumentes"
   * use = #in
   * min = 1
   * max = "1"
-  * documentation = "Valider Code aus CodeSystem ERGARechnungsstatus"
+  * documentation = "Valider Code aus CodeSystem DiPagARechnungsstatus"
   * type = #code
 * parameter[+]
   * name = #meta

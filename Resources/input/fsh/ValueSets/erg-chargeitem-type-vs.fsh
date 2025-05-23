@@ -1,5 +1,5 @@
-ValueSet: ERGRechnungspositionTypeVS
-Id: erg-chargeitem-type-VS
-Title: "ERG Typ der Rechnungsposition ValueSet"
+ValueSet: DiPagRechnungspositionTypeVS
+Id: dipag-chargeitem-type-VS
+Title: "Digitale Patientenrechnung Typ der Rechnungsposition ValueSet"
 * insert Meta
-* include codes from system ERGRechnungspositionTypeCS
+* include codes from system DiPagRechnungspositionTypeCS

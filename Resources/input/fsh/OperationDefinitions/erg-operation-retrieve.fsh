@@ -1,9 +1,9 @@
 // ------------- OperationDefinition -------------
 
-Instance: ERGOperationRetrieve
+Instance: DiPagOperationRetrieve
 InstanceOf: OperationDefinition
 Usage: #example
-Title: "ERG Operation Retrieve"
+Title: "Digitale Patientenrechnung Operation Retrieve"
 Description: "Abrufen von E-Rechnungen, strukturierten Rechnungsinhalten und Dokumenten"
 * status = #active
 * version = "1.0.0-CC"
@@ -11,7 +11,7 @@ Description: "Abrufen von E-Rechnungen, strukturierten Rechnungsinhalten und Dok
 * date = "2024-06-20"
 * url = "https://gematik.de/fhir/erg/OperationDefinition/Retrieve"
 * kind = #operation
-* name = "ERGRetrieve"
+* name = "Digitale PatientenrechnungRetrieve"
 * code = #retrieve
 * resource = #DocumentReference
 * system = false

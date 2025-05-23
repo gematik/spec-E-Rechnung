@@ -1,16 +1,16 @@
-Profile: ERGRechnung
-Title: "ERG Rechnung"
+Profile: DiPagRechnung
+Title: "Digitale Patientenrechnung Rechnung"
 Parent: Invoice
-Id: erg-rechnung
+Id: dipag-rechnung
 * insert Meta
 * extension contains 
   http://hl7.org/fhir/5.0/StructureDefinition/extension-Invoice.period[x] named Behandlungszeitraum 0..1 MS and
-  ERGAbrechnungsDiagnoseProzedur named AbrechnungsDiagnoseProzedur 0..* MS and
-  ERGAbrechnungsDiagnoseProzedurFreitext named AbrechnungsDiagnoseProzedurFreitext ..1 MS and
-  ERGBehandlungsart named Behandlungsart 1..1 MS and
-  ERGFachrichtung named Fachrichtung 1..1 MS and
+  DiPagAbrechnungsDiagnoseProzedur named AbrechnungsDiagnoseProzedur 0..* MS and
+  DiPagAbrechnungsDiagnoseProzedurFreitext named AbrechnungsDiagnoseProzedurFreitext ..1 MS and
+  DiPagBehandlungsart named Behandlungsart 1..1 MS and
+  DiPagFachrichtung named Fachrichtung 1..1 MS and
   $extension-replaces named Korrekturrechnung ..1 MS and
-  ERGTokenStornierteRechnung named Korrekturtoken ..1 MS and
+  DiPagTokenStornierteRechnung named Korrekturtoken ..1 MS and
   $extension-basedOn named Antragsreferenz ..1 MS
 * extension[AbrechnungsDiagnoseProzedur]
   * ^short = "Diagnose"
@@ -19,7 +19,7 @@ Id: erg-rechnung
   * extension[Use].valueCoding MS
     * ^short = "Kennzeichen Hauptdiagnose"
     * ^comment = "Das Kennzeichen Hauptdiagnose SOLL vorhanden sein."
-    * code = ERGAbrechnungsDiagnoseUseCS#main-diagnosis
+    * code = DiPagAbrechnungsDiagnoseUseCS#main-diagnosis
   * extension[Referenz].valueReference MS
     * ^short = "Zuordnung von Diagnosen oder Prozeduren zur Rechnung"
     * ^comment = "Diagnosen und Prozeduren SOLLEN zur Rechnung zugeordnet sein."
@@ -55,7 +55,7 @@ Id: erg-rechnung
   * ^short = "Info Korrekturrechnung"
   * ^comment = "Wenn die Instanz dieser Rechnung eine Korrektur einer anderen Rechnung ist, SOLL die ersetzte Rechnung hier referenziert werden."
   * valueCanonical 1..1 MS
-  * valueCanonical only Canonical(ERGRechnung or Invoice)
+  * valueCanonical only Canonical(DiPagRechnung or Invoice)
 * extension[Korrekturtoken]
   * ^short = "Info Korrekturtoken"
   * ^comment = "Wenn die Instanz dieser Rechnung eine Korrektur einer anderen Rechnung ist, SOLL das Token der ersetzten Rechnung hier angegeben werden."
@@ -68,11 +68,11 @@ Id: erg-rechnung
   * valueReference.display 0..0
   * valueReference.type 0..0
   * valueReference.identifier 1..1 MS
-    * ^patternIdentifier.type = ERGRechnungIdentifierTypeCS#antragsreferenz
+    * ^patternIdentifier.type = DiPagRechnungIdentifierTypeCS#antragsreferenz
     * ^short = "Referenz auf Heil- und Kostenplan, Kostenvoranschlag oder Kostenübernahmeantrag"
     * ^comment = "Die Antragsreferenz SOLL vorhanden sein."
     * type 1.. MS
-    * type = ERGRechnungIdentifierTypeCS#antragsreferenz
+    * type = DiPagRechnungIdentifierTypeCS#antragsreferenz
     * system 1.. MS
       * ^short = "NamingSystem der Antragsreferenz"
     * value 1.. MS
@@ -85,11 +85,11 @@ Id: erg-rechnung
   Rechnungsnummer 1..1 MS and
   Antragsnummer ..1 MS
 * identifier[Rechnungsnummer]
-  * ^patternIdentifier.type = ERGRechnungIdentifierTypeCS#invoice
+  * ^patternIdentifier.type = DiPagRechnungIdentifierTypeCS#invoice
   * ^short = "Rechnungs-Nr. (der LEI)"
   * ^comment = "Die Rechnungs-Nr. (der LEI) MUSS vorhanden sein."
   * type 1.. MS
-  * type = ERGRechnungIdentifierTypeCS#invoice
+  * type = DiPagRechnungIdentifierTypeCS#invoice
   * system 1.. MS
     * ^short = "NamingSystem der Rechnungs-Nr. (der LEI)"
   * value 1.. MS
@@ -105,31 +105,31 @@ Id: erg-rechnung
 * type.coding contains 
   AusrichtungDerRechnung ..1 MS and
   Rechnungsart ..1 MS
-* type.coding[AusrichtungDerRechnung] from ERGRechnungAbrechnungsartVS (required)
-  * ^patternCoding.system = Canonical(ERGRechnungAbrechnungsartCS)
+* type.coding[AusrichtungDerRechnung] from DiPagRechnungAbrechnungsartVS (required)
+  * ^patternCoding.system = Canonical(DiPagRechnungAbrechnungsartCS)
   * ^short = "Abrechnungsart der Rechnung"
   * ^comment = "Die Grundsätzliche Ausrichtung der Rechnung (Abrechnungsart) SOLL vorhanden sein."
   * system 1.. MS
   * code 1.. MS
-  * extension contains ERGZusatzinformationZurAbrechnungsart named Zusatzinformation ..1 MS
+  * extension contains DiPagZusatzinformationZurAbrechnungsart named Zusatzinformation ..1 MS
   * extension[Zusatzinformation]
     * ^short = "Zusatzinformation zur Abrechnungsart"
     * ^comment = "Die Zusatzinformation zur Abrechnungsart SOLL vorhanden sein, wenn es sich um eine Abrechnung nach §13 Abs. 2 SGB V handelt."
   * extension[Zusatzinformation].valueBoolean MS
-* type.coding[Rechnungsart] from ERGRechnungsartVS (required)
-  * ^patternCoding.system = Canonical(ERGRechnungsartCS)
+* type.coding[Rechnungsart] from DiPagRechnungsartVS (required)
+  * ^patternCoding.system = Canonical(DiPagRechnungsartCS)
   * ^short = "Rechnungsart"
   * ^comment = "Die Rechnungsart SOLL vorhanden sein."
   * system 1.. MS
   * code 1.. MS
 * subject 1..1 MS
-* subject only Reference(ERGPatient or Patient)
+* subject only Reference(DiPagPatient or Patient)
   * reference 1..1 MS
   * ^short = "Behandelte Person"
   * ^comment = "Der Name der behandelten Person SOLL angegeben werden und kann vom Rechnungsempfänger abweichen, z.B. wenn Eltern Rechnungen für ihre Kinder erhalten."
 * recipient 1.. MS
   * ^short = "Rechnungsempfänger"
-* recipient only Reference(ERGPatient or Patient)
+* recipient only Reference(DiPagPatient or Patient)
   * reference 1.. MS
   * identifier 1.. MS
   * identifier only IdentifierKvid10
@@ -145,14 +145,14 @@ Id: erg-rechnung
   * ^comment = "Der Status MUSS vorhanden sein."
 * status = #issued
 * issuer 1.. MS
-* issuer only Reference(ERGInstitution or Organization)
+* issuer only Reference(DiPagInstitution or Organization)
   * ^short = "Rechnungsersteller"
   * ^comment = "Der Rechnungsersteller MUSS vorhanden sein."
   * reference 1.. MS 
 * participant MS
   * ^short = "weitere behandelnde Leistungserbringer oder abweichender Forderungsinhaber"
 * participant.role MS
-* participant.role from ERGParticipantRoleVS (required)
+* participant.role from DiPagParticipantRoleVS (required)
 * participant ^slicing.discriminator.type = #pattern
 * participant ^slicing.discriminator.path = "role"
 * participant ^slicing.rules = #open
@@ -163,14 +163,14 @@ Id: erg-rechnung
   * ^short = "Weitere behandelnde Leistungserbringer"
   * ^comment = "Im Falle einer GOÄ oder GOÄ-neu Rechnung, SOLLLEN weitere behandelnde Leistungserbringer vorhanden sein.
   Im Falle einer GOZ Rechnung, KÖNNEN weitere behandelnde Leistungserbringer vorhanden sein."
-  * role = ERGParticipantRoleCS#leistungserbringer
-  * actor only Reference(ERGPerson or ERGInstitution or Practitioner or Organization)
+  * role = DiPagParticipantRoleCS#leistungserbringer
+  * actor only Reference(DiPagPerson or DiPagInstitution or Practitioner or Organization)
 * participant[Forderungsinhaber]
   * ^short = "Abweichender Forderungsinhaber"
   * ^comment = "Der abweichender Forderungsinhaber SOLL vorhanden sein."
   * role MS
-  * role = ERGParticipantRoleCS#forderungsinhaber
-  * actor only Reference(ERGPerson or ERGInstitution or Practitioner or Organization)
+  * role = DiPagParticipantRoleCS#forderungsinhaber
+  * actor only Reference(DiPagPerson or DiPagInstitution or Practitioner or Organization)
 * note MS
   * ^short = "Hinweise an den Kostenträger"
   * ^comment = "Der Hinweise an den Kostenträger KANN vorhanden sein."
@@ -179,7 +179,7 @@ Id: erg-rechnung
   * ^comment = "Die Zahlungsdaten zur Überweisung SOLLEN vorhanden sein.
   Weitere Zahlungsmethoden wie bspw. Paypal, Klarna, Kreditkarte KÖNNEN auch hier angegeben werden.
   Ebenfalls sollte hier der Zahlbetrag in EUR inkl. potenzieller Abzüge durch Anzahlungen, Vorauszahlungen oder Abschlagzahlungen."
-* paymentTerms.extension contains ERGZahlungsziel named Zahlungsziel 1..1 MS
+* paymentTerms.extension contains DiPagZahlungsziel named Zahlungsziel 1..1 MS
 * paymentTerms.extension[Zahlungsziel]
   * ^short = "Zahlungsziel als Datum oder Fristangabe"
   * ^comment = "Das Zahlungsziel SOLL vorhanden sein."
@@ -191,7 +191,7 @@ Id: erg-rechnung
   * ^comment = "Der Rechnungsbetrag in Brutto MUSS vorhanden sein."
 * totalPriceComponent MS
 * totalPriceComponent.extension contains
-  ERGTeilsumme named Teilsumme ..* MS
+  DiPagTeilsumme named Teilsumme ..* MS
 * totalPriceComponent.extension[Teilsumme]
   * ^short = "Teilsummen in EUR für die Rechnungspositionstyp"
   * ^comment = "Für alle vorkommenden Rechnungspositionstypen SOLL eine Teilsumme vorhanden sein."
@@ -225,7 +225,7 @@ Id: erg-rechnung
   * type MS
   * type = #base
   * code 1.. MS
-  * code = ERGTotalPriceComponentTypeCS#SummeRechnungspositionen
+  * code = DiPagTotalPriceComponentTypeCS#SummeRechnungspositionen
   * factor 0..0
   * amount ..1 MS
     * ^short = "Wert in EUR"
@@ -238,7 +238,7 @@ Id: erg-rechnung
   * type MS
   * type = #base
   * code 1.. MS
-  * code = ERGTotalPriceComponentTypeCS#Fremdlaborleistungen
+  * code = DiPagTotalPriceComponentTypeCS#Fremdlaborleistungen
   * factor 0..0
   * amount ..1 MS
     * ^short = "Wert in EUR"
@@ -252,7 +252,7 @@ Id: erg-rechnung
   * type MS
   * type = #deduction
   * code 1.. MS
-  * code = ERGTotalPriceComponentTypeCS#Minderung7GOZ
+  * code = DiPagTotalPriceComponentTypeCS#Minderung7GOZ
   * factor 0..0
   * amount ..1 MS
     * ^short = "Wert in EUR"
@@ -265,7 +265,7 @@ Id: erg-rechnung
   * type MS
   * type = #deduction
   * code 1.. MS
-  * code from ERGTotalPriceComponentDeductionTypeVS (required)
+  * code from DiPagTotalPriceComponentDeductionTypeVS (required)
     * ^short = "Kategorisierung des Abzugs"
     * ^comment = "Die Kategorisierung des Abzugs SOLL vorhanden sein."
   * factor 0..0
@@ -274,7 +274,7 @@ Id: erg-rechnung
     * currency 1.. MS
     * currency = #EUR
     * value 1.. MS
-  * extension contains ERGAbzugKassenanteil named Kassenanteil ..1 MS
+  * extension contains DiPagAbzugKassenanteil named Kassenanteil ..1 MS
   * extension[Kassenanteil]
     * ^short = "Kassenanteil in Prozent"
     * ^comment = "Im Falle einer GOZ Rechnung KANN der Kassenanteil in Prozent vorhanden sein.
@@ -291,7 +291,7 @@ Id: erg-rechnung
   * ^comment = "Die Reihenfolge der Rechnungsposition MUSS mit einer Sequenz-Nummer angegeben werden. Die Sequenz muss mit 1 als erste Ziffer beginnen."
 * lineItem.chargeItem[x] only Reference
 * lineItem.chargeItemReference MS
-* lineItem.chargeItemReference only Reference(ERGRechnungsposition or ChargeItem)
+* lineItem.chargeItemReference only Reference(DiPagRechnungsposition or ChargeItem)
   * ^short = "Referenz auf die Instanz der Rechnungsposition"
   * ^comment = "Die Referenz auf die Instanz der Rechnungsposition MUSS vorhanden sein."
 * lineItem.priceComponent	MS
@@ -316,8 +316,8 @@ Id: erg-rechnung
   * factor 0..0
   * amount 1.. MS
 
-Extension: ERGZahlungsziel
-Id: erg-zahlungsziel
-Title: "ERG Zahlungsziel"
+Extension: DiPagZahlungsziel
+Id: dipag-zahlungsziel
+Title: "Digitale Patientenrechnung Zahlungsziel"
 * insert Meta
 * value[x] only date

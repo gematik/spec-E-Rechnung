@@ -1,6 +1,6 @@
-Extension: ERGWegegeldReiseentschaedigung
-Id: erg-wegegeld-reiseentschaedigung
-Title: "ERG Wegegeld/Reiseentschädigung Extension"
+Extension: DiPagWegegeldReiseentschaedigung
+Id: dipag-wegegeld-reiseentschaedigung
+Title: "Digitale Patientenrechnung Wegegeld/Reiseentschädigung Extension"
 Context: ChargeItem
 * extension contains
   Wegegeld ..1 and
@@ -40,4 +40,4 @@ Context: ChargeItem
     * valueMoney.currency = #EUR
   * extension[Verkehrsmittel]
     * value[x] only Coding
-    * valueCoding from ERGVerkehrsmittel (required)
+    * valueCoding from DiPagVerkehrsmittel (required)

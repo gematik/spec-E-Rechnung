@@ -1,7 +1,7 @@
-Profile: ERGInstitution
+Profile: DiPagInstitution
 Parent: Organization
-Title: "ERG Institution"
-Id: erg-institution
+Title: "Digitale Patientenrechnung Institution"
+Id: dipag-institution
 * insert Meta
 * identifier MS
 * identifier ^slicing.discriminator.type = #pattern

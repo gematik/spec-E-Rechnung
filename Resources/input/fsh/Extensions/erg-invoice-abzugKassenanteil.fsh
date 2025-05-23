@@ -1,6 +1,6 @@
-Extension: ERGAbzugKassenanteil
-Id: erg-abzug-kassenanteil
-Title: "ERG Extension Abzug Kassenanteil in Prozent"
+Extension: DiPagAbzugKassenanteil
+Id: dipag-abzug-kassenanteil
+Title: "Digitale Patientenrechnung Extension Abzug Kassenanteil in Prozent"
 * insert Meta
 * ^context.type = #element
 * ^context.expression = "Invoice.totalPriceComponent"

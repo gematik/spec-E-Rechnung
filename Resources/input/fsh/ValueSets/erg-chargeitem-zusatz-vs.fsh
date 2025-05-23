@@ -1,4 +1,4 @@
-ValueSet: ERGRechnungspositionZusatzVS
-Id: erg-rechnungsposition-zusatz-VS
-Title: "ERG Rechnungsposition Zusatz ValueSet"
-* include codes from system ERGRechnungspositionZusatzCS
+ValueSet: DiPagRechnungspositionZusatzVS
+Id: dipag-rechnungsposition-zusatz-VS
+Title: "Digitale Patientenrechnung Rechnungsposition Zusatz ValueSet"
+* include codes from system DiPagRechnungspositionZusatzCS

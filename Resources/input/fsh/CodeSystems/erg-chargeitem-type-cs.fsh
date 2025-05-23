@@ -1,6 +1,6 @@
-CodeSystem: ERGRechnungspositionTypeCS
-Id: erg-chargeitem-type-CS
-Title: "ERG Typ der Rechnungsposition CodeSystem"
+CodeSystem: DiPagRechnungspositionTypeCS
+Id: dipag-chargeitem-type-CS
+Title: "Digitale Patientenrechnung Typ der Rechnungsposition CodeSystem"
 * insert Meta
 * #GOÄ "Leistung nach Gebührenordnung GOÄ"
 * #GOZ "Leistung nach Gebührenordnung GOZ"

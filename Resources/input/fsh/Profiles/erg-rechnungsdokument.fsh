@@ -1,7 +1,7 @@
-Profile: ERGRechnungsdokument
-Title: "ERG Rechnungsdokument"
+Profile: DiPagRechnungsdokument
+Title: "Digitale Patientenrechnung Rechnungsdokument"
 Parent: Binary
-Id: erg-rechnungsdokument
+Id: dipag-rechnungsdokument
 * insert Meta
 * contentType MS
 * contentType = #application/pdf (exactly)

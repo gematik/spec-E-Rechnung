@@ -1,5 +1,5 @@
 Instance: BeispielNutzungsprotokoll
-InstanceOf: ERGNutzungsprotokoll
+InstanceOf: DiPagNutzungsprotokoll
 * type = #rest
 * subtype = #dipag-submit
 * action = #C
