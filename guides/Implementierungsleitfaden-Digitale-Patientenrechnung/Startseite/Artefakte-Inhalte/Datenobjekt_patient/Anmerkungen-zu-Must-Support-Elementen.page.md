@@ -1,6 +1,6 @@
 ---
 topic: ERGPatient-MS
-canonical: https://gematik.de/fhir/erg/StructureDefinition/erg-patient
+canonical: https://gematik.de/fhir/dipag/StructureDefinition/erg-patient
 ---
 
 ### Anmerkungen zu Must-Support-Feldern

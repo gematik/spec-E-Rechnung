@@ -14,7 +14,7 @@ Die nachfolgende Interaktion ist relevant für den FD als Server, sowie für das
 
 Die Input- und Output-Parameter werden durch die OperationDefinition `https://gematik.de/fhir/ergpkv/OperationDefinition/Retrieve` beschrieben.
 
-{{render:https://gematik.de/fhir/erg/OperationDefinition/Retrieve}}
+{{render:https://gematik.de/fhir/dipag/OperationDefinition/Retrieve}}
 
 |API-Zustand|HTTP-Status-Code|
 |-|-|

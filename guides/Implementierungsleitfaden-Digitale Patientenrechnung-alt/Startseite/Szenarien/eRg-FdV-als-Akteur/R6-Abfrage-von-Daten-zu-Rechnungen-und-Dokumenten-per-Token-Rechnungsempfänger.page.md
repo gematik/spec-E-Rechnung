@@ -5,16 +5,16 @@ topic: AF_10262
 
 ## {{page-title}}
 
-Die nachfolgende Interaktion ist relevant für den FD als Server, sowie für das eRg FdV als Client. Anwendungsfall AF_10262 MUSS durch den FD über die spezifizierte API umgesetzt werden. Die Vorgaben aus "Tabelle 19: Use Case Abfrage von Daten zu Rechnungen und Dokumenten per Token (Rechnungsempfänger)" des Feature-Dokumentes MÜSSEN eingehalten werden durch den FD.
+Die nachfolgende Interaktion ist relevant für den FD als Server, sowie für das DiPag FdV als Client. Anwendungsfall AF_10262 MUSS durch den FD über die spezifizierte API umgesetzt werden. Die Vorgaben aus "Tabelle 19: Use Case Abfrage von Daten zu Rechnungen und Dokumenten per Token (Rechnungsempfänger)" des Feature-Dokumentes MÜSSEN eingehalten werden durch den FD.
 
 |||
 |-|-|
 |HTTP-Methode|POST oder GET|
 |Endpunkt|/DocumentReference/$retrieve|
 
-Die Input- und Output-Parameter werden durch die OperationDefinition `https://gematik.de/fhir/erg/OperationDefinition/Retrieve` beschrieben.
+Die Input- und Output-Parameter werden durch die OperationDefinition `https://gematik.de/fhir/dipag/OperationDefinition/Retrieve` beschrieben.
 
-{{render:https://gematik.de/fhir/erg/OperationDefinition/Retrieve}}
+{{render:https://gematik.de/fhir/dipag/OperationDefinition/Retrieve}}
 
 |API-Zustand|HTTP-Status-Code|
 |-|-|
@@ -77,7 +77,7 @@ mit Body:
 
 ### Verarbeitungsschritte im FD
 
-* Der FD MUSS aus dem Access-Token die KVNR extrahieren, falls es sich bei dem anfragenden System um ein eRg FdV handelt. Der FD MUSS sicherstellen, dass nur DocumentReference-Ressourcen abgerufen werden können, in denen `DocumentReference.subject` auf einen Benutzer verweist, welcher durch die KVNR aus dem Access-Token identifiziert wird.
+* Der FD MUSS aus dem Access-Token die KVNR extrahieren, falls es sich bei dem anfragenden System um ein DiPag FdV handelt. Der FD MUSS sicherstellen, dass nur DocumentReference-Ressourcen abgerufen werden können, in denen `DocumentReference.subject` auf einen Benutzer verweist, welcher durch die KVNR aus dem Access-Token identifiziert wird.
 
 * Der FD MUSS sicherstellen, dass die Abfrage einer Binary-Ressource, welche unter `DocumentReference.content.attachment.url` referenziert wird, nur erfolgen kann, wenn:
     * ein valides Access-Token mitgeliefert wird UND

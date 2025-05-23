@@ -1,6 +1,6 @@
 ---
 topic: ERGTotalPriceComponentTypeCS
-canonical: https://gematik.de/fhir/erg/CodeSystem/erg-total-price-component-type-cs
+canonical: https://gematik.de/fhir/dipag/CodeSystem/erg-total-price-component-type-cs
 ---
 
 ## {{link}}

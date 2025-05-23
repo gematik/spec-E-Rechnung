@@ -5,7 +5,7 @@ InstanceOf: OperationDefinition
 Usage: #example
 Title: "Digitale Patientenrechnung Operation Erase"
 Description: "Permanente Löschung eines Dokumentes"
-* url = "https://gematik.de/fhir/erg/OperationDefinition/Erase"
+* url = "https://gematik.de/fhir/dipag/OperationDefinition/Erase"
 * status = #active
 * version = "1.0.0-CC"
 * experimental = false

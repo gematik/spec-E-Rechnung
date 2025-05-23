@@ -1,5 +1,5 @@
 ---
-canonical: https://gematik.de/fhir/erg/StructureDefinition/erg-fachrichtung
+canonical: https://gematik.de/fhir/dipag/StructureDefinition/erg-fachrichtung
 expand: 2
 ---
 

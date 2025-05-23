@@ -1,5 +1,5 @@
 ---
-canonical: https://gematik.de/fhir/erg/StructureDefinition/erg-wegegeld-reiseentschaedigung
+canonical: https://gematik.de/fhir/dipag/StructureDefinition/erg-wegegeld-reiseentschaedigung
 expand: 2
 ---
 

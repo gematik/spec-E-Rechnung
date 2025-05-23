@@ -1,5 +1,5 @@
 ---
-canonical: https://gematik.de/fhir/erg/StructureDefinition/erg-documentreference-markierung
+canonical: https://gematik.de/fhir/dipag/StructureDefinition/erg-documentreference-markierung
 expand: 2
 ---
 

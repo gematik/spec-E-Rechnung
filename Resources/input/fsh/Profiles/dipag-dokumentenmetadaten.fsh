@@ -78,7 +78,7 @@ Id: dipag-dokumentenmetadaten
   * ^comment = "Der FD muss die Base64-kodierten Daten aus attachment.data extrahieren und in eine Binary-Ressource auslagern."
 * content[rechnungspdf]
   * format MS
-  * format = https://gematik.de/fhir/erg/CodeSystem/dipag-attachment-format-cs#dipag
+  * format = https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs#dipag
   * attachment 1..1 MS
     * contentType 1.. MS
     * contentType = #application/pdf
@@ -88,7 +88,7 @@ Id: dipag-dokumentenmetadaten
     * url MS
 * content[angereicherteRechnung]
   * format MS
-  * format = https://gematik.de/fhir/erg/CodeSystem/dipag-attachment-format-cs#angereichertesPDF
+  * format = https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs#angereichertesPDF
   * attachment 1..1 MS
     * contentType 1.. MS
     * contentType = #application/pdf
@@ -98,7 +98,7 @@ Id: dipag-dokumentenmetadaten
     * url MS
 * content[strukturierterRechnungsinhalt]
   * format MS
-  * format = https://gematik.de/fhir/erg/CodeSystem/dipag-attachment-format-cs#rechnungsinhalt
+  * format = https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs#rechnungsinhalt
   * attachment 1..1 MS
     * contentType from DiPagRestrictedMimeTypesVS (required)
     * contentType 1.. MS
@@ -108,7 +108,7 @@ Id: dipag-dokumentenmetadaten
     * url MS
 * content[anhang]
   * format MS
-  * format = https://gematik.de/fhir/erg/CodeSystem/dipag-attachment-format-cs#rechnungsanhang
+  * format = https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs#rechnungsanhang
   * attachment 1..1 MS
     * contentType = #application/pdf
     * contentType 1.. MS
@@ -140,7 +140,7 @@ ValueSet: DiPagRechnungsstatusVS
 Id: dipag-rechnungsstatus-vs
 Title: "Digitale Patientenrechnung Rechnungsstatus"
 * insert Meta
-* include codes from system https://gematik.de/fhir/erg/CodeSystem/dipag-rechnungsstatus-cs
+* include codes from system https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsstatus-cs
 
 // ------------- CodeSystem -------------
 
@@ -197,12 +197,12 @@ Description: "Extension zur Angabe einer Leistungsart"
 
 Invariant: SignaturVerpflichtendRechnung
 Description: "Eine Signature muss vorhanden sein, falls es sich bei der DocumentReference um eine Rechnung handelt."
-Expression: "type.coding.where(system = 'http://dvmd.de/fhir/CodeSystem/kdl' and code = 'AM010106').exists() implies extension.where(url = 'https://gematik.de/fhir/erg/StructureDefinition/dipag-docref-signature').exists()"
+Expression: "type.coding.where(system = 'http://dvmd.de/fhir/CodeSystem/kdl' and code = 'AM010106').exists() implies extension.where(url = 'https://gematik.de/fhir/dipag/StructureDefinition/dipag-docref-signature').exists()"
 Severity: #error
 
 Invariant: RechnungOderAnhang
 Description: "Ein Dokument kann entweder ein Anhang enthalten oder ein Rechnungsdokument inkl. strukturierten Rechnungsinhalten."
-Expression: "content.format.where(system = 'https://gematik.de/fhir/erg/CodeSystem/dipag-attachment-format-cs' and code = 'rechnungsanhang').exists() xor (content.format.where(system = 'https://gematik.de/fhir/erg/CodeSystem/dipag-attachment-format-cs' and code = 'dipag').exists() and  content.format.where(system = 'https://gematik.de/fhir/erg/CodeSystem/dipag-attachment-format-cs' and code = 'rechnungsinhalt').exists())"
+Expression: "content.format.where(system = 'https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs' and code = 'rechnungsanhang').exists() xor (content.format.where(system = 'https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs' and code = 'dipag').exists() and  content.format.where(system = 'https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs' and code = 'rechnungsinhalt').exists())"
 Severity: #error
 
 

@@ -1,6 +1,6 @@
 ---
 topic: ERGPropRestInterationsCS
-canonical: https://gematik.de/fhir/erg/CodeSystem/erg-prop-rest-interactions-cs
+canonical: https://gematik.de/fhir/dipag/CodeSystem/erg-prop-rest-interactions-cs
 ---
 
 ## {{link}}

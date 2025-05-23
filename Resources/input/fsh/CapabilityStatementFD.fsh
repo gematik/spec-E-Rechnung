@@ -2,7 +2,7 @@ Instance: CapabilityStatementFD
 InstanceOf: CapabilityStatement
 Usage: #definition
 * insert MetaInstance
-* url = "https://gematik.de/fhir/erg/CapabilityStatement/DiPagCapabilityStatementFD"
+* url = "https://gematik.de/fhir/dipag/CapabilityStatement/DiPagCapabilityStatementFD"
 * name = "CapabilityStatementFD"
 * title = "CapabilityStatement Fachdienst E-Rechnnung"
 * description = 
@@ -44,7 +44,7 @@ Usage: #definition
     * operation[+]
       * insert Expectation (#SHALL)
       * name = "dipag-submit"
-      * definition = "https://gematik.de/fhir/erg/OperationDefinition/Submit"
+      * definition = "https://gematik.de/fhir/dipag/OperationDefinition/Submit"
   * resource[+]
     * type = #DocumentReference
     * insert Expectation (#SHALL)
@@ -83,24 +83,24 @@ Usage: #definition
     * searchParam[+]
       * insert Expectation (#SHALL)
       * name = "dipag-makierung"
-      * definition = "https://gematik.de/fhir/erg/SearchParameter/dipag-makierung"
+      * definition = "https://gematik.de/fhir/dipag/SearchParameter/dipag-makierung"
       * type = #token
     * operation[+]
       * insert Expectation (#SHALL)
       * name = "retrieve"
-      * definition = "https://gematik.de/fhir/erg/OperationDefinition/Retrieve"
+      * definition = "https://gematik.de/fhir/dipag/OperationDefinition/Retrieve"
     * operation[+]
       * insert Expectation (#SHALL)
       * name = "change-status"
-      * definition = "https://gematik.de/fhir/erg/OperationDefinition/ChangeStatus"
+      * definition = "https://gematik.de/fhir/dipag/OperationDefinition/ChangeStatus"
     * operation[+]
       * insert Expectation (#SHALL)
       * name = "process-flag"
-      * definition = "https://gematik.de/fhir/erg/OperationDefinition/ProcessFlag"
+      * definition = "https://gematik.de/fhir/dipag/OperationDefinition/ProcessFlag"
     * operation[+]
       * insert Expectation (#SHALL)
       * name = "erase"
-      * definition = "https://gematik.de/fhir/erg/OperationDefinition/Erase"
+      * definition = "https://gematik.de/fhir/dipag/OperationDefinition/Erase"
   * resource[+]
     * type = #AuditEvent
     * insert Expectation (#SHALL)

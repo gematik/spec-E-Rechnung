@@ -5,7 +5,7 @@ topic: AF_10160
 
 ## {{page-title}}
 
-Die nachfolgende Interaktion ist relevant für den FD als Server, sowie für das eRg FdV als Client. Anwendungsfall AF_10160 MUSS durch den FD über die spezifizierte API umgesetzt werden. Die Vorgaben aus "Tabelle 24: Use Case Manuelles Markieren von Rechnungen und Dokumenten" des Feature-Dokumentes MÜSSEN eingehalten werden durch den FD.
+Die nachfolgende Interaktion ist relevant für den FD als Server, sowie für das DiPag FdV als Client. Anwendungsfall AF_10160 MUSS durch den FD über die spezifizierte API umgesetzt werden. Die Vorgaben aus "Tabelle 24: Use Case Manuelles Markieren von Rechnungen und Dokumenten" des Feature-Dokumentes MÜSSEN eingehalten werden durch den FD.
 
 |||
 |-|-|
@@ -23,9 +23,9 @@ Die nachfolgende Interaktion ist relevant für den FD als Server, sowie für das
 |Operation wird auf nicht existierender DocumentReference-Ressource aufgerufen|`404 - Not Found`|
 |Andere HTTP-Methode wird verwendet|`405 - Method Not Allowed`|
 
-Die Input- und Output-Parameter werden durch die OperationDefinition `https://gematik.de/fhir/erg/OperationDefinition/ProcessFlag` beschrieben.
+Die Input- und Output-Parameter werden durch die OperationDefinition `https://gematik.de/fhir/dipag/OperationDefinition/ProcessFlag` beschrieben.
 
-{{render:https://gematik.de/fhir/erg/OperationDefinition/ProcessFlag}}
+{{render:https://gematik.de/fhir/dipag/OperationDefinition/ProcessFlag}}
 
 ### Beispiele
 
@@ -72,7 +72,7 @@ mit Body:
 
 ### Verarbeitungsschritte im FD
 
-* Falls während eines Aufrufs der FD feststellt, dass das eRg FdV versucht eine Markierung hinzuzufügen die bereits existiert, so ist diese Markierung zu ignorieren. `HTTP 200 - OK` wird in diesem Fall zurückgegeben.
+* Falls während eines Aufrufs der FD feststellt, dass das DiPag FdV versucht eine Markierung hinzuzufügen die bereits existiert, so ist diese Markierung zu ignorieren. `HTTP 200 - OK` wird in diesem Fall zurückgegeben.
 
 * Der FD MUSS anhand der übergebenen Parameter die Extension 'ERGDocumentReferenceMarkierung' auf der DokumentReference erstellen und aktualisieren.
 

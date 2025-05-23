@@ -1,6 +1,6 @@
 ---
 topic: ERGRechnungsprozedur-Profil
-canonical: https://gematik.de/fhir/erg/StructureDefinition/erg-rechnungsprozedur
+canonical: https://gematik.de/fhir/dipag/StructureDefinition/erg-rechnungsprozedur
 ---
 ## {{link}}
 

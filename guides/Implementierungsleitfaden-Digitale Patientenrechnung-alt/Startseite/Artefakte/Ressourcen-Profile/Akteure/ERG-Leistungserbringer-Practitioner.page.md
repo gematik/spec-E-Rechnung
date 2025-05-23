@@ -1,5 +1,5 @@
 ---
-canonical: https://gematik.de/fhir/erg/StructureDefinition/erg-leistungserbringer
+canonical: https://gematik.de/fhir/dipag/StructureDefinition/erg-leistungserbringer
 expand: 1
 ---
 
@@ -11,7 +11,7 @@ expand: 1
 from
 	StructureDefinition
 where
-	url = 'https://gematik.de/fhir/erg/StructureDefinition/erg-leistungserbringer'
+	url = 'https://gematik.de/fhir/dipag/StructureDefinition/erg-leistungserbringer'
 select
 	Canonical: url, Status: status, Version: version, Basis: baseDefinition
 ```
@@ -25,7 +25,7 @@ select
         from
 	        StructureDefinition
         where
-	        url = 'https://gematik.de/fhir/erg/StructureDefinition/erg-leistungserbringer'
+	        url = 'https://gematik.de/fhir/dipag/StructureDefinition/erg-leistungserbringer'
         select
 	        Beschreibung: description
         with
@@ -35,7 +35,7 @@ select
         from 
             StructureDefinition 
         where 
-            url = 'https://gematik.de/fhir/erg/StructureDefinition/erg-leistungserbringer' 
+            url = 'https://gematik.de/fhir/dipag/StructureDefinition/erg-leistungserbringer' 
         for 
             differential.element 
             where 

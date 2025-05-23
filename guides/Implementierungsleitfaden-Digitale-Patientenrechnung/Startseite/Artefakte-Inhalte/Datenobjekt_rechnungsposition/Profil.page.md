@@ -1,6 +1,6 @@
 ---
 topic: ERGRechnungsposition-Profil
-canonical: https://gematik.de/fhir/erg/StructureDefinition/erg-rechnungsposition
+canonical: https://gematik.de/fhir/dipag/StructureDefinition/erg-rechnungsposition
 ---
 ## {{link}}
 

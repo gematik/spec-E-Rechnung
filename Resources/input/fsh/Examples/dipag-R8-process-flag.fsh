@@ -21,7 +21,7 @@ InstanceOf: Parameters
     * versionId = "2"
     * lastUpdated = "2024-05-31T13:00:00.123+02:00"
     * tag[+]
-      * system = "https://gematik.de/fhir/erg/CodeSystem/dipag-rechnungsstatus-cs"
+      * system = "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsstatus-cs"
       * code = #erledigt
     * extension[+]
       * url = Canonical(DiPagDocumentReferenceMarkierung)

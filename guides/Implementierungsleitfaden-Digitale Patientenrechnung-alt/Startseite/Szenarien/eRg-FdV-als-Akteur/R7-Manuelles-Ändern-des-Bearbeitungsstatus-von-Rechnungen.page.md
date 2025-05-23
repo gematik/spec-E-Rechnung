@@ -5,7 +5,7 @@ topic: AF_10245
 
 ## {{page-title}}
 
-Die nachfolgende Interaktion ist relevant für den FD als Server, sowie für das eRg FdV als Client. Anwendungsfall AF_10245 MUSS durch den FD über die spezifizierte API umgesetzt werden. Die Vorgaben aus "Tabelle 22: Use Case Manuelles Ändern des Bearbeitungsstatus von Rechnungen" des Feature-Dokumentes MÜSSEN eingehalten werden durch den FD.
+Die nachfolgende Interaktion ist relevant für den FD als Server, sowie für das DiPag FdV als Client. Anwendungsfall AF_10245 MUSS durch den FD über die spezifizierte API umgesetzt werden. Die Vorgaben aus "Tabelle 22: Use Case Manuelles Ändern des Bearbeitungsstatus von Rechnungen" des Feature-Dokumentes MÜSSEN eingehalten werden durch den FD.
 
 |||
 |-|-|
@@ -25,9 +25,9 @@ Die nachfolgende Interaktion ist relevant für den FD als Server, sowie für das
 |Unerlaubter Statusübergang wird versucht auszuführen|`412 - Precondition Failed`|
 |Statusübergang wird auf einer DocumentReference die einen Anhang repräsentiert aufgerufen|`412 - Precondition Failed`|
 
-Die Input- und Output-Parameter werden durch die OperationDefinition `https://gematik.de/fhir/erg/OperationDefinition/ChangeStatus` beschrieben.
+Die Input- und Output-Parameter werden durch die OperationDefinition `https://gematik.de/fhir/dipag/OperationDefinition/ChangeStatus` beschrieben.
 
-{{render:https://gematik.de/fhir/erg/OperationDefinition/ChangeStatus}}
+{{render:https://gematik.de/fhir/dipag/OperationDefinition/ChangeStatus}}
 
 Alle erlaubten Statusübergänge sind in AF_10245 beschrieben.
 

@@ -1,5 +1,5 @@
 ---
-canonical: https://gematik.de/fhir/erg/StructureDefinition/erg-docref-leistungsart
+canonical: https://gematik.de/fhir/dipag/StructureDefinition/erg-docref-leistungsart
 expand: 2
 ---
 

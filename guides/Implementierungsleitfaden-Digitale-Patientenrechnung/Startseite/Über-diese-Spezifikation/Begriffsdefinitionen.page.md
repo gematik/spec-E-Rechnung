@@ -10,10 +10,10 @@ Für die unterschiedlichen Akteure gelten verschiedene Regeln zur Interpretation
 
 * Das RE-PS MUSS alle Elemente die als Must-Support gekennzeichnet sind befüllen soweit diese Informationen vorhanden sind und an den FD weitergeben könnnen. Das RE-PS MUSS die Möglichkeit zur Eingabe dieser Informationen vorsehen.
 
-* Das eRg FDV MUSS alle Elemente die als Must-Support gekennzeichnet sind im Frontend anzeigen und verarbeiten können.
+* Das DiPag FDV MUSS alle Elemente die als Must-Support gekennzeichnet sind im Frontend anzeigen und verarbeiten können.
 
 * Der FD MUSS alle Elemente die als Must-Support gekennzeichnet sind entgegennehmen, validierenm, verarbeite und an das RE-PS, sowie ITSys-KTR weitergeben können.
 
 ### Begriffe und Abkürzungen
 
-Siehe Abschnitt "1.7.2 Verwendete Begriffe" des Feature-Dokumentes "E-Rechnung".
+Siehe Abschnitt "1.7.2 Verwendete Begriffe" des Feature-Dokumentes "Digitale Patientenrechnung".

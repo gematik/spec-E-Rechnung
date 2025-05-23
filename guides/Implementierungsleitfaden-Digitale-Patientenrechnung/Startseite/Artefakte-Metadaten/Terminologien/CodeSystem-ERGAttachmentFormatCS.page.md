@@ -1,6 +1,6 @@
 ---
 topic: ERGAttachmentFormatCS
-canonical: https://gematik.de/fhir/erg/CodeSystem/erg-attachment-format-cs
+canonical: https://gematik.de/fhir/dipag/CodeSystem/erg-attachment-format-cs
 ---
 
 ## {{link}}

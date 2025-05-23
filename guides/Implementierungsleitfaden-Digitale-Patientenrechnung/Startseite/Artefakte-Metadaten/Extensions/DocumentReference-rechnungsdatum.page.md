@@ -1,5 +1,5 @@
 ---
-canonical: https://gematik.de/fhir/erg/StructureDefinition/erg-documentreference-rechnungsdatum
+canonical: https://gematik.de/fhir/dipag/StructureDefinition/erg-documentreference-rechnungsdatum
 expand: 2
 ---
 

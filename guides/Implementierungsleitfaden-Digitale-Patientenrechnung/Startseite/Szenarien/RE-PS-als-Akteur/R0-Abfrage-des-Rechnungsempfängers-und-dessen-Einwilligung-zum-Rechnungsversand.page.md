@@ -67,19 +67,19 @@ Die zurückgegebene Patient-Ressource MUSS valide gegen das Profil `ERGPatient` 
 from
 	StructureDefinition
 where
-	url = 'https://gematik.de/fhir/erg/StructureDefinition/erg-patient'
+	url = 'https://gematik.de/fhir/dipag/StructureDefinition/erg-patient'
 select
 	Canonical: url, Status: status, Version: version, Basis: baseDefinition
 </fql>
 
 <br>
 
-{{tree:https://gematik.de/fhir/erg/StructureDefinition/erg-patient, buttons}}
+{{tree:https://gematik.de/fhir/dipag/StructureDefinition/erg-patient, buttons}}
 
 <br>
 
 Folgende Implementierungshinweise sind zu beachten:
 
 <fql output="table" headers="false">
-from StructureDefinition where url = 'https://gematik.de/fhir/erg/StructureDefinition/erg-patient' for differential.element where comment.exists() select path, comment
+from StructureDefinition where url = 'https://gematik.de/fhir/dipag/StructureDefinition/erg-patient' for differential.element where comment.exists() select path, comment
 </fql>

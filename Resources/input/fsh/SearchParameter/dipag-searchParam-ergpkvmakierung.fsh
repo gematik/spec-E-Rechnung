@@ -11,4 +11,4 @@ Description: "Ein SearchParameter auf der Ressource DocumentReference, der die S
 * code = #dipag-makierung
 * base = #DocumentReference
 * type = #token
-* expression = "DocumentReference.extension('https://gematik.de/fhir/erg/StructureDefinition/dipag-rechnungsstatus').value"
+* expression = "DocumentReference.extension('https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsstatus').value"

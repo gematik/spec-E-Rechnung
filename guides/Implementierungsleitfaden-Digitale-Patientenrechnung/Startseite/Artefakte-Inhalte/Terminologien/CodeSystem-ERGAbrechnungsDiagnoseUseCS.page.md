@@ -1,6 +1,6 @@
 ---
 topic: ERGAbrechnungsDiagnoseUseCS
-canonical: https://gematik.de/fhir/erg/CodeSystem/erg-abrechnungs-diagnose-use-CS
+canonical: https://gematik.de/fhir/dipag/CodeSystem/erg-abrechnungs-diagnose-use-CS
 ---
 
 ## {{link}}

@@ -1,5 +1,5 @@
 ---
-canonical: https://gematik.de/fhir/erg/StructureDefinition/erg-rechnungsposition-type
+canonical: https://gematik.de/fhir/dipag/StructureDefinition/erg-rechnungsposition-type
 expand: 2
 ---
 

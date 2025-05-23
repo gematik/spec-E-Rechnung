@@ -12,9 +12,9 @@ Die nachfolgende Interaktion ist relevant für den FD als Server, sowie für das
 |HTTP-Methode|POST oder GET|
 |Endpunkt|/DocumentReference/$retrieve|
 
-Die Input- und Output-Parameter werden durch die OperationDefinition `https://gematik.de/fhir/erg/OperationDefinition/Retrieve` beschrieben.
+Die Input- und Output-Parameter werden durch die OperationDefinition `https://gematik.de/fhir/dipag/OperationDefinition/Retrieve` beschrieben.
 
-{{render:https://gematik.de/fhir/erg/OperationDefinition/Retrieve}}
+{{render:https://gematik.de/fhir/dipag/OperationDefinition/Retrieve}}
 
 |API-Zustand|HTTP-Status-Code|
 |-|-|

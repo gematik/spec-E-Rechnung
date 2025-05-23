@@ -9,7 +9,7 @@ Description: "Abrufen von E-Rechnungen, strukturierten Rechnungsinhalten und Dok
 * version = "1.0.0-CC"
 * experimental = false
 * date = "2024-06-20"
-* url = "https://gematik.de/fhir/erg/OperationDefinition/Retrieve"
+* url = "https://gematik.de/fhir/dipag/OperationDefinition/Retrieve"
 * kind = #operation
 * name = "Digitale PatientenrechnungRetrieve"
 * code = #retrieve

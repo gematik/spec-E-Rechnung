@@ -1,6 +1,6 @@
 ---
 topic: ERGOperationenCS
-canonical: https://gematik.de/fhir/erg/CodeSystem/erg-operationen-cs
+canonical: https://gematik.de/fhir/dipag/CodeSystem/erg-operationen-cs
 ---
 
 ## {{link}}

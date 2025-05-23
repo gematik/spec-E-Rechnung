@@ -1,5 +1,5 @@
 ---
-canonical: https://gematik.de/fhir/erg/StructureDefinition/erg-zahlungsziel
+canonical: https://gematik.de/fhir/dipag/StructureDefinition/erg-zahlungsziel
 expand: 2
 ---
 

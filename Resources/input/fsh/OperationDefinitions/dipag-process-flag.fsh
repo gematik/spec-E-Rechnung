@@ -5,7 +5,7 @@ InstanceOf: OperationDefinition
 Usage: #example
 Title: "Digitale Patientenrechnung Operation ProcessFlag"
 Description: "Änderung des Bearbeitungsstatus eines Dokumentes"
-* url = "https://gematik.de/fhir/erg/OperationDefinition/ProcessFlag"
+* url = "https://gematik.de/fhir/dipag/OperationDefinition/ProcessFlag"
 * status = #active
 * version = "1.0.0-CC"
 * experimental = false

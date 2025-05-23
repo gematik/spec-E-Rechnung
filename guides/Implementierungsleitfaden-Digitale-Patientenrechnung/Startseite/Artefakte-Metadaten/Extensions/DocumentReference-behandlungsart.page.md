@@ -1,5 +1,5 @@
 ---
-canonical: https://gematik.de/fhir/erg/StructureDefinition/erg-behandlungsart
+canonical: https://gematik.de/fhir/dipag/StructureDefinition/erg-behandlungsart
 expand: 2
 ---
 

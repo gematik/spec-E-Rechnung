@@ -1,6 +1,6 @@
 ---
 topic: ERGInstitution-MS
-canonical: https://gematik.de/fhir/erg/StructureDefinition/erg-institution
+canonical: https://gematik.de/fhir/dipag/StructureDefinition/erg-institution
 ---
 
 ### Anmerkungen zu Must-Support-Feldern

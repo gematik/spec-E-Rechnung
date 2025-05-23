@@ -5,7 +5,7 @@ topic: AF_10245
 
 ## {{page-title}}
 
-Die nachfolgende Interaktion ist relevant für den FD als Server, sowie für das eRg FdV als Client. Anwendungsfall AF_10245 MUSS durch den FD über die spezifizierte API umgesetzt werden. Die Vorgaben aus "Tabelle 22: Use Case Manuelles Ändern des Bearbeitungsstatus von Rechnungen" des Feature-Dokumentes MÜSSEN eingehalten werden durch den FD.
+Die nachfolgende Interaktion ist relevant für den FD als Server, sowie für das DiPag FdV als Client. Anwendungsfall AF_10245 MUSS durch den FD über die spezifizierte API umgesetzt werden. Die Vorgaben aus "Tabelle 22: Use Case Manuelles Ändern des Bearbeitungsstatus von Rechnungen" des Feature-Dokumentes MÜSSEN eingehalten werden durch den FD.
 
 |||
 |-|-|
@@ -25,9 +25,9 @@ Die nachfolgende Interaktion ist relevant für den FD als Server, sowie für das
 |Unerlaubter Statusübergang wird versucht auszuführen|`412 - Precondition Failed`|
 |Statusübergang wird auf einer DocumentReference die einen Anhang repräsentiert aufgerufen|`412 - Precondition Failed`|
 
-Die Input- und Output-Parameter werden durch die OperationDefinition `https://gematik.de/fhir/erg/OperationDefinition/ChangeStatus` beschrieben.
+Die Input- und Output-Parameter werden durch die OperationDefinition `https://gematik.de/fhir/dipag/OperationDefinition/ChangeStatus` beschrieben.
 
-{{render:https://gematik.de/fhir/erg/OperationDefinition/ChangeStatus}}
+{{render:https://gematik.de/fhir/dipag/OperationDefinition/ChangeStatus}}
 
 Alle erlaubten Statusübergänge sind in AF_10245 beschrieben.
 
@@ -76,7 +76,7 @@ mit Body:
 
 ### Verarbeitungsschritte im FD
 
-* Falls während eines Aufrufs der FD feststellt, dass das eRg FdV versucht, den Status des Dokuments in denselben Status zu ändern, in dem es sich bereits befindet, so ist diese Statusänderung zu ignorieren. `HTTP 200 - OK` wird in diesem Fall zurückgegeben.
+* Falls während eines Aufrufs der FD feststellt, dass das DiPag FdV versucht, den Status des Dokuments in denselben Status zu ändern, in dem es sich bereits befindet, so ist diese Statusänderung zu ignorieren. `HTTP 200 - OK` wird in diesem Fall zurückgegeben.
 
 * Der FD MUSS anhand der übergebenen Parameter den Meta-Tag 'erg-rechnungsstatus' auf der DokumentReference aktualisieren.
 

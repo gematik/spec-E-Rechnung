@@ -1,6 +1,6 @@
 ---
 topic: ERGPerson-MS
-canonical: https://gematik.de/fhir/erg/StructureDefinition/erg-person
+canonical: https://gematik.de/fhir/dipag/StructureDefinition/erg-person
 ---
 
 ### Anmerkungen zu Must-Support-Feldern

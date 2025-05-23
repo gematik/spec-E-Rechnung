@@ -5,7 +5,7 @@ topic: AF_10245
 
 ## {{page-title}}
 
-Die nachfolgende Interaktion ist relevant für den FD als Server, sowie für das eRg FdV als Client. Anwendungsfall AF_10245 MUSS durch den FD über die spezifizierte API umgesetzt werden. Die Vorgaben aus "Tabelle 27: Use Case Automatisches endgültiges Löschen von Rechnungen" des Feature-Dokumentes MÜSSEN eingehalten werden durch den FD.
+Die nachfolgende Interaktion ist relevant für den FD als Server, sowie für das DiPag FdV als Client. Anwendungsfall AF_10245 MUSS durch den FD über die spezifizierte API umgesetzt werden. Die Vorgaben aus "Tabelle 27: Use Case Automatisches endgültiges Löschen von Rechnungen" des Feature-Dokumentes MÜSSEN eingehalten werden durch den FD.
 
 |||
 |-|-|
@@ -24,9 +24,9 @@ Die nachfolgende Interaktion ist relevant für den FD als Server, sowie für das
 |Andere HTTP-Methode wird verwendet|`405 - Method Not Allowed`|
 |Operation wird auf einer DocumentReference-Ressource aufgerufen die sich nicht im Bearbeitungsstatus 'Papierkorb' befindet|`412 - Precondition Failed`|
 
-Die Input- und Output-Parameter werden durch die OperationDefinition `https://gematik.de/fhir/erg/OperationDefinition/Erase` beschrieben. In der derzeitgen Version der Operation exisieren jedoch keine Input- oder Output-Parameter.
+Die Input- und Output-Parameter werden durch die OperationDefinition `https://gematik.de/fhir/dipag/OperationDefinition/Erase` beschrieben. In der derzeitgen Version der Operation exisieren jedoch keine Input- oder Output-Parameter.
 
-{{render:https://gematik.de/fhir/erg/OperationDefinition/Erase}}
+{{render:https://gematik.de/fhir/dipag/OperationDefinition/Erase}}
 
 ### Beispiele
 

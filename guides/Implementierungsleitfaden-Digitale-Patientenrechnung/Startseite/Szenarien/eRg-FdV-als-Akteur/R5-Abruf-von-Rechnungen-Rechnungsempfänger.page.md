@@ -5,7 +5,7 @@ topic: AF_10138
 
 ## {{page-title}}
 
-Die nachfolgende Interaktion ist relevant für den FD als Server, sowie für das eRg FdV als Client. Anwendungsfall AF_10138 MUSS durch den FD über die spezifizierte API umgesetzt werden. Die Vorgaben aus "Tabelle 18: Use Case Abruf von Rechnungen (Rechnungsempfänger)" des Feature-Dokumentes MÜSSEN eingehalten werden durch den FD.
+Die nachfolgende Interaktion ist relevant für den FD als Server, sowie für das DiPag FdV als Client. Anwendungsfall AF_10138 MUSS durch den FD über die spezifizierte API umgesetzt werden. Die Vorgaben aus "Tabelle 18: Use Case Abruf von Rechnungen (Rechnungsempfänger)" des Feature-Dokumentes MÜSSEN eingehalten werden durch den FD.
 
 |||
 |-|-|
@@ -16,7 +16,7 @@ Die nachfolgende Interaktion ist relevant für den FD als Server, sowie für das
 |Suchparameter `author:text`|Kardinalität: 0..1<br>Name des Leistungserbringer<br>Type: string<br>Der Suchparameter MUSS durch den Client mit dem Modifier `:text` verwendet werden. Dieser Suchmodifier ermöglicht eine Suche auf DocumentReference.author.display.|
 |Suchparameter `type`|Kardinalität: 0..1<br>Dokumententyp (z.B. Rechnung)<br>Type: token<br>Der FD MUSS den Modifier `:not` unterstützen.|
 |Suchparameter `ergpkv-makierung`|Kardinalität: 0..1<br>Manuelle Markierungen<br>Type: token|
-|Suchresultatparameter `_sort`|Als Sortierkriterien können die oben genannten Suchparameter inkl. Custom SearchParameter verwendet werden für die Inhalte die als Sortierkriterien in Tabelle 18: Use Case Abruf von Rechnungen (Rechnungsempfänger) - Feature-Dokument E-Rechnung genannt sind|
+|Suchresultatparameter `_sort`|Als Sortierkriterien können die oben genannten Suchparameter inkl. Custom SearchParameter verwendet werden für die Inhalte die als Sortierkriterien in Tabelle 18: Use Case Abruf von Rechnungen (Rechnungsempfänger) - Feature-Dokument Digitale Patientenrechnung genannt sind|
 |Suchresultatparameter `_count`|Durch den Client gewünschte Page-Size, der FD KANN Vorgaben für die Maximale Page-Size definieren|
 |User-Kontext `KVNR`| Kardinalität: 1..1<br>Hinweis: Die KVNR ist aus dem Claim `urn:telematik:claims:id` des mitzusendenen Access-Token zu extrahieren.|
 

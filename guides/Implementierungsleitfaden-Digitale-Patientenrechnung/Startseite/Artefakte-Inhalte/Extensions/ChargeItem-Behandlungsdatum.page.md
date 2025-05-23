@@ -1,5 +1,5 @@
 ---
-canonical: https://gematik.de/fhir/erg/StructureDefinition/ERGRechnungspositionBehandlungsdatum
+canonical: https://gematik.de/fhir/dipag/StructureDefinition/ERGRechnungspositionBehandlungsdatum
 expand: 2
 ---
 

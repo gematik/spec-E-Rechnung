@@ -1,6 +1,6 @@
 ---
 topic: ERGDokumentenmetadaten-MS
-canonical: https://gematik.de/fhir/erg/StructureDefinition/erg-dokumentenmetadaten
+canonical: https://gematik.de/fhir/dipag/StructureDefinition/erg-dokumentenmetadaten
 ---
 
 ### Anmerkungen zu Must-Support-Feldern

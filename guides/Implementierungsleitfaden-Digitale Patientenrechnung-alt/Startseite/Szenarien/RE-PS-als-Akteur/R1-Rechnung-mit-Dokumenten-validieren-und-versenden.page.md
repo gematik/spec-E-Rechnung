@@ -12,9 +12,9 @@ Die nachfolgende Interaktion ist relevant für den FD als Server, sowie für das
 |HTTP-Methode|POST|
 |Endpunkt|/Patient/[id-des-ermittelten-Rechnungsempfängers]|
 
-Die Input- und Output-Parameter werden durch die OperationDefinition `https://gematik.de/fhir/erg/OperationDefinition/Submit` beschrieben. Die ID des Rechnungsempfängers ist zuvor per {{pagelink:AF_10132}} zu ermitteln.
+Die Input- und Output-Parameter werden durch die OperationDefinition `https://gematik.de/fhir/dipag/OperationDefinition/Submit` beschrieben. Die ID des Rechnungsempfängers ist zuvor per {{pagelink:AF_10132}} zu ermitteln.
 
-{{render:https://gematik.de/fhir/erg/OperationDefinition/Submit}}
+{{render:https://gematik.de/fhir/dipag/OperationDefinition/Submit}}
 
 
 |API-Zustand|HTTP-Status-Code|
@@ -50,19 +50,19 @@ Die DocumentReference-Ressourcen welche über die Parameter `rechnung` und `anha
 from
 	StructureDefinition
 where
-	url = 'https://gematik.de/fhir/erg/StructureDefinition/erg-dokumentenmetadaten'
+	url = 'https://gematik.de/fhir/dipag/StructureDefinition/erg-dokumentenmetadaten'
 select
 	Canonical: url, Status: status, Version: version, Basis: baseDefinition
 </fql>
 
 <br>
 
-{{tree:https://gematik.de/fhir/erg/StructureDefinition/erg-dokumentenmetadaten, buttons}}
+{{tree:https://gematik.de/fhir/dipag/StructureDefinition/erg-dokumentenmetadaten, buttons}}
 
 Folgende Implementierungshinweise sind zu beachten:
 
 <fql output="table" headers="false">
-from StructureDefinition where url = 'https://gematik.de/fhir/erg/StructureDefinition/erg-dokumentenmetadaten' for differential.element where comment.exists() select id, comment
+from StructureDefinition where url = 'https://gematik.de/fhir/dipag/StructureDefinition/erg-dokumentenmetadaten' for differential.element where comment.exists() select id, comment
 </fql>
 
 ### Beispiele
@@ -128,7 +128,7 @@ mit Body:
 
 ### Verarbeitungsschritte im FD
 
-Bei der Entgegennahme der Dokumente MÜSSEN durch den FD die nachfolgenden Schritte durchgeführt werden. Es ist zu beachten, dass dies asynchron durchgeführt werden kann durch den FD. Lediglich MUSS der FD sicherstellen, dass dieser Prozess vor dem Abruf der Dokumente durch das eRg FdV oder dem RE-PS abgearbeitet wurde.
+Bei der Entgegennahme der Dokumente MÜSSEN durch den FD die nachfolgenden Schritte durchgeführt werden. Es ist zu beachten, dass dies asynchron durchgeführt werden kann durch den FD. Lediglich MUSS der FD sicherstellen, dass dieser Prozess vor dem Abruf der Dokumente durch das DiPag FdV oder dem RE-PS abgearbeitet wurde.
 
 * `DocumentReference.attachment.data` muss aus der übermittelten DocumentReference herausgelöst werden. Der Inhalt MUSS in einer durch den FD neu angelegten Binary-Ressource gespeichert werden. Die Binary-Ressource MUSS unter `attachment.url` mit einer absoluten URL referenziert werden. `DocumentReference.attachment.data` ist anschließend zu löschen. Dies gilt für alle durch den Client übermittelte Dokumente.
 
@@ -146,7 +146,7 @@ Bei der Entgegennahme der Dokumente MÜSSEN durch den FD die nachfolgenden Schri
 
 ### Hinweise zur Abbildung des Workflow-Objektes (fachliches Datenmodell)
 
-Im fachlichen Datenmodell des Feature-Dokuments E-Rechnung ist dargestellt, dass jede Rechnung,sowie jedes ergänzende Dokument mit einem Rechnungsworkflow-Objekt verbunden ist. Dieses Workflow-Objekt bündelt das Rechnungsdokument sowie die Anhänge zusammen und gibt diesen Dokumenten einen gemeinsamen Status. Zur Vereinfachung der Implementierung seitens des FD und des eRg FDV wird in der FHIR-Repräsentation **kein** weiteres Datenobjekt hierfür verwendet. Hingegen enthält das Profil 'ERGDokumentenmetadaten' eine Extension 'erg-rechnungsstatus' für diesen Zweck. Der Status zusammenhängender Dokumente MUSS stets synchron gehalten werden. Diese Extension gilt für das Rechnungsdokument sowie alle Anhänge, die innerhalb einer Submit-Operation im gleichen Kontext übermittelt worden sind wie die Rechnung. Der FD MUSS den Zusammenhang zwischen diesen Dokumenten in der Verarbeitungslogik vorhalten.
+Im fachlichen Datenmodell des Feature-Dokuments Digitale Patientenrechnung ist dargestellt, dass jede Rechnung,sowie jedes ergänzende Dokument mit einem Rechnungsworkflow-Objekt verbunden ist. Dieses Workflow-Objekt bündelt das Rechnungsdokument sowie die Anhänge zusammen und gibt diesen Dokumenten einen gemeinsamen Status. Zur Vereinfachung der Implementierung seitens des FD und des DiPag FDV wird in der FHIR-Repräsentation **kein** weiteres Datenobjekt hierfür verwendet. Hingegen enthält das Profil 'ERGDokumentenmetadaten' eine Extension 'erg-rechnungsstatus' für diesen Zweck. Der Status zusammenhängender Dokumente MUSS stets synchron gehalten werden. Diese Extension gilt für das Rechnungsdokument sowie alle Anhänge, die innerhalb einer Submit-Operation im gleichen Kontext übermittelt worden sind wie die Rechnung. Der FD MUSS den Zusammenhang zwischen diesen Dokumenten in der Verarbeitungslogik vorhalten.
 
 ### Beispiele
 

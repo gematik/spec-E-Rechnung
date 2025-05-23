@@ -6,11 +6,11 @@
 
 <br>
 
-<a href="https://simplifier.net/e-rechnung/~introduction" class="btn btn-primary">Zum Projekt auf Simplifier</a>
+<a href="https://simplifier.net/DigitalePatientenrechnung/~introduction" class="btn btn-primary">Zum Projekt auf Simplifier</a>
 
 
 ### Zusammenfassung
-Der vorliegende Implementierungsleitfaden beschreibt die technischen Schnittstellen der TI-Anwendung "E-Rechnung (eRg)". Auf dieser Basis soll die Abrechnung medizinischer oder sonstiger Leistungen, die nicht dem Sachleistungsprinzip unterliegen, standardisiert zwischen Leistungserbringern, Patienten/
+Der vorliegende Implementierungsleitfaden beschreibt die technischen Schnittstellen der TI-Anwendung "Digitale Patientenrechnung (DiPag)". Auf dieser Basis soll die Abrechnung medizinischer oder sonstiger Leistungen, die nicht dem Sachleistungsprinzip unterliegen, standardisiert zwischen Leistungserbringern, Patienten/
 versicherten Personen und Kostenträgern ermöglicht werden.
 
 Weitere Informationen siehe [§359a SGB V](https://www.gesetze-im-internet.de/sgb_5/__359a.html).
@@ -39,8 +39,8 @@ gematik GmbH
 
 ### Weitere Links
 <!-- z. B. Beschreibungen des UseCases, Datenmodell, ges. Vorgaben, fachliche Anforderungen, relevante Spezifikationen-->
-* [GitHub Projekt](https://github.com/gematik/spec-E-Rechnung)
-* [Feature-Dokument E-Rechnung](https://gemspec.gematik.de/prereleases/Draft_E-Rechnung/)
+* [GitHub Projekt](https://github.com/gematik/spec-Digitale Patientenrechnung)
+* [Feature-Dokument Digitale Patientenrechnung](https://gemspec.gematik.de/prereleases/Draft_E-Rechnung/)
 
 
 

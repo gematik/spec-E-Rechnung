@@ -1,5 +1,5 @@
 ---
-canonical: https://gematik.de/fhir/erg/StructureDefinition/erg-rechnungsdokument
+canonical: https://gematik.de/fhir/dipag/StructureDefinition/erg-rechnungsdokument
 expand: 1
 ---
 
@@ -11,7 +11,7 @@ expand: 1
 from
 	StructureDefinition
 where
-	url = 'https://gematik.de/fhir/erg/StructureDefinition/erg-rechnungsdokument'
+	url = 'https://gematik.de/fhir/dipag/StructureDefinition/erg-rechnungsdokument'
 select
 	Canonical: url, Status: status, Version: version, Basis: baseDefinition
 ```
@@ -25,7 +25,7 @@ select
         from
 	        StructureDefinition
         where
-	        url = 'https://gematik.de/fhir/erg/StructureDefinition/erg-rechnungsdokument'
+	        url = 'https://gematik.de/fhir/dipag/StructureDefinition/erg-rechnungsdokument'
         select
 	        Beschreibung: description
         with
@@ -35,7 +35,7 @@ select
         from 
             StructureDefinition 
         where 
-            url = 'https://gematik.de/fhir/erg/StructureDefinition/erg-rechnungsdokument' 
+            url = 'https://gematik.de/fhir/dipag/StructureDefinition/erg-rechnungsdokument' 
         for 
             differential.element 
             where 

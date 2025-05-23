@@ -5,7 +5,7 @@ InstanceOf: OperationDefinition
 Usage: #example
 Title: "Digitale Patientenrechnung Operation DiPag-Submit"
 Description: "Rechnung einreichen durch die Leistungserbringer:in"
-* url = "https://gematik.de/fhir/erg/OperationDefinition/Submit"
+* url = "https://gematik.de/fhir/dipag/OperationDefinition/Submit"
 * status = #active
 * version = "1.0.0-CC"
 * experimental = false
@@ -41,7 +41,7 @@ Description: "Rechnung einreichen durch die Leistungserbringer:in"
   * type = #code
   * binding
     * strength = #required
-    * valueSet = "https://gematik.de/fhir/erg/ValueSet/dipag-rechnung-submit-modus-vs"
+    * valueSet = "https://gematik.de/fhir/dipag/ValueSet/dipag-rechnung-submit-modus-vs"
 * parameter[+]
   * name = #angereichertesPDF
   * use = #in
@@ -99,4 +99,4 @@ Id: dipag-rechnung-submit-modus-vs
 Title: "Digitale Patientenrechnung Rechnung Type VS"
 Description:  "ValueSet für die Differenzierung von der Verarbeitungsmodi für $erchnung-submit"
 * insert Meta
-* include codes from system https://gematik.de/fhir/erg/CodeSystem/dipag-rechnung-submit-modus-cs
+* include codes from system https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-submit-modus-cs
