@@ -48,7 +48,7 @@
           },
           {
             "format": {
-              "code": "gematik-erechnung"
+              "code": "dipag"
             },
             "attachment": {
               "contentType": "application/fhir+xml",
