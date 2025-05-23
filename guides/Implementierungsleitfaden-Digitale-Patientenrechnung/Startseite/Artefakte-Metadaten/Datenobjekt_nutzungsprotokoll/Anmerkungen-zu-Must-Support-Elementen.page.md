@@ -1,5 +1,5 @@
 ---
-topic: ERGNutzungsprotokoll-MS
+topic: DiPagNutzungsprotokoll-MS
 canonical: https://gematik.de/fhir/dipag/StructureDefinition/dipag-nutzungsprotokoll
 ---
 

@@ -1,5 +1,5 @@
 ---
-topic: ERGDokumentenmetadaten-Profil
+topic: DiPagDokumentenmetadaten-Profil
 canonical: https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten
 ---
 ## {{link}}

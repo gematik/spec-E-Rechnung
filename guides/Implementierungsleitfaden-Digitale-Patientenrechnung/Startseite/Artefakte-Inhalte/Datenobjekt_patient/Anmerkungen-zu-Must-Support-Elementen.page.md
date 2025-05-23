@@ -1,5 +1,5 @@
 ---
-topic: ERGPatient-MS
+topic: DiPagPatient-MS
 canonical: https://gematik.de/fhir/dipag/StructureDefinition/dipag-patient
 ---
 

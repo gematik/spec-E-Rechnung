@@ -7,7 +7,7 @@ Usage: #definition
 * title = "CapabilityStatement Fachdienst E-Rechnnung"
 * description = 
   "Dieses CapabilityStatement beschreibt alle Interaktionen, 
-  die ein E-Rechnung-konformer Fachdienst unterstützen MUSS bzw. KANN.
+  die ein DiPag-konformer Fachdienst unterstützen MUSS bzw. KANN.
 "
 * jurisdiction = urn:iso:std:iso:3166#DE "Germany"
 * kind = #requirements

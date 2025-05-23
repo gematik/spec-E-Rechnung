@@ -1,5 +1,5 @@
 ---
-topic: ERGPerson-Profil
+topic: DiPagPerson-Profil
 canonical: https://gematik.de/fhir/dipag/StructureDefinition/dipag-person
 ---
 ## {{link}}

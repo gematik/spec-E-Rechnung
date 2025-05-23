@@ -1,5 +1,5 @@
 ---
-topic: ERGAttachmentFormatCS
+topic: DiPagAttachmentFormatCS
 canonical: https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs
 ---
 

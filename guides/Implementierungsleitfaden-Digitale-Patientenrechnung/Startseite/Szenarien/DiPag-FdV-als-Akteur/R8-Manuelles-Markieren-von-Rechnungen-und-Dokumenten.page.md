@@ -74,6 +74,6 @@ mit Body:
 
 * Falls während eines Aufrufs der FD feststellt, dass das DiPag FdV versucht eine Markierung hinzuzufügen die bereits existiert, so ist diese Markierung zu ignorieren. `HTTP 200 - OK` wird in diesem Fall zurückgegeben.
 
-* Der FD MUSS anhand der übergebenen Parameter die Extension 'ERGDocumentReferenceMarkierung' auf der DokumentReference erstellen und aktualisieren.
+* Der FD MUSS anhand der übergebenen Parameter die Extension 'DiPagDocumentReferenceMarkierung' auf der DokumentReference erstellen und aktualisieren.
 
 ----

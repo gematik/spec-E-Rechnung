@@ -4,7 +4,7 @@ Instance: DiPagOperationRetrieve
 InstanceOf: OperationDefinition
 Usage: #example
 Title: "Digitale Patientenrechnung Operation Retrieve"
-Description: "Abrufen von E-Rechnungen, strukturierten Rechnungsinhalten und Dokumenten"
+Description: "Abrufen von Digitale Patientenrechnung, strukturierten Rechnungsinhalten und Dokumenten"
 * status = #active
 * version = "1.0.0-CC"
 * experimental = false

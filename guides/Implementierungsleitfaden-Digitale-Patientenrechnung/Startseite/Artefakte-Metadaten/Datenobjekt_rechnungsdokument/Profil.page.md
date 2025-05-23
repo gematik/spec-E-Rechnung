@@ -1,5 +1,5 @@
 ---
-topic: ERGRechnungsdokument-Profil
+topic: DiPagRechnungsdokument-Profil
 canonical: https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsdokument
 ---
 ## {{link}}

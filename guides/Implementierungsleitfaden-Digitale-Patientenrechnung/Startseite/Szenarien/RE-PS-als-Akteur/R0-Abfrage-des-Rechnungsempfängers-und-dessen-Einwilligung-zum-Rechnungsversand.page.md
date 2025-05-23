@@ -61,7 +61,7 @@ mit Body:
 
 Es MUSS durch den FD sichergestellt werden, dass die zurückgegebene Patient-Ressourcen eine stabile id besitzten.
 
-Die zurückgegebene Patient-Ressource MUSS valide gegen das Profil `ERGPatient` sein.
+Die zurückgegebene Patient-Ressource MUSS valide gegen das Profil `DiPagPatient` sein.
 
 <fql output="table" headers="true">
 from

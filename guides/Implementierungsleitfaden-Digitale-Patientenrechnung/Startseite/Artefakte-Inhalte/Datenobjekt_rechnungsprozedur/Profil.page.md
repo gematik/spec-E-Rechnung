@@ -1,5 +1,5 @@
 ---
-topic: ERGRechnungsprozedur-Profil
+topic: DiPagRechnungsprozedur-Profil
 canonical: https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsprozedur
 ---
 ## {{link}}

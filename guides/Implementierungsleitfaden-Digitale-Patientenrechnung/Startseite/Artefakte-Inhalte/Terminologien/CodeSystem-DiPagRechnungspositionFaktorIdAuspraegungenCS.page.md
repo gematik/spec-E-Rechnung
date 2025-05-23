@@ -1,5 +1,5 @@
 ---
-topic: ERGRechnungspositionFaktorIdAuspraegungenCS
+topic: DiPagRechnungspositionFaktorIdAuspraegungenCS
 canonical: https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsposition-faktor-id-auspraegungen-CS
 ---
 

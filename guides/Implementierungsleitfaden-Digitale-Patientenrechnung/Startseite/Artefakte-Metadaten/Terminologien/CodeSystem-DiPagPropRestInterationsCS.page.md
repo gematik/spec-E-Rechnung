@@ -1,5 +1,5 @@
 ---
-topic: ERGPropRestInterationsCS
+topic: DiPagPropRestInterationsCS
 canonical: https://gematik.de/fhir/dipag/CodeSystem/dipag-prop-rest-interactions-cs
 ---
 

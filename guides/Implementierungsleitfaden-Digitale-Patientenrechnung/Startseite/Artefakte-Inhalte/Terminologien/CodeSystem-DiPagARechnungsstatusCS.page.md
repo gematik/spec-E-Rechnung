@@ -1,5 +1,5 @@
 ---
-topic: ERGARechnungsstatusCS
+topic: DiPagARechnungsstatusCS
 canonical: https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsstatus-cs
 ---
 

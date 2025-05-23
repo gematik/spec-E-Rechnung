@@ -1,5 +1,5 @@
 ---
-topic: ERGRechnungsposition-Profil
+topic: DiPagRechnungsposition-Profil
 canonical: https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition
 ---
 ## {{link}}

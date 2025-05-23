@@ -1,5 +1,5 @@
 ---
-canonical: https://gematik.de/fhir/dipag/StructureDefinition/ERGAbrechnungsDiagnoseProzedurFreitext
+canonical: https://gematik.de/fhir/dipag/StructureDefinition/DiPagAbrechnungsDiagnoseProzedurFreitext
 expand: 2
 ---
 

@@ -1,5 +1,5 @@
 ---
-topic: ERGRechnungspositionZusatzCS
+topic: DiPagRechnungspositionZusatzCS
 canonical: https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsposition-zusatz-CS
 ---
 

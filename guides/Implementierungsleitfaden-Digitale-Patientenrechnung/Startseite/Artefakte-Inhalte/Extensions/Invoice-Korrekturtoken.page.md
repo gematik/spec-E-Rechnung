@@ -1,5 +1,5 @@
 ---
-canonical: https://gematik.de/fhir/dipag/StructureDefinition/ERGTokenStornierteRechnung
+canonical: https://gematik.de/fhir/dipag/StructureDefinition/DiPagTokenStornierteRechnung
 expand: 2
 ---
 

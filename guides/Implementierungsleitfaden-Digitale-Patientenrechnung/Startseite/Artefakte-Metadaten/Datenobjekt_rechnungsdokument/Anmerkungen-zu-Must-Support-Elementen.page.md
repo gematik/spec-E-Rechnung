@@ -1,5 +1,5 @@
 ---
-topic: ERGRechnungsdokument-MS
+topic: DiPagRechnungsdokument-MS
 canonical: https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsdokument
 ---
 

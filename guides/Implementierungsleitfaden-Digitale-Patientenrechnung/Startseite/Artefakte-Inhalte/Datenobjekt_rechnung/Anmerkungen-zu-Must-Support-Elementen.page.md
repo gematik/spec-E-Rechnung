@@ -1,5 +1,5 @@
 ---
-topic: ERGRechnung-MS
+topic: DiPagRechnung-MS
 canonical: https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnung
 ---
 

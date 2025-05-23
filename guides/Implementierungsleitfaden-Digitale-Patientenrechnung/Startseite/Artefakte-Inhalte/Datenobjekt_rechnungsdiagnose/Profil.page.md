@@ -1,5 +1,5 @@
 ---
-topic: ERGRechnungsdiagnose-Profil
+topic: DiPagRechnungsdiagnose-Profil
 canonical: https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsdiagnose
 ---
 ## {{link}}

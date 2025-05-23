@@ -1,5 +1,5 @@
 ---
-topic: ERGRechnungAbrechnungsartCS
+topic: DiPagRechnungAbrechnungsartCS
 canonical: https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-abrechnungsart-cs
 ---
 

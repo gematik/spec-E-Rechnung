@@ -1,5 +1,5 @@
 ---
-topic: ERGRechnungsprozedur-MS
+topic: DiPagRechnungsprozedur-MS
 canonical: https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsprozedur
 ---
 

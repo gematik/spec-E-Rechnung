@@ -1,5 +1,5 @@
 ---
-topic: ERGRechnungIdentifierTypeCS
+topic: DiPagRechnungIdentifierTypeCS
 canonical: https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-identifier-type-cs
 ---
 

@@ -1,5 +1,5 @@
 ---
-topic: ERGNutzungsprotokoll-Profil
+topic: DiPagNutzungsprotokoll-Profil
 canonical: https://gematik.de/fhir/dipag/StructureDefinition/dipag-nutzungsprotokoll
 ---
 ## {{link}}

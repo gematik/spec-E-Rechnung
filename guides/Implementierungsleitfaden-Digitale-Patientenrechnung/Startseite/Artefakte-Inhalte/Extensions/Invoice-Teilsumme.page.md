@@ -1,5 +1,5 @@
 ---
-canonical: https://gematik.de/fhir/dipag/StructureDefinition/ERGTeilsumme
+canonical: https://gematik.de/fhir/dipag/StructureDefinition/DiPagTeilsumme
 expand: 2
 ---
 

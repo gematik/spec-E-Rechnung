@@ -1,5 +1,5 @@
 ---
-topic: ERGOperationenCS
+topic: DiPagOperationenCS
 canonical: https://gematik.de/fhir/dipag/CodeSystem/dipag-operationen-cs
 ---
 

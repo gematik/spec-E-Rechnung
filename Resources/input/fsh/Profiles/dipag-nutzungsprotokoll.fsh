@@ -4,19 +4,19 @@ Title: "Digitale Patientenrechnung Nutzungsprotokoll"
 Id: dipag-nutzungsprotokoll
 * insert Meta
 * type MS
-  * ^comment = "Angabe ob es sich um eine zu protokollierende Nutzerinteraktion nach Abschnittt '5.5.9 Nutzerprotokolle' des Feature-Dokuments 'E-Rechnung' handelt oder um eine durchgeführte REST-API-Interaktion durch den FD."
+  * ^comment = "Angabe ob es sich um eine zu protokollierende Nutzerinteraktion nach Abschnittt '5.5.9 Nutzerprotokolle' des Feature-Dokuments 'Digitale Patientenrechnung' handelt oder um eine durchgeführte REST-API-Interaktion durch den FD."
 * type from DiPagAuditEventTypeVS (required)
 * subtype MS
-  * ^comment = "Erlaubt die Kodierung aller REST-API Operationen der Spec-E-Rechnung"
+  * ^comment = "Erlaubt die Kodierung aller REST-API Operationen der Spec-Digitale Patientenrechnung"
 * subtype from DiPagAuditEventSubTypeVS (extensible)
 * action MS
   * ^comment = "Angabe ob es sich um eine lesende/schreibende/ausführende Interaktion handelt."
 * recorded MS
-  * ^comment = "Der Zeitpunkt des Zugriffs ist zu protokollieren. Siehe Abschnittt '4.8.6 Protokolleintrag'des Feature-Dokuments 'E-Rechnung'."
+  * ^comment = "Der Zeitpunkt des Zugriffs ist zu protokollieren. Siehe Abschnittt '4.8.6 Protokolleintrag'des Feature-Dokuments 'Digitale Patientenrechnung'."
 * outcome MS
   * ^comment = "Angabe ob die zu protokollierende Interaktion erfolgreich ausgeführt werden konnte."
 * agent MS
-  * ^comment = "Angaben zum Akteur (Nutzer oder DiPag FD), der den Zugriff durchgeführt hat. Siehe Abschnittt '4.8.6 Protokolleintrag'des Feature-Dokuments 'E-Rechnung'."
+  * ^comment = "Angaben zum Akteur (Nutzer oder DiPag FD), der den Zugriff durchgeführt hat. Siehe Abschnittt '4.8.6 Protokolleintrag'des Feature-Dokuments 'Digitale Patientenrechnung'."
 * agent
   * type 1.. MS
   * type from DiPagAuditEventAgentTypeVS (required)

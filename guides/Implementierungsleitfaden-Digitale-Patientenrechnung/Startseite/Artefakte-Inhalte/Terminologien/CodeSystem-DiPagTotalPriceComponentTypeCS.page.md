@@ -1,5 +1,5 @@
 ---
-topic: ERGTotalPriceComponentTypeCS
+topic: DiPagTotalPriceComponentTypeCS
 canonical: https://gematik.de/fhir/dipag/CodeSystem/dipag-total-price-component-type-cs
 ---
 

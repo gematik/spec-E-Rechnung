@@ -18,23 +18,23 @@ Id: dipag-dokumentenmetadaten
   DiPagDocRefLeistungsart named leistungsart 0..1 MS and
   DiPagBehandlungsart named behandlungsart 0..1 MS
 * extension[rechnungsdatum]
-  * ^comment = "Siehe Abschnitt '4.8.1.1 Rechnung' des Feature-Dokuments E-Rechnung"
+  * ^comment = "Siehe Abschnitt '4.8.1.1 Rechnung' des Feature-Dokuments Digitale Patientenrechnung"
 * extension[zahlungszieldatum]
-  * ^comment = "Siehe Abschnitt '4.8.1.1 Rechnung' des Feature-Dokuments E-Rechnung"
+  * ^comment = "Siehe Abschnitt '4.8.1.1 Rechnung' des Feature-Dokuments Digitale Patientenrechnung"
 * extension[gesamtbetrag]
-  * ^comment = "Siehe Abschnitt '4.8.1.1 Rechnung' des Feature-Dokuments E-Rechnung"
+  * ^comment = "Siehe Abschnitt '4.8.1.1 Rechnung' des Feature-Dokuments Digitale Patientenrechnung"
 * meta.extension MS
 * meta.extension contains DiPagDocumentReferenceMarkierung named markierung 0..* MS
 * meta.extension[markierung]
-  * ^comment = "Vgl. Abschnitt '4.4.2 Markierungen' des Feature-Dokuments E-Rechnung"
+  * ^comment = "Vgl. Abschnitt '4.4.2 Markierungen' des Feature-Dokuments Digitale Patientenrechnung"
 * meta.tag MS
   * ^slicing.discriminator.type = #pattern
   * ^slicing.discriminator.path = "$this"
   * ^slicing.rules = #open
 * meta.tag contains dipag-rechnungsstatus 0..1 MS
-  * ^comment = "Metaangaben zur E-Rechnung die sich auf das Rechnungsdokument als Ganzes beziehen und nicht Teil des durch den RE-PS erstellten Dokuments sind."
+  * ^comment = "Metaangaben zur Digitale Patientenrechnung die sich auf das Rechnungsdokument als Ganzes beziehen und nicht Teil des durch den RE-PS erstellten Dokuments sind."
 * meta.tag[dipag-rechnungsstatus] from DiPagRechnungsstatusVS (required)
-  * ^comment = "Vgl. Abschnitt 4.4.1 Workflow einer Rechnung des Feature-Dokuments E-Rechnung"
+  * ^comment = "Vgl. Abschnitt 4.4.1 Workflow einer Rechnung des Feature-Dokuments Digitale Patientenrechnung"
   * system 1.. MS
   * code 1.. MS
 * status MS
@@ -62,7 +62,7 @@ Id: dipag-dokumentenmetadaten
 * description 1..1 MS
   * ^comment = "Menschenlesbarer Titel des Dokumentes, der dem Versicherten in der UI angezeigt wird. Der Titel kann manuell erfasst oder vom Dateinamen/Metadaten abgeleitet werden. z.B. &quot;Laborbefund vom 28.9.2023&quot;."
 * subject 1.. MS
-  * ^comment = "Vollständiger Name der behandelten Person. Siehe Abschnitt '4.8.1.1 Rechnung' des Feature-Dokuments E-Rechnung."
+  * ^comment = "Vollständiger Name der behandelten Person. Siehe Abschnitt '4.8.1.1 Rechnung' des Feature-Dokuments Digitale Patientenrechnung."
   * display 1..1 MS
 * author MS
   * ^comment = "Der Fachdienst verknüpft alle Rechnungsdokumente mit der Telematik-ID des einreichenden Akteurs."
@@ -149,8 +149,8 @@ Id: dipag-attachment-format-cs
 Title: "Digitale Patientenrechnung Attachment Format CS"
 Description:  "CodeSystem für die Abbildung von verschieden Formatinhalten eines Dokuments"
 * insert Meta
-* #dipag "E-Rechnungsdokument"
-* #angereichertesPDF "E-Rechnungsdokument mit eingebetteten strukturierten Rechnungsinhalt"
+* #dipag "Digitale Patientenrechnungs Dokument"
+* #angereichertesPDF "Digitale Patientenrechnungs Dokument mit eingebetteten strukturierten Rechnungsinhalt"
 * #rechnungsinhalt "Strukturierter Rechnungsinhalt"
 * #rechnungsanhang "Rechnungsanhang"
 

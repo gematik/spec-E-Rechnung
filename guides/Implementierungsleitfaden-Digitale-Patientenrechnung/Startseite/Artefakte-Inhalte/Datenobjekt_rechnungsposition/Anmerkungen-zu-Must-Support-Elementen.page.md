@@ -1,5 +1,5 @@
 ---
-topic: ERGRechnungsposition-MS
+topic: DiPagRechnungsposition-MS
 canonical: https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition
 ---
 

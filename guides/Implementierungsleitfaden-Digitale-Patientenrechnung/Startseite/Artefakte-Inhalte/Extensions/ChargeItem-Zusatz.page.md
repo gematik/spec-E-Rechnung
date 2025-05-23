@@ -1,5 +1,5 @@
 ---
-canonical: https://gematik.de/fhir/dipag/StructureDefinition/ERGRechnungspositionZusatz
+canonical: https://gematik.de/fhir/dipag/StructureDefinition/DiPagRechnungspositionZusatz
 expand: 2
 ---
 

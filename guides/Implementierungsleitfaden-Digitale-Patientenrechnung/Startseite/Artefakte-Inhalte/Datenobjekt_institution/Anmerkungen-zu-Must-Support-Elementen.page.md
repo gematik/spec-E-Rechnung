@@ -1,5 +1,5 @@
 ---
-topic: ERGInstitution-MS
+topic: DiPagInstitution-MS
 canonical: https://gematik.de/fhir/dipag/StructureDefinition/dipag-institution
 ---
 

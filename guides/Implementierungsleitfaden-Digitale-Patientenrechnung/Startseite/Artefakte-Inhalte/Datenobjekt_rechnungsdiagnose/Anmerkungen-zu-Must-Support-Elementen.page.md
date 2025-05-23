@@ -1,5 +1,5 @@
 ---
-topic: ERGRechnungsdiagnose-MS
+topic: DiPagRechnungsdiagnose-MS
 canonical: https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsdiagnose
 ---
 

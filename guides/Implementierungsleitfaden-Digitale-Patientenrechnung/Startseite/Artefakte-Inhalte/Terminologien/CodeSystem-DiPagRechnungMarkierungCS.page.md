@@ -1,5 +1,5 @@
 ---
-topic: ERGRechnungMarkierungCS
+topic: DiPagRechnungMarkierungCS
 canonical: https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-markierung-cs
 ---
 
