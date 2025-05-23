@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "id": "dipag-behandlungsart",
-  "url": "https://gematik.de/fhir/erg/StructureDefinition/dipag-behandlungsart",
+  "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-behandlungsart",
   "version": "1.1.0-rc2",
   "name": "DiPagBehandlungsart",
   "title": "Digitale Patientenrechnung Extension Behandlungsart",
@@ -41,7 +41,7 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "https://gematik.de/fhir/erg/StructureDefinition/dipag-behandlungsart"
+        "fixedUri": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-behandlungsart"
       },
       {
         "id": "Extension.value[x]",
@@ -53,7 +53,7 @@
         ],
         "binding": {
           "strength": "required",
-          "valueSet": "https://gematik.de/fhir/erg/ValueSet/dipag-rechnung-behandlungsart-vs"
+          "valueSet": "https://gematik.de/fhir/dipag/ValueSet/dipag-rechnung-behandlungsart-vs"
         }
       }
     ]

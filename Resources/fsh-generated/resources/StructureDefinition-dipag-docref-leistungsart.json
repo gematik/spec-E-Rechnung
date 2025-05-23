@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "id": "dipag-docref-leistungsart",
-  "url": "https://gematik.de/fhir/erg/StructureDefinition/dipag-docref-leistungsart",
+  "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-docref-leistungsart",
   "version": "1.1.0-rc2",
   "name": "DiPagDocRefLeistungsart",
   "title": "Digitale Patientenrechnung DocRef Leistungsart",
@@ -42,7 +42,7 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "https://gematik.de/fhir/erg/StructureDefinition/dipag-docref-leistungsart"
+        "fixedUri": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-docref-leistungsart"
       },
       {
         "id": "Extension.value[x]",

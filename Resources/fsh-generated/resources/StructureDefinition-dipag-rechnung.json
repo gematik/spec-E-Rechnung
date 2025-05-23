@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "id": "dipag-rechnung",
-  "url": "https://gematik.de/fhir/erg/StructureDefinition/dipag-rechnung",
+  "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnung",
   "version": "1.1.0-rc2",
   "name": "DiPagRechnung",
   "title": "Digitale Patientenrechnung Rechnung",
@@ -115,7 +115,7 @@
           {
             "code": "Extension",
             "profile": [
-              "https://gematik.de/fhir/erg/StructureDefinition/DiPagAbrechnungsDiagnoseProzedur"
+              "https://gematik.de/fhir/dipag/StructureDefinition/DiPagAbrechnungsDiagnoseProzedur"
             ]
           }
         ],
@@ -162,7 +162,7 @@
           {
             "code": "Extension",
             "profile": [
-              "https://gematik.de/fhir/erg/StructureDefinition/DiPagAbrechnungsDiagnoseProzedurFreitext"
+              "https://gematik.de/fhir/dipag/StructureDefinition/DiPagAbrechnungsDiagnoseProzedurFreitext"
             ]
           }
         ],
@@ -186,7 +186,7 @@
           {
             "code": "Extension",
             "profile": [
-              "https://gematik.de/fhir/erg/StructureDefinition/dipag-behandlungsart"
+              "https://gematik.de/fhir/dipag/StructureDefinition/dipag-behandlungsart"
             ]
           }
         ],
@@ -222,7 +222,7 @@
           {
             "code": "Extension",
             "profile": [
-              "https://gematik.de/fhir/erg/StructureDefinition/dipag-fachrichtung"
+              "https://gematik.de/fhir/dipag/StructureDefinition/dipag-fachrichtung"
             ]
           }
         ],
@@ -271,7 +271,7 @@
           {
             "code": "canonical",
             "targetProfile": [
-              "https://gematik.de/fhir/erg/StructureDefinition/dipag-rechnung",
+              "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnung",
               "http://hl7.org/fhir/StructureDefinition/Invoice"
             ]
           }
@@ -290,7 +290,7 @@
           {
             "code": "Extension",
             "profile": [
-              "https://gematik.de/fhir/erg/StructureDefinition/DiPagTokenStornierteRechnung"
+              "https://gematik.de/fhir/dipag/StructureDefinition/DiPagTokenStornierteRechnung"
             ]
           }
         ],
@@ -355,7 +355,7 @@
             "coding": [
               {
                 "code": "antragsreferenz",
-                "system": "https://gematik.de/fhir/erg/CodeSystem/dipag-rechnung-identifier-type-cs"
+                "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-identifier-type-cs"
               }
             ]
           }
@@ -370,7 +370,7 @@
           "coding": [
             {
               "code": "antragsreferenz",
-              "system": "https://gematik.de/fhir/erg/CodeSystem/dipag-rechnung-identifier-type-cs"
+              "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-identifier-type-cs"
             }
           ]
         },
@@ -423,7 +423,7 @@
             "coding": [
               {
                 "code": "invoice",
-                "system": "https://gematik.de/fhir/erg/CodeSystem/dipag-rechnung-identifier-type-cs"
+                "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-identifier-type-cs"
               }
             ]
           }
@@ -438,7 +438,7 @@
           "coding": [
             {
               "code": "invoice",
-              "system": "https://gematik.de/fhir/erg/CodeSystem/dipag-rechnung-identifier-type-cs"
+              "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-identifier-type-cs"
             }
           ]
         },
@@ -503,12 +503,12 @@
         "min": 0,
         "max": "1",
         "patternCoding": {
-          "system": "https://gematik.de/fhir/erg/CodeSystem/dipag-rechnung-abrechnungsart-cs"
+          "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-abrechnungsart-cs"
         },
         "mustSupport": true,
         "binding": {
           "strength": "required",
-          "valueSet": "https://gematik.de/fhir/erg/ValueSet/dipag-rechnung-abrechnungsart-vs"
+          "valueSet": "https://gematik.de/fhir/dipag/ValueSet/dipag-rechnung-abrechnungsart-vs"
         }
       },
       {
@@ -523,7 +523,7 @@
           {
             "code": "Extension",
             "profile": [
-              "https://gematik.de/fhir/erg/StructureDefinition/DiPagZusatzinformationZurAbrechnungsart"
+              "https://gematik.de/fhir/dipag/StructureDefinition/DiPagZusatzinformationZurAbrechnungsart"
             ]
           }
         ],
@@ -555,12 +555,12 @@
         "min": 0,
         "max": "1",
         "patternCoding": {
-          "system": "https://gematik.de/fhir/erg/CodeSystem/dipag-rechnungsart-cs"
+          "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsart-cs"
         },
         "mustSupport": true,
         "binding": {
           "strength": "required",
-          "valueSet": "https://gematik.de/fhir/erg/ValueSet/dipag-rechnungsart-vs"
+          "valueSet": "https://gematik.de/fhir/dipag/ValueSet/dipag-rechnungsart-vs"
         }
       },
       {
@@ -585,7 +585,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "https://gematik.de/fhir/erg/StructureDefinition/dipag-patient",
+              "https://gematik.de/fhir/dipag/StructureDefinition/dipag-patient",
               "http://hl7.org/fhir/StructureDefinition/Patient"
             ]
           }
@@ -607,7 +607,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "https://gematik.de/fhir/erg/StructureDefinition/dipag-patient",
+              "https://gematik.de/fhir/dipag/StructureDefinition/dipag-patient",
               "http://hl7.org/fhir/StructureDefinition/Patient"
             ]
           }
@@ -671,7 +671,7 @@
         "mustSupport": true,
         "binding": {
           "strength": "required",
-          "valueSet": "https://gematik.de/fhir/erg/ValueSet/dipag-participant-role-VS"
+          "valueSet": "https://gematik.de/fhir/dipag/ValueSet/dipag-participant-role-VS"
         }
       },
       {
@@ -692,7 +692,7 @@
           "coding": [
             {
               "code": "leistungserbringer",
-              "system": "https://gematik.de/fhir/erg/CodeSystem/dipag-participant-role-CS"
+              "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-participant-role-CS"
             }
           ]
         }
@@ -704,8 +704,8 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "https://gematik.de/fhir/erg/StructureDefinition/dipag-person",
-              "https://gematik.de/fhir/erg/StructureDefinition/dipag-institution",
+              "https://gematik.de/fhir/dipag/StructureDefinition/dipag-person",
+              "https://gematik.de/fhir/dipag/StructureDefinition/dipag-institution",
               "http://hl7.org/fhir/StructureDefinition/Practitioner",
               "http://hl7.org/fhir/StructureDefinition/Organization"
             ]
@@ -730,7 +730,7 @@
           "coding": [
             {
               "code": "forderungsinhaber",
-              "system": "https://gematik.de/fhir/erg/CodeSystem/dipag-participant-role-CS"
+              "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-participant-role-CS"
             }
           ]
         }
@@ -742,8 +742,8 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "https://gematik.de/fhir/erg/StructureDefinition/dipag-person",
-              "https://gematik.de/fhir/erg/StructureDefinition/dipag-institution",
+              "https://gematik.de/fhir/dipag/StructureDefinition/dipag-person",
+              "https://gematik.de/fhir/dipag/StructureDefinition/dipag-institution",
               "http://hl7.org/fhir/StructureDefinition/Practitioner",
               "http://hl7.org/fhir/StructureDefinition/Organization"
             ]
@@ -760,7 +760,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "https://gematik.de/fhir/erg/StructureDefinition/dipag-institution",
+              "https://gematik.de/fhir/dipag/StructureDefinition/dipag-institution",
               "http://hl7.org/fhir/StructureDefinition/Organization"
             ]
           }
@@ -796,7 +796,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "https://gematik.de/fhir/erg/StructureDefinition/dipag-rechnungsposition",
+              "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition",
               "http://hl7.org/fhir/StructureDefinition/ChargeItem"
             ]
           }
@@ -902,7 +902,7 @@
           {
             "code": "Extension",
             "profile": [
-              "https://gematik.de/fhir/erg/StructureDefinition/DiPagTeilsumme"
+              "https://gematik.de/fhir/dipag/StructureDefinition/DiPagTeilsumme"
             ]
           }
         ],
@@ -1005,7 +1005,7 @@
           {
             "code": "Extension",
             "profile": [
-              "https://gematik.de/fhir/erg/StructureDefinition/DiPagTeilsumme"
+              "https://gematik.de/fhir/dipag/StructureDefinition/DiPagTeilsumme"
             ]
           }
         ],
@@ -1053,7 +1053,7 @@
           "coding": [
             {
               "code": "SummeRechnungspositionen",
-              "system": "https://gematik.de/fhir/erg/CodeSystem/dipag-total-price-component-type-cs"
+              "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-total-price-component-type-cs"
             }
           ]
         },
@@ -1105,7 +1105,7 @@
           {
             "code": "Extension",
             "profile": [
-              "https://gematik.de/fhir/erg/StructureDefinition/DiPagTeilsumme"
+              "https://gematik.de/fhir/dipag/StructureDefinition/DiPagTeilsumme"
             ]
           }
         ],
@@ -1153,7 +1153,7 @@
           "coding": [
             {
               "code": "Minderung7GOZ",
-              "system": "https://gematik.de/fhir/erg/CodeSystem/dipag-total-price-component-type-cs"
+              "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-total-price-component-type-cs"
             }
           ]
         },
@@ -1205,7 +1205,7 @@
           {
             "code": "Extension",
             "profile": [
-              "https://gematik.de/fhir/erg/StructureDefinition/DiPagTeilsumme"
+              "https://gematik.de/fhir/dipag/StructureDefinition/DiPagTeilsumme"
             ]
           }
         ],
@@ -1253,7 +1253,7 @@
           "coding": [
             {
               "code": "Fremdlaborleistungen",
-              "system": "https://gematik.de/fhir/erg/CodeSystem/dipag-total-price-component-type-cs"
+              "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-total-price-component-type-cs"
             }
           ]
         },
@@ -1305,7 +1305,7 @@
           {
             "code": "Extension",
             "profile": [
-              "https://gematik.de/fhir/erg/StructureDefinition/DiPagTeilsumme"
+              "https://gematik.de/fhir/dipag/StructureDefinition/DiPagTeilsumme"
             ]
           }
         ],
@@ -1351,7 +1351,7 @@
           {
             "code": "Extension",
             "profile": [
-              "https://gematik.de/fhir/erg/StructureDefinition/dipag-abzug-kassenanteil"
+              "https://gematik.de/fhir/dipag/StructureDefinition/dipag-abzug-kassenanteil"
             ]
           }
         ],
@@ -1398,7 +1398,7 @@
         "mustSupport": true,
         "binding": {
           "strength": "required",
-          "valueSet": "https://gematik.de/fhir/erg/ValueSet/dipag-total-price-component-deduction-type-vs"
+          "valueSet": "https://gematik.de/fhir/dipag/ValueSet/dipag-total-price-component-deduction-type-vs"
         }
       },
       {
@@ -1475,7 +1475,7 @@
           {
             "code": "Extension",
             "profile": [
-              "https://gematik.de/fhir/erg/StructureDefinition/dipag-zahlungsziel"
+              "https://gematik.de/fhir/dipag/StructureDefinition/dipag-zahlungsziel"
             ]
           }
         ],

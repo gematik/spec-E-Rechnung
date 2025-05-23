@@ -6,7 +6,7 @@
   "title": "Digitale Patientenrechnung Rechnung Markierung VS",
   "description": "ValueSet für die Differenzierung von verschiedenen Arten von Markierungen eines Dokumentes",
   "version": "1.1.0-rc2",
-  "url": "https://gematik.de/fhir/erg/ValueSet/dipag-rechnung-markierung-vs",
+  "url": "https://gematik.de/fhir/dipag/ValueSet/dipag-rechnung-markierung-vs",
   "experimental": false,
   "date": "2025-04-07",
   "publisher": "gematik GmbH",
@@ -23,7 +23,7 @@
   "compose": {
     "include": [
       {
-        "system": "https://gematik.de/fhir/erg/CodeSystem/dipag-rechnung-markierung-cs"
+        "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-markierung-cs"
       }
     ]
   }

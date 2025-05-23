@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "id": "DiPagRechnungspositionZusatz",
-  "url": "https://gematik.de/fhir/erg/StructureDefinition/DiPagRechnungspositionZusatz",
+  "url": "https://gematik.de/fhir/dipag/StructureDefinition/DiPagRechnungspositionZusatz",
   "name": "DiPagRechnungspositionZusatz",
   "title": "Digitale Patientenrechnung Rechnungsposition Zusatz Extension",
   "status": "draft",
@@ -28,7 +28,7 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "https://gematik.de/fhir/erg/StructureDefinition/DiPagRechnungspositionZusatz"
+        "fixedUri": "https://gematik.de/fhir/dipag/StructureDefinition/DiPagRechnungspositionZusatz"
       },
       {
         "id": "Extension.value[x]",
@@ -40,7 +40,7 @@
         ],
         "binding": {
           "strength": "required",
-          "valueSet": "https://gematik.de/fhir/erg/ValueSet/dipag-rechnungsposition-zusatz-VS"
+          "valueSet": "https://gematik.de/fhir/dipag/ValueSet/dipag-rechnungsposition-zusatz-VS"
         }
       }
     ]

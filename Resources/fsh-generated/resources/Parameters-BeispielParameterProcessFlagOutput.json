@@ -9,18 +9,18 @@
         "lastUpdated": "2024-05-31T13:00:00.123+02:00",
         "tag": [
           {
-            "system": "https://gematik.de/fhir/erg/CodeSystem/dipag-rechnungsstatus-cs",
+            "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsstatus-cs",
             "code": "erledigt"
           }
         ],
         "extension": [
           {
-            "url": "https://gematik.de/fhir/erg/StructureDefinition/dipag-documentreference-markierung",
+            "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-documentreference-markierung",
             "extension": [
               {
                 "url": "markierung",
                 "valueCoding": {
-                  "system": "https://gematik.de/fhir/erg/CodeSystem/dipag-rechnung-markierung-cs",
+                  "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-markierung-cs",
                   "code": "bezahlt"
                 }
               },

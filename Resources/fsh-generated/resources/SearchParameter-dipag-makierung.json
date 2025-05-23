@@ -1,7 +1,7 @@
 {
   "resourceType": "SearchParameter",
   "id": "dipag-makierung",
-  "url": "https://gematik.de/fhir/erg/SearchParameter/dipag-makierung",
+  "url": "https://gematik.de/fhir/dipag/SearchParameter/dipag-makierung",
   "name": "Suchparameter DocumentReference dipag-makierung",
   "status": "active",
   "publisher": "gematik GmbH",
@@ -11,5 +11,5 @@
     "DocumentReference"
   ],
   "type": "token",
-  "expression": "DocumentReference.extension('https://gematik.de/fhir/erg/StructureDefinition/dipag-rechnungsstatus').value"
+  "expression": "DocumentReference.extension('https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsstatus').value"
 }

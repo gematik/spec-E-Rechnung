@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "id": "DiPagAbrechnungsDiagnoseProzedurFreitext",
-  "url": "https://gematik.de/fhir/erg/StructureDefinition/DiPagAbrechnungsDiagnoseProzedurFreitext",
+  "url": "https://gematik.de/fhir/dipag/StructureDefinition/DiPagAbrechnungsDiagnoseProzedurFreitext",
   "version": "1.1.0-rc2",
   "name": "DiPagAbrechnungsDiagnoseProzedurFreitext",
   "title": "Abrechnungsrelevanz von Diagnosen und Prozeduren als Freitext",
@@ -46,7 +46,7 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "https://gematik.de/fhir/erg/StructureDefinition/DiPagAbrechnungsDiagnoseProzedurFreitext"
+        "fixedUri": "https://gematik.de/fhir/dipag/StructureDefinition/DiPagAbrechnungsDiagnoseProzedurFreitext"
       },
       {
         "id": "Extension.value[x]",

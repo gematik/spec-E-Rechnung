@@ -4,11 +4,11 @@
   "name": "DiPagRechnungspositionZusatzVS",
   "id": "dipag-rechnungsposition-zusatz-VS",
   "title": "Digitale Patientenrechnung Rechnungsposition Zusatz ValueSet",
-  "url": "https://gematik.de/fhir/erg/ValueSet/dipag-rechnungsposition-zusatz-VS",
+  "url": "https://gematik.de/fhir/dipag/ValueSet/dipag-rechnungsposition-zusatz-VS",
   "compose": {
     "include": [
       {
-        "system": "https://gematik.de/fhir/erg/CodeSystem/dipag-rechnungsposition-zusatz-CS"
+        "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsposition-zusatz-CS"
       }
     ]
   }

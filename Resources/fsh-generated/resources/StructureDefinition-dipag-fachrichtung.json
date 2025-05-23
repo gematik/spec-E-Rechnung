@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "id": "dipag-fachrichtung",
-  "url": "https://gematik.de/fhir/erg/StructureDefinition/dipag-fachrichtung",
+  "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-fachrichtung",
   "version": "1.1.0-rc2",
   "name": "DiPagFachrichtung",
   "title": "Digitale Patientenrechnung Extension Fachrichtung",
@@ -41,7 +41,7 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "https://gematik.de/fhir/erg/StructureDefinition/dipag-fachrichtung"
+        "fixedUri": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-fachrichtung"
       },
       {
         "id": "Extension.value[x]",

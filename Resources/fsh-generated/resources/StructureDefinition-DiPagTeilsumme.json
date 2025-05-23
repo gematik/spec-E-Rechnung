@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "id": "DiPagTeilsumme",
-  "url": "https://gematik.de/fhir/erg/StructureDefinition/DiPagTeilsumme",
+  "url": "https://gematik.de/fhir/dipag/StructureDefinition/DiPagTeilsumme",
   "name": "DiPagTeilsumme",
   "title": "Digitale Patientenrechnung Teilsumme",
   "status": "draft",
@@ -46,7 +46,7 @@
         ],
         "binding": {
           "strength": "required",
-          "valueSet": "https://gematik.de/fhir/erg/ValueSet/dipag-chargeitem-type-VS"
+          "valueSet": "https://gematik.de/fhir/dipag/ValueSet/dipag-chargeitem-type-VS"
         }
       },
       {
@@ -140,7 +140,7 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "https://gematik.de/fhir/erg/StructureDefinition/DiPagTeilsumme"
+        "fixedUri": "https://gematik.de/fhir/dipag/StructureDefinition/DiPagTeilsumme"
       },
       {
         "id": "Extension.value[x]",

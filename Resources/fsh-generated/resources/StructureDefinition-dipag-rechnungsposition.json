@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "id": "dipag-rechnungsposition",
-  "url": "https://gematik.de/fhir/erg/StructureDefinition/dipag-rechnungsposition",
+  "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition",
   "version": "1.1.0-rc2",
   "name": "DiPagRechnungsposition",
   "title": "Digitale Patientenrechnung Rechnungsposition",
@@ -44,7 +44,7 @@
           {
             "code": "Extension",
             "profile": [
-              "https://gematik.de/fhir/erg/StructureDefinition/dipag-rechnungsposition-type"
+              "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-type"
             ]
           }
         ],
@@ -80,7 +80,7 @@
           {
             "code": "Extension",
             "profile": [
-              "https://gematik.de/fhir/erg/StructureDefinition/DiPagRechnungspositionZusatz"
+              "https://gematik.de/fhir/dipag/StructureDefinition/DiPagRechnungspositionZusatz"
             ]
           }
         ],
@@ -115,7 +115,7 @@
           {
             "code": "Extension",
             "profile": [
-              "https://gematik.de/fhir/erg/StructureDefinition/dipag-wegegeld-reiseentschaedigung"
+              "https://gematik.de/fhir/dipag/StructureDefinition/dipag-wegegeld-reiseentschaedigung"
             ]
           }
         ],
@@ -304,7 +304,7 @@
           {
             "code": "Extension",
             "profile": [
-              "https://gematik.de/fhir/erg/StructureDefinition/dipag-rechnungsposition-go-angaben"
+              "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-go-angaben"
             ]
           }
         ],
@@ -415,7 +415,7 @@
           {
             "code": "Extension",
             "profile": [
-              "https://gematik.de/fhir/erg/StructureDefinition/DiPagRechnungspositionBehandlungsdatum"
+              "https://gematik.de/fhir/dipag/StructureDefinition/DiPagRechnungspositionBehandlungsdatum"
             ]
           }
         ],
@@ -524,7 +524,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "https://gematik.de/fhir/erg/StructureDefinition/dipag-patient",
+              "https://gematik.de/fhir/dipag/StructureDefinition/dipag-patient",
               "http://hl7.org/fhir/StructureDefinition/Patient"
             ]
           }
@@ -573,8 +573,8 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "https://gematik.de/fhir/erg/StructureDefinition/dipag-person",
-              "https://gematik.de/fhir/erg/StructureDefinition/dipag-institution",
+              "https://gematik.de/fhir/dipag/StructureDefinition/dipag-person",
+              "https://gematik.de/fhir/dipag/StructureDefinition/dipag-institution",
               "http://hl7.org/fhir/StructureDefinition/Practitioner",
               "http://hl7.org/fhir/StructureDefinition/Organization"
             ]
@@ -634,7 +634,7 @@
           {
             "code": "Extension",
             "profile": [
-              "https://gematik.de/fhir/erg/StructureDefinition/dipag-zahnregion"
+              "https://gematik.de/fhir/dipag/StructureDefinition/dipag-zahnregion"
             ]
           }
         ],

@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "id": "dipag-rechnungsdiagnose",
-  "url": "https://gematik.de/fhir/erg/StructureDefinition/dipag-rechnungsdiagnose",
+  "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsdiagnose",
   "version": "1.1.0-rc2",
   "name": "DiPagRechnungsdiagnose",
   "title": "Digitale Patientenrechnung Rechnungsdiagnose",
@@ -120,7 +120,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "https://gematik.de/fhir/erg/StructureDefinition/dipag-patient",
+              "https://gematik.de/fhir/dipag/StructureDefinition/dipag-patient",
               "http://hl7.org/fhir/StructureDefinition/Patient"
             ]
           }

@@ -6,7 +6,7 @@
   "id": "dipag-abrechnungs-diagnose-use-CS",
   "title": "Digitale Patientenrechnung Abrechnungsdiagnose Use CodeSystem",
   "version": "1.1.0-rc2",
-  "url": "https://gematik.de/fhir/erg/CodeSystem/dipag-abrechnungs-diagnose-use-CS",
+  "url": "https://gematik.de/fhir/dipag/CodeSystem/dipag-abrechnungs-diagnose-use-CS",
   "concept": [
     {
       "code": "main-diagnosis",

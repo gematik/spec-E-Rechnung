@@ -6,7 +6,7 @@
   "id": "dipag-rechnung-identifier-type-cs",
   "title": "Digitale Patientenrechnung Rechnung Identifier Type CS",
   "version": "1.1.0-rc2",
-  "url": "https://gematik.de/fhir/erg/CodeSystem/dipag-rechnung-identifier-type-cs",
+  "url": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-identifier-type-cs",
   "concept": [
     {
       "code": "invoice",

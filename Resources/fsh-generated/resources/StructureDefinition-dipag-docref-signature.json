@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "id": "dipag-docref-signature",
-  "url": "https://gematik.de/fhir/erg/StructureDefinition/dipag-docref-signature",
+  "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-docref-signature",
   "version": "1.1.0-rc2",
   "name": "DiPagDocRefSignature",
   "title": "Digitale Patientenrechnung DocRef Signature",
@@ -42,7 +42,7 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "https://gematik.de/fhir/erg/StructureDefinition/dipag-docref-signature"
+        "fixedUri": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-docref-signature"
       },
       {
         "id": "Extension.value[x]",

@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "id": "dipag-nutzungsprotokoll",
-  "url": "https://gematik.de/fhir/erg/StructureDefinition/dipag-nutzungsprotokoll",
+  "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-nutzungsprotokoll",
   "version": "1.1.0-rc2",
   "name": "DiPagNutzungsprotokoll",
   "title": "Digitale Patientenrechnung Nutzungsprotokoll",
@@ -34,7 +34,7 @@
         "mustSupport": true,
         "binding": {
           "strength": "required",
-          "valueSet": "https://gematik.de/fhir/erg/ValueSet/dipag-audit-event-type-vs"
+          "valueSet": "https://gematik.de/fhir/dipag/ValueSet/dipag-audit-event-type-vs"
         }
       },
       {
@@ -44,7 +44,7 @@
         "mustSupport": true,
         "binding": {
           "strength": "extensible",
-          "valueSet": "https://gematik.de/fhir/erg/ValueSet/dipag-audit-event-sub-type-vs"
+          "valueSet": "https://gematik.de/fhir/dipag/ValueSet/dipag-audit-event-sub-type-vs"
         }
       },
       {
@@ -78,7 +78,7 @@
         "mustSupport": true,
         "binding": {
           "strength": "required",
-          "valueSet": "https://gematik.de/fhir/erg/ValueSet/dipag-audit-event-agent-type-vs"
+          "valueSet": "https://gematik.de/fhir/dipag/ValueSet/dipag-audit-event-agent-type-vs"
         }
       },
       {

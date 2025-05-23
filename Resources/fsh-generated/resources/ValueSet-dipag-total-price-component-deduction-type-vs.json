@@ -4,11 +4,11 @@
   "name": "DiPagTotalPriceComponentDeductionTypeVS",
   "id": "dipag-total-price-component-deduction-type-vs",
   "title": "Digitale Patientenrechnung Art des Abzugs von der Summe der gesamten Rechnungspositionen",
-  "url": "https://gematik.de/fhir/erg/ValueSet/dipag-total-price-component-deduction-type-vs",
+  "url": "https://gematik.de/fhir/dipag/ValueSet/dipag-total-price-component-deduction-type-vs",
   "compose": {
     "include": [
       {
-        "system": "https://gematik.de/fhir/erg/CodeSystem/dipag-total-price-component-type-cs",
+        "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-total-price-component-type-cs",
         "concept": [
           {
             "code": "FestzuschussKasse",

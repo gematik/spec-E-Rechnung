@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "id": "DiPagZusatzinformationZurAbrechnungsart",
-  "url": "https://gematik.de/fhir/erg/StructureDefinition/DiPagZusatzinformationZurAbrechnungsart",
+  "url": "https://gematik.de/fhir/dipag/StructureDefinition/DiPagZusatzinformationZurAbrechnungsart",
   "version": "1.1.0-rc2",
   "name": "DiPagZusatzinformationZurAbrechnungsart",
   "title": "Zusatzinformation zur Abrechnungsart",
@@ -47,7 +47,7 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "https://gematik.de/fhir/erg/StructureDefinition/DiPagZusatzinformationZurAbrechnungsart"
+        "fixedUri": "https://gematik.de/fhir/dipag/StructureDefinition/DiPagZusatzinformationZurAbrechnungsart"
       },
       {
         "id": "Extension.value[x]",

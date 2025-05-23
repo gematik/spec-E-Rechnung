@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "id": "dipag-dokumentenmetadaten",
-  "url": "https://gematik.de/fhir/erg/StructureDefinition/dipag-dokumentenmetadaten",
+  "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten",
   "version": "1.1.0-rc2",
   "name": "DiPagDokumentenmetadaten",
   "title": "Digitale Patientenrechnung Dokumentenmetadaten",
@@ -35,15 +35,15 @@
             "key": "SignaturVerpflichtendRechnung",
             "severity": "error",
             "human": "Eine Signature muss vorhanden sein, falls es sich bei der DocumentReference um eine Rechnung handelt.",
-            "expression": "type.coding.where(system = 'http://dvmd.de/fhir/CodeSystem/kdl' and code = 'AM010106').exists() implies extension.where(url = 'https://gematik.de/fhir/erg/StructureDefinition/dipag-docref-signature').exists()",
-            "source": "https://gematik.de/fhir/erg/StructureDefinition/dipag-dokumentenmetadaten"
+            "expression": "type.coding.where(system = 'http://dvmd.de/fhir/CodeSystem/kdl' and code = 'AM010106').exists() implies extension.where(url = 'https://gematik.de/fhir/dipag/StructureDefinition/dipag-docref-signature').exists()",
+            "source": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten"
           },
           {
             "key": "RechnungOderAnhang",
             "severity": "error",
             "human": "Ein Dokument kann entweder ein Anhang enthalten oder ein Rechnungsdokument inkl. strukturierten Rechnungsinhalten.",
-            "expression": "content.format.where(system = 'https://gematik.de/fhir/erg/CodeSystem/dipag-attachment-format-cs' and code = 'rechnungsanhang').exists() xor (content.format.where(system = 'https://gematik.de/fhir/erg/CodeSystem/dipag-attachment-format-cs' and code = 'dipag').exists() and  content.format.where(system = 'https://gematik.de/fhir/erg/CodeSystem/dipag-attachment-format-cs' and code = 'rechnungsinhalt').exists())",
-            "source": "https://gematik.de/fhir/erg/StructureDefinition/dipag-dokumentenmetadaten"
+            "expression": "content.format.where(system = 'https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs' and code = 'rechnungsanhang').exists() xor (content.format.where(system = 'https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs' and code = 'dipag').exists() and  content.format.where(system = 'https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs' and code = 'rechnungsinhalt').exists())",
+            "source": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten"
           }
         ]
       },
@@ -63,7 +63,7 @@
           {
             "code": "Extension",
             "profile": [
-              "https://gematik.de/fhir/erg/StructureDefinition/dipag-documentreference-markierung"
+              "https://gematik.de/fhir/dipag/StructureDefinition/dipag-documentreference-markierung"
             ]
           }
         ],
@@ -94,7 +94,7 @@
         "mustSupport": true,
         "binding": {
           "strength": "required",
-          "valueSet": "https://gematik.de/fhir/erg/ValueSet/dipag-rechnungsstatus-vs"
+          "valueSet": "https://gematik.de/fhir/dipag/ValueSet/dipag-rechnungsstatus-vs"
         }
       },
       {
@@ -124,7 +124,7 @@
           {
             "code": "Extension",
             "profile": [
-              "https://gematik.de/fhir/erg/StructureDefinition/dipag-docref-signature"
+              "https://gematik.de/fhir/dipag/StructureDefinition/dipag-docref-signature"
             ]
           }
         ],
@@ -141,7 +141,7 @@
           {
             "code": "Extension",
             "profile": [
-              "https://gematik.de/fhir/erg/StructureDefinition/dipag-documentreference-rechnungsdatum"
+              "https://gematik.de/fhir/dipag/StructureDefinition/dipag-documentreference-rechnungsdatum"
             ]
           }
         ],
@@ -158,7 +158,7 @@
           {
             "code": "Extension",
             "profile": [
-              "https://gematik.de/fhir/erg/StructureDefinition/dipag-documentreference-zahlungszieldatum"
+              "https://gematik.de/fhir/dipag/StructureDefinition/dipag-documentreference-zahlungszieldatum"
             ]
           }
         ],
@@ -175,7 +175,7 @@
           {
             "code": "Extension",
             "profile": [
-              "https://gematik.de/fhir/erg/StructureDefinition/dipag-documentreference-gesamtbetrag"
+              "https://gematik.de/fhir/dipag/StructureDefinition/dipag-documentreference-gesamtbetrag"
             ]
           }
         ],
@@ -191,7 +191,7 @@
           {
             "code": "Extension",
             "profile": [
-              "https://gematik.de/fhir/erg/StructureDefinition/dipag-docref-fachrichtung"
+              "https://gematik.de/fhir/dipag/StructureDefinition/dipag-docref-fachrichtung"
             ]
           }
         ],
@@ -207,7 +207,7 @@
           {
             "code": "Extension",
             "profile": [
-              "https://gematik.de/fhir/erg/StructureDefinition/dipag-docref-leistungsart"
+              "https://gematik.de/fhir/dipag/StructureDefinition/dipag-docref-leistungsart"
             ]
           }
         ],
@@ -223,7 +223,7 @@
           {
             "code": "Extension",
             "profile": [
-              "https://gematik.de/fhir/erg/StructureDefinition/dipag-behandlungsart"
+              "https://gematik.de/fhir/dipag/StructureDefinition/dipag-behandlungsart"
             ]
           }
         ],
@@ -288,7 +288,7 @@
         "mustSupport": true,
         "binding": {
           "strength": "required",
-          "valueSet": "https://gematik.de/fhir/erg/ValueSet/dipag-sonstigesdokument-type-vs"
+          "valueSet": "https://gematik.de/fhir/dipag/ValueSet/dipag-sonstigesdokument-type-vs"
         }
       },
       {
@@ -425,7 +425,7 @@
         "min": 1,
         "patternCoding": {
           "code": "dipag",
-          "system": "https://gematik.de/fhir/erg/CodeSystem/dipag-attachment-format-cs"
+          "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs"
         },
         "mustSupport": true
       },
@@ -467,7 +467,7 @@
         "min": 1,
         "patternCoding": {
           "code": "angereichertesPDF",
-          "system": "https://gematik.de/fhir/erg/CodeSystem/dipag-attachment-format-cs"
+          "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs"
         },
         "mustSupport": true
       },
@@ -492,7 +492,7 @@
         "mustSupport": true,
         "binding": {
           "strength": "required",
-          "valueSet": "https://gematik.de/fhir/erg/ValueSet/dipag-restricted-mime-types-vs"
+          "valueSet": "https://gematik.de/fhir/dipag/ValueSet/dipag-restricted-mime-types-vs"
         }
       },
       {
@@ -513,7 +513,7 @@
         "min": 1,
         "patternCoding": {
           "code": "rechnungsinhalt",
-          "system": "https://gematik.de/fhir/erg/CodeSystem/dipag-attachment-format-cs"
+          "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs"
         },
         "mustSupport": true
       },
@@ -556,7 +556,7 @@
         "min": 1,
         "patternCoding": {
           "code": "rechnungsanhang",
-          "system": "https://gematik.de/fhir/erg/CodeSystem/dipag-attachment-format-cs"
+          "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs"
         },
         "mustSupport": true
       },

@@ -11,7 +11,7 @@
         "id": "BeispielNutzungsprotokoll",
         "meta": {
           "profile": [
-            "https://gematik.de/fhir/erg/StructureDefinition/dipag-nutzungsprotokoll"
+            "https://gematik.de/fhir/dipag/StructureDefinition/dipag-nutzungsprotokoll"
           ]
         },
         "type": {

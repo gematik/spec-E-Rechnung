@@ -5,7 +5,7 @@
     {
       "name": "markierung",
       "valueCoding": {
-        "system": "https://gematik.de/fhir/erg/CodeSystem/dipag-rechnung-markierung-cs",
+        "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-markierung-cs",
         "code": "bezahlt"
       }
     },

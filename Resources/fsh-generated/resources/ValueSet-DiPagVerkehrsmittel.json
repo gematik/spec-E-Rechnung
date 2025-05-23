@@ -5,7 +5,7 @@
   "id": "DiPagVerkehrsmittel",
   "title": "Digitale PatientenrechnungVerkehrsmittel",
   "description": "Dieses ValueSet bietet eine Auswahl an Verkehrsmitteln, die im Rahmen einer Reisekostenentschädigung ausgewählt werden können.",
-  "url": "https://gematik.de/fhir/erg/ValueSet/DiPagVerkehrsmittel",
+  "url": "https://gematik.de/fhir/dipag/ValueSet/DiPagVerkehrsmittel",
   "compose": {
     "include": [
       {

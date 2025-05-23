@@ -6,7 +6,7 @@
   "title": "Digitale Patientenrechnung Rechnung Type VS",
   "description": "ValueSet für die Differenzierung von der Verarbeitungsmodi für $erchnung-submit",
   "version": "1.1.0-rc2",
-  "url": "https://gematik.de/fhir/erg/ValueSet/dipag-rechnung-submit-modus-vs",
+  "url": "https://gematik.de/fhir/dipag/ValueSet/dipag-rechnung-submit-modus-vs",
   "experimental": false,
   "date": "2025-04-07",
   "publisher": "gematik GmbH",
@@ -23,7 +23,7 @@
   "compose": {
     "include": [
       {
-        "system": "https://gematik.de/fhir/erg/CodeSystem/dipag-rechnung-submit-modus-cs"
+        "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-submit-modus-cs"
       }
     ]
   }

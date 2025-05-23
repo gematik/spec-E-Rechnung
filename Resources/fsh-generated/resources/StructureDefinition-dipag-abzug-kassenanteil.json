@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "id": "dipag-abzug-kassenanteil",
-  "url": "https://gematik.de/fhir/erg/StructureDefinition/dipag-abzug-kassenanteil",
+  "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-abzug-kassenanteil",
   "version": "1.1.0-rc2",
   "name": "DiPagAbzugKassenanteil",
   "title": "Digitale Patientenrechnung Extension Abzug Kassenanteil in Prozent",
@@ -41,7 +41,7 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "https://gematik.de/fhir/erg/StructureDefinition/dipag-abzug-kassenanteil"
+        "fixedUri": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-abzug-kassenanteil"
       },
       {
         "id": "Extension.value[x]",

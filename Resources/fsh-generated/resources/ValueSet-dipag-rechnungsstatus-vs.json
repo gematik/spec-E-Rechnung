@@ -5,7 +5,7 @@
   "id": "dipag-rechnungsstatus-vs",
   "title": "Digitale Patientenrechnung Rechnungsstatus",
   "version": "1.1.0-rc2",
-  "url": "https://gematik.de/fhir/erg/ValueSet/dipag-rechnungsstatus-vs",
+  "url": "https://gematik.de/fhir/dipag/ValueSet/dipag-rechnungsstatus-vs",
   "experimental": false,
   "date": "2025-04-07",
   "publisher": "gematik GmbH",
@@ -22,7 +22,7 @@
   "compose": {
     "include": [
       {
-        "system": "https://gematik.de/fhir/erg/CodeSystem/dipag-rechnungsstatus-cs"
+        "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsstatus-cs"
       }
     ]
   }

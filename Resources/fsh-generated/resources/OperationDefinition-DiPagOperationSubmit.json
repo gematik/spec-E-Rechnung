@@ -1,7 +1,7 @@
 {
   "resourceType": "OperationDefinition",
   "id": "DiPagOperationSubmit",
-  "url": "https://gematik.de/fhir/erg/OperationDefinition/Submit",
+  "url": "https://gematik.de/fhir/dipag/OperationDefinition/Submit",
   "status": "active",
   "version": "1.0.0-CC",
   "experimental": false,
@@ -42,7 +42,7 @@
       "type": "code",
       "binding": {
         "strength": "required",
-        "valueSet": "https://gematik.de/fhir/erg/ValueSet/dipag-rechnung-submit-modus-vs"
+        "valueSet": "https://gematik.de/fhir/dipag/ValueSet/dipag-rechnung-submit-modus-vs"
       }
     },
     {

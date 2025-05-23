@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "id": "dipag-zahnregion",
-  "url": "https://gematik.de/fhir/erg/StructureDefinition/dipag-zahnregion",
+  "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-zahnregion",
   "name": "DiPagZahnRegion",
   "title": "Digitale Patientenrechnung Zahn/Region Extension",
   "status": "draft",
@@ -28,7 +28,7 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "https://gematik.de/fhir/erg/StructureDefinition/dipag-zahnregion"
+        "fixedUri": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-zahnregion"
       },
       {
         "id": "Extension.value[x]",

@@ -1,7 +1,7 @@
 {
   "resourceType": "CapabilityStatement",
   "id": "CapabilityStatementFD",
-  "url": "https://gematik.de/fhir/erg/CapabilityStatement/DiPagCapabilityStatementFD",
+  "url": "https://gematik.de/fhir/dipag/CapabilityStatement/DiPagCapabilityStatementFD",
   "version": "1.1.0-rc2",
   "status": "active",
   "experimental": false,
@@ -50,7 +50,7 @@
             }
           ],
           "supportedProfile": [
-            "https://gematik.de/fhir/erg/StructureDefinition/dipag-patient"
+            "https://gematik.de/fhir/dipag/StructureDefinition/dipag-patient"
           ],
           "interaction": [
             {
@@ -116,7 +116,7 @@
                 }
               ],
               "name": "dipag-submit",
-              "definition": "https://gematik.de/fhir/erg/OperationDefinition/Submit"
+              "definition": "https://gematik.de/fhir/dipag/OperationDefinition/Submit"
             }
           ]
         },
@@ -129,7 +129,7 @@
             }
           ],
           "supportedProfile": [
-            "https://gematik.de/fhir/erg/StructureDefinition/dipag-rechnungsdokument"
+            "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsdokument"
           ],
           "interaction": [
             {
@@ -215,7 +215,7 @@
                 }
               ],
               "name": "dipag-makierung",
-              "definition": "https://gematik.de/fhir/erg/SearchParameter/dipag-makierung",
+              "definition": "https://gematik.de/fhir/dipag/SearchParameter/dipag-makierung",
               "type": "token"
             }
           ],
@@ -228,7 +228,7 @@
                 }
               ],
               "name": "retrieve",
-              "definition": "https://gematik.de/fhir/erg/OperationDefinition/Retrieve"
+              "definition": "https://gematik.de/fhir/dipag/OperationDefinition/Retrieve"
             },
             {
               "extension": [
@@ -238,7 +238,7 @@
                 }
               ],
               "name": "change-status",
-              "definition": "https://gematik.de/fhir/erg/OperationDefinition/ChangeStatus"
+              "definition": "https://gematik.de/fhir/dipag/OperationDefinition/ChangeStatus"
             },
             {
               "extension": [
@@ -248,7 +248,7 @@
                 }
               ],
               "name": "process-flag",
-              "definition": "https://gematik.de/fhir/erg/OperationDefinition/ProcessFlag"
+              "definition": "https://gematik.de/fhir/dipag/OperationDefinition/ProcessFlag"
             },
             {
               "extension": [
@@ -258,7 +258,7 @@
                 }
               ],
               "name": "erase",
-              "definition": "https://gematik.de/fhir/erg/OperationDefinition/Erase"
+              "definition": "https://gematik.de/fhir/dipag/OperationDefinition/Erase"
             }
           ]
         },
@@ -291,7 +291,7 @@
             }
           ],
           "supportedProfile": [
-            "https://gematik.de/fhir/erg/StructureDefinition/dipag-nutzungsprotokoll"
+            "https://gematik.de/fhir/dipag/StructureDefinition/dipag-nutzungsprotokoll"
           ],
           "searchParam": [
             {

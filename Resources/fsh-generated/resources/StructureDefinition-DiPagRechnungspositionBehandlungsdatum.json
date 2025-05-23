@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "id": "DiPagRechnungspositionBehandlungsdatum",
-  "url": "https://gematik.de/fhir/erg/StructureDefinition/DiPagRechnungspositionBehandlungsdatum",
+  "url": "https://gematik.de/fhir/dipag/StructureDefinition/DiPagRechnungspositionBehandlungsdatum",
   "name": "DiPagRechnungspositionBehandlungsdatum",
   "title": "Digitale Patientenrechnung Rechnungsposition Behandlungsdatum",
   "status": "draft",
@@ -27,7 +27,7 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "https://gematik.de/fhir/erg/StructureDefinition/DiPagRechnungspositionBehandlungsdatum"
+        "fixedUri": "https://gematik.de/fhir/dipag/StructureDefinition/DiPagRechnungspositionBehandlungsdatum"
       },
       {
         "id": "Extension.value[x]",

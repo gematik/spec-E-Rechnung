@@ -6,7 +6,7 @@
   "id": "dipag-participant-role-CS",
   "title": "Digitale Patientenrechnung Teilnehmer Rolle",
   "version": "1.1.0-rc2",
-  "url": "https://gematik.de/fhir/erg/CodeSystem/dipag-participant-role-CS",
+  "url": "https://gematik.de/fhir/dipag/CodeSystem/dipag-participant-role-CS",
   "concept": [
     {
       "code": "leistungserbringer",

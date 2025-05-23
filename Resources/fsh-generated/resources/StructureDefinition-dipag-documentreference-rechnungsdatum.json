@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "id": "dipag-documentreference-rechnungsdatum",
-  "url": "https://gematik.de/fhir/erg/StructureDefinition/dipag-documentreference-rechnungsdatum",
+  "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-documentreference-rechnungsdatum",
   "version": "1.1.0-rc2",
   "name": "DiPagDocumentReferenceRechnungsdatum",
   "title": "Digitale Patientenrechnung DocumentReference Rechnungsdatum",
@@ -41,7 +41,7 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "https://gematik.de/fhir/erg/StructureDefinition/dipag-documentreference-rechnungsdatum"
+        "fixedUri": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-documentreference-rechnungsdatum"
       },
       {
         "id": "Extension.value[x]",

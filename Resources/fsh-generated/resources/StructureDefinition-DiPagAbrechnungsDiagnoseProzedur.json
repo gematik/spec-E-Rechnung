@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "id": "DiPagAbrechnungsDiagnoseProzedur",
-  "url": "https://gematik.de/fhir/erg/StructureDefinition/DiPagAbrechnungsDiagnoseProzedur",
+  "url": "https://gematik.de/fhir/dipag/StructureDefinition/DiPagAbrechnungsDiagnoseProzedur",
   "version": "1.1.0-rc2",
   "name": "DiPagAbrechnungsDiagnoseProzedur",
   "title": "Abrechnungsrelevanz von Diagnosen und Prozeduren",
@@ -71,7 +71,7 @@
         ],
         "binding": {
           "strength": "required",
-          "valueSet": "https://gematik.de/fhir/erg/ValueSet/dipag-abrechnungs-diagnose-use-VS"
+          "valueSet": "https://gematik.de/fhir/dipag/ValueSet/dipag-abrechnungs-diagnose-use-VS"
         }
       },
       {
@@ -107,7 +107,7 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "https://gematik.de/fhir/erg/StructureDefinition/DiPagAbrechnungsDiagnoseProzedur"
+        "fixedUri": "https://gematik.de/fhir/dipag/StructureDefinition/DiPagAbrechnungsDiagnoseProzedur"
       },
       {
         "id": "Extension.value[x]",

@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "id": "dipag-rechnungsposition-go-angaben",
-  "url": "https://gematik.de/fhir/erg/StructureDefinition/dipag-rechnungsposition-go-angaben",
+  "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-go-angaben",
   "name": "DiPagRechnungspositionGOAngaben",
   "title": "Digitale Patientenrechnung Angaben bei Gebührenordnungen bei einer Rechnungsposition",
   "status": "draft",
@@ -136,7 +136,7 @@
         ],
         "binding": {
           "strength": "required",
-          "valueSet": "https://gematik.de/fhir/erg/ValueSet/dipag-rechnungsposition-faktor-gruende-auspraegungen-VS"
+          "valueSet": "https://gematik.de/fhir/dipag/ValueSet/dipag-rechnungsposition-faktor-gruende-auspraegungen-VS"
         }
       },
       {
@@ -205,7 +205,7 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "https://gematik.de/fhir/erg/StructureDefinition/dipag-rechnungsposition-go-angaben"
+        "fixedUri": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-go-angaben"
       },
       {
         "id": "Extension.value[x]",

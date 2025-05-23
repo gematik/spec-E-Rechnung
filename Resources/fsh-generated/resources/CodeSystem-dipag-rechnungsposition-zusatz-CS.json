@@ -5,7 +5,7 @@
   "name": "DiPagRechnungspositionZusatzCS",
   "id": "dipag-rechnungsposition-zusatz-CS",
   "title": "Digitale Patientenrechnung Rechnungsposition Zusatz CodeSystem",
-  "url": "https://gematik.de/fhir/erg/CodeSystem/dipag-rechnungsposition-zusatz-CS",
+  "url": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsposition-zusatz-CS",
   "concept": [
     {
       "code": "V",

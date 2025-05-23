@@ -6,7 +6,7 @@
   "title": "Digitale Patientenrechnung Teilnehmer Rolle",
   "description": "Diese Codes enthalten Teilnehmer Rollen der Digitale Patientenrechnung",
   "version": "1.1.0-rc2",
-  "url": "https://gematik.de/fhir/erg/ValueSet/dipag-participant-role-VS",
+  "url": "https://gematik.de/fhir/dipag/ValueSet/dipag-participant-role-VS",
   "experimental": false,
   "date": "2025-04-07",
   "publisher": "gematik GmbH",
@@ -23,7 +23,7 @@
   "compose": {
     "include": [
       {
-        "system": "https://gematik.de/fhir/erg/CodeSystem/dipag-participant-role-CS"
+        "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-participant-role-CS"
       }
     ]
   }

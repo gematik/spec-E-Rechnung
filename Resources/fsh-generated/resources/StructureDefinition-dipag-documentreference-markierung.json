@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "id": "dipag-documentreference-markierung",
-  "url": "https://gematik.de/fhir/erg/StructureDefinition/dipag-documentreference-markierung",
+  "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-documentreference-markierung",
   "version": "1.1.0-rc2",
   "name": "DiPagDocumentReferenceMarkierung",
   "title": "Digitale Patientenrechnung DocumentReference Markierung",
@@ -66,7 +66,7 @@
         ],
         "binding": {
           "strength": "required",
-          "valueSet": "https://gematik.de/fhir/erg/ValueSet/dipag-dokument-artderarchivierung-vs"
+          "valueSet": "https://gematik.de/fhir/dipag/ValueSet/dipag-dokument-artderarchivierung-vs"
         }
       },
       {
@@ -132,7 +132,7 @@
         "constraint": [
           {
             "key": "DiPagDocumentReferenceMarkierung-2",
-            "source": "https://gematik.de/fhir/erg/StructureDefinition/dipag-documentreference-markierung",
+            "source": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-documentreference-markierung",
             "severity": "error",
             "human": "Details zum Gelesen-Status können nur angegeben werden wenn die Markierung vom Typ 'Gelesen' ist",
             "expression": "extension.where(url = 'gelesen').value.exists() implies extension.where(url = 'markierung').value.coding.where(code = 'gelesen').exists()"
@@ -168,7 +168,7 @@
         "constraint": [
           {
             "key": "DiPagDocumentReferenceMarkierung-1",
-            "source": "https://gematik.de/fhir/erg/StructureDefinition/dipag-documentreference-markierung",
+            "source": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-documentreference-markierung",
             "severity": "error",
             "human": "Details zur Art der Archivierung können nur angegeben werden wenn die Markierung vom Typ 'Archiviert' ist",
             "expression": "extension.where(url = 'artDerArchivierung').value.exists() implies extension.where(url = 'markierung').value.coding.where(code = 'archiviert').exists()"
@@ -197,7 +197,7 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "https://gematik.de/fhir/erg/StructureDefinition/dipag-documentreference-markierung"
+        "fixedUri": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-documentreference-markierung"
       },
       {
         "id": "Extension.value[x]",
