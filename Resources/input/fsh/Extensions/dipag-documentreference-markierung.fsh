@@ -29,13 +29,13 @@ Title: "Digitale Patientenrechnung DocumentReference Markierung"
 
 
 Invariant: artDerArchivierung
-* key = "Digitale PatientenrechnungDocumentReferenceMarkierung-1"
+* key = "DiPagDocumentReferenceMarkierung-1"
 * severity = #error
 * human = "Details zur Art der Archivierung können nur angegeben werden wenn die Markierung vom Typ 'Archiviert' ist"
 * expression = "extension.where(url = 'artDerArchivierung').value.exists() implies extension.where(url = 'markierung').value.coding.where(code = 'archiviert').exists()"
 
 Invariant: gelesen
-* key = "Digitale PatientenrechnungDocumentReferenceMarkierung-2"
+* key = "DiPagDocumentReferenceMarkierung-2"
 * severity = #error
 * human = "Details zum Gelesen-Status können nur angegeben werden wenn die Markierung vom Typ 'Gelesen' ist"
 * expression = "extension.where(url = 'gelesen').value.exists() implies extension.where(url = 'markierung').value.coding.where(code = 'gelesen').exists()"
