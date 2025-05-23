@@ -3,7 +3,7 @@
 Instance: ERGOperationSubmit
 InstanceOf: OperationDefinition
 Usage: #example
-Title: "ERG Operation Erechnung-Submit"
+Title: "ERG Operation DiPag-Submit"
 Description: "Rechnung einreichen durch die Leistungserbringer:in"
 * url = "https://gematik.de/fhir/erg/OperationDefinition/Submit"
 * status = #active
@@ -12,7 +12,7 @@ Description: "Rechnung einreichen durch die Leistungserbringer:in"
 * date = "2024-06-20"
 * kind = #operation
 * name = "ERGSubmit"
-* code = #erechnung-submit
+* code = #dipag-submit
 * resource = #Patient
 * system = false
 * type = false

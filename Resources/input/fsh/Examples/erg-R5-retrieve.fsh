@@ -22,7 +22,7 @@ Title: "Example ERG Document Reference"
 * author.identifier.system = "https://gematik.de/fhir/sid/telematik-id"
 * author.identifier.value = "987654321"
 * author.display = "Dr. Hausarzt"
-* content[rechnungspdf].format = https://gematik.de/fhir/erg/CodeSystem/erg-attachment-format-cs#erechnung
+* content[rechnungspdf].format = https://gematik.de/fhir/erg/CodeSystem/erg-attachment-format-cs#dipag
 * content[rechnungspdf].attachment.contentType = #application/pdf
 * content[rechnungspdf].attachment.data = "DIESISTNUREINBEISPIELDIESISTKEINVALIDESPDF00"
 * content[rechnungspdf].attachment.url = "http://example.com/fhir/binary/123"

@@ -8,7 +8,7 @@ Usage: #example
   * type = http://fhir.de/CodeSystem/identifier-type-de-basis#invoice
   * system = "http://Orthoschmerz.de/fhir/patienten"
   * value = "2-444"
-* type = https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnung-type-cs#erechnung
+* type = https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnung-type-cs#dipag
 * status = http://hl7.org/fhir/invoice-status#issued
 * participant
   * role = http://snomed.info/sct#39607008
@@ -141,7 +141,7 @@ Instance: R2444Document
 InstanceOf: Composition
 Usage: #example
 * status = #final
-* type.coding = https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnung-type-cs#erechnung
+* type.coding = https://gematik.de/fhir/ergpkv/CodeSystem/ergpkv-rechnung-type-cs#dipag
 * date = 2024-03-20
 * author = Reference(R2444Practitioner)
 * title = "Zusammenfassung strukturierte Daten Rechnung 4-222"

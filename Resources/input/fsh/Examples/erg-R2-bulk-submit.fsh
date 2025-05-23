@@ -37,7 +37,7 @@ InstanceOf: DocumentReference
     * contentType = #application/xml
     * data = "DIESISTNUREINBEISPIELDIESISTKEINVALIDESXML00"
 * content[+]
-  * format = #gematik-erechnung
+  * format = #gematik-dipag
   * attachment
     * contentType = #application/fhir+xml
     * data = "DIESISTNUREINBEISPIELDIESISTKEINVALIDESXML00"
@@ -91,7 +91,7 @@ InstanceOf: DocumentReference
     * contentType = #application/xml
     * data = "DIESISTNUREINBEISPIELDIESISTKEINVALIDESXML00"
 * content[+]
-  * format = #gematik-erechnung
+  * format = #gematik-dipag
   * attachment
     * contentType = #application/fhir+xml
     * data = "DIESISTNUREINBEISPIELDIESISTKEINVALIDESXML00"
@@ -174,7 +174,7 @@ InstanceOf: DocumentReference
     * contentType = #application/xml
     * url = "[FD-endpunkt]/Binary/xrechnung"
 * content[+]
-  * format = #gematik-erechnung
+  * format = #gematik-dipag
   * attachment
     * contentType = #application/fhir+xml
     * url = "[FD-endpunkt]/Binary/invoice"

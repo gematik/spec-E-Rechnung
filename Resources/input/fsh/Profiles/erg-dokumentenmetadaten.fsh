@@ -78,7 +78,7 @@ Id: erg-dokumentenmetadaten
   * ^comment = "Der FD muss die Base64-kodierten Daten aus attachment.data extrahieren und in eine Binary-Ressource auslagern."
 * content[rechnungspdf]
   * format MS
-  * format = https://gematik.de/fhir/erg/CodeSystem/erg-attachment-format-cs#erechnung
+  * format = https://gematik.de/fhir/erg/CodeSystem/erg-attachment-format-cs#dipag
   * attachment 1..1 MS
     * contentType 1.. MS
     * contentType = #application/pdf
@@ -149,7 +149,7 @@ Id: erg-attachment-format-cs
 Title: "ERG Attachment Format CS"
 Description:  "CodeSystem für die Abbildung von verschieden Formatinhalten eines Dokuments"
 * insert Meta
-* #erechnung "E-Rechnungsdokument"
+* #dipag "E-Rechnungsdokument"
 * #angereichertesPDF "E-Rechnungsdokument mit eingebetteten strukturierten Rechnungsinhalt"
 * #rechnungsinhalt "Strukturierter Rechnungsinhalt"
 * #rechnungsanhang "Rechnungsanhang"
@@ -202,7 +202,7 @@ Severity: #error
 
 Invariant: RechnungOderAnhang
 Description: "Ein Dokument kann entweder ein Anhang enthalten oder ein Rechnungsdokument inkl. strukturierten Rechnungsinhalten."
-Expression: "content.format.where(system = 'https://gematik.de/fhir/erg/CodeSystem/erg-attachment-format-cs' and code = 'rechnungsanhang').exists() xor (content.format.where(system = 'https://gematik.de/fhir/erg/CodeSystem/erg-attachment-format-cs' and code = 'erechnung').exists() and  content.format.where(system = 'https://gematik.de/fhir/erg/CodeSystem/erg-attachment-format-cs' and code = 'rechnungsinhalt').exists())"
+Expression: "content.format.where(system = 'https://gematik.de/fhir/erg/CodeSystem/erg-attachment-format-cs' and code = 'rechnungsanhang').exists() xor (content.format.where(system = 'https://gematik.de/fhir/erg/CodeSystem/erg-attachment-format-cs' and code = 'dipag').exists() and  content.format.where(system = 'https://gematik.de/fhir/erg/CodeSystem/erg-attachment-format-cs' and code = 'rechnungsinhalt').exists())"
 Severity: #error
 
 

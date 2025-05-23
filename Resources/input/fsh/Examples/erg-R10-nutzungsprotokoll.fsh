@@ -1,7 +1,7 @@
 Instance: BeispielNutzungsprotokoll
 InstanceOf: ERGNutzungsprotokoll
 * type = #rest
-* subtype = #erechnung-submit
+* subtype = #dipag-submit
 * action = #C
 * recorded = "2024-05-29T11:25:54.123456+00:02"
 * outcome = #0

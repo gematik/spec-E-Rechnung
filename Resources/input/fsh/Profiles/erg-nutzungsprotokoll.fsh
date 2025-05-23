@@ -16,7 +16,7 @@ Id: erg-nutzungsprotokoll
 * outcome MS
   * ^comment = "Angabe ob die zu protokollierende Interaktion erfolgreich ausgeführt werden konnte."
 * agent MS
-  * ^comment = "Angaben zum Akteur (Nutzer oder eRg FD), der den Zugriff durchgeführt hat. Siehe Abschnittt '4.8.6 Protokolleintrag'des Feature-Dokuments 'E-Rechnung'."
+  * ^comment = "Angaben zum Akteur (Nutzer oder DiPag FD), der den Zugriff durchgeführt hat. Siehe Abschnittt '4.8.6 Protokolleintrag'des Feature-Dokuments 'E-Rechnung'."
 * agent
   * type 1.. MS
   * type from ERGAuditEventAgentTypeVS (required)
@@ -48,11 +48,11 @@ CodeSystem: ERGOperationenCS
 Id: erg-operationen-cs
 Title: "ERG Operationen"
 * insert Meta
-* #erechnung-submit "ERechnung_Submit"
-* #retrieve "ERechnung_Retrieve"
-* #change-status "ERechnung_ChangeStatus"
-* #process-flag "ERechnung_ProcessFlag"
-* #erase "ERechnung_Erase"
+* #dipag-submit "Digitale Patientenrechnung_Submit"
+* #retrieve "Digitale Patientenrechnung_Retrieve"
+* #change-status "Digitale Patientenrechnung_ChangeStatus"
+* #process-flag "Digitale Patientenrechnung_ProcessFlag"
+* #erase "Digitale Patientenrechnung_Erase"
 
 CodeSystem: ERGPropRestInterationsCS
 Id: erg-prop-rest-interactions-cs
