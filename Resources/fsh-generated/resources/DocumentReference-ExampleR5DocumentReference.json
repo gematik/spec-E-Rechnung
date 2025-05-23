@@ -5,12 +5,12 @@
     "tag": [
       {
         "code": "offen",
-        "system": "https://gematik.de/fhir/erg/CodeSystem/erg-rechnungsstatus-cs",
+        "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsstatus-cs",
         "display": "Offen"
       }
     ],
     "profile": [
-      "https://gematik.de/fhir/erg/StructureDefinition/erg-dokumentenmetadaten"
+      "https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten"
     ]
   },
   "status": "current",
@@ -25,15 +25,15 @@
   },
   "extension": [
     {
-      "url": "https://gematik.de/fhir/erg/StructureDefinition/erg-documentreference-rechnungsdatum",
+      "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-documentreference-rechnungsdatum",
       "valueDateTime": "2023-09-28T13:00:00.123+02:00"
     },
     {
-      "url": "https://gematik.de/fhir/erg/StructureDefinition/erg-documentreference-zahlungszieldatum",
+      "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-documentreference-zahlungszieldatum",
       "valueDateTime": "2023-10-28T13:00:00.123+02:00"
     },
     {
-      "url": "https://gematik.de/fhir/erg/StructureDefinition/erg-documentreference-gesamtbetrag",
+      "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-documentreference-gesamtbetrag",
       "valueMoney": {
         "value": 16.2,
         "currency": "EUR"
@@ -52,8 +52,8 @@
   "content": [
     {
       "format": {
-        "code": "erechnung",
-        "system": "https://gematik.de/fhir/erg/CodeSystem/erg-attachment-format-cs"
+        "code": "dipag",
+        "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs"
       },
       "attachment": {
         "contentType": "application/pdf",
@@ -64,7 +64,7 @@
     {
       "format": {
         "code": "angereichertesPDF",
-        "system": "https://gematik.de/fhir/erg/CodeSystem/erg-attachment-format-cs"
+        "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs"
       },
       "attachment": {
         "contentType": "application/pdf",
@@ -74,7 +74,7 @@
     {
       "format": {
         "code": "rechnungsinhalt",
-        "system": "https://gematik.de/fhir/erg/CodeSystem/erg-attachment-format-cs"
+        "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs"
       },
       "attachment": {
         "contentType": "application/json",
@@ -85,7 +85,7 @@
     {
       "format": {
         "code": "rechnungsanhang",
-        "system": "https://gematik.de/fhir/erg/CodeSystem/erg-attachment-format-cs"
+        "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs"
       },
       "attachment": {
         "contentType": "application/pdf",

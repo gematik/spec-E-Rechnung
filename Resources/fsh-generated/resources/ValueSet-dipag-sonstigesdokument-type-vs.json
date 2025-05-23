@@ -1,0 +1,37 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "DiPagSonstigesDokumentTypeVS",
+  "id": "dipag-sonstigesdokument-type-vs",
+  "title": "Digitale Patientenrechnung Sonstiges Dokument Type VS",
+  "description": "ValueSet zur Klassifizierung von weiteren Dokumenten",
+  "version": "1.1.0-rc2",
+  "url": "https://gematik.de/fhir/dipag/ValueSet/dipag-sonstigesdokument-type-vs",
+  "experimental": false,
+  "date": "2025-04-07",
+  "publisher": "gematik GmbH",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://gematik.de/"
+        }
+      ]
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "http://dvmd.de/fhir/CodeSystem/kdl",
+        "filter": [
+          {
+            "property": "child",
+            "op": "exists",
+            "value": "true"
+          }
+        ]
+      }
+    ]
+  }
+}

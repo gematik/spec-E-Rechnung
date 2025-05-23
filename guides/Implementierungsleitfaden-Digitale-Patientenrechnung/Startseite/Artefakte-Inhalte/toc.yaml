@@ -1,0 +1,20 @@
+- name: Index
+  filename: Index.page.md
+- name: DiPagInstitution (Organization)
+  filename: Datenobjekt_institution
+- name: DiPagPerson (Practitioner)
+  filename: Datenobjekt_person
+- name: DiPagPatient (Patient)
+  filename: Datenobjekt_patient
+- name: DiPagRechnung (Invoice)
+  filename: Datenobjekt_rechnung
+- name: DiPagRechnungsposition (ChargeItem)
+  filename: Datenobjekt_rechnungsposition
+- name: DiPagRechnungsdiagnose (Condition)
+  filename: Datenobjekt_rechnungsdiagnose
+- name: DiPagRechnungsprozedur (Procedure)
+  filename: Datenobjekt_rechnungsprozedur
+- name: Terminologien
+  filename: Terminologien
+- name: Extensions
+  filename: Extensions

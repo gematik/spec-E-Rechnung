@@ -1,4 +1,0 @@
-## {{page-title}}
-
-
-{{index:current}}

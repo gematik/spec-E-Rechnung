@@ -1,4 +1,4 @@
-canonical: https://gematik.de/fhir/erg
+canonical: https://gematik.de/fhir/dipag
 fhirVersion: 4.0.1
 FSHOnly: true
 applyExtensionMetadataToRoot: false

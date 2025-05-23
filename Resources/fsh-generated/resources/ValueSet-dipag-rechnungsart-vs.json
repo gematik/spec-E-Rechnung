@@ -1,0 +1,30 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "DiPagRechnungsartVS",
+  "id": "dipag-rechnungsart-vs",
+  "title": "Digitale Patientenrechnung Rechnungsart VS",
+  "description": "ValueSet zur Klassifizierung von Rechnungsarten",
+  "version": "1.1.0-rc2",
+  "url": "https://gematik.de/fhir/dipag/ValueSet/dipag-rechnungsart-vs",
+  "experimental": false,
+  "date": "2025-04-07",
+  "publisher": "gematik GmbH",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://gematik.de/"
+        }
+      ]
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsart-cs"
+      }
+    ]
+  }
+}

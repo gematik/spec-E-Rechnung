@@ -1,0 +1,60 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "dipag-docref-leistungsart",
+  "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-docref-leistungsart",
+  "version": "1.1.0-rc2",
+  "name": "DiPagDocRefLeistungsart",
+  "title": "Digitale Patientenrechnung DocRef Leistungsart",
+  "status": "active",
+  "experimental": false,
+  "date": "2025-04-07",
+  "publisher": "gematik GmbH",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://gematik.de/"
+        }
+      ]
+    }
+  ],
+  "description": "Extension zur Angabe einer Leistungsart",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "Element"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-docref-leistungsart"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": true
+      }
+    ]
+  }
+}

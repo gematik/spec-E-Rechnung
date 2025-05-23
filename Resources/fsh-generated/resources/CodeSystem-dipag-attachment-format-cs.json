@@ -1,0 +1,43 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "DiPagAttachmentFormatCS",
+  "id": "dipag-attachment-format-cs",
+  "title": "Digitale Patientenrechnung Attachment Format CS",
+  "description": "CodeSystem für die Abbildung von verschieden Formatinhalten eines Dokuments",
+  "version": "1.1.0-rc2",
+  "url": "https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs",
+  "concept": [
+    {
+      "code": "dipag",
+      "display": "Digitale Patientenrechnungs Dokument"
+    },
+    {
+      "code": "angereichertesPDF",
+      "display": "Digitale Patientenrechnungs Dokument mit eingebetteten strukturierten Rechnungsinhalt"
+    },
+    {
+      "code": "rechnungsinhalt",
+      "display": "Strukturierter Rechnungsinhalt"
+    },
+    {
+      "code": "rechnungsanhang",
+      "display": "Rechnungsanhang"
+    }
+  ],
+  "experimental": false,
+  "date": "2025-04-07",
+  "publisher": "gematik GmbH",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://gematik.de/"
+        }
+      ]
+    }
+  ],
+  "count": 4
+}

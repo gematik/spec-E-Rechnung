@@ -1,0 +1,75 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "dipag-abzug-kassenanteil",
+  "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-abzug-kassenanteil",
+  "version": "1.1.0-rc2",
+  "name": "DiPagAbzugKassenanteil",
+  "title": "Digitale Patientenrechnung Extension Abzug Kassenanteil in Prozent",
+  "status": "active",
+  "experimental": false,
+  "date": "2025-04-07",
+  "publisher": "gematik GmbH",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://gematik.de/"
+        }
+      ]
+    }
+  ],
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "Invoice.totalPriceComponent"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-abzug-kassenanteil"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ]
+      },
+      {
+        "id": "Extension.value[x].unit",
+        "path": "Extension.value[x].unit",
+        "min": 1,
+        "patternString": "%"
+      },
+      {
+        "id": "Extension.value[x].system",
+        "path": "Extension.value[x].system",
+        "min": 1,
+        "patternUri": "http://unitsofmeasure.org"
+      },
+      {
+        "id": "Extension.value[x].code",
+        "path": "Extension.value[x].code",
+        "min": 1,
+        "patternCode": "%"
+      }
+    ]
+  }
+}

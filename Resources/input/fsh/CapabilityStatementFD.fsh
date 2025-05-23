@@ -2,12 +2,12 @@ Instance: CapabilityStatementFD
 InstanceOf: CapabilityStatement
 Usage: #definition
 * insert MetaInstance
-* url = "https://gematik.de/fhir/erg/CapabilityStatement/ERGCapabilityStatementFD"
+* url = "https://gematik.de/fhir/dipag/CapabilityStatement/DiPagCapabilityStatementFD"
 * name = "CapabilityStatementFD"
 * title = "CapabilityStatement Fachdienst E-Rechnnung"
 * description = 
   "Dieses CapabilityStatement beschreibt alle Interaktionen, 
-  die ein E-Rechnung-konformer Fachdienst unterstützen MUSS bzw. KANN.
+  die ein DiPag-konformer Fachdienst unterstützen MUSS bzw. KANN.
 "
 * jurisdiction = urn:iso:std:iso:3166#DE "Germany"
 * kind = #requirements
@@ -19,7 +19,7 @@ Usage: #definition
   * resource[+]
     * type = #Patient
     * insert Expectation (#SHALL)
-    * supportedProfile = Canonical(ERGPatient)
+    * supportedProfile = Canonical(DiPagPatient)
     * interaction[+]
       * insert Expectation (#SHALL)
       * code = #read
@@ -43,12 +43,12 @@ Usage: #definition
       * type = #date
     * operation[+]
       * insert Expectation (#SHALL)
-      * name = "erechnung-submit"
-      * definition = "https://gematik.de/fhir/erg/OperationDefinition/Submit"
+      * name = "dipag-submit"
+      * definition = "https://gematik.de/fhir/dipag/OperationDefinition/Submit"
   * resource[+]
     * type = #DocumentReference
     * insert Expectation (#SHALL)
-    * supportedProfile = Canonical(ERGRechnungsdokument)
+    * supportedProfile = Canonical(DiPagRechnungsdokument)
     * interaction[+]
       * insert Expectation (#SHALL)
       * code = #read
@@ -82,25 +82,25 @@ Usage: #definition
       * type = #token
     * searchParam[+]
       * insert Expectation (#SHALL)
-      * name = "erg-makierung"
-      * definition = "https://gematik.de/fhir/erg/SearchParameter/erg-makierung"
+      * name = "dipag-makierung"
+      * definition = "https://gematik.de/fhir/dipag/SearchParameter/dipag-makierung"
       * type = #token
     * operation[+]
       * insert Expectation (#SHALL)
       * name = "retrieve"
-      * definition = "https://gematik.de/fhir/erg/OperationDefinition/Retrieve"
+      * definition = "https://gematik.de/fhir/dipag/OperationDefinition/Retrieve"
     * operation[+]
       * insert Expectation (#SHALL)
       * name = "change-status"
-      * definition = "https://gematik.de/fhir/erg/OperationDefinition/ChangeStatus"
+      * definition = "https://gematik.de/fhir/dipag/OperationDefinition/ChangeStatus"
     * operation[+]
       * insert Expectation (#SHALL)
       * name = "process-flag"
-      * definition = "https://gematik.de/fhir/erg/OperationDefinition/ProcessFlag"
+      * definition = "https://gematik.de/fhir/dipag/OperationDefinition/ProcessFlag"
     * operation[+]
       * insert Expectation (#SHALL)
       * name = "erase"
-      * definition = "https://gematik.de/fhir/erg/OperationDefinition/Erase"
+      * definition = "https://gematik.de/fhir/dipag/OperationDefinition/Erase"
   * resource[+]
     * type = #AuditEvent
     * insert Expectation (#SHALL)
@@ -110,7 +110,7 @@ Usage: #definition
     * interaction[+]
       * insert Expectation (#SHALL)
       * code = #search-type
-    * supportedProfile = Canonical(ERGNutzungsprotokoll)
+    * supportedProfile = Canonical(DiPagNutzungsprotokoll)
     * searchParam[+]
       * insert Expectation (#SHALL)
       * name = "_id"

@@ -1,7 +1,7 @@
 {
   "resourceType": "CapabilityStatement",
   "id": "CapabilityStatementFD",
-  "url": "https://gematik.de/fhir/erg/CapabilityStatement/ERGCapabilityStatementFD",
+  "url": "https://gematik.de/fhir/dipag/CapabilityStatement/DiPagCapabilityStatementFD",
   "version": "1.1.0-rc2",
   "status": "active",
   "experimental": false,
@@ -19,7 +19,7 @@
   "date": "2025-04-07",
   "name": "CapabilityStatementFD",
   "title": "CapabilityStatement Fachdienst E-Rechnnung",
-  "description": "Dieses CapabilityStatement beschreibt alle Interaktionen, \n  die ein E-Rechnung-konformer Fachdienst unterstützen MUSS bzw. KANN.\n",
+  "description": "Dieses CapabilityStatement beschreibt alle Interaktionen, \n  die ein DiPag-konformer Fachdienst unterstützen MUSS bzw. KANN.\n",
   "jurisdiction": [
     {
       "coding": [
@@ -50,7 +50,7 @@
             }
           ],
           "supportedProfile": [
-            "https://gematik.de/fhir/erg/StructureDefinition/erg-patient"
+            "https://gematik.de/fhir/dipag/StructureDefinition/dipag-patient"
           ],
           "interaction": [
             {
@@ -115,8 +115,8 @@
                   "valueCode": "SHALL"
                 }
               ],
-              "name": "erechnung-submit",
-              "definition": "https://gematik.de/fhir/erg/OperationDefinition/Submit"
+              "name": "dipag-submit",
+              "definition": "https://gematik.de/fhir/dipag/OperationDefinition/Submit"
             }
           ]
         },
@@ -129,7 +129,7 @@
             }
           ],
           "supportedProfile": [
-            "https://gematik.de/fhir/erg/StructureDefinition/erg-rechnungsdokument"
+            "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsdokument"
           ],
           "interaction": [
             {
@@ -214,8 +214,8 @@
                   "valueCode": "SHALL"
                 }
               ],
-              "name": "erg-makierung",
-              "definition": "https://gematik.de/fhir/erg/SearchParameter/erg-makierung",
+              "name": "dipag-makierung",
+              "definition": "https://gematik.de/fhir/dipag/SearchParameter/dipag-makierung",
               "type": "token"
             }
           ],
@@ -228,7 +228,7 @@
                 }
               ],
               "name": "retrieve",
-              "definition": "https://gematik.de/fhir/erg/OperationDefinition/Retrieve"
+              "definition": "https://gematik.de/fhir/dipag/OperationDefinition/Retrieve"
             },
             {
               "extension": [
@@ -238,7 +238,7 @@
                 }
               ],
               "name": "change-status",
-              "definition": "https://gematik.de/fhir/erg/OperationDefinition/ChangeStatus"
+              "definition": "https://gematik.de/fhir/dipag/OperationDefinition/ChangeStatus"
             },
             {
               "extension": [
@@ -248,7 +248,7 @@
                 }
               ],
               "name": "process-flag",
-              "definition": "https://gematik.de/fhir/erg/OperationDefinition/ProcessFlag"
+              "definition": "https://gematik.de/fhir/dipag/OperationDefinition/ProcessFlag"
             },
             {
               "extension": [
@@ -258,7 +258,7 @@
                 }
               ],
               "name": "erase",
-              "definition": "https://gematik.de/fhir/erg/OperationDefinition/Erase"
+              "definition": "https://gematik.de/fhir/dipag/OperationDefinition/Erase"
             }
           ]
         },
@@ -291,7 +291,7 @@
             }
           ],
           "supportedProfile": [
-            "https://gematik.de/fhir/erg/StructureDefinition/erg-nutzungsprotokoll"
+            "https://gematik.de/fhir/dipag/StructureDefinition/dipag-nutzungsprotokoll"
           ],
           "searchParam": [
             {

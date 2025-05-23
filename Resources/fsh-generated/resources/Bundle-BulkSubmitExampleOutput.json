@@ -16,7 +16,7 @@
               "id": "BeispielDocumentReferenceRechnung3-FD",
               "identifier": [
                 {
-                  "system": "https://gematik.de/fhir/sid/erg-token",
+                  "system": "https://gematik.de/fhir/sid/dipag-token",
                   "value": "123-456-789"
                 }
               ],
@@ -55,7 +55,7 @@
                 },
                 {
                   "format": {
-                    "code": "gematik-erechnung"
+                    "code": "dipag"
                   },
                   "attachment": {
                     "contentType": "application/fhir+xml",
@@ -80,7 +80,7 @@
               "id": "BeispielDocumentReferenceSonstigesDokument3-FD",
               "identifier": [
                 {
-                  "system": "https://gematik.de/fhir/sid/erg-token",
+                  "system": "https://gematik.de/fhir/sid/dipag-token",
                   "value": "987-654-321"
                 }
               ],
@@ -132,7 +132,7 @@
               "id": "BeispielDocumentReferenceRechnung3.1-FD",
               "identifier": [
                 {
-                  "system": "https://gematik.de/fhir/sid/erg-token",
+                  "system": "https://gematik.de/fhir/sid/dipag-token",
                   "value": "123-456-987"
                 }
               ],
@@ -171,7 +171,7 @@
                 },
                 {
                   "format": {
-                    "code": "gematik-erechnung"
+                    "code": "gematik-dipag"
                   },
                   "attachment": {
                     "contentType": "application/fhir+xml",
@@ -196,7 +196,7 @@
               "id": "BeispielDocumentReferenceSonstigesDokument3.1-FD",
               "identifier": [
                 {
-                  "system": "https://gematik.de/fhir/sid/erg-token",
+                  "system": "https://gematik.de/fhir/sid/dipag-token",
                   "value": "987-654-321"
                 }
               ],

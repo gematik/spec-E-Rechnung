@@ -1,0 +1,14 @@
+- name: Index
+  filename: Index.page.md
+- name: CapabilityStatementFD
+  filename: CapabilityStatements
+- name: DiPagDokumentenmetadaten (DocumentReference)
+  filename: Datenobjekt_dokumentenmetadaten
+- name: DiPagNutzungsprotokoll (AuditEvent)
+  filename: Datenobjekt_nutzungsprotokoll
+- name: DiPagRechnungsdokument (Binary)
+  filename: Datenobjekt_rechnungsdokument
+- name: Terminologien
+  filename: Terminologien
+- name: Extensions
+  filename: Extensions

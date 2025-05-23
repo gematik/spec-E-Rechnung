@@ -3,7 +3,7 @@
   "id": "BeispielDocumentReferenceSonstigesDokument3-FD",
   "identifier": [
     {
-      "system": "https://gematik.de/fhir/sid/erg-token",
+      "system": "https://gematik.de/fhir/sid/dipag-token",
       "value": "987-654-321"
     }
   ],

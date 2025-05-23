@@ -1,0 +1,48 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "DiPagTokenStornierteRechnung",
+  "url": "https://gematik.de/fhir/dipag/StructureDefinition/DiPagTokenStornierteRechnung",
+  "name": "DiPagTokenStornierteRechnung",
+  "title": "Digitale Patientenrechnung Token der stornierten Rechnung",
+  "status": "draft",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "expression": "Invoice",
+      "type": "element"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "https://gematik.de/fhir/dipag/StructureDefinition/DiPagTokenStornierteRechnung"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ]
+      },
+      {
+        "id": "Extension.value[x].system",
+        "path": "Extension.value[x].system",
+        "patternUri": "https://gematik.de/fhir/sid/dipag-token"
+      }
+    ]
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "dipag-rechnungsdokument",
+  "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsdokument",
+  "version": "1.1.0-rc2",
+  "name": "DiPagRechnungsdokument",
+  "title": "Digitale Patientenrechnung Rechnungsdokument",
+  "status": "active",
+  "experimental": false,
+  "date": "2025-04-07",
+  "publisher": "gematik GmbH",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://gematik.de/"
+        }
+      ]
+    }
+  ],
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Binary",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Binary",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Binary.contentType",
+        "path": "Binary.contentType",
+        "short": "MIME-Type des Dokumentes",
+        "comment": "Zum Zeitpunkt der Veröffentlichung werden nur PDF-Dokumente als Anhang seitens der Leistungserbringer:in und der Patient:in unterstüzt.",
+        "fixedCode": "application/pdf",
+        "mustSupport": true
+      },
+      {
+        "id": "Binary.data",
+        "path": "Binary.data",
+        "short": "Binär-Daten",
+        "comment": "PDF als base64-kodierter String.",
+        "min": 1,
+        "mustSupport": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "DiPagRechnungspositionFaktorGruendeVS",
+  "id": "dipag-rechnungsposition-faktor-gruende-auspraegungen-VS",
+  "title": "Digitale Patientenrechnung Rechnungsposition Faktor Gründe ValueSet",
+  "url": "https://gematik.de/fhir/dipag/ValueSet/dipag-rechnungsposition-faktor-gruende-auspraegungen-VS",
+  "compose": {
+    "include": [
+      {
+        "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsposition-faktor-gruende-CS"
+      }
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "resourceType": "SearchParameter",
+  "id": "dipag-makierung",
+  "url": "https://gematik.de/fhir/dipag/SearchParameter/dipag-makierung",
+  "name": "Suchparameter DocumentReference dipag-makierung",
+  "status": "active",
+  "publisher": "gematik GmbH",
+  "description": "Ein SearchParameter auf der Ressource DocumentReference, der die Suche nach einer manuelle Markierung ermöglicht.",
+  "code": "dipag-makierung",
+  "base": [
+    "DocumentReference"
+  ],
+  "type": "token",
+  "expression": "DocumentReference.extension('https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsstatus').value"
+}

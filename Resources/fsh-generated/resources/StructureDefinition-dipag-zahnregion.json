@@ -1,0 +1,44 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "dipag-zahnregion",
+  "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-zahnregion",
+  "name": "DiPagZahnRegion",
+  "title": "Digitale Patientenrechnung Zahn/Region Extension",
+  "status": "draft",
+  "description": "In dieser Extension wird die Angabe der Zahn/Region an einer Rechnungsposition der Digitale Patientenrechnung abgebildet.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "expression": "ChargeItem.bodysite",
+      "type": "element"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-zahnregion"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      }
+    ]
+  }
+}
