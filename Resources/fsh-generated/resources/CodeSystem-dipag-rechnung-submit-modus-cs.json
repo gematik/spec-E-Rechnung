@@ -12,12 +12,12 @@
     {
       "code": "test",
       "display": "Test",
-      "definition": "E-Rechnung wird als Test eingereicht. Der Fachdienst validiert nur die E-Rechnung und speichert diese nicht."
+      "definition": "Digitale Patientenrechnung wird als Test eingereicht. Der Fachdienst validiert nur die Digitale Patientenrechnung und speichert diese nicht."
     },
     {
       "code": "normal",
       "display": "Normal",
-      "definition": "E-Rechnung wird durch den Fachdienst gespeichert falls keine gravierenden Validierungsfehler vorhanden sind."
+      "definition": "Digitale Patientenrechnung wird durch den Fachdienst gespeichert falls keine gravierenden Validierungsfehler vorhanden sind."
     }
   ],
   "experimental": false,
