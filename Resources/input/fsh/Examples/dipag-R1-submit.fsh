@@ -31,7 +31,7 @@ InstanceOf: DocumentReference
     * contentType = #application/xml
     * url = "[FD-endpunkt]/Binary/xrechnung"
 * content[+]
-  * format = #gematik-erechnung
+  * format = #dipag
   * attachment
     * contentType = #application/fhir+xml
     * url = "[FD-endpunkt]/Binary/invoice"
