@@ -52,7 +52,7 @@
                 },
                 {
                   "format": {
-                    "code": "gematik-erechnung"
+                    "code": "gematik-dipag"
                   },
                   "attachment": {
                     "contentType": "application/fhir+xml",
@@ -161,7 +161,7 @@
                 },
                 {
                   "format": {
-                    "code": "gematik-erechnung"
+                    "code": "gematik-dipag"
                   },
                   "attachment": {
                     "contentType": "application/fhir+xml",

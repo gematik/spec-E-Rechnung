@@ -1,0 +1,30 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "DiPagAbrechnungsDiagnoseUseCS",
+  "id": "dipag-abrechnungs-diagnose-use-CS",
+  "title": "Digitale Patientenrechnung Abrechnungsdiagnose Use CodeSystem",
+  "version": "1.1.0-rc2",
+  "url": "https://gematik.de/fhir/erg/CodeSystem/dipag-abrechnungs-diagnose-use-CS",
+  "concept": [
+    {
+      "code": "main-diagnosis",
+      "display": "Hauptdiagnose"
+    }
+  ],
+  "experimental": false,
+  "date": "2025-04-07",
+  "publisher": "gematik GmbH",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://gematik.de/"
+        }
+      ]
+    }
+  ],
+  "count": 1
+}

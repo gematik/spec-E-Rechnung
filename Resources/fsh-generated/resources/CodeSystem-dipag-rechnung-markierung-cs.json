@@ -1,0 +1,59 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "DiPagRechnungMarkierungCS",
+  "id": "dipag-rechnung-markierung-cs",
+  "title": "Digitale Patientenrechnung Rechnung Markierung CS",
+  "description": "CodeSystem für die Differenzierung von verschiedenen Arten von Markierungen eines Dokumentes",
+  "version": "1.1.0-rc2",
+  "url": "https://gematik.de/fhir/erg/CodeSystem/dipag-rechnung-markierung-cs",
+  "concept": [
+    {
+      "code": "eingereicht-frontend",
+      "display": "Eingereicht (per Frontend)"
+    },
+    {
+      "code": "eingereicht-post",
+      "display": "Eingereicht (per Post)"
+    },
+    {
+      "code": "geteilt",
+      "display": "Geteilt"
+    },
+    {
+      "code": "abgerufen",
+      "display": "Abgerufen durch Kostenträger"
+    },
+    {
+      "code": "gelesen",
+      "display": "Gelesen"
+    },
+    {
+      "code": "bezahlt",
+      "display": "Bezahlt"
+    },
+    {
+      "code": "archiviert",
+      "display": "Archiviert"
+    },
+    {
+      "code": "persoenlich",
+      "display": "Persönlich"
+    }
+  ],
+  "experimental": false,
+  "date": "2025-04-07",
+  "publisher": "gematik GmbH",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://gematik.de/"
+        }
+      ]
+    }
+  ],
+  "count": 8
+}

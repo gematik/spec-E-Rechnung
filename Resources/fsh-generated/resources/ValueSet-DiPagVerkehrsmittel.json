@@ -1,0 +1,34 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "DiPagVerkehrsmittel",
+  "id": "DiPagVerkehrsmittel",
+  "title": "Digitale PatientenrechnungVerkehrsmittel",
+  "description": "Dieses ValueSet bietet eine Auswahl an Verkehrsmitteln, die im Rahmen einer Reisekostenentschädigung ausgewählt werden können.",
+  "url": "https://gematik.de/fhir/erg/ValueSet/DiPagVerkehrsmittel",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "46160005",
+            "display": "Motor vehicle"
+          },
+          {
+            "code": "52387005",
+            "display": "Taxi"
+          },
+          {
+            "code": "716367000",
+            "display": "Transportation by public transport"
+          },
+          {
+            "code": "46274009",
+            "display": "Jet airplane"
+          }
+        ]
+      }
+    ]
+  }
+}

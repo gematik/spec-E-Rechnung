@@ -1,0 +1,34 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "draft",
+  "content": "complete",
+  "name": "DiPagRechnungspositionFaktorGruendeCS",
+  "id": "dipag-rechnungsposition-faktor-gruende-CS",
+  "title": "Digitale Patientenrechnung Rechnungsposition Faktor Gründe CodeSystem",
+  "url": "https://gematik.de/fhir/erg/CodeSystem/dipag-rechnungsposition-faktor-gruende-CS",
+  "concept": [
+    {
+      "code": "HV",
+      "display": "Honorarvereinbarung",
+      "definition": "Die HV ist der Rechnung beizulegen."
+    },
+    {
+      "code": "BT",
+      "display": "Basistarif"
+    },
+    {
+      "code": "ST",
+      "display": "Standardtarif"
+    },
+    {
+      "code": "NT",
+      "display": "Notlagentarif"
+    },
+    {
+      "code": "AB",
+      "display": "Allgemeine Bestimmung",
+      "definition": "In Begründung AB angeben."
+    }
+  ],
+  "count": 5
+}

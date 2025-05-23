@@ -1,0 +1,64 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "dipag-docref-fachrichtung",
+  "url": "https://gematik.de/fhir/erg/StructureDefinition/dipag-docref-fachrichtung",
+  "version": "1.1.0-rc2",
+  "name": "DiPagDocRefFachrichtung",
+  "title": "Digitale Patientenrechnung DocRef Fachrichtung",
+  "status": "active",
+  "experimental": false,
+  "date": "2025-04-07",
+  "publisher": "gematik GmbH",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://gematik.de/"
+        }
+      ]
+    }
+  ],
+  "description": "Extension zur Angabe der Fachrichtung zur Steuerung des Abrechungsworkflows",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "Element"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "https://gematik.de/fhir/erg/StructureDefinition/dipag-docref-fachrichtung"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://ihe-d.de/ValueSets/IHEXDSpracticeSettingCode"
+        }
+      }
+    ]
+  }
+}

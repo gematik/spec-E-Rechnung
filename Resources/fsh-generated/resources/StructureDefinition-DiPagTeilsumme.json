@@ -1,0 +1,152 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "DiPagTeilsumme",
+  "url": "https://gematik.de/fhir/erg/StructureDefinition/DiPagTeilsumme",
+  "name": "DiPagTeilsumme",
+  "title": "Digitale Patientenrechnung Teilsumme",
+  "status": "draft",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "expression": "Invoice.totalPriceComponent",
+      "type": "element"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension.extension:Type",
+        "path": "Extension.extension",
+        "sliceName": "Type",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension:Type.extension",
+        "path": "Extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:Type.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "Type"
+      },
+      {
+        "id": "Extension.extension:Type.value[x]",
+        "path": "Extension.extension.value[x]",
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://gematik.de/fhir/erg/ValueSet/dipag-chargeitem-type-VS"
+        }
+      },
+      {
+        "id": "Extension.extension:Summe",
+        "path": "Extension.extension",
+        "sliceName": "Summe",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension:Summe.extension",
+        "path": "Extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:Summe.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "Summe"
+      },
+      {
+        "id": "Extension.extension:Summe.value[x]",
+        "path": "Extension.extension.value[x]",
+        "type": [
+          {
+            "code": "Money"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:Summe.value[x].currency",
+        "path": "Extension.extension.value[x].currency",
+        "patternCode": "EUR"
+      },
+      {
+        "id": "Extension.extension:UStProzent",
+        "path": "Extension.extension",
+        "sliceName": "UStProzent",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension:UStProzent.extension",
+        "path": "Extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:UStProzent.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "UStProzent"
+      },
+      {
+        "id": "Extension.extension:UStProzent.value[x]",
+        "path": "Extension.extension.value[x]",
+        "type": [
+          {
+            "code": "decimal"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:UStBetrag",
+        "path": "Extension.extension",
+        "sliceName": "UStBetrag",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension:UStBetrag.extension",
+        "path": "Extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:UStBetrag.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "UStBetrag"
+      },
+      {
+        "id": "Extension.extension:UStBetrag.value[x]",
+        "path": "Extension.extension.value[x]",
+        "type": [
+          {
+            "code": "Money"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:UStBetrag.value[x].currency",
+        "path": "Extension.extension.value[x].currency",
+        "patternCode": "EUR"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "https://gematik.de/fhir/erg/StructureDefinition/DiPagTeilsumme"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "max": "0"
+      }
+    ]
+  }
+}

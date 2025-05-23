@@ -1,0 +1,217 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "dipag-rechnungsposition-go-angaben",
+  "url": "https://gematik.de/fhir/erg/StructureDefinition/dipag-rechnungsposition-go-angaben",
+  "name": "DiPagRechnungspositionGOAngaben",
+  "title": "Digitale Patientenrechnung Angaben bei Gebührenordnungen bei einer Rechnungsposition",
+  "status": "draft",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "expression": "ChargeItem",
+      "type": "element"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension.extension:Einfachsatz",
+        "path": "Extension.extension",
+        "sliceName": "Einfachsatz",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension:Einfachsatz.extension",
+        "path": "Extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:Einfachsatz.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "Einfachsatz"
+      },
+      {
+        "id": "Extension.extension:Einfachsatz.value[x]",
+        "path": "Extension.extension.value[x]",
+        "type": [
+          {
+            "code": "Money"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:Einfachsatz.value[x].currency",
+        "path": "Extension.extension.value[x].currency",
+        "patternCode": "EUR"
+      },
+      {
+        "id": "Extension.extension:Punktzahl",
+        "path": "Extension.extension",
+        "sliceName": "Punktzahl",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension:Punktzahl.extension",
+        "path": "Extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:Punktzahl.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "Punktzahl"
+      },
+      {
+        "id": "Extension.extension:Punktzahl.value[x]",
+        "path": "Extension.extension.value[x]",
+        "type": [
+          {
+            "code": "decimal"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:Faktor",
+        "path": "Extension.extension",
+        "sliceName": "Faktor",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension:Faktor.extension:Value",
+        "path": "Extension.extension.extension",
+        "sliceName": "Value",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension:Faktor.extension:Value.extension",
+        "path": "Extension.extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:Faktor.extension:Value.url",
+        "path": "Extension.extension.extension.url",
+        "fixedUri": "Value"
+      },
+      {
+        "id": "Extension.extension:Faktor.extension:Value.value[x]",
+        "path": "Extension.extension.extension.value[x]",
+        "type": [
+          {
+            "code": "decimal"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:Faktor.extension:FaktorGrund",
+        "path": "Extension.extension.extension",
+        "sliceName": "FaktorGrund",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension:Faktor.extension:FaktorGrund.extension",
+        "path": "Extension.extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:Faktor.extension:FaktorGrund.url",
+        "path": "Extension.extension.extension.url",
+        "fixedUri": "FaktorGrund"
+      },
+      {
+        "id": "Extension.extension:Faktor.extension:FaktorGrund.value[x]",
+        "path": "Extension.extension.extension.value[x]",
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://gematik.de/fhir/erg/ValueSet/dipag-rechnungsposition-faktor-gruende-auspraegungen-VS"
+        }
+      },
+      {
+        "id": "Extension.extension:Faktor.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "Faktor"
+      },
+      {
+        "id": "Extension.extension:Faktor.value[x]",
+        "path": "Extension.extension.value[x]",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:FaktorGrund",
+        "path": "Extension.extension",
+        "sliceName": "FaktorGrund",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension:FaktorGrund.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "FaktorGrund"
+      },
+      {
+        "id": "Extension.extension:MinderungP6GOÄ",
+        "path": "Extension.extension",
+        "sliceName": "MinderungP6GOÄ",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension:MinderungP6GOÄ.extension",
+        "path": "Extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:MinderungP6GOÄ.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "MinderungP6GOÄ"
+      },
+      {
+        "id": "Extension.extension:MinderungP6GOÄ.value[x]",
+        "path": "Extension.extension.value[x]",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:MinderungP6GOÄ.value[x].unit",
+        "path": "Extension.extension.value[x].unit",
+        "patternString": "%"
+      },
+      {
+        "id": "Extension.extension:MinderungP6GOÄ.value[x].system",
+        "path": "Extension.extension.value[x].system",
+        "patternUri": "http://unitsofmeasure.org"
+      },
+      {
+        "id": "Extension.extension:MinderungP6GOÄ.value[x].code",
+        "path": "Extension.extension.value[x].code",
+        "patternCode": "%"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "https://gematik.de/fhir/erg/StructureDefinition/dipag-rechnungsposition-go-angaben"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "max": "0"
+      }
+    ]
+  }
+}

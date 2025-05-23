@@ -1,7 +1,7 @@
 {
   "resourceType": "CapabilityStatement",
   "id": "CapabilityStatementFD",
-  "url": "https://gematik.de/fhir/erg/CapabilityStatement/ERGCapabilityStatementFD",
+  "url": "https://gematik.de/fhir/erg/CapabilityStatement/DiPagCapabilityStatementFD",
   "version": "1.1.0-rc2",
   "status": "active",
   "experimental": false,
@@ -50,7 +50,7 @@
             }
           ],
           "supportedProfile": [
-            "https://gematik.de/fhir/erg/StructureDefinition/erg-patient"
+            "https://gematik.de/fhir/erg/StructureDefinition/dipag-patient"
           ],
           "interaction": [
             {
@@ -115,7 +115,7 @@
                   "valueCode": "SHALL"
                 }
               ],
-              "name": "erechnung-submit",
+              "name": "dipag-submit",
               "definition": "https://gematik.de/fhir/erg/OperationDefinition/Submit"
             }
           ]
@@ -129,7 +129,7 @@
             }
           ],
           "supportedProfile": [
-            "https://gematik.de/fhir/erg/StructureDefinition/erg-rechnungsdokument"
+            "https://gematik.de/fhir/erg/StructureDefinition/dipag-rechnungsdokument"
           ],
           "interaction": [
             {
@@ -214,8 +214,8 @@
                   "valueCode": "SHALL"
                 }
               ],
-              "name": "erg-makierung",
-              "definition": "https://gematik.de/fhir/erg/SearchParameter/erg-makierung",
+              "name": "dipag-makierung",
+              "definition": "https://gematik.de/fhir/erg/SearchParameter/dipag-makierung",
               "type": "token"
             }
           ],
@@ -291,7 +291,7 @@
             }
           ],
           "supportedProfile": [
-            "https://gematik.de/fhir/erg/StructureDefinition/erg-nutzungsprotokoll"
+            "https://gematik.de/fhir/erg/StructureDefinition/dipag-nutzungsprotokoll"
           ],
           "searchParam": [
             {

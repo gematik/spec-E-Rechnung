@@ -1,0 +1,52 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "DiPagTotalPriceComponentTypeCS",
+  "id": "dipag-total-price-component-type-cs",
+  "title": "Digitale Patientenrechnung Art der Rechnungssumme",
+  "version": "1.1.0-rc2",
+  "url": "https://gematik.de/fhir/erg/CodeSystem/dipag-total-price-component-type-cs",
+  "concept": [
+    {
+      "code": "SummeRechnungspositionen",
+      "display": "Summe aller Rechnungspositionen"
+    },
+    {
+      "code": "Minderung7GOZ",
+      "display": "Minderungen nach §7 GOZ"
+    },
+    {
+      "code": "Fremdlaborleistungen",
+      "display": "Fremdlaborleistungen"
+    },
+    {
+      "code": "Abzug",
+      "display": "Übergeordnete Abzug-Kategorie",
+      "concept": [
+        {
+          "code": "FestzuschussKasse",
+          "display": "Festzuschuss Kasse"
+        },
+        {
+          "code": "VorleistungKst",
+          "display": "Vorleistungen anderer Kostenträger"
+        }
+      ]
+    }
+  ],
+  "experimental": false,
+  "date": "2025-04-07",
+  "publisher": "gematik GmbH",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://gematik.de/"
+        }
+      ]
+    }
+  ],
+  "count": 6
+}

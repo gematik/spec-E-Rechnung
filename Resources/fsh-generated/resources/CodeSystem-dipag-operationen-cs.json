@@ -1,0 +1,46 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "DiPagOperationenCS",
+  "id": "dipag-operationen-cs",
+  "title": "Digitale Patientenrechnung Operationen",
+  "version": "1.1.0-rc2",
+  "url": "https://gematik.de/fhir/erg/CodeSystem/dipag-operationen-cs",
+  "concept": [
+    {
+      "code": "dipag-submit",
+      "display": "Digitale Patientenrechnung_Submit"
+    },
+    {
+      "code": "retrieve",
+      "display": "Digitale Patientenrechnung_Retrieve"
+    },
+    {
+      "code": "change-status",
+      "display": "Digitale Patientenrechnung_ChangeStatus"
+    },
+    {
+      "code": "process-flag",
+      "display": "Digitale Patientenrechnung_ProcessFlag"
+    },
+    {
+      "code": "erase",
+      "display": "Digitale Patientenrechnung_Erase"
+    }
+  ],
+  "experimental": false,
+  "date": "2025-04-07",
+  "publisher": "gematik GmbH",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://gematik.de/"
+        }
+      ]
+    }
+  ],
+  "count": 5
+}

@@ -1,0 +1,34 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "DiPagRechnungIdentifierTypeCS",
+  "id": "dipag-rechnung-identifier-type-cs",
+  "title": "Digitale Patientenrechnung Rechnung Identifier Type CS",
+  "version": "1.1.0-rc2",
+  "url": "https://gematik.de/fhir/erg/CodeSystem/dipag-rechnung-identifier-type-cs",
+  "concept": [
+    {
+      "code": "invoice",
+      "display": "Rechnungsnummer"
+    },
+    {
+      "code": "antragsreferenz",
+      "display": "Antragsreferenz"
+    }
+  ],
+  "experimental": false,
+  "date": "2025-04-07",
+  "publisher": "gematik GmbH",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://gematik.de/"
+        }
+      ]
+    }
+  ],
+  "count": 2
+}
