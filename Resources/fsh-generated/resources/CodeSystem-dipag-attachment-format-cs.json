@@ -11,11 +11,11 @@
   "concept": [
     {
       "code": "dipag",
-      "display": "E-Rechnungsdokument"
+      "display": "Digitale Patientenrechnungs Dokument"
     },
     {
       "code": "angereichertesPDF",
-      "display": "E-Rechnungsdokument mit eingebetteten strukturierten Rechnungsinhalt"
+      "display": "Digitale Patientenrechnungs Dokument mit eingebetteten strukturierten Rechnungsinhalt"
     },
     {
       "code": "rechnungsinhalt",

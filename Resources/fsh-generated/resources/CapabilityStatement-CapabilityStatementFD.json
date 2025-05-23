@@ -19,7 +19,7 @@
   "date": "2025-04-07",
   "name": "CapabilityStatementFD",
   "title": "CapabilityStatement Fachdienst E-Rechnnung",
-  "description": "Dieses CapabilityStatement beschreibt alle Interaktionen, \n  die ein E-Rechnung-konformer Fachdienst unterstützen MUSS bzw. KANN.\n",
+  "description": "Dieses CapabilityStatement beschreibt alle Interaktionen, \n  die ein DiPag-konformer Fachdienst unterstützen MUSS bzw. KANN.\n",
   "jurisdiction": [
     {
       "coding": [

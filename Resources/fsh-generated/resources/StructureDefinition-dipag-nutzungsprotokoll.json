@@ -30,7 +30,7 @@
       {
         "id": "AuditEvent.type",
         "path": "AuditEvent.type",
-        "comment": "Angabe ob es sich um eine zu protokollierende Nutzerinteraktion nach Abschnittt '5.5.9 Nutzerprotokolle' des Feature-Dokuments 'E-Rechnung' handelt oder um eine durchgeführte REST-API-Interaktion durch den FD.",
+        "comment": "Angabe ob es sich um eine zu protokollierende Nutzerinteraktion nach Abschnittt '5.5.9 Nutzerprotokolle' des Feature-Dokuments 'Digitale Patientenrechnung' handelt oder um eine durchgeführte REST-API-Interaktion durch den FD.",
         "mustSupport": true,
         "binding": {
           "strength": "required",
@@ -40,7 +40,7 @@
       {
         "id": "AuditEvent.subtype",
         "path": "AuditEvent.subtype",
-        "comment": "Erlaubt die Kodierung aller REST-API Operationen der Spec-E-Rechnung",
+        "comment": "Erlaubt die Kodierung aller REST-API Operationen der Spec-Digitale Patientenrechnung",
         "mustSupport": true,
         "binding": {
           "strength": "extensible",
@@ -56,7 +56,7 @@
       {
         "id": "AuditEvent.recorded",
         "path": "AuditEvent.recorded",
-        "comment": "Der Zeitpunkt des Zugriffs ist zu protokollieren. Siehe Abschnittt '4.8.6 Protokolleintrag'des Feature-Dokuments 'E-Rechnung'.",
+        "comment": "Der Zeitpunkt des Zugriffs ist zu protokollieren. Siehe Abschnittt '4.8.6 Protokolleintrag'des Feature-Dokuments 'Digitale Patientenrechnung'.",
         "mustSupport": true
       },
       {
@@ -68,7 +68,7 @@
       {
         "id": "AuditEvent.agent",
         "path": "AuditEvent.agent",
-        "comment": "Angaben zum Akteur (Nutzer oder DiPag FD), der den Zugriff durchgeführt hat. Siehe Abschnittt '4.8.6 Protokolleintrag'des Feature-Dokuments 'E-Rechnung'.",
+        "comment": "Angaben zum Akteur (Nutzer oder DiPag FD), der den Zugriff durchgeführt hat. Siehe Abschnittt '4.8.6 Protokolleintrag'des Feature-Dokuments 'Digitale Patientenrechnung'.",
         "mustSupport": true
       },
       {
