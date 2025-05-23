@@ -78,6 +78,6 @@ mit Body:
 
 * Falls während eines Aufrufs der FD feststellt, dass das DiPag FdV versucht, den Status des Dokuments in denselben Status zu ändern, in dem es sich bereits befindet, so ist diese Statusänderung zu ignorieren. `HTTP 200 - OK` wird in diesem Fall zurückgegeben.
 
-* Der FD MUSS anhand der übergebenen Parameter den Meta-Tag 'erg-rechnungsstatus' auf der DokumentReference aktualisieren.
+* Der FD MUSS anhand der übergebenen Parameter den Meta-Tag 'dipag-rechnungsstatus' auf der DokumentReference aktualisieren.
 
 ----

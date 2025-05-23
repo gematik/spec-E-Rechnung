@@ -1,11 +1,11 @@
 ---
-canonical1: https://gematik.de/fhir/dipag/StructureDefinition/erg-institution
-canonical2: https://gematik.de/fhir/dipag/StructureDefinition/erg-person
-canonical3: https://gematik.de/fhir/dipag/StructureDefinition/erg-patient
-canonical4: https://gematik.de/fhir/dipag/StructureDefinition/erg-rechnung
-canonical5: https://gematik.de/fhir/dipag/StructureDefinition/erg-rechnungsposition
-canonical6: https://gematik.de/fhir/dipag/StructureDefinition/erg-rechnungsdiagnose
-canonical7: https://gematik.de/fhir/dipag/StructureDefinition/erg-rechnungsprozedur
+canonical1: https://gematik.de/fhir/dipag/StructureDefinition/dipag-institution
+canonical2: https://gematik.de/fhir/dipag/StructureDefinition/dipag-person
+canonical3: https://gematik.de/fhir/dipag/StructureDefinition/dipag-patient
+canonical4: https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnung
+canonical5: https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition
+canonical6: https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsdiagnose
+canonical7: https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsprozedur
 ---
 ## {{page-title}}
 

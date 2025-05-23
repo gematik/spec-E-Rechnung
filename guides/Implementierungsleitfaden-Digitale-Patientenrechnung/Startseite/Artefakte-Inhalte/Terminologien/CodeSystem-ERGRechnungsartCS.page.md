@@ -1,6 +1,6 @@
 ---
 topic: ERGRechnungsartCS
-canonical: https://gematik.de/fhir/dipag/CodeSystem/erg-rechnungsart-cs
+canonical: https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsart-cs
 ---
 
 ## {{link}}

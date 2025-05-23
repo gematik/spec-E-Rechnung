@@ -24,11 +24,11 @@ Folgende Abkürzungen werden für die Akteure innerhalb der Beschreibungen der A
 
 ----
 
-### Rollen im Kontext der eRechnungs-API
+### Rollen im Kontext der DiPag-API
 
-Im Kontext der APIs zur Verwaltung der E-Rechnungen können unterschiedliche Akteure die entsprechenden APIs aufrufen. Jeder Akteur, welche eine API aufrufen kann, wird nachfolgend vereinfachend als "Client" bezeichnet (gilt für LE-PS, FdV, ITSys-KTR).
+Im Kontext der APIs zur Verwaltung der Digitale Patientenrechnungen können unterschiedliche Akteure die entsprechenden APIs aufrufen. Jeder Akteur, welche eine API aufrufen kann, wird nachfolgend vereinfachend als "Client" bezeichnet (gilt für LE-PS, FdV, ITSys-KTR).
 
-Die Rolle des Servers übernimmt stets der Fachdienst "E-Rechung".
+Die Rolle des Servers übernimmt stets der Fachdienst "Digitale Patientenrechnung".
 
 ----
 

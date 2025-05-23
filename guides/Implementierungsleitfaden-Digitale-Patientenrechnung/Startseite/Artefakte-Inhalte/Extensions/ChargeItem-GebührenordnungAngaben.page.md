@@ -1,5 +1,5 @@
 ---
-canonical: https://gematik.de/fhir/dipag/StructureDefinition/erg-rechnungsposition-go-angaben
+canonical: https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-go-angaben
 expand: 2
 ---
 

@@ -1,8 +1,0 @@
-- name: ERG Rechnung (Invoice)
-  filename: ERG-Rechnung-Invoice.page.md
-- name: ERG Rechnungsposition (ChargeItem)
-  filename: ERG-Rechnungsposition-ChargeItem.page.md
-- name: ERG Rechnungsdiagnose (Condition)
-  filename: ERG-Rechnungsdiagnose-Condition.page.md
-- name: Index
-  filename: Index.page.md

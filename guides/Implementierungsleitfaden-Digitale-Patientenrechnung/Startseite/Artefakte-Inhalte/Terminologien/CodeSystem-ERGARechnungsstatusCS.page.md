@@ -1,6 +1,6 @@
 ---
 topic: ERGARechnungsstatusCS
-canonical: https://gematik.de/fhir/dipag/CodeSystem/erg-rechnungsstatus-cs
+canonical: https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsstatus-cs
 ---
 
 ## {{link}}

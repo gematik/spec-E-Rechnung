@@ -1,6 +1,6 @@
 ---
 topic: ERGRechnungIdentifierTypeCS
-canonical: https://gematik.de/fhir/dipag/CodeSystem/erg-rechnung-identifier-type-cs
+canonical: https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-identifier-type-cs
 ---
 
 ## {{link}}

@@ -1,5 +1,5 @@
 ---
-canonical: https://gematik.de/fhir/dipag/StructureDefinition/erg-zahnregion
+canonical: https://gematik.de/fhir/dipag/StructureDefinition/dipag-zahnregion
 expand: 2
 ---
 

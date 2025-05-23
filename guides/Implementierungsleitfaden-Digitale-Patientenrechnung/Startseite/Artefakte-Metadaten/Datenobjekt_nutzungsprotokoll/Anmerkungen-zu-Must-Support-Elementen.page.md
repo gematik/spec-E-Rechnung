@@ -1,6 +1,6 @@
 ---
 topic: ERGNutzungsprotokoll-MS
-canonical: https://gematik.de/fhir/dipag/StructureDefinition/erg-nutzungsprotokoll
+canonical: https://gematik.de/fhir/dipag/StructureDefinition/dipag-nutzungsprotokoll
 ---
 
 ### Anmerkungen zu Must-Support-Feldern

@@ -1,6 +1,6 @@
 ---
 topic: ERGParticipantRoleCS
-canonical: https://gematik.de/fhir/dipag/CodeSystem/erg-participant-role-CS
+canonical: https://gematik.de/fhir/dipag/CodeSystem/dipag-participant-role-CS
 ---
 
 ## {{link}}

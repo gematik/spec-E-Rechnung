@@ -4,7 +4,7 @@ topic: UseCases
 
 ## {{page-title}}
 
-Innerhalb des Feature-Dokumentes "Digitale Patientenrechnung" werden Epics und User Stories verwendet um individuelle Interaktionen, die Akteure im E-Rechnungsprozess durchführen können, zu beschreiben.
+Innerhalb des Feature-Dokumentes "Digitale Patientenrechnung" werden Epics und User Stories verwendet um individuelle Interaktionen, die Akteure im Digitale Patientenrechnung Prozess durchführen können, zu beschreiben.
 
 Für Hersteller von Primärsystemen der Leistungserbringer oder Abrechnungsdienstleister werden Schnittstellen bereitgestellt für die  User Stories zu den Prozessteilen:
 

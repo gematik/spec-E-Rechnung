@@ -1,6 +1,6 @@
 ---
 topic: ERGRechnungsprozedur-MS
-canonical: https://gematik.de/fhir/dipag/StructureDefinition/erg-rechnungsprozedur
+canonical: https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsprozedur
 ---
 
 ### Anmerkungen zu Must-Support-Feldern

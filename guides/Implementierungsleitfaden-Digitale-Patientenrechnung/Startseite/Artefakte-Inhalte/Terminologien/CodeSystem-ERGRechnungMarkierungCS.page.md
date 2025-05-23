@@ -1,6 +1,6 @@
 ---
 topic: ERGRechnungMarkierungCS
-canonical: https://gematik.de/fhir/dipag/CodeSystem/erg-rechnung-markierung-cs
+canonical: https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-markierung-cs
 ---
 
 ## {{link}}

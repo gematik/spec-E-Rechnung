@@ -1,6 +1,6 @@
 ---
 topic: ERGPerson-Profil
-canonical: https://gematik.de/fhir/dipag/StructureDefinition/erg-person
+canonical: https://gematik.de/fhir/dipag/StructureDefinition/dipag-person
 ---
 ## {{link}}
 

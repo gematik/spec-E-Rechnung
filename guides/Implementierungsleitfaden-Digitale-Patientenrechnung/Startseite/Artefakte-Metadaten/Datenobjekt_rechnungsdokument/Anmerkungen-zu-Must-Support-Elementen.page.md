@@ -1,6 +1,6 @@
 ---
 topic: ERGRechnungsdokument-MS
-canonical: https://gematik.de/fhir/dipag/StructureDefinition/erg-rechnungsdokument
+canonical: https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsdokument
 ---
 
 ### Anmerkungen zu Must-Support-Feldern

@@ -1,5 +1,5 @@
 ---
-canonical: https://gematik.de/fhir/dipag/StructureDefinition/erg-documentreference-zahlungszieldatum
+canonical: https://gematik.de/fhir/dipag/StructureDefinition/dipag-documentreference-zahlungszieldatum
 expand: 2
 ---
 

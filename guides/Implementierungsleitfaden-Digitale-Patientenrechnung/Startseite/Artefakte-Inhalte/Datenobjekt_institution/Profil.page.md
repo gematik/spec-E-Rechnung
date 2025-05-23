@@ -1,6 +1,6 @@
 ---
 topic: ERGInstitution-Profil
-canonical: https://gematik.de/fhir/dipag/StructureDefinition/erg-institution
+canonical: https://gematik.de/fhir/dipag/StructureDefinition/dipag-institution
 ---
 ## {{link}}
 

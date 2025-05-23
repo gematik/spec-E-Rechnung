@@ -1,6 +1,6 @@
 ---
 topic: ERGRechnungSubmitModusCS
-canonical: https://gematik.de/fhir/dipag/CodeSystem/erg-rechnung-submit-modus-cs
+canonical: https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-submit-modus-cs
 ---
 
 ## {{link}}

@@ -1,6 +1,6 @@
 ---
 topic: ERGDokumentArtDerArchivierungCS
-canonical: https://gematik.de/fhir/dipag/CodeSystem/erg-dokument-artderarchivierung-cs
+canonical: https://gematik.de/fhir/dipag/CodeSystem/dipag-dokument-artderarchivierung-cs
 ---
 
 ## {{link}}

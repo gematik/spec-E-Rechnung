@@ -1,5 +1,5 @@
 ---
-canonical: https://gematik.de/fhir/dipag/StructureDefinition/erg-documentreference-gesamtbetrag
+canonical: https://gematik.de/fhir/dipag/StructureDefinition/dipag-documentreference-gesamtbetrag
 expand: 2
 ---
 

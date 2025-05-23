@@ -1,6 +1,6 @@
 ---
 topic: ERGRechnungspositionTypeCS
-canonical: https://gematik.de/fhir/dipag/CodeSystem/erg-chargeitem-type-CS
+canonical: https://gematik.de/fhir/dipag/CodeSystem/dipag-chargeitem-type-CS
 ---
 
 ## {{link}}

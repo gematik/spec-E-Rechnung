@@ -11,7 +11,7 @@ Die nachfolgende Interaktion ist relevant für den FD als Server, sowie für das
 |-|-|
 |HTTP-Methode|GET|
 |Endpunkt|/DocumentReference|
-|Suchparameter `_tag`| Kardinalität: 0..1<br>E-Rechnungsstatus<br>Type: token<br>Der FD MUSS den Modifier `:not` unterstützen.|
+|Suchparameter `_tag`| Kardinalität: 0..1<br>Rechnungsstatus<br>Type: token<br>Der FD MUSS den Modifier `:not` unterstützen.|
 |Suchparameter `subject:text`| Kardinalität: 0..1<br>Name Rechnungsempfänger/Behandelte Person<br>Type: string<br>Der Suchparameter MUSS durch den Client mit dem Modifier `:text` verwendet werden. Dieser Suchmodifier ermöglicht eine Suche auf DocumentReference.subject.display.|
 |Suchparameter `author:text`|Kardinalität: 0..1<br>Name des Leistungserbringer<br>Type: string<br>Der Suchparameter MUSS durch den Client mit dem Modifier `:text` verwendet werden. Dieser Suchmodifier ermöglicht eine Suche auf DocumentReference.author.display.|
 |Suchparameter `type`|Kardinalität: 0..1<br>Dokumententyp (z.B. Rechnung)<br>Type: token<br>Der FD MUSS den Modifier `:not` unterstützen.|

@@ -1,6 +1,6 @@
 ---
 topic: ERGRechnungsposition-MS
-canonical: https://gematik.de/fhir/dipag/StructureDefinition/erg-rechnungsposition
+canonical: https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition
 ---
 
 ### Anmerkungen zu Must-Support-Feldern
