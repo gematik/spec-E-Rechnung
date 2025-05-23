@@ -38,7 +38,7 @@ gematik GmbH
 
 ### Weitere Links
 <!-- z. B. Beschreibungen des UseCases, Datenmodell, ges. Vorgaben, fachliche Anforderungen, relevante Spezifikationen-->
-* [GitHub Projekt](https://github.com/gematik/spec-Digitale Patientenrechnung)
+* [GitHub Projekt](https://github.com/gematik/spec-DigitalePatientenrechnung)
 * [Feature-Dokument Digitale Patientenrechnung](https://gemspec.gematik.de/prereleases/Draft_E-Rechnung_25_1/)
 
 

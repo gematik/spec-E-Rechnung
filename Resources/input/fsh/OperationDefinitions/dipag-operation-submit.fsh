@@ -23,21 +23,21 @@ Description: "Rechnung einreichen durch die Leistungserbringer:in"
   * use = #in
   * min = 1
   * max = "1"
-  * documentation = "Vollständige E-Rechnung mit verschiedenen Attachments: 1) Rechnungs-PDF 2) Strukturierte Daten OHNE Signatur."
+  * documentation = "Vollständige Digitale Patientenrechnung mit verschiedenen Attachments: 1) Rechnungs-PDF 2) Strukturierte Daten OHNE Signatur."
   * type = #DocumentReference
 * parameter[+]
   * name = #anhang
   * use = #in
   * min = 0
   * max = "*"
-  * documentation = "Weitere Anhänge zur E-Rechnung als PDF."
+  * documentation = "Weitere Anhänge zur Digitale Patientenrechnung als PDF."
   * type = #DocumentReference
 * parameter[+]
   * name = #modus
   * use = #in
   * min = 0
   * max = "1"
-  * documentation = "Verarbeitungshinweis für die E-Rechnung. Default: normal."
+  * documentation = "Verarbeitungshinweis für die Digitale Patientenrechnung. Default: normal."
   * type = #code
   * binding
     * strength = #required
@@ -74,14 +74,14 @@ Description: "Rechnung einreichen durch die Leistungserbringer:in"
     * use = #out
     * min = 0
     * max = "1"
-    * documentation = "PDF mit eingebetteten Token und strukturierten Daten, in Abhängigkeit vom angereichertesPDF-Parameter. Vgl. 4.1 Einreichung per Post des Feature-Dokumentes E-Rechnung."
+    * documentation = "PDF mit eingebetteten Token und strukturierten Daten, in Abhängigkeit vom angereichertesPDF-Parameter. Vgl. 4.1 Einreichung per Post des Feature-Dokumentes Digitale Patientenrechnung."
     * type = #Binary
 * parameter[+]
   * name = #warnungen
   * use = #out
   * min = 0
   * max = "1"
-  * documentation = "Warnhinweise und Fehlern zur Validierung der E-Rechnung. Diese MÜSSEN in jedem Verarbeitungsmodus ausgegeben werden."
+  * documentation = "Warnhinweise und Fehlern zur Validierung der Digitale Patientenrechnung. Diese MÜSSEN in jedem Verarbeitungsmodus ausgegeben werden."
   * type = #OperationOutcome
 
 // ------------- Terminology -------------
@@ -91,8 +91,8 @@ Id: dipag-rechnung-submit-modus-cs
 Title: "Digitale Patientenrechnung Rechnung Submit Modus CS"
 Description:  "CodeSystem für die Differenzierung von der Verarbeitungsmodi für $erchnung-submit"
 * insert Meta
-* #test "Test" "E-Rechnung wird als Test eingereicht. Der Fachdienst validiert nur die E-Rechnung und speichert diese nicht."
-* #normal "Normal" "E-Rechnung wird durch den Fachdienst gespeichert falls keine gravierenden Validierungsfehler vorhanden sind."
+* #test "Test" "Digitale Patientenrechnung wird als Test eingereicht. Der Fachdienst validiert nur die Digitale Patientenrechnung und speichert diese nicht."
+* #normal "Normal" "Digitale Patientenrechnung wird durch den Fachdienst gespeichert falls keine gravierenden Validierungsfehler vorhanden sind."
 
 ValueSet:  DiPagRechnungSubmitModusVS
 Id: dipag-rechnung-submit-modus-vs
