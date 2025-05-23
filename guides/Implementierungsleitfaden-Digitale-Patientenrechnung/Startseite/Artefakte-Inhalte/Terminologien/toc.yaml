@@ -2,31 +2,31 @@
   filename: Index.page.md
 - name: Übersicht
   filename: Übersicht.page.md
-- name: 'CodeSystem: ERGAbrechnungsDiagnoseUseCS'
-  filename: CodeSystem-ERGAbrechnungsDiagnoseUseCS.page.md
-- name: 'CodeSystem: ERGRechnungspositionTypeCS'
-  filename: CodeSystem-ERGRechnungspositionTypeCS.page.md
-- name: 'CodeSystem: ERGParticipantRoleCS'
-  filename: CodeSystem-ERGParticipantRoleCS.page.md
-- name: 'CodeSystem: ERGPropRestInterationsCS'
-  filename: CodeSystem-ERGPropRestInterationsCS.page.md
-- name: 'CodeSystem: ERGRechnungAbrechnungsartCS'
-  filename: CodeSystem-ERGRechnungAbrechnungsartCS.page.md
-- name: 'CodeSystem: ERGRechnungIdentifierTypeCS'
-  filename: CodeSystem-ERGRechnungIdentifierTypeCS.page.md
-- name: 'CodeSystem: ERGRechnungMarkierungCS'
-  filename: CodeSystem-ERGRechnungMarkierungCS.page.md
-- name: 'CodeSystem: ERGRechnungSubmitModusCS'
-  filename: CodeSystem-ERGRechnungSubmitModusCS.page.md
-- name: 'CodeSystem: ERGRechnungTypeCS'
-  filename: CodeSystem-ERGRechnungTypeCS.page.md
-- name: 'CodeSystem: ERGRechnungsartCS'
-  filename: CodeSystem-ERGRechnungsartCS.page.md
-- name: 'CodeSystem: ERGRechnungspositionFaktorIdAuspraegungenCS'
-  filename: CodeSystem-ERGRechnungspositionFaktorIdAuspraegungenCS.page.md
-- name: 'CodeSystem: ERGRechnungspositionZusatzCS'
-  filename: CodeSystem-ERGRechnungspositionZusatzCS.page.md
-- name: 'CodeSystem: ERGARechnungsstatusCS'
-  filename: CodeSystem-ERGARechnungsstatusCS.page.md
-- name: 'CodeSystem: ERGTotalPriceComponentTypeCS'
-  filename: CodeSystem-ERGTotalPriceComponentTypeCS.page.md
+- name: 'CodeSystem: DiPagAbrechnungsDiagnoseUseCS'
+  filename: CodeSystem-DiPagAbrechnungsDiagnoseUseCS.page.md
+- name: 'CodeSystem: DiPagRechnungspositionTypeCS'
+  filename: CodeSystem-DiPagRechnungspositionTypeCS.page.md
+- name: 'CodeSystem: DiPagParticipantRoleCS'
+  filename: CodeSystem-DiPagParticipantRoleCS.page.md
+- name: 'CodeSystem: DiPagPropRestInterationsCS'
+  filename: CodeSystem-DiPagPropRestInterationsCS.page.md
+- name: 'CodeSystem: DiPagRechnungAbrechnungsartCS'
+  filename: CodeSystem-DiPagRechnungAbrechnungsartCS.page.md
+- name: 'CodeSystem: DiPagRechnungIdentifierTypeCS'
+  filename: CodeSystem-DiPagRechnungIdentifierTypeCS.page.md
+- name: 'CodeSystem: DiPagRechnungMarkierungCS'
+  filename: CodeSystem-DiPagRechnungMarkierungCS.page.md
+- name: 'CodeSystem: DiPagRechnungSubmitModusCS'
+  filename: CodeSystem-DiPagRechnungSubmitModusCS.page.md
+- name: 'CodeSystem: DiPagRechnungTypeCS'
+  filename: CodeSystem-DiPagRechnungTypeCS.page.md
+- name: 'CodeSystem: DiPagRechnungsartCS'
+  filename: CodeSystem-DiPagRechnungsartCS.page.md
+- name: 'CodeSystem: DiPagRechnungspositionFaktorIdAuspraegungenCS'
+  filename: CodeSystem-DiPagRechnungspositionFaktorIdAuspraegungenCS.page.md
+- name: 'CodeSystem: DiPagRechnungspositionZusatzCS'
+  filename: CodeSystem-DiPagRechnungspositionZusatzCS.page.md
+- name: 'CodeSystem: DiPagARechnungsstatusCS'
+  filename: CodeSystem-DiPagARechnungsstatusCS.page.md
+- name: 'CodeSystem: DiPagTotalPriceComponentTypeCS'
+  filename: CodeSystem-DiPagTotalPriceComponentTypeCS.page.md

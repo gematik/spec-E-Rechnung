@@ -2,11 +2,11 @@
   filename: Index.page.md
 - name: CapabilityStatementFD
   filename: CapabilityStatements
-- name: ERGDokumentenmetadaten (DocumentReference)
+- name: DiPagDokumentenmetadaten (DocumentReference)
   filename: Datenobjekt_dokumentenmetadaten
-- name: ERGNutzungsprotokoll (AuditEvent)
+- name: DiPagNutzungsprotokoll (AuditEvent)
   filename: Datenobjekt_nutzungsprotokoll
-- name: ERGRechnungsdokument (Binary)
+- name: DiPagRechnungsdokument (Binary)
   filename: Datenobjekt_rechnungsdokument
 - name: Terminologien
   filename: Terminologien
