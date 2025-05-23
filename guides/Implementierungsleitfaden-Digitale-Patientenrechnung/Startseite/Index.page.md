@@ -32,10 +32,9 @@ gematik GmbH
 [Impressum](https://www.gematik.de/impressum/)
 
 ### Ansprechpartner
-* Peter Tabeling
 * Frank Weber
 * Klaus Jäde
-* Alexander Essenwanger
+* Peter Menze
 
 ### Weitere Links
 <!-- z. B. Beschreibungen des UseCases, Datenmodell, ges. Vorgaben, fachliche Anforderungen, relevante Spezifikationen-->
