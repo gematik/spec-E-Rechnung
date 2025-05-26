@@ -17,13 +17,13 @@ Weitere Informationen siehe [§359a SGB V](https://www.gesetze-im-internet.de/sg
 
 ### Status
 
-Version: 1.1.0-rc2
+Version: 1.0.0
 
 Realm: Deutschland
 
 Reifegrad: STU <!-- Draft, STU (Standard for Trial Use) oder Normativ--> 
 
-Datum: 07.04.2025
+Datum: 26.05.2025
 
 ### Herausgeber
 
@@ -39,7 +39,7 @@ gematik GmbH
 ### Weitere Links
 <!-- z. B. Beschreibungen des UseCases, Datenmodell, ges. Vorgaben, fachliche Anforderungen, relevante Spezifikationen-->
 * [GitHub Projekt](https://github.com/gematik/spec-DigitalePatientenrechnung)
-* [Feature-Dokument Digitale Patientenrechnung](https://gemspec.gematik.de/prereleases/Draft_E-Rechnung_25_1/)
+* [Feature-Dokument Digitale Patientenrechnung](https://gemspec.gematik.de/docs/gemF/gemF_DiPag/latest/)
 
 
 

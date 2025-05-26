@@ -5,10 +5,10 @@ Leistungen, die nicht dem Sachleistungsprinzip unterliegen".
 
 Der Implementierungsleitfaden ist relevant für:
 
-* Hersteller von Primärsystemen der Leistungserbringer, für die Übermittlung von Digitale Patientenrechnungen an den TI-Fachdienst
-* Hersteller von Primärsystemen der Abrechnungsdienstleister, für die Übermittlung von Digitale Patientenrechnungen an den TI-Fachdienst
-* Hersteller von Frontends der Versicherten, für den Abruf von Digitale Patientenrechnungen aus dem TI-Fachdienst und die Übermittlung an Kostenträger
-* Hersteller des TI-Fachdienst "Digitale Patientenrechnung" für die Validierung von Digitale Patientenrechnungen, dem Empfangen von Digitale Patientenrechnungen, sowie dem Bereitstellen von Digitale Patientenrechnungen
+* Hersteller von Primärsystemen der Leistungserbringer, für die Übermittlung von Digitalen Patientenrechnungen an den TI-Fachdienst
+* Hersteller von Primärsystemen der Abrechnungsdienstleister, für die Übermittlung von Digitalen Patientenrechnungen an den TI-Fachdienst
+* Hersteller von Frontends der Versicherten, für den Abruf von Digitalen Patientenrechnungen aus dem TI-Fachdienst und die Übermittlung an Kostenträger
+* Hersteller des TI-Fachdienst "Digitale Patientenrechnung" für die Validierung von Digitalen Patientenrechnungen, dem Empfangen von Digitalen Patientenrechnungen, sowie dem Bereitstellen von Digitalen Patientenrechnungen
 
 Im Implementierungsleitfaden wird zu Beginn der Dokumentation einer API aufgeführt, für welche Hersteller die jeweilige Schnittstelle relevant ist.
 
