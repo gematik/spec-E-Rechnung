@@ -5,7 +5,7 @@
   "name": "DiPagRechnungspositionZusatz",
   "title": "Digitale Patientenrechnung Rechnungsposition Zusatz Extension",
   "status": "draft",
-  "description": "In dieser Extension wird der Zusatz zu einer Rechnungsposition im Kontext der Digitale Patientenrechnung abgebildet.",
+  "description": "In dieser Extension wird der Zusatz zu einer Rechnungsposition im Kontext der Digitalen Patientenrechnung abgebildet.",
   "fhirVersion": "4.0.1",
   "kind": "complex-type",
   "abstract": false,

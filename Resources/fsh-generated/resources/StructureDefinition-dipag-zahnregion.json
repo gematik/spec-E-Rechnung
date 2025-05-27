@@ -5,7 +5,7 @@
   "name": "DiPagZahnRegion",
   "title": "Digitale Patientenrechnung Zahn/Region Extension",
   "status": "draft",
-  "description": "In dieser Extension wird die Angabe der Zahn/Region an einer Rechnungsposition der Digitale Patientenrechnung abgebildet.",
+  "description": "In dieser Extension wird die Angabe der Zahn/Region an einer Rechnungsposition der Digitalen Patientenrechnung abgebildet.",
   "fhirVersion": "4.0.1",
   "kind": "complex-type",
   "abstract": false,

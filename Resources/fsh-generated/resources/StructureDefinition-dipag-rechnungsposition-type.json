@@ -19,7 +19,7 @@
       ]
     }
   ],
-  "description": "In dieser Extension wird der Typ einer Rechnungsposition im Kontext der Digitale Patientenrechnung abgebildet.",
+  "description": "In dieser Extension wird der Typ einer Rechnungsposition im Kontext der Digitalen Patientenrechnung abgebildet.",
   "fhirVersion": "4.0.1",
   "kind": "complex-type",
   "abstract": false,

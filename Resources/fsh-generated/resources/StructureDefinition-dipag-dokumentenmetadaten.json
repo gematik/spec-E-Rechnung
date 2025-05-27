@@ -81,7 +81,7 @@
           ],
           "rules": "open"
         },
-        "comment": "Metaangaben zur Digitale Patientenrechnung die sich auf das Rechnungsdokument als Ganzes beziehen und nicht Teil des durch den RE-PS erstellten Dokuments sind.",
+        "comment": "Metaangaben zur Digitalen Patientenrechnung die sich auf das Rechnungsdokument als Ganzes beziehen und nicht Teil des durch den RE-PS erstellten Dokuments sind.",
         "mustSupport": true
       },
       {
