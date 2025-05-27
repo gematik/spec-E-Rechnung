@@ -4,7 +4,7 @@ topic: Release Notes
 
 ## {{page-title}}
 
-Im Rahmen der Digitale Patientenrechnung-Veröffentlichungen wird das [Semantic Versioning](https://semver.org/lang/de/) verwendet.
+Im Rahmen der "Digitale Patientenrechnung"-Veröffentlichungen wird das [Semantic Versioning](https://semver.org/lang/de/) verwendet.
 
 Alle technischen Artefakte werden innerhalb des Packages ["de.gematik.dipag"](https://simplifier.net/DigitalePatientenrechnung/~packages) versioniert veröffentlicht. Die Versionsnummer des Packages entspricht der Versionsnummer des dazugehörigen Implementierungsleitfadens.
 

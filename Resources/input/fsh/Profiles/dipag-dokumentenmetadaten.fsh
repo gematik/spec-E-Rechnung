@@ -32,7 +32,7 @@ Id: dipag-dokumentenmetadaten
   * ^slicing.discriminator.path = "$this"
   * ^slicing.rules = #open
 * meta.tag contains dipag-rechnungsstatus 0..1 MS
-  * ^comment = "Metaangaben zur Digitale Patientenrechnung die sich auf das Rechnungsdokument als Ganzes beziehen und nicht Teil des durch den RE-PS erstellten Dokuments sind."
+  * ^comment = "Metaangaben zur Digitalen Patientenrechnung die sich auf das Rechnungsdokument als Ganzes beziehen und nicht Teil des durch den RE-PS erstellten Dokuments sind."
 * meta.tag[dipag-rechnungsstatus] from DiPagRechnungsstatusVS (required)
   * ^comment = "Vgl. Abschnitt 4.4.1 Workflow einer Rechnung des Feature-Dokuments Digitale Patientenrechnung"
   * system 1.. MS

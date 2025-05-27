@@ -30,7 +30,7 @@ Description: "Rechnung einreichen durch die Leistungserbringer:in"
   * use = #in
   * min = 0
   * max = "*"
-  * documentation = "Weitere Anhänge zur Digitale Patientenrechnung als PDF."
+  * documentation = "Weitere Anhänge zur Digitalen Patientenrechnung als PDF."
   * type = #DocumentReference
 * parameter[+]
   * name = #modus
@@ -81,7 +81,7 @@ Description: "Rechnung einreichen durch die Leistungserbringer:in"
   * use = #out
   * min = 0
   * max = "1"
-  * documentation = "Warnhinweise und Fehlern zur Validierung der Digitale Patientenrechnung. Diese MÜSSEN in jedem Verarbeitungsmodus ausgegeben werden."
+  * documentation = "Warnhinweise und Fehlern zur Validierung der Digitalen Patientenrechnung. Diese MÜSSEN in jedem Verarbeitungsmodus ausgegeben werden."
   * type = #OperationOutcome
 
 // ------------- Terminology -------------
